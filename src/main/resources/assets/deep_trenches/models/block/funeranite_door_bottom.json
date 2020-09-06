@@ -1,0 +1,7 @@
+{
+	"parent": "block/door_bottom",
+	"textures": {
+		"bottom": "deep_trenches:block/funeranite_door_bottom",
+		"top": "deep_trenches:block/funeranite_door_top"
+	}
+}

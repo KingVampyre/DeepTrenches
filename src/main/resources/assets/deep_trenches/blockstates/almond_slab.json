@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "deep_trenches:block/almond_slab"
+		},
+		"type=double": {
+			"model": "deep_trenches:block/almond_planks"
+		},
+		"type=top": {
+			"model": "deep_trenches:block/almond_slab_top"
+		}
+	}
+}

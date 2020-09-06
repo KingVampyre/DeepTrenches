@@ -1,0 +1,6 @@
+{
+	"parent": "block/leaves",
+	"textures": {
+		"all": "deep_trenches:block/sproom_leaves"
+	}
+}

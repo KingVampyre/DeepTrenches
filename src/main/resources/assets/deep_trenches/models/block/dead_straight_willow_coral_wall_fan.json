@@ -1,0 +1,6 @@
+{
+	"parent": "block/coral_wall_fan",
+	"textures": {
+		"fan": "deep_trenches:block/corals/fans/dead_straight_willow"
+	}
+}

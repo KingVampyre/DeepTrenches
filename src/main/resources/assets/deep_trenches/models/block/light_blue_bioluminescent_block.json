@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "deep_trenches:block/light_blue_bioluminescent_block"
+	}
+}

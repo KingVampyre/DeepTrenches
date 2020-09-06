@@ -1,0 +1,8 @@
+{
+	"parent": "block/stairs",
+	"textures": {
+		"bottom": "deep_trenches:block/crolood_planks",
+		"side": "deep_trenches:block/crolood_planks",
+		"top": "deep_trenches:block/crolood_planks"
+	}
+}

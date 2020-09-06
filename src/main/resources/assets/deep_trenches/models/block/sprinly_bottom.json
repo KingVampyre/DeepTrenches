@@ -1,0 +1,6 @@
+{
+    "parent": "block/tinted_cross",
+    "textures": {
+        "cross": "deep_trenches:block/sprinly_bottom" 
+    }
+}

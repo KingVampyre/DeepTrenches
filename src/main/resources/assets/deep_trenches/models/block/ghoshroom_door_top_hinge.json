@@ -1,0 +1,7 @@
+{
+	"parent": "block/door_top_rh",
+	"textures": {
+		"bottom": "deep_trenches:block/ghoshroom_door_bottom",
+		"top": "deep_trenches:block/ghoshroom_door_top"
+	}
+}

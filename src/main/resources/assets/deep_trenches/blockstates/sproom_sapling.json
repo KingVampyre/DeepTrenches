@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=double": {
+			"model": "deep_trenches:block/sproom_sapling"
+		},
+		"type=top": {
+			"model": "deep_trenches:block/sproom_sapling_top"
+		},
+		"type=bottom": {
+			"model": "deep_trenches:block/sproom_sapling_bottom"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "deep_trenches:block/thundercloud_plum_slab"
+		},
+		"type=double": {
+			"model": "deep_trenches:block/thundercloud_plum_planks"
+		},
+		"type=top": {
+			"model": "deep_trenches:block/thundercloud_plum_slab_top"
+		}
+	}
+}

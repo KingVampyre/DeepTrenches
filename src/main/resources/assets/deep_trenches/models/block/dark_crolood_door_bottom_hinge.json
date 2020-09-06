@@ -1,0 +1,7 @@
+{
+	"parent": "block/door_bottom_rh",
+	"textures": {
+		"bottom": "deep_trenches:block/dark_crolood_door_bottom",
+		"top": "deep_trenches:block/dark_crolood_door_top"
+	}
+}

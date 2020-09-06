@@ -1,0 +1,8 @@
+{
+	"parent": "block/inner_stairs",
+	"textures": {
+		"bottom": "deep_trenches:block/anameata_planks",
+		"side": "deep_trenches:block/anameata_planks",
+		"top": "deep_trenches:block/anameata_planks"
+	}
+}

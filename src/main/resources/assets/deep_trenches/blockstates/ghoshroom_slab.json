@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "deep_trenches:block/ghoshroom_slab"
+		},
+		"type=double": {
+			"model": "deep_trenches:block/ghoshroom_planks"
+		},
+		"type=top": {
+			"model": "deep_trenches:block/ghoshroom_slab_top"
+		}
+	}
+}

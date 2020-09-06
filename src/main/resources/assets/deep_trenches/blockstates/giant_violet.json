@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"half=lower": {
+			"model": "deep_trenches:block/giant_violet_bottom"
+		},
+		"half=upper": {
+			"model": "deep_trenches:block/giant_violet_top"
+		}
+	}
+}

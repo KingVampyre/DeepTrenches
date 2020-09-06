@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=lower": { "model": "deep_trenches:block/lime_spurge_bottom" },
+        "half=upper":    { "model": "deep_trenches:block/lime_spurge_top" }
+    }
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"end": "deep_trenches:block/giant_violet_steam_top",
+		"side": "deep_trenches:block/giant_violet_steam"
+	}
+}

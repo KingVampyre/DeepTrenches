@@ -1,0 +1,6 @@
+{
+	"parent": "block/fence_inventory",
+	"textures": {
+		"texture": "deep_trenches:block/crolood_planks"
+	}
+}

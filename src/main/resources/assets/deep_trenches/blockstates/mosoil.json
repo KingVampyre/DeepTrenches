@@ -1,0 +1,44 @@
+{
+	"variants": {
+		"snowy=false,storcean=false": [
+			{
+				"model": "deep_trenches:block/mosoil"
+			},
+			{
+				"model": "deep_trenches:block/mosoil",
+				"y": 90
+			},
+			{
+				"model": "deep_trenches:block/mosoil",
+				"y": 180
+			},
+			{
+				"model": "deep_trenches:block/mosoil",
+				"y": 270
+			}
+		],
+		"snowy=false,storcean=true": [
+			{
+				"model": "deep_trenches:block/mosoil"
+			},
+			{
+				"model": "deep_trenches:block/mosoil",
+				"y": 90
+			},
+			{
+				"model": "deep_trenches:block/mosoil",
+				"y": 180
+			},
+			{
+				"model": "deep_trenches:block/mosoil",
+				"y": 270
+			}
+		],
+		"snowy=true,storcean=false": {
+			"model": "deep_trenches:block/snowy_mosoil"
+		},
+		"snowy=true,storcean=true": {
+			"model": "deep_trenches:block/storcean_snowy_mosoil"
+		}
+	}
+}

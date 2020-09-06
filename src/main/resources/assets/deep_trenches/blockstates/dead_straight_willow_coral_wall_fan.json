@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"facing=east": {
+			"model": "deep_trenches:block/dead_straight_willow_coral_wall_fan",
+			"y": 90
+		},
+		"facing=south": {
+			"model": "deep_trenches:block/dead_straight_willow_coral_wall_fan",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "deep_trenches:block/dead_straight_willow_coral_wall_fan",
+			"y": 270
+		},
+		"facing=north": {
+			"model": "deep_trenches:block/dead_straight_willow_coral_wall_fan",
+			"y": 0
+		}
+	}
+}

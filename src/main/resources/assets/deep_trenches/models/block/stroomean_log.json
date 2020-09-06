@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"end": "deep_trenches:block/stroomean_log_top",
+		"side": "deep_trenches:block/stroomean_log"
+	}
+}

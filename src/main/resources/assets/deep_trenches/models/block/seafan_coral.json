@@ -1,0 +1,6 @@
+{
+	"parent": "block/cross",
+	"textures": {
+		"cross": "deep_trenches:block/corals/seafan"
+	}
+}

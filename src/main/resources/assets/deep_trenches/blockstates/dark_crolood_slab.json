@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "deep_trenches:block/dark_crolood_slab"
+		},
+		"type=double": {
+			"model": "deep_trenches:block/dark_crolood_planks"
+		},
+		"type=top": {
+			"model": "deep_trenches:block/dark_crolood_slab_top"
+		}
+	}
+}

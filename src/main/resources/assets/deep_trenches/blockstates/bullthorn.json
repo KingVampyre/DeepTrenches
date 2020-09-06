@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=lower": { "model": "deep_trenches:block/bullthorn_bottom" },
+        "half=upper":    { "model": "deep_trenches:block/bullthorn_top" }
+    }
+}

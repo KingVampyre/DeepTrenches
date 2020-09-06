@@ -1,0 +1,7 @@
+{
+	"parent": "block/door_top",
+	"textures": {
+		"bottom": "deep_trenches:block/anameata_door_bottom",
+		"top": "deep_trenches:block/anameata_door_top"
+	}
+}

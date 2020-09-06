@@ -1,0 +1,9 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "particle": "deep_trenches:block/dritean",
+        "bottom": "deep_trenches:block/dritean",
+        "top": "deep_trenches:block/mosoil_top",
+        "side": "deep_trenches:block/snowy_mosoil"
+    }
+}

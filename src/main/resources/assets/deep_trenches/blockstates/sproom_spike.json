@@ -1,0 +1,54 @@
+{
+	"variants": {
+		"half=top,facing=north": {
+			"model": "deep_trenches:block/sproom_spike",
+			"x": 90
+		},
+		"half=bottom,facing=north": {
+			"model": "deep_trenches:block/sproom_spike_bottom",
+			"x": 90
+		},
+		"half=top,facing=south": {
+			"model": "deep_trenches:block/sproom_spike",
+			"x": 270
+		},
+		"half=bottom,facing=south": {
+			"model": "deep_trenches:block/sproom_spike_bottom",
+			"x": 270
+		},
+		"half=top,facing=west": {
+			"model": "deep_trenches:block/sproom_spike",
+			"x": 90,
+			"y": 270
+		},
+		"half=bottom,facing=west": {
+			"model": "deep_trenches:block/sproom_spike_bottom",
+			"x": 90,
+			"y": 270
+		},
+		"half=top,facing=east": {
+			"model": "deep_trenches:block/sproom_spike",
+			"x": 270,
+			"y": 270
+		},
+		"half=bottom,facing=east": {
+			"model": "deep_trenches:block/sproom_spike_bottom",
+			"x": 270,
+			"y": 270
+		},
+		"half=top,facing=down": {
+			"model": "deep_trenches:block/sproom_spike",
+			"x": 180
+		},
+		"half=bottom,facing=down": {
+			"model": "deep_trenches:block/sproom_spike_bottom",
+			"x": 180
+		},
+		"half=top,facing=up": {
+			"model": "deep_trenches:block/sproom_spike"
+		},
+		"half=bottom,facing=up": {
+			"model": "deep_trenches:block/sproom_spike_bottom"
+		}
+	}
+}

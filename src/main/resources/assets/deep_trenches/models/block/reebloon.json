@@ -1,0 +1,7 @@
+{
+    "parent": "block/tinted_cross",
+    "textures": {
+		"particle": "deep_trenches:block/reebloon",
+        "cross": "deep_trenches:block/reebloon"
+    }
+}

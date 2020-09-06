@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"sap=true": {
+			"model": "deep_trenches:block/stasp_nest_with_aquean_sap"
+		},
+		"sap=false": {
+			"model": "deep_trenches:block/stasp_nest"
+		}
+	}
+}

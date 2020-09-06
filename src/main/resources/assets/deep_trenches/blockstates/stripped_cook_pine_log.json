@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"axis=y": {
+			"model": "deep_trenches:block/stripped_cook_pine_log"
+		},
+		"axis=z": {
+			"model": "deep_trenches:block/stripped_cook_pine_log",
+			"x": 90
+		},
+		"axis=x": {
+			"model": "deep_trenches:block/stripped_cook_pine_log",
+			"x": 90,
+			"y": 90
+		}
+	}
+}

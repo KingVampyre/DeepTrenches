@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"axis=y": {
+			"model": "deep_trenches:block/stripped_ghoshroom_log"
+		},
+		"axis=z": {
+			"model": "deep_trenches:block/stripped_ghoshroom_log",
+			"x": 90
+		},
+		"axis=x": {
+			"model": "deep_trenches:block/stripped_ghoshroom_log",
+			"x": 90,
+			"y": 90
+		}
+	}
+}

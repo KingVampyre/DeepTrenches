@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "deep_trenches:block/stroomean_slab"
+		},
+		"type=double": {
+			"model": "deep_trenches:block/stroomean_planks"
+		},
+		"type=top": {
+			"model": "deep_trenches:block/stroomean_slab_top"
+		}
+	}
+}

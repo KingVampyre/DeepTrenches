@@ -1,0 +1,6 @@
+{
+	"parent": "block/fence_post",
+	"textures": {
+		"texture": "deep_trenches:block/thundercloud_plum_planks"
+	}
+}

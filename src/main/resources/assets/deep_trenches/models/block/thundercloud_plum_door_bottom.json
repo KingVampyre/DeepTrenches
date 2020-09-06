@@ -1,0 +1,7 @@
+{
+	"parent": "block/door_bottom",
+	"textures": {
+		"bottom": "deep_trenches:block/thundercloud_plum_door_bottom",
+		"top": "deep_trenches:block/thundercloud_plum_door_top"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "block/door_top_rh",
+	"textures": {
+		"bottom": "deep_trenches:block/purfunga_door_bottom",
+		"top": "deep_trenches:block/purfunga_door_top"
+	}
+}

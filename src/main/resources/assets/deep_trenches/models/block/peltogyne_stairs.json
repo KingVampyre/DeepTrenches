@@ -1,0 +1,8 @@
+{
+	"parent": "block/stairs",
+	"textures": {
+		"bottom": "deep_trenches:block/peltogyne_planks",
+		"top": "deep_trenches:block/peltogyne_planks",
+		"side": "deep_trenches:block/peltogyne_planks"
+	}
+}

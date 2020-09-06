@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "deep_trenches:block/cherry_slab"
+		},
+		"type=double": {
+			"model": "deep_trenches:block/cherry_planks"
+		},
+		"type=top": {
+			"model": "deep_trenches:block/cherry_slab_top"
+		}
+	}
+}
