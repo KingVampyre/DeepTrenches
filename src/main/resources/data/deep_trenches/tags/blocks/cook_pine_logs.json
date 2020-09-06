@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"deep_trenches:cook_pine_log",
+		"deep_trenches:stripped_cook_pine_log",
+		"deep_trenches:cook_pine_wood",
+		"deep_trenches:stripped_cook_pine_wood"
+	]
+}

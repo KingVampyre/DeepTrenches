@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:almond_drupe"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:almond",
+		"count": 9
+	}
+}

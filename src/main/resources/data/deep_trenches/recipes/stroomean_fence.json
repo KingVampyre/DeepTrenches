@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"psp",
+		"psp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:stroomean_planks"
+		},
+		"s": {
+			"item": "deep_trenches:stroomean_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:stroomean_fence",
+		"count": 3
+	}
+}

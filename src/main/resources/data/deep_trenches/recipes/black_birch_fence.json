@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"psp",
+		"psp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:black_birch_planks"
+		},
+		"s": {
+			"item": "deep_trenches:black_birch_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:black_birch_fence",
+		"count": 3
+	}
+}

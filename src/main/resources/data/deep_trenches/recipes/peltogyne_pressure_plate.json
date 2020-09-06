@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"pp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:peltogyne_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:peltogyne_pressure_plate"
+	}
+}

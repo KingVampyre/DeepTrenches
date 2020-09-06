@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"deep_trenches:sproom_log",
+		"deep_trenches:stripped_sproom_log",
+		"deep_trenches:sproom_wood",
+		"deep_trenches:stripped_sproom_wood"
+	]
+}

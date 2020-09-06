@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:barshrookle_log"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:barshrookle_planks",
+		"count": 4
+	}
+}

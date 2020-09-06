@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"psp",
+		"psp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:dark_crolood_planks"
+		},
+		"s": {
+			"item": "deep_trenches:dark_crolood_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:dark_crolood_fence",
+		"count": 3
+	}
+}

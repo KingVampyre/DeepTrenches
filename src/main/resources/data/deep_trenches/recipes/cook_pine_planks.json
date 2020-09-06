@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:cook_pine_log"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:cook_pine_planks",
+		"count": 4
+	}
+}

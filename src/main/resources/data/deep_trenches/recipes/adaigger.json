@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"i",
+		"i",
+		"s"
+	],
+	"key": {
+		"i": {
+			"item": "deep_trenches:gyldelion_ingot"
+		},
+		"s": {
+			"item": "deep_trenches:gyldelion_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:adaigger"
+	}
+}

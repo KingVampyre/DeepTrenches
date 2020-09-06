@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:gyldelion_block"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:gyldelion_ingot",
+		"count": 4
+	}
+}

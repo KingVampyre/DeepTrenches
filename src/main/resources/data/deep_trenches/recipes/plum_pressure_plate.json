@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"pp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:plum_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:plum_pressure_plate"
+	}
+}

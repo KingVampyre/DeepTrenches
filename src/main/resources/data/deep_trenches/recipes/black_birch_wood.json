@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ll",
+		"ll"
+	],
+	"key": {
+		"l": {
+			"item": "deep_trenches:black_birch_log"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:black_birch_wood",
+		"count": 3
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ll",
+		"ll"
+	],
+	"key": {
+		"l": {
+			"item": "deep_trenches:ghoshroom_log"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:ghoshroom_wood",
+		"count": 3
+	}
+}

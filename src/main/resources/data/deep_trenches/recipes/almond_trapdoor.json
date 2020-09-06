@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ppp",
+		"ppp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:almond_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:almond_trapdoor",
+		"count": 2
+	}
+}

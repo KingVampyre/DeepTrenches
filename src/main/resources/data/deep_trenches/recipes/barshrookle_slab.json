@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ppp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:barshrookle_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:barshrookle_slab",
+		"count": 6
+	}
+}

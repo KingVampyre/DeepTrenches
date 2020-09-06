@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"psp",
+		"psp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:plum_planks"
+		},
+		"s": {
+			"item": "deep_trenches:plum_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:plum_fence",
+		"count": 3
+	}
+}

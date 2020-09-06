@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"nnn",
+		"nnn",
+		"nnn"
+	],
+	"key": {
+		"n": {
+			"item": "deep_trenches:gyldelion_nugget"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:gyldelion_ingot"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"psp",
+		"psp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:cook_pine_planks"
+		},
+		"s": {
+			"item": "deep_trenches:cook_pine_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:cook_pine_fence",
+		"count": 3
+	}
+}

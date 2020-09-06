@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:dark_crolood_log"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:dark_crolood_planks",
+		"count": 4
+	}
+}

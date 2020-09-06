@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "deep_trenches:stortreean_sapling"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:alternative",
+					"terms": [
+						{
+							"condition": "minecraft:block_state_property",
+							"block": "deep_trenches:stortreean_sapling",
+							"properties": {
+								"type": "double"
+							}
+						},
+						{
+							"condition": "minecraft:block_state_property",
+							"block": "deep_trenches:stortreean_sapling",
+							"properties": {
+								"type": "bottom"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"p  ",
+		"pp ",
+		"ppp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:cook_pine_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:cook_pine_stairs",
+		"count": 4
+	}
+}

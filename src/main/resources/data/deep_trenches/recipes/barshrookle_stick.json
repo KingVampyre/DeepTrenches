@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"p",
+		"p"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:barshrookle_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:barshrookle_stick",
+		"count": 4
+	}
+}

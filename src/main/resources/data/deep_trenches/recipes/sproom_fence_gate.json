@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"sps",
+		"sps"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:sproom_planks"
+		},
+		"s": {
+			"item": "deep_trenches:sproom_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:sproom_fence_gate"
+	}
+}

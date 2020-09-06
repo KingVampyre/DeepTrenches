@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "deep_trenches:gyldelion_flower"
+	},
+	"result": "deep_trenches:gyldelion_nugget",
+	"experience": 0.35,
+	"cookingtime": 100
+}

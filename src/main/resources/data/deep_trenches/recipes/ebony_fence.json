@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"psp",
+		"psp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:ebony_planks"
+		},
+		"s": {
+			"item": "deep_trenches:ebony_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:ebony_fence",
+		"count": 3
+	}
+}

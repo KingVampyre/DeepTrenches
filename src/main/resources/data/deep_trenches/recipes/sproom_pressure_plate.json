@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"pp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:sproom_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:sproom_pressure_plate"
+	}
+}

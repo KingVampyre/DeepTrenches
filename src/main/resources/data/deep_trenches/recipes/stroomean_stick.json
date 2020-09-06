@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"p",
+		"p"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:stroomean_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:stroomean_stick",
+		"count": 4
+	}
+}

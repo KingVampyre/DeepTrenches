@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:anameata_log"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:anameata_planks",
+		"count": 4
+	}
+}

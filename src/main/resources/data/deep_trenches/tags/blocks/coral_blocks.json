@@ -1,0 +1,23 @@
+{
+	"replace": false,
+	"values": [
+		"deep_trenches:blackgreen_tree_coral_block",
+		"deep_trenches:bubblegum_coral_block",
+		"deep_trenches:cabbage_tree_coral_block",
+		"deep_trenches:flowertube_coral_block",
+		"deep_trenches:garnet_spiral_coral_block",
+		"deep_trenches:glow_forest_coral_block",
+		"deep_trenches:glowtongue_tube_coral_block",
+		"deep_trenches:ivory_coral_block",
+		"deep_trenches:lime_brain_coral_block",
+		"deep_trenches:lophelia_coral_block",
+		"deep_trenches:pipe_organ_coral_block",
+		"deep_trenches:red_tree_coral_block",
+		"deep_trenches:seafan_coral_block",
+		"deep_trenches:straight_willow_coral_block",
+		"deep_trenches:sunrise_coral_block",
+		"deep_trenches:table_coral_block",
+		"deep_trenches:thin_blade_coral_block",
+		"deep_trenches:trumpetear_coral_block"
+	]
+}

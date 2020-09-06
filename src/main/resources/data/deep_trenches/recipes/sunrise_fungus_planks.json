@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:sunrise_fungus_log"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:sunrise_fungus_planks",
+		"count": 4
+	}
+}

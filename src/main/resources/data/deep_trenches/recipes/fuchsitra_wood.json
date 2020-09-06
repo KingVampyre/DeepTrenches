@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ll",
+		"ll"
+	],
+	"key": {
+		"l": {
+			"item": "deep_trenches:fuchsitra_log"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:fuchsitra_wood",
+		"count": 3
+	}
+}

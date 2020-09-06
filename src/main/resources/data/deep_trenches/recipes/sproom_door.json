@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"pp",
+		"pp",
+		"pp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:sproom_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:sproom_door",
+		"count": 3
+	}
+}

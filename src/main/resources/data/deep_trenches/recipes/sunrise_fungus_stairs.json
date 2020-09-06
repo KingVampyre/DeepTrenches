@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"p  ",
+		"pp ",
+		"ppp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:sunrise_fungus_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:sunrise_fungus_stairs",
+		"count": 4
+	}
+}

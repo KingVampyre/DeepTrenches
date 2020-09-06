@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "deep_trenches:giant_hatchetfish"
+  },
+  "result": "deep_trenches:cooked_giant_hatchetfish",
+  "experience": 0.35,
+  "cookingtime": 600
+}

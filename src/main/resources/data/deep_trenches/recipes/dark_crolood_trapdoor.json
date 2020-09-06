@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ppp",
+		"ppp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:dark_crolood_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:dark_crolood_trapdoor",
+		"count": 2
+	}
+}

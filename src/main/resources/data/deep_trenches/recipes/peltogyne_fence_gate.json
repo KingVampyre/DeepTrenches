@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"sps",
+		"sps"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:peltogyne_planks"
+		},
+		"s": {
+			"item": "deep_trenches:peltogyne_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:peltogyne_fence_gate"
+	}
+}

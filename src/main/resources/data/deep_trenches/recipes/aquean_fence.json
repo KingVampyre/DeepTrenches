@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"psp",
+		"psp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:aquean_planks"
+		},
+		"s": {
+			"item": "deep_trenches:aquean_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:aquean_fence",
+		"count": 3
+	}
+}

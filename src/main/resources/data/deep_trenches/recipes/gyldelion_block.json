@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ii",
+		"ii"
+	],
+	"key": {
+		"i": {
+			"item": "deep_trenches:gyldelion_ingot"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:gyldelion_block"
+	}
+}

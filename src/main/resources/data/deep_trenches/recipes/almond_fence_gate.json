@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"sps",
+		"sps"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:almond_planks"
+		},
+		"s": {
+			"item": "deep_trenches:almond_stick"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:almond_fence_gate"
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "gg",
+    "gg"
+  ],
+  "key": {
+    "g": {
+      "item": "deep_trenches:green_bioluminescent_goo"
+    }
+  },
+  "result": {
+    "item": "deep_trenches:green_bioluminescent_block"
+  }
+}

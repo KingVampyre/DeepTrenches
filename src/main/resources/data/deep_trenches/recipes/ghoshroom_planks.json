@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:ghoshroom_log"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:ghoshroom_planks",
+		"count": 4
+	}
+}

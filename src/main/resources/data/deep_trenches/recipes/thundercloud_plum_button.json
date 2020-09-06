@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:thundercloud_plum_planks"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:thundercloud_plum_button"
+	}
+}

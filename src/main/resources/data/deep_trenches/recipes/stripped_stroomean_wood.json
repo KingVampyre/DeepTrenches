@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"ll",
+		"ll"
+	],
+	"key": {
+		"l": {
+			"item": "deep_trenches:stripped_stroomean_log"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:stripped_stroomean_wood",
+		"count": 3
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"pp",
+		"pp",
+		"pp"
+	],
+	"key": {
+		"p": {
+			"item": "deep_trenches:stroomean_planks"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:stroomean_door",
+		"count": 3
+	}
+}
