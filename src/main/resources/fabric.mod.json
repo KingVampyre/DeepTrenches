@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "deep_trenches",
+	"version": "${version}",
+	"name": "Deep Trenches",
+	"description": "Deep Trenches is a mod focusing mainly on the deep (with other focuses being forestry and flowers, a new dimension: the storcean, a stormy ocean with alienesque life, and other things). It adds depth to the overworld, filled with existing and non-existing life.",
+	"authors": [
+		"KingVampyre",
+		"Louwind"
+	],
+	"contact": {
+		"homepage": "https://github.com/KingVampyre/DeepTrenches",
+		"sources": "https://github.com/KingVampyre/DeepTrenches"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/deep_trenches/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"github.KingVampyre.DeepTrenches.core.DeepTrenches"
+		],
+		"client": [
+			"github.KingVampyre.DeepTrenches.client.DeepTrenchesClient"
+		]
+	},
+	"mixins": [],
+	"depends": {
+		"fabricloader": ">=0.7.4",
+		"fabric": "*",
+		"minecraft": "1.14.x"
+	},
+	"suggests": {
+		"flamingo": "*"
+	}
+}
