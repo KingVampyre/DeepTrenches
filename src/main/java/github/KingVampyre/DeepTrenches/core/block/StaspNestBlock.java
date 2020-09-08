@@ -26,7 +26,6 @@ public class StaspNestBlock extends BlockWithEntity {
 		super(settings);
 
 		this.setDefaultState(this.stateManager.getDefaultState().with(SAP, false));
-
 	}
 
 	@Override
@@ -63,7 +62,7 @@ public class StaspNestBlock extends BlockWithEntity {
 	}
 
 	@Override
-	public BlockEntity createBlockEntity(BlockView view) {
+	public BlockEntity createBlockEntity(BlockView world) {
 		return new StaspNestBlockEntity();
 	}
 

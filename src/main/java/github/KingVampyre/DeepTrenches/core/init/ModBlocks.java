@@ -1,110 +1,18 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModMaterials.FUNGUS;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.ALMOND;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.ANAMEATA;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.AQUEAN;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.BARSHROOKLE;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.BLACK_BIRCH;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.CHERRY;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.COOK_PINE;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.CROLOOD;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.DARK_CROLOOD;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.EBONY;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.FUCHSITRA;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.FUNERANITE;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.GHOSHROOM;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.PELTOGYNE;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.PIN_CHERRY;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.PLUM;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.PURFUNGA;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.SPROOM;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.STORTREEAN;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.STROOMEAN;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.SUNRISE_FUNGUS;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.TEAK;
-import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.THUNDERCLOUD_PLUM;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.BRAITOR_BEAUTY;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.COSMOS_BEAUTY;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.CYCAWLER_BEAUTY;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.FLOWER_BEAUTY;
-import static net.minecraft.block.Blocks.COCOA;
-import static net.minecraft.block.Blocks.DEAD_TUBE_CORAL;
-import static net.minecraft.block.Blocks.DEAD_TUBE_CORAL_BLOCK;
-import static net.minecraft.block.Blocks.DEAD_TUBE_CORAL_FAN;
-import static net.minecraft.block.Blocks.DEAD_TUBE_CORAL_WALL_FAN;
-import static net.minecraft.block.Blocks.DIRT;
-import static net.minecraft.block.Blocks.GRASS;
-import static net.minecraft.block.Blocks.GRASS_BLOCK;
-import static net.minecraft.block.Blocks.IRON_BLOCK;
-import static net.minecraft.block.Blocks.OAK_BUTTON;
-import static net.minecraft.block.Blocks.OAK_DOOR;
-import static net.minecraft.block.Blocks.OAK_FENCE;
-import static net.minecraft.block.Blocks.OAK_FENCE_GATE;
-import static net.minecraft.block.Blocks.OAK_LEAVES;
-import static net.minecraft.block.Blocks.OAK_LOG;
-import static net.minecraft.block.Blocks.OAK_PLANKS;
-import static net.minecraft.block.Blocks.OAK_PRESSURE_PLATE;
-import static net.minecraft.block.Blocks.OAK_SAPLING;
-import static net.minecraft.block.Blocks.OAK_SIGN;
-import static net.minecraft.block.Blocks.OAK_SLAB;
-import static net.minecraft.block.Blocks.OAK_STAIRS;
-import static net.minecraft.block.Blocks.OAK_TRAPDOOR;
-import static net.minecraft.block.Blocks.OAK_WALL_SIGN;
-import static net.minecraft.block.Blocks.OAK_WOOD;
-import static net.minecraft.block.Blocks.POTTED_OAK_SAPLING;
-import static net.minecraft.block.Blocks.RED_TULIP;
-import static net.minecraft.block.Blocks.SEA_LANTERN;
-import static net.minecraft.block.Blocks.STRIPPED_OAK_LOG;
-import static net.minecraft.block.Blocks.STRIPPED_OAK_WOOD;
-import static net.minecraft.block.Blocks.TUBE_CORAL;
-import static net.minecraft.block.Blocks.TUBE_CORAL_BLOCK;
-import static net.minecraft.block.Blocks.TUBE_CORAL_FAN;
-import static net.minecraft.block.PressurePlateBlock.ActivationRule.EVERYTHING;
-import static net.minecraft.entity.effect.StatusEffects.FIRE_RESISTANCE;
-import static net.minecraft.entity.effect.StatusEffects.GLOWING;
-import static net.minecraft.entity.effect.StatusEffects.NIGHT_VISION;
-import static net.minecraft.entity.effect.StatusEffects.POISON;
-import static net.minecraft.entity.effect.StatusEffects.RESISTANCE;
-import static net.minecraft.entity.effect.StatusEffects.WEAKNESS;
-
-import github.KingVampyre.DeepTrenches.common.block.ModCoralBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModCoralFanBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModCoralWallFan;
-import github.KingVampyre.DeepTrenches.common.block.ModDeadCoralBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModDeadCoralFanBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModDeadCoralWallFanBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModDoorBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModPressurePlateBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModSaplingBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModSignBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModStairsBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModTrapdoorBlock;
-import github.KingVampyre.DeepTrenches.common.block.ModWoodButtonBlock;
-import github.KingVampyre.DeepTrenches.core.block.AcuaticFungusBlock;
-import github.KingVampyre.DeepTrenches.core.block.CapBlock;
-import github.KingVampyre.DeepTrenches.core.block.DeadTallCoralBlock;
+import github.KingVampyre.DeepTrenches.common.block.*;
 import github.KingVampyre.DeepTrenches.core.block.FungusBlock;
-import github.KingVampyre.DeepTrenches.core.block.MosoilBlock;
-import github.KingVampyre.DeepTrenches.core.block.ReebloonBlock;
-import github.KingVampyre.DeepTrenches.core.block.SproomSpikeBlock;
-import github.KingVampyre.DeepTrenches.core.block.StaspNestBlock;
-import github.KingVampyre.DeepTrenches.core.block.StorceanFlowerBlock;
-import github.KingVampyre.DeepTrenches.core.block.StorceanSaplingBlock;
-import github.KingVampyre.DeepTrenches.core.block.StorceanTallSaplingBlock;
-import github.KingVampyre.DeepTrenches.core.block.TallCoralBlock;
-import net.minecraft.block.Block;
+import github.KingVampyre.DeepTrenches.core.block.*;
 import net.minecraft.block.AbstractBlock.Settings;
-import net.minecraft.block.CoralBlockBlock;
-import net.minecraft.block.FenceBlock;
-import net.minecraft.block.FenceGateBlock;
-import net.minecraft.block.FlowerBlock;
-import net.minecraft.block.FlowerPotBlock;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.PillarBlock;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.TallFlowerBlock;
-import net.minecraft.block.WallSignBlock;
+import net.minecraft.block.*;
+import net.minecraft.sound.BlockSoundGroup;
+
+import static github.KingVampyre.DeepTrenches.core.init.ModMaterials.FUNGUS;
+import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.*;
+import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
+import static net.minecraft.block.Blocks.*;
+import static net.minecraft.block.PressurePlateBlock.ActivationRule.EVERYTHING;
+import static net.minecraft.entity.effect.StatusEffects.*;
 
 public class ModBlocks {
 
@@ -115,40 +23,41 @@ public class ModBlocks {
 	public static final Block DRITEAN = new Block(Settings.copy(DIRT));
 	public static final Block GYLDELION_BLOCK = new Block(Settings.copy(IRON_BLOCK));
 	public static final Block MOSOIL = new MosoilBlock(Settings.copy(GRASS_BLOCK));
-	public static final Block STASP_NEST = new StaspNestBlock(Settings.copy(OAK_LOG));
-	
-	public static final Block BLACK_LILY = new TallFlowerBlock(Settings.copy(RED_TULIP));
-	public static final Block BLUE_POPPY = new FlowerBlock(NIGHT_VISION, 8, Settings.copy(RED_TULIP));
-	public static final Block BLUE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.copy(RED_TULIP));
-	public static final Block BONNET_SPURGE = new FlowerBlock(POISON, 8, Settings.copy(RED_TULIP));
-	public static final Block BULLTHORN = new TallFlowerBlock(Settings.copy(RED_TULIP));
-	public static final Block CHOCOLATE_COSMOS_FLOWER = new FlowerBlock(COSMOS_BEAUTY, 14, Settings.copy(RED_TULIP));
-	public static final Block CYCAWLER = new StorceanFlowerBlock(CYCAWLER_BEAUTY, 24000, Settings.copy(RED_TULIP));
-	public static final Block GARDEN_PINKS = new FlowerBlock(FIRE_RESISTANCE, 6, Settings.copy(RED_TULIP));
-	public static final Block GYLDELION_FLOWER = new FlowerBlock(GLOWING, 12, Settings.copy(RED_TULIP));
-	public static final Block LIME_SPURGE = new TallFlowerBlock(Settings.copy(RED_TULIP));
-	public static final Block LUPIN_FLOWER = new TallFlowerBlock(Settings.copy(RED_TULIP));
-	public static final Block NATIVE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.copy(RED_TULIP));
-	public static final Block OPIUM_POPPY = new FlowerBlock(WEAKNESS, 11, Settings.copy(RED_TULIP));
-	public static final Block ORANGE_LILY = new TallFlowerBlock(Settings.copy(RED_TULIP));
-	public static final Block PINK_BRAITOR_FLOWER = new FlowerBlock(BRAITOR_BEAUTY, 21, Settings.copy(RED_TULIP));
-	public static final Block PINK_ROSE = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.copy(RED_TULIP));
-	public static final Block PINK_ROSE_BUSH = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.copy(RED_TULIP));
-	public static final Block POPPY = new FlowerBlock(NIGHT_VISION, 5, Settings.copy(RED_TULIP));
-	public static final Block PURPROUND = new TallFlowerBlock(Settings.copy(RED_TULIP));
-	public static final Block RED_BRAITOR_FLOWER = new FlowerBlock(BRAITOR_BEAUTY, 21, Settings.copy(RED_TULIP));
-	public static final Block RED_CHOCOLATE_COSMOS_FLOWER = new FlowerBlock(COSMOS_BEAUTY, 14, Settings.copy(RED_TULIP));
-	public static final Block RED_ROSE = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.copy(RED_TULIP));
-	public static final Block REEBLOON = new ReebloonBlock(Settings.copy(GRASS));
-	public static final Block SPIKE_LAVENDER = new FlowerBlock(FLOWER_BEAUTY, 6, Settings.copy(RED_TULIP));
-	public static final Block SPRINLY = new TallFlowerBlock(Settings.copy(RED_TULIP));
-	public static final Block SPROOM_SPIKE = new SproomSpikeBlock(Settings.copy(OAK_LOG));
-	public static final Block SWEET_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.copy(RED_TULIP));
-	public static final Block TOPPED_LAVENDER = new FlowerBlock(FLOWER_BEAUTY, 6, Settings.copy(RED_TULIP));
-	public static final Block VASLAME = new StorceanFlowerBlock(FIRE_RESISTANCE, 6, Settings.copy(RED_TULIP));
-	public static final Block VELVET_LILY = new TallFlowerBlock(Settings.copy(RED_TULIP));
-	public static final Block WEEPY_HOLLOWER = new StorceanFlowerBlock(GLOWING, 6, Settings.copy(RED_TULIP));
-	
+
+	public static final Block BLACK_LILY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block BLUE_POPPY = new FlowerBlock(NIGHT_VISION, 8, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block BLUE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block BONNET_SPURGE = new FlowerBlock(POISON, 8, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block BULLTHORN = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block CHOCOLATE_COSMOS_FLOWER = new FlowerBlock(COSMOS_BEAUTY, 14, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block CYCAWLER = new StorceanFlowerBlock(CYCAWLER_BEAUTY, 24000, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block GARDEN_PINKS = new FlowerBlock(FIRE_RESISTANCE, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block GYLDELION_FLOWER = new FlowerBlock(GLOWING, 12, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block LIME_SPURGE = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block LUPIN_FLOWER = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block NATIVE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block OPIUM_POPPY = new FlowerBlock(WEAKNESS, 11, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block ORANGE_LILY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block PINK_BRAITOR_FLOWER = new FlowerBlock(BRAITOR_BEAUTY, 21, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block PINK_ROSE = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block PINK_ROSE_BUSH = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block POPPY = new FlowerBlock(NIGHT_VISION, 5, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block PURPROUND = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block RED_BRAITOR_FLOWER = new FlowerBlock(BRAITOR_BEAUTY, 21, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block RED_CHOCOLATE_COSMOS_FLOWER = new FlowerBlock(COSMOS_BEAUTY, 14, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block RED_ROSE = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block REEBLOON = new ReebloonBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block SPIKE_LAVENDER = new FlowerBlock(FLOWER_BEAUTY, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block SPRINLY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block SPROOM_SPIKE = new SproomSpikeBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block SWEET_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block TOPPED_LAVENDER = new FlowerBlock(FLOWER_BEAUTY, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block VASLAME = new StorceanFlowerBlock(FIRE_RESISTANCE, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block VELVET_LILY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block WEEPY_HOLLOWER = new StorceanFlowerBlock(GLOWING, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+
+	public static final Block STASP_NEST = new StaspNestBlock(Settings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD));
+
 	public static final Block GIANT_VIOLET = new TallFlowerBlock(Settings.copy(RED_TULIP));
 	public static final Block GIANT_VIOLET_LEAF = new Block(Settings.copy(COCOA));
 	public static final Block GIANT_VIOLET_PETAL = new Block(Settings.copy(COCOA));
@@ -226,7 +135,7 @@ public class ModBlocks {
 	public static final Block GLOWTONGUE_TUBE_CORAL = new ModCoralBlock(DEAD_GLOWTONGUE_TUBE_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block GLOWTONGUE_TUBE_CORAL_BLOCK = new CoralBlockBlock(DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
 	public static final Block GLOWTONGUE_TUBE_CORAL_FAN = new ModCoralFanBlock(DEAD_GLOWTONGUE_TUBE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block GLOWTONGUE_TUBE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block GLOWTONGUE_TUBE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_GLOWTONGUE_TUBE_CORA_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
 	public static final Block DEAD_IVORY_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_IVORY_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
@@ -342,7 +251,7 @@ public class ModBlocks {
 	public static final Block ALMOND_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block ALMOND_STAIRS = new ModStairsBlock(ALMOND_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block ALMOND_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block ALMOND_WALL_SIGN = new WallSignBlock(Settings.copy(OAK_WALL_SIGN), SignTypes.ALMOND);
+	public static final Block ALMOND_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_WALL_SIGN), SignTypes.ALMOND);
 	public static final Block ALMOND_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block ANAMEATA_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -358,7 +267,7 @@ public class ModBlocks {
 	public static final Block ANAMEATA_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block ANAMEATA_STAIRS = new ModStairsBlock(ANAMEATA_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block ANAMEATA_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block ANAMEATA_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.ANAMEATA);
+	public static final Block ANAMEATA_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.ANAMEATA);
 	public static final Block ANAMEATA_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block AQUEAN_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -374,7 +283,7 @@ public class ModBlocks {
 	public static final Block AQUEAN_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block AQUEAN_STAIRS = new ModStairsBlock(AQUEAN_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block AQUEAN_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block AQUEAN_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.AQUEAN);
+	public static final Block AQUEAN_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.AQUEAN);
 	public static final Block AQUEAN_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block BARSHROOKLE_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -390,7 +299,7 @@ public class ModBlocks {
 	public static final Block BARSHROOKLE_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block BARSHROOKLE_STAIRS = new ModStairsBlock(BARSHROOKLE_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block BARSHROOKLE_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block BARSHROOKLE_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.BARSHROOKLE);
+	public static final Block BARSHROOKLE_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.BARSHROOKLE);
 	public static final Block BARSHROOKLE_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block BLACK_BIRCH_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -406,7 +315,7 @@ public class ModBlocks {
 	public static final Block BLACK_BIRCH_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block BLACK_BIRCH_STAIRS = new ModStairsBlock(BLACK_BIRCH_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block BLACK_BIRCH_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block BLACK_BIRCH_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.BLACK_BIRCH);
+	public static final Block BLACK_BIRCH_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.BLACK_BIRCH);
 	public static final Block BLACK_BIRCH_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block CHERRY_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -422,7 +331,7 @@ public class ModBlocks {
 	public static final Block CHERRY_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block CHERRY_STAIRS = new ModStairsBlock(CHERRY_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block CHERRY_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block CHERRY_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.CHERRY);
+	public static final Block CHERRY_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.CHERRY);
 	public static final Block CHERRY_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block COOK_PINE_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -438,7 +347,7 @@ public class ModBlocks {
 	public static final Block COOK_PINE_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block COOK_PINE_STAIRS = new ModStairsBlock(COOK_PINE_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block COOK_PINE_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block COOK_PINE_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.COOK_PINE);
+	public static final Block COOK_PINE_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.COOK_PINE);
 	public static final Block COOK_PINE_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block CROLOOD_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -454,7 +363,7 @@ public class ModBlocks {
 	public static final Block CROLOOD_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block CROLOOD_STAIRS = new ModStairsBlock(CROLOOD_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block CROLOOD_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block CROLOOD_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.CROLOOD);
+	public static final Block CROLOOD_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.CROLOOD);
 	public static final Block CROLOOD_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 		
 	public static final Block DARK_CROLOOD_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -470,7 +379,7 @@ public class ModBlocks {
 	public static final Block DARK_CROLOOD_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block DARK_CROLOOD_STAIRS = new ModStairsBlock(DARK_CROLOOD_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block DARK_CROLOOD_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block DARK_CROLOOD_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.DARK_CROLOOD);
+	public static final Block DARK_CROLOOD_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.DARK_CROLOOD);
 	public static final Block DARK_CROLOOD_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 		
 	public static final Block EBONY_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -486,7 +395,7 @@ public class ModBlocks {
 	public static final Block EBONY_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block EBONY_STAIRS = new ModStairsBlock(EBONY_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block EBONY_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block EBONY_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.EBONY);
+	public static final Block EBONY_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.EBONY);
 	public static final Block EBONY_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block FUCHSITRA_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -502,7 +411,7 @@ public class ModBlocks {
 	public static final Block FUCHSITRA_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block FUCHSITRA_STAIRS = new ModStairsBlock(FUCHSITRA_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block FUCHSITRA_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block FUCHSITRA_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.FUCHSITRA);
+	public static final Block FUCHSITRA_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.FUCHSITRA);
 	public static final Block FUCHSITRA_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block FUNERANITE_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -518,7 +427,7 @@ public class ModBlocks {
 	public static final Block FUNERANITE_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block FUNERANITE_STAIRS = new ModStairsBlock(FUNERANITE_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block FUNERANITE_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block FUNERANITE_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.FUNERANITE);
+	public static final Block FUNERANITE_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.FUNERANITE);
 	public static final Block FUNERANITE_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block GHOSHROOM_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -534,7 +443,7 @@ public class ModBlocks {
 	public static final Block GHOSHROOM_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block GHOSHROOM_STAIRS = new ModStairsBlock(GHOSHROOM_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block GHOSHROOM_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block GHOSHROOM_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.GHOSHROOM);
+	public static final Block GHOSHROOM_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.GHOSHROOM);
 	public static final Block GHOSHROOM_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 		
 	public static final Block PELTOGYNE_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -550,7 +459,7 @@ public class ModBlocks {
 	public static final Block PELTOGYNE_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block PELTOGYNE_STAIRS = new ModStairsBlock(PELTOGYNE_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block PELTOGYNE_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block PELTOGYNE_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.PELTOGYNE);
+	public static final Block PELTOGYNE_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.PELTOGYNE);
 	public static final Block PELTOGYNE_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block PIN_CHERRY_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -566,7 +475,7 @@ public class ModBlocks {
 	public static final Block PIN_CHERRY_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block PIN_CHERRY_STAIRS = new ModStairsBlock(PIN_CHERRY_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block PIN_CHERRY_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block PIN_CHERRY_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.PIN_CHERRY);
+	public static final Block PIN_CHERRY_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.PIN_CHERRY);
 	public static final Block PIN_CHERRY_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block PLUM_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -582,7 +491,7 @@ public class ModBlocks {
 	public static final Block PLUM_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block PLUM_STAIRS = new ModStairsBlock(PLUM_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block PLUM_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block PLUM_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.PLUM);
+	public static final Block PLUM_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.PLUM);
 	public static final Block PLUM_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 		
 	public static final Block PURFUNGA_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -598,14 +507,14 @@ public class ModBlocks {
 	public static final Block PURFUNGA_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block PURFUNGA_STAIRS = new ModStairsBlock(PURFUNGA_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block PURFUNGA_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block PURFUNGA_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.PURFUNGA);
+	public static final Block PURFUNGA_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.PURFUNGA);
 	public static final Block PURFUNGA_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 		
 	public static final Block SPROOM_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
 	public static final Block SPROOM_DOOR = new ModDoorBlock(Settings.copy(OAK_DOOR));
 	public static final Block SPROOM_FENCE = new FenceBlock(Settings.copy(OAK_FENCE));
 	public static final Block SPROOM_FENCE_GATE = new FenceGateBlock(Settings.copy(OAK_FENCE_GATE));
-	public static final Block SPROOM_LEAVES = new LeavesBlock(Settings.copy(OAK_LEAVES));;
+	public static final Block SPROOM_LEAVES = new LeavesBlock(Settings.copy(OAK_LEAVES));
 	public static final Block SPROOM_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block SPROOM_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block SPROOM_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
@@ -614,7 +523,7 @@ public class ModBlocks {
 	public static final Block SPROOM_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block SPROOM_STAIRS = new ModStairsBlock(SPROOM_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block SPROOM_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block SPROOM_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.SPROOM);
+	public static final Block SPROOM_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.SPROOM);
 	public static final Block SPROOM_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 		
 	public static final Block STORTREEAN_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -630,7 +539,7 @@ public class ModBlocks {
 	public static final Block STORTREEAN_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block STORTREEAN_STAIRS = new ModStairsBlock(STORTREEAN_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block STORTREEAN_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block STORTREEAN_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.STORTREEAN);
+	public static final Block STORTREEAN_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.STORTREEAN);
 	public static final Block STORTREEAN_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block STRIPPED_ALMOND_LOG = new PillarBlock(Settings.copy(STRIPPED_OAK_LOG));
@@ -693,7 +602,7 @@ public class ModBlocks {
 	public static final Block STROOMEAN_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block STROOMEAN_STAIRS = new ModStairsBlock(STROOMEAN_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block STROOMEAN_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block STROOMEAN_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.STROOMEAN);
+	public static final Block STROOMEAN_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.STROOMEAN);
 	public static final Block STROOMEAN_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block SUNRISE_FUNGUS_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -709,7 +618,7 @@ public class ModBlocks {
 	public static final Block SUNRISE_FUNGUS_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block SUNRISE_FUNGUS_STAIRS = new ModStairsBlock(SUNRISE_FUNGUS_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block SUNRISE_FUNGUS_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block SUNRISE_FUNGUS_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.SUNRISE_FUNGUS);
+	public static final Block SUNRISE_FUNGUS_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.SUNRISE_FUNGUS);
 	public static final Block SUNRISE_FUNGUS_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block TEAK_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -725,7 +634,7 @@ public class ModBlocks {
 	public static final Block TEAK_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block TEAK_STAIRS = new ModStairsBlock(TEAK_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block TEAK_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block TEAK_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.TEAK);
+	public static final Block TEAK_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.TEAK);
 	public static final Block TEAK_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block THUNDERCLOUD_PLUM_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -741,42 +650,54 @@ public class ModBlocks {
 	public static final Block THUNDERCLOUD_PLUM_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block THUNDERCLOUD_PLUM_STAIRS = new ModStairsBlock(THUNDERCLOUD_PLUM_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
 	public static final Block THUNDERCLOUD_PLUM_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
-	public static final Block THUNDERCLOUD_PLUM_WALL_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.THUNDERCLOUD_PLUM);
+	public static final Block THUNDERCLOUD_PLUM_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.THUNDERCLOUD_PLUM);
 	public static final Block THUNDERCLOUD_PLUM_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 	
 	public static final Block POTTED_ALMOND_SAPLING = new FlowerPotBlock(ALMOND_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_ANAMEATA_SAPLING = new FlowerPotBlock(ANAMEATA_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_AQUEAN_SAPLING = new FlowerPotBlock(AQUEAN_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_BARSHROOKLE_SAPLING = new FlowerPotBlock(BARSHROOKLE_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_BLACK_BIRCH_SAPLING = new FlowerPotBlock(BLACK_BIRCH_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_CHERRY_SAPLING = new FlowerPotBlock(CHERRY_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_COOK_PINE_SAPLING = new FlowerPotBlock(COOK_PINE_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_CROLOOD_SAPLING = new FlowerPotBlock(CROLOOD_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_DARK_CROLOOD_SAPLING = new FlowerPotBlock(DARK_CROLOOD_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_EBONY_SAPLING = new FlowerPotBlock(EBONY_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_FUCHSITRA_SAPLING = new FlowerPotBlock(FUCHSITRA_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_FUNERANITE_SAPLING = new FlowerPotBlock(FUNERANITE_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_GHOSHROOM_SAPLING = new FlowerPotBlock(GHOSHROOM_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_PELTOGYNE_SAPLING = new FlowerPotBlock(PELTOGYNE_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_PIN_CHERRY_SAPLING = new FlowerPotBlock(PIN_CHERRY_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_PLUM_SAPLING = new FlowerPotBlock(PLUM_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_PURFUNGA_SAPLING = new FlowerPotBlock(PURFUNGA_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_SPROOM_SAPLING = new FlowerPotBlock(SPROOM_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_STORTREEAN_SAPLING = new FlowerPotBlock(STORTREEAN_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_STROOMEAN_SAPLING = new FlowerPotBlock(STROOMEAN_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_SUNRISE_FUNGUS_SAPLING = new FlowerPotBlock(SUNRISE_FUNGUS_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_TEAK_SAPLING = new FlowerPotBlock(TEAK_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_THUNDERCLOUD_PLUM_SAPLING = new FlowerPotBlock(THUNDERCLOUD_PLUM_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
-	
-	public static final Block POTTED_BLUE_POPPY = new FlowerPotBlock(BLUE_POPPY, Settings.copy(RED_TULIP));
-	public static final Block POTTED_BLUE_VIOLET = new FlowerPotBlock(BLUE_VIOLET, Settings.copy(RED_TULIP));
-	public static final Block POTTED_BONNET_SPURGE = new FlowerPotBlock(BONNET_SPURGE, Settings.copy(RED_TULIP));
-	public static final Block POTTED_CHOCOLATE_COSMOS_FLOWER = new FlowerPotBlock(CHOCOLATE_COSMOS_FLOWER, Settings.copy(RED_TULIP));
-	public static final Block POTTED_CYCAWLER = new FlowerPotBlock(CYCAWLER, Settings.copy(RED_TULIP));
-	public static final Block POTTED_GARDEN_PINKS = new FlowerPotBlock(GARDEN_PINKS, Settings.copy(RED_TULIP));
-	public static final Block POTTED_GYLDELION_FLOWER = new FlowerPotBlock(GYLDELION_FLOWER, Settings.copy(RED_TULIP));
-	public static final Block POTTED_NATIVE_VIOLET = new FlowerPotBlock(NATIVE_VIOLET, Settings.copy(RED_TULIP));
-	public static final Block POTTED_OPIUM_POPPY = new FlowerPotBlock(OPIUM_POPPY, Settings.copy(RED_TULIP));
-	public static final Block POTTED_POPPY = new FlowerPotBlock(POPPY, Settings.copy(RED_TULIP));
-	public static final Block POTTED_PINK_BRAITOR_FLOWER = new FlowerPotBlock(PINK_BRAITOR_FLOWER, Settings.copy(RED_TULIP));
-	public static final Block POTTED_PINK_ROSE = new FlowerPotBlock(PINK_ROSE, Settings.copy(RED_TULIP));
-	public static final Block POTTED_PINK_ROSE_BUSH = new FlowerPotBlock(PINK_ROSE_BUSH, Settings.copy(RED_TULIP));
-	public static final Block POTTED_SPIKE_LAVENDER = new FlowerPotBlock(SPIKE_LAVENDER, Settings.copy(RED_TULIP));
-	public static final Block POTTED_RED_BRAITOR_FLOWER = new FlowerPotBlock(RED_BRAITOR_FLOWER, Settings.copy(RED_TULIP));
-	public static final Block POTTED_RED_CHOCOLATE_COSMOS_FLOWER = new FlowerPotBlock(RED_CHOCOLATE_COSMOS_FLOWER, Settings.copy(RED_TULIP));
-	public static final Block POTTED_RED_ROSE = new FlowerPotBlock(RED_ROSE, Settings.copy(RED_TULIP));
-	public static final Block POTTED_SPROOM_SPIKE = new FlowerPotBlock(SPROOM_SPIKE, Settings.copy(RED_TULIP));
-	public static final Block POTTED_SWEET_VIOLET = new FlowerPotBlock(SWEET_VIOLET, Settings.copy(RED_TULIP));
-	public static final Block POTTED_TOPPED_LAVENDER = new FlowerPotBlock(TOPPED_LAVENDER, Settings.copy(RED_TULIP));
-	public static final Block POTTED_VASLAME = new FlowerPotBlock(VASLAME, Settings.copy(RED_TULIP));
-	public static final Block POTTED_WEEPY_HOLLOWER = new FlowerPotBlock(WEEPY_HOLLOWER, Settings.copy(RED_TULIP));
+
+	public static final Block POTTED_BLUE_POPPY = new FlowerPotBlock(BLUE_POPPY, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_BLUE_VIOLET = new FlowerPotBlock(BLUE_VIOLET, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_BONNET_SPURGE = new FlowerPotBlock(BONNET_SPURGE, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_CHOCOLATE_COSMOS_FLOWER = new FlowerPotBlock(CHOCOLATE_COSMOS_FLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_CYCAWLER = new FlowerPotBlock(CYCAWLER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_GARDEN_PINKS = new FlowerPotBlock(GARDEN_PINKS, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_GYLDELION_FLOWER = new FlowerPotBlock(GYLDELION_FLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_NATIVE_VIOLET = new FlowerPotBlock(NATIVE_VIOLET, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_OPIUM_POPPY = new FlowerPotBlock(OPIUM_POPPY, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_POPPY = new FlowerPotBlock(POPPY, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_PINK_BRAITOR_FLOWER = new FlowerPotBlock(PINK_BRAITOR_FLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_PINK_ROSE = new FlowerPotBlock(PINK_ROSE, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_PINK_ROSE_BUSH = new FlowerPotBlock(PINK_ROSE_BUSH, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_SPIKE_LAVENDER = new FlowerPotBlock(SPIKE_LAVENDER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_RED_BRAITOR_FLOWER = new FlowerPotBlock(RED_BRAITOR_FLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_RED_CHOCOLATE_COSMOS_FLOWER = new FlowerPotBlock(RED_CHOCOLATE_COSMOS_FLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_RED_ROSE = new FlowerPotBlock(RED_ROSE, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_SPROOM_SPIKE = new FlowerPotBlock(SPROOM_SPIKE, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_SWEET_VIOLET = new FlowerPotBlock(SWEET_VIOLET, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_TOPPED_LAVENDER = new FlowerPotBlock(TOPPED_LAVENDER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_VASLAME = new FlowerPotBlock(VASLAME, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_WEEPY_HOLLOWER = new FlowerPotBlock(WEEPY_HOLLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	
 }

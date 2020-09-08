@@ -18,8 +18,22 @@
 	"entrypoints": {
 		"main": [
 			"github.KingVampyre.DeepTrenches.core.DeepTrenches"
+		],
+		"client": [
+			"github.KingVampyre.DeepTrenches.client.DeepTrenchesClient"
+		],
+		"cardinal-components-block": [
+			"github.KingVampyre.DeepTrenches.core.util.ComponentInitializer"
+		],
+		"cardinal-components-entity": [
+			"github.KingVampyre.DeepTrenches.core.util.ComponentInitializer"
 		]
 	},
+	"custom": {
+        "cardinal-components": [
+            "deep_trenches:pollen"
+        ]
+    },
 	"mixins": [],
 	"depends": {
 		"fabricloader": ">=0.7.4",

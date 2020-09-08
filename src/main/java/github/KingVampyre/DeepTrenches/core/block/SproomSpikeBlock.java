@@ -37,9 +37,6 @@ public class SproomSpikeBlock extends PlantBlock {
 
 	public SproomSpikeBlock(Settings settings) {
 		super(settings);
-
-		this.setDefaultState(
-				this.stateManager.getDefaultState().with(AGE, 0).with(FACING, NORTH).with(BLOCK_HALF, TOP));
 	}
 
 	@Override
@@ -61,11 +58,11 @@ public class SproomSpikeBlock extends PlantBlock {
 		BlockPos offset = pos.offset(direction, i);
 		BlockState stateIn = world.getBlockState(offset);
 
-		return 1 < 5 && this.isValidWood(stateIn);
+		return i < 5 && this.isValidWood(stateIn);
 	}
 	
 	@Override
-	public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
+	public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
 
 		switch (state.get(FACING).getAxis()) {
 		case X:
@@ -101,7 +98,7 @@ public class SproomSpikeBlock extends PlantBlock {
 
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
-		BlockState state = super.getPlacementState(ctx);
+		BlockState state = super.getPlacementState(ctx).with(AGE, 0).with(FACING, NORTH).with(BLOCK_HALF, TOP);
 
 		BlockPos pos = ctx.getBlockPos();
 		World world = ctx.getWorld();
@@ -151,7 +148,7 @@ public class SproomSpikeBlock extends PlantBlock {
 	public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
 
 		if (state.get(BLOCK_HALF) == TOP)
-			entity.damage(SPROOM_SPIKE, 1);
+			entity.damage(SPROOM_SPIKE, 3);
 
 	}
 
@@ -161,6 +158,7 @@ public class SproomSpikeBlock extends PlantBlock {
 		BlockPos offset = pos.offset(direction);
 
 		if (!state.canPlaceAt(world, pos))
+			// TODO drop loot
 			world.removeBlock(pos, true);
 
 		else if (world.isAir(offset) && this.canPlaceAt(state, world, offset)) {
@@ -179,7 +177,6 @@ public class SproomSpikeBlock extends PlantBlock {
 		Direction direction = state.get(FACING);
 		
 		return state.with(FACING, rotation.rotate(direction));
-
 	}
 
 }

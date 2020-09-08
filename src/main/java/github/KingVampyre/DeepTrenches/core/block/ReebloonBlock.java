@@ -15,7 +15,7 @@ public class ReebloonBlock extends TallSeagrassBlock {
 
 	@Override
 	protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {
-		return floor.getBlock() == MOSOIL;
+		return floor.isOf(MOSOIL);
 	}
 
 }
