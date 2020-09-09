@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.client;
 
-//import github.KingVampyre.DeepTrenches.common.block.entity.renderer.ModSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.common.block.entity.renderer.ModSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.common.entity.renderer.ModBoatEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.renderer.*;

@@ -49,7 +49,9 @@ public class ModSignBlockEntityRenderer extends BlockEntityRenderer<ModSignBlock
         matrices.push();
         matrices.scale(0.6666667F, -0.6666667F, -0.6666667F);
 
-        Identifier texture = this.getTexture(blockState.getBlock());
+        AbstractSignBlock block = (AbstractSignBlock) blockState.getBlock();
+
+        Identifier texture = ModSignBlockEntityRenderer.getTexture(block);
         RenderLayer renderLayer = RenderLayer.getEntityCutout(texture);
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(renderLayer);
 
@@ -82,9 +84,8 @@ public class ModSignBlockEntityRenderer extends BlockEntityRenderer<ModSignBlock
         matrices.pop();
     }
 
-    private Identifier getTexture(Block block) {
-        AbstractSignBlock signBlock = (AbstractSignBlock) block;
-        SignType signType = signBlock.getSignType();
+    public static Identifier getTexture(AbstractSignBlock block) {
+        SignType signType = block.getSignType();
 
         return new Identifier("deep_trenches:textures/entity/signs/" + signType.getName() + ".png");
     }
