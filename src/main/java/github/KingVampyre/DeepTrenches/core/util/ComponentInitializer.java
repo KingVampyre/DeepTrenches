@@ -4,6 +4,7 @@ import dev.onyxstudios.cca.api.v3.block.BlockComponentFactoryRegistry;
 import dev.onyxstudios.cca.api.v3.block.BlockComponentInitializer;
 import dev.onyxstudios.cca.api.v3.entity.EntityComponentFactoryRegistry;
 import dev.onyxstudios.cca.api.v3.entity.EntityComponentInitializer;
+import github.KingVampyre.DeepTrenches.common.component.anger.AngerComponent;
 import github.KingVampyre.DeepTrenches.common.component.pollen.PollenComponent;
 import github.KingVampyre.DeepTrenches.core.component.StaspPollenComponent;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
@@ -19,6 +20,7 @@ public class ComponentInitializer implements BlockComponentInitializer, EntityCo
 
     @Override
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry) {
+        registry.registerFor(StaspEntity.class, Components.ANGER, entity -> new AngerComponent());
         registry.registerFor(StaspEntity.class, Components.POLLEN, entity -> new StaspPollenComponent(100, 150));
     }
     
