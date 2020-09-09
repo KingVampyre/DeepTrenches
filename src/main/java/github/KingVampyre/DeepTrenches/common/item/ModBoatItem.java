@@ -11,8 +11,10 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import github.KingVampyre.DeepTrenches.common.entity.ModBoatEntity;
+import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.WoodType;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BoatItem;
 import net.minecraft.item.ItemStack;
@@ -42,7 +44,7 @@ public class ModBoatItem extends BoatItem {
 		HitResult hitResult = raycast(world, user, RaycastContext.FluidHandling.ANY);
 
 		if (hitResult.getType() == MISS)
-			return new TypedActionResult<ItemStack>(PASS, itemStack);
+			return TypedActionResult.pass(itemStack);
 
 		Vec3d vec3d = user.getRotationVec(1.0F);
 		Box searchBox = user.getBoundingBox().stretch(vec3d.multiply(5)).expand(1);
@@ -56,7 +58,7 @@ public class ModBoatItem extends BoatItem {
 				Box box = entity.getBoundingBox().expand(entity.getTargetingMargin());
 
 				if (box.contains(camera))
-					return new TypedActionResult<ItemStack>(PASS, itemStack);
+					return TypedActionResult.pass(itemStack);
 			}
 
 		}
@@ -70,20 +72,21 @@ public class ModBoatItem extends BoatItem {
 			boatEntity.yaw = user.yaw;
 
 			if (!world.isSpaceEmpty(boatEntity, boatEntity.getBoundingBox().expand(-0.1D)))
-				return new TypedActionResult<ItemStack>(FAIL, itemStack);
+				return TypedActionResult.fail(itemStack);
 			else {
-				if (!world.isClient)
+				if (!world.isClient) {
 					world.spawnEntity(boatEntity);
 
-				if (!user.abilities.creativeMode)
-					itemStack.decrement(1);
+					if (!user.abilities.creativeMode)
+						itemStack.decrement(1);
+				}
 
 				user.incrementStat(USED.getOrCreateStat(this));
 
-				return new TypedActionResult<ItemStack>(SUCCESS, itemStack);
+				return TypedActionResult.method_29237(itemStack, world.isClient());
 			}
 		} else {
-			return new TypedActionResult<ItemStack>(PASS, itemStack);
+			return TypedActionResult.pass(itemStack);
 		}
 
 	}

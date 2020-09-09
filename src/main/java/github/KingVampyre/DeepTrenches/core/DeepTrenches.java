@@ -2,6 +2,7 @@ package github.KingVampyre.DeepTrenches.core;
 
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
+import github.KingVampyre.DeepTrenches.core.init.LootConditionTypes;
 import github.KingVampyre.DeepTrenches.core.init.ModPotions;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.BlockItem;
@@ -21,6 +22,7 @@ public class  DeepTrenches implements ModInitializer {
 
     @Override
     public void onInitialize() {
+		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);
 
         Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:adaigger"), EntityTypes.ADAIGGER);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:betta"), EntityTypes.BETTA);

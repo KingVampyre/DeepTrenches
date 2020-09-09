@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "deep_trenches:light_loosejaw"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "deep_trenches:loosejaw_tooth",
+		  "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+				"max": 2,
+				"min": 1
+			  }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.04
+        }
+      ]
+    }
+  ]
+}

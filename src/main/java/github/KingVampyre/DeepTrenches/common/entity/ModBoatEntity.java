@@ -1,23 +1,17 @@
 package github.KingVampyre.DeepTrenches.common.entity;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModLootContextParameters.WOOD_TYPE;
-import static net.minecraft.entity.data.TrackedDataHandlerRegistry.STRING;
-import static net.minecraft.loot.context.LootContextParameters.LAST_DAMAGE_PLAYER;
-import static net.minecraft.world.GameRules.DO_ENTITY_DROPS;
-
+import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ModLootContextParameters;
 import github.KingVampyre.DeepTrenches.core.init.WoodType;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.ProjectileDamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.vehicle.BoatEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootManager;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.context.LootContext;
@@ -25,14 +19,22 @@ import net.minecraft.loot.context.LootContextType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
+
+import static github.KingVampyre.DeepTrenches.core.init.ModLootContextParameters.WOOD_TYPE;
+import static net.minecraft.entity.data.TrackedDataHandlerRegistry.STRING;
+import static net.minecraft.loot.context.LootContextParameters.LAST_DAMAGE_PLAYER;
+import static net.minecraft.world.GameRules.DO_ENTITY_DROPS;
 
 public class ModBoatEntity extends BoatEntity {
 
 	// TODO: move
-	public static final LootContextType BOAT_LOOT = new LootContextType.Builder().allow(LAST_DAMAGE_PLAYER)
-			.require(ModLootContextParameters.WOOD_TYPE).build();
+	public static final LootContextType BOAT_LOOT = new LootContextType.Builder()
+			.allow(LAST_DAMAGE_PLAYER)
+			.require(ModLootContextParameters.WOOD_TYPE)
+			.build();
 
 	private static final TrackedData<String> BOAT_TYPE = DataTracker.registerData(ModBoatEntity.class, STRING);
 
@@ -43,7 +45,14 @@ public class ModBoatEntity extends BoatEntity {
 	}
 
 	public ModBoatEntity(World world, double x, double y, double z) {
-		super(world, x, y, z);
+		super(EntityTypes.BOAT, world);
+
+		this.updatePosition(x, y, z);
+		this.setVelocity(Vec3d.ZERO);
+
+		this.prevX = x;
+		this.prevY = y;
+		this.prevZ = z;
 	}
 
 	@Override
@@ -98,11 +107,6 @@ public class ModBoatEntity extends BoatEntity {
 		LootTable table = manager.getTable(id);
 
 		table.generateLoot(context.build(BOAT_LOOT), this::dropStack);
-	}
-
-	@Override
-	public ItemEntity dropStack(ItemStack stack, float yOffset) {
-		return null;
 	}
 
 	@Override

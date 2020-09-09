@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.mixin;
+package github.KingVampyre.DeepTrenches.client.mixin;
 
 import github.KingVampyre.DeepTrenches.common.block.ModSignBlock;
 import github.KingVampyre.DeepTrenches.common.block.entity.renderer.ModSignBlockEntityRenderer;

@@ -32,7 +32,7 @@ public class EntityTypes {
 			.build();
 
 	public static final EntityType<ModBoatEntity> BOAT = FabricEntityTypeBuilder
-			.<ModBoatEntity>create(SpawnGroup.MISC, ModBoatEntity::new)
+			.<ModBoatEntity>create(SpawnGroup.MISC, (EntityType.EntityFactory<ModBoatEntity>) ModBoatEntity::new)
 			.dimensions(EntityDimensions.fixed(1.375F, 0.5625F))
 			.build();
 

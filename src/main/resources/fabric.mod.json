@@ -34,7 +34,7 @@
             "deep_trenches:pollen"
         ]
     },
-	"mixins": [ "deep_trenches.mixins.json" ],
+	"mixins": [ "deep_trenches.client.mixins.json","deep_trenches.core.mixins.json" ],
 	"depends": {
 		"fabricloader": ">=0.7.4",
 		"fabric": "*",
