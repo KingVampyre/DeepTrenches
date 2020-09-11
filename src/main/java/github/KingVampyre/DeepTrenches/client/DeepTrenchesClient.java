@@ -42,7 +42,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
             if (world != null && pos != null) {
                 ClientWorld client = MinecraftClient.getInstance().world;
 
-                client.calculateColor(pos, (biome, x, z) -> {
+                return client.calculateColor(pos, (biome, x, z) -> {
                     double temperature = MathHelper.clamp(biome.getTemperature(), 0.0F, 1.0F);
                     double humidity = MathHelper.clamp(biome.getDownfall(), 0.0F, 1.0F);
 
@@ -59,7 +59,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
             if (world != null && pos != null) {
                 ClientWorld client = MinecraftClient.getInstance().world;
 
-                client.calculateColor(pos, (biome, d, e) -> {
+                return client.calculateColor(pos, (biome, d, e) -> {
                     double temperature = biome.getTemperature();
                     double humidity = biome.getDownfall();
 
