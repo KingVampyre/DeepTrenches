@@ -1,5 +1,8 @@
 package github.KingVampyre.DeepTrenches.client;
 
+import github.KingVampyre.DeepTrenches.client.resource.StorceanFoliageColorMapResourceSupplier;
+import github.KingVampyre.DeepTrenches.client.resource.StorceanMosoilColorMapResourceSupplier;
+import github.KingVampyre.DeepTrenches.client.resource.StorceanWaterColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.common.block.entity.renderer.ModSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.common.entity.renderer.ModBoatEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.renderer.*;
@@ -8,18 +11,87 @@ import github.KingVampyre.DeepTrenches.core.entity.renderer.dragonfishes.BlackLo
 import github.KingVampyre.DeepTrenches.core.entity.renderer.dragonfishes.LightLoosejawRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.renderer.dragonfishes.SmalltoothDragonfishRenderer;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
+import github.KingVampyre.DeepTrenches.core.init.ColorMaps;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.color.world.GrassColors;
+import net.minecraft.client.world.ClientWorld;
+import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.resource.ResourceType;
+import net.minecraft.util.math.MathHelper;
 
 public class DeepTrenchesClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanFoliageColorMapResourceSupplier());
+        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanMosoilColorMapResourceSupplier());
+        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanWaterColorMapResourceSupplier());
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+
+            if (world != null && pos != null) {
+                ClientWorld client = MinecraftClient.getInstance().world;
+
+                client.calculateColor(pos, (biome, x, z) -> {
+                    double temperature = MathHelper.clamp(biome.getTemperature(), 0.0F, 1.0F);
+                    double humidity = MathHelper.clamp(biome.getDownfall(), 0.0F, 1.0F);
+
+                    return ColorMaps.STORCEAN_MOSOIL.getColor(temperature, humidity);
+                });
+            }
+
+            return ColorMaps.STORCEAN_MOSOIL.getDefaultColor();
+
+        }, ModBlocks.MOSOIL, ModBlocks.REEBLOON);
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+
+            if (world != null && pos != null) {
+                ClientWorld client = MinecraftClient.getInstance().world;
+
+                client.calculateColor(pos, (biome, d, e) -> {
+                    double temperature = biome.getTemperature();
+                    double humidity = biome.getDownfall();
+
+                    return ColorMaps.STORCEAN_FOLIAGE.getColor(temperature, humidity);
+                });
+            }
+
+            return ColorMaps.STORCEAN_FOLIAGE.getDefaultColor();
+
+        }, ModBlocks.AQUEAN_LEAVES);
+
+        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+
+           if(world != null && pos != null)
+               return BiomeColors.getFoliageColor(world, pos);
+
+           return FoliageColors.getDefaultColor();
+
+        }, ModBlocks.ALMOND_LEAVES, ModBlocks.BLACK_BIRCH_LEAVES, ModBlocks.EBONY_LEAVES, ModBlocks.PELTOGYNE_LEAVES, ModBlocks.PLUM_LEAVES, ModBlocks.TEAK_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_MOSOIL.getDefaultColor(), ModBlocks.REEBLOON);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_MOSOIL.getDefaultColor(), ModBlocks.MOSOIL);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, ModBlocks.ALMOND_LEAVES);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, ModBlocks.BLACK_BIRCH_LEAVES);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, ModBlocks.EBONY_LEAVES);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, ModBlocks.PELTOGYNE_LEAVES);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, ModBlocks.PLUM_LEAVES);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, ModBlocks.TEAK_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_FOLIAGE.getDefaultColor(), ModBlocks.AQUEAN_LEAVES);
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_BLACKGREEN_TREE_CORAL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_BLACKGREEN_TREE_CORAL_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN, RenderLayer.getCutout());
