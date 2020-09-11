@@ -45,7 +45,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(POTION, new Identifier("deep_trenches:long_softbones"), ModPotions.LONG_SOFTBONES);
 		Registry.register(POTION, new Identifier("deep_trenches:long_strong_softbones"), ModPotions.LONG_STRONG_SOFTBONES);
 		Registry.register(POTION, new Identifier("deep_trenches:softbones"), ModPotions.SOFTBONES);
-		Registry.register(POTION, new Identifier("deep_trenches:strong_softbones"), ModPotions.STRONG_OFTBONES);
+		Registry.register(POTION, new Identifier("deep_trenches:strong_softbones"), ModPotions.STRONG_SOFTBONES);
 
         /* -------------------------------- Blocks ------------------------------------------- */
 		
