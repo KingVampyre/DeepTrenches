@@ -1,18 +1,16 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.PIPE_ORGAN_CORAL;
-
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Identifier;
+
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.PIPE_ORGAN_CORAL;
 
 public class ItemGroups {
 
-	public static final ItemGroup GENERAL = new ItemGroup(0, "deep_trenches") {
-
-		@Override
-		public ItemStack createIcon() {
-			return new ItemStack(PIPE_ORGAN_CORAL);
-		}
-	};
+    public static final ItemGroup GENERAL = FabricItemGroupBuilder.build(
+            new Identifier("deep_trenches:general"),
+            () -> new ItemStack(PIPE_ORGAN_CORAL));
 
 }
