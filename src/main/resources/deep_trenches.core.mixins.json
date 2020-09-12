@@ -5,7 +5,9 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BrewingRecipeRegistryMixin",
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "PlayerEntityMixin",
+    "ServerPlayerEntityMixin"
   ],
   "client": [
   ],
