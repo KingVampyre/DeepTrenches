@@ -21,7 +21,7 @@ public class EnchantmentMixin {
         Enchantment enchantment = (Enchantment) (Object) this;
         Item item = stack.getItem();
 
-        if(enchantment == ModEnchantments.DRAINING) {
+        if(enchantment == ModEnchantments.SOUL_DRAINING) {
 
             if(item == Items.CROSSBOW)
                 cir.setReturnValue(true);
@@ -33,7 +33,7 @@ public class EnchantmentMixin {
 
         if(item == ModItems.ADAIGGER) {
 
-            if(enchantment == ModEnchantments.DRAINING)
+            if(enchantment == ModEnchantments.SOUL_DRAINING)
                 cir.setReturnValue(true);
 
             if(enchantment == Enchantments.LOYALTY)

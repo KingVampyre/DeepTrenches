@@ -7,6 +7,6 @@ import net.minecraft.entity.EquipmentSlot;
 
 public class ModEnchantments {
 
-    public static final Enchantment DRAINING = new DrainingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, EquipmentSlot.MAINHAND);
+    public static final Enchantment SOUL_DRAINING = new DrainingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.BOW, EquipmentSlot.MAINHAND);
 
 }

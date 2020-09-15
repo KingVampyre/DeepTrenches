@@ -21,7 +21,7 @@ public class  DeepTrenches implements ModInitializer {
     public void onInitialize() {
 		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);
 
-		Registry.register(ENCHANTMENT, new Identifier("deep_trenches:draining"), ModEnchantments.DRAINING);
+		Registry.register(ENCHANTMENT, new Identifier("deep_trenches:soul_draining"), ModEnchantments.SOUL_DRAINING);
 
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:adaigger"), EntityTypes.ADAIGGER);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:betta"), EntityTypes.BETTA);
@@ -36,10 +36,11 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:braitor_beauty"), BRAITOR_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cosmos_beauty"), COSMOS_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cycawler_beauty"), CYCAWLER_BEAUTY);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:draining"), DRAINING);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:flower_beauty"), FLOWER_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:sleepy"), SLEEPY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:softbones"), SOFTBONES);
+		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:soul_draining"), SOUL_DRAINING);
+		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:soul_ravening"), SOUL_RAVENING);
 
 		Registry.register(POTION, new Identifier("deep_trenches:long_softbones"), ModPotions.LONG_SOFTBONES);
 		Registry.register(POTION, new Identifier("deep_trenches:long_strong_softbones"), ModPotions.LONG_STRONG_SOFTBONES);

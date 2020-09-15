@@ -1,6 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.item;
 
 import github.KingVampyre.DeepTrenches.core.entity.AdaiggerEntity;
+import github.KingVampyre.DeepTrenches.core.util.ModEnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
@@ -54,6 +55,14 @@ public class AdaiggerItem extends SwordItem {
 			player.incrementStat(Stats.USED.getOrCreateStat(this));
 		}
 
+	}
+
+
+	@Override
+	public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+		ModEnchantmentHelper.applySoulDraining(attacker, target, stack);
+
+		return super.postHit(stack, target, attacker);
 	}
 
 }

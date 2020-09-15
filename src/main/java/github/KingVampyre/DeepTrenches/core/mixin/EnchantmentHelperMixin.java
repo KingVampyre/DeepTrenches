@@ -27,7 +27,7 @@ public class EnchantmentHelperMixin {
     @Redirect(method = "getPossibleEntries", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/EnchantmentTarget;isAcceptableItem(Lnet/minecraft/item/Item;)Z"))
     private static boolean isAcceptableItem(EnchantmentTarget enchantmentTarget, Item item) {
 
-        if(currentEnchantment == ModEnchantments.DRAINING) {
+        if(currentEnchantment == ModEnchantments.SOUL_DRAINING) {
             ItemStack stack = new ItemStack(item);
 
             return currentEnchantment.isAcceptableItem(stack);
