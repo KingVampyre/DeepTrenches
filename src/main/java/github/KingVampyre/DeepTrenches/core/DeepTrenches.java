@@ -12,6 +12,7 @@ import net.minecraft.util.registry.Registry;
 import static github.KingVampyre.DeepTrenches.core.init.ItemGroups.GENERAL;
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.*;
+import static github.KingVampyre.DeepTrenches.core.init.PaintingMotives.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
 import static net.minecraft.util.registry.Registry.*;
 
@@ -41,6 +42,18 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:softbones"), SOFTBONES);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:soul_draining"), SOUL_DRAINING);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:soul_ravening"), SOUL_RAVENING);
+
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:beach"), BEACH);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:beethoven_piano"), BEETHOVEN_PIANO);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:beethoven_upright_piano"), BEETHOVEN_UPRIGHT_PIANO);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:black_loosejaw_and_giant_seed_shrimp"), BLACK_LOOSEJAW_AND_GIANT_SEED_SHRIMP);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:black_loosejaw_in_marine_snow"), BLACK_LOOSEJAW_IN_MARINE_SNOW);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:black_seadevil"), BLACK_SEADEVIL);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:blue_violet_garden"), BLUE_VIOLET_GARDEN);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:icheel"), ICHEEL);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:scutigera"), SCUTIGERA);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:storcean_island"), STORCEAN_ISLAND);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:sunset_and_flowers"), SUNSET_AND_FLOWERS);
 
 		Registry.register(POTION, new Identifier("deep_trenches:long_softbones"), ModPotions.LONG_SOFTBONES);
 		Registry.register(POTION, new Identifier("deep_trenches:long_strong_softbones"), ModPotions.LONG_STRONG_SOFTBONES);
