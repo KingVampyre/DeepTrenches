@@ -33,7 +33,7 @@ dependencies {
 	// Cardinal Components api
 	modImplementation "io.github.onyxstudios:Cardinal-Components-API:2.5.4"
 	// GeckoLib
-	modImplementation "software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0"
+	modImplementation "software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0:dev"
 
 	include "io.github.onyxstudios:Cardinal-Components-API:2.5.4>"
 	include "software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0"

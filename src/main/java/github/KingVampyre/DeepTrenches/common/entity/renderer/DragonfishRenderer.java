@@ -25,8 +25,7 @@ public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> e
 	}
 
 	@Override
-	public void render(T mobEntity, float f, float g, MatrixStack matrixStack,
-			VertexConsumerProvider vertexConsumerProvider, int i) {
+	public void render(T mobEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
 
 		boolean flag = this.isVisible(mobEntity);
 		boolean flag1 = !flag && mobEntity.isInvisibleTo(MinecraftClient.getInstance().player);

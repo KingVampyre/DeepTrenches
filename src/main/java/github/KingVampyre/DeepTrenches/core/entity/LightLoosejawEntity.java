@@ -5,11 +5,23 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
+import software.bernie.geckolib.animation.controller.EntityAnimationController;
+import software.bernie.geckolib.entity.IAnimatedEntity;
+import software.bernie.geckolib.manager.EntityAnimationManager;
 
-public class LightLoosejawEntity extends TamableDragonfishEntity {
+public class LightLoosejawEntity extends TamableDragonfishEntity implements IAnimatedEntity {
+
+    protected EntityAnimationManager animationManager;
 
     public LightLoosejawEntity(EntityType<? extends LightLoosejawEntity> type, World world) {
         super(type, world);
+
+        this.animationManager = new EntityAnimationManager();
+    }
+
+    @Override
+    public EntityAnimationManager getAnimationManager() {
+        return this.animationManager;
     }
 
     @Override
