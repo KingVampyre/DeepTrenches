@@ -1,15 +1,15 @@
 package github.KingVampyre.DeepTrenches.client;
 
+import github.KingVampyre.DeepTrenches.client.entity.renderer.*;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanFoliageColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanMosoilColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanWaterColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.common.block.entity.renderer.ModSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.common.entity.renderer.ModBoatEntityRenderer;
-import github.KingVampyre.DeepTrenches.core.entity.renderer.*;
-import github.KingVampyre.DeepTrenches.core.entity.renderer.dragonfishes.BarbeledLoosejawRenderer;
-import github.KingVampyre.DeepTrenches.core.entity.renderer.dragonfishes.BlackLoosejawRenderer;
-import github.KingVampyre.DeepTrenches.core.entity.renderer.dragonfishes.LightLoosejawRenderer;
-import github.KingVampyre.DeepTrenches.core.entity.renderer.dragonfishes.SmalltoothDragonfishRenderer;
+import github.KingVampyre.DeepTrenches.client.entity.renderer.BarbeledLoosejawRenderer;
+import github.KingVampyre.DeepTrenches.client.entity.renderer.BlackLoosejawRenderer;
+import github.KingVampyre.DeepTrenches.client.entity.renderer.LightLoosejawRenderer;
+import github.KingVampyre.DeepTrenches.client.entity.renderer.SmalltoothDragonfishRenderer;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ColorMaps;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
@@ -22,7 +22,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.render.RenderLayer;

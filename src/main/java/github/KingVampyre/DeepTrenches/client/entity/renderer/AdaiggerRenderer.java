@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.entity.renderer;
+package github.KingVampyre.DeepTrenches.client.entity.renderer;
 
 import github.KingVampyre.DeepTrenches.core.entity.AdaiggerEntity;
 import net.fabricmc.api.EnvType;
