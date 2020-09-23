@@ -22,6 +22,25 @@ public class  DeepTrenches implements ModInitializer {
     public void onInitialize() {
 		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);
 
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:blink_interval"), ModEntityAttributes.BLINK_INTERVAL);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:blink_range"), ModEntityAttributes.BLINK_RANGE);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:blink_delay"), ModEntityAttributes.BLINK_DELAY);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:max_blinks"), ModEntityAttributes.MAX_BLINKS);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:min_blinks"), ModEntityAttributes.MIN_BLINKS);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:lure_attraction"), ModEntityAttributes.LURE_ATTRACTION);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:lure_delay"), ModEntityAttributes.LURE_DELAY);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:lure_max_lit"), ModEntityAttributes.LURE_MAX_LIT);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:lure_max_unlit"), ModEntityAttributes.LURE_MAX_UNLIT);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:lure_min_lit"), ModEntityAttributes.LURE_MIN_LIT);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:lure_min_unlit"), ModEntityAttributes.LURE_MIN_UNLIT);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:max_luring"), ModEntityAttributes.MAX_LURING);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:min_luring"), ModEntityAttributes.MIN_LURING);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:movement_speed_boost"), ModEntityAttributes.MOVEMENT_SPEED_BOOST);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:prey_detection"), ModEntityAttributes.PREY_DETECTION);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:suborbital_delay"), ModEntityAttributes.SUBORBITAL_DELAY);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:suborbital_max_lit"), ModEntityAttributes.SUBORBITAL_MAX_LIT);
+		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:suborbital_min_lit"), ModEntityAttributes.SUBORBITAL_MIN_LIT);
+
 		Registry.register(ENCHANTMENT, new Identifier("deep_trenches:soul_draining"), ModEnchantments.SOUL_DRAINING);
 
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:adaigger"), EntityTypes.ADAIGGER);
