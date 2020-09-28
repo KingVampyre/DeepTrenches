@@ -204,7 +204,7 @@ public class LightLoosejawTransparentModel extends AnimatedEntityModel<LightLoos
 
     @Override
     public ResourceLocation getAnimationFileLocation() {
-        return new ResourceLocation("deep_trenches:animations/light_loosejaw_transparent.json");
+        return new ResourceLocation("deep_trenches:animations/light_loosejaw.json");
     }
 
 }

@@ -255,7 +255,7 @@ public class SmalltoothDragonfishTransparentModel extends AnimatedEntityModel<Sm
 
     @Override
     public ResourceLocation getAnimationFileLocation() {
-        return new ResourceLocation("deep_trenches:animations/smalltooth_dragonfish_transparent.json");
+        return new ResourceLocation("deep_trenches:animations/smalltooth_dragonfish.json");
     }
 
 }

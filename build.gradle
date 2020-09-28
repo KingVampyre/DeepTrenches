@@ -19,24 +19,33 @@ repositories {
 		name = "GeckoLib"
 		url = "https://repo.repsy.io/mvn/gandiber/geckolib"
 	}
+	maven {
+		name = "Features API"
+		url = "https://repo.repsy.io/mvn/louwind/features-api"
+	}
 }
 
 dependencies {
 	implementation 'org.jetbrains:annotations:19.0.0'
 	implementation 'org.jetbrains:annotations:19.0.0'
-	minecraft "com.mojang:minecraft:1.16.2"
-	mappings "net.fabricmc:yarn:1.16.2+build.46:v2"
-	modImplementation "net.fabricmc:fabric-loader:0.9.3+build.207"
 
-	// Fabric api
-	modImplementation "net.fabricmc.fabric-api:fabric-api:0.20.1+build.401-1.16"
-	// Cardinal Components api
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	// Fabric API
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// Cardinal Components API
 	modImplementation "io.github.onyxstudios:Cardinal-Components-API:2.5.4"
 	// GeckoLib
 	modImplementation "software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0:dev"
+	// Features API
+	modImplementation "github.louwind.features-api:Features-API:1.0.0"
 
 	include "io.github.onyxstudios:Cardinal-Components-API:2.5.4>"
 	include "software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0"
+	include "github.louwind.features-api:Features-API:1.0.0"
 }
 
 processResources {

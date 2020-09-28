@@ -221,7 +221,7 @@ public class BlackLoosejawTransparentModel extends AnimatedEntityModel<BlackLoos
 
     @Override
     public ResourceLocation getAnimationFileLocation() {
-        return new ResourceLocation("deep_trenches:animations/black_loosejaw_transparent.json");
+        return new ResourceLocation("deep_trenches:animations/black_loosejaw.json");
     }
 
 }

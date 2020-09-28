@@ -255,7 +255,7 @@ public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<Barbel
 
     @Override
     public ResourceLocation getAnimationFileLocation() {
-        return new ResourceLocation("deep_trenches:animations/barbeled_loosejaw_transparent.json");
+        return new ResourceLocation("deep_trenches:animations/barbeled_loosejaw.json");
     }
 
 }
