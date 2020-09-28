@@ -1,0 +1,19 @@
+{
+  "name": "deep_trenches:trees/cook_pine/medium_crowns",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/cook_pine/crown/medium_crown_01",
+      "weight": 1
+    },
+	{
+      "structure": "deep_trenches:trees/cook_pine/crown/medium_crown_02",
+      "weight": 2
+    },
+	{
+      "structure": "deep_trenches:trees/cook_pine/crown/medium_crown_03",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "deep_trenches:trees/thundercloud_plum/branches",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/thundercloud_plum/branches/large_branch",
+      "weight": 1
+    },
+    {
+      "structure": "deep_trenches:trees/thundercloud_plum/branches/medium_branch",
+      "weight": 3
+    },
+    {
+      "structure": "deep_trenches:trees/thundercloud_plum/branches/small_branch",
+      "weight": 6
+    }
+  ]
+}

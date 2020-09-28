@@ -1,0 +1,20 @@
+{
+  "name": "deep_trenches:trees/crolood/roots",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/crolood/root/root_01",
+      "weight": 1
+    },
+	{
+      "structure": "deep_trenches:trees/crolood/root/root_02",
+      "weight": 1
+    },
+	{
+      "structure": "deep_trenches:trees/crolood/root/root_03",
+      "weight": 1
+    }
+
+  ]
+}

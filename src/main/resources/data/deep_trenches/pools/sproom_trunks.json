@@ -1,0 +1,19 @@
+{
+  "name": "deep_trenches:trees/sproom/trunks",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/sproom/trunks/trunk_01",
+      "weight": 1
+    },
+	{
+      "structure": "deep_trenches:trees/sproom/trunks/trunk_01",
+      "weight": 1
+    },
+	{
+      "structure": "deep_trenches:trees/sproom/trunks/trunk_01",
+      "weight": 1
+    }
+  ]
+}

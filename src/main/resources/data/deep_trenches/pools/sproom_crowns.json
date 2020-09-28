@@ -1,0 +1,11 @@
+{
+  "name": "deep_trenches:trees/sproom/crowns",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/sproom/crown/crown_01",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "deep_trenches:trees/aquean/crown",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/aquean/crown/large_crown",
+      "weight": 1
+    },
+    {
+      "structure": "deep_trenches:trees/aquean/crown/medium_crown",
+      "weight": 3
+    },
+    {
+      "structure": "deep_trenches:trees/aquean/crown/small_crown",
+      "weight": 7
+    }
+  ]
+}

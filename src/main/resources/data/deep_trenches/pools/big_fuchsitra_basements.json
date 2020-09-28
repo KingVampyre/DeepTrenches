@@ -1,0 +1,11 @@
+{
+  "name": "deep_trenches:trees/fuchsitra/basements",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/fuchsitra/basements/basement_01",
+      "weight": 1
+    }
+  ]
+}

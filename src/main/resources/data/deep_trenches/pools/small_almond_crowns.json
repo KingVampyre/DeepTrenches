@@ -1,0 +1,23 @@
+{
+  "name": "deep_trenches:trees/almond/small_crowns",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/almond/crown/small_crown_01",
+      "weight": 1
+    },
+	{
+      "structure": "deep_trenches:trees/almond/crown/small_crown_02",
+      "weight": 1
+    },
+	{
+      "structure": "deep_trenches:trees/almond/crown/small_crown_03",
+      "weight": 1
+    },
+	{
+      "structure": "deep_trenches:trees/almond/crown/small_crown_04",
+      "weight": 1
+    }
+  ]
+}

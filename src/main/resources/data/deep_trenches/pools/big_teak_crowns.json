@@ -1,0 +1,11 @@
+{
+  "name": "deep_trenches:trees/teak/big_crowns",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/teak/crown/big_crown_01",
+      "weight": 1
+    }
+  ]
+}

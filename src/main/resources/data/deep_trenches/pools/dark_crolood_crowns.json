@@ -1,0 +1,11 @@
+{
+  "name": "deep_trenches:trees/dark_crolood/crowns",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/dark_crolood/crown/crown_01",
+      "weight": 1
+    }
+  ]
+}

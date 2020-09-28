@@ -1,0 +1,15 @@
+{
+  "name": "deep_trenches:trees/black_birch/branches",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/black_birch/branches/branch_01",
+      "weight": 2
+    },
+	{
+      "structure": "deep_trenches:trees/black_birch/branches/branch_01",
+      "weight": 1
+    }
+  ]
+}

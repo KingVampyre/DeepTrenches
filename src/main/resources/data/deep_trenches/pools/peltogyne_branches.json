@@ -1,0 +1,19 @@
+{
+  "name": "deep_trenches:trees/peltogyne/branches",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "structure": "deep_trenches:trees/peltogyne/branches/branch_01",
+      "weight": 5
+    },
+	{
+      "structure": "deep_trenches:trees/peltogyne/branches/branch_01",
+      "weight": 4
+    },
+	{
+      "structure": "deep_trenches:trees/peltogyne/branches/branch_01",
+      "weight": 1
+    }
+  ]
+}
