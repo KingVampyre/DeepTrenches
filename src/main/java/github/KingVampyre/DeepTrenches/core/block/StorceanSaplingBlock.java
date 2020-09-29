@@ -1,17 +1,17 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.DRITEAN;
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.MOSOIL;
-
-import github.KingVampyre.DeepTrenches.common.block.ModSaplingBlock;
+import github.KingVampyre.DeepTrenches.common.block.FeaturesSaplingBlock;
+import github.KingVampyre.DeepTrenches.common.block.sapling.FeaturesSaplingGenerator;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-public class StorceanSaplingBlock extends ModSaplingBlock {
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.DRITEAN;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.MOSOIL;
 
-	public StorceanSaplingBlock(SaplingGenerator generator, Settings settings) {
+public class StorceanSaplingBlock extends FeaturesSaplingBlock {
+
+	public StorceanSaplingBlock(FeaturesSaplingGenerator generator, Settings settings) {
 		super(generator, settings);
 	}
 

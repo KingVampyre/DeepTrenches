@@ -14,6 +14,7 @@ import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.*;
 import static github.KingVampyre.DeepTrenches.core.init.PaintingMotives.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
+import static github.Louwind.Features.registry.FeaturesRegistry.*;
 import static net.minecraft.util.registry.Registry.*;
 
 public class  DeepTrenches implements ModInitializer {
@@ -52,6 +53,27 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:barbeled_loosejaw"), EntityTypes.BARBELED_LOOSEJAW);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:smalltooth_dragonfish"), EntityTypes.SMALLTOOTH_DRAGONFISH);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:stasp"), EntityTypes.STASP);
+
+		/* -------------------------------- Features ------------------------------------------- */
+		
+		Registry.register(FEATURE_CONTEXT_PARAMETER, new Identifier("deep_trenches:origin"), ModFeatureContextParameters.ORIGIN);
+		Registry.register(FEATURE_CONTEXT_PROVIDER, new Identifier("deep_trenches:thick_tree"), ModFeatureContextProviders.THICK_TREE);
+
+		Registry.register(FEATURE_FUNCTION_TYPE, new Identifier("deep_trenches:pivot"), ModFeatureFunctions.PIVOT);
+
+		Registry.register(FEATURE, new Identifier("deep_trenches:big_almond"), ModFeatures.BIG_ALMOND);
+		Registry.register(FEATURE, new Identifier("deep_trenches:medium_almond"), ModFeatures.MEDIUM_ALMOND);
+		Registry.register(FEATURE, new Identifier("deep_trenches:small_almond"), ModFeatures.SMALL_ALMOND);
+
+		Registry.register(FEATURE, new Identifier("deep_trenches:big_cherry"), ModFeatures.BIG_CHERRY);
+		Registry.register(FEATURE, new Identifier("deep_trenches:medium_cherry"), ModFeatures.MEDIUM_CHERRY);
+		Registry.register(FEATURE, new Identifier("deep_trenches:small_cherry"), ModFeatures.SMALL_CHERRY);
+
+		Registry.register(FEATURE, new Identifier("deep_trenches:big_pin_cherry"), ModFeatures.BIG_PIN_CHERRY);
+		Registry.register(FEATURE, new Identifier("deep_trenches:medium_pin_cherry"), ModFeatures.MEDIUM_PIN_CHERRY);
+		Registry.register(FEATURE, new Identifier("deep_trenches:small_pin_cherry"), ModFeatures.SMALL_PIN_CHERRY);
+
+		/* -------------------------------- Status Effects ------------------------------------------- */
 
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:braitor_beauty"), BRAITOR_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cosmos_beauty"), COSMOS_BEAUTY);

@@ -1,0 +1,107 @@
+{
+  "type": "features:generic",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:trees/almond/medium_crowns",
+      "properties": {
+        "type": "features:properties",
+        "rotations": "all"
+      },
+      "context": {
+        "type": "features:tree",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:ranged",
+                "range": {
+                  "min": 4,
+                  "max": 9
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:place_trunk",
+          "block": "deep_trenches:almond_log"
+        }
+      ],
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/almond/crown/medium_crown_01",
+          "functions": [
+            {
+              "function": "deep_trenches:pivot",
+              "when": {
+                "all": {
+                  "x": -3,
+                  "z": -4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/almond/crown/medium_crown_02",
+          "functions": [
+            {
+              "function": "deep_trenches:pivot",
+              "when": {
+                "all": {
+                  "x": -3,
+                  "z": -3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/almond/crown/medium_crown_03",
+          "functions": [
+            {
+              "function": "deep_trenches:pivot",
+              "when": {
+                "all": {
+                  "x": -6,
+                  "z": -5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/almond/crown/medium_crown_04",
+          "functions": [
+            {
+              "function": "deep_trenches:pivot",
+              "when": {
+                "all": {
+                  "x": -4,
+                  "z": -6
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

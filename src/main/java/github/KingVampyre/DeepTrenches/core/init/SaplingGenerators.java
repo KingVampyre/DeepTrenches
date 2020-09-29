@@ -1,218 +1,56 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import java.util.Random;
-
-import net.minecraft.block.sapling.SaplingGenerator;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import github.KingVampyre.DeepTrenches.common.block.sapling.FeaturesSaplingGenerator;
+import github.KingVampyre.DeepTrenches.core.block.sapling.AlmondSaplingGenerator;
+import github.KingVampyre.DeepTrenches.core.block.sapling.CherrySaplingGenerator;
+import github.KingVampyre.DeepTrenches.core.block.sapling.PinCherrySaplingGenerator;
 
 public class SaplingGenerators {
 
-	public static final SaplingGenerator ALMOND = new SaplingGenerator() {
+	public static final AlmondSaplingGenerator ALMOND = new AlmondSaplingGenerator();
 
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
+	public static final FeaturesSaplingGenerator ANAMEATA = (random, sapling) -> null;
 
-	};
+	public static final FeaturesSaplingGenerator AQUEAN = (random, sapling) -> null;
 
-	public static final SaplingGenerator ANAMEATA = new SaplingGenerator() {
+	public static final FeaturesSaplingGenerator BARSHROOKLE = (random, sapling) -> null;
 
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
+	public static final FeaturesSaplingGenerator BLACK_BIRCH = (random, sapling) -> null;
 
-	};
+	public static final FeaturesSaplingGenerator CHERRY = new CherrySaplingGenerator();
 
-	public static final SaplingGenerator AQUEAN = new SaplingGenerator() {
+	public static final FeaturesSaplingGenerator COOK_PINE = (random, sapling) -> null;
 
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator BARSHROOKLE = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator BLACK_BIRCH = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator CHERRY = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator COOK_PINE = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator CROLOOD = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
+	public static final FeaturesSaplingGenerator CROLOOD = (random, sapling) -> null;
 	
-	public static final SaplingGenerator DARK_CROLOOD = new SaplingGenerator() {
+	public static final FeaturesSaplingGenerator DARK_CROLOOD = (random, sapling) -> null;
 
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
+	public static final FeaturesSaplingGenerator EBONY = (random, sapling) -> null;
 
-	};
+	public static final FeaturesSaplingGenerator FUCHSITRA = (random, sapling) -> null;
 
-	public static final SaplingGenerator EBONY = new SaplingGenerator() {
+	public static final FeaturesSaplingGenerator FUNERANITE = (random, sapling) -> null;
 
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
+	public static final FeaturesSaplingGenerator GHOSHROOM = (random, sapling) -> null;
 
-	};
+	public static final FeaturesSaplingGenerator PELTOGYNE = (random, sapling) -> null;
 
-	public static final SaplingGenerator FUCHSITRA = new SaplingGenerator() {
+	public static final FeaturesSaplingGenerator PIN_CHERRY = new PinCherrySaplingGenerator();
 
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
+	public static final FeaturesSaplingGenerator PLUM = (random, sapling) -> null;
 
-	};
+	public static final FeaturesSaplingGenerator PURFUNGA = (random, sapling) -> null;
 
-	public static final SaplingGenerator FUNERANITE = new SaplingGenerator() {
+	public static final FeaturesSaplingGenerator SPROOM = (random, sapling) -> null;
 
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
+	public static final FeaturesSaplingGenerator STORTREEAN = (random, sapling) -> null;
 
-	};
+	public static final FeaturesSaplingGenerator STROOMEAN = (random, sapling) -> null;
 
-	public static final SaplingGenerator GHOSHROOM = new SaplingGenerator() {
+	public static final FeaturesSaplingGenerator SUNRISE_FUNGUS = (random, sapling) -> null;
 
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
+	public static final FeaturesSaplingGenerator TEAK = (random, sapling) -> null;
 
-	};
-
-	public static final SaplingGenerator PELTOGYNE = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator PIN_CHERRY = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator PLUM = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator PURFUNGA = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator SPROOM = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator STORTREEAN = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator STROOMEAN = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator SUNRISE_FUNGUS = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator TEAK = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
-
-	public static final SaplingGenerator THUNDERCLOUD_PLUM = new SaplingGenerator() {
-
-		@Override
-		protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bl) {
-			return null;
-		}
-
-	};
+	public static final FeaturesSaplingGenerator THUNDERCLOUD_PLUM = (random, sapling) -> null;
 
 }

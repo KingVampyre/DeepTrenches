@@ -1,19 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.MOSOIL;
-import static net.minecraft.block.Blocks.AIR;
-import static net.minecraft.block.Blocks.SPONGE;
-import static net.minecraft.block.Blocks.WET_SPONGE;
-import static net.minecraft.fluid.Fluids.EMPTY;
-import static net.minecraft.fluid.Fluids.FLOWING_WATER;
-import static net.minecraft.fluid.Fluids.WATER;
-import static net.minecraft.state.property.Properties.WATERLOGGED;
-
-import java.util.Random;
-
+import github.KingVampyre.DeepTrenches.common.block.sapling.FeaturesSaplingGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemPlacementContext;
@@ -25,9 +14,17 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
+import java.util.Random;
+
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.MOSOIL;
+import static net.minecraft.block.Blocks.*;
+import static net.minecraft.fluid.Fluids.WATER;
+import static net.minecraft.fluid.Fluids.*;
+import static net.minecraft.state.property.Properties.WATERLOGGED;
+
 public class FungusBlock extends StorceanTallSaplingBlock {
 
-	public FungusBlock(SaplingGenerator generator, Settings settings) {
+	public FungusBlock(FeaturesSaplingGenerator generator, Settings settings) {
 		super(generator, settings);
 	}
 
