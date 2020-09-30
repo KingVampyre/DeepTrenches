@@ -1,0 +1,77 @@
+{
+  "type": "deep_trenches:generic",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:trees/ebony/crown",
+      "properties": {
+        "type": "features:properties",
+        "rotations": "all"
+      },
+      "context": {
+        "type": "features:tree",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:ranged",
+                "range": {
+                  "min": 11,
+                  "max": 18
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:place_trunk",
+          "block": "deep_trenches:ebony_log"
+        }
+      ],
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/ebony/crown/crown_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "when": {
+                "all": {
+                  "x": -6,
+                  "z": -7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/ebony/crown/crown_02",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "when": {
+                "all": {
+                  "x": -5,
+                  "z": -7
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

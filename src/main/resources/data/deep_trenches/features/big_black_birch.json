@@ -1,0 +1,72 @@
+{
+  "type": "features:generic",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:trees/black_birch/big_crowns",
+      "properties": {
+        "type": "features:properties",
+        "rotations": "all"
+      },
+      "context": {
+        "type": "features:thick_tree",
+        "sapling": "deep_trenches:black_birch_sapling",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:trunks",
+            "from": [
+              {
+                "type": "features:ranged",
+                "range": {
+                  "min": 2,
+                  "max": 5
+                }
+              }
+            ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:multiplier",
+                "multiplier": 4,
+                "value": {
+                  "parameter": "features:trunks"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/black_birch/crown/big_crown_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "when": {
+                "all": {
+                  "x": -5,
+                  "z": -5
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

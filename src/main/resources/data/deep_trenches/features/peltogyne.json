@@ -1,0 +1,62 @@
+{
+  "type": "features:generic",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:trees/peltogyne/crowns",
+      "properties": {
+        "type": "features:properties",
+        "rotations": "all"
+      },
+      "context": {
+        "type": "features:thick_tree",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:trunks",
+            "from": [
+              {
+                "type": "features:ranged",
+                "range": {
+                  "min": 2,
+                  "max": 4
+                }
+              }
+            ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:multiplier",
+                "multiplier": 10,
+                "value": {
+                  "parameter": "features:trunks"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/peltogyne/crown/crown_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "when": {
+                "all": {
+                  "x": -5,
+                  "y": 9,
+                  "z": -5
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,8 @@ import net.minecraft.util.math.BlockPos;
 
 public class ModFeatureContextParameters {
 
-    public static final FeatureContextParameter<BlockPos> ORIGIN = new FeatureContextParameter(new Identifier("deep_trenches"));
+    public static final FeatureContextParameter<BlockPos> ORIGIN = new FeatureContextParameter(new Identifier("deep_trenches:origin"));
+
+    public static final FeatureContextParameter<Integer> TRUNKS = new FeatureContextParameter(new Identifier("deep_trenches:trunks"));
 
 }

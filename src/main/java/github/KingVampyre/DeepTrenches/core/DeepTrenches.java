@@ -55,11 +55,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:stasp"), EntityTypes.STASP);
 
 		/* -------------------------------- Features ------------------------------------------- */
-		
-		Registry.register(FEATURE_CONTEXT_PARAMETER, new Identifier("deep_trenches:origin"), ModFeatureContextParameters.ORIGIN);
-		Registry.register(FEATURE_CONTEXT_PROVIDER, new Identifier("deep_trenches:thick_tree"), ModFeatureContextProviders.THICK_TREE);
-
-		Registry.register(FEATURE_FUNCTION_TYPE, new Identifier("deep_trenches:pivot"), ModFeatureFunctions.PIVOT);
 
 		Registry.register(FEATURE, new Identifier("deep_trenches:big_almond"), ModFeatures.BIG_ALMOND);
 		Registry.register(FEATURE, new Identifier("deep_trenches:medium_almond"), ModFeatures.MEDIUM_ALMOND);
