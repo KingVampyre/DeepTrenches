@@ -4,15 +4,15 @@
   "projection": "rigid",
   "elements": [
     {
-      "structure": "deep_trenches:trees/thundercloud_plum/branches/large_branch",
+      "structure": "deep_trenches:trees/thundercloud_plum/branches/large_branch_01",
       "weight": 1
     },
     {
-      "structure": "deep_trenches:trees/thundercloud_plum/branches/medium_branch",
+      "structure": "deep_trenches:trees/thundercloud_plum/branches/medium_branch_01",
       "weight": 3
     },
     {
-      "structure": "deep_trenches:trees/thundercloud_plum/branches/small_branch",
+      "structure": "deep_trenches:trees/thundercloud_plum/branches/small_branch_01",
       "weight": 6
     }
   ]

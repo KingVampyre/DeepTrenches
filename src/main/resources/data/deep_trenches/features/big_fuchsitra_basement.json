@@ -1,0 +1,33 @@
+{
+  "type": "features:generic",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:trees/fuchsitra/basements",
+      "properties": {
+        "rotations": "none"
+      },
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/fuchsitra/basements/basement_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+			  "when": {
+                "all": {
+                  "x": -1,
+                  "y": -3,
+                  "z": -1
+                },
+				"clockwise_90": {
+				  "x": 1
+				}
+			  }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

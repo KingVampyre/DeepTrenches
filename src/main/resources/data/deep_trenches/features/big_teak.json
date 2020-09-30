@@ -1,0 +1,60 @@
+{
+  "type": "features:generic",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:trees/teak/big_crowns",
+      "properties": {
+        "type": "features:properties",
+        "rotations": [ "none" ]
+      },
+      "context": {
+        "type": "features:thick_tree",
+        "sapling": "deep_trenches:teak_sapling",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:trunks",
+            "from": [
+              {
+                "type": "features:ranged",
+                "range": {
+                  "min": 4,
+                  "max": 6
+                }
+              }
+            ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:multiplier",
+                "multiplier": 4,
+                "value": {
+                  "parameter": "features:trunks"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/teak/crown/big_crown_01",
+          "functions": [
+            {
+              "function": "features:offset",
+              "offset": {
+                "north": 11,
+                "west": 11
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

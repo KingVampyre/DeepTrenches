@@ -1,0 +1,43 @@
+{
+  "type": "features:generic",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:trees/crolood/crowns",
+      "context": {
+        "type": "features:thick_tree",
+        "sapling": "deep_trenches:crolood_sapling",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:ranged",
+                "range": {
+                  "min": 8,
+                  "max": 13
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/crolood/crown/crown_01",
+          "functions": [
+            {
+              "function": "features:offset",
+              "offset": {
+                "north": 7,
+                "west": 8
+              }
+            }
+          ]
+        }
+      ]
+    },
+  ]
+}

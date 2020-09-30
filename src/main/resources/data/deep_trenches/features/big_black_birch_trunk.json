@@ -1,0 +1,31 @@
+{
+  "type": "features:generic",
+  "rotations": "all",
+  "pools": [
+    {
+      "pool": "deep_trenches:trees/black_birch/trunks",
+	  "setters": [
+		{
+		  "parameter": "deep_trenches:height",
+		  "getters": [
+			{
+			  "getter": "deep_trenches:multiplier",
+			  "multiplier": 4,
+			  "value": {
+				"parameter": "deep_trenches:index"
+			  }
+			}
+		  ]
+		}
+	  ],
+	 "functions": [
+	    {
+          "function": "deep_trenches:offset",
+          "offset": {
+			"down": 3
+          }
+        }
+	  ]
+    }
+  ]
+}

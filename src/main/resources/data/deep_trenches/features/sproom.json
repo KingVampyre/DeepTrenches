@@ -1,0 +1,56 @@
+{
+  "type": "features:generic",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:trees/sproom/crowns",
+      "context": {
+        "type": "features:thick_tree",
+        "sapling": "deep_trenches:sproom_sapling",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:trunks",
+            "from": [
+              {
+                "getter": "features:ranged",
+                "range": {
+                  "min": 12,
+                  "max": 14
+                }
+              }
+            ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "getter": "features:multiplier",
+                "multiplier": 5,
+                "value": {
+                  "parameter": "features:trunks"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/sproom/crown/crown_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "offset": {
+                "north": 10,
+                "west": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

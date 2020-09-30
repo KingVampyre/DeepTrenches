@@ -1,0 +1,34 @@
+{
+  "type": "deep_trenches:generic_feature",
+  "parent": "deep_trenches:generic_trunk",
+  "main_pool": "deep_trenches:trees/sproom/trunks",
+  "box": [ 20, 100, 20 ],
+  "rotations": "all",
+  "pools": [
+    {
+      "pool": "deep_trenches:trees/sproom/trunks",
+	  "setters": [
+		{
+		  "parameter": "deep_trenches:height",
+		  "getters": [
+			{
+			  "getter": "deep_trenches:multiplier",
+			  "multiplier": 5,
+			  "value": {
+				"parameter": "deep_trenches:index"
+			  }
+			}
+		  ]
+		}
+	  ],
+	 "functions": [
+	    {
+          "function": "deep_trenches:offset",
+          "offset": {
+			"down": 3
+          }
+        }
+	  ]
+    }
+  ]
+}

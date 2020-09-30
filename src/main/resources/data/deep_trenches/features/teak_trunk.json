@@ -1,0 +1,25 @@
+{
+  "type": "deep_trenches:generic_feature",
+  "parent": "deep_trenches:generic_trunk",
+  "main_pool": "deep_trenches:trees/teak/trunks",
+  "box": [ 20, 32, 20 ],
+  "rotations": "all",
+  "pools": [
+    {
+      "pool": "deep_trenches:trees/teak/trunks",
+      "entries": [
+        {
+          "structure": "deep_trenches:trees/teak/trunks/trunk_01",
+          "functions": [
+            {
+              "function": "deep_trenches:offset",
+              "offset": {
+				"down": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

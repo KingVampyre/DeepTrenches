@@ -1,0 +1,34 @@
+{
+  "type": "features:generic",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:trees/dark_crolood/basements",
+      "properties": {
+        "type": "features:properties",
+        "rotations": "none"
+      },
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:trees/dark_crolood/basement/basement_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+			  "when": {
+                "all": {
+                  "x": -1,
+                  "y": -5,
+                  "z": -1
+                },
+				"clockwise_90": {
+				  "x": 1
+				}
+			  }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
