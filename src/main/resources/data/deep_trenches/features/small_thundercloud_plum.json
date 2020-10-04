@@ -1,5 +1,5 @@
 {
-  "type": "features:generic",
+  "type": "features:generator",
   "pools": [
     {
       "type": "features:pool",

@@ -1,6 +1,5 @@
 {
-  "type": "deep_trenches:generic",
-  "trunk": "deep_trenches:ebony_log",
+  "type": "features:generator",
   "pools": [
     {
       "type": "features:pool",

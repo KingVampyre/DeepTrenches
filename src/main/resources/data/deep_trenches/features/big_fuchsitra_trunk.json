@@ -1,5 +1,5 @@
 {
-  "type": "deep_trenches:generic_feature",
+  "type": "features:generator",
   "main_pool": "deep_trenches:trees/fuchsitra/trunks",
   "box": [ 20, 32, 20 ],
   "rotations": "all",

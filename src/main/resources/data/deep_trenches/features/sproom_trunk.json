@@ -1,5 +1,5 @@
 {
-  "type": "deep_trenches:generic_feature",
+  "type": "features:generator",
   "parent": "deep_trenches:generic_trunk",
   "main_pool": "deep_trenches:trees/sproom/trunks",
   "box": [ 20, 100, 20 ],

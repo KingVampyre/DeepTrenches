@@ -1,5 +1,5 @@
 {
-  "type": "deep_trenches:generic",
+  "type": "features:generator",
   "pools": [
     {
       "type": "features:pool",

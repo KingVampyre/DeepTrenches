@@ -1,12 +1,12 @@
 {
-  "type": "features:generic",
+  "type": "features:generator",
   "pools": [
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/teak/big_crowns",
       "properties": {
         "type": "features:properties",
-        "rotations": [ "none" ]
+        "rotations": "none"
       },
       "context": {
         "type": "features:thick_tree",
@@ -30,7 +30,7 @@
             "parameter": "features:height",
             "from": [
               {
-                "type": "features:multiplier",
+                "type": "features:multiply",
                 "multiplier": 4,
                 "value": {
                   "parameter": "features:trunks"

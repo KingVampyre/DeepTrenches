@@ -1,5 +1,5 @@
 {
-  "type": "features:generic",
+  "type": "features:generator",
   "pools": [
     {
       "type": "features:pool",
@@ -9,7 +9,7 @@
         "rotations": "all"
       },
       "context": {
-        "type": "deep_trenches:thick_tree",
+        "type": "features:thick_tree",
         "sapling": "deep_trenches:pin_cherry_sapling",
         "overrides": [
           {
@@ -47,7 +47,7 @@
           "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_01",
           "functions": [
             {
-              "function": "deep_trenches:pivot",
+              "function": "features:pivot",
               "when": {
                 "all": {
                   "x": -4,
@@ -72,7 +72,7 @@
           "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_02",
           "functions": [
             {
-              "function": "deep_trenches:pivot",
+              "function": "features:pivot",
               "when": {
                 "all": {
                   "x": -4,
@@ -97,7 +97,7 @@
           "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_03",
           "functions": [
             {
-              "function": "deep_trenches:pivot",
+              "function": "features:pivot",
               "when": {
                 "all": {
                   "x": -6,
@@ -122,7 +122,7 @@
           "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_04",
           "functions": [
             {
-              "function": "deep_trenches:pivot",
+              "function": "features:pivot",
               "when": {
                 "all": {
                   "x": -5,

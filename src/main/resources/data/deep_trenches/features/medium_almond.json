@@ -1,5 +1,5 @@
 {
-  "type": "features:generic",
+  "type": "features:generator",
   "pools": [
     {
       "type": "features:pool",
@@ -46,7 +46,7 @@
           "structure": "deep_trenches:trees/almond/crown/medium_crown_01",
           "functions": [
             {
-              "function": "deep_trenches:pivot",
+              "function": "features:pivot",
               "when": {
                 "all": {
                   "x": -3,
@@ -61,7 +61,7 @@
           "structure": "deep_trenches:trees/almond/crown/medium_crown_02",
           "functions": [
             {
-              "function": "deep_trenches:pivot",
+              "function": "features:pivot",
               "when": {
                 "all": {
                   "x": -3,
@@ -76,7 +76,7 @@
           "structure": "deep_trenches:trees/almond/crown/medium_crown_03",
           "functions": [
             {
-              "function": "deep_trenches:pivot",
+              "function": "features:pivot",
               "when": {
                 "all": {
                   "x": -6,
@@ -91,7 +91,7 @@
           "structure": "deep_trenches:trees/almond/crown/medium_crown_04",
           "functions": [
             {
-              "function": "deep_trenches:pivot",
+              "function": "features:pivot",
               "when": {
                 "all": {
                   "x": -4,

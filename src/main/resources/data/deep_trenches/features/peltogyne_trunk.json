@@ -1,5 +1,5 @@
 {
-  "type": "features:generic",
+  "type": "features:generator",
   "rotations": "all",
   "pools": [
     {
@@ -21,7 +21,7 @@
 	  ],
 	 "functions": [
 	    {
-          "function": "deep_trenches:offset",
+          "function": "features:offset",
           "offset": {
 			"down": 3
           }

@@ -1,5 +1,5 @@
 {
-  "type": "features:generic",
+  "type": "features:generator",
   "pools": [
     {
       "type": "features:pool",
@@ -40,7 +40,7 @@
           "block": "deep_trenches:pin_cherry_log"
         },
         {
-          "function": "deep_trenches:pivot",
+          "function": "features:pivot",
           "when": {
             "all": {
               "x": -2,
