@@ -4,13 +4,10 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/fuchsitra/big_crowns",
-      "properties": {
-        "type": "features:properties",
-        "rotations": [ "clockwise_90", "none" ]
-      },
       "context": {
         "type": "features:thick_tree",
         "sapling": "deep_trenches:fuchsitra_sapling",
+        "rotations": [ "clockwise_90", "none" ],
         "overrides": [
           {
             "type": "features:parameter",
@@ -30,7 +27,7 @@
             "parameter": "features:height",
             "from": [
               {
-                "type": "features:multiplier",
+                "type": "features:multiply",
                 "multiplier": 4,
                 "value": {
                   "parameter": "features:trunks"

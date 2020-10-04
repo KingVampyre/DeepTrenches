@@ -4,7 +4,8 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/fuchsitra/basements",
-      "properties": {
+      "context": {
+        "type": "features:provider",
         "rotations": "none"
       },
       "entries": [

@@ -4,12 +4,10 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/peltogyne/crowns",
-      "properties": {
-        "type": "features:properties",
-        "rotations": "all"
-      },
       "context": {
         "type": "features:thick_tree",
+        "sapling": "deep_trenches:peltogyne_sapling",
+        "rotations": "all",
         "overrides": [
           {
             "type": "features:parameter",
@@ -29,7 +27,7 @@
             "parameter": "features:height",
             "from": [
               {
-                "type": "features:multiplier",
+                "type": "features:multiply",
                 "multiplier": 10,
                 "value": {
                   "parameter": "features:trunks"

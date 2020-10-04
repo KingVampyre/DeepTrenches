@@ -4,8 +4,8 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/crolood/basements",
-      "properties": {
-        "type": "features:properties",
+      "context": {
+        "type": "features:provider",
         "rotations": "none"
       },
       "entries": [

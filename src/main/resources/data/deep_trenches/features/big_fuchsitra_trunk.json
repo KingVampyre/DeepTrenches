@@ -1,37 +1,38 @@
 {
   "type": "features:generator",
-  "main_pool": "deep_trenches:trees/fuchsitra/trunks",
-  "box": [ 20, 32, 20 ],
-  "rotations": "all",
   "pools": [
     {
+      "type": "features:pool",
       "pool": "deep_trenches:trees/fuchsitra/trunks",
-		"properties": {
-			"type": "features:properties",
-			"rotations": [ "clockwise_90", "none" ]
-		},
-	  "setters": [
-		{
-		  "parameter": "deep_trenches:height",
-		  "getters": [
-			{
-			  "getter": "deep_trenches:multiplier",
-			  "multiplier": 4,
-			  "value": {
-				"parameter": "deep_trenches:index"
-			  }
-			}
-		  ]
-		}
-	  ],
-	 "functions": [
-	    {
-          "function": "deep_trenches:offset",
-          "offset": {
-			"down": 2
+      "context": {
+        "type": "features:tree",
+        "rotations": "all",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:multiply",
+                "multiplier": 4,
+                "value": {
+                  "parameter": "features:trunks"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "functions": [
+        {
+          "function": "features:pivot",
+          "when": {
+            "all": {
+              "down": 2
+            }
           }
         }
-	  ]
+      ]
     }
   ]
 }

@@ -4,12 +4,9 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/almond/small_crowns",
-      "properties": {
-        "type": "features:properties",
-        "rotations": "all"
-      },
       "context": {
         "type": "features:tree",
+        "rotations": "all",
         "overrides": [
           {
             "type": "features:parameter",
@@ -40,7 +37,7 @@
           "block": "deep_trenches:almond_log"
         },
         {
-          "function": "deep_trenches:pivot",
+          "function": "features:pivot",
           "when": {
             "all": {
               "x": -2,

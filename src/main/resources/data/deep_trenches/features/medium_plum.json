@@ -4,6 +4,10 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/plum/medium_crowns",
+      "context": {
+        "type": "features:provider",
+        "rotations": "none"
+      },
       "entries": [
         {
           "type": "features:entry",

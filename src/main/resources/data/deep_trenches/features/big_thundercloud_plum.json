@@ -6,6 +6,7 @@
       "pool": "deep_trenches:trees/plum/medium_crowns",
       "context": {
         "type": "features:tree",
+        "rotations": [ "clockwise_90", "none" ],
         "overrides": [
           {
             "type": "features:parameter",
@@ -48,16 +49,17 @@
           "function": "features:elif",
           "functions": [
             {
-              "function": "features:rotate_with_structure",
+              "function": "features:rotate",
+              "rotation": "clockwise_90",
               "conditions": [
                 {
-                  "condition": "features:structure_rotation",
+                  "condition": "features:rotation",
                   "rotation": "clockwise_90"
                 }
               ]
             },
             {
-              "function": "features:rotation",
+              "function": "features:rotate",
               "rotation": "none"
             }
           ]
@@ -72,7 +74,7 @@
               "rotation": "counterclockwise_90",
               "conditions": [
                 {
-                  "condition": "features:structure_rotation",
+                  "condition": "features:rotation",
                   "rotation": "clockwise_90"
                 }
               ]

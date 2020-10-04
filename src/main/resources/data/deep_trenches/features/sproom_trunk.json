@@ -1,34 +1,38 @@
 {
   "type": "features:generator",
-  "parent": "deep_trenches:generic_trunk",
-  "main_pool": "deep_trenches:trees/sproom/trunks",
-  "box": [ 20, 100, 20 ],
-  "rotations": "all",
   "pools": [
     {
+      "type": "features:pool",
       "pool": "deep_trenches:trees/sproom/trunks",
-	  "setters": [
-		{
-		  "parameter": "deep_trenches:height",
-		  "getters": [
-			{
-			  "getter": "deep_trenches:multiplier",
-			  "multiplier": 5,
-			  "value": {
-				"parameter": "deep_trenches:index"
-			  }
-			}
-		  ]
-		}
-	  ],
-	 "functions": [
-	    {
-          "function": "deep_trenches:offset",
-          "offset": {
-			"down": 3
+      "context": {
+        "type": "features:tree",
+        "rotations": "all",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:multiply",
+                "multiplier": 4,
+                "value": {
+                  "parameter": "features:trunks"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "functions": [
+        {
+          "function": "features:pivot",
+          "when": {
+            "all": {
+              "down": 3
+            }
           }
         }
-	  ]
+      ]
     }
   ]
 }

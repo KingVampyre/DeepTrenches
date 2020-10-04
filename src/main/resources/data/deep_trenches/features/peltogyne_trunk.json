@@ -21,10 +21,12 @@
 	  ],
 	 "functions": [
 	    {
-          "function": "features:offset",
-          "offset": {
-			"down": 3
-          }
+          "function": "features:pivot",
+          "when": {
+		    "all": {
+			  "down": 3
+			}
+		  }
         }
 	  ]
     }

@@ -6,11 +6,12 @@
       "pool": "deep_trenches:trees/dark_crolood/crowns",
       "properties": {
         "type": "features:properties",
-        "rotations": "none"
+        "rotations": [ "clockwise_90", "none" ]
       },
       "context": {
         "type": "features:thick_tree",
         "sapling": "deep_trenches:dark_crolood_sapling",
+        "rotations": "none",
         "overrides": [
           {
             "type": "features:parameter",

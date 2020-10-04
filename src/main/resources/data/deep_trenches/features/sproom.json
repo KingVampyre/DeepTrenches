@@ -7,13 +7,14 @@
       "context": {
         "type": "features:thick_tree",
         "sapling": "deep_trenches:sproom_sapling",
+        "rotations": "none",
         "overrides": [
           {
             "type": "features:parameter",
             "parameter": "features:trunks",
             "from": [
               {
-                "getter": "features:ranged",
+                "type": "features:ranged",
                 "range": {
                   "min": 12,
                   "max": 14
@@ -26,7 +27,7 @@
             "parameter": "features:height",
             "from": [
               {
-                "getter": "features:multiplier",
+                "type": "features:multiply",
                 "multiplier": 5,
                 "value": {
                   "parameter": "features:trunks"
@@ -43,9 +44,11 @@
           "functions": [
             {
               "function": "features:pivot",
-              "offset": {
-                "north": 10,
-                "west": 10
+              "when": {
+                "none": {
+                  "x": 10,
+                  "z": 10
+                }
               }
             }
           ]

@@ -6,13 +6,14 @@
       "pool": "deep_trenches:trees/black_birch/trunks",
       "context": {
         "type": "features:tree",
+        "rotations": "all",
         "overrides": [
           {
             "type": "features:parameter",
-            "parameter": "deep_trenches:height",
+            "parameter": "features:height",
             "from": [
               {
-                "type": "deep_trenches:multiply",
+                "type": "features:multiply",
                 "multiplier": 4,
                 "value": {
                   "parameter": "features:trunks"
@@ -24,9 +25,11 @@
       },
       "functions": [
         {
-          "function": "features:offset",
-          "offset": {
-            "down": 3
+          "function": "features:pivot",
+          "when": {
+            "all": {
+              "down": 3
+            }
           }
         }
       ]

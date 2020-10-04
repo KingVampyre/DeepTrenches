@@ -4,12 +4,9 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/teak/small_crowns",
-      "properties": {
-        "type": "features:properties",
-        "rotations": "all"
-      },
       "context": {
         "type": "features:tree",
+        "rotations": "all",
         "overrides": [
           {
             "type": "features:parameter",
@@ -33,8 +30,8 @@
           "functions": [
             {
               "function": "features:pivot",
-              "all": {
-                "offset": {
+              "when": {
+                "all": {
                   "x": -5,
                   "z": -5
                 }

@@ -6,6 +6,7 @@
       "pool": "deep_trenches:trees/plum/small_crowns",
       "context": {
         "type": "features:tree",
+        "rotations": [ "clockwise_90", "none" ],
         "overrides": [
           {
             "type": "features:parameter",
@@ -29,9 +30,15 @@
           "functions": [
             {
               "function": "features:pivot",
-              "offset": {
-                "x": -3,
-                "z": -2
+              "when": {
+                "none": {
+                  "x": -3,
+                  "z": -2
+                },
+                "clockwise_90": {
+                  "x": -2,
+                  "z": -3
+                }
               }
             }
           ]
@@ -46,16 +53,17 @@
           "function": "features:elif",
           "functions": [
             {
-              "function": "features:rotate_with_structure",
+              "function": "features:rotate",
+              "rotation": "clockwise_90",
               "conditions": [
                 {
-                  "condition": "features:structure_rotation",
+                  "condition": "features:rotation",
                   "rotation": "clockwise_90"
                 }
               ]
             },
             {
-              "function": "features:rotation",
+              "function": "features:rotate",
               "rotation": "none"
             }
           ]
@@ -70,7 +78,7 @@
               "rotation": "counterclockwise_90",
               "conditions": [
                 {
-                  "condition": "features:structure_rotation",
+                  "condition": "features:rotation",
                   "rotation": "clockwise_90"
                 }
               ]

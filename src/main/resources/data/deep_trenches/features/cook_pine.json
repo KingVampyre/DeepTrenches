@@ -4,13 +4,10 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/cook_pine/big_crowns",
-      "properties": {
-        "type": "features:properties",
-        "rotations": "all"
-      },
       "context": {
         "type": "features:thick_tree",
         "sapling": "deep_trenches:black_birch_sapling",
+        "rotations": "all",
         "overrides": [
           {
             "type": "features:parameter",

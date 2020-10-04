@@ -4,12 +4,9 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/fuchsitra/small_crowns",
-      "properties": {
-        "type": "features:properties",
-        "rotations": [ "clockwise_90", "none" ]
-      },
       "context": {
         "type": "features:tree",
+        "rotations": [ "clockwise_90", "none" ],
         "overrides": [
           {
             "type": "features:parameter",
@@ -33,9 +30,15 @@
           "functions": [
             {
               "function": "features:pivot",
-              "offset": {
-                "north": 1,
-                "west": 4
+              "when": {
+                "none": {
+                  "x": 4,
+                  "z": 1
+                },
+                "clockwise_90": {
+                  "x": 4,
+                  "z": 1
+                }
               }
             }
           ]
