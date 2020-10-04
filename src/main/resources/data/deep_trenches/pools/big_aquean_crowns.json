@@ -2,6 +2,7 @@
   "name": "deep_trenches:trees/aquean/big_crowns",
   "terminators": "empty",
   "projection": "rigid",
+  "processors": "deep_trenches:no_persistent_aquean_leaves",
   "elements": [
     {
       "structure": "deep_trenches:trees/aquean/crown/big_crown_01",

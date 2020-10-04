@@ -2,6 +2,7 @@
   "name": "deep_trenches:trees/almond/big_crowns",
   "terminators": "empty",
   "projection": "rigid",
+  "processors": "deep_trenches:no_persistent_almond_leaves",
   "elements": [
     {
       "structure": "deep_trenches:trees/almond/crown/big_crown_01",

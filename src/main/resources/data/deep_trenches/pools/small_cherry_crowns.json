@@ -2,6 +2,7 @@
   "name": "deep_trenches:trees/cherry/small_crowns",
   "terminators": "empty",
   "projection": "rigid",
+  "processors": "deep_trenches:no_persistent_cherry_leaves",
   "elements": [
     {
       "structure": "deep_trenches:trees/cherry/crown/small_crown_01",

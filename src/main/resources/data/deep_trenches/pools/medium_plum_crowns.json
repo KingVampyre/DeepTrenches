@@ -2,6 +2,7 @@
   "name": "deep_trenches:trees/plum/medium_crowns",
   "terminators": "empty",
   "projection": "rigid",
+  "processors": "deep_trenches:no_persistent_plum_leaves",
   "elements": [
     {
       "structure": "deep_trenches:trees/plum/crown/medium_crown_01",

@@ -1,0 +1,23 @@
+{
+  "processors": [
+    {
+      "processor": "features:rule",
+      "rules": [
+        {
+          "rule": "features:properties",
+          "test": {
+            "test": "features:block_match",
+            "block": "deep_trenches:almond_leaves"
+          },
+          "blockstate": {
+            "block": "deep_trenches:almond_leaves",
+            "properties": {
+              "distance": 1,
+              "persistent": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

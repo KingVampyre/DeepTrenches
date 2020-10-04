@@ -1,0 +1,23 @@
+{
+  "processors": [
+    {
+      "processor": "features:rule",
+      "rules": [
+        {
+          "rule": "features:properties",
+          "test": {
+            "test": "features:block_match",
+            "block": "deep_trenches:anameata_cap"
+          },
+          "blockstate": {
+            "block": "deep_trenches:anameata_cap",
+            "properties": {
+              "distance": 1,
+              "persistent": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

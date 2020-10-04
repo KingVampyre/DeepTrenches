@@ -2,6 +2,7 @@
   "name": "deep_trenches:trees/cook_pine/medium_crowns",
   "terminators": "empty",
   "projection": "rigid",
+  "processors": "deep_trenches:no_persistent_cook_pine_leaves",
   "elements": [
     {
       "structure": "deep_trenches:trees/cook_pine/crown/medium_crown_01",
