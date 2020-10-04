@@ -6,24 +6,24 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.CHERRY_SAPLING;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.BLACK_BIRCH_SAPLING;
 import static github.KingVampyre.DeepTrenches.core.init.ModConfiguredFeatures.*;
 
-public class CherrySaplingGenerator implements FeaturesThickSaplingGenerator {
+public class BlackBirchSaplingGenerator implements FeaturesThickSaplingGenerator {
 
     @Override
     public ConfiguredFeature<?, ?> createThickTreeFeature(Random random, boolean sapling) {
-        return BIG_CHERRY;
-    }
-
-    @Override
-    public ConfiguredFeature<?, ?> createTreeFeature(Random random, boolean sapling) {
-        return random.nextInt(5) == 0 ? MEDIUM_CHERRY : SMALL_CHERRY;
+        return BIG_BLACK_BIRCH;
     }
 
     @Override
     public Block getSaplingBlock() {
-        return CHERRY_SAPLING;
+        return BLACK_BIRCH_SAPLING;
+    }
+
+    @Override
+    public ConfiguredFeature<?, ?> createTreeFeature(Random random, boolean sapling) {
+        return SMALL_BLACK_BIRCH;
     }
 
 }

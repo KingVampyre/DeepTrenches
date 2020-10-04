@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.KingVampyre.DeepTrenches.common.block.FeaturesSaplingBlock;
-import github.KingVampyre.DeepTrenches.common.block.sapling.FeaturesSaplingGenerator;
+import github.Louwind.Features.impl.block.FeaturesSaplingBlock;
+import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;

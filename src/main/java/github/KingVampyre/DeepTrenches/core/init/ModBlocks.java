@@ -3,6 +3,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 import github.KingVampyre.DeepTrenches.common.block.*;
 import github.KingVampyre.DeepTrenches.core.block.FungusBlock;
 import github.KingVampyre.DeepTrenches.core.block.*;
+import github.Louwind.Features.impl.block.FeaturesSaplingBlock;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.*;
 import net.minecraft.sound.BlockSoundGroup;

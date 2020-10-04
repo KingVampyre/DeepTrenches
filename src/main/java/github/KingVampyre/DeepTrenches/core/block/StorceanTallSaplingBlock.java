@@ -1,6 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.KingVampyre.DeepTrenches.common.block.sapling.FeaturesSaplingGenerator;
+import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.enums.SlabType;
@@ -26,7 +27,7 @@ public class StorceanTallSaplingBlock extends StorceanSaplingBlock {
 	public static final IntProperty AGE = Properties.AGE_25;
 	public static final EnumProperty<SlabType> TYPE = Properties.SLAB_TYPE;
 
-	public StorceanTallSaplingBlock(FeaturesSaplingGenerator generator, Settings settings) {
+	public StorceanTallSaplingBlock(FeaturesSaplingGenerator generator, AbstractBlock.Settings settings) {
 		super(generator, settings);
 
 		this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0).with(STAGE, 0).with(TYPE, DOUBLE));

@@ -1,6 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.KingVampyre.DeepTrenches.common.block.sapling.FeaturesSaplingGenerator;
+import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
@@ -17,7 +18,7 @@ import static net.minecraft.state.property.Properties.WATERLOGGED;
 
 public class AcuaticFungusBlock extends FungusBlock {
 
-	public AcuaticFungusBlock(FeaturesSaplingGenerator generator, Settings settings) {
+	public AcuaticFungusBlock(FeaturesSaplingGenerator generator, AbstractBlock.Settings settings) {
 		super(generator, settings);
 	}
 
