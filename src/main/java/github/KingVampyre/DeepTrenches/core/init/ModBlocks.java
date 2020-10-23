@@ -17,9 +17,9 @@ import static net.minecraft.entity.effect.StatusEffects.*;
 
 public class ModBlocks {
 
-	public static final Block CYAN_BIOLUMINESCENT_BLOCK = new Block(Settings.copy(SEA_LANTERN).lightLevel(state -> 15).strength(1.5F, 6F));
-	public static final Block GREEN_BIOLUMINESCENT_BLOCK = new Block(Settings.copy(SEA_LANTERN).lightLevel(state -> 15).strength(1.5F, 6F));
-	public static final Block LIGHT_BLUE_BIOLUMINESCENT_BLOCK = new Block(Settings.copy(SEA_LANTERN).lightLevel(state -> 15).strength(1.5F, 6F));
+	public static final Block CYAN_BIOLUMINESCENT_BLOCK = new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F));
+	public static final Block GREEN_BIOLUMINESCENT_BLOCK = new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F));
+	public static final Block LIGHT_BLUE_BIOLUMINESCENT_BLOCK = new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F));
 
 	public static final Block DRITEAN = new Block(Settings.copy(DIRT));
 	public static final Block GYLDELION_BLOCK = new Block(Settings.copy(IRON_BLOCK));

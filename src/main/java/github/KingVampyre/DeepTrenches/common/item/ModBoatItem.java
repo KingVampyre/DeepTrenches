@@ -1,20 +1,8 @@
 package github.KingVampyre.DeepTrenches.common.item;
 
-import static net.minecraft.stat.Stats.USED;
-import static net.minecraft.util.ActionResult.FAIL;
-import static net.minecraft.util.ActionResult.PASS;
-import static net.minecraft.util.ActionResult.SUCCESS;
-import static net.minecraft.util.hit.HitResult.Type.BLOCK;
-import static net.minecraft.util.hit.HitResult.Type.MISS;
-
-import java.util.List;
-import java.util.function.Predicate;
-
 import github.KingVampyre.DeepTrenches.common.entity.ModBoatEntity;
-import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.WoodType;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BoatItem;
 import net.minecraft.item.ItemStack;
@@ -26,6 +14,13 @@ import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
+
+import java.util.List;
+import java.util.function.Predicate;
+
+import static net.minecraft.stat.Stats.USED;
+import static net.minecraft.util.hit.HitResult.Type.BLOCK;
+import static net.minecraft.util.hit.HitResult.Type.MISS;
 
 public class ModBoatItem extends BoatItem {
 
@@ -83,7 +78,7 @@ public class ModBoatItem extends BoatItem {
 
 				user.incrementStat(USED.getOrCreateStat(this));
 
-				return TypedActionResult.method_29237(itemStack, world.isClient());
+				return TypedActionResult.consume(itemStack);
 			}
 		} else {
 			return TypedActionResult.pass(itemStack);
