@@ -26,9 +26,6 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.jetbrains:annotations:19.0.0'
-	implementation 'org.jetbrains:annotations:19.0.0'
-
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
@@ -37,14 +34,11 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// Cardinal Components API
-	modImplementation "io.github.onyxstudios:Cardinal-Components-API:2.5.4"
+	modImplementation "io.github.onyxstudios:Cardinal-Components-API:2.7.2"
 	// GeckoLib
 	modImplementation "software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0:dev"
 	// Features API
-	modImplementation "github.louwind.features-api:Features-API:1.0.0"
-
-	include "software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0"
-	include "github.louwind.features-api:Features-API:1.0.0"
+	modImplementation "github.louwind.features-api:Features-API:1.1.2"
 }
 
 processResources {
