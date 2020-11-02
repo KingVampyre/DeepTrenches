@@ -1,0 +1,10 @@
+{
+  "configurations": {
+    "deep_trenches:small_aquean": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/aquean/small_crowns",
+      "rotations": "all",
+      "size": 1
+    }
+  }
+}
