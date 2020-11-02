@@ -4,9 +4,8 @@
       "processor": "features:rule",
       "rules": [
         {
-          "rule": "features:properties",
           "test": {
-            "test": "features:block_match",
+            "test": "minecraft:block_match",
             "block": "deep_trenches:stortreean_leaves"
           },
           "blockstate": {
