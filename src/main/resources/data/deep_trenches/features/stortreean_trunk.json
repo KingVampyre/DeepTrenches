@@ -4,24 +4,6 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/stortreean/trunks",
-      "context": {
-        "type": "features:tree",
-        "overrides": [
-          {
-            "type": "features:parameter",
-            "parameter": "features:height",
-            "from": [
-              {
-                "type": "features:multiply",
-                "multiplier": 6,
-                "value": {
-                  "parameter": "features:trunks"
-                }
-              }
-            ]
-          }
-        ]
-      },
       "functions": [
         {
           "function": "features:pivot",

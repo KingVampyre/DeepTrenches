@@ -10,7 +10,7 @@
           {
             "type": "features:parameter",
             "parameter": "features:height",
-            "getters": [
+            "from": [
               {
                 "getter": "features:ranged",
                 "range": {
