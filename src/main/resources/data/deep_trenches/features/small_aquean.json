@@ -1,12 +1,11 @@
 {
-  "type": "features:generator",
+  "type": "features:jigsaw",
   "pools": [
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/aquean/small_crowns",
       "context": {
         "type": "features:tree",
-        "rotations": "all",
         "overrides": [
           {
             "type": "features:parameter",

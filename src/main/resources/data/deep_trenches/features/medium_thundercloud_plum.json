@@ -1,12 +1,11 @@
 {
-  "type": "features:generator",
+  "type": "features:jigsaw",
   "pools": [
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/plum/medium_crowns",
       "context": {
         "type": "features:tree",
-        "rotations": [ "clockwise_90", "none" ],
         "overrides": [
           {
             "type": "features:parameter",

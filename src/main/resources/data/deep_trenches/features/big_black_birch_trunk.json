@@ -1,12 +1,11 @@
 {
-  "type": "features:generator",
+  "type": "features:jigsaw",
   "pools": [
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/black_birch/trunks",
       "context": {
         "type": "features:tree",
-        "rotations": "all",
         "overrides": [
           {
             "type": "features:parameter",

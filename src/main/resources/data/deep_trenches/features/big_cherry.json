@@ -1,5 +1,5 @@
 {
-  "type": "features:generator",
+  "type": "features:jigsaw",
   "pools": [
     {
       "type": "features:pool",
@@ -7,7 +7,6 @@
       "context": {
         "type": "features:thick_tree",
         "sapling": "deep_trenches:cherry_sapling",
-        "rotations": "all",
         "overrides": [
           {
             "type": "features:parameter",
