@@ -2,14 +2,19 @@
   "name": "deep_trenches:trees/black_birch/branches",
   "terminators": "empty",
   "projection": "rigid",
-  "processors": "deep_trenches:no_persistent_black_birch_leaves",
   "elements": [
     {
-      "structure": "deep_trenches:trees/black_birch/branches/branch_01",
+      "element": {
+        "structure": "deep_trenches:trees/black_birch/branches/branch_01",
+        "processors": "deep_trenches:no_persistent_black_birch_leaves"
+      },
       "weight": 2
     },
 	{
-      "structure": "deep_trenches:trees/black_birch/branches/branch_01",
+      "element": {
+        "structure": "deep_trenches:trees/black_birch/branches/branch_01",
+        "processors": "deep_trenches:no_persistent_black_birch_leaves"
+      },
       "weight": 1
     }
   ]

@@ -4,19 +4,27 @@
   "projection": "rigid",
   "elements": [
     {
-      "structure": "deep_trenches:trees/sproom/spikes/spike_01",
+      "element": {
+        "structure": "deep_trenches:trees/sproom/spikes/spike_01"
+      },
       "weight": 3
     },
     {
-      "structure": "deep_trenches:trees/sproom/spikes/spike_02",
+      "element": {
+        "structure": "deep_trenches:trees/sproom/spikes/spike_02"
+      },
       "weight": 3
     },
     {
-      "structure": "deep_trenches:trees/sproom/spikes/spike_03",
+      "element": {
+        "structure": "deep_trenches:trees/sproom/spikes/spike_03"
+      },
       "weight": 2
     },
     {
-      "structure": "deep_trenches:trees/sproom/spikes/spike_03",
+      "element": {
+        "structure": "deep_trenches:trees/sproom/spikes/spike_03"
+      },
       "weight": 2
     }
   ]

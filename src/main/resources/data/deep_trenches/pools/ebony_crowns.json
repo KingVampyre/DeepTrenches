@@ -2,14 +2,19 @@
   "name": "deep_trenches:trees/ebony/crown",
   "terminators": "empty",
   "projection": "rigid",
-  "processors": "deep_trenches:no_persistent_ebony_leaves",
   "elements": [
     {
-      "structure": "deep_trenches:trees/ebony/crown/crown_01",
+      "element": {
+        "structure": "deep_trenches:trees/ebony/crown/crown_01",
+        "processors": "deep_trenches:no_persistent_ebony_leaves"
+      },
       "weight": 1
     },
     {
-      "structure": "deep_trenches:trees/ebony/crown/crown_02",
+      "element": {
+        "structure": "deep_trenches:trees/ebony/crown/crown_02",
+        "processors": "deep_trenches:no_persistent_ebony_leaves"
+      },
       "weight": 1
     }
   ]

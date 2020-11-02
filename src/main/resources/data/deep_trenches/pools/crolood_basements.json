@@ -4,7 +4,9 @@
   "projection": "rigid",
   "elements": [
     {
-      "structure": "deep_trenches:trees/crolood/basement/basement_01",
+      "element": {
+        "structure": "deep_trenches:trees/crolood/basement/basement_01"
+      },
       "weight": 1
     }
   ]

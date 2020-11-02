@@ -2,10 +2,12 @@
   "name": "deep_trenches:trees/peltogyne/crowns",
   "terminators": "empty",
   "projection": "rigid",
-  "processors": "deep_trenches:no_persistent_peltogyne_leaves",
   "elements": [
     {
-      "structure": "deep_trenches:trees/peltogyne/crown/crown_01",
+      "element": {
+        "structure": "deep_trenches:trees/peltogyne/crown/crown_01",
+        "processors": "deep_trenches:no_persistent_peltogyne_leaves"
+      },
       "weight": 1
     }
   ]

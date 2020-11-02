@@ -4,7 +4,9 @@
   "projection": "rigid",
   "elements": [
     {
-      "structure": "deep_trenches:trees/fuchsitra/trunks/trunk_01",
+      "element": {
+        "structure": "deep_trenches:trees/fuchsitra/trunks/trunk_01"
+      },
       "weight": 1
     }
   ]

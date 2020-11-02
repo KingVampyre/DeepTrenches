@@ -2,22 +2,33 @@
   "name": "deep_trenches:trees/pin_cherry/big_crowns",
   "terminators": "empty",
   "projection": "rigid",
-  "processors": "deep_trenches:no_persistent_pin_cherry_leaves",
   "elements": [
     {
-      "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_01",
+      "element": {
+        "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_01",
+        "processors": "deep_trenches:no_persistent_pin_cherry_leaves"
+      },
       "weight": 4
     },
     {
-      "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_02",
+      "element": {
+        "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_02",
+        "processors": "deep_trenches:no_persistent_pin_cherry_leaves"
+      },
       "weight": 4
     },
 	{
-      "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_03",
+      "element": {
+        "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_03",
+        "processors": "deep_trenches:no_persistent_pin_cherry_leaves"
+      },
       "weight": 1
     },
 	{
-      "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_04",
+      "element": {
+        "structure": "deep_trenches:trees/pin_cherry/crown/big_crown_04",
+        "processors": "deep_trenches:no_persistent_pin_cherry_leaves"
+      },
       "weight": 1
     }
   ]

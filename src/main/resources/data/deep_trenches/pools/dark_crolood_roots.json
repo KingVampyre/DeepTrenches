@@ -4,15 +4,21 @@
   "projection": "rigid",
   "elements": [
     {
-      "structure": "deep_trenches:trees/dark_crolood/root/root_01",
+      "element": {
+        "structure": "deep_trenches:trees/dark_crolood/root/root_01"
+      },
       "weight": 1
     },
 	{
-      "structure": "deep_trenches:trees/dark_crolood/root/root_02",
+      "element": {
+        "structure": "deep_trenches:trees/dark_crolood/root/root_02"
+      },
       "weight": 1
     },
 	{
-      "structure": "deep_trenches:trees/dark_crolood/root/root_03",
+      "element": {
+        "structure": "deep_trenches:trees/dark_crolood/root/root_03"
+      },
       "weight": 1
     }
 

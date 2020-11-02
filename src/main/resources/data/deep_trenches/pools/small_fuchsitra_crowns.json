@@ -2,10 +2,12 @@
   "name": "deep_trenches:trees/fuchsitra/small_crowns",
   "terminators": "empty",
   "projection": "rigid",
-  "processors": "deep_trenches:no_persistent_fuchsitra_leaves",
   "elements": [
     {
-      "structure": "deep_trenches:trees/fuchsitra/crown/small_crown_01",
+      "element": {
+        "structure": "deep_trenches:trees/fuchsitra/crown/small_crown_01",
+        "processors": "deep_trenches:no_persistent_fuchsitra_leaves"
+      },
       "weight": 1
     }
   ]

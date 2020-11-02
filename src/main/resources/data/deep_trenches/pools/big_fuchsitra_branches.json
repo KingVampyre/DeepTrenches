@@ -2,10 +2,12 @@
   "name": "deep_trenches:trees/fuchsitra/branches",
   "terminators": "empty",
   "projection": "rigid",
-  "processors": "deep_trenches:no_persistent_fuchsitra_leaves",
   "elements": [
     {
-      "structure": "deep_trenches:trees/fuchsitra/branches/branch_01",
+      "element": {
+        "structure": "deep_trenches:trees/fuchsitra/branches/branch_01",
+        "processors": "deep_trenches:no_persistent_fuchsitra_leaves"
+      },
       "weight": 1
     }
   ]
