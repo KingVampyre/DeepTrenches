@@ -45,7 +45,7 @@
       "pool": "deep_trenches:trees/thundercloud_plum/branches",
       "functions": [
         {
-          "function": "features:elif",
+          "function": "features:alternatives",
           "functions": [
             {
               "function": "features:rotate",
