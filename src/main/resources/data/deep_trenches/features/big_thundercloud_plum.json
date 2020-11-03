@@ -10,9 +10,9 @@
           {
             "type": "features:parameter",
             "parameter": "features:height",
-            "getters": [
+            "from": [
               {
-                "getter": "features:ranged",
+                "type": "features:ranged",
                 "range": {
                   "min": 10,
                   "max": 13
@@ -45,7 +45,7 @@
       "pool": "deep_trenches:trees/thundercloud_plum/branches",
       "functions": [
         {
-          "function": "features:alternatives",
+          "function": "features:sequence",
           "functions": [
             {
               "function": "features:rotate",
@@ -64,7 +64,7 @@
           ]
         },
         {
-          "function": "features:elif",
+          "function": "features:sequence",
           "functions": [
             {
               "function": "features:mirror",
