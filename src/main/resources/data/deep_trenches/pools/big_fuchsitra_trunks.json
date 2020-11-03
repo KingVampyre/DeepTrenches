@@ -5,6 +5,7 @@
   "elements": [
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/fuchsitra/trunks/trunk_01"
       },
       "weight": 1

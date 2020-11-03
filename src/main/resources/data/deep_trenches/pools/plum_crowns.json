@@ -5,6 +5,7 @@
   "elements": [
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/plum/crown/large_crown",
         "processors": "deep_trenches:no_persistent_plum_leaves"
       },
@@ -12,6 +13,7 @@
     },
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/plum/crown/medium_crown",
         "processors": "deep_trenches:no_persistent_plum_leaves"
       },
@@ -19,6 +21,7 @@
     },
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/plum/crown/small_crown",
         "processors": "deep_trenches:no_persistent_plum_leaves"
       },

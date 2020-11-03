@@ -5,6 +5,7 @@
   "elements": [
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/crolood/basement/basement_01"
       },
       "weight": 1

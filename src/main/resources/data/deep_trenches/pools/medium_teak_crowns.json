@@ -5,6 +5,7 @@
   "elements": [
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/teak/crown/medium_crown_01",
         "processors": "deep_trenches:no_persistent_teak_leaves"
       },

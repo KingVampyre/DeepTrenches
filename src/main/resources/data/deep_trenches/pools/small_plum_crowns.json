@@ -5,6 +5,7 @@
   "elements": [
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/plum/crown/small_crown_01",
         "processors": "deep_trenches:no_persistent_plum_leaves"
       },

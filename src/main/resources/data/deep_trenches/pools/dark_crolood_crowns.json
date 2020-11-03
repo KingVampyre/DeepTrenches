@@ -5,6 +5,7 @@
   "elements": [
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/dark_crolood/crown/crown_01",
         "processors": "deep_trenches:no_persistent_dark_crolood_leaves"
       },

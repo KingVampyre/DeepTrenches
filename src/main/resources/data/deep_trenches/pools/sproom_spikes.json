@@ -5,24 +5,28 @@
   "elements": [
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/sproom/spikes/spike_01"
       },
       "weight": 3
     },
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/sproom/spikes/spike_02"
       },
       "weight": 3
     },
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/sproom/spikes/spike_03"
       },
       "weight": 2
     },
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/sproom/spikes/spike_03"
       },
       "weight": 2

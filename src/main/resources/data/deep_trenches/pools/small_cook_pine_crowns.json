@@ -5,6 +5,7 @@
   "elements": [
     {
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/cook_pine/crown/small_crown_01",
         "processors": "deep_trenches:no_persistent_cook_pine_leaves"
       },
@@ -12,6 +13,7 @@
     },
 	{
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/cook_pine/crown/small_crown_02",
         "processors": "deep_trenches:no_persistent_cook_pine_leaves"
       },
@@ -19,6 +21,7 @@
     },
 	{
       "element": {
+        "type": "minecraft:single",
         "structure": "deep_trenches:trees/cook_pine/crown/small_crown_03",
         "processors": "deep_trenches:no_persistent_cook_pine_leaves"
       },
