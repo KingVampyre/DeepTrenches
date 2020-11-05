@@ -6,7 +6,7 @@
       "pool": "deep_trenches:trees/cook_pine/big_crowns",
       "context": {
         "type": "features:thick_tree",
-        "sapling": "deep_trenches:black_birch_sapling",
+        "sapling": "deep_trenches:cook_pine_sapling",
         "overrides": [
           {
             "type": "features:parameter",
@@ -39,8 +39,20 @@
         {
           "function": "features:pivot",
           "when": {
-            "all": {
+            "none": {
               "x": -5,
+              "z": -4
+            },
+            "clockwise_90": {
+              "x": 5,
+              "z": -4
+            },
+            "clockwise_180": {
+              "x": 5,
+              "z": 4
+            },
+            "counterclockwise_90": {
+              "x": 5,
               "z": -4
             }
           }
