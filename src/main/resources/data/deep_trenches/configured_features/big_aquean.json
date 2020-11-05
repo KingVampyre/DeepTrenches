@@ -1,10 +1,9 @@
 {
   "configurations": {
-    "deep_trenches:small_aquean": {
+    "deep_trenches:big_aquean": {
       "type": "features:jigsaw",
       "start_pool": "deep_trenches:trees/aquean/big_crowns",
-      "rotations": "all",
-      "size": 1
+      "rotations": "all"
     }
   }
 }

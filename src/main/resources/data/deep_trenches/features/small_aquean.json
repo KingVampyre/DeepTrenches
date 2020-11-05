@@ -14,7 +14,7 @@
               {
                 "type": "features:ranged",
                 "range": {
-                  "min": 2,
+                  "min": 3,
                   "max": 4
                 }
               }
@@ -44,8 +44,20 @@
             {
               "function": "features:pivot",
               "when": {
-                "all": {
+                "none": {
                   "x": -2,
+                  "z": -2
+                },
+                "clockwise_90": {
+                  "x": 2,
+                  "z": -2
+                },
+                "clockwise_180": {
+                  "x": 2,
+                  "z": 2
+                },
+                "counterclockwise_90": {
+                  "x": 2,
                   "z": -2
                 }
               }
