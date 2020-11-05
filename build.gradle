@@ -38,7 +38,7 @@ dependencies {
 	// GeckoLib
 	modImplementation "software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0:dev"
 	// Features API
-	modImplementation "github.louwind.features-api:Features-API:1.3.4"
+	modImplementation "github.louwind.features-api:Features-API:1.3.5"
 }
 
 processResources {
