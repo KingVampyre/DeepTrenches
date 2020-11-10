@@ -2,8 +2,7 @@
   "configurations": {
     "deep_trenches:medium_aquean": {
       "type": "features:jigsaw",
-      "start_pool": "deep_trenches:trees/aquean/medium_crowns",
-      "rotations": "all"
+      "start_pool": "deep_trenches:trees/aquean/medium_crowns"
     }
   }
 }

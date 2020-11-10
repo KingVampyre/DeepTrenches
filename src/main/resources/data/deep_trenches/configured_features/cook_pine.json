@@ -3,7 +3,6 @@
     "deep_trenches:cook_pine": {
       "type": "features:jigsaw",
       "start_pool": "deep_trenches:trees/cook_pine/big_crowns",
-      "rotations": "none",
       "size": 2
     }
   }
