@@ -4,6 +4,24 @@
       "type": "features:jigsaw",
       "start_pool": "deep_trenches:trees/cook_pine/big_crowns",
       "size": 2
+    },
+    "deep_trenches:cook_pine_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/cook_pine/big_crowns",
+      "rotation": "clockwise_90",
+      "size": 2
+    },
+    "deep_trenches:cook_pine_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/cook_pine/big_crowns",
+      "rotation": "clockwise_180",
+      "size": 2
+    },
+    "deep_trenches:cook_pine_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/cook_pine/big_crowns",
+      "rotation": "counterclockwise_90",
+      "size": 2
     }
   }
 }
