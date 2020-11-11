@@ -16,7 +16,7 @@ import static net.minecraft.util.BlockRotation.*;
 
 public class CookPineSaplingGenerator implements FeaturesThickSaplingGenerator {
 
-    private static final ImmutableMap<BlockRotation, Identifier> FEATURES = ImmutableMap.<BlockRotation, Identifier>builder()
+    private static final ImmutableMap<BlockRotation, Identifier> COOK_PINES = ImmutableMap.<BlockRotation, Identifier>builder()
             .put(NONE, new Identifier("deep_trenches:cook_pine"))
             .put(CLOCKWISE_90, new Identifier("deep_trenches:cook_pine_90"))
             .put(CLOCKWISE_180, new Identifier("deep_trenches:cook_pine_180"))
@@ -26,9 +26,9 @@ public class CookPineSaplingGenerator implements FeaturesThickSaplingGenerator {
     @Override
     public ConfiguredFeature<?, ?> createThickTreeFeature(Random random, boolean sapling) {
         BlockRotation rotation = BlockRotation.random(random);
-        Identifier feature = FEATURES.get(rotation);
+        Identifier id = COOK_PINES.get(rotation);
 
-        return CONFIGURED_FEATURE.get(feature);
+        return CONFIGURED_FEATURE.get(id);
     }
 
     @Override
