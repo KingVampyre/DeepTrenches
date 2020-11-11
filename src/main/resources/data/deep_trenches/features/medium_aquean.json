@@ -14,8 +14,8 @@
               {
                 "type": "features:ranged",
                 "range": {
-                  "min": 4,
-                  "max": 6
+                  "min": 5,
+                  "max": 7
                 }
               }
             ]
@@ -57,8 +57,8 @@
                   "z": 3
                 },
                 "counterclockwise_90": {
-                  "x": 3,
-                  "z": -3
+                  "x": -3,
+                  "z": 3
                 }
               }
             }

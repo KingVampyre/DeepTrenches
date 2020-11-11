@@ -3,6 +3,21 @@
     "deep_trenches:small_aquean": {
       "type": "features:jigsaw",
       "start_pool": "deep_trenches:trees/aquean/small_crowns"
+    },
+    "deep_trenches:small_aquean_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/aquean/small_crowns",
+      "rotation": "clockwise_90"
+    },
+    "deep_trenches:small_aquean_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/aquean/small_crowns",
+      "rotation": "clockwise_180"
+    },
+    "deep_trenches:small_aquean_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/aquean/small_crowns",
+      "rotation": "counterclockwise_90"
     }
   }
 }
