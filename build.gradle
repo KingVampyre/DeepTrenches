@@ -3,8 +3,8 @@ plugins {
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
@@ -42,7 +42,7 @@ dependencies {
 	modImplementation "io.github.onyxstudios:Cardinal-Components-API:2.7.2"
 	
 	// Features API
-	modImplementation "com.github.Louwind:Features-API:1.4.1"
+	modImplementation "com.github.Louwind:Features-API:1.5.1"
 
 	// Geckolib
 	modImplementation 'software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0:dev'
