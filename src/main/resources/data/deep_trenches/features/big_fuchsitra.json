@@ -26,29 +26,57 @@
             "parameter": "features:height",
             "from": [
               {
-                "type": "features:multiply",
-                "multiplier": 4,
-                "value": {
-                  "parameter": "features:trunks"
-                }
-              }
-            ]
-          },
-          {
-            "type": "features:parameter",
-            "parameter": "features:height",
-            "from": [
-              {
-                "type": "features:addition",
-                "addition": 5,
-                "value": {
-                  "parameter": "features:height"
+                "type": "features:ranged",
+                "range": {
+                  "min": 12,
+                  "max": 16
                 }
               }
             ]
           }
         ]
       },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:sequence",
+          "functions": [
+            {
+              "function": "features:place_feature",
+              "feature": "deep_trenches:big_fuchsitra_basement_90",
+              "pos": {
+                "parameter": "features:pos"
+              },
+              "conditions": [
+                {
+                  "condition": "features:rotation",
+                  "rotation": "clockwise_90"
+                }
+              ]
+            },
+            {
+              "function": "features:place_feature",
+              "feature": "deep_trenches:big_fuchsitra_basement",
+              "pos": {
+                "parameter": "features:pos"
+              },
+              "conditions": [
+                {
+                  "condition": "features:rotation",
+                  "rotation": "none"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "entries": [
         {
           "type": "features:entry",
@@ -57,13 +85,13 @@
             {
               "function": "features:pivot",
 			  "when": {
-                "all": {
+                "none": {
                   "x": -7,
-                  "y": -1,
                   "z": -3
                 },
                 "clockwise_90": {
-                  "x": 1
+                  "x": 4,
+                  "z": -7
                 }
 			  }
             }

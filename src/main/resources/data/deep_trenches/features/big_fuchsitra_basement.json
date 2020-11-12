@@ -13,12 +13,15 @@
               "function": "features:pivot",
 			  "when": {
                 "all": {
+                  "y": 1
+                },
+                "none": {
                   "x": -1,
-                  "y": -3,
                   "z": -1
                 },
 				"clockwise_90": {
-				  "x": 1
+				  "x": 2,
+                  "z": -1
 				}
 			  }
             }

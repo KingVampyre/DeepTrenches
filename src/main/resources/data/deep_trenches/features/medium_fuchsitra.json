@@ -23,6 +23,22 @@
           }
         ]
       },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:place_trunk_with_leaves",
+          "leaves": "deep_trenches:fuchsitra_leaves",
+          "trunk": "deep_trenches:fuchsitra_log",
+          "probability": 0.3
+        }
+      ],
       "entries": [
         {
           "type": "features:entry",
@@ -31,12 +47,13 @@
             {
               "function": "features:pivot",
 			  "when": {
-                "all": {
+                "none": {
                   "x": -5,
                   "z": -2
                 },
 				"clockwise_90": {
-				  "x": 2
+				  "x": 3,
+                  "z": -5
 				}
 			  }
             }

@@ -1,0 +1,13 @@
+{
+  "configurations": {
+    "deep_trenches:medium_fuchsitra": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/fuchsitra/medium_crowns"
+    },
+    "deep_trenches:medium_fuchsitra_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/fuchsitra/medium_crowns",
+      "rotation": "clockwise_90"
+    }
+  }
+}
