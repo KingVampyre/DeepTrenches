@@ -11,7 +11,6 @@
           "blockstate": {
             "block": "deep_trenches:plum_leaves",
             "properties": {
-              "distance": 1,
               "persistent": false
             }
           }

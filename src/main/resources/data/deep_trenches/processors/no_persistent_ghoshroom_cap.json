@@ -11,7 +11,6 @@
           "blockstate": {
             "block": "deep_trenches:ghoshroom_cap",
             "properties": {
-              "distance": 1,
               "persistent": false
             }
           }
