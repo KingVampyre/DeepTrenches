@@ -9,7 +9,17 @@
           "function": "features:pivot",
           "when": {
             "all": {
-              "down": 3
+              "y": 1
+            },
+            "clockwise_90": {
+              "x": 1
+            },
+            "clockwise_180": {
+              "x": 1,
+              "z": 1
+            },
+            "counterclockwise_90": {
+              "z": 1
             }
           }
         }

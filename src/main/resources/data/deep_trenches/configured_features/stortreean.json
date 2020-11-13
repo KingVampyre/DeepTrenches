@@ -1,0 +1,13 @@
+{
+  "configurations": {
+    "deep_trenches:stortreean": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/stortreean/crowns"
+    },
+    "deep_trenches:stortreean_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/stortreean/crowns",
+      "rotation": "clockwise_90"
+    }
+  }
+}
