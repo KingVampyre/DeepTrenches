@@ -4,30 +4,22 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/fuchsitra/trunks",
-      "context": {
-        "type": "features:tree",
-        "overrides": [
-          {
-            "type": "features:parameter",
-            "parameter": "features:height",
-            "from": [
-              {
-                "type": "features:multiply",
-                "multiplier": 4,
-                "value": {
-                  "parameter": "features:trunks"
-                }
-              }
-            ]
-          }
-        ]
-      },
       "functions": [
         {
           "function": "features:pivot",
           "when": {
             "all": {
-              "down": 2
+              "y": 1
+            },
+            "clockwise_90": {
+              "x": 1
+            },
+            "clockwise_180": {
+              "x": 1,
+              "z": 1
+            },
+            "counterclockwise_90": {
+              "z": 1
             }
           }
         }

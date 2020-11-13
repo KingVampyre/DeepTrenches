@@ -26,10 +26,23 @@
             "parameter": "features:height",
             "from": [
               {
-                "type": "features:ranged",
-                "range": {
-                  "min": 12,
-                  "max": 16
+                "type": "features:multiply",
+                "base": 4,
+                "multiplier": {
+                  "parameter": "features:trunks"
+                }
+              }
+            ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:addition",
+                "number": 5,
+                "addition": {
+                  "parameter": "features:height"
                 }
               }
             ]
@@ -37,6 +50,12 @@
         ]
       },
       "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": 1
+          }
+        },
         {
           "function": "features:offset",
           "offset": {
@@ -73,6 +92,116 @@
                   "rotation": "none"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "function": "features:repeat",
+          "context": {
+            "type": "features:repeat",
+            "overrides": [
+              {
+                "type": "features:parameter",
+                "parameter": "features:y",
+                "from": [
+                  {
+                    "type": "features:multiply",
+                    "base": 4,
+                    "multiplier": {
+                      "parameter": "features:index"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "features:parameter",
+                "parameter": "features:y",
+                "from": [
+                  {
+                    "type": "features:addition",
+                    "addition": 5,
+                    "number": {
+                      "parameter": "features:y"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "features:parameter",
+                "parameter": "features:offset",
+                "from": [
+                  {
+                    "type": "features:add_position",
+                    "pos": {
+                      "parameter": "features:pos"
+                    },
+                    "addition": {
+                      "y": {
+                        "parameter": "features:y"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "repeat": [
+            {
+              "function": "features:choose",
+              "choices": [
+                {
+                  "choice": {
+                    "function": "features:place_feature",
+                    "feature": "deep_trenches:big_fuchsitra_trunk",
+                    "pos": {
+                      "parameter": "features:offset"
+                    }
+                  },
+                  "weight": 1
+                },
+                {
+                  "choice": {
+                    "function": "features:place_feature",
+                    "feature": "deep_trenches:big_fuchsitra_trunk_90",
+                    "pos": {
+                      "parameter": "features:offset"
+                    }
+                  },
+                  "weight": 1
+                },
+                {
+                  "choice": {
+                    "function": "features:place_feature",
+                    "feature": "deep_trenches:big_fuchsitra_trunk_180",
+                    "pos": {
+                      "parameter": "features:offset"
+                    }
+                  },
+                  "weight": 1
+                },
+                {
+                  "choice": {
+                    "function": "features:place_feature",
+                    "feature": "deep_trenches:big_fuchsitra_trunk_270",
+                    "pos": {
+                      "parameter": "features:offset"
+                    }
+                  },
+                  "weight": 1
+                }
+              ]
+            }
+          ],
+          "until": [
+            {
+              "condition": "features:less",
+              "kind": "int",
+              "number": {
+                "parameter": "features:index"
+              },
+              "comparing": {
+                "parameter": "features:trunks"
+              }
             }
           ]
         }
