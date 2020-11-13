@@ -13,14 +13,14 @@
 	{
       "element": {
         "type": "minecraft:single",
-        "structure": "deep_trenches:trees/sproom/trunks/trunk_01"
+        "structure": "deep_trenches:trees/sproom/trunks/trunk_02"
       },
       "weight": 1
     },
 	{
       "element": {
         "type": "minecraft:single",
-        "structure": "deep_trenches:trees/sproom/trunks/trunk_01"
+        "structure": "deep_trenches:trees/sproom/trunks/trunk_03"
       },
       "weight": 1
     }

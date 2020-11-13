@@ -1,0 +1,23 @@
+{
+  "configurations": {
+    "deep_trenches:sproom_trunk": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/sproom/trunks"
+    },
+    "deep_trenches:sproom_trunk_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/sproom/trunks",
+      "rotation": "clockwise_90"
+    },
+    "deep_trenches:sproom_trunk_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/sproom/trunks",
+      "rotation": "clockwise_180"
+    },
+    "deep_trenches:sproom_trunk_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/sproom/trunks",
+      "rotation": "counterclockwise_90"
+    }
+  }
+}

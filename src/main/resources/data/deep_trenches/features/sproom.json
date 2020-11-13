@@ -27,8 +27,8 @@
             "from": [
               {
                 "type": "features:multiply",
-                "multiplier": 5,
-                "value": {
+                "base": 5,
+                "multiplier": {
                   "parameter": "features:trunks"
                 }
               }
@@ -36,6 +36,105 @@
           }
         ]
       },
+      "functions": [
+        {
+          "function": "features:repeat",
+          "context": {
+            "type": "features:repeat",
+            "overrides": [
+              {
+                "type": "features:parameter",
+                "parameter": "features:y",
+                "from": [
+                  {
+                    "type": "features:multiply",
+                    "base": 5,
+                    "multiplier": {
+                      "parameter": "features:index"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "features:parameter",
+                "parameter": "features:offset",
+                "from": [
+                  {
+                    "type": "features:add_position",
+                    "pos": {
+                      "parameter": "features:pos"
+                    },
+                    "addition": {
+                      "y": {
+                        "parameter": "features:y"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "repeat": [
+            {
+              "function": "features:choose",
+              "choices": [
+                {
+                  "choice": {
+                    "function": "features:place_feature",
+                    "feature": "deep_trenches:sproom_trunk",
+                    "pos": {
+                      "parameter": "features:offset"
+                    }
+                  },
+                  "weight": 1
+                },
+                {
+                  "choice": {
+                    "function": "features:place_feature",
+                    "feature": "deep_trenches:sproom_trunk_90",
+                    "pos": {
+                      "parameter": "features:offset"
+                    }
+                  },
+                  "weight": 1
+                },
+                {
+                  "choice": {
+                    "function": "features:place_feature",
+                    "feature": "deep_trenches:sproom_trunk_180",
+                    "pos": {
+                      "parameter": "features:offset"
+                    }
+                  },
+                  "weight": 1
+                },
+                {
+                  "choice": {
+                    "function": "features:place_feature",
+                    "feature": "deep_trenches:sproom_trunk_270",
+                    "pos": {
+                      "parameter": "features:offset"
+                    }
+                  },
+                  "weight": 1
+                }
+              ]
+            }
+          ],
+          "until": [
+            {
+              "condition": "features:less",
+              "kind": "int",
+              "number": {
+                "parameter": "features:index"
+              },
+              "comparing": {
+                "parameter": "features:trunks"
+              }
+            }
+          ]
+        }
+      ],
       "entries": [
         {
           "type": "features:entry",
@@ -44,9 +143,15 @@
             {
               "function": "features:pivot",
               "when": {
+                "all": {
+                  "y": {
+                    "parameter": "features:height"
+                  }
+                },
                 "none": {
-                  "x": 10,
-                  "z": 10
+                  "x": -10,
+                  "y": 1,
+                  "z": -10
                 }
               }
             }

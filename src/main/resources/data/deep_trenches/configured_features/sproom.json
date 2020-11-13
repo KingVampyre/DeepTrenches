@@ -1,0 +1,8 @@
+{
+  "configurations": {
+    "deep_trenches:sproom": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/sproom/crowns"
+    }
+  }
+}
