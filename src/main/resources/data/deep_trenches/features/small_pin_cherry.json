@@ -38,9 +38,21 @@
         {
           "function": "features:pivot",
           "when": {
-            "all": {
+            "none": {
               "x": -2,
               "z": -2
+            },
+            "clockwise_90": {
+              "x": 2,
+              "z": -2
+            },
+            "clockwise_180": {
+              "x": 2,
+              "z": 2
+            },
+            "counterclockwise_90": {
+              "x": -2,
+              "z": 2
             }
           }
         }
