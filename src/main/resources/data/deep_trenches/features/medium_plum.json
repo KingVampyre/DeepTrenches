@@ -4,37 +4,38 @@
     {
       "type": "features:pool",
       "pool": "deep_trenches:trees/plum/medium_crowns",
-      "entries": [
-        {
-          "type": "features:entry",
-          "structure": "deep_trenches:trees/plum/crown/medium_crown_01",
-          "context": {
-            "type": "features:tree",
-            "overrides": [
+      "context": {
+        "type": "features:tree",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
               {
-                "type": "features:parameter",
-                "parameter": "features:height",
-                "from": [
-                  {
-                    "type": "features:ranged",
-                    "range": {
-                      "min": 3,
-                      "max": 5
-                    }
-                  }
-                ]
+                "type": "features:ranged",
+                "range": {
+                  "min": 4,
+                  "max": 6
+                }
               }
             ]
-          },
-          "functions": [
-            {
-              "function": "features:offset",
-              "offset": {
-                "x": -3,
-                "z": -3
-              }
-            }
-          ]
+          }
+        ]
+      },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "x": -3,
+            "y": {
+              "parameter": "features:height"
+            },
+            "z": -3
+          }
+        },
+        {
+          "function": "features:place_trunk",
+          "block": "deep_trenches:plum_log"
         }
       ]
     }

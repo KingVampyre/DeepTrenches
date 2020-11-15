@@ -1,0 +1,8 @@
+{
+  "configurations": {
+    "deep_trenches:small_plum": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/plum/small_crowns"
+    }
+  }
+}

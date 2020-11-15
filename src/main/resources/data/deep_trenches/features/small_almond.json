@@ -24,20 +24,17 @@
       },
       "functions": [
         {
-          "function": "features:offset",
-          "offset": {
-            "y": {
-              "parameter": "features:height"
-            }
-          }
-        },
-        {
           "function": "features:place_trunk",
           "block": "deep_trenches:almond_log"
         },
         {
           "function": "features:pivot",
           "when": {
+            "all": {
+              "y": {
+                "parameter": "features:height"
+              }
+            },
             "none": {
               "x": -2,
               "z": -2
