@@ -9,7 +9,6 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import java.util.Random;
 
 import static net.minecraft.util.BlockRotation.*;
-import static net.minecraft.util.BlockRotation.COUNTERCLOCKWISE_90;
 import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
 
 public class AqueanSaplingGenerator implements FeaturesSaplingGenerator {

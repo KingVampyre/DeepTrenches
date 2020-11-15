@@ -11,7 +11,6 @@ import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.PIN_CHERRY_SAPLING;
 import static net.minecraft.util.BlockRotation.*;
-import static net.minecraft.util.BlockRotation.COUNTERCLOCKWISE_90;
 import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
 
 public class PinCherrySaplingGenerator implements FeaturesThickSaplingGenerator {
