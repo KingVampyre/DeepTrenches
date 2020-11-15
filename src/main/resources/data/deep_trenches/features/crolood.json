@@ -5,8 +5,7 @@
       "type": "features:pool",
       "pool": "deep_trenches:trees/crolood/crowns",
       "context": {
-        "type": "features:thick_tree",
-        "sapling": "deep_trenches:crolood_sapling",
+        "type": "features:tree",
         "overrides": [
           {
             "type": "features:parameter",
@@ -23,6 +22,27 @@
           }
         ]
       },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:place_trunk",
+          "block": "deep_trenches:crolood_log"
+        },
+        {
+          "function": "features:place_feature",
+          "feature": "deep_trenches:crolood_basement",
+          "pos": {
+            "parameter": "features:pos"
+          }
+        }
+      ],
       "entries": [
         {
           "type": "features:entry",
@@ -31,8 +51,8 @@
             {
               "function": "features:offset",
               "offset": {
-                "north": 7,
-                "west": 8
+                "x": -8,
+                "z": -7
               }
             }
           ]
