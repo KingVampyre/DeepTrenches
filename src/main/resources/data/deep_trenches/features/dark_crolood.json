@@ -15,14 +15,73 @@
               {
                 "type": "features:ranged",
                 "range": {
-                  "min": 3,
-                  "max": 5
+                  "min": 4,
+                  "max": 6
                 }
               }
             ]
           }
         ]
       },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:place_trunk",
+          "block": "deep_trenches:dark_crolood_log"
+        },
+        {
+          "function": "features:choose",
+          "choices": [
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_90",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_180",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_270",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            }
+          ]
+        }
+      ],
       "entries": [
         {
           "type": "features:entry",
@@ -31,12 +90,13 @@
             {
               "function": "features:pivot",
               "when": {
-                "all": {
+                "none": {
                   "x": -9,
                   "z": -12
                 },
                 "clockwise_90": {
-                  "x": 1
+                  "x": 13,
+                  "z": -9
                 }
               }
             }
