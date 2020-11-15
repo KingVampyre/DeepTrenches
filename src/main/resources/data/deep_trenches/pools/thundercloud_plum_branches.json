@@ -5,7 +5,7 @@
   "elements": [
     {
       "element": {
-        "type": "minecraft:single",
+        "type": "features:no_update_neighbors",
         "structure": "deep_trenches:trees/thundercloud_plum/branches/large_branch_01",
         "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves"
       },
@@ -13,7 +13,7 @@
     },
     {
       "element": {
-        "type": "minecraft:single",
+        "type": "features:no_update_neighbors",
         "structure": "deep_trenches:trees/thundercloud_plum/branches/medium_branch_01",
         "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves"
       },
@@ -21,7 +21,7 @@
     },
     {
       "element": {
-        "type": "minecraft:single",
+        "type": "features:no_update_neighbors",
         "structure": "deep_trenches:trees/thundercloud_plum/branches/small_branch_01",
         "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves"
       },

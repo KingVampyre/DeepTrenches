@@ -5,7 +5,7 @@
   "elements": [
     {
       "element": {
-        "type": "minecraft:single",
+        "type": "features:no_update_neighbors",
         "structure": "deep_trenches:trees/cherry/crown/medium_crown_01",
         "processors": "deep_trenches:no_persistent_cherry_leaves"
       },
@@ -13,7 +13,7 @@
     },
     {
       "element": {
-        "type": "minecraft:single",
+        "type": "features:no_update_neighbors",
         "structure": "deep_trenches:trees/cherry/crown/medium_crown_02",
         "processors": "deep_trenches:no_persistent_cherry_leaves"
       },
@@ -21,7 +21,7 @@
     },
 	{
       "element": {
-        "type": "minecraft:single",
+        "type": "features:no_update_neighbors",
         "structure": "deep_trenches:trees/cherry/crown/medium_crown_03",
         "processors": "deep_trenches:no_persistent_cherry_leaves"
       },
@@ -29,7 +29,7 @@
     },
 	{
       "element": {
-        "type": "minecraft:single",
+        "type": "features:no_update_neighbors",
         "structure": "deep_trenches:trees/cherry/crown/medium_crown_04",
         "processors": "deep_trenches:no_persistent_cherry_leaves"
       },

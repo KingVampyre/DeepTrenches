@@ -5,14 +5,14 @@
   "elements": [
     {
       "element": {
-        "type": "minecraft:single",
+        "type": "features:no_update_neighbors",
         "structure": "deep_trenches:trees/black_birch/trunks/trunk_01"
       },
       "weight": 1
     },
 	{
       "element": {
-        "type": "minecraft:single",
+        "type": "features:no_update_neighbors",
         "structure": "deep_trenches:trees/black_birch/trunks/trunk_02"
       },
       "weight": 1
