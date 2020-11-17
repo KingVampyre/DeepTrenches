@@ -53,12 +53,6 @@
         {
           "function": "features:offset",
           "offset": {
-            "y": 1
-          }
-        },
-        {
-          "function": "features:offset",
-          "offset": {
             "y": {
               "parameter": "features:height"
             }
@@ -214,6 +208,9 @@
             {
               "function": "features:pivot",
 			  "when": {
+                "all": {
+                  "y": 1
+                },
                 "none": {
                   "x": -7,
                   "z": -3

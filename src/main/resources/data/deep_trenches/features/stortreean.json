@@ -38,6 +38,14 @@
       },
       "functions": [
         {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
           "function": "features:repeat",
           "context": {
             "type": "features:repeat",
@@ -144,18 +152,14 @@
               "function": "features:pivot",
 			  "when": {
                 "all": {
-                  "y": {
-                    "parameter": "features:height"
-                  }
+                  "y": 1
                 },
                 "none": {
                   "x": -8,
-                  "y": 1,
                   "z": -7
                 },
                 "clockwise_90": {
                   "x": 8,
-                  "y": 1,
                   "z": -8
                 }
 			  }
