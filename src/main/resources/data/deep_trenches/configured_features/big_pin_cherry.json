@@ -1,0 +1,23 @@
+{
+  "configurations": {
+    "deep_trenches:big_pin_cherry": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/pin_cherry/big_crowns"
+    },
+    "deep_trenches:big_pin_cherry_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/pin_cherry/big_crowns",
+      "rotation": "clockwise_90"
+    },
+    "deep_trenches:big_pin_cherry_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/pin_cherry/big_crowns",
+      "rotation": "clockwise_180"
+    },
+    "deep_trenches:big_pin_cherry_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/pin_cherry/big_crowns",
+      "rotation": "counterclockwise_90"
+    }
+  }
+}

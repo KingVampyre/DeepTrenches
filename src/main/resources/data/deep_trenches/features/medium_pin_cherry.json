@@ -44,9 +44,21 @@
             {
               "function": "features:pivot",
               "when": {
-                "all": {
+                "none": {
                   "x": -3,
                   "z": -4
+                },
+                "clockwise_90": {
+                  "x": 4,
+                  "z": -3
+                },
+                "clockwise_180": {
+                  "x": 3,
+                  "z": 4
+                },
+                "counterclockwise_90": {
+                  "x": -4,
+                  "z": 3
                 }
               }
             }
@@ -59,9 +71,21 @@
             {
               "function": "features:pivot",
               "when": {
-                "all": {
+                "none": {
                   "x": -3,
                   "z": -3
+                },
+                "clockwise_90": {
+                  "x": 3,
+                  "z": -3
+                },
+                "clockwise_180": {
+                  "x": 3,
+                  "z": 3
+                },
+                "counterclockwise_90": {
+                  "x": -3,
+                  "z": 3
                 }
               }
             }
@@ -74,9 +98,21 @@
             {
               "function": "features:pivot",
               "when": {
-                "all": {
+                "none": {
                   "x": -6,
                   "z": -5
+                },
+                "clockwise_90": {
+                  "x": 5,
+                  "z": -6
+                },
+                "clockwise_180": {
+                  "x": 6,
+                  "z": 5
+                },
+                "counterclockwise_90": {
+                  "x": -5,
+                  "z": 6
                 }
               }
             }
@@ -89,9 +125,21 @@
             {
               "function": "features:pivot",
               "when": {
-                "all": {
+                "none": {
                   "x": -4,
                   "z": -6
+                },
+                "clockwise_90": {
+                  "x": 6,
+                  "z": -4
+                },
+                "clockwise_180": {
+                  "x": 4,
+                  "z": 6
+                },
+                "counterclockwise_90": {
+                  "x": -6,
+                  "z": 4
                 }
               }
             }
