@@ -1,0 +1,27 @@
+{
+  "configurations": {
+    "deep_trenches:funeranite": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/funeranite/basements",
+      "size": 2
+    },
+    "deep_trenches:funeranite_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/funeranite/basements",
+      "rotation": "clockwise_90",
+      "size": 2
+    },
+    "deep_trenches:funeranite_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/funeranite/basements",
+      "rotation": "clockwise_180",
+      "size": 2
+    },
+    "deep_trenches:funeranite_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/funeranite/basements",
+      "rotation": "counterclockwise_90",
+      "size": 2
+    }
+  }
+}
