@@ -1,0 +1,28 @@
+{
+  "name": "deep_trenches:fungus/ghoshroom/stems",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "element": {
+        "type": "minecraft:single",
+        "structure": "deep_trenches:fungus/ghoshroom/stems/stem_01"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "type": "minecraft:single",
+        "structure": "deep_trenches:fungus/ghoshroom/stems/stem_02"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "type": "minecraft:single",
+        "structure": "deep_trenches:fungus/ghoshroom/stems/stem_03"
+      },
+      "weight": 1
+    }
+  ]
+}
