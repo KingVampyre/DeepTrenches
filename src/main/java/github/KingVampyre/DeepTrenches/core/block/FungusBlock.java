@@ -23,7 +23,7 @@ import static net.minecraft.fluid.Fluids.WATER;
 import static net.minecraft.fluid.Fluids.*;
 import static net.minecraft.state.property.Properties.WATERLOGGED;
 
-public class FungusBlock extends StorceanTallSaplingBlock {
+public class FungusBlock extends StorceanSaplingBlock {
 
 	public FungusBlock(FeaturesSaplingGenerator generator, AbstractBlock.Settings settings) {
 		super(generator, settings);
@@ -87,7 +87,7 @@ public class FungusBlock extends StorceanTallSaplingBlock {
 		if (fluidState.getFluid() == FLOWING_WATER)
 			return neighborState;
 
-		if (fluidState.getFluid() == WATER)
+		if (fluidState.getFluid() == WATER && neighborState.contains(WATERLOGGED))
 			return neighborState.with(WATERLOGGED, true);
 
 		return super.getStateForNeighborUpdate(state, facing, neighborState, world, pos, neighborPos);
@@ -100,7 +100,6 @@ public class FungusBlock extends StorceanTallSaplingBlock {
 			world.setBlockState(pos, AIR.getDefaultState());
 
 		super.scheduledTick(state, world, pos, random);
-
 	}
 
 }
