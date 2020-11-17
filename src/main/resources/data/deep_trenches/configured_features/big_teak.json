@@ -1,0 +1,8 @@
+{
+  "configurations": {
+    "deep_trenches:big_teak": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/teak/big_crowns"
+    }
+  }
+}

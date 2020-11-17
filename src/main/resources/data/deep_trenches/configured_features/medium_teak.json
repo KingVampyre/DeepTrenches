@@ -1,0 +1,13 @@
+{
+  "configurations": {
+    "deep_trenches:medium_teak": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/teak/medium_crowns"
+    },
+    "deep_trenches:medium_teak_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/teak/medium_crowns",
+      "rotation": "clockwise_90"
+    }
+  }
+}

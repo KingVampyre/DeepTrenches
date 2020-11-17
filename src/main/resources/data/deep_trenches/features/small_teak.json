@@ -14,26 +14,40 @@
               {
                 "type": "features:ranged",
                 "range": {
-                  "min": 2,
-                  "max": 5
+                  "min": 3,
+                  "max": 6
                 }
               }
             ]
           }
         ]
       },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:place_trunk_with_leaves",
+          "leaves": "deep_trenches:teak_leaves",
+          "trunk": "deep_trenches:teak_log",
+          "probability": 0.3
+        }
+      ],
       "entries": [
         {
           "type": "features:entry",
           "structure": "deep_trenches:trees/teak/crown/small_crown_01",
           "functions": [
             {
-              "function": "features:pivot",
-              "when": {
-                "all": {
-                  "x": -5,
-                  "z": -5
-                }
+              "function": "features:offset",
+              "offset": {
+                "x": -5,
+                "z": -5
               }
             }
           ]
