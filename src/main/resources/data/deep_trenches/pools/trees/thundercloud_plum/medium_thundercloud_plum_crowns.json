@@ -10,6 +10,38 @@
         "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves"
       },
       "weight": 1
+    },
+    {
+      "element": {
+        "type": "features:no_update_neighbors",
+        "structure": "deep_trenches:trees/thundercloud_plum/crown/medium_crown_02",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "type": "features:no_update_neighbors",
+        "structure": "deep_trenches:trees/thundercloud_plum/crown/medium_crown_03",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "type": "features:no_update_neighbors",
+        "structure": "deep_trenches:trees/thundercloud_plum/crown/medium_crown_04",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "type": "features:no_update_neighbors",
+        "structure": "deep_trenches:trees/thundercloud_plum/crown/medium_crown_05",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves"
+      },
+      "weight": 1
     }
   ]
 }

@@ -3,7 +3,7 @@
   "pools": [
     {
       "type": "features:pool",
-      "pool": "deep_trenches:trees/plum/medium_crowns",
+      "pool": "deep_trenches:trees/thundercloud_plum/medium_crowns",
       "context": {
         "type": "features:tree",
         "overrides": [
@@ -14,81 +14,39 @@
               {
                 "type": "features:ranged",
                 "range": {
-                  "min": 8,
-                  "max": 12
+                  "min": 6,
+                  "max": 8
                 }
               }
             ]
           }
         ]
       },
-      "entries": [
-        {
-          "type": "features:entry",
-          "structure": "deep_trenches:trees/thundercloud_plum/crown/small_crown",
-          "functions": [
-            {
-              "function": "features:pivot",
-              "when": {
-                "none": {
-                  "x": -4,
-                  "z": -2
-                },
-                "clockwise_90": {
-                  "x": -2,
-                  "z": -4
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "features:pool",
-      "pool": "deep_trenches:trees/thundercloud_plum/branches",
       "functions": [
         {
-          "function": "features:sequence",
-          "functions": [
-            {
-              "function": "features:rotate",
-              "rotation": "clockwise_90",
-              "conditions": [
-                {
-                  "condition": "features:rotation",
-                  "rotation": "clockwise_90"
-                }
-              ]
-            },
-            {
-              "function": "features:rotate",
-              "rotation": "none"
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
             }
-          ]
+          }
         },
         {
-          "function": "features:sequence",
-          "functions": [
-            {
-              "function": "features:mirror",
-              "block": "deep_trenches:thundercloud_plum_log",
-              "direction": "south",
-              "rotation": "counterclockwise_90",
-              "conditions": [
-                {
-                  "condition": "features:rotation",
-                  "rotation": "clockwise_90"
-                }
-              ]
+          "function": "features:place_trunk",
+          "block": "deep_trenches:thundercloud_plum_log"
+        },
+        {
+          "function": "features:pivot",
+          "when": {
+            "none": {
+              "x": -4,
+              "z": -2
             },
-            {
-              "function": "features:mirror",
-              "block": "deep_trenches:thundercloud_plum_log",
-              "direction": "east",
-              "rotation": "clockwise_180"
+            "clockwise_90": {
+              "x": 2,
+              "z": -4
             }
-          ]
+          }
         }
       ]
     }
