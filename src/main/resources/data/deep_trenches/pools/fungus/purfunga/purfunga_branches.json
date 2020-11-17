@@ -1,0 +1,21 @@
+{
+  "name": "deep_trenches:fungus/purfunga/branches",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "element": {
+        "type": "minecraft:single",
+        "structure": "deep_trenches:fungus/purfunga/branches/big_branch_01"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "type": "minecraft:single",
+        "structure": "deep_trenches:fungus/purfunga/branches/small_branch_01"
+      },
+      "weight": 2
+    }
+  ]
+}

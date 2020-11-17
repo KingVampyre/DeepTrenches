@@ -1,0 +1,8 @@
+{
+  "configurations": {
+    "deep_trenches:purfunga": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/purfunga/crowns"
+    }
+  }
+}

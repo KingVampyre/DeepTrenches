@@ -1,0 +1,94 @@
+{
+  "type": "features:jigsaw",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:fungus/purfunga/crowns",
+      "context": {
+        "type": "features:tree",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:ranged",
+                "range": {
+                  "min": 2,
+                  "max": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:addition",
+                "addition": 5,
+                "number": {
+                  "parameter": "features:height"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:place_trunk",
+          "block": "deep_trenches:purfunga_log"
+        },
+        {
+          "function": "features:choose",
+          "choices": [
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:purfunga_basement",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:purfunga_basement_90",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:fungus/purfunga/crowns/crown_01",
+          "functions": [
+            {
+              "function": "features:offset",
+              "offset": {
+                "x": -4,
+                "z": -4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
