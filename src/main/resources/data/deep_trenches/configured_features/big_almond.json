@@ -1,0 +1,23 @@
+{
+  "configurations": {
+    "deep_trenches:big_almond": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/almond/big_crowns"
+    },
+    "deep_trenches:big_almond_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/almond/big_crowns",
+      "rotation": "clockwise_90"
+    },
+    "deep_trenches:big_almond_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/almond/big_crowns",
+      "rotation": "clockwise_180"
+    },
+    "deep_trenches:big_almond_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/almond/big_crowns",
+      "rotation": "counterclockwise_90"
+    }
+  }
+}

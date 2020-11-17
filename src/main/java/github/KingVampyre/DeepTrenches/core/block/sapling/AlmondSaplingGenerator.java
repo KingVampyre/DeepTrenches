@@ -15,8 +15,19 @@ import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
 
 public class AlmondSaplingGenerator implements FeaturesThickSaplingGenerator {
 
-    private static final Identifier BIG_ALMOND = new Identifier("deep_trenches:big_almond");
-    private static final Identifier MEDIUM_ALMOND = new Identifier("deep_trenches:medium_almond");
+    private static final ImmutableMap<BlockRotation, Identifier> BIG_ALMOND = ImmutableMap.<BlockRotation, Identifier>builder()
+            .put(NONE, new Identifier("deep_trenches:big_almond"))
+            .put(CLOCKWISE_90, new Identifier("deep_trenches:big_almond_90"))
+            .put(CLOCKWISE_180, new Identifier("deep_trenches:big_almond_180"))
+            .put(COUNTERCLOCKWISE_90, new Identifier("deep_trenches:big_almond_270"))
+            .build();
+
+    private static final ImmutableMap<BlockRotation, Identifier> MEDIUM_ALMOND = ImmutableMap.<BlockRotation, Identifier>builder()
+            .put(NONE, new Identifier("deep_trenches:medium_almond"))
+            .put(CLOCKWISE_90, new Identifier("deep_trenches:medium_almond_90"))
+            .put(CLOCKWISE_180, new Identifier("deep_trenches:medium_almond_180"))
+            .put(COUNTERCLOCKWISE_90, new Identifier("deep_trenches:medium_almond_270"))
+            .build();
 
     private static final ImmutableMap<BlockRotation, Identifier> SMALL_ALMOND = ImmutableMap.<BlockRotation, Identifier>builder()
             .put(NONE, new Identifier("deep_trenches:small_almond"))
@@ -27,15 +38,21 @@ public class AlmondSaplingGenerator implements FeaturesThickSaplingGenerator {
 
     @Override
     public ConfiguredFeature<?, ?> createThickTreeFeature(Random random, boolean sapling) {
-        return CONFIGURED_FEATURE.get(BIG_ALMOND);
+        BlockRotation rotation = BlockRotation.random(random);
+        Identifier id = BIG_ALMOND.get(rotation);
+
+        return CONFIGURED_FEATURE.get(id);
     }
 
     @Override
     public ConfiguredFeature<?, ?> createTreeFeature(Random random, boolean sapling) {
         BlockRotation rotation = BlockRotation.random(random);
 
-        if(random.nextInt(5) == 0)
-            return CONFIGURED_FEATURE.get(MEDIUM_ALMOND);
+        if(random.nextInt(5) == 0) {
+            Identifier id = MEDIUM_ALMOND.get(rotation);
+
+            return CONFIGURED_FEATURE.get(id);
+        }
 
         Identifier id = SMALL_ALMOND.get(rotation);
 
