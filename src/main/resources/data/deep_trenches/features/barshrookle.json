@@ -1,0 +1,97 @@
+{
+  "type": "features:jigsaw",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:fungus/barshrookle/crowns",
+      "context": {
+        "type": "features:tree",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:ranged",
+                "range": {
+                  "min": 6,
+                  "max": 9
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:place_trunk",
+          "block": "deep_trenches:barshrookle_log"
+        }
+      ],
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:fungus/barshrookle/crowns/crown_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "when": {
+                "none": {
+                  "x": -2,
+                  "z": -3
+                },
+                "clockwise_90": {
+                  "x": 3,
+                  "z": -2
+                },
+                "clockwise_180": {
+                  "x": 2,
+                  "z": 3
+                },
+                "counterclockwise_90": {
+                  "x": -3,
+                  "z": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:fungus/barshrookle/crowns/crown_02",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "when": {
+                "none": {
+                  "x": -2,
+                  "z": -3
+                },
+                "clockwise_90": {
+                  "x": 3,
+                  "z": -2
+                },
+                "clockwise_180": {
+                  "x": 2,
+                  "z": 3
+                },
+                "counterclockwise_90": {
+                  "x": -3,
+                  "z": 2
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
