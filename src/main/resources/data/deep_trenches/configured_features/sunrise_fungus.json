@@ -1,0 +1,20 @@
+{
+  "configurations": {
+    "deep_trenches:sunrise_fungus": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/sunrise/crowns"
+    },
+    "deep_trenches:sunrise_fungus_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/sunrise/crowns"
+    },
+    "deep_trenches:sunrise_fungus_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/sunrise/crowns"
+    },
+    "deep_trenches:sunrise_fungus_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/sunrise/crowns"
+    }
+  }
+}

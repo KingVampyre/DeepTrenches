@@ -1,0 +1,35 @@
+{
+  "type": "features:jigsaw",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:fungus/sunrise/basements",
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:fungus/sunrise/basements/basement_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "when": {
+                "all": {
+                  "y": 1
+                },
+                "clockwise_90": {
+                  "x": 1
+                },
+                "clockwise_180": {
+                  "x": 1,
+                  "z": 1
+                },
+                "counterclockwise_90": {
+                  "z": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
