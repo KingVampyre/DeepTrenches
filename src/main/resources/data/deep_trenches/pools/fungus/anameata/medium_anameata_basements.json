@@ -1,0 +1,14 @@
+{
+  "name": "deep_trenches:fungus/anameata/medium_basements",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "element": {
+        "type": "minecraft:single",
+        "structure": "deep_trenches:fungus/anameata/basements/medium_basement_01"
+      },
+      "weight": 2
+    }
+  ]
+}

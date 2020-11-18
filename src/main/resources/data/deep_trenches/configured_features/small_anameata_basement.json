@@ -1,0 +1,23 @@
+{
+  "configurations": {
+    "deep_trenches:small_anameata_basement": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/anameata/small_basements"
+    },
+    "deep_trenches:small_anameata_basement_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/anameata/small_basements",
+      "rotation": "clockwise_90"
+    },
+    "deep_trenches:small_anameata_basement_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/anameata/small_basements",
+      "rotation": "clockwise_180"
+    },
+    "deep_trenches:small_anameata_basement_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/anameata/small_basements",
+      "rotation": "counterclockwise_90"
+    }
+  }
+}

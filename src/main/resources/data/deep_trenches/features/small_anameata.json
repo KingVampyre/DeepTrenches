@@ -1,0 +1,128 @@
+{
+  "type": "features:jigsaw",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:fungus/anameata/small_crowns",
+      "context": {
+        "type": "features:tree",
+        "overrides": [
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:ranged",
+                "range": {
+                  "min": 4,
+                  "max": 6
+                }
+              }
+            ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:addition",
+                "addition": 4,
+                "number": {
+                  "parameter": "features:height"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "functions": [
+        {
+          "function": "features:offset",
+          "offset": {
+            "y": {
+              "parameter": "features:height"
+            }
+          }
+        },
+        {
+          "function": "features:place_trunk",
+          "block": "deep_trenches:anameata_log"
+        },
+        {
+          "function": "features:choose",
+          "choices": [
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:small_anameata_basement",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:small_anameata_basement_90",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:small_anameata_basement_180",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:small_anameata_basement_270",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:fungus/anameata/crowns/small_crown_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "when": {
+                "none": {
+                  "x": -7,
+                  "z": -6
+                },
+                "clockwise_90": {
+                  "x": 6,
+                  "z": -7
+                },
+                "clockwise_180": {
+                  "x": 7,
+                  "z": 6
+                },
+                "counterclockwise_90": {
+                  "x": -6,
+                  "z": 7
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

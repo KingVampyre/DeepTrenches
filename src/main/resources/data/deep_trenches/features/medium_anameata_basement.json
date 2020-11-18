@@ -1,0 +1,41 @@
+{
+  "type": "features:jigsaw",
+  "pools": [
+    {
+      "type": "features:pool",
+      "pool": "deep_trenches:fungus/anameata/medium_basements",
+      "entries": [
+        {
+          "type": "features:entry",
+          "structure": "deep_trenches:fungus/anameata/basements/medium_basement_01",
+          "functions": [
+            {
+              "function": "features:pivot",
+              "when": {
+                "all": {
+                  "y": 1
+                },
+                "none": {
+                  "x": -2,
+                  "z": -2
+                },
+                "clockwise_90": {
+                  "x": 2,
+                  "z": -2
+                },
+                "clockwise_180": {
+                  "x": 2,
+                  "z": 2
+                },
+                "counterclockwise_90": {
+                  "x": -2,
+                  "z": 2
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
