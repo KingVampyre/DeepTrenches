@@ -19,6 +19,19 @@
                 }
               }
             ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:addition",
+                "addition": 3,
+                "number": {
+                  "parameter": "features:height"
+                }
+              }
+            ]
           }
         ]
       },
@@ -34,6 +47,13 @@
         {
           "function": "features:place_trunk",
           "block": "deep_trenches:crolood_log"
+        },
+        {
+          "function": "features:place_feature",
+          "feature": "deep_trenches:crolood_basement_with_roots",
+          "pos": {
+            "parameter": "features:pos"
+          }
         }
       ],
       "entries": [

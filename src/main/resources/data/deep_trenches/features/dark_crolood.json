@@ -20,6 +20,19 @@
                 }
               }
             ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:addition",
+                "addition": 3,
+                "number": {
+                  "parameter": "features:height"
+                }
+              }
+            ]
           }
         ]
       },
@@ -35,6 +48,51 @@
         {
           "function": "features:place_trunk",
           "block": "deep_trenches:dark_crolood_log"
+        },
+        {
+          "function": "features:choose",
+          "choices": [
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_with_roots",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_with_roots_90",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_with_roots_180",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_with_roots_270",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            }
+          ]
         }
       ],
       "entries": [

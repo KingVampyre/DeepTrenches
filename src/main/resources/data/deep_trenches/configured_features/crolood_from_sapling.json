@@ -1,6 +1,6 @@
 {
   "configurations": {
-    "deep_trenches:crolood_with_basement": {
+    "deep_trenches:crolood_from_sapling": {
       "type": "features:jigsaw",
       "start_pool": "deep_trenches:trees/crolood/crowns"
     }

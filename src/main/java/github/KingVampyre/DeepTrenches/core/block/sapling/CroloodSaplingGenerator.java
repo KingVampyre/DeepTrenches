@@ -10,7 +10,7 @@ import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
 
 public class CroloodSaplingGenerator implements FeaturesSaplingGenerator {
 
-    private static final Identifier CROLOOD = new Identifier("deep_trenches:crolood");
+    private static final Identifier CROLOOD = new Identifier("deep_trenches:crolood_from_sapling");
 
     @Override
     public ConfiguredFeature<?, ?> createTreeFeature(Random random, boolean sapling) {

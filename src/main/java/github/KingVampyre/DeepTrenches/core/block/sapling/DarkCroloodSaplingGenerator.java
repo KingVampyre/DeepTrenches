@@ -16,10 +16,10 @@ import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
 public class DarkCroloodSaplingGenerator implements FeaturesThickSaplingGenerator {
 
     private static final ImmutableMap<BlockRotation, Identifier> DARK_CROLOOD = ImmutableMap.<BlockRotation, Identifier>builder()
-            .put(NONE, new Identifier("deep_trenches:dark_crolood"))
-            .put(CLOCKWISE_90, new Identifier("deep_trenches:dark_crolood_90"))
-            .put(CLOCKWISE_180, new Identifier("deep_trenches:dark_crolood"))
-            .put(COUNTERCLOCKWISE_90, new Identifier("deep_trenches:dark_crolood_90"))
+            .put(NONE, new Identifier("deep_trenches:dark_crolood_from_sapling"))
+            .put(CLOCKWISE_90, new Identifier("deep_trenches:dark_crolood_from_sapling_90"))
+            .put(CLOCKWISE_180, new Identifier("deep_trenches:dark_crolood_from_sapling"))
+            .put(COUNTERCLOCKWISE_90, new Identifier("deep_trenches:dark_crolood_from_sapling_90"))
             .build();
 
     @Override

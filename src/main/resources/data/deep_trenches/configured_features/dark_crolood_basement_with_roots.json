@@ -1,0 +1,23 @@
+{
+  "configurations": {
+    "deep_trenches:dark_crolood_basement_with_roots": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/dark_crolood/basements_with_roots"
+    },
+    "deep_trenches:dark_crolood_basement_with_roots_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/dark_crolood/basements_with_roots",
+      "rotation": "clockwise_90"
+    },
+    "deep_trenches:dark_crolood_basement_with_roots_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/dark_crolood/basements_with_roots",
+      "rotation": "clockwise_180"
+    },
+    "deep_trenches:dark_crolood_basement_with_roots_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:trees/dark_crolood/basements_with_roots",
+      "rotation": "counterclockwise_90"
+    }
+  }
+}

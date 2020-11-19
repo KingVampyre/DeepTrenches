@@ -19,6 +19,19 @@
                 }
               }
             ]
+          },
+          {
+            "type": "features:parameter",
+            "parameter": "features:height",
+            "from": [
+              {
+                "type": "features:addition",
+                "addition": 3,
+                "number": {
+                  "parameter": "features:height"
+                }
+              }
+            ]
           }
         ]
       },

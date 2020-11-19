@@ -1,0 +1,14 @@
+{
+  "name": "deep_trenches:trees/dark_crolood/basements_with_roots",
+  "terminators": "empty",
+  "projection": "rigid",
+  "elements": [
+    {
+      "element": {
+        "type": "minecraft:single",
+        "structure": "deep_trenches:trees/dark_crolood/basement/basement_with_roots_01"
+      },
+      "weight": 1
+    }
+  ]
+}
