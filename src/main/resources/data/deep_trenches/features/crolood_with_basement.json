@@ -3,10 +3,9 @@
   "pools": [
     {
       "type": "features:pool",
-      "pool": "deep_trenches:trees/dark_crolood/crowns",
+      "pool": "deep_trenches:trees/crolood/crowns",
       "context": {
-        "type": "features:thick_tree",
-        "sapling": "deep_trenches:dark_crolood_sapling",
+        "type": "features:tree",
         "overrides": [
           {
             "type": "features:parameter",
@@ -15,8 +14,8 @@
               {
                 "type": "features:ranged",
                 "range": {
-                  "min": 4,
-                  "max": 6
+                  "min": 8,
+                  "max": 13
                 }
               }
             ]
@@ -34,25 +33,26 @@
         },
         {
           "function": "features:place_trunk",
-          "block": "deep_trenches:dark_crolood_log"
+          "block": "deep_trenches:crolood_log"
+        },
+        {
+          "function": "features:place_feature",
+          "feature": "deep_trenches:crolood_basement",
+          "pos": {
+            "parameter": "features:pos"
+          }
         }
       ],
       "entries": [
         {
           "type": "features:entry",
-          "structure": "deep_trenches:trees/dark_crolood/crown/crown_01",
+          "structure": "deep_trenches:trees/crolood/crown/crown_01",
           "functions": [
             {
-              "function": "features:pivot",
-              "when": {
-                "none": {
-                  "x": -9,
-                  "z": -12
-                },
-                "clockwise_90": {
-                  "x": 13,
-                  "z": -9
-                }
+              "function": "features:offset",
+              "offset": {
+                "x": -8,
+                "z": -7
               }
             }
           ]

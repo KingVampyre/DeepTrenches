@@ -35,6 +35,51 @@
         {
           "function": "features:place_trunk",
           "block": "deep_trenches:dark_crolood_log"
+        },
+        {
+          "function": "features:choose",
+          "choices": [
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_90",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_180",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            },
+            {
+              "choice": {
+                "function": "features:place_feature",
+                "feature": "deep_trenches:dark_crolood_basement_270",
+                "pos": {
+                  "parameter": "features:pos"
+                }
+              },
+              "weight": 1
+            }
+          ]
         }
       ],
       "entries": [

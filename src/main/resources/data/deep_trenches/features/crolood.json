@@ -34,13 +34,6 @@
         {
           "function": "features:place_trunk",
           "block": "deep_trenches:crolood_log"
-        },
-        {
-          "function": "features:place_feature",
-          "feature": "deep_trenches:crolood_basement",
-          "pos": {
-            "parameter": "features:pos"
-          }
         }
       ],
       "entries": [
