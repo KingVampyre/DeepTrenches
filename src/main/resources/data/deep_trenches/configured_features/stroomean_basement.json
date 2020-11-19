@@ -1,0 +1,23 @@
+{
+  "configurations": {
+    "deep_trenches:stroomean_basement": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/stroomean/basements"
+    },
+    "deep_trenches:stroomean_basement_90": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/stroomean/basements",
+      "rotation": "clockwise_90"
+    },
+    "deep_trenches:stroomean_basement_180": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/stroomean/basements",
+      "rotation": "clockwise_180"
+    },
+    "deep_trenches:stroomean_basement_270": {
+      "type": "features:jigsaw",
+      "start_pool": "deep_trenches:fungus/stroomean/basements",
+      "rotation": "counterclockwise_90"
+    }
+  }
+}

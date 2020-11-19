@@ -2,26 +2,22 @@
   "configurations": {
     "deep_trenches:stroomean": {
       "type": "features:jigsaw",
-      "start_pool": "deep_trenches:fungus/stroomean/basements",
-      "size": 2
+      "start_pool": "deep_trenches:fungus/stroomean/crowns"
     },
     "deep_trenches:stroomean_90": {
       "type": "features:jigsaw",
-      "start_pool": "deep_trenches:fungus/stroomean/basements",
-      "rotation": "clockwise_90",
-      "size": 2
+      "start_pool": "deep_trenches:fungus/stroomean/crowns",
+      "rotation": "clockwise_90"
     },
     "deep_trenches:stroomean_180": {
       "type": "features:jigsaw",
-      "start_pool": "deep_trenches:fungus/stroomean/basements",
-      "rotation": "clockwise_180",
-      "size": 2
+      "start_pool": "deep_trenches:fungus/stroomean/crowns",
+      "rotation": "clockwise_180"
     },
     "deep_trenches:stroomean_270": {
       "type": "features:jigsaw",
-      "start_pool": "deep_trenches:fungus/stroomean/basements",
-      "rotation": "counterclockwise_90",
-      "size": 2
+      "start_pool": "deep_trenches:fungus/stroomean/crowns",
+      "rotation": "counterclockwise_90"
     }
   }
 }
