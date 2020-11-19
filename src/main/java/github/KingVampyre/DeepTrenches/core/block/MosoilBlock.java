@@ -1,85 +1,67 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.REEBLOON;
+import github.KingVampyre.DeepTrenches.core.mixin.SpreadableBlockInvoker;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.GrassBlock;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Fertilizable;
-import net.minecraft.block.GrassBlock;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.StateManager.Builder;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.util.math.BlockPos;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.DRITEAN;
 
 public class MosoilBlock extends GrassBlock {
 
 	public static final BooleanProperty STORCEAN = BooleanProperty.of("storcean");
-	
+
 	public MosoilBlock(Settings settings) {
 		super(settings);
+
+		this.setDefaultState(this.stateManager.getDefaultState().with(SNOWY, false).with(STORCEAN, false));
 	}
 
 	@Override
-	protected void appendProperties(Builder<Block, BlockState> builder) {
+	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 		super.appendProperties(builder);
-		
+
 		builder.add(STORCEAN);
 	}
-	
+
 	@Override
-	public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
-		BlockState reebloon = REEBLOON.getDefaultState();
-		BlockPos up = pos.up();
+	public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+		if (!SpreadableBlockInvoker.canSurvive(state, world, pos))
+			world.setBlockState(pos, DRITEAN.getDefaultState());
+		else {
+			BlockPos up = pos.up();
 
-		for (int i = 0; i < 128; ++i) {
-			BlockPos currPos = up;
-			int j = 0;
+			if (world.getLightLevel(up) >= 9) {
+				BlockState defaultState = this.getDefaultState();
 
-			while (true) {
-				if (j >= i / 16) {
+				for(int i = 0; i < 4; ++i) {
+					int x = random.nextInt(3) - 1;
+					int y = random.nextInt(5) - 3;
+					int z = random.nextInt(3) - 1;
 
-					BlockState stateIn = worldIn.getBlockState(currPos);
+					BlockPos blockPos = pos.add(x, y, z);
+					BlockState blockState =  world.getBlockState(blockPos);
 
-					if (stateIn.getBlock() == reebloon.getBlock() && rand.nextInt(10) == 0) {
-						Fertilizable fertilizable = (Fertilizable) reebloon.getBlock();
+					if (blockState.isOf(DRITEAN) && SpreadableBlockInvoker.canSpread(defaultState, world, blockPos)) {
+						BlockState aboveState = world.getBlockState(blockPos.up());
 
-						fertilizable.grow(worldIn, rand, currPos, stateIn);
+						BlockState mosoil = defaultState
+								.with(SNOWY, aboveState.isOf(Blocks.SNOW))
+								.with(STORCEAN, false);
+
+						world.setBlockState(blockPos, mosoil);
 					}
-
-					if (!worldIn.isAir(currPos))
-						break;
-
-					if (reebloon.canPlaceAt(worldIn, currPos))
-						worldIn.setBlockState(currPos, reebloon, 3);
-
-					break;
 				}
-
-				currPos = currPos.add(rand.nextInt(3) - 1, (rand.nextInt(3) - 1) * rand.nextInt(3) / 2, rand.nextInt(3) - 1);
-				BlockState ground = worldIn.getBlockState(currPos.down());
-
-				if (!ground.isOf(this) || worldIn.getBlockState(currPos).isFullCube(worldIn, currPos))
-					break;
-
-				++j;
-			}
-		}
-	}
-
-	@Override
-	public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-		super.scheduledTick(state, world, pos, random);
-
-		if (!world.isClient) {
-
-			if (state.get(SNOWY)) {
-				// TODO: check dimension
 			}
 
 		}
-
 	}
 
 }

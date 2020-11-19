@@ -8,9 +8,11 @@
     "DefaultAttributeRegistryMixin",
     "EnchantmentHelperMixin",
     "EnchantmentMixin",
+    "GrassBlockMixin",
     "LivingEntityMixin",
     "PlayerEntityMixin",
     "ServerPlayerEntityMixin",
+    "SpreadableBlockInvoker",
     "StatusEffectInstanceAccessor",
     "TridentEntityAccessor",
     "TridentEntityMixin"

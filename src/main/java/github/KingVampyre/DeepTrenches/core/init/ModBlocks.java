@@ -47,7 +47,7 @@ public class ModBlocks {
 	public static final Block RED_BRAITOR_FLOWER = new FlowerBlock(BRAITOR_BEAUTY, 21, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block RED_CHOCOLATE_COSMOS_FLOWER = new FlowerBlock(COSMOS_BEAUTY, 14, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block RED_ROSE = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block REEBLOON = new ReebloonBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block REEBLOON = new ReebloonBlock(Settings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block SPIKE_LAVENDER = new FlowerBlock(FLOWER_BEAUTY, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block SPRINLY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block SPROOM_SPIKE = new SproomSpikeBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
