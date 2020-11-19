@@ -11,13 +11,11 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager.Builder;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.MOSOIL;
 import static net.minecraft.block.Blocks.*;
 import static net.minecraft.fluid.Fluids.WATER;
 import static net.minecraft.fluid.Fluids.*;
@@ -42,8 +40,8 @@ public class FungusBlock extends StorceanSaplingBlock {
 		if (!state.get(WATERLOGGED))
 			return false;
 
-		FluidState ifluidstate = world.getFluidState(pos);
-		Fluid fluid = ifluidstate.getFluid();
+		FluidState fluidState = world.getFluidState(pos);
+		Fluid fluid = fluidState.getFluid();
 
 		if (fluid == WATER)
 			return super.canPlaceAt(state, world, pos);
@@ -54,20 +52,15 @@ public class FungusBlock extends StorceanSaplingBlock {
 	}
 
 	@Override
-	protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {
-		return floor.getBlock() == MOSOIL;
-	}
-
-	@Override
 	public FluidState getFluidState(BlockState state) {
 		return state.get(WATERLOGGED) ? WATER.getStill(false) : super.getFluidState(state);
 	}
 
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
-		FluidState ifluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
+		FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
 
-		return super.getPlacementState(ctx).with(WATERLOGGED, ifluidstate.getFluid() == WATER);
+		return super.getPlacementState(ctx).with(WATERLOGGED, fluidState.getFluid() == WATER);
 	}
 
 	@Override

@@ -28,8 +28,8 @@ public class AcuaticFungusBlock extends FungusBlock {
 		if (!state.get(WATERLOGGED))
 			return false;
 
-		FluidState ifluidstate = world.getFluidState(pos);
-		Fluid fluid = ifluidstate.getFluid();
+		FluidState fluidState = world.getFluidState(pos);
+		Fluid fluid = fluidState.getFluid();
 
 		BlockPos down = pos.down();
 
