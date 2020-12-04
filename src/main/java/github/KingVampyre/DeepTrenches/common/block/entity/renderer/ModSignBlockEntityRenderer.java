@@ -87,7 +87,7 @@ public class ModSignBlockEntityRenderer extends BlockEntityRenderer<ModSignBlock
     public static Identifier getTexture(AbstractSignBlock block) {
         SignType signType = block.getSignType();
 
-        return new Identifier("deep_trenches:textures/entity/signs/" + signType.getName() + ".png");
+        return new Identifier("deep_trenches:textures/entity/sign/" + signType.getName() + ".png");
     }
 
 }
