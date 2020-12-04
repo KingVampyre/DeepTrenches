@@ -4,6 +4,7 @@ import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import software.bernie.geckolib.animation.controller.EntityAnimationController;
 import software.bernie.geckolib.entity.IAnimatedEntity;
@@ -31,8 +32,8 @@ public class LightLoosejawEntity extends TamableDragonfishEntity implements IAni
 
     @Override
     protected SoundEvent getFlopSound() {
-        // TODO Auto-generated method stub
-        return null;
+        // TODO Light Loosejaw flop
+        return SoundEvents.ENTITY_COD_FLOP;
     }
 
 }

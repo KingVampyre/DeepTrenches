@@ -19,12 +19,6 @@ public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> e
 	}
 
 	@Override
-	public Identifier getTexture(T entity) {
-		// TODO get texture from lit component
-		return null;
-	}
-
-	@Override
 	public void render(T mobEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
 
 		boolean flag = this.isVisible(mobEntity);

@@ -17,7 +17,7 @@ import static net.minecraft.entity.attribute.EntityAttributes.*;
 @Mixin(DefaultAttributeRegistry.class)
 public class DefaultAttributeRegistryMixin {
 
-    @Inject(method = "get", at = @At("HEAD"))
+    @Inject(method = "get", at = @At("HEAD"), cancellable = true)
     private static void get(EntityType<? extends LivingEntity> type, CallbackInfoReturnable<DefaultAttributeContainer> cir) {
 
         if (type == BETTA)

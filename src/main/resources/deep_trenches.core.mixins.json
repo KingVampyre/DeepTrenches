@@ -8,6 +8,7 @@
     "DefaultAttributeRegistryMixin",
     "EnchantmentHelperMixin",
     "EnchantmentMixin",
+    "EntityRenderDispatcherMixin",
     "GrassBlockMixin",
     "LivingEntityMixin",
     "PlayerEntityMixin",
