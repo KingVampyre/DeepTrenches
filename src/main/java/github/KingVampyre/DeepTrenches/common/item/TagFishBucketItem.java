@@ -8,16 +8,19 @@ import net.minecraft.fluid.Fluid;
 import net.minecraft.item.FishBucketItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.tag.Tag;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class ModFishBucketItem extends FishBucketItem {
+public class TagFishBucketItem extends FishBucketItem {
 
+	protected final Tag<EntityType<?>> tag;
 	protected final EntityType<?> type;
 
-	public ModFishBucketItem(EntityType<?> type, Fluid fluid, Settings settings) {
+	public TagFishBucketItem(EntityType<?> type, Tag<EntityType<?>> tag, Fluid fluid, Settings settings) {
 		super(type, fluid, settings);
 
+		this.tag = tag;
 		this.type = type;
 	}
 
@@ -28,7 +31,8 @@ public class ModFishBucketItem extends FishBucketItem {
 			ServerWorld server = (ServerWorld) world;
 
 			if (!world.isClient) {
-				Entity entity = this.type.spawn(server, null, null, null, pos, SpawnReason.BUCKET, true, false);
+				EntityType<?> type = this.tag != null ? this.tag.getRandom(server.random) : this.type;
+				Entity entity = type.spawn(server, null, null, null, pos, SpawnReason.BUCKET, true, false);
 	
 				if (entity instanceof FishEntity) {
 					FishEntity fishEntity = (FishEntity) entity;

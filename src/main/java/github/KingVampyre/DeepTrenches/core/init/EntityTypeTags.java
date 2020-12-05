@@ -35,6 +35,8 @@ public class EntityTypeTags {
     public static final Tag<EntityType<?>> BETTA = TagRegistry.entityType(new Identifier("deep_trenches:genuses/betta"));
 
     // Species
+    public static final Tag<EntityType<?>> ARGYROPELECUS_GIGAS = TagRegistry.entityType(new Identifier("deep_trenches:species/argyropelecus_gigas"));
+
     public static final Tag<EntityType<?>> BARBELED_LOOWSEJAWS = TagRegistry.entityType(new Identifier("deep_trenches:species/barbeled_loosejaws"));
 
     public static final Tag<EntityType<?>> SPENDIDENS_BETTA = TagRegistry.entityType(new Identifier("deep_trenches:species/spendidens_betta"));
