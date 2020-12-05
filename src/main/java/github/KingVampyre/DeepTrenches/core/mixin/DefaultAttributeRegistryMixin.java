@@ -20,7 +20,7 @@ public class DefaultAttributeRegistryMixin {
     @Inject(method = "get", at = @At("HEAD"), cancellable = true)
     private static void get(EntityType<? extends LivingEntity> type, CallbackInfoReturnable<DefaultAttributeContainer> cir) {
 
-        if (type == BETTA)
+        if (type == BLUE_BETTA || type == COLORFUL_BETTA || type == ICARUS || type == ICARUS_JUNIOR || type == RED_BETTA)
             cir.setReturnValue(MobEntity.createMobAttributes()
                     .add(GENERIC_ATTACK_DAMAGE, 3)
                     .add(GENERIC_MAX_HEALTH, 4)
@@ -28,7 +28,7 @@ public class DefaultAttributeRegistryMixin {
                     .add(MOVEMENT_SPEED_BOOST, 2.13)
                     .build());
 
-        if (type == BLACK_LOOSEJAW)
+        if (type == NORTHERN_BLACK_LOOSEJAW || type == SOUTHERN_BLACK_LOOSEJAW)
             cir.setReturnValue(MobEntity.createMobAttributes()
                     .add(GENERIC_ATTACK_DAMAGE, 8)
                     .add(GENERIC_FOLLOW_RANGE, 6) // 16
@@ -70,7 +70,7 @@ public class DefaultAttributeRegistryMixin {
                     .add(MOVEMENT_SPEED_BOOST, 2.53)
                     .build());
 
-        if (type == LIGHT_LOOSEJAW)
+        if (type == BIGLAMP_LIGHT_LOOSEJAW || type == GOODYEARS_LIGHT_LOOSEJAW || type == GUERNES_LIGHT_LOOSEJAW || type == LIEMS_LIGHT_LOOSEJAW || type == REMARKABLE_LIGHT_LOOSEJAW || type == SMALL_LIGHT_LOOSEJAW)
             cir.setReturnValue(MobEntity.createMobAttributes()
                     .add(GENERIC_ATTACK_DAMAGE, 7F)
                     .add(GENERIC_FOLLOW_RANGE, 8) // 16
@@ -93,7 +93,7 @@ public class DefaultAttributeRegistryMixin {
                     .add(PREY_DETECTION, 1.6) // 4
                     .build());
 
-        if (type == BARBELED_LOOSEJAW)
+        if (type == ATLANTIC_BARBELED_LOOSEJAW || type == GLOWING_BARBELED_LOOSEJAW || type == GRIMALDIS_BARBELED_LOOSEJAW || type == MANY_RAYED_BARBELED_LOOSEJAW || type == SHINY_BARBELED_LOOSEJAW || type == TITTMANNS_BARBELED_LOOSEJAW)
             cir.setReturnValue(MobEntity.createMobAttributes()
                     .add(GENERIC_ATTACK_DAMAGE, 6)
                     .add(GENERIC_FOLLOW_RANGE, 4) // 16
@@ -145,7 +145,7 @@ public class DefaultAttributeRegistryMixin {
                     .add(SUBORBITAL_MIN_LIT, 20)
                     .build());
 
-        if (type == STASP)
+        if (type == BLACK_STASP || type == BLUE_WINGED_STASP || type == FUCHSITRA_STASP || type == ORANGE_WINGED_STASP)
             cir.setReturnValue(MobEntity.createMobAttributes()
                     .add(GENERIC_ARMOR, 5F)
                     .add(GENERIC_FOLLOW_RANGE, 48F)

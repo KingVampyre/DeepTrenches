@@ -6,10 +6,6 @@ import github.KingVampyre.DeepTrenches.client.resource.StorceanMosoilColorMapRes
 import github.KingVampyre.DeepTrenches.client.resource.StorceanWaterColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.common.block.entity.renderer.ModSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.common.entity.renderer.ModBoatEntityRenderer;
-import github.KingVampyre.DeepTrenches.client.entity.renderer.BarbeledLoosejawRenderer;
-import github.KingVampyre.DeepTrenches.client.entity.renderer.BlackLoosejawRenderer;
-import github.KingVampyre.DeepTrenches.client.entity.renderer.LightLoosejawRenderer;
-import github.KingVampyre.DeepTrenches.client.entity.renderer.SmalltoothDragonfishRenderer;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ColorMaps;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
@@ -22,9 +18,9 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.resource.ResourceType;
 import net.minecraft.util.math.MathHelper;
 
@@ -334,15 +330,38 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockEntityRendererRegistry.INSTANCE.register(BlockEntityTypes.SIGN, ModSignBlockEntityRenderer::new);
 
         EntityRendererRegistry.INSTANCE.register(EntityTypes.ADAIGGER, (dispatcher, context) -> new AdaiggerRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_LOOSEJAW, (dispatcher, context) -> new BlackLoosejawRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BOAT, (dispatcher, context) -> new ModBoatEntityRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.DEEP_LAKE_BETTA, (dispatcher, context) -> new DeepLakeBettaRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.GIANT_HATCHETFISH, (dispatcher, context) -> new GiantHatchetfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.SMALLTOOTH_DRAGONFISH, (dispatcher, context) -> new SmalltoothDragonfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
+
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.COLORFUL_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.ICARUS, (dispatcher, context) -> new BettaRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.ICARUS_JUNIOR, (dispatcher, context) -> new BettaRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.RED_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
+
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.NORTHERN_BLACK_LOOSEJAW, (dispatcher, context) -> new BlackLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.SOUTHERN_BLACK_LOOSEJAW, (dispatcher, context) -> new BlackLoosejawRenderer(dispatcher));
+
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BIGLAMP_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.GOODYEARS_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.GUERNES_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.LIEMS_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.REMARKABLE_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.SMALL_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
+
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.ATLANTIC_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.GLOWING_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.GRIMALDIS_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.MANY_RAYED_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.SHINY_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.TITTMANNS_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
+
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_WINGED_STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.FUCHSITRA_STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.ORANGE_WINGED_STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
     }
 
 }

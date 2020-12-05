@@ -10,9 +10,8 @@ import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.util.Identifier;
 
-public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> extends TaxonomyRenderer<T, M> {
+public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> extends MobRenderer<T, M> {
 
 	public DragonfishRenderer(EntityRenderDispatcher entityRenderDispatcher, M model, float shadow) {
 		super(entityRenderDispatcher, model, shadow);
@@ -20,7 +19,6 @@ public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> e
 
 	@Override
 	public void render(T mobEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
-
 		boolean flag = this.isVisible(mobEntity);
 		boolean flag1 = !flag && mobEntity.isInvisibleTo(MinecraftClient.getInstance().player);
 

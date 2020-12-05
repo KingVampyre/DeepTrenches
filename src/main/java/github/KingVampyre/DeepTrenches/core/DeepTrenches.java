@@ -44,14 +44,37 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ENCHANTMENT, new Identifier("deep_trenches:soul_draining"), ModEnchantments.SOUL_DRAINING);
 
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:adaigger"), EntityTypes.ADAIGGER);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:betta"), EntityTypes.BETTA);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:black_loosejaw"), EntityTypes.BLACK_LOOSEJAW);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:boat"), EntityTypes.BOAT);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:deep_lake_betta"), EntityTypes.DEEP_LAKE_BETTA);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:light_loosejaw"), EntityTypes.LIGHT_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:barbeled_loosejaw"), EntityTypes.BARBELED_LOOSEJAW);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:smalltooth_dragonfish"), EntityTypes.SMALLTOOTH_DRAGONFISH);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:stasp"), EntityTypes.STASP);
+
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:blue_betta"), EntityTypes.BLUE_BETTA);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:colorful_betta"), EntityTypes.COLORFUL_BETTA);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:icarus"), EntityTypes.ICARUS);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:icarus_junior"), EntityTypes.ICARUS_JUNIOR);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:red_betta"), EntityTypes.RED_BETTA);
+
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:northern_black_loosejaw"), EntityTypes.NORTHERN_BLACK_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:southern_black_loosejaw"), EntityTypes.SOUTHERN_BLACK_LOOSEJAW);
+
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:biglamp_light_loosejaw"), EntityTypes.BIGLAMP_LIGHT_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:goodyears_light_loosejaw"), EntityTypes.GOODYEARS_LIGHT_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:guernes_light_loosejaw"), EntityTypes.GUERNES_LIGHT_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:liems_light_loosejaw"), EntityTypes.LIEMS_LIGHT_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:remarkable_light_loosejaw"), EntityTypes.REMARKABLE_LIGHT_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:small_light_loosejaw"), EntityTypes.SMALL_LIGHT_LOOSEJAW);
+
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:atlantic_barbeled_loosejaw"), EntityTypes.ATLANTIC_BARBELED_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:glowing_barbeled_loosejaw"), EntityTypes.GLOWING_BARBELED_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:grimaldis_barbeled_loosejaw"), EntityTypes.GRIMALDIS_BARBELED_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:many_rayed_barbeled_loosejaw"), EntityTypes.MANY_RAYED_BARBELED_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:shiny_barbeled_loosejaw"), EntityTypes.SHINY_BARBELED_LOOSEJAW);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:tittmanns_barbeled_loosejaw"), EntityTypes.TITTMANNS_BARBELED_LOOSEJAW);
+
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:black_stasp"), EntityTypes.BLACK_STASP);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:blue_winged_stasp"), EntityTypes.BLUE_WINGED_STASP);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:fuchsitra_stasp"), EntityTypes.FUCHSITRA_STASP);
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:orange_winged_stasp"), EntityTypes.ORANGE_WINGED_STASP);
 
 		/* -------------------------------- Status Effects ------------------------------------------- */
 
@@ -848,6 +871,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:smalltooth_dragonfish_spawn_egg"), SMALLTOOTH_DRAGONFISH_SPAWN_EGG);
 		Registry.register(ITEM, new Identifier("deep_trenches:sproom_boat"), SPROOM_BOAT);
 		Registry.register(ITEM, new Identifier("deep_trenches:sproom_stick"), SPROOM_STICK);
+		Registry.register(ITEM, new Identifier("deep_trenches:stasp_spawn_egg"), STASP_SPAWN_EGG);
 		Registry.register(ITEM, new Identifier("deep_trenches:stortreean_boat"), STORTREEAN_BOAT);
 		Registry.register(ITEM, new Identifier("deep_trenches:stortreean_stick"), STORTREEAN_STICK);
 		Registry.register(ITEM, new Identifier("deep_trenches:stroomean_boat"), STROOMEAN_BOAT);

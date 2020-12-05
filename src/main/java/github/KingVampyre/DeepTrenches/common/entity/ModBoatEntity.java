@@ -49,7 +49,6 @@ public class ModBoatEntity extends BoatEntity {
 
 		this.updatePosition(x, y, z);
 		this.setVelocity(Vec3d.ZERO);
-
 		this.prevX = x;
 		this.prevY = y;
 		this.prevZ = z;

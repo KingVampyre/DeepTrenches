@@ -33,12 +33,7 @@ public class PollenComponent implements IPollenComponent {
 
     @Override
     public void setPollen(int pollen) {
-
-        if (pollen >= this.maxPollen)
-            this.pollen = this.maxPollen;
-        else
-            this.pollen = pollen;
-
+        this.pollen = Math.min(pollen, this.maxPollen);
     }
 
     @Override
