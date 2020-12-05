@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		"#deep_trenches:species/barbeled_loosejaws",
+		"#deep_trenches:species/black_loosejaws",
+		"#deep_trenches:species/light_loosejaws"
+	]
+}
