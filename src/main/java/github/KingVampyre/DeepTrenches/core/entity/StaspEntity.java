@@ -9,6 +9,7 @@ import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.goal.UniversalAngerGoal;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.ai.pathing.PathNodeType;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -19,6 +20,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.IntRange;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import software.bernie.geckolib.entity.IAnimatedEntity;
@@ -29,6 +31,8 @@ import java.util.UUID;
 public class StaspEntity extends PathAwareEntity implements Angerable, IAnimatedEntity {
 
 	private static final TrackedData<Integer> ANGER = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.INTEGER);
+	private static final TrackedData<Boolean> HANGING = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+
 	private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
 
 	private EntityAnimationManager animationManager;
@@ -76,9 +80,17 @@ public class StaspEntity extends PathAwareEntity implements Angerable, IAnimated
 		return this.dataTracker.get(ANGER);
 	}
 
+	public boolean getIsHanging() {
+		return this.dataTracker.get(HANGING);
+	}
+
 	@Override
 	public void setAngerTime(int ticks) {
 		this.dataTracker.set(ANGER, ticks);
+	}
+
+	public void setIsHanging(boolean isHanging) {
+		this.dataTracker.set(HANGING, isHanging);
 	}
 
 	@Override
@@ -106,6 +118,47 @@ public class StaspEntity extends PathAwareEntity implements Angerable, IAnimated
 		super.initDataTracker();
 
 		this.dataTracker.startTracking(ANGER, 0);
+		this.dataTracker.startTracking(HANGING, false);
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+
+		if (this.getIsHanging())
+			this.setVelocity(Vec3d.ZERO);
+	}
+
+	@Override
+	public boolean canAvoidTraps() {
+		return true;
+	}
+
+	@Override
+	protected boolean canClimb() {
+		return false;
+	}
+
+	@Override
+	public boolean handleFallDamage(float fallDistance, float damageMultiplier) {
+		return false;
+	}
+
+	@Override
+	protected void fall(double heightDifference, boolean onGround, BlockState landedState, BlockPos landedPosition) {
+
+	}
+
+	@Override
+	public boolean damage(DamageSource source, float amount) {
+
+		if (this.isInvulnerableTo(source))
+			return false;
+
+		if (!this.world.isClient && this.getIsHanging())
+			this.setIsHanging(false);
+
+		return super.damage(source, amount);
 	}
 
 	@Override
