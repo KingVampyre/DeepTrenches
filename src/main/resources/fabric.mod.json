@@ -31,7 +31,6 @@
 	},
 	"custom": {
         "cardinal-components": [
-			"deep_trenches:anger",
 			"deep_trenches:animal",
             "deep_trenches:pollen"
         ]
