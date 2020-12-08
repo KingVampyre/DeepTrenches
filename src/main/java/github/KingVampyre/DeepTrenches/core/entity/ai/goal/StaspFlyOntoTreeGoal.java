@@ -8,7 +8,6 @@ import net.minecraft.util.math.Box;
 
 import java.util.function.Predicate;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.*;
 
 public class StaspFlyOntoTreeGoal extends FlyOntoTreeGoal {
@@ -16,7 +15,7 @@ public class StaspFlyOntoTreeGoal extends FlyOntoTreeGoal {
     public static final Predicate<BlockState> AQUEAN_AND_FUCHSITRA = state -> {
         Block block = state.getBlock();
 
-        return block == FUCHSITRA_LEAVES || block == AQUEAN_LEAVES || block.isIn(AQUEAN_LOGS) || block.isIn(FUCHSITRA_LOGS);
+        return block.isIn(STASP_POLLEN_SOURCE) || block.isIn(AQUEAN_LOGS) || block.isIn(FUCHSITRA_LOGS);
     };
 
     public StaspFlyOntoTreeGoal(StaspEntity stasp, Box box, double speed, float probability) {

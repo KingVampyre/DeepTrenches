@@ -1,18 +1,17 @@
 package github.KingVampyre.DeepTrenches.core.entity.ai.goal;
 
-import java.util.Random;
-
 import github.KingVampyre.DeepTrenches.common.entity.ai.goal.MoveAroundHomeGoal;
 import github.KingVampyre.DeepTrenches.core.component.StaspPollenComponent;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
 import github.KingVampyre.DeepTrenches.core.init.Components;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldView;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
+import java.util.Random;
+
+import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.STASP_POLLEN_SOURCE;
 
 public class PollinateFlowerGoal extends MoveAroundHomeGoal {
 
@@ -58,7 +57,6 @@ public class PollinateFlowerGoal extends MoveAroundHomeGoal {
     @Override
 	protected boolean isTargetPos(WorldView world, BlockPos pos) {
 		BlockState state = world.getBlockState(pos);
-		Block block = state.getBlock();
 
 		BlockPos down = this.mob.getBlockPos().down();
 		BlockPos up = pos.up();
@@ -66,8 +64,7 @@ public class PollinateFlowerGoal extends MoveAroundHomeGoal {
 		BlockState upState = world.getBlockState(up);
 
 		if (!down.equals(pos) && upState.isAir())
-			// TODO tag
-			return block == AQUEAN_LEAVES || block == FUCHSITRA_LEAVES;
+			return state.isIn(STASP_POLLEN_SOURCE);
 
 		return false;
     }

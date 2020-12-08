@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.*;
 
 public class PlantSaplingGoal extends MoveAroundHomeGoal {
 
@@ -41,10 +41,8 @@ public class PlantSaplingGoal extends MoveAroundHomeGoal {
 	@Override
 	protected boolean isTargetPos(WorldView world, BlockPos pos) {
 		BlockState state = world.getBlockState(pos);
-		Block block = state.getBlock();
 
-		// TODO dritrean tag
-		return block == MOSOIL;
+		return state.isIn(DRITEAN);
 	}
 
 	@Override
@@ -55,8 +53,7 @@ public class PlantSaplingGoal extends MoveAroundHomeGoal {
 			BlockPos pos = this.targetPos.up();
 			World worldIn = this.mob.getEntityWorld();
 
-			// TODO sapling tag
-			Block block = worldIn.random.nextBoolean() ? AQUEAN_SAPLING : FUCHSITRA_SAPLING;
+			Block block = STASP_POLLEN_TARGET.getRandom(worldIn.random);
 			BlockState state = block.getDefaultState();
 
 			if (!worldIn.isClient()) {

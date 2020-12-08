@@ -11,8 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.AQUEAN_SAPLING;
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.FUCHSITRA_SAPLING;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.STASP_POLLEN_TARGET;
 
 public class PollinateSaplingGoal extends MoveAroundHomeGoal {
 
@@ -42,10 +41,8 @@ public class PollinateSaplingGoal extends MoveAroundHomeGoal {
     @Override
     protected boolean isTargetPos(WorldView world, BlockPos pos) {
 		BlockState state = world.getBlockState(pos);
-		Block block = state.getBlock();
 
-		// TODO sapling tag
-		return block == AQUEAN_SAPLING || block == FUCHSITRA_SAPLING;
+		return state.isIn(STASP_POLLEN_TARGET);
     }
 
     @Override
@@ -61,8 +58,7 @@ public class PollinateSaplingGoal extends MoveAroundHomeGoal {
 			BlockState state = world.getBlockState(pos);
 			Block block = state.getBlock();
 
-			// TODO sapling tag
-			if (block == AQUEAN_SAPLING || block == FUCHSITRA_SAPLING) {
+			if (state.isIn(STASP_POLLEN_TARGET)) {
 				world.getBlockTickScheduler().schedule(pos, block, 20);
 				this.pollen.setPollen(0);
 

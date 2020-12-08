@@ -9,8 +9,7 @@ import net.minecraft.world.BlockView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.DRITEAN;
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.MOSOIL;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.*;
 
 public class StorceanSaplingBlock extends FeaturesSaplingBlock {
 
@@ -20,7 +19,7 @@ public class StorceanSaplingBlock extends FeaturesSaplingBlock {
 
 	@Override
 	protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {
-		return floor.getBlock() == DRITEAN || floor.getBlock() == MOSOIL;
+		return floor.isIn(DRITEAN);
 	}
 
 	@Override

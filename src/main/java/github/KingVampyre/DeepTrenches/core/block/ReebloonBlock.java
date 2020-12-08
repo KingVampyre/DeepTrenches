@@ -9,7 +9,8 @@ import net.minecraft.world.BlockView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.DRITEAN;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.REEBLOON;
 
 public class ReebloonBlock extends FernBlock {
 
@@ -19,7 +20,7 @@ public class ReebloonBlock extends FernBlock {
 
 	@Override
 	protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {
-		return floor.isOf(DRITEAN) || floor.isOf(MOSOIL);
+		return floor.isIn(DRITEAN);
 	}
 
 	@Override
