@@ -20,6 +20,10 @@ public class MobRenderer<T extends MobEntity, M extends EntityModel<T>> extends 
 		EntityType<?> entityType = entity.getType();
 		Identifier id = ENTITY_TYPE.getId(entityType);
 
+		return this.getTexture(entity, entityType, id);
+	}
+
+	public Identifier getTexture(T entity, EntityType<?> entityType, Identifier id) {
 		return new Identifier(id.getNamespace() + ":textures/entity/" + id.getPath() + ".png");
 	}
 

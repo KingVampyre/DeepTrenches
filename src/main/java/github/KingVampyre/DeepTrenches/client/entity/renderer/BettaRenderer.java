@@ -7,6 +7,8 @@ import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
 import github.KingVampyre.DeepTrenches.client.entity.model.DummyModel;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.EntityType;
+import net.minecraft.util.Identifier;
 
 public class BettaRenderer extends MobRenderer<BettaEntity, DummyModel<BettaEntity>> {
 
