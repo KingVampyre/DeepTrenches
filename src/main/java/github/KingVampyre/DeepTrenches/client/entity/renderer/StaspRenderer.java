@@ -17,7 +17,7 @@ import net.minecraft.util.Identifier;
 public class StaspRenderer extends MobRenderer<StaspEntity, StaspModel> {
 
 	public StaspRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-		super(entityRenderDispatcher, new StaspModel(), 0.65F);
+		super(entityRenderDispatcher, new StaspModel(), 0.35F);
 
 		this.addFeature(new StaspAntennasFeatureRenderer(this));
 	}
@@ -53,7 +53,7 @@ public class StaspRenderer extends MobRenderer<StaspEntity, StaspModel> {
 	protected void setupTransforms(StaspEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
 		super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);
 
-		matrices.translate(-0.1F, 1F, -0.2F);
+		matrices.translate(-0.1F, -1F, -0.2F);
 	}
 
 }
