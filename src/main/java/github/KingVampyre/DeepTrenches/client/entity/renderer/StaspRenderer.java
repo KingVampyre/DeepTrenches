@@ -1,22 +1,23 @@
 package github.KingVampyre.DeepTrenches.client.entity.renderer;
 
-import com.mojang.blaze3d.platform.GlStateManager;
-
 import github.KingVampyre.DeepTrenches.client.entity.feature.StaspAntennasFeatureRenderer;
 import github.KingVampyre.DeepTrenches.client.entity.model.StaspModel;
 import github.KingVampyre.DeepTrenches.common.entity.renderer.MobRenderer;
 import github.KingVampyre.DeepTrenches.core.component.StaspPollenComponent;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
 import github.KingVampyre.DeepTrenches.core.init.Components;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.Identifier;
 
+@Environment(EnvType.CLIENT)
 public class StaspRenderer extends MobRenderer<StaspEntity, StaspModel> {
 
 	public StaspRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-		super(entityRenderDispatcher, new StaspModel(), 0.75F);
+		super(entityRenderDispatcher, new StaspModel(), 0.65F);
 
 		this.addFeature(new StaspAntennasFeatureRenderer(this));
 	}
@@ -52,7 +53,7 @@ public class StaspRenderer extends MobRenderer<StaspEntity, StaspModel> {
 	protected void setupTransforms(StaspEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
 		super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);
 
-		GlStateManager.translatef(-0.1F, 1F, -0.2F);
+		matrices.translate(-0.1F, 1F, -0.2F);
 	}
 
 }
