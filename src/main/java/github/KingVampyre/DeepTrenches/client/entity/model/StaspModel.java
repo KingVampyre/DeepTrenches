@@ -5,9 +5,9 @@
 package github.KingVampyre.DeepTrenches.client.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
+import software.bernie.geckolib.forgetofabric.ResourceLocation;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
-import software.bernie.geckolib.forgetofabric.ResourceLocation;
 
 public class StaspModel extends AnimatedEntityModel<StaspEntity> {
 
@@ -17,7 +17,7 @@ public class StaspModel extends AnimatedEntityModel<StaspEntity> {
     private final AnimatedModelRenderer Abdomen;
     private final AnimatedModelRenderer Dart;
     private final AnimatedModelRenderer Eyes;
-    private final AnimatedModelRenderer shape11;
+    private final AnimatedModelRenderer Antenas;
     private final AnimatedModelRenderer Legs_1;
     private final AnimatedModelRenderer Legs_2;
     private final AnimatedModelRenderer Legs_3;
@@ -70,13 +70,13 @@ public class StaspModel extends AnimatedEntityModel<StaspEntity> {
         Eyes.setModelRendererName("Eyes");
         this.registerModelRenderer(Eyes);
 
-        shape11 = new AnimatedModelRenderer(this);
-        shape11.setRotationPoint(-3.0F, 0.4F, 0.0F);
-        Eyes.addChild(shape11);
-        setRotationAngle(shape11, -0.0456F, 0.0F, 0.0F);
-        shape11.setTextureOffset(22, 17).addBox(-4.0F, -0.4F, -12.7F, 8.0F, 0.0F, 13.0F, 0.0F, false);
-        shape11.setModelRendererName("shape11");
-        this.registerModelRenderer(shape11);
+        Antenas = new AnimatedModelRenderer(this);
+        Antenas.setRotationPoint(-3.0F, 0.4F, 0.0F);
+        Eyes.addChild(Antenas);
+        setRotationAngle(Antenas, -0.0456F, 0.0F, 0.0F);
+        Antenas.setTextureOffset(22, 17).addBox(-4.0F, -0.4F, -12.7F, 8.0F, 0.0F, 13.0F, 0.0F, false);
+        Antenas.setModelRendererName("Antenas");
+        this.registerModelRenderer(Antenas);
 
         Legs_1 = new AnimatedModelRenderer(this);
         Legs_1.setRotationPoint(-2.0F, 4.0F, 0.8F);
@@ -120,7 +120,6 @@ public class StaspModel extends AnimatedEntityModel<StaspEntity> {
 
         this.rootBones.add(root);
     }
-
 
     @Override
     public ResourceLocation getAnimationFileLocation() {
