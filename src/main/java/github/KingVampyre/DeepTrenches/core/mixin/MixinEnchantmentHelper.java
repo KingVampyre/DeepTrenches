@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(EnchantmentHelper.class)
-public class EnchantmentHelperMixin {
+public class MixinEnchantmentHelper {
 
     @Unique
     private static Enchantment currentEnchantment;

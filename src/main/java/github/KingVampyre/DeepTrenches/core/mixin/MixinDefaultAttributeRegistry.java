@@ -15,7 +15,7 @@ import static github.KingVampyre.DeepTrenches.core.init.ModEntityAttributes.*;
 import static net.minecraft.entity.attribute.EntityAttributes.*;
 
 @Mixin(DefaultAttributeRegistry.class)
-public class DefaultAttributeRegistryMixin {
+public class MixinDefaultAttributeRegistry {
 
     @Inject(method = "get", at = @At("HEAD"), cancellable = true)
     private static void get(EntityType<? extends LivingEntity> type, CallbackInfoReturnable<DefaultAttributeContainer> cir) {

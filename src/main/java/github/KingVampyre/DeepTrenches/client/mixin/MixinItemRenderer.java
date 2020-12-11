@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ItemRenderer.class)
-public class ItemRendererMixin {
+public class MixinItemRenderer {
 
     @Inject(method = "<init>", at = @At("RETURN"))
     private void init(TextureManager manager, BakedModelManager bakery, ItemColors colorMap, CallbackInfo ci) {

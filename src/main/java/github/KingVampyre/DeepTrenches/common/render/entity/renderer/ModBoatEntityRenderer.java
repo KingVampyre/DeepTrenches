@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.common.entity.renderer;
+package github.KingVampyre.DeepTrenches.common.render.entity.renderer;
 
 import github.KingVampyre.DeepTrenches.common.entity.ModBoatEntity;
 import net.minecraft.client.render.OverlayTexture;

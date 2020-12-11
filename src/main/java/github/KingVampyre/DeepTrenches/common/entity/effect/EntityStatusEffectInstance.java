@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.common.entity.effect;
 
-import github.KingVampyre.DeepTrenches.core.mixin.StatusEffectInstanceAccessor;
+import github.KingVampyre.DeepTrenches.core.mixin.AccessorStatusEffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -19,7 +19,7 @@ public class EntityStatusEffectInstance extends StatusEffectInstance {
 
     @Override
     public boolean update(LivingEntity entity, Runnable overwriteCallback) {
-        StatusEffectInstanceAccessor accessor = (StatusEffectInstanceAccessor) this;
+        AccessorStatusEffectInstance accessor = (AccessorStatusEffectInstance) this;
 
         int amplifier = accessor.getAmplifier();
         int duration = accessor.getDuration();

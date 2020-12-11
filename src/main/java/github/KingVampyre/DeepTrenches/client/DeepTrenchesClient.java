@@ -5,7 +5,7 @@ import github.KingVampyre.DeepTrenches.client.resource.StorceanFoliageColorMapRe
 import github.KingVampyre.DeepTrenches.client.resource.StorceanMosoilColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanWaterColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.common.block.entity.renderer.ModSignBlockEntityRenderer;
-import github.KingVampyre.DeepTrenches.common.entity.renderer.ModBoatEntityRenderer;
+import github.KingVampyre.DeepTrenches.common.render.entity.renderer.ModBoatEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ColorMaps;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;

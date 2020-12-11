@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(BrewingRecipeRegistry.class)
-public abstract class BrewingRecipeRegistryMixin {
+public abstract class MixinBrewingRecipeRegistry {
 
     @Shadow
     protected static void registerPotionRecipe(Potion input, Item item, Potion output) {

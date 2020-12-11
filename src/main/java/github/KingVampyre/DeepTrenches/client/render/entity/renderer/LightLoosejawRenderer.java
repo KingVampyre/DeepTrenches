@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import github.KingVampyre.DeepTrenches.client.render.entity.model.LightLoosejawModel;
-import github.KingVampyre.DeepTrenches.common.entity.renderer.DragonfishRenderer;
+import github.KingVampyre.DeepTrenches.common.render.entity.renderer.DragonfishRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;

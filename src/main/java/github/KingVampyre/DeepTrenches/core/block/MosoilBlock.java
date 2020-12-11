@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.KingVampyre.DeepTrenches.core.mixin.SpreadableBlockInvoker;
+import github.KingVampyre.DeepTrenches.core.mixin.InvokerSpreadableBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -33,7 +33,7 @@ public class MosoilBlock extends GrassBlock {
 
 	@Override
 	public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-		if (!SpreadableBlockInvoker.canSurvive(state, world, pos))
+		if (!InvokerSpreadableBlock.canSurvive(state, world, pos))
 			world.setBlockState(pos, DRITEAN.getDefaultState());
 		else {
 			BlockPos up = pos.up();
@@ -49,7 +49,7 @@ public class MosoilBlock extends GrassBlock {
 					BlockPos blockPos = pos.add(x, y, z);
 					BlockState blockState =  world.getBlockState(blockPos);
 
-					if (blockState.isOf(DRITEAN) && SpreadableBlockInvoker.canSpread(defaultState, world, blockPos)) {
+					if (blockState.isOf(DRITEAN) && InvokerSpreadableBlock.canSpread(defaultState, world, blockPos)) {
 						BlockState aboveState = world.getBlockState(blockPos.up());
 
 						BlockState mosoil = defaultState

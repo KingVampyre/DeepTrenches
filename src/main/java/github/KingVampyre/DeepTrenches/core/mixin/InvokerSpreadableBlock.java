@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
 @Mixin(SpreadableBlock.class)
-public interface SpreadableBlockInvoker {
+public interface InvokerSpreadableBlock {
 
     @Invoker("canSurvive")
     static boolean canSurvive(BlockState state, WorldView worldView, BlockPos pos) {

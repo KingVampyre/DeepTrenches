@@ -7,10 +7,10 @@
   ],
   "client": [
     "AccessorRenderPhase",
-    "ClientPlayNetworkHandlerMixin",
-    "InGameHudMixin",
-    "ItemRendererMixin",
-    "SignEditScreenMixin"
+    "MixinClientPlayNetworkHandler",
+    "MixinInGameHud",
+    "MixinItemRenderer",
+    "MixinSignEditScreen"
   ],
   "injectors": {
     "defaultRequire": 1

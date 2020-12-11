@@ -24,7 +24,7 @@ import static net.minecraft.entity.EquipmentSlot.MAINHAND;
 import static net.minecraft.entity.damage.DamageSource.*;
 
 @Mixin(LivingEntity.class)
-public abstract class LivingEntityMixin {
+public abstract class MixinLivingEntity {
 
     @Shadow
     private float knockbackVelocity;
@@ -95,7 +95,7 @@ public abstract class LivingEntityMixin {
 
                 if(sourceEntity instanceof TridentEntity) {
                     TridentEntity trident = (TridentEntity) sourceEntity;
-                    TridentEntityAccessor accessor = (TridentEntityAccessor) trident;
+                    AccessorTridentEntity accessor = (AccessorTridentEntity) trident;
                     ItemStack stack = accessor.getTridentStack();
 
                     ModEnchantmentHelper.applySoulDraining(attacker, living, stack);

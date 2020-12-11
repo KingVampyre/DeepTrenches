@@ -22,7 +22,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.function.Function;
 
 @Mixin(SignEditScreen.class)
-public class SignEditScreenMixin {
+public class MixinSignEditScreen {
 
     @Shadow @Final private SignBlockEntity sign;
 

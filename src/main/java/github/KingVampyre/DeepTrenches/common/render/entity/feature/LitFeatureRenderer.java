@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.common.entity.renderer.feature;
+package github.KingVampyre.DeepTrenches.common.render.entity.feature;
 
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.feature.FeatureRenderer;

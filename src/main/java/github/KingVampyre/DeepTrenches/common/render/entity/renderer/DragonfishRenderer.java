@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.common.entity.renderer;
+package github.KingVampyre.DeepTrenches.common.render.entity.renderer;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.platform.GlStateManager.DstFactor;

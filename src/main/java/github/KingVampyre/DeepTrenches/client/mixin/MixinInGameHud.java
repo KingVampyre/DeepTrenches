@@ -13,7 +13,7 @@ import static net.minecraft.entity.effect.StatusEffects.REGENERATION;
 import static net.minecraft.entity.effect.StatusEffects.WITHER;
 
 @Mixin(InGameHud.class)
-public class InGameHudMixin {
+public class MixinInGameHud {
 
     @Redirect(method = "renderStatusBars", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;hasStatusEffect(Lnet/minecraft/entity/effect/StatusEffect;)Z", ordinal = 0))
     private boolean renderSoulRavening(PlayerEntity playerEntity, StatusEffect effect) {
