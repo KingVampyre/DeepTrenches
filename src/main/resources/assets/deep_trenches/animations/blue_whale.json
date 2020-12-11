@@ -1,0 +1,312 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"swimming.BlueWhale.new": {
+			"loop": true,
+			"animation_length": 1.56,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [2, 0, 0]
+						},
+						"0.36": {
+							"vector": [-2, 0, 0]
+						},
+						"0.76": {
+							"vector": [2, 0, 0]
+						},
+						"1.12": {
+							"vector": [-2, 0, 0]
+						},
+						"1.56": {
+							"vector": [2, 0, 0]
+						}
+					}
+				},
+				"Caudal": {
+					"rotation": {
+						"0.0": {
+							"vector": [-10, 0, 0]
+						},
+						"0.36": {
+							"vector": [10, 0, 0]
+						},
+						"0.76": {
+							"vector": [-10, 0, 0]
+						},
+						"1.16": {
+							"vector": [10, 0, 0]
+						},
+						"1.56": {
+							"vector": [-10, 0, 0]
+						}
+					}
+				},
+				"Pectoral_fin_1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [0, 0, 0]
+						},
+						"0.24": {
+							"vector": [0, 0, 0]
+						},
+						"0.4": {
+							"vector": [0, 0, 0]
+						},
+						"0.48": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Pectoral_fin_2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [0, 0, 0]
+						},
+						"0.24": {
+							"vector": [0, 0, 0]
+						},
+						"0.4": {
+							"vector": [0, 0, 0]
+						},
+						"0.48": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"mouth_opening.BlueWhale.new": {
+			"animation_length": 0.52,
+			"bones": {
+				"Upper_jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.16": {
+							"vector": [-5, 0, 0]
+						},
+						"0.32": {
+							"vector": [-10, 0, 0]
+						},
+						"0.52": {
+							"vector": [-20, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [0, -1, 0]
+						}
+					}
+				},
+				"Lower_jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.16": {
+							"vector": [10, 0, 0]
+						},
+						"0.32": {
+							"vector": [20, 0, 0]
+						},
+						"0.52": {
+							"vector": [40, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.32": {
+							"vector": [0, 3, 0]
+						},
+						"0.52": {
+							"vector": [0, 5, -3]
+						}
+					}
+				}
+			}
+		},
+		"mouth_opened.BlueWhale.new": {
+			"animation_length": 0.08,
+			"bones": {
+				"Upper_jaw": {
+					"rotation": {
+						"vector": [-20, 0, 0]
+					},
+					"position": {
+						"vector": [0, -1, 0]
+					}
+				},
+				"Lower_jaw": {
+					"rotation": {
+						"vector": [40, 0, 0]
+					},
+					"position": {
+						"vector": [0, 5, -3]
+					}
+				}
+			}
+		},
+		"mouth_closing.BlueWhale.new": {
+			"animation_length": 1.32,
+			"bones": {
+				"Upper_jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [-20, 0, 0]
+						},
+						"0.24": {
+							"vector": [-15, 0, 0]
+						},
+						"0.48": {
+							"vector": [-10, 0, 0]
+						},
+						"0.64": {
+							"vector": [-5, 0, 0]
+						},
+						"1.12": {
+							"vector": [-2, 0, 0]
+						},
+						"1.2": {
+							"vector": [0, 0, 0]
+						},
+						"1.32": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, -1, 0]
+						},
+						"0.24": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Lower_jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [40, 0, 0]
+						},
+						"0.24": {
+							"vector": [35, 0, 0]
+						},
+						"0.48": {
+							"vector": [32, 0, 0]
+						},
+						"0.64": {
+							"vector": [20, 0, 0]
+						},
+						"0.84": {
+							"vector": [10, 0, 0]
+						},
+						"1.12": {
+							"vector": [5, 0, 0]
+						},
+						"1.2": {
+							"vector": [0, 0, 0]
+						},
+						"1.32": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 5, -3]
+						},
+						"0.24": {
+							"vector": [0, 4, -2]
+						},
+						"0.48": {
+							"vector": [0, 3.5, -1.5]
+						},
+						"0.64": {
+							"vector": [0, 2, 0]
+						},
+						"0.84": {
+							"vector": [0, 1, 0]
+						},
+						"1.12": {
+							"vector": [0, 1, 0]
+						},
+						"1.2": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"swimming_fast.BlueWhale.new": {
+			"loop": true,
+			"animation_length": 0.24,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [1, 0, 0]
+						},
+						"0.12": {
+							"vector": [-1, 0, 0]
+						},
+						"0.24": {
+							"vector": [1, 0, 0]
+						}
+					}
+				},
+				"Caudal": {
+					"rotation": {
+						"0.0": {
+							"vector": [-7, 0, 0]
+						},
+						"0.12": {
+							"vector": [7, 0, 0]
+						},
+						"0.24": {
+							"vector": [-7, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"caudal_slam.BlueWhale.new": {
+			"animation_length": 0.48,
+			"bones": {
+				"Caudal": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [20, 0, 0]
+						},
+						"0.28": {
+							"vector": [30, 0, 0]
+						},
+						"0.36": {
+							"vector": [0, 0, 0]
+						},
+						"0.44": {
+							"vector": [-20, 0, 0]
+						},
+						"0.48": {
+							"vector": [-30, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}
