@@ -1,0 +1,247 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"bite": {
+			"animation_length": 0.4,
+			"bones": {
+				"Upper_jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [-5, 0, 0]
+						},
+						"0.16": {
+							"vector": [-20, 0, 0]
+						},
+						"0.2": {
+							"vector": [0, 0, 0]
+						},
+						"0.28": {
+							"vector": [5, 0, 0]
+						},
+						"0.36": {
+							"vector": [5, 0, 0]
+						},
+						"0.4": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Lower_jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [5, 0, 0]
+						},
+						"0.16": {
+							"vector": [70, 0, 0]
+						},
+						"0.28": {
+							"vector": [-15, 0, 0]
+						},
+						"0.36": {
+							"vector": [-15, 0, 0]
+						},
+						"0.4": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.16": {
+							"vector": [0, 0, -1]
+						},
+						"0.28": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 1]
+						},
+						"0.16": {
+							"vector": [1, 1, 1.1]
+						},
+						"0.28": {
+							"vector": [1, 1, 1]
+						}
+					}
+				}
+			}
+		},
+		"luring": {
+			"animation_length": 0.24,
+			"bones": {
+				"Upper_jaw_lure_top": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [-20, 0, 0]
+						},
+						"0.24": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Upper_jaw_lure": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.08": {
+							"vector": [-10, 0, 0]
+						},
+						"0.12": {
+							"vector": [10, 0, 0]
+						},
+						"0.16": {
+							"vector": [50, 0, 0]
+						},
+						"0.24": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Appandages": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.04": {
+							"vector": [-10, 0, 0]
+						},
+						"0.12": {
+							"vector": [40, 0, 0]
+						},
+						"0.2": {
+							"vector": [-10, 0, 0]
+						},
+						"0.24": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"swimming": {
+			"loop": true,
+			"animation_length": 0.32,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -3, 0]
+						},
+						"0.16": {
+							"vector": [0, 3, 0]
+						},
+						"0.32": {
+							"vector": [0, -3, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.16": {
+							"vector": [0, 0.3, 0]
+						},
+						"0.32": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Pectoral_fin_1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.16": {
+							"vector": [0, 20, 0]
+						},
+						"0.32": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Pectoral_fin_2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.16": {
+							"vector": [0, -20, 0]
+						},
+						"0.32": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Caudal_and_such": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -13, 0]
+						},
+						"0.16": {
+							"vector": [0, 13, 0]
+						},
+						"0.32": {
+							"vector": [0, -13, 0]
+						}
+					}
+				}
+			}
+		},
+		"swimming_speed_boost": {
+			"loop": true,
+			"animation_length": 0.16,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 1, 0]
+						},
+						"0.08": {
+							"vector": [0, -1, 0]
+						},
+						"0.16": {
+							"vector": [0, 1, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0.1, 0]
+						},
+						"0.08": {
+							"vector": [0, -0.1, 0]
+						},
+						"0.16": {
+							"vector": [0, 0.1, 0]
+						}
+					}
+				},
+				"Caudal_and_such": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -10, 0]
+						},
+						"0.08": {
+							"vector": [0, 10, 0]
+						},
+						"0.16": {
+							"vector": [0, -10, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}
