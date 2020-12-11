@@ -5,9 +5,9 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.BlackLoosejawEntity;
+import software.bernie.geckolib.forgetofabric.ResourceLocation;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
-import software.bernie.geckolib.forgetofabric.ResourceLocation;
 
 public class BlackLoosejawModel extends AnimatedEntityModel<BlackLoosejawEntity> {
 

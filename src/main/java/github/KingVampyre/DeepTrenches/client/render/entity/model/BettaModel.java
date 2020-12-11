@@ -105,6 +105,6 @@ public class BettaModel extends AnimatedEntityModel<BettaEntity> {
 
     @Override
     public ResourceLocation getAnimationFileLocation() {
-        return new ResourceLocation("deep_trenches", "animations/betta.json");
+        return new ResourceLocation("deep_trenches:animations/betta.json");
     }
 }

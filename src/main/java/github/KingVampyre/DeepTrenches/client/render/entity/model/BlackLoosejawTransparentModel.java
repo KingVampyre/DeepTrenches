@@ -5,9 +5,9 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.BlackLoosejawEntity;
+import software.bernie.geckolib.forgetofabric.ResourceLocation;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
-import software.bernie.geckolib.forgetofabric.ResourceLocation;
 
 public class BlackLoosejawTransparentModel extends AnimatedEntityModel<BlackLoosejawEntity> {
 
@@ -219,9 +219,10 @@ public class BlackLoosejawTransparentModel extends AnimatedEntityModel<BlackLoos
         this.rootBones.add(root);
     }
 
+
     @Override
     public ResourceLocation getAnimationFileLocation() {
-        return new ResourceLocation("deep_trenches:animations/black_loosejaw.json");
+        return new ResourceLocation("deep_trenches:animations/black_loosejaw_luring.json");
     }
 
 }

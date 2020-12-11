@@ -255,7 +255,7 @@ public class BarbeledLoosejawLuringModel extends AnimatedEntityModel<BarbeledLoo
 
     @Override
     public ResourceLocation getAnimationFileLocation() {
-        return new ResourceLocation("deep_trenches:animations/barbeled_loosejaw_transparent.json");
+        return new ResourceLocation("deep_trenches:animations/barbeled_loosejaw_luring.json");
     }
 
 }
