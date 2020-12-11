@@ -1,0 +1,420 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"bite": {
+			"animation_length": 0.52,
+			"bones": {
+				"Head_rear": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [-10, 0, 0]
+						},
+						"0.2": {
+							"vector": [-15, 0, 0]
+						},
+						"0.24": {
+							"vector": [-20, 0, 0]
+						},
+						"0.28": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Lower_jaw_rear": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [10, 0, 0]
+						},
+						"0.2": {
+							"vector": [40, 0, 0]
+						},
+						"0.24": {
+							"vector": [50, 0, 0]
+						},
+						"0.28": {
+							"vector": [-15, 0, 0]
+						},
+						"0.36": {
+							"vector": [-15, 0, 0]
+						},
+						"0.44": {
+							"vector": [-15, 0, 0]
+						},
+						"0.52": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.2": {
+							"vector": [0, 0, 0]
+						},
+						"0.24": {
+							"vector": [0, 0, -1]
+						},
+						"0.52": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"lacerate": {
+			"animation_length": 0.56,
+			"bones": {
+				"Pectoral_fin_1_joint": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 10, 0]
+						},
+						"0.28": {
+							"vector": [0, 20, 0]
+						},
+						"0.4": {
+							"vector": [0, -10, 0]
+						},
+						"0.44": {
+							"vector": [0, -20, 0]
+						},
+						"0.56": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Pectoral_fin_1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.28": {
+							"vector": [0, 40, 0]
+						},
+						"0.4": {
+							"vector": [0, 40, 0]
+						},
+						"0.44": {
+							"vector": [0, -40, 0]
+						},
+						"0.56": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Pectoral_fin_2_joint": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -10, 0]
+						},
+						"0.28": {
+							"vector": [0, -20, 0]
+						},
+						"0.4": {
+							"vector": [0, 10, 0]
+						},
+						"0.44": {
+							"vector": [0, 20, 0]
+						},
+						"0.56": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Pectoral_fin_skin_2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.28": {
+							"vector": [0, -10, 0]
+						},
+						"0.44": {
+							"vector": [0, -10, 0]
+						}
+					}
+				},
+				"Pectoral_fin_2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.28": {
+							"vector": [0, -40, 0]
+						},
+						"0.4": {
+							"vector": [0, -40, 0]
+						},
+						"0.44": {
+							"vector": [0, 40, 0]
+						},
+						"0.56": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"on_land": {
+			"loop": true,
+			"animation_length": 0.32,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.08": {
+							"vector": [0, 0, -90]
+						},
+						"0.2": {
+							"vector": [0, 5, -90]
+						},
+						"0.24": {
+							"vector": [0, -5, -90]
+						},
+						"0.32": {
+							"vector": [0, 0, -90]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.2": {
+							"vector": [0, 0, 0]
+						},
+						"0.28": {
+							"vector": [0, 70, 0]
+						},
+						"0.32": {
+							"vector": [0, 20, 0]
+						}
+					}
+				},
+				"Caudal": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -3, 0]
+						},
+						"0.12": {
+							"vector": [0, 0, 0]
+						},
+						"0.2": {
+							"vector": [0, 30, 0]
+						},
+						"0.24": {
+							"vector": [0, -30, 0]
+						},
+						"0.32": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Caudal_muscly_part": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [0, 0, 0]
+						},
+						"0.2": {
+							"vector": [0, -10, 0]
+						},
+						"0.24": {
+							"vector": [0, 30, 0]
+						},
+						"0.28": {
+							"vector": [0, -30, 0]
+						},
+						"0.32": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Pectoral_fin_skin_1": {
+					"rotation": {
+						"vector": [0, -90, 90]
+					}
+				},
+				"Pectoral_fin_1": {
+					"rotation": {
+						"vector": [40, 0, -20]
+					}
+				},
+				"Pectoral_fin_skin_2": {
+					"rotation": {
+						"vector": [0, 90, -90]
+					}
+				},
+				"Pectoral_fin_2": {
+					"rotation": {
+						"vector": [40, 0, 20]
+					}
+				}
+			}
+		},
+		"swimming": {
+			"loop": true,
+			"animation_length": 0.48,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 1, 0]
+						},
+						"0.24": {
+							"vector": [0, -1, 0]
+						},
+						"0.48": {
+							"vector": [0, 1, 0]
+						}
+					}
+				},
+				"Caudal": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -3, 0]
+						},
+						"0.24": {
+							"vector": [0, 3, 0]
+						},
+						"0.48": {
+							"vector": [0, -3, 0]
+						}
+					}
+				},
+				"Caudal_muscly_part": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -13, 0]
+						},
+						"0.24": {
+							"vector": [0, 13, 0]
+						},
+						"0.48": {
+							"vector": [0, -13, 0]
+						}
+					}
+				},
+				"Lower_jaw_rear": {
+					"rotation": {
+						"0.0": {
+							"vector": [-1, 0, 0]
+						},
+						"0.24": {
+							"vector": [-1.9, 0, 0]
+						},
+						"0.48": {
+							"vector": [-1, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"swimming_speed_boost": {
+			"loop": true,
+			"animation_length": 0.08,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 1, 0]
+						},
+						"0.04": {
+							"vector": [0, -1, 0]
+						},
+						"0.08": {
+							"vector": [0, 1, 0]
+						}
+					}
+				},
+				"Caudal": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -5, 0]
+						},
+						"0.04": {
+							"vector": [0, 5, 0]
+						},
+						"0.08": {
+							"vector": [0, -5, 0]
+						}
+					}
+				},
+				"Caudal_muscly_part": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -10, 0]
+						},
+						"0.04": {
+							"vector": [0, 10, 0]
+						},
+						"0.08": {
+							"vector": [0, -10, 0]
+						}
+					}
+				},
+				"Pectoral_fin_1_joint": {
+					"rotation": {
+						"0.0": {
+							"vector": [50, -50, 0]
+						},
+						"0.04": {
+							"vector": [55, -55, 0]
+						},
+						"0.08": {
+							"vector": [50, -50, 0]
+						}
+					}
+				},
+				"Pectoral_fin_1": {
+					"rotation": {
+						"0.0": {
+							"vector": [10, 0, 0]
+						},
+						"0.04": {
+							"vector": [15, 0, 0]
+						},
+						"0.08": {
+							"vector": [10, 0, 0]
+						}
+					}
+				},
+				"Pectoral_fin_2_joint": {
+					"rotation": {
+						"0.0": {
+							"vector": [50, 50, 0]
+						},
+						"0.04": {
+							"vector": [55, 55, 0]
+						},
+						"0.08": {
+							"vector": [50, 50, 0]
+						}
+					}
+				},
+				"Pectoral_fin_2": {
+					"rotation": {
+						"0.0": {
+							"vector": [10, 0, 0]
+						},
+						"0.04": {
+							"vector": [15, 0, 0]
+						},
+						"0.08": {
+							"vector": [10, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}
