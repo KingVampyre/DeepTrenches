@@ -1,33 +1,36 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
+import com.google.common.collect.ImmutableMap;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BettaModel;
 import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
+import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.Identifier;
 
 public class BettaRenderer extends MobEntityRenderer<BettaEntity, BettaModel> {
 
-    public static final Identifier BLACK_BLUE_BETTA = new Identifier("deep_trenches:textures/entity/black_blue_betta.png");
-    public static final Identifier BLUE_BETTA = new Identifier("deep_trenches:textures/entity/blue_betta.png");
-    public static final Identifier COLORFUL_BETTA = new Identifier("deep_trenches:textures/entity/colorful_betta.png");
-    public static final Identifier ICARUS = new Identifier("deep_trenches:textures/entity/icarus.png");
-    public static final Identifier ICARUS_JUNIOR = new Identifier("deep_trenches:textures/entity/icarus_junior.png");
-    public static final Identifier ICARUS_THE_THIRD = new Identifier("deep_trenches:textures/entity/icarus_the_third.png");
-    public static final Identifier RED_BETTA = new Identifier("deep_trenches:textures/entity/red_betta.png");
+    public static final ImmutableMap<EntityType<?>, Identifier> TEXTURES = ImmutableMap.<EntityType<?>, Identifier>builder()
+            .put(EntityTypes.BLACK_BLUE_BETTA, new Identifier("deep_trenches:textures/entity/betta/black_blue_betta.png"))
+            .put(EntityTypes.BLUE_BETTA, new Identifier("deep_trenches:textures/entity/betta/blue_betta.png"))  
+            .put(EntityTypes.COLORFUL_BETTA, new Identifier("deep_trenches:textures/entity/betta/colorful_betta.png"))
+            .put(EntityTypes.ICARUS, new Identifier("deep_trenches:textures/entity/betta/icarus.png"))
+            .put(EntityTypes.ICARUS_JUNIOR, new Identifier("deep_trenches:textures/entity/betta/icarus_junior.png"))
+            .put(EntityTypes.ICARUS_THE_THIRD, new Identifier("deep_trenches:textures/entity/betta/icarus_the_third.png"))
+            .put(EntityTypes.RED_BETTA, new Identifier("deep_trenches:textures/entity/betta/red_betta.png"))
+            .build();
 
-    protected final Identifier texture;
-
-    public BettaRenderer(EntityRenderDispatcher entityRenderDispatcher, Identifier texture) {
+    public BettaRenderer(EntityRenderDispatcher entityRenderDispatcher) {
         super(entityRenderDispatcher, new BettaModel(), 0.3F);
-
-        this.texture = texture;
     }
 
     @Override
     public Identifier getTexture(BettaEntity entity) {
-        return this.texture;
+        EntityType<?> type = entity.getType();
+
+        return TEXTURES.get(type);
     }
 
     @Override

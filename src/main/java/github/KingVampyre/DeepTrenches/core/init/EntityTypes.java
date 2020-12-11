@@ -21,6 +21,11 @@ public class EntityTypes {
 			.<AdaiggerEntity>create(SpawnGroup.MISC, AdaiggerEntity::new).dimensions(EntityDimensions.fixed(0.5F, 0.5F))
 			.build();
 
+	public static final EntityType<BettaEntity> BLACK_BLUE_BETTA = FabricEntityTypeBuilder
+			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
+			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
+			.build();
+
 	public static final EntityType<BettaEntity> BLUE_BETTA = FabricEntityTypeBuilder
 			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
 			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
@@ -37,6 +42,11 @@ public class EntityTypes {
 			.build();
 
 	public static final EntityType<BettaEntity> ICARUS_JUNIOR = FabricEntityTypeBuilder
+			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
+			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
+			.build();
+
+	public static final EntityType<BettaEntity> ICARUS_THE_THIRD = FabricEntityTypeBuilder
 			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
 			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
 			.build();

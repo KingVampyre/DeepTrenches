@@ -1,10 +1,12 @@
 {
 	"replace": false,
 	"values": [
+		"deep_trenches:black_blue_betta",
 		"deep_trenches:blue_betta",
 		"deep_trenches:colorful_betta",
 		"deep_trenches:icarus",
 		"deep_trenches:icarus_junior",
+		"deep_trenches:icarus_the_third",
 		"deep_trenches:red_betta"
 	]
 }
