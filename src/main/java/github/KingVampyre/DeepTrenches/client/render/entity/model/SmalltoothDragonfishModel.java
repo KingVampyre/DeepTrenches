@@ -5,9 +5,9 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.SmalltoothDragonfishEntity;
+import software.bernie.geckolib.forgetofabric.ResourceLocation;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
-import software.bernie.geckolib.forgetofabric.ResourceLocation;
 
 public class SmalltoothDragonfishModel extends AnimatedEntityModel<SmalltoothDragonfishEntity> {
 
@@ -124,7 +124,7 @@ public class SmalltoothDragonfishModel extends AnimatedEntityModel<SmalltoothDra
         Fronttooth.setRotationPoint(0.0F, -1.0F, -11.9F);
         Lower_jaw.addChild(Fronttooth);
         setRotationAngle(Fronttooth, 0.2731F, 0.0F, 0.0F);
-        Fronttooth.setTextureOffset(32, 35).addBox(0.0F, -1.7F, 0.0F, 0.0F, 2.0F, 1.0F, 0.0F, false);
+        Fronttooth.setTextureOffset(32, 35).addBox(0.0F, -1.3F, 0.0F, 0.0F, 2.0F, 1.0F, 0.0F, false);
         Fronttooth.setModelRendererName("Fronttooth");
         this.registerModelRenderer(Fronttooth);
 
@@ -146,7 +146,7 @@ public class SmalltoothDragonfishModel extends AnimatedEntityModel<SmalltoothDra
         Front_tooth_side_2.setRotationPoint(-2.4F, -1.0F, -11.0F);
         Lower_jaw.addChild(Front_tooth_side_2);
         setRotationAngle(Front_tooth_side_2, 0.192F, 0.0F, 0.0F);
-        Front_tooth_side_2.setTextureOffset(36, 35).addBox(0.0F, -1.3F, 0.0F, 0.0F, 2.0F, 1.0F, 0.0F, false);
+        Front_tooth_side_2.setTextureOffset(36, 35).addBox(0.0F, -1.2F, 0.0F, 0.0F, 2.0F, 1.0F, 0.0F, false);
         Front_tooth_side_2.setModelRendererName("Front_tooth_side_2");
         this.registerModelRenderer(Front_tooth_side_2);
 
@@ -154,7 +154,7 @@ public class SmalltoothDragonfishModel extends AnimatedEntityModel<SmalltoothDra
         Front_tooth_side_1.setRotationPoint(2.4F, -1.0F, -11.0F);
         Lower_jaw.addChild(Front_tooth_side_1);
         setRotationAngle(Front_tooth_side_1, 0.192F, 0.0F, 0.0F);
-        Front_tooth_side_1.setTextureOffset(36, 35).addBox(0.0F, -1.3F, 0.0F, 0.0F, 2.0F, 1.0F, 0.0F, false);
+        Front_tooth_side_1.setTextureOffset(36, 35).addBox(0.0F, -1.2F, 0.0F, 0.0F, 2.0F, 1.0F, 0.0F, false);
         Front_tooth_side_1.setModelRendererName("Front_tooth_side_1");
         this.registerModelRenderer(Front_tooth_side_1);
 
@@ -252,6 +252,7 @@ public class SmalltoothDragonfishModel extends AnimatedEntityModel<SmalltoothDra
 
         this.rootBones.add(root);
     }
+
 
     @Override
     public ResourceLocation getAnimationFileLocation() {

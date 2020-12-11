@@ -37,21 +37,21 @@ public class StaspRenderer extends MobEntityRenderer<StaspEntity, StaspModel> {
 		if(entity.hasAngerTime()) {
 
 			if(pollen.hasAqueanSap())
-				return new Identifier(namespace + ":textures/entity/" + path + "/angry/with_aquean_sap.png");
+				return new Identifier(namespace + ":textures/entity/stasp/" + path + "/angry/with_aquean_sap.png");
 
 			if(pollen.hasPollen())
-				return new Identifier(namespace + ":textures/entity/" + path + "/angry/with_pollen.png");
+				return new Identifier(namespace + ":textures/entity/stasp/" + path + "/angry/with_pollen.png");
 
-			return new Identifier(namespace + ":textures/entity/" + path + "/angry/" + path + ".png");
+			return new Identifier(namespace + ":textures/entity/stasp/" + path + "/angry/" + path + ".png");
 		}
 
 		if(pollen.hasAqueanSap())
-			return new Identifier(namespace + ":textures/entity/" + path + "/with_aquean_sap.png");
+			return new Identifier(namespace + ":textures/entity/stasp/" + path + "/with_aquean_sap.png");
 
 		if(pollen.hasPollen())
-			return new Identifier(namespace + ":textures/entity/" + path + "/with_pollen.png");
+			return new Identifier(namespace + ":textures/entity/stasp/" + path + "/with_pollen.png");
 
-		return new Identifier(namespace + ":textures/entity/" + path + "/" + path + ".png");
+		return new Identifier(namespace + ":textures/entity/stasp/" + path + "/" + path + ".png");
 	}
 
 	@Override
