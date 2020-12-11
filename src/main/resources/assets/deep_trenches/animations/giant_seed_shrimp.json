@@ -1,0 +1,124 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"swimming": {
+			"loop": true,
+			"animation_length": 0.16,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [-0.5, 0, 0]
+						},
+						"0.08": {
+							"vector": [0.5, 0, 0]
+						},
+						"0.16": {
+							"vector": [-0.5, 0, 0]
+						}
+					}
+				},
+				"Antennas": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.08": {
+							"vector": [1, 0, 0]
+						},
+						"0.16": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Leg_side_1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -10]
+						},
+						"0.08": {
+							"vector": [0, 0, 10]
+						},
+						"0.16": {
+							"vector": [0, 0, -10]
+						}
+					}
+				},
+				"Leg_side_2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 10]
+						},
+						"0.08": {
+							"vector": [0, 0, -10]
+						},
+						"0.16": {
+							"vector": [0, 0, 10]
+						}
+					}
+				}
+			}
+		},
+		"swimming_speed_boost": {
+			"loop": true,
+			"animation_length": 0.08,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [-0.2, 0, 0]
+						},
+						"0.04": {
+							"vector": [0.2, 0, 0]
+						},
+						"0.08": {
+							"vector": [-0.2, 0, 0]
+						}
+					},
+					"position": {
+						"vector": [0, 0, -0.5]
+					}
+				},
+				"Antennas": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.04": {
+							"vector": [1.5, 0, 0]
+						},
+						"0.08": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Leg_side_1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -15]
+						},
+						"0.04": {
+							"vector": [0, 0, 15]
+						},
+						"0.08": {
+							"vector": [0, 0, -15]
+						}
+					}
+				},
+				"Leg_side_2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 15]
+						},
+						"0.04": {
+							"vector": [0, 0, -15]
+						},
+						"0.08": {
+							"vector": [0, 0, 15]
+						}
+					}
+				}
+			}
+		}
+	}
+}
