@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.client;
 
-import github.KingVampyre.DeepTrenches.client.entity.renderer.*;
+import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanFoliageColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanMosoilColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanWaterColorMapResourceSupplier;

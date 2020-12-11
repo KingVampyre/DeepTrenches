@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.client.entity.renderer;
+package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import github.KingVampyre.DeepTrenches.client.entity.model.BlackLoosejawModel;
