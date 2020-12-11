@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
-import com.mojang.blaze3d.platform.GlStateManager;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.LightLoosejawModel;
 import github.KingVampyre.DeepTrenches.common.entity.renderer.DragonfishRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
@@ -17,7 +16,7 @@ public class LightLoosejawRenderer extends DragonfishRenderer<LightLoosejawEntit
     protected void setupTransforms(LightLoosejawEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
         super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);
 
-        GlStateManager.translatef(0.0F, 0.08F, -0.005F);
+        matrices.translate(0.0F, 0.08F, -0.005F);
     }
 
 }

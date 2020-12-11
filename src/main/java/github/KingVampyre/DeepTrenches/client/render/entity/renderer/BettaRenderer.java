@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
-import com.mojang.blaze3d.platform.GlStateManager;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BettaModel;
 import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
@@ -35,7 +34,7 @@ public class BettaRenderer extends MobEntityRenderer<BettaEntity, BettaModel> {
     protected void setupTransforms(BettaEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
         super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);
 
-        GlStateManager.translatef(0.0F, -0.1F, -0.1F);
+        matrices.translate(0.0F, -0.1F, -0.1F);
     }
 
 }

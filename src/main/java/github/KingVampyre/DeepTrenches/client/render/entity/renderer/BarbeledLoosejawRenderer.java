@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
-import com.mojang.blaze3d.platform.GlStateManager;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BarbeledLoosejawModel;
 import github.KingVampyre.DeepTrenches.common.entity.renderer.DragonfishRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
@@ -16,8 +15,8 @@ public class BarbeledLoosejawRenderer extends DragonfishRenderer<BarbeledLooseja
     @Override
     protected void setupTransforms(BarbeledLoosejawEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
         super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);
-        
-        GlStateManager.translatef(0.0F, 0.08F, 0.15F);
+
+        matrices.translate(0.0F, 0.08F, 0.15F);
     }
 
 }

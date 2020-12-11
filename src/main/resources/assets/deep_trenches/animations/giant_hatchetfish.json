@@ -1,0 +1,89 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"swimming": {
+			"loop": true,
+			"animation_length": 0.16,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 3, 0]
+						},
+						"0.08": {
+							"vector": [0, -3, 0]
+						},
+						"0.16": {
+							"vector": [0, 3, 0]
+						}
+					}
+				},
+				"Caudal_fin": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -26, 0]
+						},
+						"0.08": {
+							"vector": [0, 26, 0]
+						},
+						"0.16": {
+							"vector": [0, -26, 0]
+						}
+					}
+				}
+			}
+		},
+		"swimming_speed_boost": {
+			"loop": true,
+			"animation_length": 0.12,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -2, 0]
+						},
+						"0.04": {
+							"vector": [0, 2, 0]
+						},
+						"0.08": {
+							"vector": [0, -2, 0]
+						},
+						"0.12": {
+							"vector": [0, 2, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, -1]
+						},
+						"0.04": {
+							"vector": [0, 0, -1]
+						},
+						"0.08": {
+							"vector": [0, 0, -1]
+						},
+						"0.12": {
+							"vector": [0, 0, -1]
+						}
+					}
+				},
+				"Caudal_fin": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 15, 0]
+						},
+						"0.04": {
+							"vector": [0, -15, 0]
+						},
+						"0.08": {
+							"vector": [0, 15, 0]
+						},
+						"0.12": {
+							"vector": [0, -15, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}
