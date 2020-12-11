@@ -2,16 +2,17 @@
 // Exported for Minecraft version 1.12.2 or 1.15.2 (same format for both) for entity models animated with GeckoLib
 // Paste this class into your mod and follow the documentation for GeckoLib to use animations. You can find the documentation here: https://github.com/bernie-g/geckolib
 // Blockbench plugin created by Gecko
-package github.KingVampyre.DeepTrenches.client.entity.model;
+package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.BlackLoosejawEntity;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
 import software.bernie.geckolib.forgetofabric.ResourceLocation;
 
-public class BlackLoosejawTransparentModel extends AnimatedEntityModel<BlackLoosejawEntity> {
+public class BlackLoosejawModel extends AnimatedEntityModel<BlackLoosejawEntity> {
 
     private final AnimatedModelRenderer root;
+    private final AnimatedModelRenderer Body;
     private final AnimatedModelRenderer Upper_Jaw;
     private final AnimatedModelRenderer Eyeinnerside2;
     private final AnimatedModelRenderer Eyeouterside2;
@@ -20,7 +21,6 @@ public class BlackLoosejawTransparentModel extends AnimatedEntityModel<BlackLoos
     private final AnimatedModelRenderer Upper_teeth_side_1;
     private final AnimatedModelRenderer Front_upper_teeth;
     private final AnimatedModelRenderer Upper_teeth_side_2;
-    private final AnimatedModelRenderer Body;
     private final AnimatedModelRenderer Lower_jaw;
     private final AnimatedModelRenderer Fronttooth;
     private final AnimatedModelRenderer Front_tooth_side_1;
@@ -36,7 +36,7 @@ public class BlackLoosejawTransparentModel extends AnimatedEntityModel<BlackLoos
     private final AnimatedModelRenderer Pelvic_fin_side_1;
     private final AnimatedModelRenderer Pelvic_fin_side_2;
 
-    public BlackLoosejawTransparentModel() {
+    public BlackLoosejawModel() {
         textureWidth = 128;
         textureHeight = 64;
         root = new AnimatedModelRenderer(this);
@@ -45,9 +45,16 @@ public class BlackLoosejawTransparentModel extends AnimatedEntityModel<BlackLoos
         root.setModelRendererName("root");
         this.registerModelRenderer(root);
 
+        Body = new AnimatedModelRenderer(this);
+        Body.setRotationPoint(0.0F, 16.0F, -8.0F);
+        root.addChild(Body);
+        Body.setTextureOffset(0, 39).addBox(-2.5F, 0.0F, 0.0F, 5.0F, 7.0F, 16.0F, 0.0F, false);
+        Body.setModelRendererName("Body");
+        this.registerModelRenderer(Body);
+
         Upper_Jaw = new AnimatedModelRenderer(this);
-        Upper_Jaw.setRotationPoint(0.0F, 16.0F, -8.0F);
-        root.addChild(Upper_Jaw);
+        Upper_Jaw.setRotationPoint(0.0F, 2.5F, 2.0F);
+        Body.addChild(Upper_Jaw);
         Upper_Jaw.setTextureOffset(0, 22).addBox(-2.5F, -2.5F, -12.0F, 5.0F, 6.0F, 10.0F, 0.0F, false);
         Upper_Jaw.setModelRendererName("Upper_Jaw");
         this.registerModelRenderer(Upper_Jaw);
@@ -100,13 +107,6 @@ public class BlackLoosejawTransparentModel extends AnimatedEntityModel<BlackLoos
         Upper_teeth_side_2.setTextureOffset(0, 35).addBox(0.0F, 0.6F, 0.0F, 0.0F, 1.0F, 6.0F, 0.0F, false);
         Upper_teeth_side_2.setModelRendererName("Upper_teeth_side_2");
         this.registerModelRenderer(Upper_teeth_side_2);
-
-        Body = new AnimatedModelRenderer(this);
-        Body.setRotationPoint(0.0F, -2.5F, -2.0F);
-        Upper_Jaw.addChild(Body);
-        Body.setTextureOffset(0, 39).addBox(-2.5F, 0.0F, 0.0F, 5.0F, 7.0F, 16.0F, 0.0F, false);
-        Body.setModelRendererName("Body");
-        this.registerModelRenderer(Body);
 
         Lower_jaw = new AnimatedModelRenderer(this);
         Lower_jaw.setRotationPoint(0.0F, 8.0F, 2.0F);
@@ -218,6 +218,7 @@ public class BlackLoosejawTransparentModel extends AnimatedEntityModel<BlackLoos
 
         this.rootBones.add(root);
     }
+
 
     @Override
     public ResourceLocation getAnimationFileLocation() {

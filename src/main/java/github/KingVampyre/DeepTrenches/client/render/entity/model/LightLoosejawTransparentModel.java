@@ -2,7 +2,7 @@
 // Exported for Minecraft version 1.12.2 or 1.15.2 (same format for both) for entity models animated with GeckoLib
 // Paste this class into your mod and follow the documentation for GeckoLib to use animations. You can find the documentation here: https://github.com/bernie-g/geckolib
 // Blockbench plugin created by Gecko
-package github.KingVampyre.DeepTrenches.client.entity.model;
+package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;

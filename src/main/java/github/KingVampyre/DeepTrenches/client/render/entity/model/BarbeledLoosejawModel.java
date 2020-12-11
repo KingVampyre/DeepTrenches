@@ -2,16 +2,17 @@
 // Exported for Minecraft version 1.12.2 or 1.15.2 (same format for both) for entity models animated with GeckoLib
 // Paste this class into your mod and follow the documentation for GeckoLib to use animations. You can find the documentation here: https://github.com/bernie-g/geckolib
 // Blockbench plugin created by Gecko
-package github.KingVampyre.DeepTrenches.client.entity.model;
+package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
 import software.bernie.geckolib.forgetofabric.ResourceLocation;
 
-public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<BarbeledLoosejawEntity> {
+public class BarbeledLoosejawModel extends AnimatedEntityModel<BarbeledLoosejawEntity> {
 
     private final AnimatedModelRenderer root;
+    private final AnimatedModelRenderer Body;
     private final AnimatedModelRenderer Upper_Jaw;
     private final AnimatedModelRenderer Eyeinnerside1;
     private final AnimatedModelRenderer Eyeouterside1;
@@ -20,7 +21,6 @@ public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<Barbel
     private final AnimatedModelRenderer Upper_teeth_side_2;
     private final AnimatedModelRenderer Upper_teeth_side_1;
     private final AnimatedModelRenderer Front_upper_teeth;
-    private final AnimatedModelRenderer Body;
     private final AnimatedModelRenderer Lower_jaw;
     private final AnimatedModelRenderer Fronttooth;
     private final AnimatedModelRenderer Teeth_side_1;
@@ -40,7 +40,7 @@ public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<Barbel
     private final AnimatedModelRenderer Pelvic_fin_side_1;
     private final AnimatedModelRenderer Pelvic_fin_side_2;
 
-    public BarbeledLoosejawTransparentModel() {
+    public BarbeledLoosejawModel() {
         textureWidth = 128;
         textureHeight = 64;
         root = new AnimatedModelRenderer(this);
@@ -49,9 +49,16 @@ public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<Barbel
         root.setModelRendererName("root");
         this.registerModelRenderer(root);
 
+        Body = new AnimatedModelRenderer(this);
+        Body.setRotationPoint(0.0F, 16.0F, -12.0F);
+        root.addChild(Body);
+        Body.setTextureOffset(0, 39).addBox(-2.5F, 0.0F, 0.0F, 5.0F, 7.0F, 16.0F, 0.0F, false);
+        Body.setModelRendererName("Body");
+        this.registerModelRenderer(Body);
+
         Upper_Jaw = new AnimatedModelRenderer(this);
-        Upper_Jaw.setRotationPoint(0.0F, 16.0F, -12.0F);
-        root.addChild(Upper_Jaw);
+        Upper_Jaw.setRotationPoint(0.0F, 3.0F, 1.0F);
+        Body.addChild(Upper_Jaw);
         Upper_Jaw.setTextureOffset(0, 22).addBox(-2.5F, -3.0F, -11.0F, 5.0F, 6.0F, 11.0F, 0.0F, false);
         Upper_Jaw.setModelRendererName("Upper_Jaw");
         this.registerModelRenderer(Upper_Jaw);
@@ -104,13 +111,6 @@ public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<Barbel
         Front_upper_teeth.setTextureOffset(0, 44).addBox(-2.5F, 0.0F, 0.0F, 5.0F, 1.0F, 0.0F, 0.0F, false);
         Front_upper_teeth.setModelRendererName("Front_upper_teeth");
         this.registerModelRenderer(Front_upper_teeth);
-
-        Body = new AnimatedModelRenderer(this);
-        Body.setRotationPoint(0.0F, -3.0F, -1.0F);
-        Upper_Jaw.addChild(Body);
-        Body.setTextureOffset(0, 39).addBox(-2.5F, 0.0F, 0.0F, 5.0F, 7.0F, 16.0F, 0.0F, false);
-        Body.setModelRendererName("Body");
-        this.registerModelRenderer(Body);
 
         Lower_jaw = new AnimatedModelRenderer(this);
         Lower_jaw.setRotationPoint(0.0F, 8.0F, 2.0F);
@@ -248,7 +248,7 @@ public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<Barbel
         Pelvic_fin_side_2.setTextureOffset(8, -1).addBox(0.0F, 0.0F, 0.0F, 0.0F, 8.0F, 5.0F, 0.0F, false);
         Pelvic_fin_side_2.setModelRendererName("Pelvic_fin_side_2");
         this.registerModelRenderer(Pelvic_fin_side_2);
-
+        
         this.rootBones.add(root);
     }
 

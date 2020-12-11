@@ -4,7 +4,7 @@ import com.mojang.blaze3d.platform.GlStateManager;
 
 import github.KingVampyre.DeepTrenches.common.entity.renderer.MobRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.GiantHatchetfishEntity;
-import github.KingVampyre.DeepTrenches.client.entity.model.DummyModel;
+import github.KingVampyre.DeepTrenches.client.render.entity.model.DummyModel;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
 

@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.feature;
 
-import github.KingVampyre.DeepTrenches.client.entity.model.StaspModel;
+import github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel;
 import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayers;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;

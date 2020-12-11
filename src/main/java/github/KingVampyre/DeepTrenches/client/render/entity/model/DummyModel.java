@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.client.entity.model;
+package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;

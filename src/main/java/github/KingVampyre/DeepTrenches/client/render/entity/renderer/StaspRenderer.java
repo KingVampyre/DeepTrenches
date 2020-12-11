@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import github.KingVampyre.DeepTrenches.client.render.entity.feature.StaspAntennasFeatureRenderer;
-import github.KingVampyre.DeepTrenches.client.entity.model.StaspModel;
+import github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel;
 import github.KingVampyre.DeepTrenches.common.entity.renderer.MobRenderer;
 import github.KingVampyre.DeepTrenches.core.component.StaspPollenComponent;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;

@@ -6,11 +6,18 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
+import software.bernie.geckolib.manager.EntityAnimationManager;
 
 public class BettaEntity extends ModFishEntity {
 
     public BettaEntity(EntityType<? extends BettaEntity> type, World world) {
         super(type, world);
+    }
+
+    @Override
+    public EntityAnimationManager getAnimationManager() {
+        // TODO animation manager
+        return null;
     }
 
     @Override

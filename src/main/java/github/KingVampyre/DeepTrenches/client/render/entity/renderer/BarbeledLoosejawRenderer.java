@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-import github.KingVampyre.DeepTrenches.client.entity.model.BarbeledLoosejawModel;
+import github.KingVampyre.DeepTrenches.client.render.entity.model.BarbeledLoosejawModel;
 import github.KingVampyre.DeepTrenches.common.entity.renderer.DragonfishRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
