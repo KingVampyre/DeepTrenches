@@ -335,11 +335,11 @@ public class DeepTrenchesClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(EntityTypes.GIANT_HATCHETFISH, (dispatcher, context) -> new GiantHatchetfishRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.SMALLTOOTH_DRAGONFISH, (dispatcher, context) -> new SmalltoothDragonfishRenderer(dispatcher));
 
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.COLORFUL_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.ICARUS, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.ICARUS_JUNIOR, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.RED_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher, BettaRenderer.BLUE_BETTA));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.COLORFUL_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher, BettaRenderer.COLORFUL_BETTA));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.ICARUS, (dispatcher, context) -> new BettaRenderer(dispatcher, BettaRenderer.ICARUS));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.ICARUS_JUNIOR, (dispatcher, context) -> new BettaRenderer(dispatcher, BettaRenderer.ICARUS_JUNIOR));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.RED_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher, BettaRenderer.RED_BETTA));
 
         EntityRendererRegistry.INSTANCE.register(EntityTypes.NORTHERN_BLACK_LOOSEJAW, (dispatcher, context) -> new BlackLoosejawRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.SOUTHERN_BLACK_LOOSEJAW, (dispatcher, context) -> new BlackLoosejawRenderer(dispatcher));

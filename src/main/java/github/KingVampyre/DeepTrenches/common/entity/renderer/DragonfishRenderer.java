@@ -7,11 +7,13 @@ import com.mojang.blaze3d.platform.GlStateManager.SrcFactor;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.util.Identifier;
 
-public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> extends MobRenderer<T, M> {
+public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> extends MobEntityRenderer<T, M> {
 
 	public DragonfishRenderer(EntityRenderDispatcher entityRenderDispatcher, M model, float shadow) {
 		super(entityRenderDispatcher, model, shadow);
@@ -40,6 +42,11 @@ public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> e
 			GlStateManager.blendFunc(SrcFactor.ONE.field_22545, DstFactor.ZERO.field_22528);
 			GlStateManager.disableBlend();
 		}
+	}
+
+	@Override
+	public Identifier getTexture(T entity) {
+		return null;
 	}
 
 }

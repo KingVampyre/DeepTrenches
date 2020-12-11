@@ -1,17 +1,22 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-
-import github.KingVampyre.DeepTrenches.common.entity.renderer.MobRenderer;
-import github.KingVampyre.DeepTrenches.core.entity.GiantHatchetfishEntity;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.DummyModel;
+import github.KingVampyre.DeepTrenches.core.entity.GiantHatchetfishEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
 
-public class GiantHatchetfishRenderer extends MobRenderer<GiantHatchetfishEntity, DummyModel<GiantHatchetfishEntity>> {
+public class GiantHatchetfishRenderer extends MobEntityRenderer<GiantHatchetfishEntity, DummyModel<GiantHatchetfishEntity>> {
 
 	public GiantHatchetfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
 		super(entityRenderDispatcher, new DummyModel<>(), 0.3F);
+	}
+
+	@Override
+	public Identifier getTexture(GiantHatchetfishEntity entity) {
+		return null;
 	}
 
 	@Override

@@ -2,19 +2,21 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import github.KingVampyre.DeepTrenches.client.render.entity.feature.StaspAntennasFeatureRenderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel;
-import github.KingVampyre.DeepTrenches.common.entity.renderer.MobRenderer;
 import github.KingVampyre.DeepTrenches.core.component.StaspPollenComponent;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
 import github.KingVampyre.DeepTrenches.core.init.Components;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.Identifier;
 
+import static net.minecraft.util.registry.Registry.ENTITY_TYPE;
+
 @Environment(EnvType.CLIENT)
-public class StaspRenderer extends MobRenderer<StaspEntity, StaspModel> {
+public class StaspRenderer extends MobEntityRenderer<StaspEntity, StaspModel> {
 
 	public StaspRenderer(EntityRenderDispatcher entityRenderDispatcher) {
 		super(entityRenderDispatcher, new StaspModel(), 0.35F);
@@ -23,7 +25,10 @@ public class StaspRenderer extends MobRenderer<StaspEntity, StaspModel> {
 	}
 
 	@Override
-	public Identifier getTexture(StaspEntity entity, EntityType<?> entityType, Identifier id) {
+	public Identifier getTexture(StaspEntity entity) {
+		EntityType<?> entityType = entity.getType();
+		Identifier id = ENTITY_TYPE.getId(entityType);
+
 		StaspPollenComponent pollen = (StaspPollenComponent) Components.POLLEN.get(entity);
 
 		String namespace = id.getNamespace();

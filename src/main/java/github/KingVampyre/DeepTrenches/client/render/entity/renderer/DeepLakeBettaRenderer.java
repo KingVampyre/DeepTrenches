@@ -1,19 +1,25 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-
-import github.KingVampyre.DeepTrenches.common.entity.renderer.MobRenderer;
-import github.KingVampyre.DeepTrenches.core.entity.DeepLakeBettaEntity;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.DummyModel;
+import github.KingVampyre.DeepTrenches.core.entity.DeepLakeBettaEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
 
-public class DeepLakeBettaRenderer extends MobRenderer<DeepLakeBettaEntity, DummyModel<DeepLakeBettaEntity>> {
+public class DeepLakeBettaRenderer extends MobEntityRenderer<DeepLakeBettaEntity, DummyModel<DeepLakeBettaEntity>> {
 
     public DeepLakeBettaRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-	super(entityRenderDispatcher, new DummyModel<>(), 0.35F);
+	    super(entityRenderDispatcher, new DummyModel<>(), 0.35F);
     }
-	
+
+    @Override
+    public Identifier getTexture(DeepLakeBettaEntity entity) {
+        // TODO check lit
+        return new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_lit.png");
+    }
+
 	@Override
     protected void setupTransforms(DeepLakeBettaEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
         super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);

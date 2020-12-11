@@ -1,17 +1,34 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-
-import github.KingVampyre.DeepTrenches.common.entity.renderer.MobRenderer;
+import github.KingVampyre.DeepTrenches.client.render.entity.model.BettaModel;
 import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
-import github.KingVampyre.DeepTrenches.client.render.entity.model.DummyModel;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
 
-public class BettaRenderer extends MobRenderer<BettaEntity, DummyModel<BettaEntity>> {
+public class BettaRenderer extends MobEntityRenderer<BettaEntity, BettaModel> {
 
-    public BettaRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new DummyModel<>(), 0.3F);
+    public static final Identifier BLACK_BLUE_BETTA = new Identifier("deep_trenches:textures/entity/black_blue_betta.png");
+    public static final Identifier BLUE_BETTA = new Identifier("deep_trenches:textures/entity/blue_betta.png");
+    public static final Identifier COLORFUL_BETTA = new Identifier("deep_trenches:textures/entity/colorful_betta.png");
+    public static final Identifier ICARUS = new Identifier("deep_trenches:textures/entity/icarus.png");
+    public static final Identifier ICARUS_JUNIOR = new Identifier("deep_trenches:textures/entity/icarus_junior.png");
+    public static final Identifier ICARUS_THE_THIRD = new Identifier("deep_trenches:textures/entity/icarus_the_third.png");
+    public static final Identifier RED_BETTA = new Identifier("deep_trenches:textures/entity/red_betta.png");
+
+    protected final Identifier texture;
+
+    public BettaRenderer(EntityRenderDispatcher entityRenderDispatcher, Identifier texture) {
+        super(entityRenderDispatcher, new BettaModel(), 0.3F);
+
+        this.texture = texture;
+    }
+
+    @Override
+    public Identifier getTexture(BettaEntity entity) {
+        return this.texture;
     }
 
     @Override
