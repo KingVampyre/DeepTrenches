@@ -5,9 +5,9 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
+import software.bernie.geckolib.forgetofabric.ResourceLocation;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
-import software.bernie.geckolib.forgetofabric.ResourceLocation;
 
 public class BarbeledLoosejawModel extends AnimatedEntityModel<BarbeledLoosejawEntity> {
 
@@ -248,7 +248,7 @@ public class BarbeledLoosejawModel extends AnimatedEntityModel<BarbeledLoosejawE
         Pelvic_fin_side_2.setTextureOffset(8, -1).addBox(0.0F, 0.0F, 0.0F, 0.0F, 8.0F, 5.0F, 0.0F, false);
         Pelvic_fin_side_2.setModelRendererName("Pelvic_fin_side_2");
         this.registerModelRenderer(Pelvic_fin_side_2);
-        
+
         this.rootBones.add(root);
     }
 

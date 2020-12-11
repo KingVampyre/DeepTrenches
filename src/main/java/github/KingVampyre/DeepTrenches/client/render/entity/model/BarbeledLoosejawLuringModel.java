@@ -5,11 +5,11 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
+import software.bernie.geckolib.forgetofabric.ResourceLocation;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
-import software.bernie.geckolib.forgetofabric.ResourceLocation;
 
-public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<BarbeledLoosejawEntity> {
+public class BarbeledLoosejawLuringModel extends AnimatedEntityModel<BarbeledLoosejawEntity> {
 
     private final AnimatedModelRenderer root;
     private final AnimatedModelRenderer Upper_Jaw;
@@ -40,7 +40,7 @@ public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<Barbel
     private final AnimatedModelRenderer Pelvic_fin_side_1;
     private final AnimatedModelRenderer Pelvic_fin_side_2;
 
-    public BarbeledLoosejawTransparentModel() {
+    public BarbeledLoosejawLuringModel() {
         textureWidth = 128;
         textureHeight = 64;
         root = new AnimatedModelRenderer(this);
@@ -255,7 +255,7 @@ public class BarbeledLoosejawTransparentModel extends AnimatedEntityModel<Barbel
 
     @Override
     public ResourceLocation getAnimationFileLocation() {
-        return new ResourceLocation("deep_trenches:animations/barbeled_loosejaw.json");
+        return new ResourceLocation("deep_trenches:animations/barbeled_loosejaw_transparent.json");
     }
 
 }

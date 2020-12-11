@@ -26,6 +26,48 @@
 						}
 					}
 				},
+				"Body": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [15, 0, 0]
+						},
+						"0.36": {
+							"vector": [25, 0, 0]
+						},
+						"0.4": {
+							"vector": [14, 0, 0]
+						},
+						"0.48": {
+							"vector": [0, 0, 0]
+						},
+						"0.56": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.12": {
+							"vector": [0, 0, -0.5]
+						},
+						"0.36": {
+							"vector": [0, 0, -1.5]
+						},
+						"0.4": {
+							"vector": [0, 0, -0.5]
+						},
+						"0.48": {
+							"vector": [0, 0, 0]
+						},
+						"0.56": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
 				"Lower_jaw": {
 					"rotation": {
 						"0.0": {
@@ -48,6 +90,9 @@
 						}
 					},
 					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
 						"0.08": {
 							"vector": [0, -0.2, 0]
 						},
@@ -123,11 +168,81 @@
 				}
 			}
 		},
+		"luring": {
+			"animation_length": 0.24,
+			"bones": {
+				"Barbel_joint": {
+					"rotation": {
+						"0.0": {
+							"vector": [-40, 0, 0]
+						},
+						"0.12": {
+							"vector": [-50, 0, 0]
+						},
+						"0.24": {
+							"vector": [-40, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0.5, 0]
+						},
+						"0.12": {
+							"vector": [0, 1, 0]
+						},
+						"0.24": {
+							"vector": [0, 0.5, 0]
+						}
+					}
+				},
+				"Barbel_tip": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.04": {
+							"vector": [-5, 0, 0]
+						},
+						"0.08": {
+							"vector": [5, 0, 0]
+						},
+						"0.16": {
+							"vector": [5, 0, 0]
+						},
+						"0.2": {
+							"vector": [-5, 0, 0]
+						},
+						"0.24": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Barbel_tip_appandage": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.08": {
+							"vector": [-40, 0, 0]
+						},
+						"0.12": {
+							"vector": [40, 0, 0]
+						},
+						"0.16": {
+							"vector": [-40, 0, 0]
+						},
+						"0.24": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
 		"on_land": {
 			"loop": true,
 			"animation_length": 0.4,
 			"bones": {
-				"Body": {
+				"Upper_Jaw": {
 					"rotation": {
 						"0.0": {
 							"vector": [0, 0, -90]
@@ -245,6 +360,19 @@
 			"loop": true,
 			"animation_length": 0.24,
 			"bones": {
+				"Upper_Jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -1.5, 0]
+						},
+						"0.12": {
+							"vector": [0, 1.5, 0]
+						},
+						"0.24": {
+							"vector": [0, -1.5, 0]
+						}
+					}
+				},
 				"Lower_jaw": {
 					"rotation": {
 						"0.0": {
@@ -352,7 +480,7 @@
 				"Pelvic_fin_side_2": {
 					"rotation": {
 						"0.0": {
-							"vector": [0, 0, 0]
+							"vector": [2, 0, 3]
 						},
 						"0.12": {
 							"vector": [2, 0, 3]
@@ -366,9 +494,9 @@
 		},
 		"swimming_speed_boost": {
 			"loop": true,
-			"animation_length": 0.08,
+			"animation_length": 0.08333,
 			"bones": {
-				"Body": {
+				"Upper_Jaw": {
 					"rotation": {
 						"0.0": {
 							"vector": [0, -1, 0]
@@ -379,9 +507,11 @@
 						"0.08": {
 							"vector": [0, -1, 0]
 						}
-					},
-					"position": {
-						"vector": [0, 0, -1]
+					}
+				},
+				"Body": {
+					"rotation": {
+						"vector": [0, 0, 0]
 					}
 				},
 				"Lower_jaw": {
