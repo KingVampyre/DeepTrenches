@@ -1,5 +1,8 @@
 package github.KingVampyre.DeepTrenches.client;
 
+import github.KingVampyre.DeepTrenches.client.color.block.FoliageColorProvider;
+import github.KingVampyre.DeepTrenches.client.color.block.MosoilColorProvider;
+import github.KingVampyre.DeepTrenches.client.color.block.StorceanFoliageColorProvider;
 import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanFoliageColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanMosoilColorMapResourceSupplier;
@@ -16,13 +19,8 @@ import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegi
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.client.color.world.FoliageColors;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.resource.ResourceType;
-import net.minecraft.util.math.MathHelper;
 
 public class DeepTrenchesClient implements ClientModInitializer {
 
@@ -32,48 +30,9 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanMosoilColorMapResourceSupplier());
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanWaterColorMapResourceSupplier());
 
-        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
-
-            if (world != null && pos != null) {
-                ClientWorld client = MinecraftClient.getInstance().world;
-
-                return client.calculateColor(pos, (biome, x, z) -> {
-                    double temperature = MathHelper.clamp(biome.getTemperature(), 0.0F, 1.0F);
-                    double humidity = MathHelper.clamp(biome.getDownfall(), 0.0F, 1.0F);
-
-                    return ColorMaps.STORCEAN_MOSOIL.getColor(temperature, humidity);
-                });
-            }
-
-            return ColorMaps.STORCEAN_MOSOIL.getDefaultColor();
-
-        }, ModBlocks.MOSOIL, ModBlocks.REEBLOON);
-
-        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
-
-            if (world != null && pos != null) {
-                ClientWorld client = MinecraftClient.getInstance().world;
-
-                return client.calculateColor(pos, (biome, d, e) -> {
-                    double temperature = biome.getTemperature();
-                    double humidity = biome.getDownfall();
-
-                    return ColorMaps.STORCEAN_FOLIAGE.getColor(temperature, humidity);
-                });
-            }
-
-            return ColorMaps.STORCEAN_FOLIAGE.getDefaultColor();
-
-        }, ModBlocks.AQUEAN_LEAVES);
-
-        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
-
-           if(world != null && pos != null)
-               return BiomeColors.getFoliageColor(world, pos);
-
-           return FoliageColors.getDefaultColor();
-
-        }, ModBlocks.ALMOND_LEAVES, ModBlocks.BLACK_BIRCH_LEAVES, ModBlocks.EBONY_LEAVES, ModBlocks.PELTOGYNE_LEAVES, ModBlocks.PLUM_LEAVES, ModBlocks.TEAK_LEAVES);
+        ColorProviderRegistry.BLOCK.register(MosoilColorProvider.INSTANCE, ModBlocks.MOSOIL, ModBlocks.REEBLOON);
+        ColorProviderRegistry.BLOCK.register(StorceanFoliageColorProvider.INSTANCE, ModBlocks.AQUEAN_LEAVES);
+        ColorProviderRegistry.BLOCK.register(FoliageColorProvider.INSTANCE, ModBlocks.ALMOND_LEAVES, ModBlocks.BLACK_BIRCH_LEAVES, ModBlocks.EBONY_LEAVES, ModBlocks.PELTOGYNE_LEAVES, ModBlocks.PLUM_LEAVES, ModBlocks.TEAK_LEAVES);
 
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_MOSOIL.getDefaultColor(), ModBlocks.REEBLOON);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_MOSOIL.getDefaultColor(), ModBlocks.MOSOIL);
