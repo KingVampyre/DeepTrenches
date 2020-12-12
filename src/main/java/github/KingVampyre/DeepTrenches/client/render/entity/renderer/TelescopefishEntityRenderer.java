@@ -8,13 +8,15 @@ import net.minecraft.util.Identifier;
 
 public class TelescopefishEntityRenderer extends MobEntityRenderer<TelescopefishEntity, TelescopefishModel> {
 
+    public static final Identifier TEXTURE = new Identifier("deep_trenches:textures/entity/telescopefish.png");
+
     public TelescopefishEntityRenderer(EntityRenderDispatcher entityRenderDispatcher) {
         super(entityRenderDispatcher, new TelescopefishModel(), 0.3F);
     }
 
     @Override
     public Identifier getTexture(TelescopefishEntity entity) {
-        return null;
+        return TEXTURE;
     }
 
 }

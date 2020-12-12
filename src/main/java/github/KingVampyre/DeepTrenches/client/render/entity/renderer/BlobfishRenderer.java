@@ -8,13 +8,15 @@ import net.minecraft.util.Identifier;
 
 public class BlobfishRenderer extends MobEntityRenderer<BlobfishEntity, BlobfishModel> {
 
+    public static final Identifier TEXTURE = new Identifier("deep_trenches:textures/entity/blobfish.png");
+
     public BlobfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
         super(entityRenderDispatcher, new BlobfishModel(), 0.3F);
     }
 
     @Override
     public Identifier getTexture(BlobfishEntity entity) {
-        return null;
+        return TEXTURE;
     }
 
 }

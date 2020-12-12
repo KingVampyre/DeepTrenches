@@ -8,13 +8,15 @@ import net.minecraft.util.Identifier;
 
 public class LaceratorRenderer extends MobEntityRenderer<LaceratorEntity, LaceratorModel> {
 
+    public static final Identifier TEXTURE = new Identifier("deep_trenches:textures/entity/lacerator.png");
+
     public LaceratorRenderer(EntityRenderDispatcher entityRenderDispatcher) {
         super(entityRenderDispatcher, new LaceratorModel(), 0.3F);
     }
 
     @Override
     public Identifier getTexture(LaceratorEntity entity) {
-        return null;
+        return TEXTURE;
     }
 
 }

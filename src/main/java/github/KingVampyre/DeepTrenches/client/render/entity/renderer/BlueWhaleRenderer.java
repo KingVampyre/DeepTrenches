@@ -8,13 +8,15 @@ import net.minecraft.util.Identifier;
 
 public class BlueWhaleRenderer extends MobEntityRenderer<BlueWhaleEntity, BlueWhaleModel> {
 
+    public static final Identifier TEXTURE = new Identifier("deep_trenches:textures/entity/blue_whale.png");
+
     public BlueWhaleRenderer(EntityRenderDispatcher entityRenderDispatcher) {
         super(entityRenderDispatcher, new BlueWhaleModel(), 1F);
     }
 
     @Override
     public Identifier getTexture(BlueWhaleEntity entity) {
-        return null;
+        return TEXTURE;
     }
 
 }
