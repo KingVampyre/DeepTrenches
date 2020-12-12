@@ -1,7 +1,9 @@
 package github.KingVampyre.DeepTrenches.core;
 
 import github.KingVampyre.DeepTrenches.core.init.*;
+import github.KingVampyre.DeepTrenches.core.util.DefaultAttributeHelper;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
@@ -23,7 +25,6 @@ public class  DeepTrenches implements ModInitializer {
 		/* -------------------------------- Loot Conditions ------------------------------------------- */
 		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);
 
-
 		/* -------------------------------- Attributes ------------------------------------------- */
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:blink_interval"), ModEntityAttributes.BLINK_INTERVAL);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:blink_range"), ModEntityAttributes.BLINK_RANGE);
@@ -43,6 +44,70 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:suborbital_delay"), ModEntityAttributes.SUBORBITAL_DELAY);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:suborbital_max_lit"), ModEntityAttributes.SUBORBITAL_MAX_LIT);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:suborbital_min_lit"), ModEntityAttributes.SUBORBITAL_MIN_LIT);
+
+		/* -------------------------------- Default Attributes ------------------------------------------- */
+		FabricDefaultAttributeRegistry.register(EntityTypes.BEARDED_SEADEVIL, DefaultAttributeHelper.createMobAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.ATLANTIC_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.GLOWING_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.GRIMALDIS_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.MANY_RAYED_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.SHINY_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.TITTMANNS_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.BLUE_BETTA, DefaultAttributeHelper.createBettaAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.COLORFUL_BETTA, DefaultAttributeHelper.createBettaAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.ICARUS, DefaultAttributeHelper.createBettaAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.ICARUS_JUNIOR, DefaultAttributeHelper.createBettaAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.RED_BETTA, DefaultAttributeHelper.createBettaAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.NORTHERN_BLACK_LOOSEJAW, DefaultAttributeHelper.createBlackLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.SOUTHERN_BLACK_LOOSEJAW, DefaultAttributeHelper.createBlackLoosejawAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_SCABBARD, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_SEADEVIL, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.BLOBFISH, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.BLUE_WHALE, DefaultAttributeHelper.createMobAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.BOTTLE_FLY, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.BOTTLE_FLY_MAGGOT, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.BROWN_BEAR, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.CETACHSAL, DefaultAttributeHelper.createMobAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.DEEP_LAKE_BETTA, DefaultAttributeHelper.createDeepLakeBettaAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.FANGTOOTH, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.FINANGITE, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.FLY, DefaultAttributeHelper.createMobAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.GIANT_HATCHETFISH, DefaultAttributeHelper.createGiantHatchetfishAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.GIANT_SEED_SHRIMP, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.HONEYCOMB_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.LACERATOR, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.LANCETFISH, DefaultAttributeHelper.createMobAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.BIGLAMP_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.GOODYEARS_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.GUERNES_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.LIEMS_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.REMARKABLE_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.SMALL_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.MAGGOT, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.PRINCE_AXELS_WONDERFISH, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.SMALLTOOTH_DRAGONFISH, DefaultAttributeHelper.createSmalltoothDragonfishAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_STASP, DefaultAttributeHelper.createStaspAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.BLUE_WINGED_STASP, DefaultAttributeHelper.createStaspAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.FUCHSITRA_STASP, DefaultAttributeHelper.createStaspAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.ORANGE_WINGED_STASP, DefaultAttributeHelper.createStaspAttributes());
+
+		FabricDefaultAttributeRegistry.register(EntityTypes.TELESCOPEFISH, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.THREADFIN_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.VIPERFISH, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.VOID_BEAST, DefaultAttributeHelper.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(EntityTypes.WOLFTRAP_SEADEVIL, DefaultAttributeHelper.createMobAttributes());
 
 		/* -------------------------------- Enchantments ------------------------------------------- */
 		Registry.register(ENCHANTMENT, new Identifier("deep_trenches:soul_draining"), ModEnchantments.SOUL_DRAINING);

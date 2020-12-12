@@ -10,7 +10,8 @@ import net.minecraft.entity.SpawnGroup;
 public class EntityTypes {
 
 	public static final EntityType<AdaiggerEntity> ADAIGGER = FabricEntityTypeBuilder
-			.<AdaiggerEntity>create(SpawnGroup.MISC, AdaiggerEntity::new).dimensions(EntityDimensions.fixed(0.5F, 0.5F))
+			.<AdaiggerEntity>create(SpawnGroup.MISC, AdaiggerEntity::new)
+			.dimensions(EntityDimensions.fixed(0.5F, 0.5F))
 			.build();
 
 	public static final EntityType<BarbeledLoosejawEntity> ATLANTIC_BARBELED_LOOSEJAW = FabricEntityTypeBuilder
