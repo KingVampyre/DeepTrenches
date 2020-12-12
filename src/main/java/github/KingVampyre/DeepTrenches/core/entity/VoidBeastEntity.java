@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core;
+package github.KingVampyre.DeepTrenches.core.entity;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.PathAwareEntity;

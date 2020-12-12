@@ -4,7 +4,7 @@
 // Blockbench plugin created by Gecko
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
-import github.KingVampyre.DeepTrenches.core.VoidBeastEntity;
+import github.KingVampyre.DeepTrenches.core.entity.VoidBeastEntity;
 import software.bernie.geckolib.forgetofabric.ResourceLocation;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;

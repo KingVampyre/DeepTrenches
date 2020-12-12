@@ -9,7 +9,7 @@ import software.bernie.geckolib.manager.EntityAnimationManager;
 
 public class WolftrapSeadevilEntity extends ModFishEntity {
 
-    protected WolftrapSeadevilEntity(EntityType<? extends ModFishEntity> type, World world) {
+    public WolftrapSeadevilEntity(EntityType<? extends ModFishEntity> type, World world) {
         super(type, world);
     }
 
