@@ -7,6 +7,7 @@ import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.Identifier;
 
@@ -37,7 +38,11 @@ public class BettaRenderer extends MobEntityRenderer<BettaEntity, BettaModel> {
     protected void setupTransforms(BettaEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
         super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);
 
-        matrices.translate(0.0F, -0.1F, -0.1F);
+        if (!entity.isTouchingWater()) {
+            matrices.translate(0.1F, 0.1F, -0.1F);
+            matrices.multiply(Vector3f.POSITIVE_Z.getDegreesQuaternion(90.0F));
+        } else
+            matrices.translate(0.0F, 0.1F, -0.1F);
     }
 
 }
