@@ -12,56 +12,54 @@ import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
 public class GiantSeedShrimpModel extends AnimatedEntityModel<GiantSeedShrimpEntity> {
 
     private final AnimatedModelRenderer root;
-	private final AnimatedModelRenderer Body;
-	private final AnimatedModelRenderer Antennas;
-	private final AnimatedModelRenderer Leg_side_1;
-	private final AnimatedModelRenderer Leg_side_2;
+    private final AnimatedModelRenderer Body;
+    private final AnimatedModelRenderer Antennas;
+    private final AnimatedModelRenderer Leg_side_1;
+    private final AnimatedModelRenderer Leg_side_2;
 
-    public GiantSeedShrimpModel()
-    {
+    public GiantSeedShrimpModel() {
         textureWidth = 64;
-    textureHeight = 32;
-    root = new AnimatedModelRenderer(this);
-		root.setRotationPoint(0.0F, 0.0F, 0.0F);
-		
-		root.setModelRendererName("root");
-		this.registerModelRenderer(root);
+        textureHeight = 32;
+        root = new AnimatedModelRenderer(this);
+        root.setRotationPoint(0.0F, 0.0F, 0.0F);
 
-		Body = new AnimatedModelRenderer(this);
-		Body.setRotationPoint(0.0F, 0.0F, 0.0F);
-		root.addChild(Body);
-		Body.setTextureOffset(0, 0).addBox(-2.5F, -2.5F, 0.0F, 5.0F, 5.0F, 5.0F, 0.0F, false);
-		Body.setModelRendererName("Body");
-		this.registerModelRenderer(Body);
+        root.setModelRendererName("root");
+        this.registerModelRenderer(root);
 
-		Antennas = new AnimatedModelRenderer(this);
-		Antennas.setRotationPoint(0.0F, 0.0F, 0.0F);
-		Body.addChild(Antennas);
-		Antennas.setTextureOffset(12, 16).addBox(-2.5F, 0.0F, -6.0F, 5.0F, 0.0F, 6.0F, 0.0F, false);
-		Antennas.setModelRendererName("Antennas");
-		this.registerModelRenderer(Antennas);
+        Body = new AnimatedModelRenderer(this);
+        Body.setRotationPoint(0.0F, 0.0F, 0.0F);
+        root.addChild(Body);
+        Body.setTextureOffset(0, 0).addBox(-2.5F, -2.5F, 0.0F, 5.0F, 5.0F, 5.0F, 0.0F, false);
+        Body.setModelRendererName("Body");
+        this.registerModelRenderer(Body);
 
-		Leg_side_1 = new AnimatedModelRenderer(this);
-		Leg_side_1.setRotationPoint(2.0F, 1.0F, 1.0F);
-		Body.addChild(Leg_side_1);
-		Leg_side_1.setTextureOffset(0, 17).addBox(0.0F, 0.0F, -3.0F, 5.0F, 0.0F, 5.0F, 0.0F, false);
-		Leg_side_1.setModelRendererName("Leg_side_1");
-		this.registerModelRenderer(Leg_side_1);
+        Antennas = new AnimatedModelRenderer(this);
+        Antennas.setRotationPoint(0.0F, 0.0F, 0.0F);
+        Body.addChild(Antennas);
+        Antennas.setTextureOffset(12, 16).addBox(-2.5F, 0.0F, -6.0F, 5.0F, 0.0F, 6.0F, 0.0F, false);
+        Antennas.setModelRendererName("Antennas");
+        this.registerModelRenderer(Antennas);
 
-		Leg_side_2 = new AnimatedModelRenderer(this);
-		Leg_side_2.setRotationPoint(-2.0F, 1.0F, 1.0F);
-		Body.addChild(Leg_side_2);
-		Leg_side_2.setTextureOffset(0, 17).addBox(-5.0F, 0.0F, -3.0F, 5.0F, 0.0F, 5.0F, 0.0F, true);
-		Leg_side_2.setModelRendererName("Leg_side_2");
-		this.registerModelRenderer(Leg_side_2);
+        Leg_side_1 = new AnimatedModelRenderer(this);
+        Leg_side_1.setRotationPoint(2.0F, 1.0F, 1.0F);
+        Body.addChild(Leg_side_1);
+        Leg_side_1.setTextureOffset(0, 17).addBox(0.0F, 0.0F, -3.0F, 5.0F, 0.0F, 5.0F, 0.0F, false);
+        Leg_side_1.setModelRendererName("Leg_side_1");
+        this.registerModelRenderer(Leg_side_1);
 
-    this.rootBones.add(root);
-  }
+        Leg_side_2 = new AnimatedModelRenderer(this);
+        Leg_side_2.setRotationPoint(-2.0F, 1.0F, 1.0F);
+        Body.addChild(Leg_side_2);
+        Leg_side_2.setTextureOffset(0, 17).addBox(-5.0F, 0.0F, -3.0F, 5.0F, 0.0F, 5.0F, 0.0F, true);
+        Leg_side_2.setModelRendererName("Leg_side_2");
+        this.registerModelRenderer(Leg_side_2);
 
+        this.rootBones.add(root);
+    }
 
     @Override
-    public ResourceLocation getAnimationFileLocation()
-    {
-        return new ResourceLocation("deep_trenches", "animations/giant_seed_shrimp.json");
+    public ResourceLocation getAnimationFileLocation() {
+        return new ResourceLocation("deep_trenches:animations/giant_seed_shrimp.json");
     }
+
 }

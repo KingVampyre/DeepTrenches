@@ -5,6 +5,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
+import software.bernie.geckolib.manager.EntityAnimationManager;
 
 public class GiantHatchetfishEntity extends HatchetfishEntity {
 
@@ -22,4 +23,11 @@ public class GiantHatchetfishEntity extends HatchetfishEntity {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public EntityAnimationManager getAnimationManager() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -102,9 +102,9 @@ public class BettaModel extends AnimatedEntityModel<BettaEntity> {
         this.rootBones.add(root);
     }
 
-
     @Override
     public ResourceLocation getAnimationFileLocation() {
         return new ResourceLocation("deep_trenches:animations/betta.json");
     }
+
 }
