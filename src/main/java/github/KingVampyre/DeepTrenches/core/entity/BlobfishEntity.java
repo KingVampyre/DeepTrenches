@@ -2,6 +2,7 @@ package github.KingVampyre.DeepTrenches.core.entity;
 
 import github.KingVampyre.DeepTrenches.common.entity.AnimatedFishEntity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
@@ -25,6 +26,11 @@ public class BlobfishEntity extends AnimatedFishEntity {
 
     @Override
     public EntityAnimationManager getAnimationManager() {
+        return null;
+    }
+
+    @Override
+    protected EntityAttributeModifier getSpeedModifier() {
         return null;
     }
 

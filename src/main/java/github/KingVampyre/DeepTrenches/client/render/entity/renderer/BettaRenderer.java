@@ -38,10 +38,9 @@ public class BettaRenderer extends MobEntityRenderer<BettaEntity, BettaModel> {
     protected void setupTransforms(BettaEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
         super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);
 
-        if (!entity.isTouchingWater()) {
-            matrices.translate(0.1F, 0.1F, -0.1F);
-            matrices.multiply(Vector3f.POSITIVE_Z.getDegreesQuaternion(90.0F));
-        } else
+        if (!entity.isTouchingWater())
+            matrices.translate(0.1F, -0.1F, -0.1F);
+        else
             matrices.translate(0.0F, 0.1F, -0.1F);
     }
 

@@ -18,7 +18,6 @@ public class DefaultAttributeHelper {
                 .add(GENERIC_FOLLOW_RANGE, 4) // 16
                 .add(GENERIC_MAX_HEALTH, 16)
                 .add(GENERIC_MOVEMENT_SPEED, 1.24F)
-                .add(MOVEMENT_SPEED_BOOST, 2.58F)
                 .add(BLINK_INTERVAL, 6) // 3
                 .add(BLINK_RANGE, 12)
                 .add(BLINK_DELAY, 440) // 60
@@ -42,8 +41,7 @@ public class DefaultAttributeHelper {
         return MobEntity.createMobAttributes()
                 .add(GENERIC_ATTACK_DAMAGE, 3)
                 .add(GENERIC_MAX_HEALTH, 4)
-                .add(GENERIC_MOVEMENT_SPEED, 0.9)
-                .add(MOVEMENT_SPEED_BOOST, 2.13);
+                .add(GENERIC_MOVEMENT_SPEED, 0.9);
     }
 
     public static DefaultAttributeContainer.Builder createBlackLoosejawAttributes() {
@@ -52,7 +50,6 @@ public class DefaultAttributeHelper {
                 .add(GENERIC_FOLLOW_RANGE, 6) // 16
                 .add(GENERIC_MAX_HEALTH, 18)
                 .add(GENERIC_MOVEMENT_SPEED, 1.26F)
-                .add(MOVEMENT_SPEED_BOOST, 2.6F)
                 .add(BLINK_INTERVAL, 3)
                 .add(BLINK_RANGE, 14)
                 .add(BLINK_DELAY, 110)
@@ -77,15 +74,13 @@ public class DefaultAttributeHelper {
                 .add(GENERIC_ATTACK_DAMAGE, 4)
                 .add(GENERIC_FOLLOW_RANGE, 6)
                 .add(GENERIC_MAX_HEALTH, 5)
-                .add(GENERIC_MOVEMENT_SPEED, 1.2)
-                .add(MOVEMENT_SPEED_BOOST, 3.15);
+                .add(GENERIC_MOVEMENT_SPEED, 1.2);
     }
 
     public static DefaultAttributeContainer.Builder createGiantHatchetfishAttributes() {
         return MobEntity.createMobAttributes()
                 .add(GENERIC_MAX_HEALTH, 16)
-                .add(GENERIC_MOVEMENT_SPEED, 2.17)
-                .add(MOVEMENT_SPEED_BOOST, 2.53);
+                .add(GENERIC_MOVEMENT_SPEED, 1.8);
     }
 
     public static DefaultAttributeContainer.Builder createLightLoosejawAttributes() {
@@ -94,7 +89,6 @@ public class DefaultAttributeHelper {
                 .add(GENERIC_FOLLOW_RANGE, 8) // 16
                 .add(GENERIC_MAX_HEALTH, 16F)
                 .add(GENERIC_MOVEMENT_SPEED, 1.31F)
-                .add(MOVEMENT_SPEED_BOOST, 2.68F) // 2.68
                 .add(BLINK_INTERVAL, 3)
                 .add(BLINK_RANGE, 5)
                 .add(BLINK_DELAY, 115)
@@ -117,7 +111,6 @@ public class DefaultAttributeHelper {
                 .add(GENERIC_FOLLOW_RANGE, 6) // 16
                 .add(GENERIC_MAX_HEALTH, 18)
                 .add(GENERIC_MOVEMENT_SPEED, 1.24F)
-                .add(MOVEMENT_SPEED_BOOST, 2.58F)
                 .add(BLINK_INTERVAL, 3)
                 .add(BLINK_RANGE, 12)
                 .add(BLINK_DELAY, 120)
@@ -144,7 +137,7 @@ public class DefaultAttributeHelper {
                 .add(GENERIC_MAX_HEALTH, 10F)
                 .add(GENERIC_ATTACK_DAMAGE, 3F)
                 .add(GENERIC_FLYING_SPEED, 0.175F)
-                .add(MOVEMENT_SPEED_BOOST, 0.2F);
+                .add(GENERIC_MOVEMENT_SPEED, 0.2F);
     }
 
 }

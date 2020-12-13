@@ -2,10 +2,13 @@ package github.KingVampyre.DeepTrenches.core.entity;
 
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
 import software.bernie.geckolib.manager.EntityAnimationManager;
+
+import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_150;
 
 public class GiantHatchetfishEntity extends HatchetfishEntity {
 
@@ -28,6 +31,11 @@ public class GiantHatchetfishEntity extends HatchetfishEntity {
 	public EntityAnimationManager getAnimationManager() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	protected EntityAttributeModifier getSpeedModifier() {
+		return MOVEMENT_SPEED_BOOST_150;
 	}
 
 }

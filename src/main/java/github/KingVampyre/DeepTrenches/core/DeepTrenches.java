@@ -39,7 +39,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:lure_min_unlit"), ModEntityAttributes.LURE_MIN_UNLIT);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:max_luring"), ModEntityAttributes.MAX_LURING);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:min_luring"), ModEntityAttributes.MIN_LURING);
-		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:movement_speed_boost"), ModEntityAttributes.MOVEMENT_SPEED_BOOST);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:prey_detection"), ModEntityAttributes.PREY_DETECTION);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:suborbital_delay"), ModEntityAttributes.SUBORBITAL_DELAY);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:suborbital_max_lit"), ModEntityAttributes.SUBORBITAL_MAX_LIT);
