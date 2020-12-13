@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import github.KingVampyre.DeepTrenches.common.entity.TamableDragonfishEntity;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.EntityAttributeModifier;

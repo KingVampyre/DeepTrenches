@@ -1,6 +1,5 @@
-package github.KingVampyre.DeepTrenches.core.entity;
+package github.KingVampyre.DeepTrenches.common.entity;
 
-import github.KingVampyre.DeepTrenches.common.entity.AnimatedFishEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.World;
 

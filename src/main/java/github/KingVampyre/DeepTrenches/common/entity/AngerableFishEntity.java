@@ -44,6 +44,10 @@ public abstract class AngerableFishEntity extends AnimatedFishEntity implements 
 
     protected abstract IntRange getAngerTimeRange();
 
+    protected boolean isAngerToPlayersPermanent() {
+        return false;
+    }
+
     @Override
     public void chooseRandomAngerTime() {
         IntRange range = this.getAngerTimeRange();
@@ -56,6 +60,18 @@ public abstract class AngerableFishEntity extends AnimatedFishEntity implements 
         super.initDataTracker();
 
         this.dataTracker.startTracking(ANGER, 0);
+    }
+
+    @Override
+    protected void mobTick() {
+        super.mobTick();
+
+        if(!this.world.isClient()) {
+            ServerWorld server = (ServerWorld) this.world;
+
+            this.tickAngerLogic(server, this.isAngerToPlayersPermanent());
+        }
+
     }
 
     @Override
