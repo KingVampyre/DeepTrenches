@@ -1,33 +1,25 @@
 package github.KingVampyre.DeepTrenches.common.component.animal;
 
 import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
+import github.KingVampyre.DeepTrenches.core.init.Components;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.World;
 
+import java.util.Optional;
 import java.util.UUID;
 
 public interface AnimalComponent extends AutoSyncedComponent {
 
-    boolean canBreed();
-
-    boolean canBreed(MobEntity entity);
-
-    @Deprecated
     MobEntity getMob();
 
     int getInLove();
 
-    PlayerEntity getLoveCause();
-
     UUID getPlayerInLove();
 
     boolean isBreedingItem(ItemStack stack);
-
-    boolean isInLove();
-
-    void resetInLove();
 
     void setInLove(int inLove);
 
@@ -47,12 +39,55 @@ public interface AnimalComponent extends AutoSyncedComponent {
 
     void setGrowingAge(int growingAge);
 
+    default boolean canBreed() {
+        return this.getInLove() > 0;
+    }
+
+    default boolean canBreed(MobEntity entity) {
+        Optional<AnimalComponent> component = Components.ANIMAL.maybeGet(entity);
+
+        if (component.isPresent()) {
+            AnimalComponent animal = component.get();
+
+            if (animal == this)
+                return false;
+            else if (entity.getClass() != this.getMob().getClass())
+                return false;
+            else
+                return this.isInLove() && animal.isInLove();
+        }
+
+        return false;
+    }
+
+    default PlayerEntity getLoveCause() {
+        UUID playerInLove = this.getPlayerInLove();
+        World world = this.getMob().getEntityWorld();
+
+        if (playerInLove == null)
+            return null;
+
+        return world.getPlayerByUuid(playerInLove);
+    }
+
+    default boolean isInLove() {
+        return this.getInLove() > 0;
+    }
+
+    default void resetInLove() {
+        this.setInLove(0);
+    }
+
     default void animalToTag(CompoundTag tag) {
         tag.putInt("ForcedAge", this.getForcedAge());
         tag.putInt("ForcedAgeTimer", this.getForcedAgeTimer());
         tag.putInt("GrowingAge", this.getGrowingAge());
         tag.putInt("InLove", this.getInLove());
-        tag.putUuid("PlayerInLove", this.getPlayerInLove());
+
+        UUID playerInLove = this.getPlayerInLove();
+
+        if(playerInLove != null)
+            tag.putUuid("PlayerInLove", playerInLove);
     }
 
     default void animalFromTag(CompoundTag tag) {
@@ -60,7 +95,12 @@ public interface AnimalComponent extends AutoSyncedComponent {
         this.setForcedAgeTimer(tag.getInt("ForcedAgeTimer"));
         this.setGrowingAge(tag.getInt("GrowingAge"));
         this.setInLove(tag.getInt("InLove"));
-        this.setPlayerInLove(tag.getUuid("PlayerInLove"));
+
+        if(tag.containsUuid("PlayerInLove"))
+            this.setPlayerInLove(tag.getUuid("PlayerInLove"));
+        else
+            this.setPlayerInLove(null);
+
     }
 
 }

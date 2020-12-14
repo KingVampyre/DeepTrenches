@@ -1,7 +1,9 @@
 package github.KingVampyre.DeepTrenches.common.component.animal;
 
 import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.network.ServerPlayerEntity;
 
@@ -9,13 +11,11 @@ import java.util.UUID;
 
 public interface TamableComponent extends AutoSyncedComponent {
 
-    PlayerEntity getOwner();
+    LivingEntity getOwner();
 
     UUID getOwnerId();
 
-    int getTameChance();
-
-    boolean isOwner(PlayerEntity entityIn);
+    boolean isOwner(LivingEntity entityIn);
 
     boolean getIsSitting();
 
@@ -26,6 +26,8 @@ public interface TamableComponent extends AutoSyncedComponent {
     void setSitting(boolean isSitting);
 
     void setTamed(boolean isTamed);
+
+    boolean isTameItem(ItemStack stack);
 
     default void setTamedBy(PlayerEntity player) {
         this.setOwnerId(player.getUuid());
@@ -40,13 +42,21 @@ public interface TamableComponent extends AutoSyncedComponent {
     default void tamableToTag(CompoundTag tag) {
         tag.putBoolean("IsSitting", this.getIsSitting());
         tag.putBoolean("IsTamed", this.getIsTamed());
-        tag.putUuid("OwnerId", this.getOwnerId());
+
+        UUID ownerId = this.getOwnerId();
+
+        if(ownerId != null)
+            tag.putUuid("OwnerId", ownerId);
     }
 
     default void tamableFromTag(CompoundTag tag) {
         this.setSitting(tag.getBoolean("IsSitting"));
         this.setTamed(tag.getBoolean("IsTamed"));
-        this.setOwnerId(tag.getUuid("OwnerId"));
+
+        if(tag.containsUuid("OwnerId"))
+            this.setOwnerId(tag.getUuid("OwnerId"));
+        else
+            this.setOwnerId(null);
     }
 
 }

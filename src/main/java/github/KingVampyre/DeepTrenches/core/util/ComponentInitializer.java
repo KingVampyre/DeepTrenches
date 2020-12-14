@@ -4,22 +4,31 @@ import dev.onyxstudios.cca.api.v3.block.BlockComponentFactoryRegistry;
 import dev.onyxstudios.cca.api.v3.block.BlockComponentInitializer;
 import dev.onyxstudios.cca.api.v3.entity.EntityComponentFactoryRegistry;
 import dev.onyxstudios.cca.api.v3.entity.EntityComponentInitializer;
+import github.KingVampyre.DeepTrenches.common.component.animal.TamableAnimalComponent;
 import github.KingVampyre.DeepTrenches.common.component.pollen.PollenComponent;
 import github.KingVampyre.DeepTrenches.core.component.StaspPollenComponent;
+import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
+import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
-import github.KingVampyre.DeepTrenches.core.init.Components;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Identifier;
+
+import static github.KingVampyre.DeepTrenches.core.init.Components.*;
+import static net.minecraft.item.Items.COD;
 
 public class ComponentInitializer implements BlockComponentInitializer, EntityComponentInitializer {
 
     @Override
     public void registerBlockComponentFactories(BlockComponentFactoryRegistry registry) {
-        registry.registerFor(new Identifier("deep_trenches:stasp_nest"), Components.POLLEN, (state, world, pos, side) -> new PollenComponent(500));
+        registry.registerFor(new Identifier("deep_trenches:stasp_nest"), POLLEN, (state, world, pos, side) -> new PollenComponent(500));
     }
 
     @Override
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry) {
-        registry.registerFor(StaspEntity.class, Components.POLLEN, entity -> new StaspPollenComponent(100, 150));
+        registry.registerFor(BettaEntity.class, ANIMAL, entity -> new TamableAnimalComponent(entity, Ingredient.ofItems(COD), Ingredient.ofItems(COD)));
+        registry.registerFor(LightLoosejawEntity.class, ANIMAL, entity -> new TamableAnimalComponent(entity, Ingredient.ofItems(COD), Ingredient.ofItems(COD)));
+
+        registry.registerFor(StaspEntity.class, POLLEN, entity -> new StaspPollenComponent(100, 150));
     }
     
 }

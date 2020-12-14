@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.common.component.animal;
 
-import github.KingVampyre.DeepTrenches.core.init.Components;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -10,7 +9,6 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
 
-import java.util.Optional;
 import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.common.component.ComponentSyncOperations.*;
@@ -32,29 +30,6 @@ public class WildAnimalComponent implements AnimalComponent {
     }
 
     @Override
-    public boolean canBreed() {
-        return this.inLove > 0;
-    }
-
-    @Override
-    public boolean canBreed(MobEntity entity) {
-        Optional<AnimalComponent> animalComponent = Components.ANIMAL.maybeGet(entity);
-
-        if (animalComponent.isPresent()) {
-            AnimalComponent entityComponent = animalComponent.get();
-
-            if (entityComponent == this)
-                return false;
-            else if (entity.getClass() != this.mob.getClass())
-                return false;
-            else
-                return this.isInLove() && entityComponent.isInLove();
-        }
-
-        return false;
-    }
-
-    @Override
     public MobEntity getMob() {
         return this.mob;
     }
@@ -62,16 +37,6 @@ public class WildAnimalComponent implements AnimalComponent {
     @Override
     public int getInLove() {
         return this.inLove;
-    }
-
-    @Override
-    public PlayerEntity getLoveCause() {
-        World world = this.mob.getEntityWorld();
-
-        if (this.playerInLove == null)
-            return null;
-
-        return world.getPlayerByUuid(this.playerInLove);
     }
 
     @Override
@@ -90,11 +55,6 @@ public class WildAnimalComponent implements AnimalComponent {
     }
 
     @Override
-    public boolean isInLove() {
-        return this.inLove > 0;
-    }
-
-    @Override
     public void setInLove(int inLove) {
         this.inLove = inLove;
     }
@@ -110,11 +70,6 @@ public class WildAnimalComponent implements AnimalComponent {
 
         // TODO play hearts
         world.sendEntityStatus(this.mob, (byte) 18);
-    }
-
-    @Override
-    public void resetInLove() {
-        this.inLove = 0;
     }
 
     @Override

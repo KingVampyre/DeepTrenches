@@ -1,7 +1,8 @@
 package github.KingVampyre.DeepTrenches.common.component.animal;
 
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;
@@ -13,20 +14,20 @@ import static github.KingVampyre.DeepTrenches.common.component.ComponentSyncOper
 
 public class TamableAnimalComponent extends WildAnimalComponent implements TamableComponent {
 
-    protected final int tameChance;
+    protected final Ingredient tameItems;
 
     protected boolean isSitting;
     protected boolean isTamed;
     protected UUID ownerId;
 
-    public TamableAnimalComponent(MobEntity mob, Ingredient breedItems, int tameChance) {
+    public TamableAnimalComponent(MobEntity mob, Ingredient breedItems, Ingredient tameItems) {
         super(mob, breedItems);
 
-        this.tameChance = tameChance;
+        this.tameItems = tameItems;
     }
 
     @Override
-    public PlayerEntity getOwner() {
+    public LivingEntity getOwner() {
         World world = this.mob.getEntityWorld();
 
         if (this.ownerId == null)
@@ -41,12 +42,7 @@ public class TamableAnimalComponent extends WildAnimalComponent implements Tamab
     }
 
     @Override
-    public int getTameChance() {
-        return this.tameChance;
-    }
-
-    @Override
-    public boolean isOwner(PlayerEntity entityIn) {
+    public boolean isOwner(LivingEntity entityIn) {
         return entityIn == this.getOwner();
     }
 
@@ -73,6 +69,11 @@ public class TamableAnimalComponent extends WildAnimalComponent implements Tamab
     @Override
     public void setTamed(boolean isTamed) {
         this.isTamed = isTamed;
+    }
+
+    @Override
+    public boolean isTameItem(ItemStack stack) {
+        return this.tameItems.test(stack);
     }
 
     @Override
@@ -103,7 +104,7 @@ public class TamableAnimalComponent extends WildAnimalComponent implements Tamab
                 this.ownerId = buf.readUuid();
                 break;
             default:
-                super.applySyncPacket(buf);
+                super.applySyncPacket(buf, syncOp);
         }
 
     }
