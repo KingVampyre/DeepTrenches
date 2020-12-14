@@ -13,14 +13,9 @@ import net.minecraft.world.World;
 import java.util.Optional;
 import java.util.UUID;
 
-public class WildAnimalComponent implements AnimalComponent {
+import static github.KingVampyre.DeepTrenches.common.component.ComponentSyncOperations.*;
 
-    public static final int RESET_LOVE = 1;
-    public static final int SET_FORCED_AGE = 2;
-    public static final int SET_FORCED_AGE_TIMER = 3;
-    public static final int SET_GROWING_AGE = 4;
-    public static final int SET_IN_LOVE = 5;
-    public static final int SET_PLAYER_IN_LOVE = 6;
+public class WildAnimalComponent implements AnimalComponent {
 
     protected final Ingredient breedItems;
     protected final MobEntity mob;
@@ -152,11 +147,30 @@ public class WildAnimalComponent implements AnimalComponent {
         this.growingAge = growingAge;
     }
 
-    public void readFromPacket(PacketByteBuf buf, int syncOp) {
+    @Override
+    public void readFromNbt(CompoundTag tag) {
+        this.animalFromTag(tag);
+    }
+
+    @Override
+    public void writeToNbt(CompoundTag tag) {
+        this.animalToTag(tag);
+    }
+
+    @Override
+    public void applySyncPacket(PacketByteBuf buf) {
+        int syncOp = buf.readInt();
+
+        this.applySyncPacket(buf, syncOp);
+    }
+
+    public void applySyncPacket(PacketByteBuf buf, int syncOp) {
 
         switch (syncOp) {
             case FULL_SYNC:
-                this.readFromNbt(buf.readCompoundTag());
+                CompoundTag tag = buf.readCompoundTag();
+
+                this.readFromNbt(tag);
                 break;
             case RESET_LOVE:
                 this.inLove = 0;
@@ -181,60 +195,13 @@ public class WildAnimalComponent implements AnimalComponent {
     }
 
     @Override
-    public void readFromPacket(PacketByteBuf buf) {
-        int syncOp = buf.readInt();
+    public void writeSyncPacket(PacketByteBuf buf, ServerPlayerEntity recipient) {
+        CompoundTag tag = new CompoundTag();
 
-        this.readFromPacket(buf, syncOp);
-    }
+        this.writeToNbt(tag);
 
-    @Override
-    public void readFromNbt(CompoundTag compoundTag) {
-        this.forcedAge = compoundTag.getInt("ForcedAge");
-        this.forcedAgeTimer = compoundTag.getInt("ForcedAgeTimer");
-        this.growingAge = compoundTag.getInt("GrowingAge");
-        this.inLove = compoundTag.getInt("InLove");
-        this.playerInLove = compoundTag.getUuid("PlayerInLove");
-    }
-
-    @Override
-    public void writeToPacket(PacketByteBuf buf, ServerPlayerEntity recipient, int syncOp) {
-        buf.writeInt(syncOp);
-
-        switch (syncOp) {
-            case FULL_SYNC:
-                CompoundTag tag = new CompoundTag();
-
-                this.writeToNbt(tag);
-                buf.writeCompoundTag(tag);
-                break;
-            case RESET_LOVE:
-                break;
-            case SET_FORCED_AGE:
-                buf.writeInt(this.forcedAge);
-                break;
-            case SET_FORCED_AGE_TIMER:
-                buf.writeInt(this.forcedAgeTimer);
-                break;
-            case SET_GROWING_AGE:
-                buf.writeInt(this.growingAge);
-                break;
-            case SET_IN_LOVE:
-                buf.writeInt(this.inLove);
-                break;
-            case SET_PLAYER_IN_LOVE:
-                buf.writeUuid(this.playerInLove);
-                break;
-        }
-
-    }
-
-    @Override
-    public void writeToNbt(CompoundTag compoundTag) {
-        compoundTag.putInt("ForcedAge", this.forcedAge);
-        compoundTag.putInt("ForcedAgeTimer", this.forcedAgeTimer);
-        compoundTag.putInt("GrowingAge", this.growingAge);
-        compoundTag.putInt("InLove", this.inLove);
-        compoundTag.putUuid("PlayerInLove", this.playerInLove);
+        buf.writeInt(FULL_SYNC);
+        buf.writeCompoundTag(tag);
     }
 
 }

@@ -7,6 +7,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.IntRange;
 import net.minecraft.world.World;
 import software.bernie.geckolib.entity.IAnimatedEntity;
 import software.bernie.geckolib.manager.EntityAnimationManager;
@@ -42,6 +43,11 @@ public class LightLoosejawEntity extends TamableDragonfishEntity implements IAni
     @Override
     protected EntityAttributeModifier getSpeedModifier() {
         return MOVEMENT_SPEED_BOOST_215;
+    }
+
+    @Override
+    protected IntRange getAngerTimeRange() {
+        return null;
     }
 
 }

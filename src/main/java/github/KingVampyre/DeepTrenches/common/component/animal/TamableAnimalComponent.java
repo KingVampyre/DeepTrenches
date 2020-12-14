@@ -5,16 +5,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
 
 import java.util.UUID;
 
-public class TamableAnimalComponent extends SchoolingAnimalComponent {
+import static github.KingVampyre.DeepTrenches.common.component.ComponentSyncOperations.*;
 
-    public static final int SET_IS_SITTING = 9;
-    public static final int SET_IS_TAMED = 10;
-    public static final int SET_OWNER_ID = 11;
+public class TamableAnimalComponent extends WildAnimalComponent implements TamableComponent {
 
     protected final int tameChance;
 
@@ -22,12 +19,13 @@ public class TamableAnimalComponent extends SchoolingAnimalComponent {
     protected boolean isTamed;
     protected UUID ownerId;
 
-    public TamableAnimalComponent(MobEntity mob, Ingredient breedItems, int maxSchoolSize, int tameChance) {
-        super(mob, breedItems, maxSchoolSize);
+    public TamableAnimalComponent(MobEntity mob, Ingredient breedItems, int tameChance) {
+        super(mob, breedItems);
 
         this.tameChance = tameChance;
     }
 
+    @Override
     public PlayerEntity getOwner() {
         World world = this.mob.getEntityWorld();
 
@@ -37,96 +35,77 @@ public class TamableAnimalComponent extends SchoolingAnimalComponent {
         return world.getPlayerByUuid(this.ownerId);
     }
 
+    @Override
     public UUID getOwnerId() {
         return this.ownerId;
     }
 
+    @Override
     public int getTameChance() {
         return this.tameChance;
     }
 
+    @Override
     public boolean isOwner(PlayerEntity entityIn) {
         return entityIn == this.getOwner();
     }
 
+    @Override
     public boolean getIsSitting() {
         return this.isSitting;
     }
 
+    @Override
     public boolean getIsTamed() {
         return this.isTamed;
     }
 
+    @Override
     public void setOwnerId(UUID ownerId) {
         this.ownerId = ownerId;
     }
 
+    @Override
     public void setSitting(boolean isSitting) {
         this.isSitting = isSitting;
     }
 
+    @Override
     public void setTamed(boolean isTamed) {
         this.isTamed = isTamed;
     }
 
-    public void setTamedBy(PlayerEntity player) {
-        this.setOwnerId(player.getUuid());
-        this.setTamed(true);
+    @Override
+    public void readFromNbt(CompoundTag tag) {
+        super.readFromNbt(tag);
 
-        if (player instanceof ServerPlayerEntity) {
-            // TODO CriteriaTriggers
-        }
-
+        this.tamableFromTag(tag);
     }
 
     @Override
-    public void readFromPacket(PacketByteBuf buf, int syncOp) {
+    public void writeToNbt(CompoundTag tag) {
+        super.writeToNbt(tag);
+
+        this.tamableToTag(tag);
+    }
+
+    @Override
+    public void applySyncPacket(PacketByteBuf buf, int syncOp) {
 
         switch (syncOp) {
             case SET_IS_SITTING:
                 this.isSitting = buf.readBoolean();
+                break;
             case SET_IS_TAMED:
                 this.isTamed = buf.readBoolean();
+                break;
             case SET_OWNER_ID:
                 this.ownerId = buf.readUuid();
+                break;
             default:
-                super.readFromPacket(buf, syncOp);
+                super.applySyncPacket(buf);
         }
 
-    }
-
-    @Override
-    public void readFromNbt(CompoundTag compoundTag) {
-        super.readFromNbt(compoundTag);
-
-        this.isSitting = compoundTag.getBoolean("IsSitting");
-        this.isTamed = compoundTag.getBoolean("IsTamed");
-        this.ownerId = compoundTag.getUuid("OwnerId");
-    }
-
-    @Override
-    public void writeToPacket(PacketByteBuf buf, ServerPlayerEntity recipient, int syncOp) {
-
-        switch (syncOp) {
-            case SET_IS_SITTING:
-                buf.writeBoolean(this.isSitting);
-            case SET_IS_TAMED:
-                buf.writeBoolean(this.isTamed);
-            case SET_OWNER_ID:
-                buf.writeUuid(this.ownerId);
-            default:
-                super.writeToPacket(buf, recipient, syncOp);
-        }
-
-    }
-
-    @Override
-    public void writeToNbt(CompoundTag compoundTag) {
-        super.writeToNbt(compoundTag);
-
-        compoundTag.putBoolean("IsSitting", this.isSitting);
-        compoundTag.putBoolean("IsTamed", this.isTamed);
-        compoundTag.putUuid("OwnerId", this.ownerId);
     }
 
 }

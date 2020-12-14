@@ -32,8 +32,10 @@
 	"custom": {
         "cardinal-components": [
 			"deep_trenches:animal",
-            "deep_trenches:pollen"
-        ]
+			"deep_trenches:pollen",
+			"deep_trenches:schooling",
+			"deep_trenches:tamable"
+		]
     },
 	"mixins": [ "deep_trenches.client.mixins.json","deep_trenches.core.mixins.json" ],
 	"depends": {
