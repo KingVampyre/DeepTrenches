@@ -5,9 +5,9 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
-import software.bernie.geckolib.forgetofabric.ResourceLocation;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
+import software.bernie.geckolib.forgetofabric.ResourceLocation;
 
 public class BarbeledLoosejawLuringModel extends AnimatedEntityModel<BarbeledLoosejawEntity> {
 
@@ -251,7 +251,6 @@ public class BarbeledLoosejawLuringModel extends AnimatedEntityModel<BarbeledLoo
 
         this.rootBones.add(root);
     }
-
 
     @Override
     public ResourceLocation getAnimationFileLocation() {

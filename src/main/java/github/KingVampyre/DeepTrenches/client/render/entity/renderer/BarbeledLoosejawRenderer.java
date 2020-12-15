@@ -16,7 +16,7 @@ public class BarbeledLoosejawRenderer extends DragonfishRenderer<BarbeledLooseja
     protected void setupTransforms(BarbeledLoosejawEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
         super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);
 
-        matrices.translate(0.0F, 0.08F, 0.15F);
+        matrices.translate(0.0F, -0.08F, 0.15F);
     }
 
 }
