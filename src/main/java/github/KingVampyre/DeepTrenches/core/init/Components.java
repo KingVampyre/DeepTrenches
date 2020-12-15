@@ -5,12 +5,15 @@ import dev.onyxstudios.cca.api.v3.component.ComponentRegistryV3;
 import github.KingVampyre.DeepTrenches.common.component.animal.AnimalComponent;
 import github.KingVampyre.DeepTrenches.common.component.animal.SchoolingComponent;
 import github.KingVampyre.DeepTrenches.common.component.animal.TamableComponent;
+import github.KingVampyre.DeepTrenches.common.component.lit.LitComponent;
 import github.KingVampyre.DeepTrenches.common.component.pollen.IPollenComponent;
 import net.minecraft.util.Identifier;
 
 public class Components {
 
     public static final ComponentKey<AnimalComponent> ANIMAL = ComponentRegistryV3.INSTANCE.getOrCreate(new Identifier("deep_trenches:animal"), AnimalComponent.class);
+
+    public static final ComponentKey<LitComponent> LIT = ComponentRegistryV3.INSTANCE.getOrCreate(new Identifier("deep_trenches:lit"), LitComponent.class);
 
     public static final ComponentKey<IPollenComponent> POLLEN = ComponentRegistryV3.INSTANCE.getOrCreate(new Identifier("deep_trenches:pollen"), IPollenComponent.class);
 

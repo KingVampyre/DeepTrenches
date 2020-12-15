@@ -1,10 +1,5 @@
 package github.KingVampyre.DeepTrenches.common.render.entity.renderer;
 
-import com.mojang.blaze3d.platform.GlStateManager;
-import com.mojang.blaze3d.platform.GlStateManager.DstFactor;
-import com.mojang.blaze3d.platform.GlStateManager.SrcFactor;
-
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.MobEntityRenderer;
@@ -21,7 +16,8 @@ public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> e
 
 	@Override
 	public void render(T mobEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
-		boolean flag = this.isVisible(mobEntity);
+		super.render(mobEntity, f, g, matrixStack, vertexConsumerProvider, i);
+		/*boolean flag = this.isVisible(mobEntity);
 		boolean flag1 = !flag && mobEntity.isInvisibleTo(MinecraftClient.getInstance().player);
 
 		if (flag1) {
@@ -41,7 +37,7 @@ public class DragonfishRenderer<T extends MobEntity, M extends EntityModel<T>> e
 			super.render(mobEntity, f, g, matrixStack, vertexConsumerProvider, i);
 			GlStateManager.blendFunc(SrcFactor.ONE.field_22545, DstFactor.ZERO.field_22528);
 			GlStateManager.disableBlend();
-		}
+		}*/
 	}
 
 	@Override
