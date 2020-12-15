@@ -68,7 +68,6 @@ public class WildAnimalComponent implements AnimalComponent {
         if (player != null)
             this.setPlayerInLove(player.getUuid());
 
-        // TODO play hearts
         world.sendEntityStatus(this.mob, (byte) 18);
     }
 

@@ -13,31 +13,31 @@ import java.util.UUID;
 
 public interface AnimalComponent extends AutoSyncedComponent {
 
-    MobEntity getMob();
-
-    int getInLove();
-
-    UUID getPlayerInLove();
-
-    boolean isBreedingItem(ItemStack stack);
-
-    void setInLove(int inLove);
-
-    void setInLove(PlayerEntity player);
-
-    void setPlayerInLove(UUID playerInLove);
-
     int getForcedAge();
 
     int getForcedAgeTimer();
 
     int getGrowingAge();
 
+    int getInLove();
+
+    MobEntity getMob();
+
+    UUID getPlayerInLove();
+
+    boolean isBreedingItem(ItemStack stack);
+
     void setForcedAge(int forcedAge);
 
     void setForcedAgeTimer(int forcedAgeTimer);
 
     void setGrowingAge(int growingAge);
+
+    void setInLove(int inLove);
+
+    void setInLove(PlayerEntity player);
+
+    void setPlayerInLove(UUID playerInLove);
 
     default boolean canBreed() {
         return this.getInLove() > 0;
