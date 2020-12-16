@@ -1,11 +1,16 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import github.KingVampyre.DeepTrenches.common.component.animal.TamableAnimalComponent;
 import github.KingVampyre.DeepTrenches.common.entity.TamableFishEntity;
+import github.KingVampyre.DeepTrenches.common.entity.ai.goal.FollowOwnerGoal;
+import github.KingVampyre.DeepTrenches.common.entity.ai.goal.UnderwaterFollowOwnerGoal;
+import github.KingVampyre.DeepTrenches.core.init.Components;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
@@ -61,6 +66,16 @@ public class BettaEntity extends TamableFishEntity {
     @Override
     protected EntityAttributeModifier getSpeedModifier() {
         return MOVEMENT_SPEED_BOOST_235;
+    }
+
+    @Override
+    protected void initGoals() {
+        super.initGoals();
+
+        TamableAnimalComponent tamable = (TamableAnimalComponent) Components.ANIMAL.get(this);
+        double speed = this.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED);
+
+        this.goalSelector.add(3, new UnderwaterFollowOwnerGoal(this, tamable, speed, 12.0F, 4.0F, 2.0F, false));
     }
 
     @Override
