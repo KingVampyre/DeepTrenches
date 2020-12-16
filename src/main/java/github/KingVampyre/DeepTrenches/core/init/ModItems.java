@@ -15,20 +15,20 @@ import static net.minecraft.item.FoodComponents.SWEET_BERRIES;
 
 public class ModItems {
 
-	public static final Item BARBELED_LOOSEJAW_BUCKET = new TagFishBucketItem(EntityTypes.ATLANTIC_BARBELED_LOOSEJAW, EntityTypeTags.BARBELED_LOOWSEJAWS, WATER,  new Settings().maxCount(1).group(GENERAL));
-	public static final Item BETTA_BUCKET = new TagFishBucketItem(EntityTypes.BLUE_BETTA, EntityTypeTags.SPENDIDENS_BETTA, WATER, new Settings().maxCount(1).group(GENERAL));
-	public static final Item BLACK_LOOSEJAW_BUCKET = new TagFishBucketItem(EntityTypes.NORTHERN_BLACK_LOOSEJAW, EntityTypeTags.BLACK_LOOWSEJAWS, WATER, new Settings().maxCount(1).group(GENERAL));
+	public static final Item BARBELED_LOOSEJAW_BUCKET = new TagFishBucketItem(EntityTypes.ATLANTIC_BARBELED_LOOSEJAW, EntityTypeTags.BARBELED_LOOSEJAW, WATER,  new Settings().maxCount(1).group(GENERAL));
+	public static final Item BETTA_BUCKET = new TagFishBucketItem(EntityTypes.BLUE_BETTA, EntityTypeTags.SPLENDIDENS_BETTA, WATER, new Settings().maxCount(1).group(GENERAL));
+	public static final Item BLACK_LOOSEJAW_BUCKET = new TagFishBucketItem(EntityTypes.NORTHERN_BLACK_LOOSEJAW, EntityTypeTags.BLACK_LOOSEJAW, WATER, new Settings().maxCount(1).group(GENERAL));
 	public static final Item DEEP_LAKE_BETTA_BUCKET = new TagFishBucketItem(EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA, WATER, new Settings().maxCount(1).group(GENERAL));
 	public static final Item GIANT_HATCHETFISH_BUCKET = new TagFishBucketItem(EntityTypes.GIANT_HATCHETFISH,  EntityTypeTags.ARGYROPELECUS_GIGAS, WATER, new Settings().maxCount(1).group(GENERAL));
-	public static final Item LIGHT_LOOSEJAW_BUCKET = new TagFishBucketItem(EntityTypes.BIGLAMP_LIGHT_LOOSEJAW, EntityTypeTags.LIGHT_LOOSEJAWS, WATER, new Settings().maxCount(1).group(GENERAL));
+	public static final Item LIGHT_LOOSEJAW_BUCKET = new TagFishBucketItem(EntityTypes.BIGLAMP_LIGHT_LOOSEJAW, EntityTypeTags.LIGHT_LOOSEJAW, WATER, new Settings().maxCount(1).group(GENERAL));
 	public static final Item SMALLTOOTH_DRAGONFISH_BUCKET = new TagFishBucketItem(EntityTypes.SMALLTOOTH_DRAGONFISH, EntityTypeTags.PACHYSTOMIAS_MICRODON, WATER, new Settings().maxCount(1).group(GENERAL));
 
-	public static final Item BARBELED_LOOSEJAW_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.ATLANTIC_BARBELED_LOOSEJAW, EntityTypeTags.BARBELED_LOOWSEJAWS, 921113, 15859744, new Settings().maxCount(1).group(GENERAL));
-	public static final Item BETTA_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.BLUE_BETTA, EntityTypeTags.SPENDIDENS_BETTA, 7347502, 9183521, new Settings().maxCount(1).group(GENERAL));
-	public static final Item BLACK_LOOSEJAW_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.NORTHERN_BLACK_LOOSEJAW, EntityTypeTags.BLACK_LOOWSEJAWS,2102566, 11010053, new Settings().maxCount(1).group(GENERAL));
+	public static final Item BARBELED_LOOSEJAW_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.ATLANTIC_BARBELED_LOOSEJAW, EntityTypeTags.BARBELED_LOOSEJAW, 921113, 15859744, new Settings().maxCount(1).group(GENERAL));
+	public static final Item BETTA_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.BLUE_BETTA, EntityTypeTags.SPLENDIDENS_BETTA, 7347502, 9183521, new Settings().maxCount(1).group(GENERAL));
+	public static final Item BLACK_LOOSEJAW_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.NORTHERN_BLACK_LOOSEJAW, EntityTypeTags.BLACK_LOOSEJAW,2102566, 11010053, new Settings().maxCount(1).group(GENERAL));
 	public static final Item DEEP_LAKE_BETTA_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA, 1189390, 5013319, new Settings().maxCount(1).group(GENERAL));
 	public static final Item GIANT_HATCHETFISH_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.GIANT_HATCHETFISH, EntityTypeTags.ARGYROPELECUS_GIGAS, 9870757, 12311039, new Settings().maxCount(1).group(GENERAL));
-	public static final Item LIGHT_LOOSEJAW_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.BIGLAMP_LIGHT_LOOSEJAW, EntityTypeTags.LIGHT_LOOSEJAWS, 1643048, 4836351, new Settings().maxCount(1).group(GENERAL));
+	public static final Item LIGHT_LOOSEJAW_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.BIGLAMP_LIGHT_LOOSEJAW, EntityTypeTags.LIGHT_LOOSEJAW, 1643048, 4836351, new Settings().maxCount(1).group(GENERAL));
 	public static final Item SMALLTOOTH_DRAGONFISH_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.SMALLTOOTH_DRAGONFISH, EntityTypeTags.PACHYSTOMIAS_MICRODON, 1250598, 16728832, new Settings().maxCount(1).group(GENERAL));
 	public static final Item STASP_SPAWN_EGG = new TagSpawnEggItem(EntityTypes.ORANGE_WINGED_STASP, EntityTypeTags.STASPS, 2695792, 5124510, new Settings().maxCount(1).group(GENERAL));
 

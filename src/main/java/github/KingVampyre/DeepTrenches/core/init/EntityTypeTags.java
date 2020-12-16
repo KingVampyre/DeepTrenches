@@ -37,15 +37,15 @@ public class EntityTypeTags {
     // Species
     public static final Tag<EntityType<?>> ARGYROPELECUS_GIGAS = TagRegistry.entityType(new Identifier("deep_trenches:species/argyropelecus_gigas"));
 
-    public static final Tag<EntityType<?>> BARBELED_LOOWSEJAWS = TagRegistry.entityType(new Identifier("deep_trenches:species/barbeled_loosejaws"));
+    public static final Tag<EntityType<?>> BARBELED_LOOSEJAW = TagRegistry.entityType(new Identifier("deep_trenches:species/barbeled_loosejaw"));
 
-    public static final Tag<EntityType<?>> SPENDIDENS_BETTA = TagRegistry.entityType(new Identifier("deep_trenches:species/spendidens_betta"));
+    public static final Tag<EntityType<?>> SPLENDIDENS_BETTA = TagRegistry.entityType(new Identifier("deep_trenches:species/splendidens_betta"));
 
     public static final Tag<EntityType<?>> TRELOSIAGNUS_BETTA = TagRegistry.entityType(new Identifier("deep_trenches:species/trelosiagnus_betta"));
 
-    public static final Tag<EntityType<?>> BLACK_LOOWSEJAWS = TagRegistry.entityType(new Identifier("deep_trenches:species/black_loosejaw"));
+    public static final Tag<EntityType<?>> BLACK_LOOSEJAW = TagRegistry.entityType(new Identifier("deep_trenches:species/black_loosejaw"));
 
-    public static final Tag<EntityType<?>> LIGHT_LOOSEJAWS = TagRegistry.entityType(new Identifier("deep_trenches:species/light_loosejaw"));
+    public static final Tag<EntityType<?>> LIGHT_LOOSEJAW = TagRegistry.entityType(new Identifier("deep_trenches:species/light_loosejaw"));
 
     public static final Tag<EntityType<?>> PACHYSTOMIAS_MICRODON = TagRegistry.entityType(new Identifier("deep_trenches:species/pachystomias_microdon"));
 
