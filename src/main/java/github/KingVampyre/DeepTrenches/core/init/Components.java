@@ -9,10 +9,9 @@ import net.minecraft.util.Identifier;
 
 public class Components {
 
+    @Deprecated
     public static final ComponentKey<AnimalComponent> ANIMAL = ComponentRegistryV3.INSTANCE.getOrCreate(new Identifier("deep_trenches:animal"), AnimalComponent.class);
 
     public static final ComponentKey<IPollenComponent> POLLEN = ComponentRegistryV3.INSTANCE.getOrCreate(new Identifier("deep_trenches:pollen"), IPollenComponent.class);
-
-    public static final ComponentKey<TamableComponent> TAMABLE = ComponentRegistryV3.INSTANCE.getOrCreate(new Identifier("deep_trenches:tamable"), TamableComponent.class);
 
 }

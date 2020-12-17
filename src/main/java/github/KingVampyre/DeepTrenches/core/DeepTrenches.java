@@ -22,8 +22,6 @@ public class  DeepTrenches implements ModInitializer {
 
     @Override
     public void onInitialize() {
-		/* -------------------------------- Loot Conditions ------------------------------------------- */
-		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);
 
 		/* -------------------------------- Attributes ------------------------------------------- */
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:blink_interval"), ModEntityAttributes.BLINK_INTERVAL);
@@ -181,6 +179,20 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:void_beast"), EntityTypes.VOID_BEAST);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:wolftrap_seadevil"), EntityTypes.WOLFTRAP_SEADEVIL);
 
+		/* -------------------------------- Memory Module Type ------------------------------------------- */
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:sitting"), MemoryModuleTypes.SITTING);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:tamed"), MemoryModuleTypes.TAMED);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:owner"), MemoryModuleTypes.OWNER);
+
+		/* -------------------------------- Loot Conditions ------------------------------------------- */
+		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);
+
+		/* -------------------------------- Potions ------------------------------------------- */
+		Registry.register(POTION, new Identifier("deep_trenches:long_softbones"), ModPotions.LONG_SOFTBONES);
+		Registry.register(POTION, new Identifier("deep_trenches:long_strong_softbones"), ModPotions.LONG_STRONG_SOFTBONES);
+		Registry.register(POTION, new Identifier("deep_trenches:softbones"), ModPotions.SOFTBONES);
+		Registry.register(POTION, new Identifier("deep_trenches:strong_softbones"), ModPotions.STRONG_SOFTBONES);
+
 		/* -------------------------------- Status Effects ------------------------------------------- */
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:braitor_beauty"), BRAITOR_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cosmos_beauty"), COSMOS_BEAUTY);
@@ -202,13 +214,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:scutigera"), SCUTIGERA);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:storcean_island"), STORCEAN_ISLAND);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:sunset_and_flowers"), SUNSET_AND_FLOWERS);
-
-		/* -------------------------------- Potions ------------------------------------------- */
-
-		Registry.register(POTION, new Identifier("deep_trenches:long_softbones"), ModPotions.LONG_SOFTBONES);
-		Registry.register(POTION, new Identifier("deep_trenches:long_strong_softbones"), ModPotions.LONG_STRONG_SOFTBONES);
-		Registry.register(POTION, new Identifier("deep_trenches:softbones"), ModPotions.SOFTBONES);
-		Registry.register(POTION, new Identifier("deep_trenches:strong_softbones"), ModPotions.STRONG_SOFTBONES);
 
         /* -------------------------------- Blocks ------------------------------------------- */
 

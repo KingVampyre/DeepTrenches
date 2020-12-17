@@ -4,16 +4,17 @@
   "package": "github.KingVampyre.DeepTrenches.core.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "AccessorStatusEffectInstance",
+    "AccessorTridentEntity",
+    "InvokerMemoryModuleType",
+    "InvokerSpreadableBlock",
     "MixinBrewingRecipeRegistry",
-    "MixinEnchantmentHelper",
     "MixinEnchantment",
+    "MixinEnchantmentHelper",
     "MixinGrassBlock",
     "MixinLivingEntity",
     "MixinPlayerEntity",
     "MixinServerPlayerEntity",
-    "InvokerSpreadableBlock",
-    "AccessorStatusEffectInstance",
-    "AccessorTridentEntity",
     "MixinTridentEntity"
   ],
   "client": [
