@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.common.component;
 
+@Deprecated
 public class ComponentSyncOperations {
 
     public static final int FULL_SYNC = 0;
@@ -13,8 +14,5 @@ public class ComponentSyncOperations {
     public static final int SET_IS_SITTING = 7;
     public static final int SET_IS_TAMED = 8;
     public static final int SET_OWNER_ID = 9;
-
-    public static final int SET_SCHOOL_MEMBERS = 10;
-    public static final int SET_SCHOOL_LEADER = 11;
 
 }

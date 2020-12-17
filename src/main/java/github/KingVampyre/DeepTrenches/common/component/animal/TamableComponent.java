@@ -9,6 +9,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 
 import java.util.UUID;
 
+@Deprecated
 public interface TamableComponent extends AutoSyncedComponent {
 
     LivingEntity getOwner();

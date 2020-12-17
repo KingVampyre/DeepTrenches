@@ -5,7 +5,7 @@ import net.minecraft.world.World;
 
 public abstract class HatchetfishEntity extends AnimatedFishEntity {
 
-    public HatchetfishEntity(EntityType<? extends AnimatedFishEntity> type, World world) {
+    public HatchetfishEntity(EntityType<? extends HatchetfishEntity> type, World world) {
         super(type, world);
     }
 	

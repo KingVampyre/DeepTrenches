@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 import java.util.Optional;
 import java.util.UUID;
 
+@Deprecated
 public interface AnimalComponent extends AutoSyncedComponent {
 
     int getForcedAge();

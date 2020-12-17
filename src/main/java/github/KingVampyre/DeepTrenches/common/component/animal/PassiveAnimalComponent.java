@@ -13,6 +13,7 @@ import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.common.component.ComponentSyncOperations.*;
 
+@Deprecated
 public class PassiveAnimalComponent implements AnimalComponent {
 
     protected final Ingredient breedItems;

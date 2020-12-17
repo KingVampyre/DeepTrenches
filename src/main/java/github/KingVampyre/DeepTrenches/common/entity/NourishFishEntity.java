@@ -10,9 +10,9 @@ import java.util.Optional;
 
 import static github.KingVampyre.DeepTrenches.core.init.Components.*;
 
-public abstract class PassiveFishEntity extends AnimatedFishEntity {
+public abstract class NourishFishEntity extends AnimatedFishEntity {
 
-    protected PassiveFishEntity(EntityType<? extends AnimatedFishEntity> type, World world) {
+    protected NourishFishEntity(EntityType<? extends NourishFishEntity> type, World world) {
         super(type, world);
     }
 

@@ -12,6 +12,7 @@ import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.common.component.ComponentSyncOperations.*;
 
+@Deprecated
 public class TamableAnimalComponent extends PassiveAnimalComponent implements TamableComponent {
 
     protected final Ingredient tameItems;
