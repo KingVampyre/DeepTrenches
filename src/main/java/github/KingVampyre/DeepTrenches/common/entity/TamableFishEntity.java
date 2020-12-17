@@ -119,8 +119,10 @@ public abstract class TamableFishEntity extends AngerableFishEntity {
                 }
 
                 if (this.isBaby()) {
-                    tamable.growUp(6000);
+                    tamable.growUp(400, true);
                     this.eat(player, stack);
+
+                    ANIMAL.sync(this);
 
                     return ActionResult.success(this.world.isClient);
                 }
