@@ -7,7 +7,6 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
 
 import java.util.Arrays;
@@ -18,7 +17,7 @@ import java.util.stream.Stream;
 
 import static github.KingVampyre.DeepTrenches.common.component.ComponentSyncOperations.*;
 
-public class SchoolingAnimalComponent extends WildAnimalComponent implements SchoolingComponent {
+public class SchoolingAnimalComponent extends PassiveAnimalComponent implements SchoolingComponent {
 
     protected final int maxSchoolSize;
 

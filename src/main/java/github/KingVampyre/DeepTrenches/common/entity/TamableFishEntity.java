@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.common.entity;
 
+import github.KingVampyre.DeepTrenches.common.component.animal.AnimalComponent;
 import github.KingVampyre.DeepTrenches.common.component.animal.TamableAnimalComponent;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -12,7 +13,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.scoreboard.AbstractTeam;
@@ -71,7 +71,7 @@ public abstract class TamableFishEntity extends AngerableFishEntity {
             Item item = stack.getItem();
 
             if (this.world.isClient) {
-                boolean bl = tamable.isOwner(player) || tamable.getIsTamed() || item == Items.BONE && !tamable.getIsTamed() && !this.hasAngerTime();
+                boolean bl = tamable.isOwner(player) || tamable.getIsTamed() || tamable.isTameItem(stack) && !tamable.getIsTamed() && !this.hasAngerTime();
 
                 return bl ? ActionResult.CONSUME : ActionResult.PASS;
             }
@@ -83,8 +83,7 @@ public abstract class TamableFishEntity extends AngerableFishEntity {
                 if (tamable.isBreedingItem(stack) && health < maxHealth) {
                     FoodComponent food = item.getFoodComponent();
 
-                    if (!player.abilities.creativeMode)
-                        stack.decrement(1);
+                    this.eat(player, stack);
 
                     if(food != null) {
                         int hunger = food.getHunger();
@@ -97,8 +96,7 @@ public abstract class TamableFishEntity extends AngerableFishEntity {
 
             } else if (tamable.isTameItem(stack) && !this.hasAngerTime()) {
 
-                if (!player.abilities.creativeMode)
-                    stack.decrement(1);
+                this.eat(player, stack);
 
                 if (this.random.nextInt(3) == 0) {
                     tamable.setTamedBy(player);
@@ -110,9 +108,88 @@ public abstract class TamableFishEntity extends AngerableFishEntity {
                 return ActionResult.SUCCESS;
             }
 
+            if (tamable.isBreedingItem(stack)) {
+                int growingAge = tamable.getGrowingAge();
+
+                if (!this.world.isClient && growingAge == 0 && tamable.getInLove() <= 0) {
+                    this.eat(player, stack);
+                    tamable.setInLove(player);
+
+                    return ActionResult.SUCCESS;
+                }
+
+                if (this.isBaby()) {
+                    tamable.growUp(6000);
+                    this.eat(player, stack);
+
+                    return ActionResult.success(this.world.isClient);
+                }
+
+                if (this.world.isClient)
+                    return ActionResult.CONSUME;
+            }
+
         }
 
         return super.interactMob(player, hand);
+    }
+
+    @Override
+    protected void mobTick() {
+        Optional<TamableAnimalComponent> component = ANIMAL.maybeGet(this).map(TamableAnimalComponent.class::cast);
+
+        if(component.isPresent()) {
+            TamableAnimalComponent animal = component.get();
+
+            if (animal.getGrowingAge() != 0)
+                animal.resetInLove();
+            else
+                this.calculateDimensions();
+        }
+
+        super.mobTick();
+    }
+
+    @Override
+    public void tickMovement() {
+        super.tickMovement();
+
+        Optional<TamableAnimalComponent> component = ANIMAL.maybeGet(this).map(TamableAnimalComponent.class::cast);
+
+        if(component.isPresent()) {
+            TamableAnimalComponent animal = component.get();
+
+            if (animal.getGrowingAge() != 0)
+                animal.resetInLove();
+
+            int inLove = animal.getInLove();
+
+            if (animal.isInLove()) {
+                animal.setInLove(--inLove);
+
+                if (animal.getInLove() % 10 == 0)
+                    this.addEmoteParticle(true);
+            }
+
+        }
+
+    }
+
+    @Override
+    public boolean damage(DamageSource source, float amount) {
+        Optional<TamableAnimalComponent> component = ANIMAL.maybeGet(this).map(TamableAnimalComponent.class::cast);
+
+        if (this.isInvulnerableTo(source))
+            return false;
+        else
+            component.ifPresent(AnimalComponent::resetInLove);
+
+        return super.damage(source, amount);
+    }
+
+    protected void eat(PlayerEntity player, ItemStack stack) {
+        if (!player.abilities.creativeMode)
+            stack.decrement(1);
     }
 
     @Override
@@ -148,6 +225,11 @@ public abstract class TamableFishEntity extends AngerableFishEntity {
             MinecraftClient.getInstance().particleManager.addParticle(particleEffect, x, y, z, velocityX, velocityY, velocityZ);
         }
 
+    }
+
+    @Override
+    public boolean isBaby() {
+        return ANIMAL.maybeGet(this).map(AnimalComponent::isBaby).orElse(false);
     }
 
     @Override

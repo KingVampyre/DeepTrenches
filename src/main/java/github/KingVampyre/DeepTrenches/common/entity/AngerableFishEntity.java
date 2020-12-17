@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
-public abstract class AngerableFishEntity extends AnimatedFishEntity implements Angerable {
+public abstract class AngerableFishEntity extends PassiveFishEntity implements Angerable {
 
     private static final TrackedData<Integer> ANGER = DataTracker.registerData(AngerableFishEntity.class, TrackedDataHandlerRegistry.INTEGER);
 

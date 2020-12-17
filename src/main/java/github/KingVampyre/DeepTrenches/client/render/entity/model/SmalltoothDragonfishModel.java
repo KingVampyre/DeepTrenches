@@ -4,12 +4,12 @@
 // Blockbench plugin created by Gecko
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
+import github.KingVampyre.DeepTrenches.common.render.entity.model.AnimalModel;
 import github.KingVampyre.DeepTrenches.core.entity.SmalltoothDragonfishEntity;
 import software.bernie.geckolib.forgetofabric.ResourceLocation;
-import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
 
-public class SmalltoothDragonfishModel extends AnimatedEntityModel<SmalltoothDragonfishEntity> {
+public class SmalltoothDragonfishModel extends AnimalModel<SmalltoothDragonfishEntity> {
 
     private final AnimatedModelRenderer root;
     private final AnimatedModelRenderer Body;

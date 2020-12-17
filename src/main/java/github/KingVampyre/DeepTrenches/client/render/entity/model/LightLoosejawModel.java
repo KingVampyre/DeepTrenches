@@ -4,12 +4,12 @@
 // Blockbench plugin created by Gecko
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
+import github.KingVampyre.DeepTrenches.common.render.entity.model.AnimalModel;
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import software.bernie.geckolib.forgetofabric.ResourceLocation;
-import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
 
-public class LightLoosejawModel extends AnimatedEntityModel<LightLoosejawEntity> {
+public class LightLoosejawModel extends AnimalModel<LightLoosejawEntity> {
 
     private final AnimatedModelRenderer root;
     private final AnimatedModelRenderer Body;

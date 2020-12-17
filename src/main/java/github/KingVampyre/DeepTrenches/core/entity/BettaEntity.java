@@ -2,7 +2,7 @@ package github.KingVampyre.DeepTrenches.core.entity;
 
 import github.KingVampyre.DeepTrenches.common.component.animal.TamableAnimalComponent;
 import github.KingVampyre.DeepTrenches.common.entity.TamableFishEntity;
-import github.KingVampyre.DeepTrenches.common.entity.ai.goal.FollowOwnerGoal;
+import github.KingVampyre.DeepTrenches.common.entity.ai.goal.TamedAnimalMateGoal;
 import github.KingVampyre.DeepTrenches.common.entity.ai.goal.UnderwaterFollowOwnerGoal;
 import github.KingVampyre.DeepTrenches.core.init.Components;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
@@ -75,6 +75,7 @@ public class BettaEntity extends TamableFishEntity {
         TamableAnimalComponent tamable = (TamableAnimalComponent) Components.ANIMAL.get(this);
         double speed = this.getAttributeValue(EntityAttributes.GENERIC_MOVEMENT_SPEED);
 
+        this.goalSelector.add(3, new TamedAnimalMateGoal(this, tamable, 1.0F, 8.0F, 3.0F, 6000, -24000, 60));
         this.goalSelector.add(3, new UnderwaterFollowOwnerGoal(this, tamable, speed, 12.0F, 4.0F, 2.0F, false));
     }
 

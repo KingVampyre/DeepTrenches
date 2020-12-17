@@ -13,7 +13,7 @@ import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.common.component.ComponentSyncOperations.*;
 
-public class WildAnimalComponent implements AnimalComponent {
+public class PassiveAnimalComponent implements AnimalComponent {
 
     protected final Ingredient breedItems;
     protected final MobEntity mob;
@@ -21,10 +21,11 @@ public class WildAnimalComponent implements AnimalComponent {
     protected int forcedAge;
     protected int forcedAgeTimer;
     protected int growingAge;
+    protected int happyTicksRemaining;
     protected int inLove;
     protected UUID playerInLove;
 
-    public WildAnimalComponent(MobEntity mob, Ingredient breedItems) {
+    public PassiveAnimalComponent(MobEntity mob, Ingredient breedItems) {
         this.breedItems = breedItems;
         this.mob = mob;
     }
@@ -42,6 +43,32 @@ public class WildAnimalComponent implements AnimalComponent {
     @Override
     public UUID getPlayerInLove() {
         return this.playerInLove;
+    }
+
+    @Override
+    public void growUp(int age) {
+        this.growUp(age, false);
+    }
+
+    @Override
+    public void growUp(int age, boolean overGrow) {
+        int growingAge = age * 20 + this.growingAge;
+
+        if (growingAge > 0)
+            growingAge = 0;
+
+        int forcedAge = growingAge - this.growingAge;
+        this.setGrowingAge(growingAge);
+
+        if (overGrow) {
+            this.forcedAge += forcedAge;
+
+            if (this.happyTicksRemaining == 0)
+                this.happyTicksRemaining = 40;
+        }
+
+        if (this.getGrowingAge() == 0)
+            this.setGrowingAge(this.forcedAge);
     }
 
     @Override
@@ -97,8 +124,18 @@ public class WildAnimalComponent implements AnimalComponent {
     }
 
     @Override
+    public int getHappyTicksRemaining() {
+        return this.happyTicksRemaining;
+    }
+
+    @Override
     public void setGrowingAge(int growingAge) {
         this.growingAge = growingAge;
+    }
+
+    @Override
+    public void setHappyTicksRemaining(int happyTicksRemaining) {
+        this.happyTicksRemaining = happyTicksRemaining;
     }
 
     @Override

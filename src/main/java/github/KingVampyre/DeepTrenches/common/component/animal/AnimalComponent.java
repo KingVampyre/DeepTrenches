@@ -19,11 +19,17 @@ public interface AnimalComponent extends AutoSyncedComponent {
 
     int getGrowingAge();
 
+    int getHappyTicksRemaining();
+
     int getInLove();
 
     MobEntity getMob();
 
     UUID getPlayerInLove();
+
+    void growUp(int age);
+
+    void growUp(int age, boolean overGrow);
 
     boolean isBreedingItem(ItemStack stack);
 
@@ -33,15 +39,13 @@ public interface AnimalComponent extends AutoSyncedComponent {
 
     void setGrowingAge(int growingAge);
 
+    void setHappyTicksRemaining(int happyTicksRemaining);
+
     void setInLove(int inLove);
 
     void setInLove(PlayerEntity player);
 
     void setPlayerInLove(UUID playerInLove);
-
-    default boolean canBreed() {
-        return this.getInLove() > 0;
-    }
 
     default boolean canBreed(MobEntity entity) {
         Optional<AnimalComponent> component = Components.ANIMAL.maybeGet(entity);
@@ -60,7 +64,7 @@ public interface AnimalComponent extends AutoSyncedComponent {
         return false;
     }
 
-    default PlayerEntity getLoveCause() {
+    default PlayerEntity getLovingPlayer() {
         UUID playerInLove = this.getPlayerInLove();
         World world = this.getMob().getEntityWorld();
 
@@ -68,6 +72,10 @@ public interface AnimalComponent extends AutoSyncedComponent {
             return null;
 
         return world.getPlayerByUuid(playerInLove);
+    }
+
+    default boolean isBaby() {
+        return this.getGrowingAge() < 0;
     }
 
     default boolean isInLove() {

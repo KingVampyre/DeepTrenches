@@ -42,6 +42,10 @@ public class BettaRenderer extends MobEntityRenderer<BettaEntity, BettaModel> {
             matrices.translate(0.1F, -0.1F, -0.1F);
         else
             matrices.translate(0.0F, 0.1F, -0.1F);
+
+        if(entity.isBaby())
+            matrices.translate(0, -0.7F, 0);
+
     }
 
 }
