@@ -180,9 +180,14 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:wolftrap_seadevil"), EntityTypes.WOLFTRAP_SEADEVIL);
 
 		/* -------------------------------- Memory Module Type ------------------------------------------- */
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:breeding_age"), MemoryModuleTypes.BREEDING_AGE);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:forced_age"), MemoryModuleTypes.FORCED_AGE);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:happy_ticks_remaining"), MemoryModuleTypes.HAPPY_TICKS_REMAINING);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:love_ticks"), MemoryModuleTypes.LOVE_TICKS);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:loving_player"), MemoryModuleTypes.LOVING_PLAYER);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:owner"), MemoryModuleTypes.OWNER);
 		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:sitting"), MemoryModuleTypes.SITTING);
 		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:tamed"), MemoryModuleTypes.TAMED);
-		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:owner"), MemoryModuleTypes.OWNER);
 
 		/* -------------------------------- Loot Conditions ------------------------------------------- */
 		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);
