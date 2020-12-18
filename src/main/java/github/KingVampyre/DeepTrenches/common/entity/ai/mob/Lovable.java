@@ -1,6 +1,7 @@
 package github.KingVampyre.DeepTrenches.common.entity.ai.mob;
 
 import net.minecraft.entity.ExperienceOrbEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -10,7 +11,7 @@ import java.util.UUID;
 
 public interface Lovable {
 
-    boolean canBreedWith(Lovable lovable);
+    boolean canBreedWith(LivingEntity living);
 
     ExperienceOrbEntity createExperienceOrb(ServerWorld server, double x, double y, double z);
 

@@ -22,22 +22,20 @@
 		"client": [
 			"github.KingVampyre.DeepTrenches.client.DeepTrenchesClient"
 		],
-		"cardinal-components-block": [
-			"github.KingVampyre.DeepTrenches.core.util.ComponentInitializer"
-		],
 		"cardinal-components-entity": [
 			"github.KingVampyre.DeepTrenches.core.util.ComponentInitializer"
 		]
 	},
+	"accessWidener" : "deep_trenches.accesswidener",
 	"custom": {
         "cardinal-components": [
-			"deep_trenches:animal",
-			"deep_trenches:pollen",
-			"deep_trenches:schooling",
-			"deep_trenches:tamable"
+			"deep_trenches:pollen"
 		]
     },
-	"mixins": [ "deep_trenches.client.mixins.json","deep_trenches.core.mixins.json" ],
+	"mixins": [
+		"deep_trenches.client.mixins.json",
+		"deep_trenches.core.mixins.json"
+	],
 	"depends": {
 		"fabricloader": ">=0.7.4",
 		"fabric": "*",

@@ -48,6 +48,10 @@ dependencies {
 	modImplementation 'software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0:dev'
 }
 
+minecraft {
+	accessWidener "src/main/resources/deep_trenches.accesswidener"
+}
+
 processResources {
 	inputs.property "version", project.version
 

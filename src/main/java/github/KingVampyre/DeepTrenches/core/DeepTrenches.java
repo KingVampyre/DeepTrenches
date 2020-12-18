@@ -4,6 +4,7 @@ import github.KingVampyre.DeepTrenches.core.init.*;
 import github.KingVampyre.DeepTrenches.core.util.DefaultAttributeHelper;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.entity.ai.brain.sensor.SensorType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
@@ -188,6 +189,9 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:owner"), MemoryModuleTypes.OWNER);
 		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:sitting"), MemoryModuleTypes.SITTING);
 		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:tamed"), MemoryModuleTypes.TAMED);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:temptation_cooldown_ticks"), MemoryModuleTypes.TEMPTATION_COOLDOWN_TICKS);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:tempted"), MemoryModuleTypes.TEMPTED);
+		Registry.register(MEMORY_MODULE_TYPE, new Identifier("deep_trenches:tempting_player"), MemoryModuleTypes.TEMPTING_PLAYER);
 
 		/* -------------------------------- Loot Conditions ------------------------------------------- */
 		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);

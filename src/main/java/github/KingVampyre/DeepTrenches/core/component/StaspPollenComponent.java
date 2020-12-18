@@ -37,12 +37,7 @@ public class StaspPollenComponent extends PollenComponent {
     }
 
     public void setAqueanSap(int aqueanSap) {
-
-        if (aqueanSap >= this.maxAqueanSap)
-            this.aqueanSap = this.maxAqueanSap;
-        else
-            this.aqueanSap = aqueanSap;
-
+        this.aqueanSap = Math.min(aqueanSap, this.maxAqueanSap);
     }
 
     public void setTicksSincePollination(int ticksSincePollination) {
