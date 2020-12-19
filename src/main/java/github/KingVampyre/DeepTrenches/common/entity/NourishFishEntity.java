@@ -29,10 +29,7 @@ public abstract class NourishFishEntity extends MindfulFishEntity implements Nou
         if (this.world.isClient)
             return this.dataTracker.get(CHILD) ? -1 : 1;
 
-        if(this.brain.hasMemoryModule(BREEDING_AGE))
-            return this.brain.getOptionalMemory(BREEDING_AGE).orElse(0);
-
-        return 0;
+        return this.brain.getOptionalMemory(BREEDING_AGE).orElse(0);
     }
 
     @Override
@@ -88,7 +85,7 @@ public abstract class NourishFishEntity extends MindfulFishEntity implements Nou
     @Override
     public void setBreedingAge(int breedingAge) {
         int i = this.getBreedingAge();
-        this.brain.remember(FORCED_AGE, breedingAge);
+        this.brain.remember(BREEDING_AGE, breedingAge);
 
         if (i < 0 && breedingAge >= 0 || i >= 0 && breedingAge < 0) {
             this.dataTracker.set(CHILD, breedingAge < 0);
