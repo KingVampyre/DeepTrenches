@@ -47,7 +47,7 @@ public class TemptingSensor extends Sensor<PathAwareEntity> {
 
         server.getPlayers()
                 .stream()
-                .filter(EntityPredicates.EXCEPT_SPECTATOR)
+                .filter(EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR)
                 .filter(player -> TARGET_PREDICATE.test(entity, player))
                 .filter(player -> entity.isInRange(player, this.maxDistance))
                 .filter(this::isHoldingTempting)
