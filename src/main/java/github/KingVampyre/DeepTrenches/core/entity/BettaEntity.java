@@ -1,16 +1,12 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Dynamic;
 import github.KingVampyre.DeepTrenches.common.entity.TamableFishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
-import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTask;
-import github.KingVampyre.DeepTrenches.common.entity.ai.task.TemptingCooldownTask;
-import github.KingVampyre.DeepTrenches.common.entity.ai.task.TemptingTask;
-import github.KingVampyre.DeepTrenches.common.entity.ai.task.UnderwaterWalkTowardsTask;
+import github.KingVampyre.DeepTrenches.common.entity.ai.task.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ExperienceOrbEntity;
@@ -18,11 +14,13 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.brain.Activity;
 import net.minecraft.entity.ai.brain.Brain;
-import net.minecraft.entity.ai.brain.MemoryModuleState;
 import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.ai.brain.sensor.Sensor;
 import net.minecraft.entity.ai.brain.sensor.SensorType;
-import net.minecraft.entity.ai.brain.task.*;
+import net.minecraft.entity.ai.brain.task.GoTowardsLookTarget;
+import net.minecraft.entity.ai.brain.task.LookAroundTask;
+import net.minecraft.entity.ai.brain.task.StrollTask;
+import net.minecraft.entity.ai.brain.task.WanderAroundTask;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
@@ -34,7 +32,6 @@ import net.minecraft.util.math.IntRange;
 import net.minecraft.world.World;
 
 import java.util.List;
-import java.util.Optional;
 
 import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_235;
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
@@ -108,31 +105,23 @@ public class BettaEntity extends TamableFishEntity {
         return new ExperienceOrbEntity(server, x, y, z, this.random.nextInt(7) + 1);
     }
 
-    private static Optional<? extends LivingEntity> method_33247(BettaEntity arg) {
-        return method_33250(arg) ? Optional.empty() : arg.getBrain().getOptionalMemory(MemoryModuleType.NEAREST_HOSTILE);
-    }
-
-    private static boolean method_33250(BettaEntity arg) {
-        return arg.getBrain().hasMemoryModule(BREEDING_TARGET);
-    }
-
     @Override
     protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
         Brain<BettaEntity> brain = this.createBrainProfile().deserialize(dynamic);
 
-        brain.setTaskList(Activity.CORE, 0, ImmutableList.of(new LookAroundTask(45, 90), new WanderAroundTask(), new TemptingCooldownTask()));
-        brain.setTaskList(Activity.IDLE, ImmutableList.of(
-                Pair.of(0, new TimeLimitedTask<>(new FollowMobTask(EntityType.PLAYER, 6.0F), IntRange.between(30, 60))),
-                Pair.of(1, new RandomTask(ImmutableList.of(Pair.of(new LoveTask<>(3.0F, 0.2F), 1), Pair.of(new TemptingTask(0.9F), 1), Pair.of(new WalkTowardClosestAdultTask<>(IntRange.between(5, 16), 0.9F), 1)))),
-                Pair.of(2, new UpdateAttackTargetTask<>(BettaEntity::method_33247)),
-                Pair.of(2, new UnderwaterWalkTowardsTask(6, 0.15F)),
-                Pair.of(3, new CompositeTask(ImmutableMap.of(MemoryModuleType.WALK_TARGET, MemoryModuleState.VALUE_ABSENT), ImmutableSet.of(), CompositeTask.Order.ORDERED, CompositeTask.RunMode.TRY_ALL, ImmutableList.of(
-                        Pair.of(new StrollTask(0.15F), 2),
-                        Pair.of(new GoTowardsLookTarget(0.9F, 3), 3),
-                        Pair.of(new ConditionalTask<>(Entity::isInsideWaterOrBubbleColumn, new WaitTask(30, 60)), 5),
-                        Pair.of(new ConditionalTask<>(Entity::isOnGround, new WaitTask(200, 400)), 5))))));
+        brain.setTaskList(Activity.CORE, 0, ImmutableList.of(
+                new LookAroundTask(45, 90),
+                new WanderAroundTask(200, 350),
+                new TemptingCooldownTask()));
 
-        brain.setTaskList(Activity.FIGHT, 0, ImmutableList.of(new ForgetAttackTargetTask<>(), new RangedApproachTask(0.9F), new MeleeAttackTask(20), new ForgetTask<>(betta -> betta.getBrain().hasMemoryModule(BREEDING_TARGET), MemoryModuleType.ATTACK_TARGET)), MemoryModuleType.ATTACK_TARGET);
+        brain.setTaskList(Activity.IDLE, ImmutableList.of(
+                Pair.of(0, new LoveTask<>(3.0F, 0.9F)),
+                Pair.of(1, new TemptingTask(0.9F)),
+                Pair.of(1, new UnderwaterFollowOwnerTask<>(0.9F, 12.0F, 4.0F, 2.0F)),
+                Pair.of(2, new UnderwaterWalkTowardsTask(9, 0.9F)),
+                Pair.of(2, new StrollTask(0.9F, 12, 9)),
+                Pair.of(2, new GoTowardsLookTarget(0.9F, 1))
+        ));
 
         brain.setCoreActivities(ImmutableSet.of(Activity.CORE));
         brain.setDefaultActivity(Activity.IDLE);
@@ -150,6 +139,7 @@ public class BettaEntity extends TamableFishEntity {
     protected ItemStack getFishBucketItem() {
         return new ItemStack(BETTA_BUCKET);
     }
+
 
     @Override
     protected SoundEvent getAmbientSound() {
@@ -200,14 +190,14 @@ public class BettaEntity extends TamableFishEntity {
     protected void mobTick() {
         super.mobTick();
 
-        this.world.getProfiler().push("bettaBrain");
         Brain<BettaEntity> brain = (Brain<BettaEntity>) this.getBrain();
         ServerWorld server = (ServerWorld) this.world;
 
+        this.world.getProfiler().push("bettaBrain");
         brain.tick(server, this);
         this.world.getProfiler().pop();
         this.world.getProfiler().push("bettaActivityUpdate");
-        this.getBrain().resetPossibleActivities(ImmutableList.of(Activity.FIGHT, Activity.IDLE));
+        brain.resetPossibleActivities(ImmutableList.of(Activity.IDLE));
         this.world.getProfiler().pop();
     }
 

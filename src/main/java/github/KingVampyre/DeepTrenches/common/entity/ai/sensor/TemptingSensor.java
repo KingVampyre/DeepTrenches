@@ -14,8 +14,10 @@ import net.minecraft.server.world.ServerWorld;
 
 import java.util.Comparator;
 import java.util.Set;
+import java.util.function.Predicate;
 
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.TEMPTING_PLAYER;
+import static net.minecraft.predicate.entity.EntityPredicates.EXCEPT_SPECTATOR;
 
 public class TemptingSensor extends Sensor<PathAwareEntity> {
 
@@ -47,7 +49,7 @@ public class TemptingSensor extends Sensor<PathAwareEntity> {
 
         server.getPlayers()
                 .stream()
-                .filter(EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR)
+                .filter(EXCEPT_SPECTATOR)
                 .filter(player -> TARGET_PREDICATE.test(entity, player))
                 .filter(player -> entity.isInRange(player, this.maxDistance))
                 .filter(this::isHoldingTempting)
