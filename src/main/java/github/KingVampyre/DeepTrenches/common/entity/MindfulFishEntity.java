@@ -10,4 +10,9 @@ public abstract class MindfulFishEntity extends AnimatedFishEntity implements Mi
         super(type, world);
     }
 
+    @Override
+    protected void initGoals() {
+
+    }
+
 }
