@@ -1,46 +1,43 @@
 package github.KingVampyre.DeepTrenches.common.entity.ai.task;
 
 import com.google.common.collect.ImmutableMap;
-import net.minecraft.entity.ai.brain.MemoryModuleState;
-import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.ai.brain.task.LookTargetUtil;
 import net.minecraft.entity.ai.brain.task.Task;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
 
-import java.util.Iterator;
+import static net.minecraft.entity.ai.brain.MemoryModuleState.REGISTERED;
+import static net.minecraft.entity.ai.brain.MemoryModuleState.VALUE_ABSENT;
+import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
+import static net.minecraft.tag.FluidTags.WATER;
 
 public class UnderwaterWalkTowardsTask extends Task<PathAwareEntity> {
-    private final int field_28317;
-    private final float field_28318;
 
-    public UnderwaterWalkTowardsTask(int i, float f) {
-        super(ImmutableMap.of(MemoryModuleType.ATTACK_TARGET, MemoryModuleState.VALUE_ABSENT, MemoryModuleType.WALK_TARGET, MemoryModuleState.VALUE_ABSENT, MemoryModuleType.LOOK_TARGET, MemoryModuleState.REGISTERED));
-        this.field_28317 = i;
-        this.field_28318 = f;
+    protected final int range;
+    protected final float speed;
+
+    public UnderwaterWalkTowardsTask(int range, float speed) {
+        super(ImmutableMap.of(ATTACK_TARGET, VALUE_ABSENT, WALK_TARGET, VALUE_ABSENT, LOOK_TARGET, REGISTERED));
+        this.range = range;
+        this.speed = speed;
     }
 
+    @Override
     protected boolean shouldRun(ServerWorld serverWorld, PathAwareEntity pathAwareEntity) {
-        return !pathAwareEntity.world.getFluidState(pathAwareEntity.getBlockPos()).isIn(FluidTags.WATER);
+        BlockPos pos = pathAwareEntity.getBlockPos();
+
+        return !pathAwareEntity.world.getFluidState(pos).isIn(WATER);
     }
 
+    @Override
     protected void run(ServerWorld serverWorld, PathAwareEntity pathAwareEntity, long l) {
-        BlockPos blockPos = null;
-        Iterable<BlockPos> iterable = BlockPos.iterateOutwards(pathAwareEntity.getBlockPos(), this.field_28317, this.field_28317, this.field_28317);
-        Iterator var7 = iterable.iterator();
+        Iterable<BlockPos> iterable = BlockPos.iterateOutwards(pathAwareEntity.getBlockPos(), this.range, this.range, this.range);
 
-        while (var7.hasNext()) {
-            BlockPos blockPos2 = (BlockPos) var7.next();
-            if (pathAwareEntity.world.getFluidState(blockPos2).isIn(FluidTags.WATER)) {
-                blockPos = blockPos2.toImmutable();
-                break;
-            }
-        }
+        for (BlockPos pos : iterable) {
 
-        if (blockPos != null) {
-            LookTargetUtil.walkTowards(pathAwareEntity, blockPos, this.field_28318, 0);
+            if (pathAwareEntity.world.getFluidState(pos).isIn(WATER))
+                LookTargetUtil.walkTowards(pathAwareEntity, pos, this.speed, 0);
         }
 
     }
