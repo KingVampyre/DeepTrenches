@@ -4,6 +4,7 @@ import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Tamable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FoodComponent;
@@ -17,10 +18,10 @@ import net.minecraft.util.Util;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
+import java.util.List;
 import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
-
 
 public abstract class TamableFishEntity extends LovingFishEntity implements Tamable {
 
@@ -44,6 +45,17 @@ public abstract class TamableFishEntity extends LovingFishEntity implements Tama
         }
 
         return super.getScoreboardTeam();
+    }
+
+    @Override
+    public List<MemoryModuleType<?>> getMemoryModules() {
+        List<MemoryModuleType<?>> memoryModules = super.getMemoryModules();
+
+        memoryModules.add(OWNER);
+        memoryModules.add(SITTING);
+        memoryModules.add(TAMED);
+
+        return memoryModules;
     }
 
     @Override

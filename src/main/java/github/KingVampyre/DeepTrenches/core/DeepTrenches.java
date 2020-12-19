@@ -202,6 +202,10 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(POTION, new Identifier("deep_trenches:softbones"), ModPotions.SOFTBONES);
 		Registry.register(POTION, new Identifier("deep_trenches:strong_softbones"), ModPotions.STRONG_SOFTBONES);
 
+		/* -------------------------------- Sensor Type ------------------------------------------- */
+		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:betta_tempting"), SensorTypes.BETTA_TEMPTING);
+		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:nearest_adult"), SensorTypes.NEAREST_ADULT);
+
 		/* -------------------------------- Status Effects ------------------------------------------- */
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:braitor_beauty"), BRAITOR_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cosmos_beauty"), COSMOS_BEAUTY);

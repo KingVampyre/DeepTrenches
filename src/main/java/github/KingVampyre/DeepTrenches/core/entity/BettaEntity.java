@@ -1,13 +1,28 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.mojang.datafixers.util.Pair;
+import com.mojang.serialization.Dynamic;
 import github.KingVampyre.DeepTrenches.common.entity.TamableFishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
+import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTask;
+import github.KingVampyre.DeepTrenches.common.entity.ai.task.TemptingCooldownTask;
+import github.KingVampyre.DeepTrenches.common.entity.ai.task.TemptingTask;
+import github.KingVampyre.DeepTrenches.common.entity.ai.task.UnderwaterWalkTowardsTask;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.Durations;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
+import net.minecraft.entity.ai.brain.Activity;
+import net.minecraft.entity.ai.brain.Brain;
+import net.minecraft.entity.ai.brain.MemoryModuleState;
+import net.minecraft.entity.ai.brain.MemoryModuleType;
+import net.minecraft.entity.ai.brain.sensor.Sensor;
+import net.minecraft.entity.ai.brain.sensor.SensorType;
+import net.minecraft.entity.ai.brain.task.*;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
@@ -18,12 +33,21 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.IntRange;
 import net.minecraft.world.World;
 
+import java.util.List;
+import java.util.Optional;
+
 import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_235;
+import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.BETTA_BUCKET;
-import static net.minecraft.entity.attribute.EntityAttributes.GENERIC_MOVEMENT_SPEED;
+import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.BETTA_TEMPTING;
+import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.NEAREST_ADULT;
+import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
+import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
 import static net.minecraft.item.Items.COD;
 
 public class BettaEntity extends TamableFishEntity {
+
+    protected static final ImmutableList<? extends SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(SensorType.HURT_BY, NEAREST_LIVING_ENTITIES, BETTA_TEMPTING, NEAREST_ADULT);
 
     private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
 
@@ -34,6 +58,36 @@ public class BettaEntity extends TamableFishEntity {
     @Override
     public boolean canAttackWithOwner(LivingEntity target, LivingEntity owner) {
         return false;
+    }
+
+    @Override
+    protected Brain.Profile<BettaEntity> createBrainProfile() {
+        return Brain.createProfile(this.getMemoryModules(), SENSORS);
+    }
+
+    @Override
+    public List<MemoryModuleType<?>> getMemoryModules() {
+        List<MemoryModuleType<?>> memoryModules = super.getMemoryModules();
+
+        memoryModules.add(ATTACK_COOLING_DOWN);
+        memoryModules.add(ATTACK_TARGET);
+        memoryModules.add(BREEDING_TARGET);
+        memoryModules.add(CANT_REACH_WALK_TARGET_SINCE);
+        memoryModules.add(HURT_BY_ENTITY);
+        memoryModules.add(LOOK_TARGET);
+        memoryModules.add(MOBS);
+        memoryModules.add(NEAREST_HOSTILE);
+        memoryModules.add(NEAREST_VISIBLE_ADULT);
+        memoryModules.add(NEAREST_VISIBLE_PLAYER);
+        memoryModules.add(NEAREST_VISIBLE_TARGETABLE_PLAYER);
+        memoryModules.add(PATH);
+        memoryModules.add(TEMPTATION_COOLDOWN_TICKS);
+        memoryModules.add(TEMPTING_PLAYER);
+        memoryModules.add(TEMPTED);
+        memoryModules.add(VISIBLE_MOBS);
+        memoryModules.add(WALK_TARGET);
+
+        return ImmutableList.copyOf(memoryModules);
     }
 
     @Override
@@ -52,6 +106,39 @@ public class BettaEntity extends TamableFishEntity {
     @Override
     public ExperienceOrbEntity createExperienceOrb(ServerWorld server, double x, double y, double z) {
         return new ExperienceOrbEntity(server, x, y, z, this.random.nextInt(7) + 1);
+    }
+
+    private static Optional<? extends LivingEntity> method_33247(BettaEntity arg) {
+        return method_33250(arg) ? Optional.empty() : arg.getBrain().getOptionalMemory(MemoryModuleType.NEAREST_HOSTILE);
+    }
+
+    private static boolean method_33250(BettaEntity arg) {
+        return arg.getBrain().hasMemoryModule(BREEDING_TARGET);
+    }
+
+    @Override
+    protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
+        Brain<BettaEntity> brain = this.createBrainProfile().deserialize(dynamic);
+
+        brain.setTaskList(Activity.CORE, 0, ImmutableList.of(new LookAroundTask(45, 90), new WanderAroundTask(), new TemptingCooldownTask()));
+        brain.setTaskList(Activity.IDLE, ImmutableList.of(
+                Pair.of(0, new TimeLimitedTask<>(new FollowMobTask(EntityType.PLAYER, 6.0F), IntRange.between(30, 60))),
+                Pair.of(1, new RandomTask(ImmutableList.of(Pair.of(new LoveTask<>(3.0F, 0.2F), 1), Pair.of(new TemptingTask(0.9F), 1), Pair.of(new WalkTowardClosestAdultTask<>(IntRange.between(5, 16), 0.9F), 1)))),
+                Pair.of(2, new UpdateAttackTargetTask<>(BettaEntity::method_33247)),
+                Pair.of(2, new UnderwaterWalkTowardsTask(6, 0.15F)),
+                Pair.of(3, new CompositeTask(ImmutableMap.of(MemoryModuleType.WALK_TARGET, MemoryModuleState.VALUE_ABSENT), ImmutableSet.of(), CompositeTask.Order.ORDERED, CompositeTask.RunMode.TRY_ALL, ImmutableList.of(
+                        Pair.of(new StrollTask(0.15F), 2),
+                        Pair.of(new GoTowardsLookTarget(0.9F, 3), 3),
+                        Pair.of(new ConditionalTask<>(Entity::isInsideWaterOrBubbleColumn, new WaitTask(30, 60)), 5),
+                        Pair.of(new ConditionalTask<>(Entity::isOnGround, new WaitTask(200, 400)), 5))))));
+
+        brain.setTaskList(Activity.FIGHT, 0, ImmutableList.of(new ForgetAttackTargetTask<>(), new RangedApproachTask(0.9F), new MeleeAttackTask(20), new ForgetTask<>(betta -> betta.getBrain().hasMemoryModule(BREEDING_TARGET), MemoryModuleType.ATTACK_TARGET)), MemoryModuleType.ATTACK_TARGET);
+
+        brain.setCoreActivities(ImmutableSet.of(Activity.CORE));
+        brain.setDefaultActivity(Activity.IDLE);
+        brain.resetPossibleActivities();
+
+        return brain;
     }
 
     @Override
@@ -104,26 +191,24 @@ public class BettaEntity extends TamableFishEntity {
     }
 
     @Override
+    public void setBaby(boolean baby) {
+        this.setBreedingAge(baby ? -24000 : 0);
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
     protected void mobTick() {
         super.mobTick();
 
-        EntityAttributeInstance instance = this.getAttributeInstance(GENERIC_MOVEMENT_SPEED);
+        this.world.getProfiler().push("bettaBrain");
+        Brain<BettaEntity> brain = (Brain<BettaEntity>) this.getBrain();
+        ServerWorld server = (ServerWorld) this.world;
 
-        if (instance != null) {
-            EntityAttributeModifier modifier = this.getSpeedModifier();
-
-            if (this.getAttacker() != null && !instance.hasModifier(modifier))
-                instance.addTemporaryModifier(modifier);
-
-            if (this.getAttacker() == null && instance.hasModifier(modifier))
-                instance.removeModifier(modifier);
-        }
-
-    }
-
-    @Override
-    public void setBaby(boolean baby) {
-        this.setBreedingAge(baby ? -24000 : 0);
+        brain.tick(server, this);
+        this.world.getProfiler().pop();
+        this.world.getProfiler().push("bettaActivityUpdate");
+        this.getBrain().resetPossibleActivities(ImmutableList.of(Activity.FIGHT, Activity.IDLE));
+        this.world.getProfiler().pop();
     }
 
 }

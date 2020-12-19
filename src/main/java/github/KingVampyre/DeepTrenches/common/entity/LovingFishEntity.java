@@ -7,7 +7,10 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ExperienceOrbEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleEffect;
@@ -17,6 +20,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
+import java.util.List;
 import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.LOVE_TICKS;
@@ -41,7 +45,17 @@ public abstract class LovingFishEntity extends AngerableFishEntity implements Lo
 
     @Override
     public UUID getLovingPlayerUuid() {
-        return null;
+        return this.brain.getOptionalMemory(LOVING_PLAYER).orElse(null);
+    }
+
+    @Override
+    public List<MemoryModuleType<?>> getMemoryModules() {
+        List<MemoryModuleType<?>> memoryModules = super.getMemoryModules();
+
+        memoryModules.add(LOVE_TICKS);
+        memoryModules.add(LOVING_PLAYER);
+
+        return memoryModules;
     }
 
     @Override
@@ -106,9 +120,11 @@ public abstract class LovingFishEntity extends AngerableFishEntity implements Lo
 
     @Override
     public void breed(ServerWorld server, Lovable other) {
-        Entity child = this.createChild(server, other);
+        Entity entity = this.createChild(server, other);
 
-        if (child != null) {
+        if (entity instanceof MobEntity) {
+            MobEntity mob = (MobEntity) entity;
+
             other.resetLoveTicks();
             this.resetLoveTicks();
 
@@ -116,9 +132,10 @@ public abstract class LovingFishEntity extends AngerableFishEntity implements Lo
             double y = this.getY();
             double z = this.getZ();
 
-            child.refreshPositionAndAngles(x, y, z, 0.0F, 0.0F);
+            mob.refreshPositionAndAngles(x, y, z, 0.0F, 0.0F);
+            mob.setBaby(true);
 
-            server.spawnEntityAndPassengers(child);
+            server.spawnEntityAndPassengers(mob);
             server.sendEntityStatus(this, (byte) 18);
 
             if (server.getGameRules().getBoolean(GameRules.DO_MOB_LOOT)) {
@@ -131,14 +148,20 @@ public abstract class LovingFishEntity extends AngerableFishEntity implements Lo
     }
 
     @Override
-    public boolean canBreedWith(Lovable lovable) {
+    public boolean canBreedWith(LivingEntity living) {
 
-        if (lovable == this)
-            return false;
-        else if (lovable.getClass() != this.getClass())
-            return false;
+        if(living instanceof Lovable) {
+            Lovable lovable = (Lovable) living;
 
-        return lovable.isInLove() && this.isInLove();
+            if (lovable == this)
+                return false;
+            else if (lovable.getClass() != this.getClass())
+                return false;
+
+            return lovable.isInLove() && this.isInLove();
+        }
+
+        return false;
     }
 
     @Override

@@ -1,20 +1,23 @@
 package github.KingVampyre.DeepTrenches.common.entity;
 
+import com.google.common.collect.Lists;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Nourishable;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.world.World;
 
+import java.util.List;
+
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 
-public abstract class NourishFishEntity extends AnimatedFishEntity implements Nourishable {
+public abstract class NourishFishEntity extends MindfulFishEntity implements Nourishable {
 
-    private static final TrackedData<Boolean> CHILD = DataTracker.registerData(PassiveEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    private static final TrackedData<Boolean> CHILD = DataTracker.registerData(NourishFishEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     protected NourishFishEntity(EntityType<? extends NourishFishEntity> type, World world) {
         super(type, world);
@@ -26,7 +29,10 @@ public abstract class NourishFishEntity extends AnimatedFishEntity implements No
         if (this.world.isClient)
             return this.dataTracker.get(CHILD) ? -1 : 1;
 
-        return this.brain.getOptionalMemory(BREEDING_AGE).orElse(0);
+        if(this.brain.hasMemoryModule(BREEDING_AGE))
+            return this.brain.getOptionalMemory(BREEDING_AGE).orElse(0);
+
+        return 0;
     }
 
     @Override
@@ -37,6 +43,11 @@ public abstract class NourishFishEntity extends AnimatedFishEntity implements No
     @Override
     public int getHappyTicksRemaining() {
         return this.brain.getOptionalMemory(HAPPY_TICKS_REMAINING).orElse(0);
+    }
+
+    @Override
+    public List<MemoryModuleType<?>> getMemoryModules() {
+        return Lists.newArrayList(BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING);
     }
 
     @Override
