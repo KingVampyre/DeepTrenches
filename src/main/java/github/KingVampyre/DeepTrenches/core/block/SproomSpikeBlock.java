@@ -2,7 +2,7 @@ package github.KingVampyre.DeepTrenches.core.block;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.SPROOM_LOG;
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.SPROOM_WOOD;
-import static github.KingVampyre.DeepTrenches.core.init.ModDamageSources.SPROOM_SPIKE;
+import static github.KingVampyre.DeepTrenches.core.init.DamageSources.SPROOM_SPIKE;
 import static net.minecraft.block.Blocks.JIGSAW;
 import static net.minecraft.block.enums.BlockHalf.BOTTOM;
 import static net.minecraft.block.enums.BlockHalf.TOP;

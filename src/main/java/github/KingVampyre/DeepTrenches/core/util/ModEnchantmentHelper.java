@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.util;
 
 import github.KingVampyre.DeepTrenches.common.entity.effect.EntityStatusEffectInstance;
-import github.KingVampyre.DeepTrenches.core.init.ModDamageSources;
+import github.KingVampyre.DeepTrenches.core.init.DamageSources;
 import github.KingVampyre.DeepTrenches.core.init.StatusEffects;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
@@ -24,7 +24,7 @@ public class ModEnchantmentHelper {
                 attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.SOUL_RAVENING, 200, amplifier));
 
                 entity.addStatusEffect(new EntityStatusEffectInstance(StatusEffects.SOUL_DRAINING, 200, modifier, living -> {
-                    DamageSource source = ModDamageSources.soulDraining(attacker);
+                    DamageSource source = DamageSources.soulDraining(attacker);
 
                     float hearts = 1 << amplifier;
                     float amount = 2 + hearts;
