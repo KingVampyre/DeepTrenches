@@ -284,50 +284,29 @@ public class DeepTrenchesClient implements ClientModInitializer {
         /* -------------------------------- Entity Renderers ------------------------------------------- */
         EntityRendererRegistry.INSTANCE.register(EntityTypes.ADAIGGER, (dispatcher, context) -> new AdaiggerRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BEARDED_SEADEVIL, (dispatcher, context) -> new BeardedSeadevilRenderer(dispatcher));
-
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.ATLANTIC_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.GLOWING_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.GRIMALDIS_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.MANY_RAYED_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.SHINY_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.TITTMANNS_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
-
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
-
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_DRAGONFISH, (dispatcher, context) -> new BlackDragonfishRenderer(dispatcher));
-
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_SCABBARD, (dispatcher, context) -> new BlackScabbardRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_SEADEVIL, (dispatcher, context) -> new BlackSeadevilRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLOBFISH, (dispatcher, context) -> new BlobfishRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_WHALE, (dispatcher, context) -> new BlueWhaleRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BOAT, (dispatcher, context) -> new ModBoatEntityRenderer(dispatcher));
-
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BOTTLE_FLY, (dispatcher, context) -> new BottleFlyRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BOTTLE_FLY_MAGGOT, (dispatcher, context) -> new BottleFlyMaggotRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BROWN_BEAR, (dispatcher, context) -> new BrownBearRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.CETACHSAL, (dispatcher, context) -> new CetachsalRenderer(dispatcher));
-
         EntityRendererRegistry.INSTANCE.register(EntityTypes.DEEP_LAKE_BETTA, (dispatcher, context) -> new DeepLakeBettaRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.FANGTOOTH, (dispatcher, context) -> new FangtoothRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.FINANGITE, (dispatcher, context) -> new FinangiteRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.FLY, (dispatcher, context) -> new FlyRenderer(dispatcher));
-
         EntityRendererRegistry.INSTANCE.register(EntityTypes.GIANT_HATCHETFISH, (dispatcher, context) -> new GiantHatchetfishRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.GIANT_SEED_SHRIMP, (dispatcher, context) -> new GiantSeedShrimpRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.HONEYCOMB_DRAGONFISH, (dispatcher, context) -> new HoneycombDragonfishRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.LACERATOR, (dispatcher, context) -> new LaceratorRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.LANCETFISH, (dispatcher, context) -> new LancetfishRenderer(dispatcher));
-
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.NORTHERN_BLACK_LOOSEJAW, (dispatcher, context) -> new BlackLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.SOUTHERN_BLACK_LOOSEJAW, (dispatcher, context) -> new BlackLoosejawRenderer(dispatcher));
-
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BIGLAMP_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.GOODYEARS_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.GUERNES_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.LIEMS_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.REMARKABLE_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.SMALL_LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
-
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_LOOSEJAW, (dispatcher, context) -> new BlackLoosejawRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.MAGGOT, (dispatcher, context) -> new MaggotRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.PRINCE_AXELS_WONDERFISH, (dispatcher, context) -> new PrinceAxelsWonderfishRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.SMALLTOOTH_DRAGONFISH, (dispatcher, context) -> new SmalltoothDragonfishRenderer(dispatcher));

@@ -1,11 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"deep_trenches:biglamp_light_loosejaw",
-		"deep_trenches:goodyears_light_loosejaw",
-		"deep_trenches:guernes_light_loosejaw",
-		"deep_trenches:liems_light_loosejaw",
-		"deep_trenches:remarkable_light_loosejaw",
-		"deep_trenches:small_light_loosejaw"
+		"deep_trenches:light_loosejaw"
 	]
 }

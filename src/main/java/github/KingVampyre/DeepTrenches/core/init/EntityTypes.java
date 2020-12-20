@@ -14,32 +14,7 @@ public class EntityTypes {
 			.dimensions(EntityDimensions.fixed(0.5F, 0.5F))
 			.build();
 
-	public static final EntityType<BarbeledLoosejawEntity> ATLANTIC_BARBELED_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.CREATURE, BarbeledLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<BarbeledLoosejawEntity> GLOWING_BARBELED_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.CREATURE, BarbeledLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<BarbeledLoosejawEntity> GRIMALDIS_BARBELED_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.CREATURE, BarbeledLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<BarbeledLoosejawEntity> MANY_RAYED_BARBELED_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.CREATURE, BarbeledLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<BarbeledLoosejawEntity> SHINY_BARBELED_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.CREATURE, BarbeledLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<BarbeledLoosejawEntity> TITTMANNS_BARBELED_LOOSEJAW = FabricEntityTypeBuilder
+	public static final EntityType<BarbeledLoosejawEntity> BARBELED_LOOSEJAW = FabricEntityTypeBuilder
 			.create(SpawnGroup.CREATURE, BarbeledLoosejawEntity::new)
 			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
 			.build();
@@ -59,12 +34,7 @@ public class EntityTypes {
 			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
 			.build();
 
-	public static final EntityType<BlackLoosejawEntity> NORTHERN_BLACK_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, BlackLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<BlackLoosejawEntity> SOUTHERN_BLACK_LOOSEJAW = FabricEntityTypeBuilder
+	public static final EntityType<BlackLoosejawEntity> BLACK_LOOSEJAW = FabricEntityTypeBuilder
 			.create(SpawnGroup.WATER_CREATURE, BlackLoosejawEntity::new)
 			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
 			.build();
@@ -159,32 +129,7 @@ public class EntityTypes {
 			.dimensions(EntityDimensions.fixed(0.2F, 0.4F))
 			.build();
 
-	public static final EntityType<LightLoosejawEntity> BIGLAMP_LIGHT_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, LightLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<LightLoosejawEntity> GOODYEARS_LIGHT_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, LightLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<LightLoosejawEntity> GUERNES_LIGHT_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, LightLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<LightLoosejawEntity> LIEMS_LIGHT_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, LightLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<LightLoosejawEntity> REMARKABLE_LIGHT_LOOSEJAW = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, LightLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
-			.build();
-
-	public static final EntityType<LightLoosejawEntity> SMALL_LIGHT_LOOSEJAW = FabricEntityTypeBuilder
+	public static final EntityType<LightLoosejawEntity> LIGHT_LOOSEJAW = FabricEntityTypeBuilder
 			.create(SpawnGroup.WATER_CREATURE, LightLoosejawEntity::new)
 			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
 			.build();

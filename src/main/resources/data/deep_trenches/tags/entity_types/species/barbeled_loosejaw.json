@@ -1,11 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"deep_trenches:atlantic_barbeled_loosejaw",
-		"deep_trenches:glowing_barbeled_loosejaw",
-		"deep_trenches:grimaldis_barbeled_loosejaw",
-		"deep_trenches:many_rayed_barbeled_loosejaw",
-		"deep_trenches:shiny_barbeled_loosejaw",
-		"deep_trenches:tittmanns_barbeled_loosejaw"
+		"deep_trenches:barbeled_loosejaw"
 	]
 }

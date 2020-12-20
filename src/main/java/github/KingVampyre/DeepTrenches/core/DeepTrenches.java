@@ -46,47 +46,28 @@ public class  DeepTrenches implements ModInitializer {
 		/* -------------------------------- Default Attributes ------------------------------------------- */
 		FabricDefaultAttributeRegistry.register(EntityTypes.BEARDED_SEADEVIL, DefaultAttributeHelper.createMobAttributes());
 
-		FabricDefaultAttributeRegistry.register(EntityTypes.ATLANTIC_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.GLOWING_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.GRIMALDIS_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.MANY_RAYED_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.SHINY_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.TITTMANNS_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
-
+		FabricDefaultAttributeRegistry.register(EntityTypes.BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.BETTA, DefaultAttributeHelper.createBettaAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
-
-		FabricDefaultAttributeRegistry.register(EntityTypes.NORTHERN_BLACK_LOOSEJAW, DefaultAttributeHelper.createBlackLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.SOUTHERN_BLACK_LOOSEJAW, DefaultAttributeHelper.createBlackLoosejawAttributes());
-
+		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_LOOSEJAW, DefaultAttributeHelper.createBlackLoosejawAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_SCABBARD, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_SEADEVIL, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.BLOBFISH, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.BLUE_WHALE, DefaultAttributeHelper.createMobAttributes());
-
 		FabricDefaultAttributeRegistry.register(EntityTypes.BOTTLE_FLY, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.BOTTLE_FLY_MAGGOT, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.BROWN_BEAR, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.CETACHSAL, DefaultAttributeHelper.createMobAttributes());
-
 		FabricDefaultAttributeRegistry.register(EntityTypes.DEEP_LAKE_BETTA, DefaultAttributeHelper.createDeepLakeBettaAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.FANGTOOTH, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.FINANGITE, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.FLY, DefaultAttributeHelper.createMobAttributes());
-
 		FabricDefaultAttributeRegistry.register(EntityTypes.GIANT_HATCHETFISH, DefaultAttributeHelper.createGiantHatchetfishAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.GIANT_SEED_SHRIMP, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.HONEYCOMB_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.LACERATOR, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.LANCETFISH, DefaultAttributeHelper.createMobAttributes());
-
-		FabricDefaultAttributeRegistry.register(EntityTypes.BIGLAMP_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.GOODYEARS_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.GUERNES_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.LIEMS_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.REMARKABLE_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.SMALL_LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
-
+		FabricDefaultAttributeRegistry.register(EntityTypes.LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.MAGGOT, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.PRINCE_AXELS_WONDERFISH, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.SMALLTOOTH_DRAGONFISH, DefaultAttributeHelper.createSmalltoothDragonfishAttributes());
@@ -108,49 +89,29 @@ public class  DeepTrenches implements ModInitializer {
 		/* -------------------------------- Entity Types ------------------------------------------- */
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:adaigger"), EntityTypes.ADAIGGER);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:bearded_seadevil"), EntityTypes.BEARDED_SEADEVIL);
-
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:atlantic_barbeled_loosejaw"), EntityTypes.ATLANTIC_BARBELED_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:glowing_barbeled_loosejaw"), EntityTypes.GLOWING_BARBELED_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:grimaldis_barbeled_loosejaw"), EntityTypes.GRIMALDIS_BARBELED_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:many_rayed_barbeled_loosejaw"), EntityTypes.MANY_RAYED_BARBELED_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:shiny_barbeled_loosejaw"), EntityTypes.SHINY_BARBELED_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:tittmanns_barbeled_loosejaw"), EntityTypes.TITTMANNS_BARBELED_LOOSEJAW);
-
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:barbeled_loosejaw"), EntityTypes.BARBELED_LOOSEJAW);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:betta"), EntityTypes.BETTA);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:black_dragonfish"), EntityTypes.BLACK_DRAGONFISH);
-
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:northern_black_loosejaw"), EntityTypes.NORTHERN_BLACK_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:southern_black_loosejaw"), EntityTypes.SOUTHERN_BLACK_LOOSEJAW);
-
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:black_loosejaw"), EntityTypes.BLACK_LOOSEJAW);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:black_scabbard"), EntityTypes.BLACK_SCABBARD);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:black_seadevil"), EntityTypes.BLACK_SEADEVIL);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:blobfish"), EntityTypes.BLOBFISH);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:blue_whale"), EntityTypes.BLUE_WHALE);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:boat"), EntityTypes.BOAT);
-
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:bottle_fly"), EntityTypes.BOTTLE_FLY);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:bottle_fly_maggot"), EntityTypes.BOTTLE_FLY_MAGGOT);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:brown_bear"), EntityTypes.BROWN_BEAR);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:cetachsal"), EntityTypes.CETACHSAL);
-
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:deep_lake_betta"), EntityTypes.DEEP_LAKE_BETTA);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:fangtooth"), EntityTypes.FANGTOOTH);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:finangite"), EntityTypes.FINANGITE);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:fly"), EntityTypes.FLY);
-
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:giant_hatchetfish"), EntityTypes.GIANT_HATCHETFISH);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:giant_seed_shrimp"), EntityTypes.GIANT_SEED_SHRIMP);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:honeycomb_dragonfish"), EntityTypes.HONEYCOMB_DRAGONFISH);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:lacerator"), EntityTypes.LACERATOR);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:lancetfish"), EntityTypes.LANCETFISH);
-
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:biglamp_light_loosejaw"), EntityTypes.BIGLAMP_LIGHT_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:goodyears_light_loosejaw"), EntityTypes.GOODYEARS_LIGHT_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:guernes_light_loosejaw"), EntityTypes.GUERNES_LIGHT_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:liems_light_loosejaw"), EntityTypes.LIEMS_LIGHT_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:remarkable_light_loosejaw"), EntityTypes.REMARKABLE_LIGHT_LOOSEJAW);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:small_light_loosejaw"), EntityTypes.SMALL_LIGHT_LOOSEJAW);
-
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:light_loosejaw"), EntityTypes.LIGHT_LOOSEJAW);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:maggot"), EntityTypes.MAGGOT);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:prince_axels_wonderfish"), EntityTypes.PRINCE_AXELS_WONDERFISH);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:smalltooth_dragonfish"), EntityTypes.SMALLTOOTH_DRAGONFISH);

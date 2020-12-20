@@ -1,7 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"deep_trenches:northern_black_loosejaw",
-		"deep_trenches:southern_black_loosejaw"
+		"deep_trenches:black_loosejaw"
 	]
 }
