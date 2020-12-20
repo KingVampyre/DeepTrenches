@@ -8,6 +8,7 @@ import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.world.World;
 
@@ -17,7 +18,7 @@ import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 
 public abstract class NourishFishEntity extends MindfulFishEntity implements Nourishable {
 
-    private static final TrackedData<Boolean> CHILD = DataTracker.registerData(NourishFishEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    private static final TrackedData<Boolean> BABY = DataTracker.registerData(NourishFishEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     protected NourishFishEntity(EntityType<? extends NourishFishEntity> type, World world) {
         super(type, world);
@@ -25,10 +26,6 @@ public abstract class NourishFishEntity extends MindfulFishEntity implements Nou
 
     @Override
     public int getBreedingAge() {
-
-        if (this.world.isClient)
-            return this.dataTracker.get(CHILD) ? -1 : 1;
-
         return this.brain.getOptionalMemory(BREEDING_AGE).orElse(0);
     }
 
@@ -88,7 +85,7 @@ public abstract class NourishFishEntity extends MindfulFishEntity implements Nou
         this.brain.remember(BREEDING_AGE, breedingAge);
 
         if (i < 0 && breedingAge >= 0 || i >= 0 && breedingAge < 0) {
-            this.dataTracker.set(CHILD, breedingAge < 0);
+            this.dataTracker.set(BABY, breedingAge < 0);
             this.onGrowUp();
         }
 
@@ -115,19 +112,19 @@ public abstract class NourishFishEntity extends MindfulFishEntity implements Nou
 
     @Override
     public boolean isBaby() {
-        return this.getBreedingAge() < 0;
+        return this.dataTracker.get(BABY);
     }
 
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
 
-        this.dataTracker.startTracking(CHILD, false);
+        this.dataTracker.startTracking(BABY, false);
     }
 
     @Override
     public void onTrackedDataSet(TrackedData<?> data) {
-        if (CHILD.equals(data))
+        if (BABY.equals(data))
             this.calculateDimensions();
 
         super.onTrackedDataSet(data);
@@ -153,6 +150,16 @@ public abstract class NourishFishEntity extends MindfulFishEntity implements Nou
                 this.setBreedingAge(--growingAge);
         }
 
+    }
+
+    @Override
+    public void readCustomDataFromTag(CompoundTag tag) {
+        super.readCustomDataFromTag(tag);
+    }
+
+    @Override
+    public void writeCustomDataToTag(CompoundTag tag) {
+        super.writeCustomDataToTag(tag);
     }
 
 }

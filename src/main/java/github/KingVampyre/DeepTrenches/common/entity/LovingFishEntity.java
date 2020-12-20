@@ -145,6 +145,7 @@ public abstract class LovingFishEntity extends AngerableFishEntity implements Lo
             }
 
         }
+
     }
 
     @Override
