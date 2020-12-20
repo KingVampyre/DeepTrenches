@@ -42,7 +42,7 @@ public class LoveTask<T extends MobEntity & Lovable> extends Task<T> {
     @Override
     protected void keepRunning(ServerWorld world, T entity, long time) {
         LivingEntity breedTarget = this.getBreedTarget(entity);
-        LookTargetUtil.lookAtAndWalkTowardsEachOther(entity, breedTarget, this.speed);
+        this.lookAtAndWalkTowardsEachOther(entity, breedTarget, this.speed);
 
         if (this.isCloseEnough(entity, breedTarget)) {
             Lovable lovable = (Lovable) breedTarget;
@@ -63,7 +63,7 @@ public class LoveTask<T extends MobEntity & Lovable> extends Task<T> {
         entity.getBrain().remember(BREEDING_TARGET, this.target);
         this.target.getBrain().remember(BREEDING_TARGET, entity);
 
-        LookTargetUtil.lookAtAndWalkTowardsEachOther(entity, this.target, this.speed);
+        this.lookAtAndWalkTowardsEachOther(entity, this.target, this.speed);
 
         this.breedTime = time + this.getTime(world.random);
     }
@@ -113,6 +113,14 @@ public class LoveTask<T extends MobEntity & Lovable> extends Task<T> {
 
     protected long getTime(Random random) {
         return 275 + random.nextInt(50);
+    }
+
+    protected void lookAtAndWalkTowardsEachOther(T first, LivingEntity second, float speed) {
+        LookTargetUtil.lookAt(first, second);
+        LookTargetUtil.lookAt(second, first);
+
+        LookTargetUtil.walkTowards(first, second, speed, 0);
+        LookTargetUtil.walkTowards(second, first, speed, 0);
     }
 
 }
