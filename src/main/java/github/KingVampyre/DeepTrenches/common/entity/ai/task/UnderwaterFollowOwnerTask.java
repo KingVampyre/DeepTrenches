@@ -9,8 +9,8 @@ import net.minecraft.util.math.BlockPos;
 
 public class UnderwaterFollowOwnerTask<T extends PathAwareEntity & Tamable> extends FollowOwnerTask<T> {
 
-    public UnderwaterFollowOwnerTask(float speed, double minTeleportDist, double minDist, double maxDist) {
-        super(speed, minTeleportDist, minDist, maxDist, false);
+    public UnderwaterFollowOwnerTask(float speed, double minTeleportDist, double minDist) {
+        super(speed, minTeleportDist, minDist, false);
     }
 
     @Override

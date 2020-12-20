@@ -16,7 +16,7 @@ import static net.minecraft.entity.ai.brain.MemoryModuleState.*;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.LOOK_TARGET;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.WALK_TARGET;
 
-public class TemptingTask extends Task<PathAwareEntity> {
+public class TemptingTask<T extends PathAwareEntity> extends Task<T> {
 
     protected final float speed;
 
@@ -26,7 +26,7 @@ public class TemptingTask extends Task<PathAwareEntity> {
         this.speed = speed;
     }
 
-    private Optional<PlayerEntity> getTemptingPlayer(PathAwareEntity pathAwareEntity) {
+    private Optional<PlayerEntity> getTemptingPlayer(T pathAwareEntity) {
         return pathAwareEntity.getBrain().getOptionalMemory(TEMPTING_PLAYER);
     }
 
@@ -36,17 +36,17 @@ public class TemptingTask extends Task<PathAwareEntity> {
     }
 
     @Override
-    protected boolean shouldKeepRunning(ServerWorld serverWorld, PathAwareEntity entity, long l) {
+    protected boolean shouldKeepRunning(ServerWorld serverWorld, T entity, long l) {
         return this.getTemptingPlayer(entity).isPresent();
     }
 
     @Override
-    protected void run(ServerWorld serverWorld, PathAwareEntity pathAwareEntity, long l) {
-        pathAwareEntity.getBrain().remember(TEMPTED, true);
+    protected void run(ServerWorld serverWorld, T entity, long l) {
+        entity.getBrain().remember(TEMPTED, true);
     }
 
     @Override
-    protected void finishRunning(ServerWorld serverWorld, PathAwareEntity entity, long l) {
+    protected void finishRunning(ServerWorld serverWorld, T entity, long l) {
         Brain<?> brain = entity.getBrain();
 
         brain.remember(TEMPTATION_COOLDOWN_TICKS, 100);
@@ -56,7 +56,7 @@ public class TemptingTask extends Task<PathAwareEntity> {
     }
 
     @Override
-    protected void keepRunning(ServerWorld serverWorld, PathAwareEntity entity, long l) {
+    protected void keepRunning(ServerWorld serverWorld, T entity, long l) {
         Brain<?> brain = entity.getBrain();
 
         this.getTemptingPlayer(entity).ifPresent(player -> {

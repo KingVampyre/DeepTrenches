@@ -66,17 +66,9 @@ public class BettaEntity extends TamableFishEntity {
     public List<MemoryModuleType<?>> getMemoryModules() {
         List<MemoryModuleType<?>> memoryModules = super.getMemoryModules();
 
-        memoryModules.add(ATTACK_COOLING_DOWN);
-        memoryModules.add(ATTACK_TARGET);
         memoryModules.add(BREEDING_TARGET);
         memoryModules.add(CANT_REACH_WALK_TARGET_SINCE);
-        memoryModules.add(HURT_BY_ENTITY);
         memoryModules.add(LOOK_TARGET);
-        memoryModules.add(MOBS);
-        memoryModules.add(NEAREST_HOSTILE);
-        memoryModules.add(NEAREST_VISIBLE_ADULT);
-        memoryModules.add(NEAREST_VISIBLE_PLAYER);
-        memoryModules.add(NEAREST_VISIBLE_TARGETABLE_PLAYER);
         memoryModules.add(PATH);
         memoryModules.add(TEMPTATION_COOLDOWN_TICKS);
         memoryModules.add(TEMPTING_PLAYER);
@@ -116,11 +108,10 @@ public class BettaEntity extends TamableFishEntity {
 
         brain.setTaskList(Activity.IDLE, ImmutableList.of(
                 Pair.of(0, new LoveTask<>(3.0F, 0.9F)),
-                Pair.of(1, new TemptingTask(0.9F)),
-                Pair.of(1, new UnderwaterFollowOwnerTask<>(0.9F, 12.0F, 4.0F, 2.0F)),
-                Pair.of(2, new UnderwaterWalkTowardsTask(9, 0.9F)),
-                Pair.of(2, new StrollTask(0.9F, 12, 9)),
-                Pair.of(2, new GoTowardsLookTarget(0.9F, 1))
+                Pair.of(1, new LoveTemptingTask<>(0.9F)),
+                Pair.of(2, new GoTowardsLookTarget(0.9F, 1)),
+                Pair.of(3, new TamableFishFollowOwnerTask<>(0.9F, 16.0F, 6.0F)),
+                Pair.of(3, new StrollTask(0.9F, 12, 9))
         ));
 
         brain.setCoreActivities(ImmutableSet.of(Activity.CORE));

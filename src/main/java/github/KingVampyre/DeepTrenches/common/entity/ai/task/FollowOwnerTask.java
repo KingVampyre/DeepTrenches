@@ -26,7 +26,6 @@ import static net.minecraft.predicate.entity.EntityPredicates.EXCEPT_SPECTATOR;
 
 public class FollowOwnerTask<T extends PathAwareEntity & Tamable> extends Task<T> {
 
-    protected final double maxDist;
     protected final double minDist;
     protected final double minTeleportDist;
     protected final boolean leavesAllowed;
@@ -35,11 +34,10 @@ public class FollowOwnerTask<T extends PathAwareEntity & Tamable> extends Task<T
     protected float oldWaterPenalty;
     protected int updateCountdownTicks;
 
-    public FollowOwnerTask(float speed, double minTeleportDist, double minDist, double maxDist, boolean leavesAllowed) {
+    public FollowOwnerTask(float speed, double minTeleportDist, double minDist, boolean leavesAllowed) {
         super(ImmutableMap.of(LOOK_TARGET, REGISTERED, OWNER, VALUE_PRESENT, WALK_TARGET, REGISTERED));
 
         this.speed = speed;
-        this.maxDist = maxDist;
         this.minDist = minDist;
         this.leavesAllowed = leavesAllowed;
         this.minTeleportDist = minTeleportDist;
