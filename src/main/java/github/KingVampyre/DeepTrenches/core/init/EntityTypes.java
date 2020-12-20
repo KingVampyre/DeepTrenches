@@ -49,37 +49,7 @@ public class EntityTypes {
 			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
 			.build();
 
-	public static final EntityType<BettaEntity> BLACK_BLUE_BETTA = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
-			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
-			.build();
-
-	public static final EntityType<BettaEntity> BLUE_BETTA = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
-			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
-			.build();
-
-	public static final EntityType<BettaEntity> COLORFUL_BETTA = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
-			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
-			.build();
-
-	public static final EntityType<BettaEntity> ICARUS = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
-			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
-			.build();
-
-	public static final EntityType<BettaEntity> ICARUS_JUNIOR = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
-			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
-			.build();
-
-	public static final EntityType<BettaEntity> ICARUS_THE_THIRD = FabricEntityTypeBuilder
-			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
-			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
-			.build();
-
-	public static final EntityType<BettaEntity> RED_BETTA = FabricEntityTypeBuilder
+	public static final EntityType<BettaEntity> BETTA = FabricEntityTypeBuilder
 			.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
 			.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
 			.build();

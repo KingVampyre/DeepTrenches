@@ -53,14 +53,7 @@ public class  DeepTrenches implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(EntityTypes.SHINY_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.TITTMANNS_BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
 
-		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_BLUE_BETTA, DefaultAttributeHelper.createBettaAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.BLUE_BETTA, DefaultAttributeHelper.createBettaAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.COLORFUL_BETTA, DefaultAttributeHelper.createBettaAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.ICARUS, DefaultAttributeHelper.createBettaAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.ICARUS_JUNIOR, DefaultAttributeHelper.createBettaAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.ICARUS_THE_THIRD, DefaultAttributeHelper.createBettaAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.RED_BETTA, DefaultAttributeHelper.createBettaAttributes());
-
+		FabricDefaultAttributeRegistry.register(EntityTypes.BETTA, DefaultAttributeHelper.createBettaAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
 
 		FabricDefaultAttributeRegistry.register(EntityTypes.NORTHERN_BLACK_LOOSEJAW, DefaultAttributeHelper.createBlackLoosejawAttributes());
@@ -123,14 +116,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:shiny_barbeled_loosejaw"), EntityTypes.SHINY_BARBELED_LOOSEJAW);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:tittmanns_barbeled_loosejaw"), EntityTypes.TITTMANNS_BARBELED_LOOSEJAW);
 
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:black_blue_betta"), EntityTypes.BLACK_BLUE_BETTA);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:blue_betta"), EntityTypes.BLUE_BETTA);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:colorful_betta"), EntityTypes.COLORFUL_BETTA);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:icarus"), EntityTypes.ICARUS);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:icarus_junior"), EntityTypes.ICARUS_JUNIOR);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:icarus_the_third"), EntityTypes.ICARUS_THE_THIRD);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:red_betta"), EntityTypes.RED_BETTA);
-
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:betta"), EntityTypes.BETTA);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:black_dragonfish"), EntityTypes.BLACK_DRAGONFISH);
 
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:northern_black_loosejaw"), EntityTypes.NORTHERN_BLACK_LOOSEJAW);

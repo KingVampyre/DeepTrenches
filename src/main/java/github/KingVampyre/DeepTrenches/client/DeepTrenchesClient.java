@@ -292,13 +292,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(EntityTypes.SHINY_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.TITTMANNS_BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
 
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_BLUE_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.COLORFUL_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.ICARUS, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.ICARUS_JUNIOR, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.ICARUS_THE_THIRD, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.RED_BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
 
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_DRAGONFISH, (dispatcher, context) -> new BlackDragonfishRenderer(dispatcher));
 
