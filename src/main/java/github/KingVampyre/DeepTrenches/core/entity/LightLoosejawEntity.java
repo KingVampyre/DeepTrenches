@@ -68,7 +68,7 @@ public class LightLoosejawEntity extends DragonfishEntity {
     }
 
     @Override
-    protected EntityAttributeModifier getSpeedModifier() {
+    public EntityAttributeModifier getSpeedModifier() {
         return MOVEMENT_SPEED_BOOST_215;
     }
 

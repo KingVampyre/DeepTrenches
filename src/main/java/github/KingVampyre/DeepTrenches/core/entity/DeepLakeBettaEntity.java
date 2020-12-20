@@ -20,7 +20,7 @@ public class DeepLakeBettaEntity extends BettaEntity {
     }
 
     @Override
-    protected EntityAttributeModifier getSpeedModifier() {
+    public EntityAttributeModifier getSpeedModifier() {
         return MOVEMENT_SPEED_BOOST_250;
     }
 

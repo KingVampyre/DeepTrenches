@@ -17,10 +17,7 @@ import net.minecraft.entity.ai.brain.Brain;
 import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.ai.brain.sensor.Sensor;
 import net.minecraft.entity.ai.brain.sensor.SensorType;
-import net.minecraft.entity.ai.brain.task.GoTowardsLookTarget;
-import net.minecraft.entity.ai.brain.task.LookAroundTask;
-import net.minecraft.entity.ai.brain.task.StrollTask;
-import net.minecraft.entity.ai.brain.task.WanderAroundTask;
+import net.minecraft.entity.ai.brain.task.*;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
@@ -37,14 +34,14 @@ import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEM
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.BETTA_BUCKET;
 import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.BETTA_TEMPTING;
-import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.NEAREST_ADULT;
+import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.SKITTISH_HURT_BY;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
 import static net.minecraft.item.Items.COD;
 
 public class BettaEntity extends TamableFishEntity {
 
-    protected static final ImmutableList<? extends SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(SensorType.HURT_BY, NEAREST_LIVING_ENTITIES, BETTA_TEMPTING, NEAREST_ADULT);
+    protected static final ImmutableList<? extends SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(SKITTISH_HURT_BY, NEAREST_LIVING_ENTITIES, BETTA_TEMPTING);
 
     private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
 
@@ -68,6 +65,8 @@ public class BettaEntity extends TamableFishEntity {
 
         memoryModules.add(BREEDING_TARGET);
         memoryModules.add(CANT_REACH_WALK_TARGET_SINCE);
+        memoryModules.add(HURT_BY);
+        memoryModules.add(HURT_BY_ENTITY);
         memoryModules.add(LOOK_TARGET);
         memoryModules.add(PATH);
         memoryModules.add(TEMPTATION_COOLDOWN_TICKS);
@@ -107,6 +106,7 @@ public class BettaEntity extends TamableFishEntity {
                 new TemptingCooldownTask()));
 
         brain.setTaskList(Activity.IDLE, ImmutableList.of(
+                Pair.of(0, GoToRememberedPositionTask.toEntity(HURT_BY_ENTITY, 2.115F, 6, false)),
                 Pair.of(0, new LoveTask<>(3.0F, 0.9F)),
                 Pair.of(1, new LoveTemptingTask<>(0.9F)),
                 Pair.of(2, new GoTowardsLookTarget(0.9F, 1)),
@@ -157,7 +157,7 @@ public class BettaEntity extends TamableFishEntity {
     }
 
     @Override
-    protected EntityAttributeModifier getSpeedModifier() {
+    public EntityAttributeModifier getSpeedModifier() {
         return MOVEMENT_SPEED_BOOST_235;
     }
 

@@ -30,7 +30,7 @@ public class BeardedSeadevilEntity extends AnimatedFishEntity {
     }
 
     @Override
-    protected EntityAttributeModifier getSpeedModifier() {
+    public EntityAttributeModifier getSpeedModifier() {
         return null;
     }
 

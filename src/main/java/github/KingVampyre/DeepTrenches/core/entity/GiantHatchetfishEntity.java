@@ -35,7 +35,7 @@ public class GiantHatchetfishEntity extends HatchetfishEntity {
 	}
 
 	@Override
-	protected EntityAttributeModifier getSpeedModifier() {
+    public EntityAttributeModifier getSpeedModifier() {
 		return MOVEMENT_SPEED_BOOST_150;
 	}
 

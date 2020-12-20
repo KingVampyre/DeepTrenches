@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.common.entity;
 
+import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Skittish;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -13,7 +14,7 @@ import software.bernie.geckolib.manager.EntityAnimationManager;
 
 import static net.minecraft.entity.attribute.EntityAttributes.*;
 
-public abstract class AnimatedFishEntity extends FishEntity implements IAnimatedEntity {
+public abstract class AnimatedFishEntity extends FishEntity implements IAnimatedEntity, Skittish {
 
 	protected EntityAnimationManager animationManager = new EntityAnimationManager();
 	@SuppressWarnings("unchecked rawtypes")
@@ -29,8 +30,6 @@ public abstract class AnimatedFishEntity extends FishEntity implements IAnimated
 	public EntityAnimationManager getAnimationManager() {
 		return this.animationManager;
 	}
-
-	protected abstract EntityAttributeModifier getSpeedModifier();
 
 	protected <E extends AnimatedFishEntity> boolean getSwimmingAnimation(AnimationTestEvent<E> event) {
 		AnimatedFishEntity entity = event.getEntity();

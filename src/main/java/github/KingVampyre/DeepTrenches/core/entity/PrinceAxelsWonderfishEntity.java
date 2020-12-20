@@ -30,7 +30,7 @@ public class PrinceAxelsWonderfishEntity extends AnimatedFishEntity {
     }
 
     @Override
-    protected EntityAttributeModifier getSpeedModifier() {
+    public EntityAttributeModifier getSpeedModifier() {
         return null;
     }
 

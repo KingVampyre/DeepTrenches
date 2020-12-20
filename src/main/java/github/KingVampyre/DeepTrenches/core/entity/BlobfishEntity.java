@@ -30,7 +30,7 @@ public class BlobfishEntity extends AnimatedFishEntity {
     }
 
     @Override
-    protected EntityAttributeModifier getSpeedModifier() {
+    public EntityAttributeModifier getSpeedModifier() {
         return null;
     }
 

@@ -30,7 +30,7 @@ public class ViperfishEntity extends AnimatedFishEntity {
     }
 
     @Override
-    protected EntityAttributeModifier getSpeedModifier() {
+    public EntityAttributeModifier getSpeedModifier() {
         return null;
     }
 

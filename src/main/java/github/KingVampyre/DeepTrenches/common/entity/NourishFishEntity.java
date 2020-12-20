@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.common.entity;
 
 import com.google.common.collect.Lists;
-import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Nourishable;
+import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Nourish;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.brain.MemoryModuleType;
@@ -16,7 +16,7 @@ import java.util.List;
 
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 
-public abstract class NourishFishEntity extends MindfulFishEntity implements Nourishable {
+public abstract class NourishFishEntity extends MindfulFishEntity implements Nourish {
 
     private static final TrackedData<Boolean> BABY = DataTracker.registerData(NourishFishEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 

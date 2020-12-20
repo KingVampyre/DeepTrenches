@@ -3,7 +3,7 @@ package github.KingVampyre.DeepTrenches.common.entity.ai.mob;
 import net.minecraft.entity.Entity;
 import net.minecraft.server.world.ServerWorld;
 
-public interface Nourishable {
+public interface Nourish {
 
     Entity createChild(ServerWorld world, Lovable lovable);
 
