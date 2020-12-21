@@ -25,6 +25,7 @@ public class MixinItemRenderer {
         colorMap.register((stack, tintIndex) -> 5614908, ModBlocks.PELTOGYNE_LEAVES);
         colorMap.register((stack, tintIndex) -> 5614908, ModBlocks.PLUM_LEAVES);
         colorMap.register((stack, tintIndex) -> 5614908, ModBlocks.TEAK_LEAVES);
+        colorMap.register((stack, tintIndex) -> 5614908, ModBlocks.COOK_PINE_LEAVES);
 
         colorMap.register((stack, tintIndex) -> ColorMaps.STORCEAN_FOLIAGE.getDefaultColor(), ModBlocks.AQUEAN_LEAVES);
     }
