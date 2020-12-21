@@ -11,7 +11,7 @@ import static net.minecraft.item.Items.COD;
 
 public class SensorTypes {
 
-    public static final SensorType<TemptingSensor> BETTA_TEMPTING = InvokerSensorType.create(() -> new TemptingSensor(Ingredient.ofItems(COD), 10.0F));
+    public static final SensorType<TemptingSensor> COD_TEMPTING = InvokerSensorType.create(() -> new TemptingSensor(Ingredient.ofItems(COD), 12.0F));
 
     public static final SensorType<NearestAdultSensor> NEAREST_ADULT = InvokerSensorType.create(NearestAdultSensor::new);
 

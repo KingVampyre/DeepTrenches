@@ -9,7 +9,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.brain.Activity;
 import net.minecraft.entity.ai.brain.Brain;
-import net.minecraft.entity.ai.brain.task.*;
+import net.minecraft.entity.ai.brain.task.Task;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 
@@ -22,17 +22,6 @@ public abstract class MindfulFishEntity extends AnimatedFishEntity implements Mi
     @Override
     protected Brain.Profile<BettaEntity> createBrainProfile() {
         return Brain.createProfile(this.getMemoryModules(), this.getSensors());
-    }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
-        Brain<MindfulFishEntity> brain = (Brain<MindfulFishEntity>) super.deserializeBrain(dynamic);
-
-        brain.setTaskList(Activity.CORE, 0, this.createCoreTasks());
-        brain.setTaskList(Activity.IDLE, this.createIdleTasks());
-
-        return brain;
     }
 
     @Override
@@ -55,9 +44,5 @@ public abstract class MindfulFishEntity extends AnimatedFishEntity implements Mi
         brain.resetPossibleActivities(ImmutableList.of(Activity.IDLE));
         this.world.getProfiler().pop();
     }
-
-    protected abstract ImmutableList<? extends Task<? super MindfulFishEntity>> createCoreTasks();
-
-    protected abstract ImmutableList<? extends Pair<Integer, ? extends Task<? super LivingEntity>>> createIdleTasks();
 
 }

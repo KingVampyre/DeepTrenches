@@ -42,7 +42,7 @@ import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEM
 import static github.KingVampyre.DeepTrenches.core.init.EntityTypes.BETTA;
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.BETTA_BUCKET;
-import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.BETTA_TEMPTING;
+import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.COD_TEMPTING;
 import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.SKITTISH_HURT_BY;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
@@ -105,31 +105,29 @@ public class BettaEntity extends TamableFishEntity {
     }
 
     @Override
-    protected ImmutableList<? extends Task<? super MindfulFishEntity>> createCoreTasks() {
-        return ImmutableList.of(new LookAroundTask(45, 90), new WanderAroundTask(200, 350), new TemptingCooldownTask());
-    }
-
-    @Override
     public ExperienceOrbEntity createExperienceOrb(ServerWorld server, double x, double y, double z) {
         return new ExperienceOrbEntity(server, x, y, z, this.random.nextInt(7) + 1);
     }
 
     @SuppressWarnings("unchecked")
     @Override
-    protected ImmutableList<? extends Pair<Integer, ? extends Task<? super LivingEntity>>> createIdleTasks() {
-        return (ImmutableList<? extends Pair<Integer, ? extends Task<? super LivingEntity>>>) ImmutableList.of(
+    protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
+        Brain<BettaEntity> brain = (Brain<BettaEntity>) super.deserializeBrain(dynamic);
+
+        brain.setTaskList(Activity.CORE, 0, ImmutableList.of(
+                new LookAroundTask(45, 90),
+                new WanderAroundTask(200, 350),
+                new TemptingCooldownTask())
+        );
+
+        brain.setTaskList(Activity.IDLE, ImmutableList.of(
                 Pair.of(0, GoToRememberedPositionTask.toEntity(HURT_BY_ENTITY, 2.115F, 6, false)),
                 Pair.of(0, new LoveTask<>(3.0F, 0.9F)),
                 Pair.of(1, new LoveTemptingTask<>(0.9F)),
                 Pair.of(2, new GoTowardsLookTarget(0.9F, 1)),
                 Pair.of(3, new TamableFishFollowOwnerTask<>(0.9F, 16.0F, 6.0F)),
                 Pair.of(3, new StrollTask(0.9F, 12, 9))
-        );
-    }
-
-    @Override
-    protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
-        Brain<?> brain = super.deserializeBrain(dynamic);
+        ));
 
         brain.setCoreActivities(ImmutableSet.of(Activity.CORE));
         brain.setDefaultActivity(Activity.IDLE);
@@ -180,7 +178,7 @@ public class BettaEntity extends TamableFishEntity {
 
     @Override
     public ImmutableList<? extends SensorType<? extends Sensor<? super MindfulFishEntity>>> getSensors() {
-        return ImmutableList.of(SKITTISH_HURT_BY, NEAREST_LIVING_ENTITIES, BETTA_TEMPTING);
+        return ImmutableList.of(SKITTISH_HURT_BY, NEAREST_LIVING_ENTITIES, COD_TEMPTING);
     }
 
     public int getBettaType() {
