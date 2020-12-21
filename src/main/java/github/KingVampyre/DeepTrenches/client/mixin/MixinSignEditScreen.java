@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.client.mixin;
 
-import github.KingVampyre.DeepTrenches.common.block.ModSignBlock;
 import github.KingVampyre.DeepTrenches.common.block.entity.renderer.ModSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
 import net.minecraft.block.AbstractSignBlock;
@@ -12,7 +11,6 @@ import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.SignType;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

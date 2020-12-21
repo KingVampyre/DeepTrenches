@@ -6,10 +6,8 @@
   "mixins": [
   ],
   "client": [
-    "AccessorRenderPhase",
     "MixinClientPlayNetworkHandler",
     "MixinInGameHud",
-    "MixinItemRenderer",
     "MixinSignEditScreen"
   ],
   "injectors": {

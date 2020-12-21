@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.feature;
 
 import github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel;
-import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayers;
+import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import net.fabricmc.api.EnvType;
@@ -15,8 +15,8 @@ import net.minecraft.util.Identifier;
 @Environment(EnvType.CLIENT)
 public class StaspAntennasFeatureRenderer extends FeatureRenderer<StaspEntity, StaspModel> {
 
-    private static final RenderLayer BRIGHT_BLACK_ANTENNAS = CustomRenderLayers.getBrightTexture(new Identifier("deep_trenches:textures/entity/black_stasp_antennas.png"));
-    private static final RenderLayer BRIGHT_STASP_ANTENNAS = CustomRenderLayers.getBrightTexture(new Identifier("deep_trenches:textures/entity/stasp_antennas.png"));
+    private static final RenderLayer BRIGHT_BLACK_ANTENNAS = CustomRenderLayer.getBrightTexture(new Identifier("deep_trenches:textures/entity/black_stasp_antennas.png"));
+    private static final RenderLayer BRIGHT_STASP_ANTENNAS = CustomRenderLayer.getBrightTexture(new Identifier("deep_trenches:textures/entity/stasp_antennas.png"));
 
     private static final RenderLayer BLACK_STASP_ANTENNAS = RenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/black_stasp_antennas.png"));
     private static final RenderLayer STASP_ANTENNAS = RenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/stasp_antennas.png"));
