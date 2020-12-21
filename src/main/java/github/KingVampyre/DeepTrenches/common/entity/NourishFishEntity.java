@@ -41,7 +41,13 @@ public abstract class NourishFishEntity extends MindfulFishEntity implements Nou
 
     @Override
     public List<MemoryModuleType<?>> getMemoryModules() {
-        return Lists.newArrayList(BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING);
+        List<MemoryModuleType<?>> list = Lists.newArrayList();
+
+        list.add(BREEDING_AGE);
+        list.add(FORCED_AGE);
+        list.add(HAPPY_TICKS_REMAINING);
+
+        return list;
     }
 
     @Override
@@ -150,16 +156,6 @@ public abstract class NourishFishEntity extends MindfulFishEntity implements Nou
                 this.setBreedingAge(--growingAge);
         }
 
-    }
-
-    @Override
-    public void readCustomDataFromTag(CompoundTag tag) {
-        super.readCustomDataFromTag(tag);
-    }
-
-    @Override
-    public void writeCustomDataToTag(CompoundTag tag) {
-        super.writeCustomDataToTag(tag);
     }
 
 }

@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Dynamic;
+import github.KingVampyre.DeepTrenches.common.entity.MindfulFishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.TamableFishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTask;
@@ -49,8 +50,6 @@ import static net.minecraft.item.Items.COD;
 
 public class BettaEntity extends TamableFishEntity {
 
-    protected static final ImmutableList<? extends SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(SKITTISH_HURT_BY, NEAREST_LIVING_ENTITIES, BETTA_TEMPTING);
-
     private static final TrackedData<Integer> BETTA_TYPE = DataTracker.registerData(BettaEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
 
@@ -61,11 +60,6 @@ public class BettaEntity extends TamableFishEntity {
     @Override
     public boolean canAttackWithOwner(LivingEntity target, LivingEntity owner) {
         return false;
-    }
-
-    @Override
-    protected Brain.Profile<BettaEntity> createBrainProfile() {
-        return Brain.createProfile(this.getMemoryModules(), SENSORS);
     }
 
     @Override
@@ -111,27 +105,31 @@ public class BettaEntity extends TamableFishEntity {
     }
 
     @Override
+    protected ImmutableList<? extends Task<? super MindfulFishEntity>> createCoreTasks() {
+        return ImmutableList.of(new LookAroundTask(45, 90), new WanderAroundTask(200, 350), new TemptingCooldownTask());
+    }
+
+    @Override
     public ExperienceOrbEntity createExperienceOrb(ServerWorld server, double x, double y, double z) {
         return new ExperienceOrbEntity(server, x, y, z, this.random.nextInt(7) + 1);
     }
 
+    @SuppressWarnings("unchecked")
     @Override
-    protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
-        Brain<BettaEntity> brain = this.createBrainProfile().deserialize(dynamic);
-
-        brain.setTaskList(Activity.CORE, 0, ImmutableList.of(
-                new LookAroundTask(45, 90),
-                new WanderAroundTask(200, 350),
-                new TemptingCooldownTask()));
-
-        brain.setTaskList(Activity.IDLE, ImmutableList.of(
+    protected ImmutableList<? extends Pair<Integer, ? extends Task<? super LivingEntity>>> createIdleTasks() {
+        return (ImmutableList<? extends Pair<Integer, ? extends Task<? super LivingEntity>>>) ImmutableList.of(
                 Pair.of(0, GoToRememberedPositionTask.toEntity(HURT_BY_ENTITY, 2.115F, 6, false)),
                 Pair.of(0, new LoveTask<>(3.0F, 0.9F)),
                 Pair.of(1, new LoveTemptingTask<>(0.9F)),
                 Pair.of(2, new GoTowardsLookTarget(0.9F, 1)),
                 Pair.of(3, new TamableFishFollowOwnerTask<>(0.9F, 16.0F, 6.0F)),
                 Pair.of(3, new StrollTask(0.9F, 12, 9))
-        ));
+        );
+    }
+
+    @Override
+    protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
+        Brain<?> brain = super.deserializeBrain(dynamic);
 
         brain.setCoreActivities(ImmutableSet.of(Activity.CORE));
         brain.setDefaultActivity(Activity.IDLE);
@@ -178,6 +176,11 @@ public class BettaEntity extends TamableFishEntity {
     @Override
     public EntityAttributeModifier getSpeedModifier() {
         return MOVEMENT_SPEED_BOOST_235;
+    }
+
+    @Override
+    public ImmutableList<? extends SensorType<? extends Sensor<? super MindfulFishEntity>>> getSensors() {
+        return ImmutableList.of(SKITTISH_HURT_BY, NEAREST_LIVING_ENTITIES, BETTA_TEMPTING);
     }
 
     public int getBettaType() {
@@ -227,22 +230,6 @@ public class BettaEntity extends TamableFishEntity {
         }
 
         return data;
-    }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    protected void mobTick() {
-        super.mobTick();
-
-        Brain<BettaEntity> brain = (Brain<BettaEntity>) this.getBrain();
-        ServerWorld server = (ServerWorld) this.world;
-
-        this.world.getProfiler().push("bettaBrain");
-        brain.tick(server, this);
-        this.world.getProfiler().pop();
-        this.world.getProfiler().push("bettaActivityUpdate");
-        brain.resetPossibleActivities(ImmutableList.of(Activity.IDLE));
-        this.world.getProfiler().pop();
     }
 
     @Override
