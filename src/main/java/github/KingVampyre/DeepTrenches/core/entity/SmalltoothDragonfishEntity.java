@@ -1,12 +1,60 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import github.KingVampyre.DeepTrenches.common.entity.AbstractLoosejawEntity;
+import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ai.Durations;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.IntRange;
 import net.minecraft.world.World;
 
-public class SmalltoothDragonfishEntity extends BlackLoosejawEntity {
+import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_260;
+import static github.KingVampyre.DeepTrenches.core.init.EntityTypes.SMALLTOOTH_DRAGONFISH;
+import static github.KingVampyre.DeepTrenches.core.init.ModItems.SMALLTOOTH_DRAGONFISH_BUCKET;
+
+public class SmalltoothDragonfishEntity extends AbstractLoosejawEntity {
+
+    protected static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(35, 40);
 
     public SmalltoothDragonfishEntity(EntityType<? extends SmalltoothDragonfishEntity> type, World world) {
         super(type, world);
+    }
+
+    @Override
+    public int chooseType() {
+        return 0;
+    }
+
+    @Override
+    public Entity createChild(ServerWorld world, Lovable lovable) {
+        SmalltoothDragonfishEntity loosejaw = SMALLTOOTH_DRAGONFISH.create(world);
+
+        if(loosejaw != null) {
+            PlayerEntity player = lovable.getLovingPlayer();
+
+            loosejaw.setTamedBy(player);
+        }
+
+        return loosejaw;
+    }
+
+    @Override
+    protected IntRange getAngerTimeRange() {
+        return ANGER_TIME_RANGE;
+    }
+
+    @Override
+    protected ItemStack getFishBucketItem() {
+        return new ItemStack(SMALLTOOTH_DRAGONFISH_BUCKET);
+    }
+
+    @Override
+    public EntityAttributeModifier getSpeedModifier() {
+        return MOVEMENT_SPEED_BOOST_260;
     }
 
 }
