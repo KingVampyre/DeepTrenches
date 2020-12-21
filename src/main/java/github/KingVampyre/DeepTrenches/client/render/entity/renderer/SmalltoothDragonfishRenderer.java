@@ -1,13 +1,14 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
-import github.KingVampyre.DeepTrenches.client.render.entity.model.SmalltoothDragonfishTransparentModel;
+import github.KingVampyre.DeepTrenches.client.render.entity.feature.SmalltoothDragonfishFinsFeature;
+import github.KingVampyre.DeepTrenches.client.render.entity.model.SmalltoothDragonfishModel;
 import github.KingVampyre.DeepTrenches.core.entity.SmalltoothDragonfishEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
-public class SmalltoothDragonfishRenderer extends MobEntityRenderer<SmalltoothDragonfishEntity, SmalltoothDragonfishTransparentModel> {
+public class SmalltoothDragonfishRenderer extends MobEntityRenderer<SmalltoothDragonfishEntity, SmalltoothDragonfishModel> {
 
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/all_lit.png"),
@@ -21,7 +22,9 @@ public class SmalltoothDragonfishRenderer extends MobEntityRenderer<SmalltoothDr
     };
 
     public SmalltoothDragonfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-	    super(entityRenderDispatcher, new SmalltoothDragonfishTransparentModel(), 0.4F);
+	    super(entityRenderDispatcher, new SmalltoothDragonfishModel(), 0.4F);
+
+	    this.addFeature(new SmalltoothDragonfishFinsFeature(this));
     }
 
     @Override

@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
+import github.KingVampyre.DeepTrenches.client.render.entity.feature.BarbeledLoosejawFinsFeature;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BarbeledLoosejawModel;
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
@@ -77,6 +78,8 @@ public class BarbeledLoosejawRenderer extends MobEntityRenderer<BarbeledLoosejaw
 
     public BarbeledLoosejawRenderer(EntityRenderDispatcher entityRenderDispatcher) {
 	    super(entityRenderDispatcher, new BarbeledLoosejawModel(), 0.4F);
+
+	    this.addFeature(new BarbeledLoosejawFinsFeature(this));
     }
 
     @Override

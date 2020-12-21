@@ -24,4 +24,19 @@ public class CustomRenderLayer extends RenderLayer {
                         .build(false));
     }
 
+    public static RenderLayer getLoosejawFinsLayer(Identifier texture) {
+        RenderPhase.Texture renderPhase = new RenderPhase.Texture(texture, false, false);
+
+        return RenderLayer.of("loosejaw_fins", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, 7, 256, false, true,
+                RenderLayer.MultiPhaseParameters.builder().texture(renderPhase)
+                        .transparency(TRANSLUCENT_TRANSPARENCY)
+                        .alpha(ONE_TENTH_ALPHA)
+                        .writeMaskState(COLOR_MASK)
+                        .fog(BLACK_FOG)
+                        .cull(DISABLE_CULLING)
+                        .layering(VIEW_OFFSET_Z_LAYERING)
+                        .shadeModel(SMOOTH_SHADE_MODEL)
+                        .build(false));
+    }
+
 }
