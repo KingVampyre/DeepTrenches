@@ -18,6 +18,7 @@ public class SignTypes {
 	public static final SignType FUCHSITRA = new ModSignType("fuchsitra");
 	public static final SignType FUNERANITE = new ModSignType("funeranite");
 	public static final SignType GHOSHROOM = new ModSignType("ghoshroom");
+	public static final SignType MURKANTUAN = new ModSignType("murkantuan");
 	public static final SignType PELTOGYNE = new ModSignType("peltogyne");
 	public static final SignType PIN_CHERRY = new ModSignType("pin_cherry");
 	public static final SignType PLUM = new ModSignType("plum");
@@ -29,5 +30,4 @@ public class SignTypes {
 	public static final SignType TEAK = new ModSignType("teak");
 	public static final SignType THUNDERCLOUD_PLUM = new ModSignType("thundercloud_plum");
 
-	public static final SignType MURKANTUAN = new ModSignType("murkantuan");
 }

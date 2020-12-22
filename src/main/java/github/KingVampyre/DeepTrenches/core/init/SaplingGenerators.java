@@ -31,6 +31,8 @@ public class SaplingGenerators {
 
 	public static final FeaturesSaplingGenerator GHOSHROOM = new GhoshroomSaplingGenerator();
 
+	public static final FeaturesSaplingGenerator MURKANTUAN = new MurkantuanSaplingGenerator();
+
 	public static final FeaturesSaplingGenerator PELTOGYNE = new PeltogyneSaplingGenerator();
 
 	public static final FeaturesSaplingGenerator PIN_CHERRY = new PinCherrySaplingGenerator();
@@ -51,5 +53,4 @@ public class SaplingGenerators {
 
 	public static final FeaturesSaplingGenerator THUNDERCLOUD_PLUM = new ThundercloudPlumSaplingGenerator();
 
-    public static final FeaturesSaplingGenerator MURKANTUAN = new MurkantuanSaplingGenerator();
 }
