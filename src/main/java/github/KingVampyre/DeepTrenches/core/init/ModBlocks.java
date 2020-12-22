@@ -700,5 +700,21 @@ public class ModBlocks {
 	public static final Block POTTED_TOPPED_LAVENDER = new FlowerPotBlock(TOPPED_LAVENDER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_VASLAME = new FlowerPotBlock(VASLAME, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_WEEPY_HOLLOWER = new FlowerPotBlock(WEEPY_HOLLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
-	
+
+	public static final Block MURKANTUAN_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
+    public static final Object MURKANTUAN_DOOR = new ModDoorBlock(Settings.copy(OAK_DOOR));
+	public static final Object MURKANTUAN_FENCE = new FenceBlock(Settings.copy(OAK_FENCE));
+	public static final Object MURKANTUAN_FENCE_GATE = new FenceGateBlock(Settings.copy(OAK_FENCE_GATE));
+	public static final Object MURKANTUAN_LEAVES = new LeavesBlock(Settings.copy(OAK_LEAVES));
+	public static final Object MURKANTUAN_FLOWER = new
+	public static final Object MURKANTUAN_LOG = new PillarBlock(Settings.copy(OAK_LOG));
+	public static final Object MURKANTUAN_PLANKS = new Block(Settings.copy(OAK_PLANKS));
+	public static final Object MURKANTUAN_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
+	public static final Object MURKANTUAN_SAPLING = new FeaturesSaplingBlock(MURKANTUAN, Settings.copy(OAK_SAPLING));
+	public static final Object MURKANTUAN_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.MURKANTUAN);
+	public static final Object MURKANTUAN_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
+	public static final Object MURKANTUAN_STAIRS = new ModStairsBlock(MURKANTUAN_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
+	public static final Object MURKANTUAN_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
+	public static final Object MURKANTUAN_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.THUNDERCLOUD_PLUM);
+	public static final Object MURKANTUAN_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 }

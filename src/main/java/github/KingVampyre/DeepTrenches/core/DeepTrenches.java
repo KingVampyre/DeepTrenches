@@ -4,6 +4,7 @@ import github.KingVampyre.DeepTrenches.core.init.*;
 import github.KingVampyre.DeepTrenches.core.util.DefaultAttributeHelper;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
@@ -385,6 +386,24 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:ghoshroom_trapdoor"), GHOSHROOM_TRAPDOOR);
 		Registry.register(BLOCK, new Identifier("deep_trenches:ghoshroom_wall_sign"), GHOSHROOM_WALL_SIGN);
 		Registry.register(BLOCK, new Identifier("deep_trenches:ghoshroom_wood"), GHOSHROOM_WOOD);
+
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_button"), MURKANTUAN_BUTTON);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_door"), MURKANTUAN_DOOR);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_fence"), MURKANTUAN_FENCE);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_fence_gate"), MURKANTUAN_FENCE_GATE);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_leaves"), MURKANTUAN_LEAVES);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_flower"), MURKANTUAN_FLOWER);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_log"), MURKANTUAN_LOG);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_planks"), MURKANTUAN_PLANKS);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_pressure_plate"), MURKANTUAN_PRESSURE_PLATE);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_sapling"), MURKANTUAN_SAPLING);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_sign"), MURKANTUAN_SIGN);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_slab"), MURKANTUAN_SLAB);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_stairs"), MURKANTUAN_STAIRS);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_trapdoor"), MURKANTUAN_TRAPDOOR);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_wall_sign"), MURKANTUAN_WALL_SIGN);
+		Registry.register(BLOCK, new Identifier("deep_trenches:murkantuan_wood"), MURKANTUAN_WOOD);
+
 
 		Registry.register(BLOCK, new Identifier("deep_trenches:peltogyne_button"), PELTOGYNE_BUTTON);
 		Registry.register(BLOCK, new Identifier("deep_trenches:peltogyne_door"), PELTOGYNE_DOOR);

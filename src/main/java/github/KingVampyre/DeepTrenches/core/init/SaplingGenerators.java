@@ -51,4 +51,5 @@ public class SaplingGenerators {
 
 	public static final FeaturesSaplingGenerator THUNDERCLOUD_PLUM = new ThundercloudPlumSaplingGenerator();
 
+    public static final FeaturesSaplingGenerator MURKANTUAN = new MurkantuanSaplingGenerator();
 }

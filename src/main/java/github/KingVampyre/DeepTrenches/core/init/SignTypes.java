@@ -29,4 +29,5 @@ public class SignTypes {
 	public static final SignType TEAK = new ModSignType("teak");
 	public static final SignType THUNDERCLOUD_PLUM = new ModSignType("thundercloud_plum");
 
+	public static final SignType MURKANTUAN = new ModSignType("murkantuan");
 }
