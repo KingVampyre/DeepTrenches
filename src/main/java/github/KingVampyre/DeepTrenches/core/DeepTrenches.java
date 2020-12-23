@@ -1305,6 +1305,21 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:ghoshroom_trapdoor"), new BlockItem(GHOSHROOM_TRAPDOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:ghoshroom_wood"), new BlockItem(GHOSHROOM_WOOD, new Item.Settings().group(GENERAL)));
 
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_button"), new BlockItem(MURKANTUAN_BUTTON, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_door"), new BlockItem(MURKANTUAN_DOOR, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_fence"), new BlockItem(MURKANTUAN_FENCE, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_fence_gate"), new BlockItem(MURKANTUAN_FENCE_GATE, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_leaves"), new BlockItem(MURKANTUAN_LEAVES, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_log"), new BlockItem(MURKANTUAN_LOG, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_planks"), new BlockItem(MURKANTUAN_PLANKS, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_pressure_plate"), new BlockItem(MURKANTUAN_PRESSURE_PLATE, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_sapling"), new BlockItem(MURKANTUAN_SAPLING, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_sign"), new SignItem(new Item.Settings().group(GENERAL).maxCount(16), MURKANTUAN_SIGN, MURKANTUAN_WALL_SIGN));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_slab"), new BlockItem(MURKANTUAN_SLAB, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_stairs"), new BlockItem(MURKANTUAN_STAIRS, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_trapdoor"), new BlockItem(MURKANTUAN_TRAPDOOR, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_wood"), new BlockItem(MURKANTUAN_WOOD, new Item.Settings().group(GENERAL)));
+
 		Registry.register(ITEM, new Identifier("deep_trenches:peltogyne_button"), new BlockItem(PELTOGYNE_BUTTON, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:peltogyne_door"), new BlockItem(PELTOGYNE_DOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:peltogyne_fence"), new BlockItem(PELTOGYNE_FENCE, new Item.Settings().group(GENERAL)));
