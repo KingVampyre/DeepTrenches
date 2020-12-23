@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		"#deep_trenches:dritean",
+		"minecraft:dirt",
+		"minecraft:grass_block"
+	]
+}

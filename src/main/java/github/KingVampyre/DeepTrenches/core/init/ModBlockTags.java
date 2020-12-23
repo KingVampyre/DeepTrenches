@@ -11,6 +11,10 @@ public class ModBlockTags {
 
     public static final Tag<Block> DRITEAN = TagRegistry.block(new Identifier("deep_trenches:dritean"));
 
+    public static final Tag<Block> DRITEAN_OR_DIRT = TagRegistry.block(new Identifier("deep_trenches:dritean_or_dirt"));
+
+    public static final Tag<Block> DRITEAN_OR_DIRT_SAPLING = TagRegistry.block(new Identifier("deep_trenches:dritean_or_dirt_sapling"));
+
     public static final Tag<Block> FUCHSITRA_LOGS = TagRegistry.block(new Identifier("deep_trenches:fuchsitra_logs"));
 
     public static final Tag<Block> STASP_POLLEN_SOURCE = TagRegistry.block(new Identifier("deep_trenches:stasp_pollen_source"));

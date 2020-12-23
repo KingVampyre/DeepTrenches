@@ -359,7 +359,7 @@ public class ModBlocks {
 	public static final Block CROLOOD_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block CROLOOD_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block CROLOOD_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block CROLOOD_SAPLING = new FeaturesSaplingBlock(CROLOOD, Settings.copy(OAK_SAPLING));
+	public static final Block CROLOOD_SAPLING = new StorceanSaplingBlock(CROLOOD, Settings.copy(OAK_SAPLING));
 	public static final Block CROLOOD_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.CROLOOD);
 	public static final Block CROLOOD_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block CROLOOD_STAIRS = new ModStairsBlock(CROLOOD_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -423,7 +423,7 @@ public class ModBlocks {
 	public static final Block FUNERANITE_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block FUNERANITE_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block FUNERANITE_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block FUNERANITE_SAPLING = new FeaturesSaplingBlock(FUNERANITE, Settings.copy(OAK_SAPLING));
+	public static final Block FUNERANITE_SAPLING = new StorceanSaplingBlock(FUNERANITE, Settings.copy(OAK_SAPLING));
 	public static final Block FUNERANITE_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.FUNERANITE);
 	public static final Block FUNERANITE_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block FUNERANITE_STAIRS = new ModStairsBlock(FUNERANITE_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
