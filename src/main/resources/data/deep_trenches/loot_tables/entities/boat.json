@@ -179,6 +179,16 @@
 					"conditions": [
 						{
 							"condition": "deep_trenches:check_wood_type",
+							"wood_type": "murkantuan"
+						}
+					],
+					"name": "deep_trenches:murkantuan_boat"
+				},
+				{
+					"type": "minecraft:item",
+					"conditions": [
+						{
+							"condition": "deep_trenches:check_wood_type",
 							"wood_type": "sproom"
 						}
 					],

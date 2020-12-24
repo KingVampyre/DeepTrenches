@@ -1,0 +1,21 @@
+{
+  "processors": [
+    {
+      "processor": "features:rule",
+      "rules": [
+        {
+          "test": {
+            "test": "minecraft:block_match",
+            "block": "deep_trenches:murkantuan_leaves"
+          },
+          "blockstate": {
+            "block": "deep_trenches:murkantuan_leaves",
+            "properties": {
+              "persistent": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
