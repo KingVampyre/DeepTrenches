@@ -263,7 +263,7 @@ public class ModBlocks {
 	public static final Block ANAMEATA_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block ANAMEATA_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block ANAMEATA_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block ANAMEATA_SAPLING = new FeaturesSaplingBlock(ANAMEATA,SAPLING, Settings.of(FUNGUS).strength(0, 0));
+	public static final Block ANAMEATA_SAPLING = new FeaturesSaplingBlock(ANAMEATA_SAPLING, Settings.of(FUNGUS).strength(0, 0));
 	public static final Block ANAMEATA_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.ANAMEATA);
 	public static final Block ANAMEATA_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block ANAMEATA_STAIRS = new ModStairsBlock(ANAMEATA_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
