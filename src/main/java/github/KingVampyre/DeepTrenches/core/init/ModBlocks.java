@@ -708,7 +708,7 @@ public class ModBlocks {
 	public static final Block POTTED_PINK_BRAITOR_FLOWER = new FlowerPotBlock(PINK_BRAITOR_FLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_PINK_ROSE = new FlowerPotBlock(PINK_ROSE, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_PINK_ROSE_BUSH = new FlowerPotBlock(PINK_ROSE_BUSH, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
-	public static final Block POTTED_MURKANTUAN_SAPLING = FlowerPotBlock(MURKANTUAN_SAPLING, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_MURKANTUAN_SAPLING = new FlowerPotBlock(MURKANTUAN_SAPLING, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_SPIKE_LAVENDER = new FlowerPotBlock(SPIKE_LAVENDER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_RED_BRAITOR_FLOWER = new FlowerPotBlock(RED_BRAITOR_FLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_RED_CHOCOLATE_COSMOS_FLOWER = new FlowerPotBlock(RED_CHOCOLATE_COSMOS_FLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
