@@ -4,6 +4,7 @@ import github.KingVampyre.DeepTrenches.common.item.ModBoatItem;
 import github.KingVampyre.DeepTrenches.common.item.TagFishBucketItem;
 import github.KingVampyre.DeepTrenches.common.item.TagSpawnEggItem;
 import github.KingVampyre.DeepTrenches.core.item.AdaiggerItem;
+import net.minecraft.block.Block;
 import net.minecraft.item.FishBucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Settings;
@@ -99,6 +100,8 @@ public class ModItems {
 	public static final Item PLUM_BOAT = new ModBoatItem(WoodType.PLUM, new Item.Settings().maxCount(1).group(GENERAL));
 	public static final Item PLUM_STICK = new Item(new Settings().group(GENERAL));
 	public static final Item PURFUNGA_BOAT = new ModBoatItem(WoodType.PURFUNGA, new Item.Settings().maxCount(1).group(GENERAL));
+	public static final Item MURKANTUAN_BOAT = new ModBoatItem(WoodType.MURKANTUAN, new Item.Settings().maxCount(1).group(GENERAL));
+	public static final Item MURKANTUAN_STICK = new Item(new Settings().group(GENERAL));
 	public static final Item PURFUNGA_STICK = new Item(new Settings().group(GENERAL));
 	public static final Item SMALLTOOTH_DRAGONFISH =  new Item(new Settings().group(GENERAL).food(STORCEAN_FISH));
 
@@ -115,5 +118,5 @@ public class ModItems {
 	public static final Item THUNDERCLOUD_PLUM = new Item(new Settings().group(GENERAL).food(APPLE));
 	public static final Item THUNDERCLOUD_PLUM_BOAT = new ModBoatItem(WoodType.THUNDERCLOUD_PLUM, new Item.Settings().maxCount(1).group(GENERAL));
 	public static final Item THUNDERCLOUD_PLUM_STICK = new Item(new Settings().group(GENERAL));
-	
+
 }

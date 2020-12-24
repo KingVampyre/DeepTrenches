@@ -835,6 +835,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_pin_cherry_sapling"), POTTED_PIN_CHERRY_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_plum_sapling"), POTTED_PLUM_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_purfunga_sapling"), POTTED_PURFUNGA_SAPLING);
+		Registry.register(BLOCK, new Identifier("deep_trenches:potted_murkantuan_sapling"), POTTED_PURFUNGA_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_sproom_sapling"), POTTED_SPROOM_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_stortreean_sapling"), POTTED_STORTREEAN_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_stroomean_sapling"), POTTED_STROOMEAN_SAPLING);
@@ -1446,6 +1447,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_plum_wood"), new BlockItem(STRIPPED_PLUM_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_purfunga_log"), new BlockItem(STRIPPED_PURFUNGA_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_purfunga_wood"), new BlockItem(STRIPPED_PURFUNGA_WOOD, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:stripped_murkantuan_wood"), new BlockItem(STRIPPED_MURKANTUAN_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_sproom_log"), new BlockItem(STRIPPED_SPROOM_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_sproom_wood"), new BlockItem(STRIPPED_SPROOM_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_stortreean_log"), new BlockItem(STRIPPED_STORTREEAN_LOG, new Item.Settings().group(GENERAL)));

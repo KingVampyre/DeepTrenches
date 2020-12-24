@@ -18,6 +18,7 @@ public enum WoodType {
     PIN_CHERRY,
     PLUM,
     PURFUNGA,
+    MURKANTUAN,
     SPROOM,
     STORTREEAN,
     STROOMEAN,
