@@ -22,14 +22,14 @@ public class BlackLoosejawRenderer extends MobEntityRenderer<BlackLoosejawEntity
     };
 
     private static final Identifier[] SOUTHERN_BLACK_LOOSEJAW = {
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/tittmanns/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/tittmanns/all_unlit.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/tittmanns/flank.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/tittmanns/flank_and_lure.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/tittmanns/flank_and_suborbital.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/tittmanns/lure.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/tittmanns/suborbital.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/tittmanns/suborbital_and_lure.png")
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/all_lit.png"),
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank.png"),
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank_and_lure.png"),
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank_and_suborbital.png"),
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/lure.png"),
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/suborbital.png"),
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/suborbital_and_lure.png")
     };
 
     public BlackLoosejawRenderer(EntityRenderDispatcher entityRenderDispatcher) {
