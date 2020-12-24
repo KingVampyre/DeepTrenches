@@ -247,7 +247,7 @@ public class ModBlocks {
 	public static final Block ALMOND_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block ALMOND_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block ALMOND_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block ALMOND_SAPLING = new FeaturesSaplingBlock(ALMOND_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block ALMOND_SAPLING = new FeaturesSaplingBlock(ALMOND, Settings.copy(OAK_SAPLING));
 	public static final Block ALMOND_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.ALMOND);
 	public static final Block ALMOND_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block ALMOND_STAIRS = new ModStairsBlock(ALMOND_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -263,7 +263,7 @@ public class ModBlocks {
 	public static final Block ANAMEATA_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block ANAMEATA_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block ANAMEATA_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block ANAMEATA_SAPLING = new FeaturesSaplingBlock(ANAMEATA_SAPLING, Settings.of(FUNGUS).strength(0, 0));
+	public static final Block ANAMEATA_SAPLING = new FeaturesSaplingBlock(ANAMEATA, Settings.of(FUNGUS).strength(0, 0));
 	public static final Block ANAMEATA_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.ANAMEATA);
 	public static final Block ANAMEATA_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block ANAMEATA_STAIRS = new ModStairsBlock(ANAMEATA_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -279,7 +279,7 @@ public class ModBlocks {
 	public static final Block AQUEAN_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block AQUEAN_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block AQUEAN_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block AQUEAN_SAPLING = new StorceanSaplingBlock(AQUEAN_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block AQUEAN_SAPLING = new StorceanSaplingBlock(AQUEAN, Settings.copy(OAK_SAPLING));
 	public static final Block AQUEAN_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.AQUEAN);
 	public static final Block AQUEAN_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block AQUEAN_STAIRS = new ModStairsBlock(AQUEAN_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -295,7 +295,7 @@ public class ModBlocks {
 	public static final Block BARSHROOKLE_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block BARSHROOKLE_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block BARSHROOKLE_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block BARSHROOKLE_SAPLING = new FungusBlock(BARSHROOKLE_SAPLING, Settings.of(FUNGUS).strength(0, 0));
+	public static final Block BARSHROOKLE_SAPLING = new FungusBlock(BARSHROOKLE, Settings.of(FUNGUS).strength(0, 0));
 	public static final Block BARSHROOKLE_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.BARSHROOKLE);
 	public static final Block BARSHROOKLE_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block BARSHROOKLE_STAIRS = new ModStairsBlock(BARSHROOKLE_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -311,7 +311,7 @@ public class ModBlocks {
 	public static final Block BLACK_BIRCH_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block BLACK_BIRCH_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block BLACK_BIRCH_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block BLACK_BIRCH_SAPLING = new FeaturesSaplingBlock(BLACK_BIRCH_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block BLACK_BIRCH_SAPLING = new FeaturesSaplingBlock(BLACK_BIRCH, Settings.copy(OAK_SAPLING));
 	public static final Block BLACK_BIRCH_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.BLACK_BIRCH);
 	public static final Block BLACK_BIRCH_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block BLACK_BIRCH_STAIRS = new ModStairsBlock(BLACK_BIRCH_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -327,7 +327,7 @@ public class ModBlocks {
 	public static final Block CHERRY_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block CHERRY_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block CHERRY_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block CHERRY_SAPLING = new FeaturesSaplingBlock(CHERRY_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block CHERRY_SAPLING = new FeaturesSaplingBlock(CHERRY, Settings.copy(OAK_SAPLING));
 	public static final Block CHERRY_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.CHERRY);
 	public static final Block CHERRY_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block CHERRY_STAIRS = new ModStairsBlock(CHERRY_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -343,7 +343,7 @@ public class ModBlocks {
 	public static final Block COOK_PINE_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block COOK_PINE_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block COOK_PINE_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block COOK_PINE_SAPLING = new FeaturesSaplingBlock(COOK_PINE_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block COOK_PINE_SAPLING = new FeaturesSaplingBlock(COOK_PINE, Settings.copy(OAK_SAPLING));
 	public static final Block COOK_PINE_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.COOK_PINE);
 	public static final Block COOK_PINE_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block COOK_PINE_STAIRS = new ModStairsBlock(COOK_PINE_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -359,7 +359,7 @@ public class ModBlocks {
 	public static final Block CROLOOD_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block CROLOOD_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block CROLOOD_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block CROLOOD_SAPLING = new StorceanSaplingBlock(CROLOOD_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block CROLOOD_SAPLING = new StorceanSaplingBlock(CROLOOD, Settings.copy(OAK_SAPLING));
 	public static final Block CROLOOD_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.CROLOOD);
 	public static final Block CROLOOD_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block CROLOOD_STAIRS = new ModStairsBlock(CROLOOD_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -375,7 +375,7 @@ public class ModBlocks {
 	public static final Block DARK_CROLOOD_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block DARK_CROLOOD_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block DARK_CROLOOD_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block DARK_CROLOOD_SAPLING = new FeaturesSaplingBlock(DARK_CROLOOD_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block DARK_CROLOOD_SAPLING = new FeaturesSaplingBlock(DARK_CROLOOD, Settings.copy(OAK_SAPLING));
 	public static final Block DARK_CROLOOD_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.DARK_CROLOOD);
 	public static final Block DARK_CROLOOD_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block DARK_CROLOOD_STAIRS = new ModStairsBlock(DARK_CROLOOD_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -391,7 +391,7 @@ public class ModBlocks {
 	public static final Block EBONY_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block EBONY_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block EBONY_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block EBONY_SAPLING = new FeaturesSaplingBlock(EBONY_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block EBONY_SAPLING = new FeaturesSaplingBlock(EBONY, Settings.copy(OAK_SAPLING));
 	public static final Block EBONY_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.EBONY);
 	public static final Block EBONY_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block EBONY_STAIRS = new ModStairsBlock(EBONY_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -407,7 +407,7 @@ public class ModBlocks {
 	public static final Block FUCHSITRA_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block FUCHSITRA_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block FUCHSITRA_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block FUCHSITRA_SAPLING = new StorceanSaplingBlock(FUCHSITRA_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block FUCHSITRA_SAPLING = new StorceanSaplingBlock(FUCHSITRA, Settings.copy(OAK_SAPLING));
 	public static final Block FUCHSITRA_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.FUCHSITRA);
 	public static final Block FUCHSITRA_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block FUCHSITRA_STAIRS = new ModStairsBlock(FUCHSITRA_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -423,7 +423,7 @@ public class ModBlocks {
 	public static final Block FUNERANITE_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block FUNERANITE_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block FUNERANITE_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block FUNERANITE_SAPLING = new StorceanSaplingBlock(FUNERANITE_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block FUNERANITE_SAPLING = new StorceanSaplingBlock(FUNERANITE, Settings.copy(OAK_SAPLING));
 	public static final Block FUNERANITE_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.FUNERANITE);
 	public static final Block FUNERANITE_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block FUNERANITE_STAIRS = new ModStairsBlock(FUNERANITE_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -439,7 +439,7 @@ public class ModBlocks {
 	public static final Block GHOSHROOM_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block GHOSHROOM_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block GHOSHROOM_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block GHOSHROOM_SAPLING = new FeaturesSaplingBlock(GHOSHROOM_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block GHOSHROOM_SAPLING = new FeaturesSaplingBlock(GHOSHROOM, Settings.copy(OAK_SAPLING));
 	public static final Block GHOSHROOM_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.GHOSHROOM);
 	public static final Block GHOSHROOM_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block GHOSHROOM_STAIRS = new ModStairsBlock(GHOSHROOM_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -456,7 +456,7 @@ public class ModBlocks {
 	public static final Block MURKANTUAN_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block MURKANTUAN_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block MURKANTUAN_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block MURKANTUAN_SAPLING = new FeaturesSaplingBlock(MURKANTUAN_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block MURKANTUAN_SAPLING = new FeaturesSaplingBlock(MURKANTUAN, Settings.copy(OAK_SAPLING));
 	public static final Block MURKANTUAN_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.MURKANTUAN);
 	public static final Block MURKANTUAN_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block MURKANTUAN_STAIRS = new ModStairsBlock(MURKANTUAN_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -472,7 +472,7 @@ public class ModBlocks {
 	public static final Block PELTOGYNE_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block PELTOGYNE_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block PELTOGYNE_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block PELTOGYNE_SAPLING = new FeaturesSaplingBlock(PELTOGYNE_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block PELTOGYNE_SAPLING = new FeaturesSaplingBlock(PELTOGYNE, Settings.copy(OAK_SAPLING));
 	public static final Block PELTOGYNE_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.PELTOGYNE);
 	public static final Block PELTOGYNE_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block PELTOGYNE_STAIRS = new ModStairsBlock(PELTOGYNE_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -488,7 +488,7 @@ public class ModBlocks {
 	public static final Block PIN_CHERRY_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block PIN_CHERRY_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block PIN_CHERRY_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block PIN_CHERRY_SAPLING = new FeaturesSaplingBlock(PIN_CHERRY_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block PIN_CHERRY_SAPLING = new FeaturesSaplingBlock(PIN_CHERRY, Settings.copy(OAK_SAPLING));
 	public static final Block PIN_CHERRY_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.PIN_CHERRY);
 	public static final Block PIN_CHERRY_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block PIN_CHERRY_STAIRS = new ModStairsBlock(PIN_CHERRY_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -504,7 +504,7 @@ public class ModBlocks {
 	public static final Block PLUM_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block PLUM_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block PLUM_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block PLUM_SAPLING = new FeaturesSaplingBlock(PLUM_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block PLUM_SAPLING = new FeaturesSaplingBlock(PLUM, Settings.copy(OAK_SAPLING));
 	public static final Block PLUM_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.PLUM);
 	public static final Block PLUM_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block PLUM_STAIRS = new ModStairsBlock(PLUM_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -520,7 +520,7 @@ public class ModBlocks {
 	public static final Block PURFUNGA_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block PURFUNGA_PLANKS = new Block(Settings.copy(OAK_PLANKS));	
 	public static final Block PURFUNGA_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block PURFUNGA_SAPLING = new AcuaticFungusBlock(PURFUNGA_SAPLING, Settings.of(FUNGUS).strength(0, 0));
+	public static final Block PURFUNGA_SAPLING = new AcuaticFungusBlock(PURFUNGA, Settings.of(FUNGUS).strength(0, 0));
 	public static final Block PURFUNGA_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.PURFUNGA);
 	public static final Block PURFUNGA_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block PURFUNGA_STAIRS = new ModStairsBlock(PURFUNGA_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -536,7 +536,7 @@ public class ModBlocks {
 	public static final Block SPROOM_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block SPROOM_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block SPROOM_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block SPROOM_SAPLING = new StorceanTallSaplingBlock(SPROOM_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block SPROOM_SAPLING = new StorceanTallSaplingBlock(SPROOM, Settings.copy(OAK_SAPLING));
 	public static final Block SPROOM_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.SPROOM);
 	public static final Block SPROOM_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block SPROOM_STAIRS = new ModStairsBlock(SPROOM_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -552,7 +552,7 @@ public class ModBlocks {
 	public static final Block STORTREEAN_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block STORTREEAN_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block STORTREEAN_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block STORTREEAN_SAPLING = new StorceanTallSaplingBlock(STORTREEAN_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block STORTREEAN_SAPLING = new StorceanTallSaplingBlock(STORTREEAN, Settings.copy(OAK_SAPLING));
 	public static final Block STORTREEAN_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.STORTREEAN);
 	public static final Block STORTREEAN_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block STORTREEAN_STAIRS = new ModStairsBlock(STORTREEAN_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -615,7 +615,7 @@ public class ModBlocks {
 	public static final Block STROOMEAN_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block STROOMEAN_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block STROOMEAN_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block STROOMEAN_SAPLING = new FungusBlock(STROOMEAN_SAPLING, Settings.of(FUNGUS).strength(0, 0));
+	public static final Block STROOMEAN_SAPLING = new FungusBlock(STROOMEAN, Settings.of(FUNGUS).strength(0, 0));
 	public static final Block STROOMEAN_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.STROOMEAN);
 	public static final Block STROOMEAN_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block STROOMEAN_STAIRS = new ModStairsBlock(STROOMEAN_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -631,7 +631,7 @@ public class ModBlocks {
 	public static final Block SUNRISE_FUNGUS_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block SUNRISE_FUNGUS_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block SUNRISE_FUNGUS_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block SUNRISE_FUNGUS_SAPLING = new AcuaticFungusBlock(SUNRISE_FUNGUS_SAPLING, Settings.of(FUNGUS).strength(0, 0));
+	public static final Block SUNRISE_FUNGUS_SAPLING = new AcuaticFungusBlock(SUNRISE_FUNGUS, Settings.of(FUNGUS).strength(0, 0));
 	public static final Block SUNRISE_FUNGUS_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.SUNRISE_FUNGUS);
 	public static final Block SUNRISE_FUNGUS_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block SUNRISE_FUNGUS_STAIRS = new ModStairsBlock(SUNRISE_FUNGUS_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -647,7 +647,7 @@ public class ModBlocks {
 	public static final Block TEAK_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block TEAK_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block TEAK_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block TEAK_SAPLING = new FeaturesSaplingBlock(TEAK_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block TEAK_SAPLING = new FeaturesSaplingBlock(TEAK, Settings.copy(OAK_SAPLING));
 	public static final Block TEAK_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.TEAK);
 	public static final Block TEAK_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block TEAK_STAIRS = new ModStairsBlock(TEAK_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -663,7 +663,7 @@ public class ModBlocks {
 	public static final Block THUNDERCLOUD_PLUM_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block THUNDERCLOUD_PLUM_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block THUNDERCLOUD_PLUM_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block THUNDERCLOUD_PLUM_SAPLING = new FeaturesSaplingBlock(THUNDERCLOUD_PLUM_SAPLING, Settings.copy(OAK_SAPLING));
+	public static final Block THUNDERCLOUD_PLUM_SAPLING = new FeaturesSaplingBlock(THUNDERCLOUD_PLUM, Settings.copy(OAK_SAPLING));
 	public static final Block THUNDERCLOUD_PLUM_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.THUNDERCLOUD_PLUM);
 	public static final Block THUNDERCLOUD_PLUM_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block THUNDERCLOUD_PLUM_STAIRS = new ModStairsBlock(THUNDERCLOUD_PLUM_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
