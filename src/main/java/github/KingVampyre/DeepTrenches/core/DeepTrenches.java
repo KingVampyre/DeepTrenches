@@ -835,7 +835,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_pin_cherry_sapling"), POTTED_PIN_CHERRY_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_plum_sapling"), POTTED_PLUM_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_purfunga_sapling"), POTTED_PURFUNGA_SAPLING);
-		Registry.register(BLOCK, new Identifier("deep_trenches:potted_murkantuan_sapling"), POTTED_PURFUNGA_SAPLING);
+		Registry.register(BLOCK, new Identifier("deep_trenches:potted_murkantuan_sapling"), POTTED_MURKANTUAN_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_sproom_sapling"), POTTED_SPROOM_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_stortreean_sapling"), POTTED_STORTREEAN_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_stroomean_sapling"), POTTED_STROOMEAN_SAPLING);
