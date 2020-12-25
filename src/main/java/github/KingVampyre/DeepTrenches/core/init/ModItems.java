@@ -86,6 +86,8 @@ public class ModItems {
 	public static final Item GYLDELION_INGOT = new Item(new Settings().group(GENERAL));
 	public static final Item GYLDELION_NUGGET = new Item(new Settings().group(GENERAL));
 	public static final Item GYLDELION_STICK = new Item(new Settings().group(GENERAL));
+	public static final Item MURKANTUAN_BOAT = new ModBoatItem(WoodType.MURKANTUAN, new Item.Settings().maxCount(1).group(GENERAL));
+	public static final Item MURKANTUAN_STICK = new Item(new Settings().group(GENERAL));
 	public static final Item LIGHT_BLUE_BIOLUMINESCENT_GOO = new Item(new Settings().group(GENERAL));
 	public static final Item LIGHT_LOOSEJAW = new Item(new Settings().group(GENERAL).food(STORCEAN_FISH));
 
@@ -100,8 +102,6 @@ public class ModItems {
 	public static final Item PLUM_BOAT = new ModBoatItem(WoodType.PLUM, new Item.Settings().maxCount(1).group(GENERAL));
 	public static final Item PLUM_STICK = new Item(new Settings().group(GENERAL));
 	public static final Item PURFUNGA_BOAT = new ModBoatItem(WoodType.PURFUNGA, new Item.Settings().maxCount(1).group(GENERAL));
-	public static final Item MURKANTUAN_BOAT = new ModBoatItem(WoodType.MURKANTUAN, new Item.Settings().maxCount(1).group(GENERAL));
-	public static final Item MURKANTUAN_STICK = new Item(new Settings().group(GENERAL));
 	public static final Item PURFUNGA_STICK = new Item(new Settings().group(GENERAL));
 	public static final Item SMALLTOOTH_DRAGONFISH =  new Item(new Settings().group(GENERAL).food(STORCEAN_FISH));
 

@@ -526,6 +526,8 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:stripped_funeranite_wood"), STRIPPED_FUNERANITE_WOOD);
 		Registry.register(BLOCK, new Identifier("deep_trenches:stripped_ghoshroom_log"), STRIPPED_GHOSHROOM_LOG);
 		Registry.register(BLOCK, new Identifier("deep_trenches:stripped_ghoshroom_wood"), STRIPPED_GHOSHROOM_WOOD);
+		Registry.register(BLOCK, new Identifier("deep_trenches:stripped_murkantuan_log"), STRIPPED_MURKANTUAN_LOG);
+		Registry.register(BLOCK, new Identifier("deep_trenches:stripped_murkantuan_wood"), STRIPPED_MURKANTUAN_WOOD);
 		Registry.register(BLOCK, new Identifier("deep_trenches:stripped_peltogyne_log"), STRIPPED_PELTOGYNE_LOG);
 		Registry.register(BLOCK, new Identifier("deep_trenches:stripped_peltogyne_wood"), STRIPPED_PELTOGYNE_WOOD);
 		Registry.register(BLOCK, new Identifier("deep_trenches:stripped_pin_cherry_log"), STRIPPED_PIN_CHERRY_LOG);
@@ -940,6 +942,8 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:gyldelion_ingot"), GYLDELION_INGOT);
 		Registry.register(ITEM, new Identifier("deep_trenches:gyldelion_nugget"), GYLDELION_NUGGET);
 		Registry.register(ITEM, new Identifier("deep_trenches:gyldelion_stick"), GYLDELION_STICK);
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_boat"), MURKANTUAN_BOAT);
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_stick"), MURKANTUAN_STICK);
 		Registry.register(ITEM, new Identifier("deep_trenches:light_blue_bioluminescent_goo"), LIGHT_BLUE_BIOLUMINESCENT_GOO);
 		Registry.register(ITEM, new Identifier("deep_trenches:light_loosejaw"), LIGHT_LOOSEJAW);
 		Registry.register(ITEM, new Identifier("deep_trenches:light_loosejaw_bucket"), LIGHT_LOOSEJAW_BUCKET);
@@ -1447,6 +1451,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_plum_wood"), new BlockItem(STRIPPED_PLUM_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_purfunga_log"), new BlockItem(STRIPPED_PURFUNGA_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_purfunga_wood"), new BlockItem(STRIPPED_PURFUNGA_WOOD, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:stripped_murkantuan_log"), new BlockItem(STRIPPED_MURKANTUAN_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_murkantuan_wood"), new BlockItem(STRIPPED_MURKANTUAN_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_sproom_log"), new BlockItem(STRIPPED_SPROOM_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_sproom_wood"), new BlockItem(STRIPPED_SPROOM_WOOD, new Item.Settings().group(GENERAL)));

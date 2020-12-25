@@ -594,6 +594,7 @@ public class ModBlocks {
 	public static final Block STRIPPED_PLUM_WOOD = new PillarBlock(Settings.copy(STRIPPED_OAK_WOOD));
 	public static final Block STRIPPED_PURFUNGA_LOG = new PillarBlock(Settings.copy(STRIPPED_OAK_LOG));
 	public static final Block STRIPPED_PURFUNGA_WOOD = new PillarBlock(Settings.copy(STRIPPED_OAK_WOOD));
+	public static final Block STRIPPED_MURKANTUAN_LOG = new PillarBlock(Settings.copy(STRIPPED_OAK_LOG));
 	public static final Block STRIPPED_MURKANTUAN_WOOD = new PillarBlock(Settings.copy(STRIPPED_OAK_WOOD));
 	public static final Block STRIPPED_SPROOM_LOG = new PillarBlock(Settings.copy(STRIPPED_OAK_LOG));
 	public static final Block STRIPPED_SPROOM_WOOD = new PillarBlock(Settings.copy(STRIPPED_OAK_WOOD));
