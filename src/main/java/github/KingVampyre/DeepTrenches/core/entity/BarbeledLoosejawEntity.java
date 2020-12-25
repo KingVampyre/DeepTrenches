@@ -1,6 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import com.google.common.collect.ImmutableList;
 import github.KingVampyre.DeepTrenches.common.entity.AbstractLoosejawEntity;
+import github.KingVampyre.DeepTrenches.common.entity.ai.mob.LightState;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -15,6 +17,8 @@ import net.minecraft.world.World;
 import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_260;
 import static github.KingVampyre.DeepTrenches.core.init.EntityTypes.BARBELED_LOOSEJAW;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.BARBELED_LOOSEJAW_BUCKET;
+
+import static github.KingVampyre.DeepTrenches.core.init.LightStates.*;
 
 public class BarbeledLoosejawEntity extends AbstractLoosejawEntity {
 
@@ -50,6 +54,11 @@ public class BarbeledLoosejawEntity extends AbstractLoosejawEntity {
     @Override
     protected ItemStack getFishBucketItem() {
         return new ItemStack(BARBELED_LOOSEJAW_BUCKET);
+    }
+
+    @Override
+    public ImmutableList<LightState> getLightContainer() {
+        return ImmutableList.of(ALL_LIT, ALL_UNLIT, FLANK, FLANK_AND_LURE, FLANK_AND_SUBORBITAL, LURE, SUBORBITAL, SUBORBITAL_AND_LURE);
     }
 
     @Override

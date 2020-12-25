@@ -1,19 +1,16 @@
 package github.KingVampyre.DeepTrenches.common.entity.ai.mob;
 
-public enum LightState {
-    ALL_LIT,
-    ALL_UNLIT,
-    FLANK,
-    FLANK_AND_LURE,
-    FLANK_AND_SUBORBITAL,
-    LURE,
-    RECOGNITION,
-    SUBORBITAL,
-    SUBORBITAL_AND_LURE;
+public class LightState {
+
+    private final String name;
+
+    public LightState(String name) {
+        this.name = name;
+    }
 
     @Override
     public String toString() {
-        return this.name().toLowerCase();
+        return "LightState{" + "name='" + this.name + '\'' + '}';
     }
 
 }

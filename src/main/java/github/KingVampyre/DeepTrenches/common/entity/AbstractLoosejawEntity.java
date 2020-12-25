@@ -151,7 +151,15 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
 
     @Override
     public LightState getLightState() {
-        return LightState.values()[this.dataTracker.get(LIGHT_STATE)];
+        ImmutableList<LightState> container = this.getLightContainer();
+        int state = this.getLightStateIndex();
+
+        return container.get(state);
+    }
+
+    @Override
+    public int getLightStateIndex() {
+        return this.dataTracker.get(LIGHT_STATE);
     }
 
     public int getLoosejawType() {
@@ -160,7 +168,10 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
 
     @Override
     public void setLightState(LightState state) {
-        this.dataTracker.startTracking(LIGHT_STATE, state.ordinal());
+        ImmutableList<LightState> container = this.getLightContainer();
+        int index = container.indexOf(state);
+
+        this.dataTracker.set(LIGHT_STATE, index);
     }
 
     public void setLoosejawType(int loosejawType) {
