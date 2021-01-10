@@ -16,7 +16,7 @@ public class EntityTypes {
 
 	public static final EntityType<BarbeledLoosejawEntity> BARBELED_LOOSEJAW = FabricEntityTypeBuilder
 			.create(SpawnGroup.CREATURE, BarbeledLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+			.dimensions(EntityDimensions.fixed(1.35F, 0.4255F))
 			.build();
 
 	public static final EntityType<BeardedSeadevilEntity> BEARDED_SEADEVIL = FabricEntityTypeBuilder

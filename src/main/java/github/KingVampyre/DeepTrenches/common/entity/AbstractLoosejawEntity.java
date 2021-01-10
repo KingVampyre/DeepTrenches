@@ -28,6 +28,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.IntRange;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
@@ -41,8 +42,8 @@ import static net.minecraft.item.Items.COD;
 
 public abstract class AbstractLoosejawEntity extends TamableFishEntity implements Lightable {
 
-    protected static final ImmutableList<? extends MemoryModuleType<?>> MEMORY_MODULES = ImmutableList.of(BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, LOVE_TICKS, LOVING_PLAYER, OWNER, SITTING, TAMED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, HURT_BY, HURT_BY_ENTITY, LOOK_TARGET, PATH, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, TEMPTED, VISIBLE_MOBS, WALK_TARGET);
-    protected static final ImmutableList<SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SKITTISH_HURT_BY);
+    protected static final ImmutableList<? extends MemoryModuleType<?>> MEMORY_MODULES = ImmutableList.of(ATTACK_TARGET, ATTACK_COOLING_DOWN, NEAREST_PLAYERS, NEAREST_VISIBLE_PLAYER, NEAREST_VISIBLE_TARGETABLE_PLAYER, BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, LOVE_TICKS, LOVING_PLAYER, OWNER, SITTING, TAMED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, HURT_BY, HURT_BY_ENTITY, LOOK_TARGET, PATH, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, TEMPTED, VISIBLE_MOBS, WALK_TARGET);
+    protected static final ImmutableList<SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SensorType.NEAREST_PLAYERS, SKITTISH_HURT_BY);
 
     private static final TrackedData<Integer> LIGHT_STATE = DataTracker.registerData(AbstractLoosejawEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final TrackedData<Integer> LOOSEJAW_TYPE = DataTracker.registerData(AbstractLoosejawEntity.class, TrackedDataHandlerRegistry.INTEGER);
@@ -78,7 +79,7 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
     @SuppressWarnings("unchecked")
     @Override
     protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
-        Brain<BettaEntity> brain = (Brain<BettaEntity>) super.deserializeBrain(dynamic);
+        Brain<AbstractLoosejawEntity> brain = (Brain<AbstractLoosejawEntity>) super.deserializeBrain(dynamic);
 
         brain.setTaskList(Activity.CORE, 0, ImmutableList.of(
                 new LookAroundTask(45, 90),
@@ -86,13 +87,21 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
                 new TemptingCooldownTask())
         );
 
+        brain.setTaskList(Activity.FIGHT, 10, ImmutableList.of(
+                new MeleeAttackTask(40),
+                new RangedApproachTask(3.5F),
+                new ForgetAttackTargetTask<>()
+        ), MemoryModuleType.ATTACK_TARGET);
+
         brain.setTaskList(Activity.IDLE, ImmutableList.of(
-                Pair.of(0, GoToRememberedPositionTask.toEntity(HURT_BY_ENTITY, 2.115F, 6, false)),
-                Pair.of(0, new LoveTask<>(3.0F, 0.9F)),
-                Pair.of(1, new LoveTemptingTask<>(0.9F)),
-                Pair.of(2, new GoTowardsLookTarget(0.9F, 1)),
-                Pair.of(3, new TamableFishFollowOwnerTask<>(0.9F, 16.0F, 6.0F)),
-                Pair.of(3, new StrollTask(0.9F, 16, 9))
+                Pair.of(0, new GoTowardsLookTarget(3.5F, 0)),
+                Pair.of(0, new UpdateAttackTargetTask<>(living -> living.getBrain().getOptionalMemory(NEAREST_VISIBLE_TARGETABLE_PLAYER))),
+                Pair.of(1, new WaitTask(30, 60)),
+                Pair.of(2, new LoveTask<>(3.0F, 0.9F)),
+                Pair.of(3, new LoveTemptingTask<>(0.9F)),
+                Pair.of(4, new TamableFishFollowOwnerTask<>(0.9F, 16.0F, 6.0F)),
+                Pair.of(4, new TimeLimitedTask<>(new FollowMobTask(8.0F), IntRange.between(30, 60))),
+                Pair.of(5, new StrollTask(0.9F, 16, 9))
         ));
 
         brain.setCoreActivities(ImmutableSet.of(Activity.CORE));
@@ -211,7 +220,9 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
         brain.tick(server, this);
         this.world.getProfiler().pop();
 
-        brain.resetPossibleActivities(ImmutableList.of(Activity.IDLE));
+        brain.resetPossibleActivities(ImmutableList.of(Activity.FIGHT, Activity.IDLE));
+
+        this.setAttacking(brain.hasMemoryModule(MemoryModuleType.ATTACK_TARGET));
     }
 
     @Override
