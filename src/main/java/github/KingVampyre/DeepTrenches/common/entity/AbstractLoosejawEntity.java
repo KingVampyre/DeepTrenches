@@ -32,8 +32,6 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 
-import java.util.List;
-
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.COD_TEMPTING;
 import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.SKITTISH_HURT_BY;
@@ -42,6 +40,9 @@ import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENT
 import static net.minecraft.item.Items.COD;
 
 public abstract class AbstractLoosejawEntity extends TamableFishEntity implements Lightable {
+
+    protected static final ImmutableList<? extends MemoryModuleType<?>> MEMORY_MODULES = ImmutableList.of(BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, LOVE_TICKS, LOVING_PLAYER, OWNER, SITTING, TAMED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, HURT_BY, HURT_BY_ENTITY, LOOK_TARGET, PATH, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, TEMPTED, VISIBLE_MOBS, WALK_TARGET);
+    protected static final ImmutableList<SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SKITTISH_HURT_BY);
 
     private static final TrackedData<Integer> LIGHT_STATE = DataTracker.registerData(AbstractLoosejawEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final TrackedData<Integer> LOOSEJAW_TYPE = DataTracker.registerData(AbstractLoosejawEntity.class, TrackedDataHandlerRegistry.INTEGER);
@@ -69,6 +70,11 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
         return new ExperienceOrbEntity(server, x, y, z, this.random.nextInt(7) + 1);
     }
 
+    @Override
+    protected Brain.Profile<?> createBrainProfile() {
+        return Brain.createProfile(MEMORY_MODULES, SENSORS);
+    }
+
     @SuppressWarnings("unchecked")
     @Override
     protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
@@ -86,7 +92,7 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
                 Pair.of(1, new LoveTemptingTask<>(0.9F)),
                 Pair.of(2, new GoTowardsLookTarget(0.9F, 1)),
                 Pair.of(3, new TamableFishFollowOwnerTask<>(0.9F, 16.0F, 6.0F)),
-                Pair.of(3, new StrollTask(0.9F, 12, 9))
+                Pair.of(3, new StrollTask(0.9F, 16, 9))
         ));
 
         brain.setCoreActivities(ImmutableSet.of(Activity.CORE));
@@ -118,30 +124,6 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
     protected SoundEvent getFlopSound() {
         // TODO loosejaw flop sound
         return SoundEvents.ENTITY_SALMON_FLOP;
-    }
-
-    @Override
-    public List<MemoryModuleType<?>> getMemoryModules() {
-        List<MemoryModuleType<?>> memoryModules = super.getMemoryModules();
-
-        memoryModules.add(BREEDING_TARGET);
-        memoryModules.add(CANT_REACH_WALK_TARGET_SINCE);
-        memoryModules.add(HURT_BY);
-        memoryModules.add(HURT_BY_ENTITY);
-        memoryModules.add(LOOK_TARGET);
-        memoryModules.add(PATH);
-        memoryModules.add(TEMPTATION_COOLDOWN_TICKS);
-        memoryModules.add(TEMPTING_PLAYER);
-        memoryModules.add(TEMPTED);
-        memoryModules.add(VISIBLE_MOBS);
-        memoryModules.add(WALK_TARGET);
-
-        return ImmutableList.copyOf(memoryModules);
-    }
-
-    @Override
-    public ImmutableList<? extends SensorType<? extends Sensor<? super MindfulFishEntity>>> getSensors() {
-        return ImmutableList.of(SKITTISH_HURT_BY, NEAREST_LIVING_ENTITIES, COD_TEMPTING);
     }
 
     @Override
@@ -215,6 +197,21 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
         }
 
         return data;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    protected void mobTick() {
+        super.mobTick();
+
+        Brain<AbstractLoosejawEntity> brain = (Brain<AbstractLoosejawEntity>) this.getBrain();
+        ServerWorld server = (ServerWorld) this.world;
+
+        this.world.getProfiler().push("loosejawBrain");
+        brain.tick(server, this);
+        this.world.getProfiler().pop();
+
+        brain.resetPossibleActivities(ImmutableList.of(Activity.IDLE));
     }
 
     @Override

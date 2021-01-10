@@ -27,6 +27,11 @@ public abstract class AnimatedFishEntity extends FishEntity implements IAnimated
 	}
 
 	@Override
+	protected void initGoals() {
+
+	}
+
+	@Override
 	public EntityAnimationManager getAnimationManager() {
 		return this.animationManager;
 	}

@@ -8,7 +8,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,7 +19,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
-import java.util.List;
 import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.LOVE_TICKS;
@@ -46,16 +44,6 @@ public abstract class LovingFishEntity extends AngerableFishEntity implements Lo
     @Override
     public UUID getLovingPlayerUuid() {
         return this.brain.getOptionalMemory(LOVING_PLAYER).orElse(null);
-    }
-
-    @Override
-    public List<MemoryModuleType<?>> getMemoryModules() {
-        List<MemoryModuleType<?>> memoryModules = super.getMemoryModules();
-
-        memoryModules.add(LOVE_TICKS);
-        memoryModules.add(LOVING_PLAYER);
-
-        return memoryModules;
     }
 
     @Override

@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Dynamic;
-import github.KingVampyre.DeepTrenches.common.entity.MindfulFishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.TamableFishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTask;
@@ -36,8 +35,6 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 
-import java.util.List;
-
 import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_235;
 import static github.KingVampyre.DeepTrenches.core.init.EntityTypes.BETTA;
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
@@ -49,6 +46,9 @@ import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENT
 import static net.minecraft.item.Items.COD;
 
 public class BettaEntity extends TamableFishEntity {
+
+    protected static final ImmutableList<? extends MemoryModuleType<?>> MEMORY_MODULES = ImmutableList.of(BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, LOVE_TICKS, LOVING_PLAYER, OWNER, SITTING, TAMED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, HURT_BY, HURT_BY_ENTITY, LOOK_TARGET, PATH, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, TEMPTED, VISIBLE_MOBS, WALK_TARGET);
+    protected static final ImmutableList<SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SKITTISH_HURT_BY);
 
     private static final TrackedData<Integer> BETTA_TYPE = DataTracker.registerData(BettaEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
@@ -63,31 +63,17 @@ public class BettaEntity extends TamableFishEntity {
     }
 
     @Override
-    public List<MemoryModuleType<?>> getMemoryModules() {
-        List<MemoryModuleType<?>> memoryModules = super.getMemoryModules();
-
-        memoryModules.add(BREEDING_TARGET);
-        memoryModules.add(CANT_REACH_WALK_TARGET_SINCE);
-        memoryModules.add(HURT_BY);
-        memoryModules.add(HURT_BY_ENTITY);
-        memoryModules.add(LOOK_TARGET);
-        memoryModules.add(PATH);
-        memoryModules.add(TEMPTATION_COOLDOWN_TICKS);
-        memoryModules.add(TEMPTING_PLAYER);
-        memoryModules.add(TEMPTED);
-        memoryModules.add(VISIBLE_MOBS);
-        memoryModules.add(WALK_TARGET);
-
-        return ImmutableList.copyOf(memoryModules);
-    }
-
-    @Override
     protected void copyDataToStack(ItemStack stack) {
         super.copyDataToStack(stack);
 
         CompoundTag compound = stack.getOrCreateTag();
 
         compound.putInt("BettaType", this.getBettaType());
+    }
+
+    @Override
+    protected Brain.Profile<?> createBrainProfile() {
+        return Brain.createProfile(MEMORY_MODULES, SENSORS);
     }
 
     @Override
@@ -126,7 +112,7 @@ public class BettaEntity extends TamableFishEntity {
                 Pair.of(1, new LoveTemptingTask<>(0.9F)),
                 Pair.of(2, new GoTowardsLookTarget(0.9F, 1)),
                 Pair.of(3, new TamableFishFollowOwnerTask<>(0.9F, 16.0F, 6.0F)),
-                Pair.of(3, new StrollTask(0.9F, 12, 9))
+                Pair.of(3, new StrollTask(0.9F, 16, 9))
         ));
 
         brain.setCoreActivities(ImmutableSet.of(Activity.CORE));
@@ -176,11 +162,6 @@ public class BettaEntity extends TamableFishEntity {
         return MOVEMENT_SPEED_BOOST_235;
     }
 
-    @Override
-    public ImmutableList<? extends SensorType<? extends Sensor<? super MindfulFishEntity>>> getSensors() {
-        return ImmutableList.of(SKITTISH_HURT_BY, NEAREST_LIVING_ENTITIES, COD_TEMPTING);
-    }
-
     public int getBettaType() {
         return this.dataTracker.get(BETTA_TYPE);
     }
@@ -228,6 +209,21 @@ public class BettaEntity extends TamableFishEntity {
         }
 
         return data;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    protected void mobTick() {
+        super.mobTick();
+
+        Brain<BettaEntity> brain = (Brain<BettaEntity>) this.getBrain();
+        ServerWorld server = (ServerWorld) this.world;
+
+        this.world.getProfiler().push("bettaBrain");
+        brain.tick(server, this);
+        this.world.getProfiler().pop();
+
+        brain.resetPossibleActivities(ImmutableList.of(Activity.IDLE));
     }
 
     @Override

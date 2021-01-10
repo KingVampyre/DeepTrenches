@@ -1,15 +1,11 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
-import com.google.common.collect.ImmutableList;
-import github.KingVampyre.DeepTrenches.common.entity.MindfulFishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.TamableFishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.brain.sensor.Sensor;
-import net.minecraft.entity.ai.brain.sensor.SensorType;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
@@ -74,11 +70,6 @@ public class DeepLakeBettaEntity extends TamableFishEntity {
 
     @Override
     protected SoundEvent getFlopSound() {
-        return null;
-    }
-
-    @Override
-    public ImmutableList<? extends SensorType<? extends Sensor<? super MindfulFishEntity>>> getSensors() {
         return null;
     }
 

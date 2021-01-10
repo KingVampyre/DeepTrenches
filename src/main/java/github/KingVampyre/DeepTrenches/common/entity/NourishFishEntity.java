@@ -1,22 +1,17 @@
 package github.KingVampyre.DeepTrenches.common.entity;
 
-import com.google.common.collect.Lists;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Nourish;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.world.World;
 
-import java.util.List;
-
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 
-public abstract class NourishFishEntity extends MindfulFishEntity implements Nourish {
+public abstract class NourishFishEntity extends AnimatedFishEntity implements Nourish {
 
     private static final TrackedData<Boolean> BABY = DataTracker.registerData(NourishFishEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
@@ -37,17 +32,6 @@ public abstract class NourishFishEntity extends MindfulFishEntity implements Nou
     @Override
     public int getHappyTicksRemaining() {
         return this.brain.getOptionalMemory(HAPPY_TICKS_REMAINING).orElse(0);
-    }
-
-    @Override
-    public List<MemoryModuleType<?>> getMemoryModules() {
-        List<MemoryModuleType<?>> list = Lists.newArrayList();
-
-        list.add(BREEDING_AGE);
-        list.add(FORCED_AGE);
-        list.add(HAPPY_TICKS_REMAINING);
-
-        return list;
     }
 
     @Override
