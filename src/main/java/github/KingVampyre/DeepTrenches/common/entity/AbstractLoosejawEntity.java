@@ -11,6 +11,7 @@ import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTemptingTask;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.TamableFishFollowOwnerTask;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.TemptingCooldownTask;
 import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
+import github.KingVampyre.DeepTrenches.core.entity.ai.task.LightableUpdateAttackTargetTask;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.brain.Activity;
 import net.minecraft.entity.ai.brain.Brain;
@@ -33,9 +34,10 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 
+import static github.KingVampyre.DeepTrenches.core.entity.ai.task.LightableUpdateAttackTargetTask.HURT_BY_EXCEPT_OWNER_GETTER;
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.COD_TEMPTING;
-import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.SKITTISH_HURT_BY;
+import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.TAMABLE_HURT_BY;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
 import static net.minecraft.item.Items.COD;
@@ -43,7 +45,7 @@ import static net.minecraft.item.Items.COD;
 public abstract class AbstractLoosejawEntity extends TamableFishEntity implements Lightable {
 
     protected static final ImmutableList<? extends MemoryModuleType<?>> MEMORY_MODULES = ImmutableList.of(ATTACK_TARGET, ATTACK_COOLING_DOWN, NEAREST_PLAYERS, NEAREST_VISIBLE_PLAYER, NEAREST_VISIBLE_TARGETABLE_PLAYER, BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, LOVE_TICKS, LOVING_PLAYER, OWNER, SITTING, TAMED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, HURT_BY, HURT_BY_ENTITY, LOOK_TARGET, PATH, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, TEMPTED, VISIBLE_MOBS, WALK_TARGET);
-    protected static final ImmutableList<SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SensorType.NEAREST_PLAYERS, SKITTISH_HURT_BY);
+    protected static final ImmutableList<SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SensorType.NEAREST_PLAYERS, TAMABLE_HURT_BY);
 
     private static final TrackedData<Integer> LIGHT_STATE = DataTracker.registerData(AbstractLoosejawEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final TrackedData<Integer> LOOSEJAW_TYPE = DataTracker.registerData(AbstractLoosejawEntity.class, TrackedDataHandlerRegistry.INTEGER);
@@ -95,7 +97,7 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
 
         brain.setTaskList(Activity.IDLE, ImmutableList.of(
                 Pair.of(0, new GoTowardsLookTarget(3.5F, 0)),
-                Pair.of(0, new UpdateAttackTargetTask<>(living -> living.getBrain().getOptionalMemory(NEAREST_VISIBLE_TARGETABLE_PLAYER))),
+                Pair.of(0, new LightableUpdateAttackTargetTask(HURT_BY_EXCEPT_OWNER_GETTER)),
                 Pair.of(1, new WaitTask(30, 60)),
                 Pair.of(2, new LoveTask<>(3.0F, 0.9F)),
                 Pair.of(3, new LoveTemptingTask<>(0.9F)),

@@ -152,6 +152,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:cod_tempting"), SensorTypes.COD_TEMPTING);
 		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:nearest_adult"), SensorTypes.NEAREST_ADULT);
 		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:skittish_hurt_by"), SensorTypes.SKITTISH_HURT_BY);
+		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:tamable_hurt_by"), SensorTypes.TAMABLE_HURT_BY);
 
 		/* -------------------------------- Status Effects ------------------------------------------- */
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:braitor_beauty"), BRAITOR_BEAUTY);

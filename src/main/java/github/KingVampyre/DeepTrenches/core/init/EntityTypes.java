@@ -16,7 +16,7 @@ public class EntityTypes {
 
 	public static final EntityType<BarbeledLoosejawEntity> BARBELED_LOOSEJAW = FabricEntityTypeBuilder
 			.create(SpawnGroup.CREATURE, BarbeledLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(1.35F, 0.4255F))
+			.dimensions(EntityDimensions.fixed(1.35F, 0.5F))
 			.build();
 
 	public static final EntityType<BeardedSeadevilEntity> BEARDED_SEADEVIL = FabricEntityTypeBuilder
@@ -36,7 +36,7 @@ public class EntityTypes {
 
 	public static final EntityType<BlackLoosejawEntity> BLACK_LOOSEJAW = FabricEntityTypeBuilder
 			.create(SpawnGroup.WATER_CREATURE, BlackLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+			.dimensions(EntityDimensions.fixed(1.35F, 0.4255F))
 			.build();
 
 	public static final EntityType<BlackScabbardEntity> BLACK_SCABBARD = FabricEntityTypeBuilder
@@ -131,7 +131,7 @@ public class EntityTypes {
 
 	public static final EntityType<LightLoosejawEntity> LIGHT_LOOSEJAW = FabricEntityTypeBuilder
 			.create(SpawnGroup.WATER_CREATURE, LightLoosejawEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+			.dimensions(EntityDimensions.fixed(1.35F, 0.4255F))
 			.build();
 
 	public static final EntityType<MaggotEntity> MAGGOT = FabricEntityTypeBuilder
@@ -146,7 +146,7 @@ public class EntityTypes {
 
 	public static final EntityType<SmalltoothDragonfishEntity> SMALLTOOTH_DRAGONFISH = FabricEntityTypeBuilder
 			.create(SpawnGroup.CREATURE, SmalltoothDragonfishEntity::new)
-			.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+			.dimensions(EntityDimensions.fixed(1.35F, 0.4255F))
 			.build();
 
 	public static final EntityType<StaspEntity> BLACK_STASP = FabricEntityTypeBuilder
