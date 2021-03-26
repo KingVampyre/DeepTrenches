@@ -13,7 +13,6 @@ import net.minecraft.util.registry.Registry;
 
 import static github.KingVampyre.DeepTrenches.core.init.ItemGroups.GENERAL;
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.YEW_STAIRS;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.*;
 import static github.KingVampyre.DeepTrenches.core.init.PaintingMotives.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
@@ -280,12 +279,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_door"), BLUE_MAHOE_DOOR);
 		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_fence"), BLUE_MAHOE_FENCE);
 		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_fence_gate"), BLUE_MAHOE_FENCE_GATE);
-		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_flower_stage_1"), BLUE_MAHOE_FLOWER_STAGE_1);
-		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_flower_wall_fan_stage_1"), BLUE_MAHOE_FLOWER_WALL_FAN_STAGE_1);
-		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_flower_stage_2"), BLUE_MAHOE_FLOWER_STAGE_2);
-		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_flower_wall_fan_stage_2"), BLUE_MAHOE_FLOWER_WALL_FAN_STAGE_2);
-		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_flower_stage_3"), BLUE_MAHOE_FLOWER_STAGE_3);
-		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_flower_wall_fan_stage_3"), BLUE_MAHOE_FLOWER_WALL_FAN_STAGE_3);
+		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_flowers"), BLUE_MAHOE_FLOWERS);
 		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_leaves"), BLUE_MAHOE_LEAVES);
 		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_log"), BLUE_MAHOE_LOG);
 		Registry.register(BLOCK, new Identifier("deep_trenches:blue_mahoe_planks"), BLUE_MAHOE_PLANKS);
@@ -396,7 +390,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:cherry_wall_sign"), CHERRY_WALL_SIGN);
 		Registry.register(BLOCK, new Identifier("deep_trenches:cherry_wood"), CHERRY_WOOD);
 
-		Registry.register(BLOCK, new Identifier("deep_trenches:chotorn"), CHOTORN);
+		Registry.register(BLOCK, new Identifier("deep_trenches:chotorn"), CHOTORN_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:chotorn_button"), CHOTORN_BUTTON);
 		Registry.register(BLOCK, new Identifier("deep_trenches:chotorn_door"), CHOTORN_DOOR);
 		Registry.register(BLOCK, new Identifier("deep_trenches:chotorn_fence"), CHOTORN_FENCE);
@@ -602,7 +596,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:fuchsitra_wall_sign"), FUCHSITRA_WALL_SIGN);
 		Registry.register(BLOCK, new Identifier("deep_trenches:fuchsitra_wood"), FUCHSITRA_WOOD);
 
-		Registry.register(BLOCK, new Identifier("deep_trenches:fugmos"), FUGMOS);
+		Registry.register(BLOCK, new Identifier("deep_trenches:fugmos"), FUGMOS_SAPLING);
 		Registry.register(BLOCK, new Identifier("deep_trenches:fugmos_button"), FUGMOS_BUTTON);
 		Registry.register(BLOCK, new Identifier("deep_trenches:fugmos_door"), FUGMOS_DOOR);
 		Registry.register(BLOCK, new Identifier("deep_trenches:fugmos_fence"), FUGMOS_FENCE);
@@ -1476,7 +1470,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:pink_marsh_violet"), PINK_MARSH_VIOLET);
 		Registry.register(BLOCK, new Identifier("deep_trenches:pink_rose"), PINK_ROSE);
 		Registry.register(BLOCK, new Identifier("deep_trenches:pink_rose_bush"), PINK_ROSE_BUSH);
-		Registry.register(BLOCK, new Identifier("deep_trenches:poppy"), POPPY);
+		Registry.register(BLOCK, new Identifier("deep_trenches:poppy"), ModBlocks.POPPY);
 		Registry.register(BLOCK, new Identifier("deep_trenches:purple_and_orange_pansy"), PURPLE_AND_ORANGE_PANSY);
 		Registry.register(BLOCK, new Identifier("deep_trenches:purpround"), PURPROUND);
 		Registry.register(BLOCK, new Identifier("deep_trenches:red_braitor_flower"), RED_BRAITOR_FLOWER);
@@ -1570,7 +1564,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_marsh_violet"), POTTED_MARSH_VIOLET);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_native_violet"), POTTED_NATIVE_VIOLET);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_opium_poppy"), POTTED_OPIUM_POPPY);
-		Registry.register(BLOCK, new Identifier("deep_trenches:potted_poppy"), POTTED_POPPY);
+		Registry.register(BLOCK, new Identifier("deep_trenches:potted_poppy"), ModBlocks.POTTED_POPPY);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_pink_and_orange_pansy"), POTTED_PINK_AND_ORANGE_PANSY);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_pink_braitor_flower"), POTTED_PINK_BRAITOR_FLOWER);
 		Registry.register(BLOCK, new Identifier("deep_trenches:potted_pink_rose"), POTTED_PINK_ROSE);
@@ -1609,9 +1603,8 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:black_marble"), BLACK_MARBLE);
 		Registry.register(BLOCK, new Identifier("deep_trenches:blue_storcerack"), BLUE_STORCERACK);
 		Registry.register(BLOCK, new Identifier("deep_trenches:enrotium"), ENROTIUM);
-		Registry.register(BLOCK, new Identifier("deep_trenches:airial_moss"), AIRIAL_MOSS);
+		Registry.register(BLOCK, new Identifier("deep_trenches:dritean"), DRITEAN);
 		Registry.register(BLOCK, new Identifier("deep_trenches:gyldelion_block"), GYLDELION_BLOCK);
-        Registry.register(BLOCK, new Identifier("deep_trenches:mosoil"), MOSOIL);
 
         /* -------------------------------- Items ------------------------------------------- */
 		Registry.register(ITEM, new Identifier("deep_trenches:adaigger"), ADAIGGER);
@@ -1936,9 +1929,7 @@ public class  DeepTrenches implements ModInitializer {
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_button"), new BlockItem(BLUE_MAHOE_BUTTON, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_door"), new BlockItem(BLUE_MAHOE_DOOR, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_fence"), new BlockItem(BLUE_MAHOE_FENCE, new Item.Settings().group(GENERAL)));
-        Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_flower_stage_1"), new BlockItem(BLUE_MAHOE_FLOWER_STAGE_1, new Item.Settings().group(GENERAL)));
-        Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_flower_stage_2"), new BlockItem(BLUE_MAHOE_FLOWER_STAGE_2, new Item.Settings().group(GENERAL)));
-        Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_flower_stage_3"), new BlockItem(BLUE_MAHOE_FLOWER_STAGE_3, new Item.Settings().group(GENERAL)));
+        Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_flowers"), new BlockItem(BLUE_MAHOE_FLOWERS, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_fence_gate"), new BlockItem(BLUE_MAHOE_FENCE_GATE, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_leaves"), new BlockItem(BLUE_MAHOE_LEAVES, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_log"), new BlockItem(BLUE_MAHOE_LOG, new Item.Settings().group(GENERAL)));
@@ -2043,7 +2034,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:cherry_trapdoor"), new BlockItem(CHERRY_TRAPDOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:cherry_wood"), new BlockItem(CHERRY_WOOD, new Item.Settings().group(GENERAL)));
 
-		Registry.register(ITEM, new Identifier("deep_trenches:chotorn"), new BlockItem(CHOTORN, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:chotorn"), new BlockItem(CHOTORN_SAPLING, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:chotorn_button"), new BlockItem(CHOTORN_BUTTON, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:chotorn_door"), new BlockItem(CHOTORN_DOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:chotorn_fence"), new BlockItem(CHOTORN_FENCE, new Item.Settings().group(GENERAL)));
@@ -2242,7 +2233,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:fugmos_moss"), new BlockItem(FUGMOS_MOSS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:fugmos_planks"), new BlockItem(FUGMOS_PLANKS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:fugmos_pressure_plate"), new BlockItem(FUGMOS_PRESSURE_PLATE, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:fugmos"), new BlockItem(FUGMOS, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:fugmos"), new BlockItem(FUGMOS_SAPLING, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:fugmos_sign"), new SignItem(new Item.Settings().group(GENERAL).maxCount(16), FUGMOS_SIGN, FUGMOS_WALL_SIGN));
 		Registry.register(ITEM, new Identifier("deep_trenches:fugmos_slab"), new BlockItem(FUGMOS_SLAB, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:fugmos_stairs"), new BlockItem(FUGMOS_STAIRS, new Item.Settings().group(GENERAL)));
@@ -2626,10 +2617,10 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_cherry_log"), new BlockItem(STRIPPED_CHERRY_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_cherry_wood"), new BlockItem(STRIPPED_CHERRY_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_cook_pine_log"), new BlockItem(STRIPPED_COOK_PINE_LOG, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:stripped_cook_pine_wood"), new BlockItem(STRIPPED_COOK_PINE_WOOD, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:stripped_chotorn_log"), new BlockItem(STRIPPED_CHOTORN_LOG, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:stripped_chotorn_wood"), new BlockItem(STRIPPED_CHOTORN_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_crolood_log"), new BlockItem(STRIPPED_CROLOOD_LOG, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:stripped_cook_pine_wood"), new BlockItem(STRIPPED_COOK_PINE_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_crolood_wood"), new BlockItem(STRIPPED_CROLOOD_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_dark_crolood_log"), new BlockItem(STRIPPED_DARK_CROLOOD_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_dark_crolood_wood"), new BlockItem(STRIPPED_DARK_CROLOOD_WOOD, new Item.Settings().group(GENERAL)));
@@ -2890,7 +2881,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_braitor_flower"), new BlockItem(PINK_BRAITOR_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_rose"), new BlockItem(PINK_ROSE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_rose_bush"), new BlockItem(PINK_ROSE_BUSH, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:poppy"), new BlockItem(POPPY, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:poppy"), new BlockItem(ModBlocks.POPPY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:purpround"), new BlockItem(PURPROUND, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:red_braitor_flower"), new BlockItem(RED_BRAITOR_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:red_chocolate_cosmos_flower"), new BlockItem(RED_CHOCOLATE_COSMOS_FLOWER, new Item.Settings().group(GENERAL)));
@@ -2907,6 +2898,6 @@ public class  DeepTrenches implements ModInitializer {
 
 		Registry.register(BLOCK_ENTITY_TYPE, new Identifier("deep_trenches:sign"), BlockEntityTypes.SIGN);
 		Registry.register(BLOCK_ENTITY_TYPE, new Identifier("deep_trenches:stasp_nest"), BlockEntityTypes.STASP_NEST);
-	}
+    }
     
 }

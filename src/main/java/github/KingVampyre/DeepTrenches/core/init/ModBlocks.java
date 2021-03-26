@@ -7,6 +7,8 @@ import github.Louwind.Features.impl.block.FeaturesSaplingBlock;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.*;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModMaterials.FUNGUS;
 import static github.KingVampyre.DeepTrenches.core.init.SaplingGenerators.*;
@@ -14,6 +16,7 @@ import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
 import static net.minecraft.block.Blocks.*;
 import static net.minecraft.block.PressurePlateBlock.ActivationRule.EVERYTHING;
 import static net.minecraft.entity.effect.StatusEffects.*;
+import static net.minecraft.util.registry.Registry.BLOCK;
 
 public class ModBlocks {
 
@@ -27,20 +30,21 @@ public class ModBlocks {
 	public static final Block DRITEAN = new Block(Settings.copy(DIRT));
 	public static final Block ENROTIUM = new EnrotiumBlock(Settings.copy(CRIMSON_NYLIUM));
 	public static final Block GYLDELION_BLOCK = new Block(Settings.copy(IRON_BLOCK));
-	public static final Block LIGHT_OPALITE = new Block(Settings.copy(QUARTZ_BLOCK));
-	public static final Block LUSHINE = new PillarBlock(Settings.copy(STONE));
-	public static final Block LUSHINE_PILLAR = new PillarBlock(Settings.copy(QUARTZ_PILLAR));
-	public static final Block LUSTRITE = new PillarBlock(Settings.copy(STONE));
-	public static final Block MARINE_SNOW = new Block(Settings.copy(SOUL_SAND));
-	public static final Block MOSOIL = new MosoilBlock(Settings.copy(GRASS_BLOCK));
-	public static final Block OPALITE = new Block(Settings.copy(QUARTZ_BLOCK));
-	public static final Block POININE = new PillarBlock(Settings.copy(BASALT));
-	public static final Block RHODONITE = new Block(Settings.copy(QUARTZ_BLOCK));
-	public static final Block SPRILIUM = new Block(Settings.copy(CRIMSON_NYLIUM));
-	public static final Block STORCEAN_MARINE_SNOW = new Block(Settings.copy(SOUL_SAND));
-	public static final Block STORCENDITE = new Block(Settings.copy(STONE));
-	public static final Block STORCERACK = new Block(Settings.copy(STONE));
-	public static final Block VERDINE = new PillarBlock(Settings.copy(STONE));
+
+	public static final Block LIGHT_OPALITE = Registry.register(BLOCK, new Identifier("deep_trenches:light_opalite"), new Block(Settings.copy(QUARTZ_BLOCK)));
+	public static final Block LUSHINE = Registry.register(BLOCK, new Identifier("deep_trenches:lushine"), new PillarBlock(Settings.copy(STONE)));
+	public static final Block LUSHINE_PILLAR = Registry.register(BLOCK, new Identifier("deep_trenches:lushine_pillar"), new PillarBlock(Settings.copy(QUARTZ_PILLAR)));
+	public static final Block LUSTRITE = Registry.register(BLOCK, new Identifier("deep_trenches:lustrite"), new PillarBlock(Settings.copy(STONE)));
+	public static final Block MARINE_SNOW = Registry.register(BLOCK, new Identifier("deep_trenches:marine_snow"), new Block(Settings.copy(SOUL_SAND)));
+	public static final Block MOSOIL = Registry.register(BLOCK, new Identifier("deep_trenches:mosoil"), new MosoilBlock(Settings.copy(GRASS_BLOCK)));
+	public static final Block OPALITE = Registry.register(BLOCK, new Identifier("deep_trenches:opalite"), new Block(Settings.copy(QUARTZ_BLOCK)));
+	public static final Block POININE = Registry.register(BLOCK, new Identifier("deep_trenches:poinine"), new PillarBlock(Settings.copy(BASALT)));
+	public static final Block RHODONITE = Registry.register(BLOCK, new Identifier("deep_trenches:rhodonite"), new Block(Settings.copy(QUARTZ_BLOCK)));
+	public static final Block SPRILIUM = Registry.register(BLOCK, new Identifier("deep_trenches:sprilium"), new Block(Settings.copy(CRIMSON_NYLIUM)));
+	public static final Block STORCEAN_MARINE_SNOW = Registry.register(BLOCK, new Identifier("deep_trenches:storcean_marine_snow"), new Block(Settings.copy(SOUL_SAND)));
+	public static final Block STORCENDITE = Registry.register(BLOCK, new Identifier("deep_trenches:storcendite"), new Block(Settings.copy(STONE)));
+	public static final Block STORCERACK = Registry.register(BLOCK, new Identifier("deep_trenches:storcerack"), new Block(Settings.copy(STONE)));
+	public static final Block VERDINE = Registry.register(BLOCK, new Identifier("deep_trenches:verdine"), new PillarBlock(Settings.copy(STONE)));
 
 	public static final Block BLACK_LILY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block BLACK_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
@@ -381,12 +385,7 @@ public class ModBlocks {
 	public static final Block BLUE_MAHOE_DOOR = new ModDoorBlock(Settings.copy(OAK_DOOR));
 	public static final Block BLUE_MAHOE_FENCE = new FenceBlock(Settings.copy(OAK_FENCE));
 	public static final Block BLUE_MAHOE_FENCE_GATE = new FenceGateBlock(Settings.copy(OAK_FENCE_GATE));
-	public static final Block BLUE_MAHOE_FLOWER_STAGE_1 = new FlowerBlock(Settings.copy(FIRE_CORAL_FAN));
-	public static final Block BLUE_MAHOE_FLOWER_WALL_FAN_STAGE_1 = new FlowerBlock(Settings.copy(FIRE_CORAL_WALL_FAN));
-	public static final Block BLUE_MAHOE_FLOWER_STAGE_2 = new FlowerBlock(Settings.copy(FIRE_CORAL_FAN));
-	public static final Block BLUE_MAHOE_FLOWER_WALL_FAN_STAGE_2 = new FlowerBlock(Settings.copy(FIRE_CORAL_WALL_FAN));
-	public static final Block BLUE_MAHOE_FLOWER_STAGE_3 = new FlowerBlock(Settings.copy(FIRE_CORAL_FAN));
-	public static final Block BLUE_MAHOE_FLOWER_WALL_FAN_STAGE_3 = new FlowerBlock(Settings.copy(FIRE_CORAL_WALL_FAN));
+	public static final Block BLUE_MAHOE_FLOWERS = new BlueMahoeFlowersBlock(Settings.copy(VINE));
 	public static final Block BLUE_MAHOE_LEAVES = new LeavesBlock(Settings.copy(OAK_LEAVES));
 	public static final Block BLUE_MAHOE_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block BLUE_MAHOE_PLANKS = new Block(Settings.copy(OAK_PLANKS));
@@ -504,7 +503,7 @@ public class ModBlocks {
 	public static final Block CHOTORN_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block CHOTORN_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block CHOTORN_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block CHOTORN = new FeaturesSaplingBlock(CHOTORN, Settings.copy(OAK_SAPLING));
+	public static final Block CHOTORN_SAPLING = new FeaturesSaplingBlock(CHOTORN, Settings.copy(OAK_SAPLING));
 	public static final Block CHOTORN_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.CHERRY);
 	public static final Block CHOTORN_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block CHOTORN_STAIRS = new ModStairsBlock(CHOTORN_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -606,7 +605,7 @@ public class ModBlocks {
 	public static final Block DEAD_WART_TREE_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.DEAD_WART_TREE);
 	public static final Block DEAD_WART_TREE_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 
-	public static final Block DRIGYUS = new Block(DRIGYUS, Settings.copy(DEAD_BUSH));
+	public static final Block DRIGYUS = new Block(Settings.copy(DEAD_BUSH));
 	public static final Block DRIGYUS_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
 	public static final Block DRIGYUS_DOOR = new ModDoorBlock(Settings.copy(OAK_DOOR));
 	public static final Block DRIGYUS_FENCE = new FenceBlock(Settings.copy(OAK_FENCE));
@@ -702,7 +701,6 @@ public class ModBlocks {
 	public static final Block FUCHSITRA_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.FUCHSITRA);
 	public static final Block FUCHSITRA_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 
-	public static final Block FUGMOS = new StorceanSaplingBlock(FUGMOS, Settings.copy(OAK_SAPLING));
 	public static final Block FUGMOS_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
 	public static final Block FUGMOS_DOOR = new ModDoorBlock(Settings.copy(OAK_DOOR));
 	public static final Block FUGMOS_FENCE = new FenceBlock(Settings.copy(OAK_FENCE));
@@ -710,6 +708,7 @@ public class ModBlocks {
 	public static final Block FUGMOS_MOSS = new LeavesBlock(Settings.copy(OAK_LEAVES));
 	public static final Block FUGMOS_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block FUGMOS_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
+	public static final Block FUGMOS_SAPLING = new StorceanSaplingBlock(FUGMOS, Settings.copy(OAK_SAPLING));
 	public static final Block FUGMOS_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.FUGMOS);
 	public static final Block FUGMOS_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block FUGMOS_STAIRS = new ModStairsBlock(FUGMOS_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -836,7 +835,7 @@ public class ModBlocks {
 	public static final Block MURKANTUAN_FENCE = new FenceBlock(Settings.copy(OAK_FENCE));
 	public static final Block MURKANTUAN_FENCE_GATE = new FenceGateBlock(Settings.copy(OAK_FENCE_GATE));
 	public static final Block MURKANTUAN_LEAVES = new LeavesBlock(Settings.copy(OAK_LEAVES));
-	public static final Block MURKANTUAN_FLOWER = new FlowerBlock(Settings.copy(VINE));
+	public static final Block MURKANTUAN_FLOWER = new VineBlock(Settings.copy(VINE));
 	public static final Block MURKANTUAN_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block MURKANTUAN_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block MURKANTUAN_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
@@ -1019,7 +1018,7 @@ public class ModBlocks {
 	public static final Block SANGUART_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block SANGUART_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block SANGUART_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block SANGUART_SAPLING = new SaplingBlock(SANGUART, Settings.copy(OAK_SAPLING));
+	public static final Block SANGUART_SAPLING = new FeaturesSaplingBlock(SANGUART, Settings.copy(OAK_SAPLING));
 	public static final Block SANGUART_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.SANGUART);
 	public static final Block SANGUART_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block SANGUART_STAIRS = new ModStairsBlock(SANGUART_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -1050,7 +1049,7 @@ public class ModBlocks {
 	public static final Block SEQUOIA_LOG = new PillarBlock(Settings.copy(OAK_LOG));
 	public static final Block SEQUOIA_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block SEQUOIA_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
-	public static final Block SEQUOIA_SAPLING = new SaplingBlock(SEQUOIA, Settings.copy(OAK_SAPLING));
+	public static final Block SEQUOIA_SAPLING = new FeaturesSaplingBlock(SEQUOIA, Settings.copy(OAK_SAPLING));
 	public static final Block SEQUOIA_SIGN = new ModSignBlock(Settings.copy(OAK_SIGN), SignTypes.SEQUOIA);
 	public static final Block SEQUOIA_SLAB = new SlabBlock(Settings.copy(OAK_SLAB));
 	public static final Block SEQUOIA_STAIRS = new ModStairsBlock(SEQUOIA_PLANKS.getDefaultState(), Settings.copy(OAK_STAIRS));
@@ -1298,7 +1297,7 @@ public class ModBlocks {
 	public static final Block VYNHERT_FRUIT = new Block(Settings.copy(MELON));
 	public static final Block VYNHERT_LEAF = new VineBlock(Settings.copy(VINE));
 	public static final Block VYNHERT_LOG = new PillarBlock(Settings.copy(OAK_LOG));
-	public static final Block VYNHERT_O_LANTERN = new Block(BlockSettings.copy(JACK_O_LANTERN));
+	public static final Block VYNHERT_O_LANTERN = new Block(Settings.copy(JACK_O_LANTERN));
 	public static final Block VYNHERT_PLANKS = new Block(Settings.copy(OAK_PLANKS));
 	public static final Block VYNHERT_PRESSURE_PLATE = new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
 	public static final Block VYNHERT_SAPLING = new FeaturesSaplingBlock(VYNHERT, Settings.copy(OAK_SAPLING));
@@ -1309,7 +1308,7 @@ public class ModBlocks {
 	public static final Block VYNHERT_THORNS = new Block(Settings.copy(SPROOM_SPIKE));
 	public static final Block VYNHERT_TRAPDOOR = new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
 	public static final Block VYNHERT_VINE = new VineBlock(Settings.copy(VINE));
-	public static final Block VYNHERT_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.VYMHERT);
+	public static final Block VYNHERT_WALL_SIGN = new ModWallSignBlock(Settings.copy(OAK_SIGN), SignTypes.VYNHERT);
 	public static final Block VYNHERT_WOOD = new PillarBlock(Settings.copy(OAK_WOOD));
 
 	public static final Block WART_TREE_BUTTON = new ModWoodButtonBlock(Settings.copy(OAK_BUTTON));
@@ -1381,7 +1380,7 @@ public class ModBlocks {
 	public static final Block POTTED_ENDERHEART_SAPLING = new FlowerPotBlock(ENDERHEART_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_FRUCE_SAPLING = new FlowerPotBlock(FRUCE_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_FUCHSITRA_SAPLING = new FlowerPotBlock(FUCHSITRA_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
-	public static final Block POTTED_FUGMOS = new FlowerPotBlock(FUGMOS, Settings.copy(POTTED_OAK_SAPLING));
+	public static final Block POTTED_FUGMOS = new FlowerPotBlock(FUGMOS_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_FUNERANITE_SAPLING = new FlowerPotBlock(FUNERANITE_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_GHOSHROOM_SAPLING = new FlowerPotBlock(GHOSHROOM_SAPLING, Settings.copy(POTTED_OAK_SAPLING));
 	public static final Block POTTED_GUAIACUM_SAPLING = new FlowerPotBlock(GUAIACUM_SAPLING, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
@@ -1419,7 +1418,7 @@ public class ModBlocks {
 	public static final Block POTTED_BROWN_PANSY = new FlowerPotBlock(BROWN_PANSY, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_CACTLOW = new FlowerPotBlock(CACTLOW, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_CHOCOLATE_COSMOS_FLOWER = new FlowerPotBlock(CHOCOLATE_COSMOS_FLOWER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
-	public static final Block POTTED_CHOTORN = new FlowerPotBlock(CHOTORN, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
+	public static final Block POTTED_CHOTORN = new FlowerPotBlock(CHOTORN_SAPLING, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_CYAN_BLUE_VIOLET = new FlowerPotBlock(CYAN_BLUE_VIOLET, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_CYCAWLER = new FlowerPotBlock(CYCAWLER, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
 	public static final Block POTTED_DRIGYUS = new FlowerPotBlock(DRIGYUS, Settings.of(Material.SUPPORTED).breakInstantly().nonOpaque());
