@@ -4,9 +4,6 @@ import github.KingVampyre.DeepTrenches.core.init.*;
 import github.KingVampyre.DeepTrenches.core.util.DefaultAttributeHelper;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.CoralBlockBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
@@ -19,7 +16,6 @@ import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.*;
 import static github.KingVampyre.DeepTrenches.core.init.PaintingMotives.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
-import static net.minecraft.block.Blocks.TUBE_CORAL_BLOCK;
 import static net.minecraft.util.registry.Registry.*;
 
 public class  DeepTrenches implements ModInitializer {
@@ -371,7 +367,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:clawbulb"), CLAWBULB);
 		Registry.register(BLOCK, new Identifier("deep_trenches:cyan_blue_violet"), CYAN_BLUE_VIOLET);
 		Registry.register(BLOCK, new Identifier("deep_trenches:cycawler"), CYCAWLER);
-        Registry.register(BLOCK, new Identifier("deep_trenches:flalm"), FLALM);
 		Registry.register(BLOCK, new Identifier("deep_trenches:garden_pinks"), GARDEN_PINKS);
 		Registry.register(BLOCK, new Identifier("deep_trenches:green_pansy"), GREEN_PANSY);
 		Registry.register(BLOCK, new Identifier("deep_trenches:gyldelion_flower"), GYLDELION_FLOWER);
@@ -1609,8 +1604,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:thundercloud_plum_trapdoor"), new BlockItem(THUNDERCLOUD_PLUM_TRAPDOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:thundercloud_plum_wood"), new BlockItem(THUNDERCLOUD_PLUM_WOOD, new Item.Settings().group(GENERAL)));
 
-		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_bottom_leaf"), new BlockItem(VYNHERT_BOTTOM_LEAF, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_bottom_leaf"), new BlockItem(VYNHERT_BOTTOM_LEAF_CONNECTED, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_button"), new BlockItem(VYNHERT_BUTTON, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_door"), new BlockItem(VYNHERT_DOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_fence"), new BlockItem(VYNHERT_FENCE, new Item.Settings().group(GENERAL)));
