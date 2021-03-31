@@ -17,7 +17,8 @@
     "MixinLivingEntity",
     "MixinPlayerEntity",
     "MixinServerPlayerEntity",
-    "MixinTridentEntity"
+    "MixinTridentEntity",
+    "MixinVineBlock"
   ],
   "client": [
   ],

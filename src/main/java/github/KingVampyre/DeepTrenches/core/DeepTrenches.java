@@ -1173,7 +1173,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_door"), new BlockItem(MURKANTUAN_DOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_fence"), new BlockItem(MURKANTUAN_FENCE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_fence_gate"), new BlockItem(MURKANTUAN_FENCE_GATE, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_flower"), new BlockItem(MURKANTUAN_FLOWER, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_flowers"), new BlockItem(MURKANTUAN_FLOWERS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_leaves"), new BlockItem(MURKANTUAN_LEAVES, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_log"), new BlockItem(MURKANTUAN_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_planks"), new BlockItem(MURKANTUAN_PLANKS, new Item.Settings().group(GENERAL)));
