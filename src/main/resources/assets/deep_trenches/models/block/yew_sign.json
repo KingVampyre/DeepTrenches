@@ -1,5 +1,3 @@
 {
-	"textures": {
-		"particle": "deep_trenches:block/yew_planks"
-	}
+    "particle": "deep_trenches:block/yew_planks"
 }

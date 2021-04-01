@@ -1,6 +1,6 @@
 {
-	"parent": "block/pressure_plate_up",
-	"textures": {
-		"texture": "deep_trenches:block/yew_planks"
-	}
+    "parent": "block/pressure_plate_up",
+    "textures": {
+        "texture": "deep_trenches:block/yew_planks"
+    }
 }

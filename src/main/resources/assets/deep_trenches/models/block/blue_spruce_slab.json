@@ -1,0 +1,24 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "deep_trenches:block/blue_spruce_planks",
+        "side": "deep_trenches:block/blue_spruce_planks",
+        "top": "deep_trenches:block/blue_spruce_planks"
+    }
+}
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "deep_trenches:block/blue_spruce_planks",
+        "side": "deep_trenches:block/blue_spruce_planks",
+        "top": "deep_trenches:block/blue_spruce_planks"
+    }
+}
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "deep_trenches:block/blue_spruce_planks",
+        "side": "deep_trenches:block/blue_spruce_planks",
+        "top": "deep_trenches:block/blue_spruce_planks"
+    }
+}

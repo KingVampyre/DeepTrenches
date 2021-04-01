@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "deep_trenches:block/tark_slab"
+        },
+        "type=double": {
+            "model": "deep_trenches:block/tark_planks"
+        },
+        "type=top": {
+            "model": "deep_trenches:block/tark_slab_top"
+        }
+    }
+}

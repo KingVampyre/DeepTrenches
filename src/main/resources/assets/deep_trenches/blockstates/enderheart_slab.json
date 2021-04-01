@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "deep_trenches:block/enderheart_slab"
+        },
+        "type=double": {
+            "model": "deep_trenches:block/enderheart_planks"
+        },
+        "type=top": {
+            "model": "deep_trenches:block/enderheart_slab_top"
+        }
+    }
+}

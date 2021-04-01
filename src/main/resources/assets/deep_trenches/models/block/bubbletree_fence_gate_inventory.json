@@ -1,0 +1,6 @@
+{
+    "parent": "block/template_fence_gate_inventory",
+    "textures": {
+        "texture": "deep_trenches:block/bubbletree_planks"
+    }
+}

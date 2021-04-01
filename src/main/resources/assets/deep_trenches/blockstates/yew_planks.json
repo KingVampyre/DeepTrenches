@@ -1,7 +1,7 @@
 {
-	"variants": {
-		"": {
-			"model": "deep_trenches:block/yew_planks"
-		}
-	}
+    "variants": {
+        "": {
+            "model": "deep_trenches:block/yew_planks"
+        }
+    }
 }

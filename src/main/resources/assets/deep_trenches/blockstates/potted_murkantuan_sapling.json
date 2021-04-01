@@ -1,7 +1,7 @@
 {
-	"variants": {
-		"": {
-			"model": "deep_trenches:block/potted_murkantuan_sapling"
-		}
-	}
+    "variants": {
+        "": {
+            "model": "deep_trenches:block/potted_murkantuan_sapling"
+        }
+    }
 }

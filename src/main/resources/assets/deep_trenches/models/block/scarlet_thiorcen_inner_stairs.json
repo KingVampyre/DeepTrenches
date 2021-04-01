@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "deep_trenches:block/scarlet_thiorcen_planks",
+        "side": "deep_trenches:block/scarlet_thiorcen_planks",
+        "top": "deep_trenches:block/scarlet_thiorcen_planks"
+    }
+}

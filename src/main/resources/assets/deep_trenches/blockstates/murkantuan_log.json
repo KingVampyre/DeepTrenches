@@ -1,16 +1,16 @@
 {
-	"variants": {
-		"axis=y": {
-			"model": "deep_trenches:block/murkantuan_log"
-		},
-		"axis=z": {
-			"model": "deep_trenches:block/murkantuan_log",
-			"x": 90
-		},
-		"axis=x": {
-			"model": "deep_trenches:block/murkantuan_log",
-			"x": 90,
-			"y": 90
-		}
-	}
+    "variants": {
+        "axis=y": {
+            "model": "deep_trenches:block/murkantuan_log"
+        },
+        "axis=z": {
+            "model": "deep_trenches:block/murkantuan_log",
+            "x": 90
+        },
+        "axis=x": {
+            "model": "deep_trenches:block/murkantuan_log",
+            "x": 90,
+            "y": 90
+        }
+    }
 }

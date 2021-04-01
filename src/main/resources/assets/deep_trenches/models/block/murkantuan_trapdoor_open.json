@@ -1,6 +1,6 @@
 {
-	"parent": "block/template_orientable_trapdoor_open",
-	"textures": {
-		"texture": "deep_trenches:block/murkantuan_trapdoor"
-	}
+    "parent": "block/template_orientable_trapdoor_open",
+    "textures": {
+        "texture": "deep_trenches:block/murkantuan_trapdoor"
+    }
 }

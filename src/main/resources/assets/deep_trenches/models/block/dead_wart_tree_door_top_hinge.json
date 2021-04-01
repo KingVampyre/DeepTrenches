@@ -1,0 +1,14 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "deep_trenches:block/dead_wart_tree_door_bottom",
+        "top": "deep_trenches:block/dead_wart_tree_door_top"
+    }
+}
+{
+    "parent": "block/door_top_rh",
+    "textures": {
+        "bottom": "deep_trenches:block/dead_wart_tree_door_bottom",
+        "top": "deep_trenches:block/dead_wart_tree_door_top"
+    }
+}

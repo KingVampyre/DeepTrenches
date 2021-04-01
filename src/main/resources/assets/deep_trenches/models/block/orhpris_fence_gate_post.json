@@ -1,0 +1,6 @@
+{
+    "parent": "block/template_fence_gate_post",
+    "textures": {
+        "texture": "deep_trenches:block/orhpris_planks"
+    }
+}

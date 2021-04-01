@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "deep_trenches:block/rhadi_slab"
+        },
+        "type=double": {
+            "model": "deep_trenches:block/rhadi_planks"
+        },
+        "type=top": {
+            "model": "deep_trenches:block/rhadi_slab_top"
+        }
+    }
+}

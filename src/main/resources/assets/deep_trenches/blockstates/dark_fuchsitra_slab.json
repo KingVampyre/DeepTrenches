@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "type=bottom": {
+            "model": "deep_trenches:block/dark_fuchsitra_slab"
+        },
+        "type=double": {
+            "model": "deep_trenches:block/dark_fuchsitra_planks"
+        },
+        "type=top": {
+            "model": "deep_trenches:block/dark_fuchsitra_slab_top"
+        }
+    }
+}

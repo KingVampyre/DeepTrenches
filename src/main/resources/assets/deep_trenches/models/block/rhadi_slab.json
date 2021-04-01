@@ -1,0 +1,24 @@
+{
+    "parent": "block/slab",
+    "textures": {
+        "bottom": "deep_trenches:block/rhadi_planks",
+        "side": "deep_trenches:block/rhadi_planks",
+        "top": "deep_trenches:block/rhadi_planks"
+    }
+}
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "deep_trenches:block/rhadi_planks",
+        "side": "deep_trenches:block/rhadi_planks",
+        "top": "deep_trenches:block/rhadi_planks"
+    }
+}
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "deep_trenches:block/rhadi_planks",
+        "side": "deep_trenches:block/rhadi_planks",
+        "top": "deep_trenches:block/rhadi_planks"
+    }
+}
