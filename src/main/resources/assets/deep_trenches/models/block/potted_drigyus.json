@@ -1,0 +1,12 @@
+{
+    "parent": "block/flower_pot_cross",
+    "textures": {
+        "plant": "deep_trenches:block/drigyus"
+    }
+}
+{
+    "parent": "block/flower_pot_cross",
+    "textures": {
+        "plant": "deep_trenches:block/drigyus"
+    }
+}

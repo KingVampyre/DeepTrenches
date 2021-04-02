@@ -1460,7 +1460,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_enderheart_wood"), new BlockItem(STRIPPED_ENDERHEART_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_flalm_stem"), new BlockItem(STRIPPED_FLALM_STEM, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_flalm_wood"), new BlockItem(STRIPPED_FLALM_WOOD, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:stripped_fruce_stem"), new BlockItem(STRIPPED_FRUCE_LOG, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:stripped_fruce_log"), new BlockItem(STRIPPED_FRUCE_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_fruce_wood"), new BlockItem(STRIPPED_FRUCE_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_fugmos_stem"), new BlockItem(STRIPPED_FUGMOS_STEM, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_fugmos_hyphae"), new BlockItem(STRIPPED_FUGMOS_HYPHAE, new Item.Settings().group(GENERAL)));
@@ -1628,7 +1628,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:wart_tree_door"), new BlockItem(WART_TREE_DOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:wart_tree_fence"), new BlockItem(WART_TREE_FENCE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:wart_tree_fence_gate"), new BlockItem(WART_TREE_FENCE_GATE, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:wart_tree_wart"), new BlockItem(WART_TREE_WARTS, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:wart_tree_warts"), new BlockItem(WART_TREE_WARTS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:wart_tree_log"), new BlockItem(WART_TREE_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:wart_tree_planks"), new BlockItem(WART_TREE_PLANKS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:wart_tree_pressure_plate"), new BlockItem(WART_TREE_PRESSURE_PLATE, new Item.Settings().group(GENERAL)));

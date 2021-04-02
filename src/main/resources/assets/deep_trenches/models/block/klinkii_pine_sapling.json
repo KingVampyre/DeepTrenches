@@ -1,12 +1,6 @@
 {
-    "parent": "block/flower_pot_cross",
-    "textures": {
-        "plant": "deep_trenches:block/klinkii_pine_sapling"
-    }
-}
-{
     "parent": "block/cross",
     "textures": {
-        "cross": "deep_trenches:block/klinkii_pine_sapling"
+        "cross": "deep_trenches:block/klinkii_sapling"
     }
 }

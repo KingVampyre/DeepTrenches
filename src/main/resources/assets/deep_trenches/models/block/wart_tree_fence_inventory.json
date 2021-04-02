@@ -1,0 +1,12 @@
+{
+    "parent": "block/fence_inventory",
+    "textures": {
+        "texture": "deep_trenches:block/wart_tree_planks"
+    }
+}
+{
+    "parent": "block/fence_inventory",
+    "textures": {
+        "texture": "deep_trenches:block/wart_tree_planks"
+    }
+}

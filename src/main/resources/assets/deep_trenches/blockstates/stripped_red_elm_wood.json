@@ -1,7 +1,7 @@
 {
-    "variants": {
-        "": {
-            "model": "deep_trenches:block/stripped_rark, red_elm_wood"
-        }
-    }
+	"variants": {
+		"": {
+			"model": "deep_trenches:block/stripped_red_elm_wood"
+		}
+	}
 }

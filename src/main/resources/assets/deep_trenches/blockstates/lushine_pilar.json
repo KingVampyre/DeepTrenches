@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "axis=y": {
+            "model": "deep_trenches:block/lushine_pilar"
+        },
+        "axis=z": {
+            "model": "deep_trenches:block/lushine_pilar",
+            "x": 90
+        },
+        "axis=x": {
+            "model": "deep_trenches:block/lushine_pilar",
+            "x": 90,
+            "y": 90
+        }
+    }
+}

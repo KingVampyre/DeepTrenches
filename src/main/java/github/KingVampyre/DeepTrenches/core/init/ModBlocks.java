@@ -84,7 +84,7 @@ public class ModBlocks {
 	public static final Block RED_ROSE = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block REEBLOON = new ReebloonBlock(Settings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block RUBRA_BLUE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block SKALK = new Block(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block SKALK = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block SPIDREET = new StorceanFlowerBlock(REGENERATION, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block SPIKE_LAVENDER = new FlowerBlock(FLOWER_BEAUTY, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block SPRINLY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
@@ -1529,7 +1529,7 @@ public class ModBlocks {
 	}
 
     protected static Block createPillar(String id, Block block) {
-        return register(id, new Block(Settings.copy(block)));
+        return register(id, new PillarBlock(Settings.copy(block)));
     }
 
 	protected static Block createPottedSapling(String id, Block block) {
@@ -1553,8 +1553,8 @@ public class ModBlocks {
         return register(id, new Block(Settings.copy(VINE)));
     }
 
-    protected static Block createVine(String id) {
-        return register(id, new VineBlock(Settings.copy(VINE)));
+    protected static Block createStorceanSapling(String id, FeaturesSaplingGenerator saplingGenerator) {
+        return register(id, new StorceanTallSaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING)));
     }
 
     protected static Block createVineFlowers(Tag<Block> tag, String id) {
@@ -1874,7 +1874,7 @@ public class ModBlocks {
 		DEAD_WART_TREE_FENCE_GATE = createOakFenceGate("deep_trenches:dead_wart_tree_fence_gate");
 		DEAD_WART_TREE_LOG = createOakLog("deep_trenches:dead_wart_tree_log");
 		DEAD_WART_TREE_PLANKS = createOakPlanks("deep_trenches:dead_wart_tree_planks");
-		DEAD_WART_TREE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:dead_wart_tree_plate");
+		DEAD_WART_TREE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:dead_wart_tree_pressure_plate");
 		DEAD_WART_TREE_SIGN = createOakSign("deep_trenches:dead_wart_tree_sign", SignTypes.DEAD_WART_TREE);
 		DEAD_WART_TREE_SLAB = createOakSlab("deep_trenches:dead_wart_tree_slab");
 		DEAD_WART_TREE_STAIRS = createOakStairs("deep_trenches:dead_wart_tree_stairs", DEAD_WART_TREE_PLANKS);
@@ -1918,7 +1918,7 @@ public class ModBlocks {
 		ENDERHEART_FENCE = createOakFence("deep_trenches:enderheart_fence");
 		ENDERHEART_FENCE_GATE = createOakFenceGate("deep_trenches:enderheart_fence_gate");
 		ENDERHEART_LEAVES = createOakLeaves("deep_trenches:enderheart_leaves");
-		ENDERHEART_LEAF = createOakLeaves("deep_trenches:enderheart_leaf");
+		ENDERHEART_LEAF = createBlock("deep_trenches:enderheart_leaf", OAK_LEAVES);
 		ENDERHEART_LOG = createOakLog("deep_trenches:enderheart_log");
 		ENDERHEART_PLANKS = createOakPlanks("deep_trenches:enderheart_planks");
 		ENDERHEART_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:enderheart_pressure_plate");
@@ -2343,7 +2343,7 @@ public class ModBlocks {
 		SPROOM_LOG = createOakLog("deep_trenches:sproom_log");
 		SPROOM_PLANKS = createOakPlanks("deep_trenches:sproom_planks");
 		SPROOM_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:sproom_pressure_plate");
-		SPROOM_SAPLING = createOakSapling("deep_trenches:sproom_sapling", SaplingGenerators.SPROOM);
+		SPROOM_SAPLING = createStorceanSapling("deep_trenches:sproom_sapling", SaplingGenerators.SPROOM);
 		SPROOM_SIGN = createOakSign("deep_trenches:sproom_sign", SignTypes.SPROOM);
 		SPROOM_SLAB = createOakSlab("deep_trenches:sproom_slab");
 		SPROOM_STAIRS = createOakStairs("deep_trenches:sproom_stairs", SPROOM_PLANKS);
@@ -2359,7 +2359,7 @@ public class ModBlocks {
 		STORTREEAN_LOG = createOakLog("deep_trenches:stortreean_log");
 		STORTREEAN_PLANKS = createOakPlanks("deep_trenches:stortreean_planks");
 		STORTREEAN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:stortreean_pressure_plate");
-		STORTREEAN_SAPLING = createOakSapling("deep_trenches:stortreean_sapling", SaplingGenerators.STORTREEAN);
+		STORTREEAN_SAPLING = createStorceanSapling("deep_trenches:stortreean_sapling", SaplingGenerators.STORTREEAN);
 		STORTREEAN_SIGN = createOakSign("deep_trenches:stortreean_sign", SignTypes.STORTREEAN);
 		STORTREEAN_SLAB = createOakSlab("deep_trenches:stortreean_slab");
 		STORTREEAN_STAIRS = createOakStairs("deep_trenches:stortreean_stairs", STORTREEAN_PLANKS);
@@ -2571,7 +2571,7 @@ public class ModBlocks {
 		VYNHERT_FENCE = createOakFence("deep_trenches:vynhert_fence");
 		VYNHERT_FENCE_GATE = createOakFenceGate("deep_trenches:vynhert_fence_gate");
 		VYNHERT_FRUIT = createBlock("deep_trenches:vynhert_fruit", MELON);
-		VYNHERT_LEAF = createOakLeaves("deep_trenches:vynhert_leaf");
+		VYNHERT_LEAF = createBlock("deep_trenches:vynhert_leaf", OAK_LEAVES);
 		VYNHERT_LOG = createOakLog("deep_trenches:vynhert_log");
 		VYNHERT_O_LANTERN = createBlock("deep_trenches:vynhert_o_lantern", JACK_O_LANTERN);
 		VYNHERT_PLANKS = createOakPlanks("deep_trenches:vynhert_planks");
@@ -2728,9 +2728,9 @@ public class ModBlocks {
 		POTTED_WEEPY_HOLLOWER = createFlowerPot("deep_trenches:potted_weepy_hollower", WEEPY_HOLLOWER);
 
 		LIGHT_OPALITE = createBlock("deep_trenches:light_opalite", QUARTZ_BLOCK);
-		LUSHINE = createPillar("deep_trenches:lushine", STONE);
+		LUSHINE = createBlock("deep_trenches:lushine", STONE);
 		LUSHINE_PILLAR = createPillar("deep_trenches:lushine_pillar", QUARTZ_PILLAR);
-		LUSTRITE = createPillar("deep_trenches:lustrite", STONE);
+		LUSTRITE = createBlock("deep_trenches:lustrite", STONE);
 		MARINE_SNOW = createBlock("deep_trenches:marine_snow", SOUL_SAND);
 		MOSOIL = register("deep_trenches:mosoil", new MosoilBlock(Settings.copy(GRASS_BLOCK)));
 		OPALITE = createBlock("deep_trenches:opalite", QUARTZ_BLOCK);

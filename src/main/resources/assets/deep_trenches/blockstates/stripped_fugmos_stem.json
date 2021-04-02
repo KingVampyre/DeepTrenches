@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"axis=y": {
+			"model": "deep_trenches:block/stripped_fugmos_stem"
+		},
+		"axis=z": {
+			"model": "deep_trenches:block/stripped_fugmos_stem",
+			"x": 90
+		},
+		"axis=x": {
+			"model": "deep_trenches:block/stripped_fugmos_stem",
+			"x": 90,
+			"y": 90
+		}
+	}
+}

@@ -1,8 +1,0 @@
-{
-    "parent": "block/outer_stairs",
-    "textures": {
-        "bottom": "deep_trenches:block/red_elm_planks",
-        "side": "deep_trenches:block/red_elm_planks",
-        "top": "deep_trenches:block/red_elm_planks"
-    }
-}

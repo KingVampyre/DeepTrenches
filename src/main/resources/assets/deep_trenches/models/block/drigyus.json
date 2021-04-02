@@ -1,0 +1,12 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "deep_trenches:block/drigyus"
+    }
+}
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "deep_trenches:block/drigyus"
+    }
+}
