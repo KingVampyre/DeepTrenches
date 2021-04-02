@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/enderheart_trapdoor"
+    "parent": "deep_trenches:block/enderheart_trapdoor"
 }

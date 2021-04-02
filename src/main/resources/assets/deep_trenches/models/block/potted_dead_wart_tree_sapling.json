@@ -1,0 +1,6 @@
+{
+    "parent": "block/flower_pot_cross",
+    "textures": {
+        "plant": "deep_trenches:block/dead_wart_tree_sapling"
+    }
+}

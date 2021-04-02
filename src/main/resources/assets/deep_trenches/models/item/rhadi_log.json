@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/rhadi_log"
+    "parent": "deep_trenches:block/rhadi_log"
 }

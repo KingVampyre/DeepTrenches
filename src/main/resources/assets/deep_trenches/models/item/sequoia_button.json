@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/sequoia_button"
+    "parent": "deep_trenches:block/sequoia_button"
 }

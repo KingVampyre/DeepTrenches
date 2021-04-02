@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/chotorn_fence"
+    "parent": "deep_trenches:block/chotorn_fence_inventory"
 }

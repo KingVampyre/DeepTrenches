@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/melaleuca_sapling"
+    "parent": "deep_trenches:block/melaleuca_sapling"
 }

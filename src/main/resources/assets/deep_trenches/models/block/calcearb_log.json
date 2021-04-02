@@ -5,9 +5,3 @@
         "side": "deep_trenches:block/calcearb_log"
     }
 }
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "deep_trenches:block/calcearb_log"
-    }
-}

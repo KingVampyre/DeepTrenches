@@ -7,15 +7,7 @@
     }
 }
 {
-    "parent": "block/slab_top",
-    "textures": {
-        "bottom": "deep_trenches:block/wart_tree_planks",
-        "side": "deep_trenches:block/wart_tree_planks",
-        "top": "deep_trenches:block/wart_tree_planks"
-    }
-}
-{
-    "parent": "block/stairs",
+    "parent": "block/slab",
     "textures": {
         "bottom": "deep_trenches:block/wart_tree_planks",
         "side": "deep_trenches:block/wart_tree_planks",

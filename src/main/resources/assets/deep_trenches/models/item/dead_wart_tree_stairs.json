@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/dead_wart_tree_stairs"
+    "parent": "deep_trenches:block/dead_wart_tree_stairs"
 }

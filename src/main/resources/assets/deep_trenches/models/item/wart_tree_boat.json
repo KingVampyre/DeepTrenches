@@ -4,3 +4,9 @@
         "layer0": "deep_trenches:item/wart_tree_boat"
     }
 }
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "deep_trenches:item/wart_tree_boat"
+    }
+}

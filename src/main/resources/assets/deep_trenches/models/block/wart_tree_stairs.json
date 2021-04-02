@@ -1,0 +1,16 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "deep_trenches:block/wart_tree_planks",
+        "side": "deep_trenches:block/wart_tree_planks",
+        "top": "deep_trenches:block/wart_tree_planks"
+    }
+}
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "deep_trenches:block/wart_tree_planks",
+        "side": "deep_trenches:block/wart_tree_planks",
+        "top": "deep_trenches:block/wart_tree_planks"
+    }
+}

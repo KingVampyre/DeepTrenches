@@ -5,8 +5,8 @@
     }
 }
 {
-    "parent": "block/flower_pot_cross",
+    "parent": "block/cross",
     "textures": {
-        "plant": "deep_trenches:block/wart_tree_sapling"
+        "cross": "deep_trenches:block/wart_tree_sapling"
     }
 }

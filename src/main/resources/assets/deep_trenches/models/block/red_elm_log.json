@@ -1,0 +1,13 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "deep_trenches:block/red_elm_log_top",
+        "side": "deep_trenches:block/red_elm_log"
+    }
+}
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/red_elm_log"
+    }
+}

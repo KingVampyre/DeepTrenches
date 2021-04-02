@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/bottlebrush_wood"
+    "parent": "deep_trenches:block/bottlebrush_wood"
 }

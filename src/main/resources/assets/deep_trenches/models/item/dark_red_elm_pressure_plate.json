@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/dark_red_elm_pressure_plate"
+    "parent": "deep_trenches:block/dark_red_elm_pressure_plate"
 }

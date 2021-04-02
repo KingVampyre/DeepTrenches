@@ -1,13 +1,7 @@
 {
     "parent": "block/cube_column",
     "textures": {
-        "end": "deep_trenches:block/klinkii_pine_log_top",
-        "side": "deep_trenches:block/klinkii_pine_log"
-    }
-}
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "deep_trenches:block/klinkii_pine_log"
+        "end": "deep_trenches:block/klinkii_log_top",
+        "side": "deep_trenches:block/klinkii_log"
     }
 }

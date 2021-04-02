@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/fugmos_slab"
+    "parent": "deep_trenches:block/fugmos_slab"
 }

@@ -1,3 +1,6 @@
 {
-    "particle": "deep_trenches:/wart_tree_fence_gate"
+    "parent": "deep_trenches:block/wart_tree_fence_gate"
+}
+{
+    "parent": "deep_trenches:block/wart_tree_fence_gate"
 }

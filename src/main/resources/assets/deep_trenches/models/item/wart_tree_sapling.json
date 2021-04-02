@@ -1,3 +1,6 @@
 {
-    "particle": "deep_trenches:/wart_tree_sapling"
+    "parent": "deep_trenches:block/wart_tree_sapling"
+}
+{
+    "parent": "deep_trenches:block/wart_tree_sapling"
 }

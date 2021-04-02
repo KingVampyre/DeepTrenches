@@ -6,19 +6,3 @@
         "top": "deep_trenches:block/enderheart_planks"
     }
 }
-{
-    "parent": "block/slab_top",
-    "textures": {
-        "bottom": "deep_trenches:block/enderheart_planks",
-        "side": "deep_trenches:block/enderheart_planks",
-        "top": "deep_trenches:block/enderheart_planks"
-    }
-}
-{
-    "parent": "block/stairs",
-    "textures": {
-        "bottom": "deep_trenches:block/enderheart_planks",
-        "side": "deep_trenches:block/enderheart_planks",
-        "top": "deep_trenches:block/enderheart_planks"
-    }
-}

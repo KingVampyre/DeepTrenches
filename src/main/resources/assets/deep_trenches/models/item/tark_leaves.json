@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/tark_leaves"
+    "parent": "deep_trenches:block/tark_leaves"
 }

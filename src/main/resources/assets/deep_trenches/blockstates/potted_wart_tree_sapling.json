@@ -5,3 +5,10 @@
         }
     }
 }
+{
+    "variants": {
+        "": {
+            "model": "deep_trenches:block/potted_wart_tree_sapling"
+        }
+    }
+}

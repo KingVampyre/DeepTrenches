@@ -4,9 +4,3 @@
         "cross": "deep_trenches:block/dark_red_elm_sapling"
     }
 }
-{
-    "parent": "block/flower_pot_cross",
-    "textures": {
-        "plant": "deep_trenches:block/dark_red_elm_sapling"
-    }
-}

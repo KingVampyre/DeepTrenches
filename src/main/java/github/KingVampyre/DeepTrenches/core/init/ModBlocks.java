@@ -2426,7 +2426,7 @@ public class ModBlocks {
 		STRIPPED_GHOSHROOM_LOG = createStrippedOakLog("deep_trenches:stripped_ghoshroom_log");
 		STRIPPED_GHOSHROOM_WOOD = createStrippedOakWood("deep_trenches:stripped_ghoshroom_wood");
 		STRIPPED_GIANT_VIOLET_STEM = createStrippedOakLog("deep_trenches:stripped_giant_violet_stem");
-		STRIPPED_GIANT_VIOLET_WOOD = createStrippedOakWood("deep_trenches:stripped_giant_violet_stem_wood");
+		STRIPPED_GIANT_VIOLET_WOOD = createStrippedOakWood("deep_trenches:stripped_giant_violet_wood");
 		STRIPPED_GUAIACUM_LOG = createStrippedOakLog("deep_trenches:stripped_guaiacum_log");
 		STRIPPED_GUAIACUM_WOOD = createStrippedOakWood("deep_trenches:stripped_guaiacum_wood");
 		STRIPPED_JOSHUA_LOG = createStrippedOakLog("deep_trenches:stripped_joshua_log");
@@ -2587,7 +2587,7 @@ public class ModBlocks {
 		VYNHERT_WALL_SIGN = createOakWallSign("deep_trenches:vynhert_wall_sign", SignTypes.VYNHERT);
 		VYNHERT_WOOD = createOakWood("deep_trenches:vynhert_wood");
 
-		WART_TREE_BUTTON = createOakButton("deep_trenches:wart_tree_plum_button");
+		WART_TREE_BUTTON = createOakButton("deep_trenches:wart_tree_button");
 		WART_TREE_DOOR = createOakDoor("deep_trenches:wart_tree_door");
 		WART_TREE_FENCE = createOakFence("deep_trenches:wart_tree_fence");
 		WART_TREE_FENCE_GATE = createOakFenceGate("deep_trenches:wart_tree_fence_gate");

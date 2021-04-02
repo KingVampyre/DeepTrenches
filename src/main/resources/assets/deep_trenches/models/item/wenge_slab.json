@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/wenge_slab"
+    "parent": "deep_trenches:block/wenge_slab"
 }

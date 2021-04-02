@@ -1,3 +1,3 @@
 {
-    "particle": "deep_trenches:/tark_fence"
+    "parent": "deep_trenches:block/tark_fence_inventory"
 }
