@@ -1681,40 +1681,55 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:dritean"), new BlockItem(DRITEAN, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:gyldelion_block"), new BlockItem(GYLDELION_BLOCK, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:mosoil"), new BlockItem(MOSOIL, new Item.Settings().group(GENERAL)));
-
 		Registry.register(ITEM, new Identifier("deep_trenches:black_lily"), new BlockItem(BLACK_LILY, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:black_pansy"), new BlockItem(BLACK_PANSY, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:blue_pansy"), new BlockItem(BLUE_PANSY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:blue_poppy"), new BlockItem(BLUE_POPPY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:blue_violet"), new BlockItem(BLUE_VIOLET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:bonnet_spurge"), new BlockItem(BONNET_SPURGE, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:brown_pansy"), new BlockItem(BROWN_PANSY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:bullthorn"), new BlockItem(BULLTHORN, new Item.Settings().group(GENERAL)));
-
+		Registry.register(ITEM, new Identifier("deep_trenches:cactlow"), new BlockItem(CACTLOW, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:chocolate_cosmos_flower"), new BlockItem(CHOCOLATE_COSMOS_FLOWER, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:clawbulb"), new BlockItem(CLAWBULB, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:cycawler"), new BlockItem(CYCAWLER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:garden_pinks"), new BlockItem(GARDEN_PINKS, new Item.Settings().group(GENERAL)));
-
+		Registry.register(ITEM, new Identifier("deep_trenches:green_pansy"), new BlockItem(GREEN_PANSY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:gyldelion_flower"), new BlockItem(GYLDELION_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:lime_spurge"), new BlockItem(LIME_SPURGE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:lupin_flower"), new BlockItem(LUPIN_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:native_violet"), new BlockItem(NATIVE_VIOLET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:opium_poppy"), new BlockItem(OPIUM_POPPY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:orange_lily"), new BlockItem(ORANGE_LILY, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:pigal"), new BlockItem(PIGAL, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:pink_and_orange_pansy"), new BlockItem(PINK_AND_ORANGE_PANSY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_braitor_flower"), new BlockItem(PINK_BRAITOR_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_rose"), new BlockItem(PINK_ROSE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_rose_bush"), new BlockItem(PINK_ROSE_BUSH, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:poppy"), new BlockItem(ModBlocks.POPPY, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:purple_and_orange_pansy"), new BlockItem(PURPLE_AND_ORANGE_PANSY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:purpround"), new BlockItem(PURPROUND, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:red_braitor_flower"), new BlockItem(RED_BRAITOR_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:red_chocolate_cosmos_flower"), new BlockItem(RED_CHOCOLATE_COSMOS_FLOWER, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:red_pansy"), new BlockItem(RED_PANSY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:red_rose"), new BlockItem(RED_ROSE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:reebloon"), new BlockItem(REEBLOON, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:rubra_blue_violet"), new BlockItem(RUBRA_BLUE_VIOLET, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:skalk"), new BlockItem(SKALK, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:spidreet"), new BlockItem(SPIDREET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:spike_lavender"), new BlockItem(SPIKE_LAVENDER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:sprinly"), new BlockItem(SPRINLY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:sproom_spike"), new BlockItem(SPROOM_SPIKE, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:squisacle"), new BlockItem(SQUISACLE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:sweet_violet"), new BlockItem(SWEET_VIOLET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:topped_lavender"), new BlockItem(TOPPED_LAVENDER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:vaslame"), new BlockItem(VASLAME, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:velvet_lily"), new BlockItem(VELVET_LILY, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:weepistil"), new BlockItem(WEEPISTIL, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:weepy_hollower"), new BlockItem(WEEPY_HOLLOWER, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:white_violet"), new BlockItem(WHITE_VIOLET, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:wild_pansy"), new BlockItem(WILD_PANSY, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:yellow_violet"), new BlockItem(YELLOW_VIOLET, new Item.Settings().group(GENERAL)));
 
 		Registry.register(BLOCK_ENTITY_TYPE, new Identifier("deep_trenches:sign"), BlockEntityTypes.SIGN);
 		Registry.register(BLOCK_ENTITY_TYPE, new Identifier("deep_trenches:stasp_nest"), BlockEntityTypes.STASP_NEST);
