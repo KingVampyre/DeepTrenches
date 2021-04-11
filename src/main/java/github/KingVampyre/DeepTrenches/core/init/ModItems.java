@@ -4,7 +4,6 @@ import github.KingVampyre.DeepTrenches.common.item.ModBoatItem;
 import github.KingVampyre.DeepTrenches.common.item.TagFishBucketItem;
 import github.KingVampyre.DeepTrenches.common.item.TagSpawnEggItem;
 import github.KingVampyre.DeepTrenches.core.item.AdaiggerItem;
-import net.minecraft.block.Block;
 import net.minecraft.item.FishBucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Settings;

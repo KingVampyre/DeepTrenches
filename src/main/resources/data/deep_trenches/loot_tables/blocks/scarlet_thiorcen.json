@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "deep_trenches:scarlet_thiorcen"
+                }
+            ]
+        }
+    ]
+}
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "deep_trenches:scarlet_thiorcen"
+                }
+            ]
+        }
+    ]
+}

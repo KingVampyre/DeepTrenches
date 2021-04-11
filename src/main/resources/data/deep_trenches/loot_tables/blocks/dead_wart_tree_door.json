@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "deep_trenches:dead_wart_tree_door"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "deep_trenches:dead_wart_tree_door",
+                    "properties": {
+                        "half": "upper"
+                    }
+                }
+            ]
+        }
+    ]
+}

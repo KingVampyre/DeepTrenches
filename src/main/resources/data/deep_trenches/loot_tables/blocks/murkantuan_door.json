@@ -1,23 +1,23 @@
 {
-	"type": "minecraft:block",
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "minecraft:item",
-					"name": "deep_trenches:murkantuan_door"
-				}
-			],
-			"conditions": [
-				{
-					"condition": "minecraft:block_state_property",
-					"block": "deep_trenches:murkantuan_door",
-					"properties": {
-						"half": "upper"
-					}
-				}
-			]
-		}
-	]
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "deep_trenches:murkantuan_door"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "deep_trenches:murkantuan_door",
+                    "properties": {
+                        "half": "upper"
+                    }
+                }
+            ]
+        }
+    ]
 }
