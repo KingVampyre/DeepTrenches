@@ -9,7 +9,7 @@
                     "children": [
                         {
                             "type": "minecraft:item",
-                            "name": "deep_trenches:vynhert_leaves",
+                            "name": "deep_trenches:vynhert_leaf",
                             "conditions": [
                                 {
                                     "condition": "minecraft:alternative",

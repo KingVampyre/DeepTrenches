@@ -9,7 +9,7 @@
 					"children": [
 						{
 							"type": "minecraft:item",
-							"name": "deep_trenches:murkantuan_flower",
+							"name": "deep_trenches:murkantuan_flowers",
 							"conditions": [
 								{
 									"condition": "minecraft:alternative",
@@ -42,7 +42,7 @@
 							"children": [
 								{
 									"type": "minecraft:item",
-									"name": "deep_trenches:murkantuan_flower",
+									"name": "deep_trenches:murkantuan_flowers",
 									"conditions": [
 										{
 											"condition": "minecraft:survives_explosion"

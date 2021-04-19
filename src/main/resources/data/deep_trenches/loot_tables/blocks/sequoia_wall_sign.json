@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "deep_trenches:sequoia_wall_sign"
+                    "name": "deep_trenches:sequoia_sign"
                 }
             ]
         }

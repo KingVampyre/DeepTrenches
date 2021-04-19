@@ -2720,7 +2720,7 @@ public class ModBlocks {
 		POTTED_SCARLET_THIORCEN = createFlowerPot("deep_trenches:potted_scarlet_thiorcen", SCARLET_THIORCEN);
 		POTTED_SPIDREET = createFlowerPot("deep_trenches:potted_spidreet", SPIDREET);
 		POTTED_SPROOM_SPIKE = createFlowerPot("deep_trenches:potted_sproom_spike", SPROOM_SPIKE);
-		POTTED_SQUISACLE = createFlowerPot("deep_trenches:potted_squisable", SQUISACLE);
+		POTTED_SQUISACLE = createFlowerPot("deep_trenches:potted_squisacle", SQUISACLE);
 		POTTED_SWEET_VIOLET = createFlowerPot("deep_trenches:potted_sweet_violet", SWEET_VIOLET);
 		POTTED_TOPPED_LAVENDER = createFlowerPot("deep_trenches:potted_topped_lavender", TOPPED_LAVENDER);
 		POTTED_VASLAME = createFlowerPot("deep_trenches:potted_vaslame", VASLAME);

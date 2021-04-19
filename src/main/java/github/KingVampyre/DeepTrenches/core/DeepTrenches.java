@@ -867,6 +867,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:dead_wart_tree_trapdoor"), new BlockItem(DEAD_WART_TREE_TRAPDOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:dead_wart_tree_wood"), new BlockItem(DEAD_WART_TREE_WOOD, new Item.Settings().group(GENERAL)));
 
+		Registry.register(ITEM, new Identifier("deep_trenches:drigyus"), new BlockItem(DRIGYUS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:drigyus_button"), new BlockItem(DRIGYUS_BUTTON, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:drigyus_door"), new BlockItem(DRIGYUS_DOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:drigyus_fence"), new BlockItem(DRIGYUS_FENCE, new Item.Settings().group(GENERAL)));
@@ -1608,18 +1609,21 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:cactlow"), new BlockItem(CACTLOW, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:chocolate_cosmos_flower"), new BlockItem(CHOCOLATE_COSMOS_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:clawbulb"), new BlockItem(CLAWBULB, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:cyan_blue_violet"), new BlockItem(CYAN_BLUE_VIOLET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:cycawler"), new BlockItem(CYCAWLER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:garden_pinks"), new BlockItem(GARDEN_PINKS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:green_pansy"), new BlockItem(GREEN_PANSY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:gyldelion_flower"), new BlockItem(GYLDELION_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:lime_spurge"), new BlockItem(LIME_SPURGE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:lupin_flower"), new BlockItem(LUPIN_FLOWER, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:marsh_violet"), new BlockItem(MARSH_VIOLET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:native_violet"), new BlockItem(NATIVE_VIOLET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:opium_poppy"), new BlockItem(OPIUM_POPPY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:orange_lily"), new BlockItem(ORANGE_LILY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pigal"), new BlockItem(PIGAL, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_and_orange_pansy"), new BlockItem(PINK_AND_ORANGE_PANSY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_braitor_flower"), new BlockItem(PINK_BRAITOR_FLOWER, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:pink_marsh_violet"), new BlockItem(PINK_MARSH_VIOLET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_rose"), new BlockItem(PINK_ROSE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:pink_rose_bush"), new BlockItem(PINK_ROSE_BUSH, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:poppy"), new BlockItem(ModBlocks.POPPY, new Item.Settings().group(GENERAL)));

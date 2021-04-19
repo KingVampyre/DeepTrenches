@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "deep_trenches:flalm_wall_sign"
+                    "name": "deep_trenches:flalm_sign"
                 }
             ]
         }

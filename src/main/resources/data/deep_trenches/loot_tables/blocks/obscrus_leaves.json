@@ -42,7 +42,7 @@
                             "children": [
                                 {
                                     "type": "minecraft:item",
-                                    "name": "deep_trenches:obscrus_sapling",
+                                    "name": "deep_trenches:obscrus",
                                     "conditions": [
                                         {
                                             "condition": "minecraft:survives_explosion"
