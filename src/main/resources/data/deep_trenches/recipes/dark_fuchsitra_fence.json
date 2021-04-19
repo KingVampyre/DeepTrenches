@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "psp",
+        "psp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:dark_fuchsitra_planks"
+        },
+        "s": {
+            "item": "deep_trenches:dark_fuchsitra_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:dark_fuchsitra_fence",
+        "count": 3
+    }
+}

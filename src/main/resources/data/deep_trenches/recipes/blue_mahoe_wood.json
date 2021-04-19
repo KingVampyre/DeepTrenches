@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ll",
+        "ll"
+    ],
+    "key": {
+        "l": {
+            "item": "deep_trenches:blue_mahoe_log"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:blue_mahoe_wood",
+        "count": 3
+    }
+}

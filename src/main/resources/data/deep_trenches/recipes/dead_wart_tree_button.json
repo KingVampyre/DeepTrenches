@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "deep_trenches:dead_wart_tree_planks"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:dead_wart_tree_button"
+    }
+}

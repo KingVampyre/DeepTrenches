@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ppp",
+        "ppp",
+        " s "
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:joshua_planks"
+        },
+        "s": {
+            "item": "deep_trenches:joshua_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:joshua_sign",
+        "count": 3
+    }
+}

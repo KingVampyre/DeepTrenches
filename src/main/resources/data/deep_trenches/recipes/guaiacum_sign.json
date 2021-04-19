@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ppp",
+        "ppp",
+        " s "
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:guaiacum_planks"
+        },
+        "s": {
+            "item": "deep_trenches:guaiacum_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:guaiacum_sign",
+        "count": 3
+    }
+}

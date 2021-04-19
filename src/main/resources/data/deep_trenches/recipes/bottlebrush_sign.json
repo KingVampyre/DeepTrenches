@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ppp",
+        "ppp",
+        " s "
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:bottlebrush_planks"
+        },
+        "s": {
+            "item": "deep_trenches:bottlebrush_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:bottlebrush_sign",
+        "count": 3
+    }
+}

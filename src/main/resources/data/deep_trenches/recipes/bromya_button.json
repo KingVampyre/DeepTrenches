@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "deep_trenches:bromya_planks"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:bromya_button"
+    }
+}

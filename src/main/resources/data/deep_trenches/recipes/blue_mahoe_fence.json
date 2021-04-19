@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "psp",
+        "psp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:blue_mahoe_planks"
+        },
+        "s": {
+            "item": "deep_trenches:blue_mahoe_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:blue_mahoe_fence",
+        "count": 3
+    }
+}

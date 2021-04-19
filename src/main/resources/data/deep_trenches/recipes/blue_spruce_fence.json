@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "psp",
+        "psp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:blue_spruce_planks"
+        },
+        "s": {
+            "item": "deep_trenches:blue_spruce_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:blue_spruce_fence",
+        "count": 3
+    }
+}

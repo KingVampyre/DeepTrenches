@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "sps",
+        "sps"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:melaleuca_planks"
+        },
+        "s": {
+            "item": "deep_trenches:melaleuca_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:melaleuca_fence_gate"
+    }
+}

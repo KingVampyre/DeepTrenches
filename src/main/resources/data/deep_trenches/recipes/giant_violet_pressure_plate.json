@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "pp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:giant_violet_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:giant_violet_pressure_plate"
+    }
+}

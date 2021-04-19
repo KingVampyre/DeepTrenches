@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "deep_trenches:fugmos_stem"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:fugmos_planks",
+        "count": 4
+    }
+}

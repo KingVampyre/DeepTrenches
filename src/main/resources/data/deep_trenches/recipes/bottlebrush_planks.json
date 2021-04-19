@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "deep_trenches:bottlebrush_log"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:bottlebrush_planks",
+        "count": 4
+    }
+}

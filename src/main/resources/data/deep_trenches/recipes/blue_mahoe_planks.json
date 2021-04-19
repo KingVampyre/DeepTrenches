@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "deep_trenches:blue_mahoe_log"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:blue_mahoe_planks",
+        "count": 4
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "p",
+        "p"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:dead_wart_tree_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:dead_wart_tree_stick",
+        "count": 4
+    }
+}

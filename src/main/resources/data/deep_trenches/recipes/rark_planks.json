@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "deep_trenches:rark_log"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:rark_planks",
+        "count": 4
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "psp",
+        "psp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:giant_violet_planks"
+        },
+        "s": {
+            "item": "deep_trenches:giant_violet_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:giant_violet_fence",
+        "count": 3
+    }
+}

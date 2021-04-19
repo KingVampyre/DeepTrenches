@@ -879,7 +879,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:drigyus_stairs"), new BlockItem(DRIGYUS_STAIRS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:drigyus_trapdoor"), new BlockItem(DRIGYUS_TRAPDOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:drigyus_wood"), new BlockItem(DRIGYUS_WOOD, new Item.Settings().group(GENERAL)));
-		
+
 		Registry.register(ITEM, new Identifier("deep_trenches:ebony_button"), new BlockItem(EBONY_BUTTON, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:ebony_door"), new BlockItem(EBONY_DOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:ebony_fence"), new BlockItem(EBONY_FENCE, new Item.Settings().group(GENERAL)));
@@ -1012,6 +1012,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_slab"), new BlockItem(GIANT_VIOLET_SLAB, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_stairs"), new BlockItem(GIANT_VIOLET_STAIRS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_trapdoor"), new BlockItem(GIANT_VIOLET_TRAPDOOR, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_stem"), new BlockItem(GIANT_VIOLET_STEAM, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_wood"), new BlockItem(GIANT_VIOLET_WOOD, new Item.Settings().group(GENERAL)));
 
 		Registry.register(ITEM, new Identifier("deep_trenches:guaiacum_button"), new BlockItem(GUAIACUM_BUTTON, new Item.Settings().group(GENERAL)));
@@ -1335,7 +1336,9 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_barshrookle_wood"), new BlockItem(STRIPPED_BARSHROOKLE_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_black_birch_log"), new BlockItem(STRIPPED_BLACK_BIRCH_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_black_birch_wood"), new BlockItem(STRIPPED_BLACK_BIRCH_WOOD, new Item.Settings().group(GENERAL)));
-        Registry.register(ITEM, new Identifier("deep_trenches:stripped_blue_mahoe_log"), new BlockItem(STRIPPED_BLUE_MAHOE_LOG, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:stripped_bottlebrush_log"), new BlockItem(STRIPPED_BOTTLEBRUSH_LOG, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:stripped_bottlebrush_wood"), new BlockItem(STRIPPED_BOTTLEBRUSH_WOOD, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:stripped_blue_mahoe_log"), new BlockItem(STRIPPED_BLUE_MAHOE_LOG, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:stripped_blue_mahoe_wood"), new BlockItem(STRIPPED_BLUE_MAHOE_WOOD, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:stripped_blue_spruce_log"), new BlockItem(STRIPPED_BLUE_SPRUCE_LOG, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:stripped_blue_spruce_wood"), new BlockItem(STRIPPED_BLUE_SPRUCE_WOOD, new Item.Settings().group(GENERAL)));
@@ -1415,6 +1418,10 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_sanguart_wood"), new BlockItem(STRIPPED_SANGUART_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_scarlet_thiorcen_log"), new BlockItem(STRIPPED_SCARLET_THIORCEN_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_scarlet_thiorcen_wood"), new BlockItem(STRIPPED_SCARLET_THIORCEN_WOOD, new Item.Settings().group(GENERAL)));
+
+		Registry.register(ITEM, new Identifier("deep_trenches:stripped_sequoia_log"), new BlockItem(STRIPPED_SEQUOIA_LOG, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:stripped_sequoia_wood"), new BlockItem(STRIPPED_SEQUOIA_WOOD, new Item.Settings().group(GENERAL)));
+
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_sproom_log"), new BlockItem(STRIPPED_SPROOM_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_sproom_wood"), new BlockItem(STRIPPED_SPROOM_WOOD, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:stripped_stortreean_log"), new BlockItem(STRIPPED_STORTREEAN_LOG, new Item.Settings().group(GENERAL)));

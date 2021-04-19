@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "sps",
+        "sps"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:angels_trumpet_planks"
+        },
+        "s": {
+            "item": "deep_trenches:angels_trumpet_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:angels_trumpet_fence_gate"
+    }
+}

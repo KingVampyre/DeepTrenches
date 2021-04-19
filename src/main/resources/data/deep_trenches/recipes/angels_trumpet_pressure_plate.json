@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "pp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:angels_trumpet_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:angels_trumpet_pressure_plate"
+    }
+}

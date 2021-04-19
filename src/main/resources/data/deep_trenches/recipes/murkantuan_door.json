@@ -1,17 +1,17 @@
 {
-	"type": "minecraft:crafting_shaped",
-	"pattern": [
-		"pp",
-		"pp",
-		"pp"
-	],
-	"key": {
-		"p": {
-			"item": "deep_trenches:murkantuan_planks"
-		}
-	},
-	"result": {
-		"item": "deep_trenches:murkantuan_door",
-		"count": 3
-	}
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "pp",
+        "pp",
+        "pp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:murkantuan_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:murkantuan_door",
+        "count": 3
+    }
 }

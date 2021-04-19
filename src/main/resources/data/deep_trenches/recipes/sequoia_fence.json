@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "psp",
+        "psp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:sequoia_planks"
+        },
+        "s": {
+            "item": "deep_trenches:sequoia_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:sequoia_fence",
+        "count": 3
+    }
+}

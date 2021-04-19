@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ppp",
+        "ppp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:calcearb_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:calcearb_trapdoor",
+        "count": 2
+    }
+}

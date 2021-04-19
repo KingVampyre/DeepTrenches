@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ppp",
+        "ppp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:dark_red_elm_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:dark_red_elm_trapdoor",
+        "count": 2
+    }
+}

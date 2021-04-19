@@ -1,14 +1,14 @@
 {
-	"type": "minecraft:crafting_shaped",
-	"pattern": [
-		"pp"
-	],
-	"key": {
-		"p": {
-			"item": "deep_trenches:murkantuan_planks"
-		}
-	},
-	"result": {
-		"item": "deep_trenches:murkantuan_pressure_plate"
-	}
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "pp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:murkantuan_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:murkantuan_pressure_plate"
+    }
 }

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ppp",
+        "ppp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:sequoia_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:sequoia_trapdoor",
+        "count": 2
+    }
+}

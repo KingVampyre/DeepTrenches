@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "p  ",
+        "pp ",
+        "ppp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:rark_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:rark_stairs",
+        "count": 4
+    }
+}

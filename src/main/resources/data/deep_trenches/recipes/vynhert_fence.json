@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "psp",
+        "psp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:vynhert_planks"
+        },
+        "s": {
+            "item": "deep_trenches:vynhert_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:vynhert_fence",
+        "count": 3
+    }
+}

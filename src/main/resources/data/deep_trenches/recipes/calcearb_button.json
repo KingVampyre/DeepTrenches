@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "deep_trenches:calcearb_planks"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:calcearb_button"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "deep_trenches:giant_violet_stem"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:giant_violet_planks",
+        "count": 4
+    }
+}

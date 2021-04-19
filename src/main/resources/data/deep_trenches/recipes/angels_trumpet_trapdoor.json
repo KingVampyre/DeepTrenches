@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ppp",
+        "ppp"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:angels_trumpet_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:angels_trumpet_trapdoor",
+        "count": 2
+    }
+}

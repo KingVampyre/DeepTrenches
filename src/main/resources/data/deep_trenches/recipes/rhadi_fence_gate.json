@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "sps",
+        "sps"
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:rhadi_planks"
+        },
+        "s": {
+            "item": "deep_trenches:rhadi_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:rhadi_fence_gate"
+    }
+}

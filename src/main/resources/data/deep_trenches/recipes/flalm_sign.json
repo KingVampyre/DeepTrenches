@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ppp",
+        "ppp",
+        " s "
+    ],
+    "key": {
+        "p": {
+            "item": "deep_trenches:flalm_planks"
+        },
+        "s": {
+            "item": "deep_trenches:flalm_stick"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:flalm_sign",
+        "count": 3
+    }
+}
