@@ -106,7 +106,6 @@ public class ModBlocks {
 	public static final Block GIANT_VIOLET_LEAF = new Block(Settings.copy(COCOA));
 	public static final Block GIANT_VIOLET_PETAL = new Block(Settings.copy(COCOA));
 	public static final Block GIANT_VIOLET_PISTIL = new Block(Settings.copy(COCOA));
-	public static final Block GIANT_VIOLET_STEAM = new PillarBlock(Settings.copy(COCOA));
 
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
@@ -758,6 +757,7 @@ public class ModBlocks {
 	public static final Block GIANT_VIOLET_SIGN;
 	public static final Block GIANT_VIOLET_SLAB;
 	public static final Block GIANT_VIOLET_STAIRS;
+	public static final Block GIANT_VIOLET_STEM;
 	public static final Block GIANT_VIOLET_TRAPDOOR;
 	public static final Block GIANT_VIOLET_WALL_SIGN;
 	public static final Block GIANT_VIOLET_WOOD;
@@ -1626,86 +1626,6 @@ public class ModBlocks {
 		AQUEAN_WALL_SIGN = createOakWallSign("deep_trenches:aquean_wall_sign", SignTypes.AQUEAN);
 		AQUEAN_WOOD = createOakWood("deep_trenches:aquean_wood");
 
-		BROMYA_BUTTON = createOakButton("deep_trenches:bromya_button");
-		BROMYA_DOOR = createOakDoor("deep_trenches:bromya_door");
-		BROMYA_FENCE = createOakFence("deep_trenches:bromya_fence");
-		BROMYA_FENCE_GATE = createOakFenceGate("deep_trenches:bromya_fence_gate");
-		BROMYA_FLOWER = createTallFlower("deep_trenches:bromya_flower");
-		BROMYA_LEAVES = createOakLeaves("deep_trenches:bromya_leaves");
-		BROMYA_LOG = createOakLog("deep_trenches:bromya_log");
-		BROMYA_PLANKS = createOakPlanks("deep_trenches:bromya_planks");
-		BROMYA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:bromya_pressure_plate");
-		BROMYA_SAPLING = createOakSapling("deep_trenches:bromya_sapling", SaplingGenerators.BROMYA);
-		BROMYA_SIGN = createOakSign("deep_trenches:bromya_sign", SignTypes.BROMYA);
-		BROMYA_SLAB = createOakSlab("deep_trenches:bromya_slab");
-		BROMYA_STAIRS = createOakStairs("deep_trenches:bromya_stairs", BROMYA_PLANKS);
-		BROMYA_TRAPDOOR = createOakTrapdoor("deep_trenches:bromya_trapdoor");
-		BROMYA_WALL_SIGN = createOakWallSign("deep_trenches:bromya_wall_sign", SignTypes.BROMYA);
-		BROMYA_WOOD = createOakWood("deep_trenches:bromya_wood");
-
-		BUBBLETREE_BUBBLES = createCap("deep_trenches:bubbletree_bubbles");
-		BUBBLETREE_BUTTON = createOakButton("deep_trenches:bubbletree_button");
-		BUBBLETREE_DOOR = createOakDoor("deep_trenches:bubbletree_door");
-		BUBBLETREE_FENCE = createOakFence("deep_trenches:bubbletree_fence");
-		BUBBLETREE_FENCE_GATE = createOakFenceGate("deep_trenches:bubbletree_fence_gate");
-		BUBBLETREE_LOG = createOakLog("deep_trenches:bubbletree_log");
-		BUBBLETREE_PLANKS = createOakPlanks("deep_trenches:bubbletree_planks");
-		BUBBLETREE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:bubbletree_pressure_plate");
-		BUBBLETREE_SAPLING = createOakSapling("deep_trenches:bubbletree_sapling", SaplingGenerators.BUBBLETREE);
-		BUBBLETREE_SIGN = createOakSign("deep_trenches:bubbletree_sign", SignTypes.BUBBLETREE);
-		BUBBLETREE_SLAB = createOakSlab("deep_trenches:bubbletree_slab");
-		BUBBLETREE_STAIRS = createOakStairs("deep_trenches:bubbletree_stairs", BUBBLETREE_PLANKS);
-		BUBBLETREE_TRAPDOOR = createOakTrapdoor("deep_trenches:bubbletree_trapdoor");
-		BUBBLETREE_WALL_SIGN = createOakWallSign("deep_trenches:bubbletree_wall_sign", SignTypes.BUBBLETREE);
-		BUBBLETREE_WOOD = createOakWood("deep_trenches:bubbletree_wood");
-
-		CALCEARB_BUTTON = createOakButton("deep_trenches:calcearb_button");
-		CALCEARB_DOOR = createOakDoor("deep_trenches:calcearb_door");
-		CALCEARB_FENCE = createOakFence("deep_trenches:calcearb_fence");
-		CALCEARB_FENCE_GATE = createOakFenceGate("deep_trenches:calcearb_fence_gate");
-		CALCEARB_LEAVES = createOakLeaves("deep_trenches:calcearb_leaves");
-		CALCEARB_LOG = createOakLog("deep_trenches:calcearb_log");
-		CALCEARB_PLANKS = createOakPlanks("deep_trenches:calcearb_planks");
-		CALCEARB_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:calcearb_pressure_plate");
-		CALCEARB_SAPLING = createOakSapling("deep_trenches:calcearb_sapling", SaplingGenerators.CALCEARB);
-		CALCEARB_SIGN = createOakSign("deep_trenches:calcearb_sign", SignTypes.CALCEARB);
-		CALCEARB_SLAB = createOakSlab("deep_trenches:calcearb_slab");
-		CALCEARB_STAIRS = createOakStairs("deep_trenches:calcearb_stairs", CALCEARB_PLANKS);
-		CALCEARB_TRAPDOOR = createOakTrapdoor("deep_trenches:calcearb_trapdoor");
-		CALCEARB_WALL_SIGN = createOakWallSign("deep_trenches:calcearb_wall_sign", SignTypes.CALCEARB);
-		CALCEARB_WOOD = createOakWood("deep_trenches:calcearb_wood");
-
-		CHERRY_BUTTON = createOakButton("deep_trenches:cherry_button");
-		CHERRY_DOOR = createOakDoor("deep_trenches:cherry_door");
-		CHERRY_FENCE = createOakFence("deep_trenches:cherry_fence");
-		CHERRY_FENCE_GATE = createOakFenceGate("deep_trenches:cherry_fence_gate");
-		CHERRY_LEAVES = createOakLeaves("deep_trenches:cherry_leaves");
-		CHERRY_LOG = createOakLog("deep_trenches:cherry_log");
-		CHERRY_PLANKS = createOakPlanks("deep_trenches:cherry_planks");
-		CHERRY_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:cherry_pressure_plate");
-		CHERRY_SAPLING = createOakSapling("deep_trenches:cherry_sapling", SaplingGenerators.CHERRY);
-		CHERRY_SIGN = createOakSign("deep_trenches:cherry_sign", SignTypes.CHERRY);
-		CHERRY_SLAB = createOakSlab("deep_trenches:cherry_slab");
-		CHERRY_STAIRS = createOakStairs("deep_trenches:cherry_stairs", CHERRY_PLANKS);
-		CHERRY_TRAPDOOR = createOakTrapdoor("deep_trenches:cherry_trapdoor");
-		CHERRY_WALL_SIGN = createOakWallSign("deep_trenches:cherry_wall_sign", SignTypes.CHERRY);
-		CHERRY_WOOD = createOakWood("deep_trenches:cherry_wood");
-
-		CHOTORN_SAPLING = createOakSapling("deep_trenches:chotorn", SaplingGenerators.CHOTORN);
-		CHOTORN_BUTTON = createOakButton("deep_trenches:chotorn_button");
-		CHOTORN_DOOR = createOakDoor("deep_trenches:chotorn_door");
-		CHOTORN_FENCE = createOakFence("deep_trenches:chotorn_fence");
-		CHOTORN_FENCE_GATE = createOakFenceGate("deep_trenches:chotorn_fence_gate");
-		CHOTORN_LOG = createOakLog("deep_trenches:chotorn_log");
-		CHOTORN_PLANKS = createOakPlanks("deep_trenches:chotorn_planks");
-		CHOTORN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:chotorn_pressure_plate");
-		CHOTORN_SIGN = createOakSign("deep_trenches:chotorn_sign", SignTypes.CHOTORN);
-		CHOTORN_SLAB = createOakSlab("deep_trenches:chotorn_slab");
-		CHOTORN_STAIRS = createOakStairs("deep_trenches:chotorn_stairs", CHOTORN_PLANKS);
-		CHOTORN_TRAPDOOR = createOakTrapdoor("deep_trenches:chotorn_trapdoor");
-		CHOTORN_WALL_SIGN = createOakWallSign("deep_trenches:chotorn_wall_sign", SignTypes.CHOTORN);
-		CHOTORN_WOOD = createOakWood("deep_trenches:chotorn_wood");
-
 		BARSHROOKLE_BUTTON = createOakButton("deep_trenches:barshrookle_button");
 		BARSHROOKLE_CAP = createCap("deep_trenches:barshrookle_cap");
 		BARSHROOKLE_DOOR = createOakDoor("deep_trenches:barshrookle_door");
@@ -1787,6 +1707,86 @@ public class ModBlocks {
 		BOTTLEBRUSH_TRAPDOOR = createOakTrapdoor("deep_trenches:bottlebrush_trapdoor");
 		BOTTLEBRUSH_WALL_SIGN = createOakWallSign("deep_trenches:bottlebrush_wall_sign", SignTypes.BOTTLEBRUSH);
 		BOTTLEBRUSH_WOOD = createOakWood("deep_trenches:bottlebrush_wood");
+
+		BROMYA_BUTTON = createOakButton("deep_trenches:bromya_button");
+		BROMYA_DOOR = createOakDoor("deep_trenches:bromya_door");
+		BROMYA_FENCE = createOakFence("deep_trenches:bromya_fence");
+		BROMYA_FENCE_GATE = createOakFenceGate("deep_trenches:bromya_fence_gate");
+		BROMYA_FLOWER = createTallFlower("deep_trenches:bromya_flower");
+		BROMYA_LEAVES = createOakLeaves("deep_trenches:bromya_leaves");
+		BROMYA_LOG = createOakLog("deep_trenches:bromya_log");
+		BROMYA_PLANKS = createOakPlanks("deep_trenches:bromya_planks");
+		BROMYA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:bromya_pressure_plate");
+		BROMYA_SAPLING = createOakSapling("deep_trenches:bromya_sapling", SaplingGenerators.BROMYA);
+		BROMYA_SIGN = createOakSign("deep_trenches:bromya_sign", SignTypes.BROMYA);
+		BROMYA_SLAB = createOakSlab("deep_trenches:bromya_slab");
+		BROMYA_STAIRS = createOakStairs("deep_trenches:bromya_stairs", BROMYA_PLANKS);
+		BROMYA_TRAPDOOR = createOakTrapdoor("deep_trenches:bromya_trapdoor");
+		BROMYA_WALL_SIGN = createOakWallSign("deep_trenches:bromya_wall_sign", SignTypes.BROMYA);
+		BROMYA_WOOD = createOakWood("deep_trenches:bromya_wood");
+
+		BUBBLETREE_BUBBLES = createCap("deep_trenches:bubbletree_bubbles");
+		BUBBLETREE_BUTTON = createOakButton("deep_trenches:bubbletree_button");
+		BUBBLETREE_DOOR = createOakDoor("deep_trenches:bubbletree_door");
+		BUBBLETREE_FENCE = createOakFence("deep_trenches:bubbletree_fence");
+		BUBBLETREE_FENCE_GATE = createOakFenceGate("deep_trenches:bubbletree_fence_gate");
+		BUBBLETREE_LOG = createOakLog("deep_trenches:bubbletree_log");
+		BUBBLETREE_PLANKS = createOakPlanks("deep_trenches:bubbletree_planks");
+		BUBBLETREE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:bubbletree_pressure_plate");
+		BUBBLETREE_SAPLING = createOakSapling("deep_trenches:bubbletree_sapling", SaplingGenerators.BUBBLETREE);
+		BUBBLETREE_SIGN = createOakSign("deep_trenches:bubbletree_sign", SignTypes.BUBBLETREE);
+		BUBBLETREE_SLAB = createOakSlab("deep_trenches:bubbletree_slab");
+		BUBBLETREE_STAIRS = createOakStairs("deep_trenches:bubbletree_stairs", BUBBLETREE_PLANKS);
+		BUBBLETREE_TRAPDOOR = createOakTrapdoor("deep_trenches:bubbletree_trapdoor");
+		BUBBLETREE_WALL_SIGN = createOakWallSign("deep_trenches:bubbletree_wall_sign", SignTypes.BUBBLETREE);
+		BUBBLETREE_WOOD = createOakWood("deep_trenches:bubbletree_wood");
+
+		CALCEARB_BUTTON = createOakButton("deep_trenches:calcearb_button");
+		CALCEARB_DOOR = createOakDoor("deep_trenches:calcearb_door");
+		CALCEARB_FENCE = createOakFence("deep_trenches:calcearb_fence");
+		CALCEARB_FENCE_GATE = createOakFenceGate("deep_trenches:calcearb_fence_gate");
+		CALCEARB_LEAVES = createOakLeaves("deep_trenches:calcearb_leaves");
+		CALCEARB_LOG = createOakLog("deep_trenches:calcearb_log");
+		CALCEARB_PLANKS = createOakPlanks("deep_trenches:calcearb_planks");
+		CALCEARB_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:calcearb_pressure_plate");
+		CALCEARB_SAPLING = createOakSapling("deep_trenches:calcearb_sapling", SaplingGenerators.CALCEARB);
+		CALCEARB_SIGN = createOakSign("deep_trenches:calcearb_sign", SignTypes.CALCEARB);
+		CALCEARB_SLAB = createOakSlab("deep_trenches:calcearb_slab");
+		CALCEARB_STAIRS = createOakStairs("deep_trenches:calcearb_stairs", CALCEARB_PLANKS);
+		CALCEARB_TRAPDOOR = createOakTrapdoor("deep_trenches:calcearb_trapdoor");
+		CALCEARB_WALL_SIGN = createOakWallSign("deep_trenches:calcearb_wall_sign", SignTypes.CALCEARB);
+		CALCEARB_WOOD = createOakWood("deep_trenches:calcearb_wood");
+
+		CHERRY_BUTTON = createOakButton("deep_trenches:cherry_button");
+		CHERRY_DOOR = createOakDoor("deep_trenches:cherry_door");
+		CHERRY_FENCE = createOakFence("deep_trenches:cherry_fence");
+		CHERRY_FENCE_GATE = createOakFenceGate("deep_trenches:cherry_fence_gate");
+		CHERRY_LEAVES = createOakLeaves("deep_trenches:cherry_leaves");
+		CHERRY_LOG = createOakLog("deep_trenches:cherry_log");
+		CHERRY_PLANKS = createOakPlanks("deep_trenches:cherry_planks");
+		CHERRY_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:cherry_pressure_plate");
+		CHERRY_SAPLING = createOakSapling("deep_trenches:cherry_sapling", SaplingGenerators.CHERRY);
+		CHERRY_SIGN = createOakSign("deep_trenches:cherry_sign", SignTypes.CHERRY);
+		CHERRY_SLAB = createOakSlab("deep_trenches:cherry_slab");
+		CHERRY_STAIRS = createOakStairs("deep_trenches:cherry_stairs", CHERRY_PLANKS);
+		CHERRY_TRAPDOOR = createOakTrapdoor("deep_trenches:cherry_trapdoor");
+		CHERRY_WALL_SIGN = createOakWallSign("deep_trenches:cherry_wall_sign", SignTypes.CHERRY);
+		CHERRY_WOOD = createOakWood("deep_trenches:cherry_wood");
+
+		CHOTORN_SAPLING = createOakSapling("deep_trenches:chotorn", SaplingGenerators.CHOTORN);
+		CHOTORN_BUTTON = createOakButton("deep_trenches:chotorn_button");
+		CHOTORN_DOOR = createOakDoor("deep_trenches:chotorn_door");
+		CHOTORN_FENCE = createOakFence("deep_trenches:chotorn_fence");
+		CHOTORN_FENCE_GATE = createOakFenceGate("deep_trenches:chotorn_fence_gate");
+		CHOTORN_LOG = createOakLog("deep_trenches:chotorn_log");
+		CHOTORN_PLANKS = createOakPlanks("deep_trenches:chotorn_planks");
+		CHOTORN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:chotorn_pressure_plate");
+		CHOTORN_SIGN = createOakSign("deep_trenches:chotorn_sign", SignTypes.CHOTORN);
+		CHOTORN_SLAB = createOakSlab("deep_trenches:chotorn_slab");
+		CHOTORN_STAIRS = createOakStairs("deep_trenches:chotorn_stairs", CHOTORN_PLANKS);
+		CHOTORN_TRAPDOOR = createOakTrapdoor("deep_trenches:chotorn_trapdoor");
+		CHOTORN_WALL_SIGN = createOakWallSign("deep_trenches:chotorn_wall_sign", SignTypes.CHOTORN);
+		CHOTORN_WOOD = createOakWood("deep_trenches:chotorn_wood");
 
 		COOK_PINE_BUTTON = createOakButton("deep_trenches:cook_pine_button");
 		COOK_PINE_DOOR = createOakDoor("deep_trenches:cook_pine_door");
@@ -2036,6 +2036,7 @@ public class ModBlocks {
 		GIANT_VIOLET_SIGN = createOakSign("deep_trenches:giant_violet_sign", SignTypes.GIANT_VIOLET);
 		GIANT_VIOLET_SLAB = createOakSlab("deep_trenches:giant_violet_slab");
 		GIANT_VIOLET_STAIRS = createOakStairs("deep_trenches:giant_violet_stairs", GIANT_VIOLET_PLANKS);
+		GIANT_VIOLET_STEM = createOakLog("deep_trenches:giant_violet_stem");
 		GIANT_VIOLET_TRAPDOOR = createOakTrapdoor("deep_trenches:giant_violet_trapdoor");
 		GIANT_VIOLET_WALL_SIGN = createOakWallSign("deep_trenches:giant_violet_wall_sign", SignTypes.GIANT_VIOLET);
 		GIANT_VIOLET_WOOD = createOakWood("deep_trenches:giant_violet_wood");
@@ -2656,7 +2657,6 @@ public class ModBlocks {
 		POTTED_ENDERHEART_SAPLING = createPottedSapling("deep_trenches:potted_enderheart_sapling", ENDERHEART_SAPLING);
 		POTTED_FRUCE_SAPLING = createPottedSapling("deep_trenches:potted_fruce_sapling", FRUCE_SAPLING);
 		POTTED_FUCHSITRA_SAPLING = createPottedSapling("deep_trenches:potted_fuchsitra_sapling", FUCHSITRA_SAPLING);
-		// TODO: check name
 		POTTED_FUGMOS = createPottedSapling("deep_trenches:potted_fugmos", FUGMOS);
 		POTTED_FUNERANITE_SAPLING = createPottedSapling("deep_trenches:potted_funeranite_sapling", FUNERANITE_SAPLING);
 		POTTED_GHOSHROOM_SAPLING = createPottedSapling("deep_trenches:potted_ghoshroom_sapling", GHOSHROOM_SAPLING);

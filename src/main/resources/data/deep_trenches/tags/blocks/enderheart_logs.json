@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:enderheart_log",
+        "deep_trenches:stripped_enderheart_log",
+        "deep_trenches:enderheart_wood",
+        "deep_trenches:stripped_enderheart_wood"
+    ]
+}

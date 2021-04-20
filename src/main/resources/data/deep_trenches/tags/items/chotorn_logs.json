@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:chotorn_log",
+        "deep_trenches:stripped_chotorn_log",
+        "deep_trenches:chotorn_wood",
+        "deep_trenches:stripped_chotorn_wood"
+    ]
+}

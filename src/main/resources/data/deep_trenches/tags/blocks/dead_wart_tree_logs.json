@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:dead_wart_tree_log",
+        "deep_trenches:stripped_dead_wart_tree_log",
+        "deep_trenches:dead_wart_tree_wood",
+        "deep_trenches:stripped_dead_wart_tree_wood"
+    ]
+}

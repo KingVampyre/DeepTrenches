@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:fugmos_stem",
+        "deep_trenches:stripped_fugmos_stem",
+        "deep_trenches:fugmos_wood",
+        "deep_trenches:stripped_fugmos_hyphae"
+    ]
+}

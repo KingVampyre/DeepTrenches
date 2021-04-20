@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:rark_log",
+        "deep_trenches:stripped_rark_log",
+        "deep_trenches:rark_wood",
+        "deep_trenches:stripped_rark_wood"
+    ]
+}

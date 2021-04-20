@@ -13,7 +13,6 @@ import net.minecraft.util.registry.Registry;
 
 import static github.KingVampyre.DeepTrenches.core.init.ItemGroups.GENERAL;
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
-import static github.KingVampyre.DeepTrenches.core.init.ModItems.*;
 import static github.KingVampyre.DeepTrenches.core.init.PaintingMotives.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
 import static net.minecraft.util.registry.Registry.*;
@@ -412,7 +411,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:giant_violet_leaf"), GIANT_VIOLET_LEAF);
 		Registry.register(BLOCK, new Identifier("deep_trenches:giant_violet_petal"), GIANT_VIOLET_PETAL);
 		Registry.register(BLOCK, new Identifier("deep_trenches:giant_violet_pistil"), GIANT_VIOLET_PISTIL);
-		Registry.register(BLOCK, new Identifier("deep_trenches:giant_violet_steam"), GIANT_VIOLET_STEAM);
 
 		// Miscellaneous Blocks
 		Registry.register(BLOCK, new Identifier("deep_trenches:cyan_bioluminescent_block"), CYAN_BIOLUMINESCENT_BLOCK);
@@ -1013,7 +1011,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_slab"), new BlockItem(GIANT_VIOLET_SLAB, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_stairs"), new BlockItem(GIANT_VIOLET_STAIRS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_trapdoor"), new BlockItem(GIANT_VIOLET_TRAPDOOR, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_stem"), new BlockItem(GIANT_VIOLET_STEAM, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_stem"), new BlockItem(GIANT_VIOLET_STEM, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_wood"), new BlockItem(GIANT_VIOLET_WOOD, new Item.Settings().group(GENERAL)));
 
 		Registry.register(ITEM, new Identifier("deep_trenches:guaiacum_button"), new BlockItem(GUAIACUM_BUTTON, new Item.Settings().group(GENERAL)));
@@ -1589,7 +1587,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_leaf"), new BlockItem(GIANT_VIOLET_LEAF, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_petal"), new BlockItem(GIANT_VIOLET_PETAL, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_pistil"), new BlockItem(GIANT_VIOLET_PISTIL, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:giant_violet_steam"), new BlockItem(GIANT_VIOLET_STEAM, new Item.Settings().group(GENERAL)));
 
 		Registry.register(ITEM, new Identifier("deep_trenches:cyan_bioluminescent_block"), new BlockItem(CYAN_BIOLUMINESCENT_BLOCK, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:green_bioluminescent_block"), new BlockItem(GREEN_BIOLUMINESCENT_BLOCK, new Item.Settings().group(GENERAL)));

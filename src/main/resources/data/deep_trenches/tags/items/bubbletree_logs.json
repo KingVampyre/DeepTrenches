@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:bubbletree_log",
+        "deep_trenches:stripped_bubbletree_log",
+        "deep_trenches:bubbletree_wood",
+        "deep_trenches:stripped_bubbletree_wood"
+    ]
+}

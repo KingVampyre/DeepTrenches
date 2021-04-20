@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:fruce_log",
+        "deep_trenches:stripped_fruce_log",
+        "deep_trenches:fruce_wood",
+        "deep_trenches:stripped_fruce_wood"
+    ]
+}

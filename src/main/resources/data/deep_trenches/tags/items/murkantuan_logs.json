@@ -1,9 +1,9 @@
 {
-	"replace": false,
-	"values": [
-		"deep_trenches:murkantuan_log",
-		"deep_trenches:stripped_murkantuan_log",
-		"deep_trenches:murkantuan_wood",
-		"deep_trenches:stripped_murkantuan_wood"
-	]
+    "replace": false,
+    "values": [
+        "deep_trenches:murkantuan_log",
+        "deep_trenches:stripped_murkantuan_log",
+        "deep_trenches:murkantuan_wood",
+        "deep_trenches:stripped_murkantuan_wood"
+    ]
 }

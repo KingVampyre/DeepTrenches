@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:rhadi_log",
+        "deep_trenches:stripped_rhadi_log",
+        "deep_trenches:rhadi_wood",
+        "deep_trenches:stripped_rhadi_wood"
+    ]
+}

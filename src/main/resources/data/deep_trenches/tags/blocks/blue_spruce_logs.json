@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:blue_spruce_log",
+        "deep_trenches:stripped_blue_spruce_log",
+        "deep_trenches:blue_spruce_wood",
+        "deep_trenches:stripped_blue_spruce_wood"
+    ]
+}

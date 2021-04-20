@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:guaiacum_log",
+        "deep_trenches:stripped_guaiacum_log",
+        "deep_trenches:guaiacum_wood",
+        "deep_trenches:stripped_guaiacum_wood"
+    ]
+}

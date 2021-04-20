@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:bottlebrush_log",
+        "deep_trenches:stripped_bottlebrush_log",
+        "deep_trenches:bottlebrush_wood",
+        "deep_trenches:stripped_bottlebrush_wood"
+    ]
+}

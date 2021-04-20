@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:drigyus_log",
+        "deep_trenches:stripped_drigyus_log",
+        "deep_trenches:drigyus_wood",
+        "deep_trenches:stripped_drigyus_wood"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:bromya_log",
+        "deep_trenches:stripped_bromya_log",
+        "deep_trenches:bromya_wood",
+        "deep_trenches:stripped_bromya_wood"
+    ]
+}

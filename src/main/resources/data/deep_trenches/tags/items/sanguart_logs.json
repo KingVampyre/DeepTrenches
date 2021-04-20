@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:sanguart_log",
+        "deep_trenches:stripped_sanguart_log",
+        "deep_trenches:sanguart_wood",
+        "deep_trenches:stripped_sanguart_wood"
+    ]
+}

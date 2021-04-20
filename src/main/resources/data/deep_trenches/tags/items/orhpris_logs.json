@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:orhpris_log",
+        "deep_trenches:stripped_orhpris_log",
+        "deep_trenches:orhpris_wood",
+        "deep_trenches:stripped_orhpris_wood"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "deep_trenches:wenge_log",
+        "deep_trenches:stripped_wenge_log",
+        "deep_trenches:wenge_wood",
+        "deep_trenches:stripped_wenge_wood"
+    ]
+}
