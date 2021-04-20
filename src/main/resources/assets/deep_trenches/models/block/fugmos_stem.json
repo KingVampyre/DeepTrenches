@@ -2,6 +2,6 @@
 	"parent": "block/cube_column",
 	"textures": {
 		"end": "deep_trenches:block/fugmos_stem_top",
-		"side": "deep_trenches:block/fugmos_stem_log"
+		"side": "deep_trenches:block/fugmos_stem"
 	}
 }

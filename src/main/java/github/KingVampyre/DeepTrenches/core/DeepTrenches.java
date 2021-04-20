@@ -604,7 +604,7 @@ public class  DeepTrenches implements ModInitializer {
         Registry.register(ITEM, new Identifier("deep_trenches:angels_trumpet_planks"), new BlockItem(ANGELS_TRUMPET_PLANKS, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:angels_trumpet_pressure_plate"), new BlockItem(ANGELS_TRUMPET_PRESSURE_PLATE, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:angels_trumpet_sapling"), new BlockItem(ANGELS_TRUMPET_SAPLING, new Item.Settings().group(GENERAL)));
-        Registry.register(ITEM, new Identifier("deep_trenches:angels_trumpet_sign"), new SignItem(new Item.Settings().group(GENERAL).maxCount(16), ALMOND_SIGN, ALMOND_WALL_SIGN));
+        Registry.register(ITEM, new Identifier("deep_trenches:angels_trumpet_sign"), new SignItem(new Item.Settings().group(GENERAL).maxCount(16), ANGELS_TRUMPET_SIGN, ANGELS_TRUMPET_WALL_SIGN));
         Registry.register(ITEM, new Identifier("deep_trenches:angels_trumpet_slab"), new BlockItem(ANGELS_TRUMPET_SLAB, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:angels_trumpet_stairs"), new BlockItem(ANGELS_TRUMPET_STAIRS, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:angels_trumpet_trapdoor"), new BlockItem(ANGELS_TRUMPET_TRAPDOOR, new Item.Settings().group(GENERAL)));

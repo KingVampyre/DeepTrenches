@@ -1,7 +1,7 @@
 {
     "parent": "block/door_top",
     "textures": {
-        "bottom": "deep_trenches:block/klinkii_door_bottom",
-        "top": "deep_trenches:block/klinkii_door_top"
+        "bottom": "deep_trenches:block/klinkii_pine_door_bottom",
+        "top": "deep_trenches:block/klinkii_pine_door_top"
     }
 }

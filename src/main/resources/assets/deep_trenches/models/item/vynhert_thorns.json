@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "deep_trenches:item/vynhert_thorns"
+        "layer0": "deep_trenches:block/vynhert_thorns"
     }
 }

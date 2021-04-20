@@ -1,6 +1,6 @@
 {
-	"parent": "block/cross",
+	"parent": "block/cube_all",
 	"textures": {
-		"cross": "deep_trenches:block/vynhert_fruit"
+		"all": "deep_trenches:block/vynhert_fruit"
 	}
 }

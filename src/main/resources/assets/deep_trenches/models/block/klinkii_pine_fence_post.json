@@ -1,6 +1,6 @@
 {
     "parent": "block/fence_post",
     "textures": {
-        "texture": "deep_trenches:block/klinkii_planks"
+        "texture": "deep_trenches:block/klinkii_pine_planks"
     }
 }

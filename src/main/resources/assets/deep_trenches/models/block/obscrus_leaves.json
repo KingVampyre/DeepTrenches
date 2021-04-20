@@ -1,6 +1,6 @@
 {
-    "parent": "block/leaves",
+    "parent": "block/cross",
     "textures": {
-        "all": "deep_trenches:block/obscrus_leaves"
+        "cross": "deep_trenches:block/obscrus_leaves"
     }
 }

@@ -1,5 +1,5 @@
 {
-    "parent": "block/fence_side",
+    "parent": "block/fence_inventory",
     "textures": {
         "texture": "deep_trenches:block/klinkii_pine_planks"
     }

@@ -1,11 +1,4 @@
 {
-    "parent": "block/door_top",
-    "textures": {
-        "bottom": "deep_trenches:block/red_elm_door_bottom",
-        "top": "deep_trenches:block/red_elm_door_top"
-    }
-}
-{
     "parent": "block/door_top_rh",
     "textures": {
         "bottom": "deep_trenches:block/red_elm_door_bottom",
