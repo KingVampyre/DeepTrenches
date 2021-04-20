@@ -1447,6 +1447,7 @@ public class ModBlocks {
 	public static final Block POTTED_VASLAME;
 	public static final Block POTTED_WEEPISTIL;
 	public static final Block POTTED_WEEPY_HOLLOWER;
+	public static final Block POTTED_YELLOW_VIOLET;
 
 	protected static Block register(String id, Block block) {
 		return Registry.register(BLOCK, id, block);
@@ -2726,6 +2727,7 @@ public class ModBlocks {
 		POTTED_VASLAME = createFlowerPot("deep_trenches:potted_vaslame", VASLAME);
 		POTTED_WEEPISTIL = createFlowerPot("deep_trenches:potted_weepistil", WEEPISTIL);
 		POTTED_WEEPY_HOLLOWER = createFlowerPot("deep_trenches:potted_weepy_hollower", WEEPY_HOLLOWER);
+		POTTED_YELLOW_VIOLET = createFlowerPot("deep_trenches:potted_yellow_violet", YELLOW_VIOLET);
 
 		LIGHT_OPALITE = createBlock("deep_trenches:light_opalite", QUARTZ_BLOCK);
 		LUSHINE = createBlock("deep_trenches:lushine", STONE);

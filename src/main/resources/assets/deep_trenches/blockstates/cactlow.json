@@ -1,7 +1,6 @@
 {
     "variants": {
-        "": {
-            "model": "deep_trenches:block/cactlow"
-        }
+        "half=lower": { "model": "deep_trenches:block/cactlow_bottom" },
+        "half=upper":    { "model": "deep_trenches:block/cactlow_top" }
     }
 }
