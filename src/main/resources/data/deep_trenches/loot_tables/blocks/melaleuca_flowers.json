@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "deep_trenches:melaleuca_flowers"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                        "item": "minecraft:shears"
+                    }
+                }
+            ]
+        }
+    ]
+}

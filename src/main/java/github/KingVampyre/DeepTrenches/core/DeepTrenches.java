@@ -658,7 +658,7 @@ public class  DeepTrenches implements ModInitializer {
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_button"), new BlockItem(BLUE_MAHOE_BUTTON, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_door"), new BlockItem(BLUE_MAHOE_DOOR, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_fence"), new BlockItem(BLUE_MAHOE_FENCE, new Item.Settings().group(GENERAL)));
-        Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_flowers"), new BlockItem(BLUE_MAHOE_FLOWERS, new Item.Settings().group(GENERAL)));
+        Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_flower"), new BlockItem(BLUE_MAHOE_FLOWER, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_fence_gate"), new BlockItem(BLUE_MAHOE_FENCE_GATE, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_leaves"), new BlockItem(BLUE_MAHOE_LEAVES, new Item.Settings().group(GENERAL)));
         Registry.register(ITEM, new Identifier("deep_trenches:blue_mahoe_log"), new BlockItem(BLUE_MAHOE_LOG, new Item.Settings().group(GENERAL)));
@@ -1082,7 +1082,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_door"), new BlockItem(MURKANTUAN_DOOR, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_fence"), new BlockItem(MURKANTUAN_FENCE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_fence_gate"), new BlockItem(MURKANTUAN_FENCE_GATE, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_flowers"), new BlockItem(MURKANTUAN_FLOWERS, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_flower"), new BlockItem(MURKANTUAN_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_leaves"), new BlockItem(MURKANTUAN_LEAVES, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_log"), new BlockItem(MURKANTUAN_LOG, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:murkantuan_planks"), new BlockItem(MURKANTUAN_PLANKS, new Item.Settings().group(GENERAL)));

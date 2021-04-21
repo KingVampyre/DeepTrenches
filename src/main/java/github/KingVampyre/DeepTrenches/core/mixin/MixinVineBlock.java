@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
-import github.KingVampyre.DeepTrenches.core.block.VineFlowersBlock;
+import github.KingVampyre.DeepTrenches.core.block.LeavesFlowersBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.VineBlock;
@@ -21,8 +21,8 @@ public class MixinVineBlock {
         BlockState state = world.getBlockState(pos);
         Block block = state.getBlock();
 
-        if(block instanceof VineFlowersBlock) {
-            VineFlowersBlock vineFlowers = (VineFlowersBlock) block;
+        if(block instanceof LeavesFlowersBlock) {
+            LeavesFlowersBlock vineFlowers = (LeavesFlowersBlock) block;
             Tag<Block> tag = vineFlowers.getTag();
 
             cir.setReturnValue(state.isIn(tag));
