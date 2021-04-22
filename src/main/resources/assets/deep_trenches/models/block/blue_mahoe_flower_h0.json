@@ -1,0 +1,6 @@
+{
+	"parent": "block/coral_wall_fan",
+	"textures": {
+		"fan": "deep_trenches:block/blue_mahoe_flower_stage_0"
+	}
+}

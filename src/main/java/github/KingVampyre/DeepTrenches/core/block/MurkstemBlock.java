@@ -31,7 +31,7 @@ import static net.minecraft.util.math.Direction.UP;
 
 public class MurkstemBlock extends PlantBlock {
 
-    public static final IntProperty AGE = Properties.AGE_25;
+    private static final IntProperty AGE = Properties.AGE_25;
 
     public MurkstemBlock(Settings settings) {
         super(settings);

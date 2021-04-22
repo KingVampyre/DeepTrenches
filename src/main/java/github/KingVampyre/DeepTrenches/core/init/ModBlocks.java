@@ -1469,6 +1469,14 @@ public class ModBlocks {
 		return register(id, new FlowerPotBlock(block, Settings.copy(Blocks.POTTED_POPPY)));
 	}
 
+	protected static Block createLeavesFlower(Tag<Block> tag, String id) {
+		return register(id, new LeavesFlowerBlock(tag, Settings.copy(OAK_LEAVES)));
+	}
+
+	protected static Block createLeavesFlowers(Tag<Block> tag, String id) {
+		return register(id, new LeavesFlowersBlock(tag, Settings.copy(VINE)));
+	}
+
 	protected static Block createOakButton(String id) {
 		return register(id, new ModWoodButtonBlock(Settings.copy(OAK_BUTTON)));
 	}
@@ -1545,6 +1553,10 @@ public class ModBlocks {
 		return register(id, new PillarBlock(Settings.copy(STRIPPED_OAK_WOOD)));
 	}
 
+	protected static Block createStorceanSapling(String id, FeaturesSaplingGenerator saplingGenerator) {
+		return register(id, new StorceanTallSaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING)));
+	}
+
     protected static Block createTallFlower(String id) {
 	    return register(id, new TallFlowerBlock(Settings.copy(ROSE_BUSH)));
     }
@@ -1552,14 +1564,6 @@ public class ModBlocks {
     protected static Block createThorns(String id) {
 	    // TODO: VineThornsBlock
         return register(id, new Block(Settings.copy(VINE)));
-    }
-
-    protected static Block createStorceanSapling(String id, FeaturesSaplingGenerator saplingGenerator) {
-        return register(id, new StorceanTallSaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING)));
-    }
-
-    protected static Block createLeavesFlowers(Tag<Block> tag, String id) {
-        return register(id, new LeavesFlowersBlock(tag, Settings.copy(VINE)));
     }
 
 	static {
@@ -1663,7 +1667,7 @@ public class ModBlocks {
 		BLUE_MAHOE_DOOR = createOakDoor("deep_trenches:blue_mahoe_door");
 		BLUE_MAHOE_FENCE = createOakFence("deep_trenches:blue_mahoe_fence");
 		BLUE_MAHOE_FENCE_GATE = createOakFenceGate("deep_trenches:blue_mahoe_fence_gate");
-		BLUE_MAHOE_FLOWER = createLeavesFlowers(ModBlockTags.BLUE_MAHOE_FLOWER_SPREAD, "deep_trenches:blue_mahoe_flower");
+		BLUE_MAHOE_FLOWER = createLeavesFlower(ModBlockTags.BLUE_MAHOE_FLOWER_PLANTABLE, "deep_trenches:blue_mahoe_flower");
 		BLUE_MAHOE_LEAVES = createOakLeaves("deep_trenches:blue_mahoe_leaves");
 		BLUE_MAHOE_LOG = createOakLog("deep_trenches:blue_mahoe_log");
 		BLUE_MAHOE_PLANKS = createOakPlanks("deep_trenches:blue_mahoe_planks");
@@ -2115,7 +2119,7 @@ public class ModBlocks {
 		MURKANTUAN_FENCE = createOakFence("deep_trenches:murkantuan_fence");
 		MURKANTUAN_FENCE_GATE = createOakFenceGate("deep_trenches:murkantuan_fence_gate");
 		MURKANTUAN_LEAVES = createOakLeaves("deep_trenches:murkantuan_leaves");
-		MURKANTUAN_FLOWER = createLeavesFlowers(ModBlockTags.MURKANTUAN_FLOWER_SPREAD, "deep_trenches:murkantuan_flower");
+		MURKANTUAN_FLOWER = createLeavesFlower(ModBlockTags.MURKANTUAN_FLOWER_PLANTABLE, "deep_trenches:murkantuan_flower");
 		MURKANTUAN_LOG = createOakLog("deep_trenches:murkantuan_log");
 		MURKANTUAN_PLANKS = createOakPlanks("deep_trenches:murkantuan_planks");
 		MURKANTUAN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:murkantuan_pressure_plate");

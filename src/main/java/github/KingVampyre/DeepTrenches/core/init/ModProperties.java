@@ -1,10 +1,18 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.core.block.enums.BlockThird;
+import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.IntProperty;
+
+import static net.minecraft.util.math.Direction.DOWN;
 
 public class ModProperties {
 
     public static final EnumProperty<BlockThird> BLOCK_THIRD = EnumProperty.of("third", BlockThird.class);
+
+    public static final DirectionProperty FACING_EXCEPT_DOWN = DirectionProperty.of("facing", facing -> facing != DOWN);
+
+    public static final IntProperty STAGE_2 = IntProperty.of("stage", 0, 2);
 
 }

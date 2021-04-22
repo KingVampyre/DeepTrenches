@@ -1,120 +1,61 @@
 {
 	"variants": {
-		"east=false,north=false,south=false,up=false,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_1"
-		},
-		"east=false,north=false,south=false,up=false,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_1",
+		"facing=east,stage=0": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h0",
 			"y": 90
 		},
-		"east=false,north=false,south=false,up=true,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_u"
-		},
-		"east=false,north=false,south=false,up=true,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_1u",
-			"y": 90
-		},
-		"east=false,north=false,south=true,up=false,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_1"
-		},
-		"east=false,north=false,south=true,up=false,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2",
+		"facing=south,stage=0": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h0",
 			"y": 180
 		},
-		"east=false,north=false,south=true,up=true,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_1u"
+		"facing=west,stage=0": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h0",
+			"y": 270
 		},
-		"east=false,north=false,south=true,up=true,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2u",
+		"facing=north,stage=0": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h0",
+			"y": 0
+		},
+		"facing=up,stage=0": {
+			"model": "deep_trenches:block/blue_mahoe_flower_v0"
+		},
+		"facing=east,stage=1": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h1",
+			"y": 90
+		},
+		"facing=south,stage=1": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h1",
 			"y": 180
 		},
-		"east=false,north=true,south=false,up=false,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_1",
+		"facing=west,stage=1": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h1",
+			"y": 270
+		},
+		"facing=north,stage=1": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h1",
+			"y": 0
+		},
+		"facing=up,stage=1": {
+			"model": "deep_trenches:block/blue_mahoe_flower_v1"
+		},
+		"facing=east,stage=2": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h2",
+			"y": 90
+		},
+		"facing=south,stage=2": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h2",
 			"y": 180
 		},
-		"east=false,north=true,south=false,up=false,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2",
+		"facing=west,stage=2": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h2",
 			"y": 270
 		},
-		"east=false,north=true,south=false,up=true,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_1u",
-			"y": 180
+		"facing=north,stage=2": {
+			"model": "deep_trenches:block/blue_mahoe_flower_h2",
+			"y": 0
 		},
-		"east=false,north=true,south=false,up=true,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2u",
-			"y": 270
-		},
-		"east=false,north=true,south=true,up=false,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2_opposite",
-			"y": 90
-		},
-		"east=false,north=true,south=true,up=false,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_3",
-			"y": 180
-		},
-		"east=false,north=true,south=true,up=true,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2u_opposite",
-			"y": 90
-		},
-		"east=false,north=true,south=true,up=true,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_3u",
-			"y": 180
-		},
-		"east=true,north=false,south=false,up=false,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_1",
-			"y": 270
-		},
-		"east=true,north=false,south=false,up=false,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2_opposite"
-		},
-		"east=true,north=false,south=false,up=true,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_1u",
-			"y": 270
-		},
-		"east=true,north=false,south=false,up=true,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2u_opposite"
-		},
-		"east=true,north=false,south=true,up=false,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2",
-			"y": 90
-		},
-		"east=true,north=false,south=true,up=false,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_3",
-			"y": 90
-		},
-		"east=true,north=false,south=true,up=true,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2u",
-			"y": 90
-		},
-		"east=true,north=false,south=true,up=true,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_3u",
-			"y": 90
-		},
-		"east=true,north=true,south=false,up=false,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2"
-		},
-		"east=true,north=true,south=false,up=false,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_3",
-			"y": 270
-		},
-		"east=true,north=true,south=false,up=true,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_2u"
-		},
-		"east=true,north=true,south=false,up=true,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_3u",
-			"y": 270
-		},
-		"east=true,north=true,south=true,up=false,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_3"
-		},
-		"east=true,north=true,south=true,up=false,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_4"
-		},
-		"east=true,north=true,south=true,up=true,west=false": {
-			"model": "deep_trenches:block/blue_mahoe_flower_3u"
-		},
-		"east=true,north=true,south=true,up=true,west=true": {
-			"model": "deep_trenches:block/blue_mahoe_flower_4u"
+		"facing=up,stage=2": {
+			"model": "deep_trenches:block/blue_mahoe_flower_v2"
 		}
 	}
 }

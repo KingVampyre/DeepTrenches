@@ -9,7 +9,7 @@ public class ModBlockTags {
 
     public static final Tag<Block> AQUEAN_LOGS = TagRegistry.block(new Identifier("deep_trenches:aquean_logs"));
 
-    public static final Tag<Block> BLUE_MAHOE_FLOWER_SPREAD = TagRegistry.block(new Identifier("deep_trenches:blue_mahoe_flower_spread"));
+    public static final Tag<Block> BLUE_MAHOE_FLOWER_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:blue_mahoe_flower_plantable"));
 
     public static final Tag<Block> BOTTLEBRUSH_FLOWERS_SPREAD = TagRegistry.block(new Identifier("deep_trenches:bottlebrush_flowers_spread"));
 
@@ -25,7 +25,7 @@ public class ModBlockTags {
 
     public static final Tag<Block> MELALEUCA_FLOWERS_SPREAD = TagRegistry.block(new Identifier("deep_trenches:melaleuca_flowers_spread"));
 
-    public static final Tag<Block> MURKANTUAN_FLOWER_SPREAD = TagRegistry.block(new Identifier("deep_trenches:murkantuan_flower_spread"));
+    public static final Tag<Block> MURKANTUAN_FLOWER_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:murkantuan_flower_plantable"));
 
     public static final Tag<Block> STASP_POLLEN_SOURCE = TagRegistry.block(new Identifier("deep_trenches:stasp_pollen_source"));
 

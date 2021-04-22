@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "deep_trenches:block/murkantuan_flower_stage_3"
+		"layer0": "deep_trenches:block/murkantuan_flower_stage_2"
 	}
 }

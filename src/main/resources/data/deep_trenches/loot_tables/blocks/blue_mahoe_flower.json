@@ -9,11 +9,11 @@
 					"children": [
 						{
 							"type": "minecraft:item",
-							"name": "deep_trenches:murkantuan_flower",
+							"name": "deep_trenches:blue_mahoe_flower",
 							"conditions": [
 								{
 									"condition": "minecraft:block_state_property",
-									"block": "deep_trenches:murkantuan_flower",
+									"block": "deep_trenches:blue_mahoe_flower",
 									"properties": {
 										"stage": 2
 									}
@@ -49,11 +49,11 @@
 							"children": [
 								{
 									"type": "minecraft:item",
-									"name": "deep_trenches:murkantuan_flower",
+									"name": "deep_trenches:blue_mahoe_flower",
 									"conditions": [
 										{
 											"condition": "minecraft:block_state_property",
-											"block": "deep_trenches:murkantuan_flower",
+											"block": "deep_trenches:blue_mahoe_flower",
 											"properties": {
 												"stage": 2
 											}

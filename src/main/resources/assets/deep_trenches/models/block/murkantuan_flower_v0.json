@@ -1,0 +1,6 @@
+{
+	"parent": "block/coral_fan",
+	"textures": {
+		"fan": "deep_trenches:block/murkantuan_flower_stage_0"
+	}
+}
