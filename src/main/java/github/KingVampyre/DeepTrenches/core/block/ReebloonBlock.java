@@ -26,7 +26,6 @@ public class ReebloonBlock extends FernBlock {
 	@Override
 	public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
 		world.setBlockState(pos, REEBLOON.getDefaultState(), 2);
-
 	}
 
 }

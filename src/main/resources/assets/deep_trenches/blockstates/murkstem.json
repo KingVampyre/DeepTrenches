@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"third=bottom": {
+			"model": "deep_trenches:block/murkstem_bottom"
+		},
+		"third=middle": {
+			"model": "deep_trenches:block/murkstem_middle"
+		},
+		"third=top": {
+			"model": "deep_trenches:block/murkstem_top"
+		}
+	}
+}

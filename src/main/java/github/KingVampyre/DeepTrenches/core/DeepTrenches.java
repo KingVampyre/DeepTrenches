@@ -372,7 +372,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:lime_spurge"), LIME_SPURGE);
 		Registry.register(BLOCK, new Identifier("deep_trenches:lupin_flower"), LUPIN_FLOWER);
 		Registry.register(BLOCK, new Identifier("deep_trenches:marsh_violet"), MARSH_VIOLET);
-        Registry.register(BLOCK, new Identifier("deep_trenches:murk_stem"), MURK_STEM);
+        Registry.register(BLOCK, new Identifier("deep_trenches:murkstem"), MURKSTEM);
 		Registry.register(BLOCK, new Identifier("deep_trenches:native_violet"), NATIVE_VIOLET);
 		Registry.register(BLOCK, new Identifier("deep_trenches:opium_poppy"), OPIUM_POPPY);
 		Registry.register(BLOCK, new Identifier("deep_trenches:orange_lily"), ORANGE_LILY);
@@ -1614,6 +1614,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:lime_spurge"), new BlockItem(LIME_SPURGE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:lupin_flower"), new BlockItem(LUPIN_FLOWER, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:marsh_violet"), new BlockItem(MARSH_VIOLET, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:murkstem"), new BlockItem(MURKSTEM, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:native_violet"), new BlockItem(NATIVE_VIOLET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:opium_poppy"), new BlockItem(OPIUM_POPPY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:orange_lily"), new BlockItem(ORANGE_LILY, new Item.Settings().group(GENERAL)));

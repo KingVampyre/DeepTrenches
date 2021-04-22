@@ -114,9 +114,7 @@ public class SproomSpikeBlock extends PlantBlock {
 	}
 
 	@Override
-	public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState neighborState,
-			WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-
+	public BlockState getStateForNeighborUpdate(BlockState state, Direction facing, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
 		Direction dir = this.getFacing(world, pos, state);
 		Direction direction = state.get(FACING);
 

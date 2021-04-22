@@ -65,7 +65,7 @@ public class ModBlocks {
 	public static final Block LIME_SPURGE = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block LUPIN_FLOWER = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block MARSH_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block MURK_STEM = new Block(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.WOOD));
+	public static final Block MURKSTEM = new MurkstemBlock(Settings.of(Material.PLANT).ticksRandomly().noCollision().breakInstantly().sounds(BlockSoundGroup.WOOD));
 	public static final Block NATIVE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block OPIUM_POPPY = new FlowerBlock(WEAKNESS, 11, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block ORANGE_LILY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));

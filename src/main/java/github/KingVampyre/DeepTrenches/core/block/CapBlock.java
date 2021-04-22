@@ -43,14 +43,18 @@ public class CapBlock extends LeavesBlock {
 		World world = ctx.getWorld();
 
 		BlockState state = super.getPlacementState(ctx);
-		FluidState fluidState = world.getFluidState(pos);
 
-		return state.with(WATERLOGGED, fluidState.getFluid() == WATER);
+		if(state != null) {
+			FluidState fluidState = world.getFluidState(pos);
+
+			return state.with(WATERLOGGED, fluidState.getFluid() == WATER);
+		}
+
+		return null;
 	}
 
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
-
 		FluidState fluidState = world.getFluidState(pos);
 
 		if (fluidState.getFluid() == WATER)
@@ -65,7 +69,6 @@ public class CapBlock extends LeavesBlock {
 		FluidState fluidState = world.getFluidState(pos);
 
 		world.setBlockState(pos, state.with(WATERLOGGED, fluidState.getFluid() == WATER), 3);
-
 	}
 
 }

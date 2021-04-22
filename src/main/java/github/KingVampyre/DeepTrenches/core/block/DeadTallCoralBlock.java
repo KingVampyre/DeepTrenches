@@ -41,9 +41,9 @@ public class DeadTallCoralBlock extends ModDeadCoralBlock {
 
 		if (pos.getY() < height)
 		    if (state.get(BLOCK_HALF) == BOTTOM)
-			return down.getBlock() != this && super.canPlaceAt(state, world, pos);
+				return down.getBlock() != this && super.canPlaceAt(state, world, pos);
 		    else
-			return down.getBlock() == this;
+				return down.getBlock() == this;
 
 		return false;
 
@@ -79,7 +79,6 @@ public class DeadTallCoralBlock extends ModDeadCoralBlock {
 
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
-		
 		BlockPos up = pos.up();
 		BlockState stateIn = world.getBlockState(up);
 
