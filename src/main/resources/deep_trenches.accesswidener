@@ -1,3 +1,19 @@
 accessWidener   v1  named
 accessible class net/minecraft/entity/ai/brain/task/CompositeTask$Order
 accessible class net/minecraft/entity/ai/brain/task/CompositeTask$RunMode
+
+accessible method net/minecraft/block/CoralBlock            <init>   (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/CoralFanBlock         <init>   (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/CoralWallFanBlock     <init>   (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/DeadCoralBlock        <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/DeadCoralFanBlock     <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/DeadCoralWallFanBlock <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/DoorBlock             <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/PressurePlateBlock    <init>   (Lnet/minecraft/block/PressurePlateBlock$ActivationRule;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/SignBlock             <init>   (Lnet/minecraft/block/AbstractBlock$Settings;Lnet/minecraft/util/SignType;)V
+accessible method net/minecraft/block/StairsBlock           <init>   (Lnet/minecraft/block/BlockState;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/TrapdoorBlock         <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/WoodenButtonBlock     <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/WallSignBlock         <init>   (Lnet/minecraft/block/AbstractBlock$Settings;Lnet/minecraft/util/SignType;)V
+
+accessible method net/minecraft/util/SignType               <init>   (Ljava/lang/String;)V

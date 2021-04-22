@@ -4,11 +4,12 @@
   "package": "github.KingVampyre.DeepTrenches.client.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "MixinSignBlockEntityRenderer",
+    "MixinTexturedRenderLayers"
   ],
   "client": [
     "MixinClientPlayNetworkHandler",
-    "MixinInGameHud",
-    "MixinSignEditScreen"
+    "MixinInGameHud"
   ],
   "injectors": {
     "defaultRequire": 1

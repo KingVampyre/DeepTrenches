@@ -1649,6 +1649,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:wild_pansy"), new BlockItem(WILD_PANSY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:yellow_violet"), new BlockItem(YELLOW_VIOLET, new Item.Settings().group(GENERAL)));
 
+		/* ------------------------------------ BLOCK ENTITY ----------------------------------------------- */
 		Registry.register(BLOCK_ENTITY_TYPE, new Identifier("deep_trenches:sign"), BlockEntityTypes.SIGN);
 		Registry.register(BLOCK_ENTITY_TYPE, new Identifier("deep_trenches:stasp_nest"), BlockEntityTypes.STASP_NEST);
     }

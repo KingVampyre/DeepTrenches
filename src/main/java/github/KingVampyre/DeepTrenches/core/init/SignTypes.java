@@ -1,127 +1,88 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import github.KingVampyre.DeepTrenches.common.util.ModSignType;
-import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
+import com.google.common.collect.Sets;
 import net.minecraft.util.SignType;
+
+import java.util.Set;
+import java.util.stream.Stream;
 
 public class SignTypes {
 
-	public static final SignType ALMOND = new ModSignType("almond");
+	private static final Set<SignType> VALUES = Sets.newHashSet();
 
-	public static final SignType ANAMEATA = new ModSignType("anameata");
+	public static final SignType ALMOND = register("almond");
+	public static final SignType ANAMEATA = register("anameata");
+	public static final SignType ANGELS_TRUMPET = register("angels_trumpet");
+	public static final SignType AQUEAN = register("aquean");
+	public static final SignType BARSHROOKLE = register("barshrookle");
+	public static final SignType BLACK_BIRCH = register("black_birch");
+	public static final SignType BLUE_MAHOE = register("blue_mahoe");
+	public static final SignType BLUE_SPRUCE = register("blue_spruce");
+	public static final SignType BOTTLEBRUSH = register("bottlebrush");
+	public static final SignType BROMYA = register("bromya");
+	public static final SignType BUBBLETREE = register("bubbletree");
+	public static final SignType CALCEARB = register("calcearb");
+	public static final SignType CHERRY = register("cherry");
+	public static final SignType CHOTORN = register("chotorn");
+	public static final SignType COOK_PINE = register("cook_pine");
+	public static final SignType CROLOOD = register("crolood");
+	public static final SignType DARK_CROLOOD = register("dark_crolood");
+	public static final SignType DARK_FUCHSITRA = register("dark_fuchsitra");
+	public static final SignType DARK_RED_ELM = register("dark_red_elm");
+	public static final SignType DEAD_WART_TREE = register("dead_wart_tree");
+	public static final SignType DRIGYUS = register("drigyus");
+	public static final SignType EBONY = register("ebony");
+	public static final SignType ENDERHEART = register("enderheart");
+	public static final SignType FLALM = register("flalm");
+	public static final SignType FRUCE = register("fruce");
+	public static final SignType FUNERANITE = register("funeranite");
+	public static final SignType FUCHSITRA = register("fuchsitra");
+	public static final SignType FUGMOS = register("fugmos");
+	public static final SignType GHOSHROOM = register("ghoshroom");
+	public static final SignType GIANT_VIOLET = register("giant_violet");
+	public static final SignType GUAIACUM = register("guiaiacum");
+	public static final SignType JOSHUA = register("joshua");
+	public static final SignType KLINKII_PINE = register("klinkii");
+	public static final SignType MELALEUCA = register("melaleuca");
+	public static final SignType MURKANTUAN = register("murkantuan");
+	public static final SignType NORFOLK_PINE = register("norfolk_pine");
+	public static final SignType OBSCRUS = register("obscrus");
+	public static final SignType ORHPRIS = register("orhpris");
+	public static final SignType PELTOGYNE = register("peltogyne");
+	public static final SignType PIN_CHERRY = register("pin_cherry");
+	public static final SignType PLUM = register("plum");
+	public static final SignType PURFUNGA = register("purfunga");
+	public static final SignType RARK = register("rark");
+	public static final SignType RED_ELM = register("red_elm");
+	public static final SignType RHADI = register("rhadi");
+	public static final SignType SANGUART = register("sanguart");
+	public static final SignType SCARLET_THIORCEN = register("scarlet_thiorcen");
+	public static final SignType SEQUOIA = register("sequoia");
+	public static final SignType SPROOM = register("sproom");
+	public static final SignType STORTREEAN = register("stortreean");
+	public static final SignType STROOMEAN = register("stroomean");
+	public static final SignType SUNRISE_FUNGUS = register("sunrise_fungus");
+	public static final SignType TARK = register("tark");
+	public static final SignType TEAK = register("teak");
+	public static final SignType THUNDERCLOUD_PLUM = register("thundercloud_plum");
+	public static final SignType VYNHERT = register("vynhert");
+	public static final SignType WART_TREE = register("wart_tree");
+	public static final SignType WENGE = register("wenge");
+	public static final SignType YEW = register("yew");
 
-	public static final SignType ANGELS_TRUMPET = new ModSignType("angels_trumpet");
+	public static boolean contains(SignType signType) {
+		return VALUES.contains(signType);
+	}
 
-	public static final SignType AQUEAN = new ModSignType("aquean");
+	private static SignType register(String name) {
+		SignType signType = new SignType(name);
 
-	public static final SignType BARSHROOKLE = new ModSignType("barshrookle");
+		VALUES.add(signType);
+		return signType;
+	}
 
-	public static final SignType BLACK_BIRCH = new ModSignType("black_birch");
-
-	public static final SignType BLUE_MAHOE = new ModSignType("blue_mahoe");
-
-	public static final SignType BLUE_SPRUCE = new ModSignType("blue_spruce");
-
-	public static final SignType BOTTLEBRUSH = new ModSignType("bottlebrush");
-
-	public static final SignType BROMYA = new ModSignType("bromya");
-
-	public static final SignType BUBBLETREE = new ModSignType("bubbletree");
-
-	public static final SignType CALCEARB = new ModSignType("calcearb");
-
-	public static final SignType CHERRY = new ModSignType("cherry");
-
-	public static final SignType CHOTORN = new ModSignType("chotorn");
-
-	public static final SignType COOK_PINE = new ModSignType("cook_pine");
-
-	public static final SignType CROLOOD = new ModSignType("crolood");
-
-	public static final SignType DARK_CROLOOD = new ModSignType("dark_crolood");
-
-	public static final SignType DARK_FUCHSITRA = new ModSignType("dark_fuchsitra");
-
-	public static final SignType DARK_RED_ELM = new ModSignType("dark_red_elm");
-
-	public static final SignType DEAD_WART_TREE = new ModSignType("dead_wart_tree");
-
-	public static final SignType DRIGYUS = new ModSignType("drigyus");
-
-	public static final SignType EBONY = new ModSignType("ebony");
-
-	public static final SignType ENDERHEART = new ModSignType("enderheart");
-
-	public static final SignType FLALM = new ModSignType("flalm");
-
-	public static final SignType FRUCE = new ModSignType("fruce");
-
-	public static final SignType FUNERANITE = new ModSignType("funeranite");
-
-	public static final SignType FUCHSITRA = new ModSignType("fuchsitra");
-
-	public static final SignType FUGMOS = new ModSignType("fugmos");
-
-	public static final SignType GHOSHROOM = new ModSignType("ghoshroom");
-
-	public static final SignType GIANT_VIOLET = new ModSignType("giant_violet");
-
-	public static final SignType GUAIACUM = new ModSignType("guiaiacum");
-
-	public static final SignType JOSHUA = new ModSignType("joshua");
-
-	public static final SignType KLINKII_PINE = new ModSignType("klinkii");
-
-	public static final SignType MELALEUCA = new ModSignType("melaleuca");
-
-	public static final SignType MURKANTUAN = new ModSignType("murkantuan");
-
-	public static final SignType NORFOLK_PINE = new ModSignType("norfolk_pine");
-
-	public static final SignType OBSCRUS = new ModSignType("obscrus");
-
-	public static final SignType ORHPRIS = new ModSignType("orhpris");
-
-	public static final SignType PELTOGYNE = new ModSignType("peltogyne");
-
-	public static final SignType PIN_CHERRY = new ModSignType("pin_cherry");
-
-	public static final SignType PLUM = new ModSignType("plum");
-
-	public static final SignType PURFUNGA = new ModSignType("purfunga");
-
-	public static final SignType RARK = new ModSignType("rark");
-
-	public static final SignType RED_ELM = new ModSignType("red_elm");
-
-	public static final SignType RHADI = new ModSignType("rhadi");
-
-	public static final SignType SANGUART = new ModSignType("sanguart");
-
-	public static final SignType SCARLET_THIORCEN = new ModSignType("scarlet_thiorcen");
-
-	public static final SignType SEQUOIA = new ModSignType("sequoia");
-
-	public static final SignType SPROOM = new ModSignType("sproom");
-
-	public static final SignType STORTREEAN = new ModSignType("stortreean");
-
-	public static final SignType STROOMEAN = new ModSignType("stroomean");
-
-	public static final SignType SUNRISE_FUNGUS = new ModSignType("sunrise_fungus");
-
-	public static final SignType TARK = new ModSignType("tark");
-
-	public static final SignType TEAK = new ModSignType("teak");
-
-	public static final SignType THUNDERCLOUD_PLUM = new ModSignType("thundercloud_plum");
-
-	public static final SignType VYNHERT = new ModSignType("vynhert");
-
-	public static final SignType WART_TREE = new ModSignType("wart_tree");
-
-	public static final SignType WENGE = new ModSignType("wenge");
-
-	public static final SignType YEW = new ModSignType("yew");
+	public static Stream<SignType> steam() {
+		return VALUES.stream();
+	}
 
 }

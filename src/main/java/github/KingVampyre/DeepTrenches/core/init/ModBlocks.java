@@ -1,6 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import github.KingVampyre.DeepTrenches.common.block.*;
+import github.KingVampyre.DeepTrenches.common.block.CustomSignBlock;
+import github.KingVampyre.DeepTrenches.common.block.CustomWallSignBlock;
 import github.KingVampyre.DeepTrenches.core.block.*;
 import github.Louwind.Features.impl.block.FeaturesSaplingBlock;
 import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
@@ -107,181 +108,181 @@ public class ModBlocks {
 	public static final Block GIANT_VIOLET_PETAL = new Block(Settings.copy(COCOA));
 	public static final Block GIANT_VIOLET_PISTIL = new Block(Settings.copy(COCOA));
 
-	public static final Block DEAD_BLACKGREEN_TREE_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_BLACKGREEN_TREE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_BLACKGREEN_TREE_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block BLACKGREEN_TREE_CORAL = new ModCoralBlock(DEAD_BLACKGREEN_TREE_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_BLACKGREEN_TREE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block BLACKGREEN_TREE_CORAL = new CoralBlock(DEAD_BLACKGREEN_TREE_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block BLACKGREEN_TREE_CORAL_BLOCK = new CoralBlockBlock(DEAD_BLACKGREEN_TREE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block BLACKGREEN_TREE_CORAL_FAN = new ModCoralFanBlock(DEAD_BLACKGREEN_TREE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block BLACKGREEN_TREE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block BLACKGREEN_TREE_CORAL_FAN = new CoralFanBlock(DEAD_BLACKGREEN_TREE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block BLACKGREEN_TREE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_BROCCOLI_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_BROCCOLI_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_BROCCOLI_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
 	public static final Block DEAD_BROCCOLI_CORAL_BUBBLES = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_BROCCOLI_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_BROCCOLI_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block BROCCOLI_CORAL = new ModCoralBlock(DEAD_BROCCOLI_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_BROCCOLI_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_BROCCOLI_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block BROCCOLI_CORAL = new CoralBlock(DEAD_BROCCOLI_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block BROCCOLI_CORAL_BLOCK = new CoralBlockBlock(DEAD_BROCCOLI_CORAL_BUBBLES, Settings.copy(TUBE_CORAL_BLOCK));
 	public static final Block BROCCOLI_CORAL_BUBBLES = new CoralBlockBlock(DEAD_BROCCOLI_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block BROCCOLI_CORAL_FAN = new ModCoralFanBlock(DEAD_BROCCOLI_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block BROCCOLI_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_BROCCOLI_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block BROCCOLI_CORAL_FAN = new CoralFanBlock(DEAD_BROCCOLI_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block BROCCOLI_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_BROCCOLI_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 
-	public static final Block DEAD_BUBBLEGUM_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_BUBBLEGUM_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_BUBBLEGUM_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_BUBBLEGUM_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_BUBBLEGUM_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block BUBBLEGUM_CORAL = new ModCoralBlock(DEAD_BUBBLEGUM_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_BUBBLEGUM_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_BUBBLEGUM_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block BUBBLEGUM_CORAL = new CoralBlock(DEAD_BUBBLEGUM_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block BUBBLEGUM_CORAL_BLOCK = new CoralBlockBlock(DEAD_BUBBLEGUM_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block BUBBLEGUM_CORAL_FAN = new ModCoralFanBlock(DEAD_BUBBLEGUM_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block BUBBLEGUM_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_BUBBLEGUM_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block BUBBLEGUM_CORAL_FAN = new CoralFanBlock(DEAD_BUBBLEGUM_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block BUBBLEGUM_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_BUBBLEGUM_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 
-	public static final Block DEAD_CABBAGE_TREE_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_CABBAGE_TREE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_CABBAGE_TREE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_CABBAGE_TREE_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_CABBAGE_TREE_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block CABBAGE_TREE_CORAL = new ModCoralBlock(DEAD_CABBAGE_TREE_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_CABBAGE_TREE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_CABBAGE_TREE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block CABBAGE_TREE_CORAL = new CoralBlock(DEAD_CABBAGE_TREE_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block CABBAGE_TREE_CORAL_BLOCK = new CoralBlockBlock(DEAD_CABBAGE_TREE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block CABBAGE_TREE_CORAL_FAN = new ModCoralFanBlock(DEAD_CABBAGE_TREE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block CABBAGE_TREE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_CABBAGE_TREE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block CABBAGE_TREE_CORAL_FAN = new CoralFanBlock(DEAD_CABBAGE_TREE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block CABBAGE_TREE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_CABBAGE_TREE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_FLOWERTUBE_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_FLOWERTUBE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_FLOWERTUBE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_FLOWERTUBE_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_FLOWERTUBE_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block FLOWERTUBE_CORAL = new ModCoralBlock(DEAD_FLOWERTUBE_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_FLOWERTUBE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_FLOWERTUBE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block FLOWERTUBE_CORAL = new CoralBlock(DEAD_FLOWERTUBE_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block FLOWERTUBE_CORAL_BLOCK = new CoralBlockBlock(DEAD_FLOWERTUBE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block FLOWERTUBE_CORAL_FAN = new ModCoralFanBlock(DEAD_FLOWERTUBE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block FLOWERTUBE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_FLOWERTUBE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block FLOWERTUBE_CORAL_FAN = new CoralFanBlock(DEAD_FLOWERTUBE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block FLOWERTUBE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_FLOWERTUBE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_GARNET_SPIRAL_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_GARNET_SPIRAL_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_GARNET_SPIRAL_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_GARNET_SPIRAL_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_GARNET_SPIRAL_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block GARNET_SPIRAL_CORAL = new ModCoralBlock(DEAD_GARNET_SPIRAL_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_GARNET_SPIRAL_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_GARNET_SPIRAL_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block GARNET_SPIRAL_CORAL = new CoralBlock(DEAD_GARNET_SPIRAL_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block GARNET_SPIRAL_CORAL_BLOCK = new CoralBlockBlock(DEAD_GARNET_SPIRAL_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block GARNET_SPIRAL_CORAL_FAN = new ModCoralFanBlock(DEAD_GARNET_SPIRAL_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block GARNET_SPIRAL_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_GARNET_SPIRAL_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block GARNET_SPIRAL_CORAL_FAN = new CoralFanBlock(DEAD_GARNET_SPIRAL_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block GARNET_SPIRAL_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_GARNET_SPIRAL_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
 	public static final Block DEAD_GLOW_FOREST_CORAL = new DeadTallCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_GLOW_FOREST_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_GLOW_FOREST_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_GLOW_FOREST_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_GLOW_FOREST_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_GLOW_FOREST_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	public static final Block GLOW_FOREST_CORAL = new TallCoralBlock(DEAD_GLOW_FOREST_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block GLOW_FOREST_CORAL_BLOCK = new CoralBlockBlock(DEAD_GLOW_FOREST_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block GLOW_FOREST_CORAL_FAN = new ModCoralFanBlock(DEAD_GLOW_FOREST_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block GLOW_FOREST_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_GLOW_FOREST_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block GLOW_FOREST_CORAL_FAN = new CoralFanBlock(DEAD_GLOW_FOREST_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block GLOW_FOREST_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_GLOW_FOREST_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_GLOWTONGUE_TUBE_CORA_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block GLOWTONGUE_TUBE_CORAL = new ModCoralBlock(DEAD_GLOWTONGUE_TUBE_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_GLOWTONGUE_TUBE_CORA_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block GLOWTONGUE_TUBE_CORAL = new CoralBlock(DEAD_GLOWTONGUE_TUBE_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block GLOWTONGUE_TUBE_CORAL_BLOCK = new CoralBlockBlock(DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block GLOWTONGUE_TUBE_CORAL_FAN = new ModCoralFanBlock(DEAD_GLOWTONGUE_TUBE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block GLOWTONGUE_TUBE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_GLOWTONGUE_TUBE_CORA_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block GLOWTONGUE_TUBE_CORAL_FAN = new CoralFanBlock(DEAD_GLOWTONGUE_TUBE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block GLOWTONGUE_TUBE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_GLOWTONGUE_TUBE_CORA_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_IVORY_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_IVORY_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_IVORY_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_IVORY_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_IVORY_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block IVORY_CORAL = new ModCoralBlock(DEAD_IVORY_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_IVORY_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_IVORY_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block IVORY_CORAL = new CoralBlock(DEAD_IVORY_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block IVORY_CORAL_BLOCK = new CoralBlockBlock(DEAD_IVORY_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block IVORY_CORAL_FAN = new ModCoralFanBlock(DEAD_IVORY_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block IVORY_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_IVORY_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block IVORY_CORAL_FAN = new CoralFanBlock(DEAD_IVORY_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block IVORY_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_IVORY_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_LIME_BRAIN_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_LIME_BRAIN_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_LIME_BRAIN_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_LIME_BRAIN_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_LIME_BRAIN_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block LIME_BRAIN_CORAL = new ModCoralBlock(DEAD_LIME_BRAIN_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_LIME_BRAIN_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_LIME_BRAIN_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block LIME_BRAIN_CORAL = new CoralBlock(DEAD_LIME_BRAIN_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block LIME_BRAIN_CORAL_BLOCK = new CoralBlockBlock(DEAD_LIME_BRAIN_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block LIME_BRAIN_CORAL_FAN = new ModCoralFanBlock(DEAD_LIME_BRAIN_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block LIME_BRAIN_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_LIME_BRAIN_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block LIME_BRAIN_CORAL_FAN = new CoralFanBlock(DEAD_LIME_BRAIN_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block LIME_BRAIN_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_LIME_BRAIN_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_LOPHELIA_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_LOPHELIA_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_LOPHELIA_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_LOPHELIA_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_LOPHELIA_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block LOPHELIA_CORAL = new ModCoralBlock(DEAD_LOPHELIA_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_LOPHELIA_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_LOPHELIA_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block LOPHELIA_CORAL = new CoralBlock(DEAD_LOPHELIA_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block LOPHELIA_CORAL_BLOCK = new CoralBlockBlock(DEAD_LOPHELIA_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block LOPHELIA_CORAL_FAN = new ModCoralFanBlock(DEAD_LOPHELIA_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block LOPHELIA_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_LOPHELIA_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block LOPHELIA_CORAL_FAN = new CoralFanBlock(DEAD_LOPHELIA_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block LOPHELIA_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_LOPHELIA_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 		
-	public static final Block DEAD_PIPE_ORGAN_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_PIPE_ORGAN_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_PIPE_ORGAN_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_PIPE_ORGAN_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_PIPE_ORGAN_TENTACLES = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_PIPE_ORGAN_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block PIPE_ORGAN_CORAL = new ModCoralBlock(DEAD_PIPE_ORGAN_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_PIPE_ORGAN_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_PIPE_ORGAN_TENTACLES = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_PIPE_ORGAN_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block PIPE_ORGAN_CORAL = new CoralBlock(DEAD_PIPE_ORGAN_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block PIPE_ORGAN_CORAL_BLOCK = new CoralBlockBlock(DEAD_PIPE_ORGAN_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block PIPE_ORGAN_CORAL_FAN = new ModCoralFanBlock(DEAD_PIPE_ORGAN_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block PIPE_ORGAN_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_PIPE_ORGAN_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block PIPE_ORGAN_TENTACLES = new ModCoralBlock(DEAD_PIPE_ORGAN_TENTACLES, Settings.copy(TUBE_CORAL));
+	public static final Block PIPE_ORGAN_CORAL_FAN = new CoralFanBlock(DEAD_PIPE_ORGAN_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block PIPE_ORGAN_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_PIPE_ORGAN_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block PIPE_ORGAN_TENTACLES = new CoralBlock(DEAD_PIPE_ORGAN_TENTACLES, Settings.copy(TUBE_CORAL));
 	
-	public static final Block DEAD_RED_TREE_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_RED_TREE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_RED_TREE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_RED_TREE_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_RED_TREE_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block RED_TREE_CORAL = new ModCoralBlock(DEAD_RED_TREE_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_RED_TREE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_RED_TREE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block RED_TREE_CORAL = new CoralBlock(DEAD_RED_TREE_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block RED_TREE_CORAL_BLOCK = new CoralBlockBlock(DEAD_RED_TREE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block RED_TREE_CORAL_FAN = new ModCoralFanBlock(DEAD_RED_TREE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block RED_TREE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_RED_TREE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block RED_TREE_CORAL_FAN = new CoralFanBlock(DEAD_RED_TREE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block RED_TREE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_RED_TREE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_SEAFAN_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_SEAFAN_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_SEAFAN_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_SEAFAN_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_SEAFAN_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block SEAFAN_CORAL = new ModCoralBlock(DEAD_SEAFAN_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_SEAFAN_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_SEAFAN_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block SEAFAN_CORAL = new CoralBlock(DEAD_SEAFAN_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block SEAFAN_CORAL_BLOCK = new CoralBlockBlock(DEAD_SEAFAN_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block SEAFAN_CORAL_FAN = new ModCoralFanBlock(DEAD_SEAFAN_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block SEAFAN_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_SEAFAN_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block SEAFAN_CORAL_FAN = new CoralFanBlock(DEAD_SEAFAN_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block SEAFAN_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_SEAFAN_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block STRAIGHT_WILLOW_CORAL = new ModCoralBlock(DEAD_STRAIGHT_WILLOW_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block STRAIGHT_WILLOW_CORAL = new CoralBlock(DEAD_STRAIGHT_WILLOW_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block STRAIGHT_WILLOW_CORAL_BLOCK = new CoralBlockBlock(DEAD_STRAIGHT_WILLOW_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block STRAIGHT_WILLOW_CORAL_FAN = new ModCoralFanBlock(DEAD_STRAIGHT_WILLOW_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block STRAIGHT_WILLOW_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block STRAIGHT_WILLOW_CORAL_FAN = new CoralFanBlock(DEAD_STRAIGHT_WILLOW_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block STRAIGHT_WILLOW_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_SUNRISE_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_SUNRISE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_SUNRISE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_SUNRISE_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_SUNRISE_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block SUNRISE_CORAL = new ModCoralBlock(DEAD_SUNRISE_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_SUNRISE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_SUNRISE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block SUNRISE_CORAL = new CoralBlock(DEAD_SUNRISE_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block SUNRISE_CORAL_BLOCK = new CoralBlockBlock(DEAD_SUNRISE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block SUNRISE_CORAL_FAN = new ModCoralFanBlock(DEAD_SUNRISE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block SUNRISE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_SUNRISE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block SUNRISE_CORAL_FAN = new CoralFanBlock(DEAD_SUNRISE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block SUNRISE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_SUNRISE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_TABLE_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_TABLE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_TABLE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_TABLE_CORAL_FAN = new ModDeadCoralFanBlock( Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_TABLE_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock( Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block TABLE_CORAL = new ModCoralBlock(DEAD_TABLE_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_TABLE_CORAL_FAN = new DeadCoralFanBlock( Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_TABLE_CORAL_WALL_FAN = new DeadCoralWallFanBlock( Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block TABLE_CORAL = new CoralBlock(DEAD_TABLE_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block TABLE_CORAL_BLOCK = new CoralBlockBlock(DEAD_TABLE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block TABLE_CORAL_FAN = new ModCoralFanBlock(DEAD_TABLE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block TABLE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_TABLE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block TABLE_CORAL_FAN = new CoralFanBlock(DEAD_TABLE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block TABLE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_TABLE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_THIN_BLADE_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_THIN_BLADE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_THIN_BLADE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_THIN_BLADE_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_THIN_BLADE_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block THIN_BLADE_CORAL = new ModCoralBlock(DEAD_THIN_BLADE_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_THIN_BLADE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_THIN_BLADE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block THIN_BLADE_CORAL = new CoralBlock(DEAD_THIN_BLADE_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block THIN_BLADE_CORAL_BLOCK = new CoralBlockBlock(DEAD_THIN_BLADE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block THIN_BLADE_CORAL_FAN = new ModCoralFanBlock(DEAD_THIN_BLADE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block THIN_BLADE_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_THIN_BLADE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block THIN_BLADE_CORAL_FAN = new CoralFanBlock(DEAD_THIN_BLADE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block THIN_BLADE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_THIN_BLADE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 	
-	public static final Block DEAD_TRUMPETEAR_CORAL = new ModDeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
+	public static final Block DEAD_TRUMPETEAR_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
 	public static final Block DEAD_TRUMPETEAR_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_TRUMPETEAR_CORAL_FAN = new ModDeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_TRUMPETEAR_CORAL_WALL_FAN = new ModDeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block TRUMPETEAR_CORAL = new ModCoralBlock(DEAD_TRUMPETEAR_CORAL, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_TRUMPETEAR_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
+	public static final Block DEAD_TRUMPETEAR_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block TRUMPETEAR_CORAL = new CoralBlock(DEAD_TRUMPETEAR_CORAL, Settings.copy(TUBE_CORAL));
 	public static final Block TRUMPETEAR_CORAL_BLOCK = new CoralBlockBlock(DEAD_TRUMPETEAR_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block TRUMPETEAR_CORAL_FAN = new ModCoralFanBlock(DEAD_TRUMPETEAR_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block TRUMPETEAR_CORAL_WALL_FAN = new ModCoralWallFan(DEAD_TRUMPETEAR_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block TRUMPETEAR_CORAL_FAN = new CoralFanBlock(DEAD_TRUMPETEAR_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
+	public static final Block TRUMPETEAR_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_TRUMPETEAR_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
 
 	public static final Block ALMOND_BUTTON;
 	public static final Block ALMOND_DOOR;
@@ -1478,11 +1479,11 @@ public class ModBlocks {
 	}
 
 	protected static Block createOakButton(String id) {
-		return register(id, new ModWoodButtonBlock(Settings.copy(OAK_BUTTON)));
+		return register(id, new WoodenButtonBlock(Settings.copy(OAK_BUTTON)));
 	}
 
 	protected static Block createOakDoor(String id) {
-		return register(id, new ModDoorBlock(Settings.copy(OAK_DOOR)));
+		return register(id, new DoorBlock(Settings.copy(OAK_DOOR)));
 	}
 
 	protected static Block createOakFence(String id) {
@@ -1506,7 +1507,7 @@ public class ModBlocks {
 	}
 
 	protected static Block createOakPressurePlate(String id) {
-		return register(id, new ModPressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE)));
+		return register(id, new PressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE)));
 	}
 
 	protected static Block createOakSapling(String id, FeaturesSaplingGenerator saplingGenerator) {
@@ -1514,7 +1515,7 @@ public class ModBlocks {
 	}
 
 	protected static Block createOakSign(String id, SignType type) {
-		return register(id, new ModSignBlock(Settings.copy(OAK_SIGN), type));
+		return register(id, new CustomSignBlock(Settings.copy(OAK_SIGN), type));
 	}
 
 	protected static Block createOakSlab(String id) {
@@ -1522,15 +1523,15 @@ public class ModBlocks {
 	}
 
 	protected static Block createOakStairs(String id, Block block) {
-		return register(id, new ModStairsBlock(block.getDefaultState(), Settings.copy(OAK_STAIRS)));
+		return register(id, new StairsBlock(block.getDefaultState(), Settings.copy(OAK_STAIRS)));
 	}
 
 	protected static Block createOakTrapdoor(String id) {
-		return register(id, new ModTrapdoorBlock(Settings.copy(OAK_TRAPDOOR)));
+		return register(id, new TrapdoorBlock(Settings.copy(OAK_TRAPDOOR)));
 	}
 
 	protected static Block createOakWallSign(String id, SignType type) {
-		return register(id, new ModWallSignBlock(Settings.copy(OAK_SIGN), type));
+		return register(id, new CustomWallSignBlock(Settings.copy(OAK_SIGN), type));
 	}
 
 	protected static Block createOakWood(String id) {

@@ -5,16 +5,17 @@ import net.fabricmc.api.Environment;
 
 @Environment(EnvType.CLIENT)
 public class StorceanColors {
+
+    private final int defaultColor;
     private int[] colorMap;
-    private int defaultColor;
 
     public StorceanColors(int defaultColor) {
         this.defaultColor = defaultColor;
     }
 
     public int getColor(double temperature, double humidity) {
-        int i = (int)((1.0D - temperature) * 255.0D);
-        int j = (int)((1.0D - humidity * temperature) * 255.0D);
+        int i = (int)((1 - temperature) * 255);
+        int j = (int)((1 - humidity * temperature) * 255);
 
         return colorMap[j << 8 | i];
     }

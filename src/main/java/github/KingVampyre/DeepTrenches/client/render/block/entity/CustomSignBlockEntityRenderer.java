@@ -1,34 +1,35 @@
-package github.KingVampyre.DeepTrenches.common.block.entity.renderer;
+package github.KingVampyre.DeepTrenches.client.render.block.entity;
 
-import github.KingVampyre.DeepTrenches.common.block.entity.ModSignBlockEntity;
+import github.KingVampyre.DeepTrenches.common.block.entity.CustomSignBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.client.font.TextRenderer;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRenderDispatcher;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.minecraft.client.texture.NativeImage;
+import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.text.OrderedText;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.SignType;
+import net.minecraft.util.math.Direction;
 
 import java.util.List;
 
-public class ModSignBlockEntityRenderer extends BlockEntityRenderer<ModSignBlockEntity> {
+public class CustomSignBlockEntityRenderer extends BlockEntityRenderer<CustomSignBlockEntity> {
 
     private final SignBlockEntityRenderer.SignModel model = new SignBlockEntityRenderer.SignModel();
 
-    public ModSignBlockEntityRenderer(BlockEntityRenderDispatcher dispatcher) {
-        super(dispatcher);
+    public CustomSignBlockEntityRenderer(BlockEntityRenderDispatcher blockEntityRenderDispatcher) {
+        super(blockEntityRenderDispatcher);
     }
 
     @Override
-    public void render(ModSignBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
+    public void render(CustomSignBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
         BlockState blockState = entity.getCachedState();
+        Block block = blockState.getBlock();
 
         matrices.push();
         float h;
@@ -49,11 +50,8 @@ public class ModSignBlockEntityRenderer extends BlockEntityRenderer<ModSignBlock
         matrices.push();
         matrices.scale(0.6666667F, -0.6666667F, -0.6666667F);
 
-        AbstractSignBlock block = (AbstractSignBlock) blockState.getBlock();
-
-        Identifier texture = ModSignBlockEntityRenderer.getTexture(block);
-        RenderLayer renderLayer = RenderLayer.getEntityCutout(texture);
-        VertexConsumer vertexConsumer = vertexConsumers.getBuffer(renderLayer);
+        SpriteIdentifier spriteIdentifier = SignBlockEntityRenderer.getModelTexture(block);
+        VertexConsumer vertexConsumer = spriteIdentifier.getVertexConsumer(vertexConsumers, this.model::getLayer);
 
         this.model.field.render(matrices, vertexConsumer, light, overlay);
         this.model.foot.render(matrices, vertexConsumer, light, overlay);
@@ -82,12 +80,6 @@ public class ModSignBlockEntityRenderer extends BlockEntityRenderer<ModSignBlock
         }
 
         matrices.pop();
-    }
-
-    public static Identifier getTexture(AbstractSignBlock block) {
-        SignType signType = block.getSignType();
-
-        return new Identifier("deep_trenches:textures/entity/sign/" + signType.getName() + ".png");
     }
 
 }

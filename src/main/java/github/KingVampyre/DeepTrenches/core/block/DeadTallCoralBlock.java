@@ -1,15 +1,9 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import static net.minecraft.block.Blocks.AIR;
-import static net.minecraft.block.enums.BlockHalf.BOTTOM;
-import static net.minecraft.block.enums.BlockHalf.TOP;
-import static net.minecraft.fluid.Fluids.WATER;
-import static net.minecraft.state.property.Properties.BLOCK_HALF;
-
-import github.KingVampyre.DeepTrenches.common.block.ModDeadCoralBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.DeadCoralBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
@@ -19,7 +13,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class DeadTallCoralBlock extends ModDeadCoralBlock {
+import static net.minecraft.block.Blocks.AIR;
+import static net.minecraft.block.enums.BlockHalf.BOTTOM;
+import static net.minecraft.block.enums.BlockHalf.TOP;
+import static net.minecraft.fluid.Fluids.WATER;
+import static net.minecraft.state.property.Properties.BLOCK_HALF;
+
+public class DeadTallCoralBlock extends DeadCoralBlock {
 
 	public DeadTallCoralBlock(Settings settings) {
 		super(settings);

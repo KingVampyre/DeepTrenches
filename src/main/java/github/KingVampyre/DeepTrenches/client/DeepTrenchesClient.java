@@ -3,42 +3,56 @@ package github.KingVampyre.DeepTrenches.client;
 import github.KingVampyre.DeepTrenches.client.color.block.FoliageColorProvider;
 import github.KingVampyre.DeepTrenches.client.color.block.MosoilColorProvider;
 import github.KingVampyre.DeepTrenches.client.color.block.StorceanFoliageColorProvider;
+import github.KingVampyre.DeepTrenches.client.render.block.entity.CustomSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanFoliageColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanMosoilColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.client.resource.StorceanWaterColorMapResourceSupplier;
-import github.KingVampyre.DeepTrenches.common.block.entity.renderer.ModSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.ModBoatEntityRenderer;
-import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
-import github.KingVampyre.DeepTrenches.core.init.ColorMaps;
-import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
-import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
+import github.KingVampyre.DeepTrenches.core.init.*;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.minecraft.resource.ResourceType;
+import net.minecraft.util.Identifier;
+
+import static net.minecraft.client.render.TexturedRenderLayers.SIGNS_ATLAS_TEXTURE;
 
 public class DeepTrenchesClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        /* ------------------------------------------ ColorMaps ----------------------------------------------------- */
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanFoliageColorMapResourceSupplier());
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanMosoilColorMapResourceSupplier());
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanWaterColorMapResourceSupplier());
 
+        /* ------------------------------------------ TEXTURE ATLAS ----------------------------------------------------- */
+        ClientSpriteRegistryCallback.event(SIGNS_ATLAS_TEXTURE).register((atlas, registry) -> {
+            SignTypes.steam()
+                    .map(signType -> "deep_trenches:entity/signs/" + signType.getName())
+                    .map(Identifier::new)
+                    .forEach(registry::register);
+        });
+
+        /* ------------------------------------------ BLOCK COLORS ----------------------------------------------------- */
         ColorProviderRegistry.BLOCK.register(MosoilColorProvider.INSTANCE, ModBlocks.MOSOIL, ModBlocks.REEBLOON);
         ColorProviderRegistry.BLOCK.register(StorceanFoliageColorProvider.INSTANCE, ModBlocks.AQUEAN_LEAVES, ModBlocks.FRUCE_LEAVES, ModBlocks.SANGUART_LEAVES);
         ColorProviderRegistry.BLOCK.register(FoliageColorProvider.INSTANCE, ModBlocks.ALMOND_LEAVES, ModBlocks.ANGELS_TRUMPET_LEAVES, ModBlocks.BLACK_BIRCH_LEAVES, ModBlocks.BLUE_MAHOE_LEAVES, ModBlocks.BOTTLEBRUSH_LEAVES, ModBlocks.COOK_PINE_LEAVES, ModBlocks.DARK_RED_ELM_LEAVES, ModBlocks.EBONY_LEAVES, ModBlocks.GUAIACUM_LEAVES, ModBlocks.KLINKII_PINE_LEAVES, ModBlocks.MELALEUCA_LEAVES, ModBlocks.NORFOLK_PINE_LEAVES, ModBlocks.PELTOGYNE_LEAVES, ModBlocks.PLUM_LEAVES, ModBlocks.SEQUOIA_LEAVES, ModBlocks.WENGE_LEAVES);
 
+        /* ------------------------------------------ ITEM COLORS ----------------------------------------------------- */
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_MOSOIL.getDefaultColor(), ModBlocks.REEBLOON);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_MOSOIL.getDefaultColor(), ModBlocks.MOSOIL);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_FOLIAGE.getDefaultColor(), ModBlocks.AQUEAN_LEAVES);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, ModBlocks.ALMOND_LEAVES, ModBlocks.BLACK_BIRCH_LEAVES, ModBlocks.COOK_PINE_LEAVES, ModBlocks.EBONY_LEAVES, ModBlocks.PELTOGYNE_LEAVES, ModBlocks.PLUM_LEAVES, ModBlocks.TEAK_LEAVES);
 
+        /* ------------------------------------------ BLOCK RENDER LAYERS ----------------------------------------------------- */
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_BLACKGREEN_TREE_CORAL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_BLACKGREEN_TREE_CORAL_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN, RenderLayer.getCutout());
@@ -362,9 +376,10 @@ public class DeepTrenchesClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOSOIL, RenderLayer.getCutoutMipped());
 
-        BlockEntityRendererRegistry.INSTANCE.register(BlockEntityTypes.SIGN, ModSignBlockEntityRenderer::new);
+        /* ------------------------------------------ BLOCK ENTITY RENDERERS ----------------------------------------------------- */
+        BlockEntityRendererRegistry.INSTANCE.register(BlockEntityTypes.SIGN, CustomSignBlockEntityRenderer::new);
 
-        /* -------------------------------- Entity Renderers ------------------------------------------- */
+        /* ------------------------------------------ ENTITY RENDERERS ----------------------------------------------------- */
         EntityRendererRegistry.INSTANCE.register(EntityTypes.ADAIGGER, (dispatcher, context) -> new AdaiggerRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BEARDED_SEADEVIL, (dispatcher, context) -> new BeardedSeadevilRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));

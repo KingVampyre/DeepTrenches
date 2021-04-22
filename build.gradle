@@ -49,7 +49,7 @@ dependencies {
 }
 
 minecraft {
-	accessWidener "src/main/resources/deep_trenches.accesswidener"
+	accessWidener = file("src/main/resources/deep_trenches.accesswidener")
 }
 
 processResources {
