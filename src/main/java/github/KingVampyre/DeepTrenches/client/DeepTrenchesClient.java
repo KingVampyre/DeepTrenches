@@ -18,7 +18,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;
 

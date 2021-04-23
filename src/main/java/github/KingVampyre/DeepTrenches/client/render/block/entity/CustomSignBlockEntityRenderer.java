@@ -1,7 +1,10 @@
 package github.KingVampyre.DeepTrenches.client.render.block.entity;
 
 import github.KingVampyre.DeepTrenches.common.block.entity.CustomSignBlockEntity;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.SignBlock;
+import net.minecraft.block.WallSignBlock;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -13,8 +16,6 @@ import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.text.OrderedText;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
 
 import java.util.List;
 
