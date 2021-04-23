@@ -156,7 +156,6 @@ public class SproomSpikeBlock extends PlantBlock {
 		BlockPos offset = pos.offset(direction);
 
 		if (!state.canPlaceAt(world, pos))
-			// TODO drop loot
 			world.removeBlock(pos, true);
 
 		else if (world.isAir(offset) && this.canPlaceAt(state, world, offset)) {

@@ -1,10 +1,9 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
-import github.KingVampyre.DeepTrenches.core.block.LeavesFlowersBlock;
+import github.KingVampyre.DeepTrenches.common.block.SpreadingVineBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.VineBlock;
-import net.minecraft.tag.Tag;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
@@ -21,11 +20,10 @@ public class MixinVineBlock {
         BlockState state = world.getBlockState(pos);
         Block block = state.getBlock();
 
-        if(block instanceof LeavesFlowersBlock) {
-            LeavesFlowersBlock vineFlowers = (LeavesFlowersBlock) block;
-            Tag<Block> tag = vineFlowers.getTag();
+        if(block instanceof SpreadingVineBlock) {
+            SpreadingVineBlock vineFlowers = (SpreadingVineBlock) block;
 
-            cir.setReturnValue(state.isIn(tag));
+            cir.setReturnValue(vineFlowers.canPlantOnTop(state, world, pos));
         }
 
     }

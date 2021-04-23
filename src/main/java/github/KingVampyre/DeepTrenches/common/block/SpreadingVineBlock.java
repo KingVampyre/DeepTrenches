@@ -1,12 +1,10 @@
-package github.KingVampyre.DeepTrenches.core.block;
+package github.KingVampyre.DeepTrenches.common.block;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.VineBlock;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.tag.Tag;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
@@ -17,14 +15,10 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Random;
 
-public class LeavesFlowersBlock extends VineBlock {
+public abstract class SpreadingVineBlock extends VineBlock {
 
-    protected final Tag<Block> tag;
-
-    public LeavesFlowersBlock(Tag<Block> tag, Settings settings) {
+    public SpreadingVineBlock(Settings settings) {
         super(settings);
-
-        this.tag = tag;
     }
 
     @Override
@@ -162,7 +156,7 @@ public class LeavesFlowersBlock extends VineBlock {
             BlockPos offset = pos.offset(direction);
             BlockState blockState = world.getBlockState(offset);
 
-            return state.get(property) && blockState.isIn(this.tag);
+            return state.get(property) && this.canPlantOnTop(blockState, world, offset);
         });
     }
 
@@ -179,10 +173,6 @@ public class LeavesFlowersBlock extends VineBlock {
         }
 
         return state;
-    }
-
-    public Tag<Block> getTag() {
-        return this.tag;
     }
 
     private boolean hasHorizontalSide(BlockState state) {
@@ -203,5 +193,7 @@ public class LeavesFlowersBlock extends VineBlock {
 
         return state.isOf(this) && state.get(property);
     }
+
+    public abstract Boolean canPlantOnTop(BlockState state, BlockView world, BlockPos pos);
 
 }

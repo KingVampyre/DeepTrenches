@@ -1536,7 +1536,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_tentacles"), new BlockItem(VYNHERT_TENTACLES, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_thorns"), new BlockItem(VYNHERT_THORNS, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_trapdoor"), new BlockItem(VYNHERT_TRAPDOOR, new Item.Settings().group(GENERAL)));
-		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_vine"), new BlockItem(VYNHERT_VINE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:vynhert_wood"), new BlockItem(VYNHERT_WOOD, new Item.Settings().group(GENERAL)));
 
 		Registry.register(ITEM, new Identifier("deep_trenches:wart_tree_button"), new BlockItem(WART_TREE_BUTTON, new Item.Settings().group(GENERAL)));

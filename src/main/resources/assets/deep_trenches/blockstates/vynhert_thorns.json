@@ -1,7 +1,23 @@
 {
 	"variants": {
-		"": {
-			"model": "deep_trenches:block/vynhert_thorns"
+		"facing=east": {
+			"model": "deep_trenches:block/vynhert_thorns_h",
+			"y": 90
+		},
+		"facing=south": {
+			"model": "deep_trenches:block/vynhert_thorns_h",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "deep_trenches:block/vynhert_thorns_h",
+			"y": 270
+		},
+		"facing=north": {
+			"model": "deep_trenches:block/vynhert_thorns_h",
+			"y": 0
+		},
+		"facing=up": {
+			"model": "deep_trenches:block/vynhert_thorns_v"
 		}
 	}
 }

@@ -19,6 +19,8 @@ public class ModBlockTags {
 
     public static final Tag<Block> DRITEAN_OR_DIRT_SAPLING = TagRegistry.block(new Identifier("deep_trenches:dritean_or_dirt_sapling"));
 
+    public static final Tag<Block> FLALM_LOGS = TagRegistry.block(new Identifier("deep_trenches:flalm_logs"));
+
     public static final Tag<Block> FUCHSITRA_LOGS = TagRegistry.block(new Identifier("deep_trenches:fuchsitra_logs"));
 
     public static final Tag<Block> GUAIACUM_FLOWERS_SPREAD = TagRegistry.block(new Identifier("deep_trenches:guaiacum_flowers_spread"));
@@ -27,8 +29,12 @@ public class ModBlockTags {
 
     public static final Tag<Block> MURKANTUAN_FLOWER_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:murkantuan_flower_plantable"));
 
+    public static final Tag<Block> RHADI_LOGS = TagRegistry.block(new Identifier("deep_trenches:rhadi_logs"));
+
     public static final Tag<Block> STASP_POLLEN_SOURCE = TagRegistry.block(new Identifier("deep_trenches:stasp_pollen_source"));
 
     public static final Tag<Block> STASP_POLLEN_TARGET = TagRegistry.block(new Identifier("deep_trenches:stasp_pollen_target"));
+
+    public static final Tag<Block> VYNHERT_LOGS = TagRegistry.block(new Identifier("deep_trenches:vynhert_logs"));
 
 }
