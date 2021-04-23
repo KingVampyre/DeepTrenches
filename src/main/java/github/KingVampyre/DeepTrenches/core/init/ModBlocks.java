@@ -2577,7 +2577,7 @@ public class ModBlocks {
 		VYNHERT_FENCE = createOakFence("deep_trenches:vynhert_fence");
 		VYNHERT_FENCE_GATE = createOakFenceGate("deep_trenches:vynhert_fence_gate");
 		VYNHERT_FRUIT = createCopy("deep_trenches:vynhert_fruit", MELON);
-		VYNHERT_LEAF = createCopy("deep_trenches:vynhert_leaf", OAK_LEAVES);
+		VYNHERT_LEAF = createBlock("deep_trenches:vynhert_leaf", VynhertLeafBlock::new, ROSE_BUSH);
 		VYNHERT_LOG = createOakLog("deep_trenches:vynhert_log");
 		VYNHERT_O_LANTERN = createCopy("deep_trenches:vynhert_o_lantern", JACK_O_LANTERN);
 		VYNHERT_PLANKS = createOakPlanks("deep_trenches:vynhert_planks");

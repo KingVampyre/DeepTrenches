@@ -1,7 +1,22 @@
 {
 	"variants": {
-		"": {
-			"model": "deep_trenches:block/vynhert_leaf"
+		"third=bottom,fruit=false": {
+			"model": "deep_trenches:block/vynhert_leaf_bottom"
+		},
+		"third=middle,fruit=false": {
+			"model": "deep_trenches:block/vynhert_leaf_middle"
+		},
+		"third=top,fruit=false": {
+			"model": "deep_trenches:block/vynhert_leaf_top"
+		},
+		"third=bottom,fruit=true": {
+			"model": "deep_trenches:block/vynhert_leaf_bottom_with_fruit"
+		},
+		"third=middle,fruit=true": {
+			"model": "deep_trenches:block/vynhert_leaf_middle"
+		},
+		"third=top,fruit=true": {
+			"model": "deep_trenches:block/vynhert_leaf_top"
 		}
 	}
 }

@@ -1,19 +1,15 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
+import github.KingVampyre.DeepTrenches.common.block.GrowingTallPlantBlock;
 import github.KingVampyre.DeepTrenches.core.block.enums.BlockThird;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.PlantBlock;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
@@ -26,29 +22,30 @@ import java.util.Random;
 import static github.KingVampyre.DeepTrenches.core.block.enums.BlockThird.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModProperties.BLOCK_THIRD;
 import static net.minecraft.block.Blocks.AIR;
+import static net.minecraft.state.property.Properties.AGE_25;
 import static net.minecraft.util.math.Direction.DOWN;
 import static net.minecraft.util.math.Direction.UP;
 
-public class MurkstemBlock extends PlantBlock {
-
-    private static final IntProperty AGE = Properties.AGE_25;
+public class MurkstemBlock extends GrowingTallPlantBlock {
 
     public MurkstemBlock(Settings settings) {
         super(settings);
 
-        this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0).with(BLOCK_THIRD, BOTTOM));
+        this.setDefaultState(this.stateManager.getDefaultState().with(AGE_25, 0).with(BLOCK_THIRD, BOTTOM));
     }
 
     @Override
-    public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack stack) {
-        super.afterBreak(world, player, pos, AIR.getDefaultState(), blockEntity, stack);
-    }
+    public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
+        BlockThird third = state.get(BLOCK_THIRD);
 
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        super.appendProperties(builder);
+        if(third == TOP) {
+            BlockPos up = pos.up();
+            BlockState upState = world.getBlockState(up);
 
-        builder.add(AGE, BLOCK_THIRD);
+            return this.canPlaceAt(upState, world, up);
+        }
+
+        return false;
     }
 
     @Override
@@ -56,12 +53,12 @@ public class MurkstemBlock extends PlantBlock {
 
         if(state.contains(BLOCK_THIRD)) {
             BlockThird third = state.get(BLOCK_THIRD);
-            BlockPos up = pos.up();
 
             if (third == BOTTOM)
                 return super.canPlaceAt(state, world, pos);
 
             BlockPos down = pos.down();
+            BlockPos up = pos.up();
 
             if(!world.isAir(down) && this.getHeight(world, pos) < 25)
                 return third != MIDDLE || !world.isAir(up);
@@ -69,7 +66,7 @@ public class MurkstemBlock extends PlantBlock {
             return false;
         }
 
-        return this.getHeight(world, pos) < 25;
+        return state.isAir() && this.getHeight(world, pos) < 25;
     }
 
     @Override
@@ -84,13 +81,19 @@ public class MurkstemBlock extends PlantBlock {
         return super.canPlantOnTop(floor, view, pos);
     }
 
-    private int getHeight(WorldView world, BlockPos pos) {
+    @Override
+    protected int getHeight(WorldView world, BlockPos pos) {
         int i = 1;
 
         while (world.getBlockState(pos.down(i)).isOf(this))
             i++;
 
         return i;
+    }
+
+    @Override
+    protected int getMaxAge() {
+        return 5;
     }
 
     @Override
@@ -122,65 +125,44 @@ public class MurkstemBlock extends PlantBlock {
         return third == BOTTOM && direction == DOWN && !state.canPlaceAt(world, pos) ? AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
     }
 
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (!world.isClient) {
+    @Override
+    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
+        BlockState defaultState = this.getDefaultState();
 
-            if (player.isCreative()) {
-                BlockThird third = state.get(BLOCK_THIRD);
+        world.setBlockState(pos.up(), defaultState.with(BLOCK_THIRD, TOP), 3);
+        world.setBlockState(pos, defaultState.with(BLOCK_THIRD, MIDDLE), 3);
+    }
 
-                if (third == TOP || third == MIDDLE) {
-                    BlockPos down = pos.down();
-                    BlockState downState = world.getBlockState(down);
+    @Override
+    public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
+        return false;
+    }
 
-                    while (downState.isOf(this)) {
-                        if (downState.get(BLOCK_THIRD) == BOTTOM) {
-                            world.setBlockState(down, Blocks.AIR.getDefaultState(), 35);
-                            world.syncWorldEvent(player, 2001, down, Block.getRawIdFromState(downState));
-                        }
+    @Override
+    protected void onBreakInCreative(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        BlockThird third = state.get(BLOCK_THIRD);
 
-                        down = down.down();
-                        downState = world.getBlockState(down);
-                    }
+        if (third == TOP || third == MIDDLE) {
+            BlockPos down = pos.down();
+            BlockState downState = world.getBlockState(down);
 
+            while (downState.isOf(this)) {
+                if (downState.get(BLOCK_THIRD) == BOTTOM) {
+                    world.setBlockState(down, Blocks.AIR.getDefaultState(), 35);
+                    world.syncWorldEvent(player, 2001, down, Block.getRawIdFromState(downState));
                 }
-            } else
-                dropStacks(state, world, pos, null, player, player.getMainHandStack());
+
+                down = down.down();
+                downState = world.getBlockState(down);
+            }
 
         }
 
-        super.onBreak(world, pos, state, player);
     }
 
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         world.setBlockState(pos.up(), this.getDefaultState().with(BLOCK_THIRD, TOP), 3);
-    }
-
-    @Override
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        super.scheduledTick(state, world, pos, random);
-
-        if (!this.canPlaceAt(state, world, pos))
-            world.removeBlock(pos, true);
-
-        if (state.get(AGE) < 5)
-            world.setBlockState(pos, state.cycle(AGE), 3);
-
-        BlockThird third = state.get(BLOCK_THIRD);
-
-        if (third == TOP && state.get(AGE) >= 5) {
-            BlockPos up = pos.up();
-            BlockState upState = world.getBlockState(up);
-
-            if (this.canPlaceAt(upState, world, up)) {
-                BlockState defaultState = this.getDefaultState();
-
-                world.setBlockState(up, defaultState.with(BLOCK_THIRD, TOP), 3);
-                world.setBlockState(pos, defaultState.with(BLOCK_THIRD, MIDDLE), 3);
-            }
-
-        }
-
     }
 
 }
