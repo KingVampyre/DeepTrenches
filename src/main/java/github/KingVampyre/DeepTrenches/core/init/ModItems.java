@@ -4,11 +4,14 @@ import github.KingVampyre.DeepTrenches.common.item.ModBoatItem;
 import github.KingVampyre.DeepTrenches.common.item.TagFishBucketItem;
 import github.KingVampyre.DeepTrenches.common.item.TagSpawnEggItem;
 import github.KingVampyre.DeepTrenches.core.item.AdaiggerItem;
+import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
 import net.minecraft.item.Item.Settings;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.registry.Registry;
+
+import java.util.function.Function;
 
 import static github.KingVampyre.DeepTrenches.core.init.ItemGroups.GENERAL;
 import static github.KingVampyre.DeepTrenches.core.init.ModFoodComponents.STORCEAN_FISH;
@@ -202,227 +205,243 @@ public class ModItems {
 	/* ------------ MOB DROPS -------------- */
 	public static final Item LOOSEJAW_TOOTH;
 
+	/* ------------ BLOCK ITEMS -------------- */
+	public static final Item AIRIAL_MOSS;
 
-	protected static Item boat(String id, WoodType type) {
+	protected static Item createBlockItem(String id, Block block, ItemGroup itemGroup) {
+		return createBlockItem(id, block, new Settings().group(itemGroup));
+	}
+
+	protected static Item createBlockItem(String id, Block block, Settings settings) {
+		return register(id, new BlockItem(block, settings));
+	}
+
+	protected static Item createBoat(String id, WoodType type) {
 		return register(id, new ModBoatItem(type, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
 	}
 
-	protected static Item fishBucket(String id, EntityType<?> type) {
+	protected static Item createFishBucket(String id, EntityType<?> type) {
 		return register(id, new FishBucketItem(type, WATER, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
 	}
 
-	protected static Item food(String id, FoodComponent food) {
-		return register(id, new Settings().group(GENERAL).food(food));
-	}
-
-	protected static Item spawnEgg(String id, EntityType<?> type, int primaryColor, int secondaryColor) {
-		return register(id, new SpawnEggItem(type, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
-	}
-
-	protected static Item tagFishBucket(String id, EntityType<?> type, Tag<EntityType<?>> tag) {
+	protected static Item createFishBucket(String id, EntityType<?> type, Tag<EntityType<?>> tag) {
 		return register(id, new TagFishBucketItem(type, tag, WATER, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
 	}
 
-	protected static Item tagSpawnEgg(String id, EntityType<?> type, Tag<EntityType<?>> tag, int primaryColor, int secondaryColor) {
+	protected static Item createFood(String id, FoodComponent food) {
+		return createItem(id, new Settings().group(GENERAL).food(food));
+	}
+
+	protected static Item createSpawnEgg(String id, EntityType<?> type, int primaryColor, int secondaryColor) {
+		return register(id, new SpawnEggItem(type, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
+	}
+
+	protected static Item createSpawnEgg(String id, EntityType<?> type, Tag<EntityType<?>> tag, int primaryColor, int secondaryColor) {
 		return register(id, new TagSpawnEggItem(type, tag, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
 	}
 
-	protected static Item item(String id, ItemGroup itemGroup) {
-		return register(id, new Settings().group(itemGroup));
+	protected static Item createItem(String id, ItemGroup itemGroup) {
+		return createItem(id, new Settings().group(itemGroup));
+	}
+
+	protected static Item createItem(String id, Settings settings) {
+		return createItem(id, Item::new, settings);
+	}
+
+	protected static Item createItem(String id, Function<Item.Settings, Item> function, Item.Settings settings) {
+		return register(id, function.apply(settings));
 	}
 
 	protected static Item register(String id, Item item) {
 		return Registry.register(ITEM, id, item);
 	}
 
-	protected static Item register(String id, Settings settings) {
-		return register(id, new Item(settings));
-	}
-
 	static {
-		BARBELED_LOOSEJAW_BUCKET = fishBucket("deep_trenches:barbeled_loosejaw_bucket", EntityTypes.BARBELED_LOOSEJAW);
-		BETTA_BUCKET = fishBucket("deep_trenches:betta_bucket", EntityTypes.BETTA);
-		BLACK_LOOSEJAW_BUCKET = fishBucket("deep_trenches:black_loosejaw_bucket", EntityTypes.BLACK_LOOSEJAW);
-		LIGHT_LOOSEJAW_BUCKET = fishBucket("deep_trenches:light_loosejaw_bucket", EntityTypes.LIGHT_LOOSEJAW);
+		BARBELED_LOOSEJAW_BUCKET = createFishBucket("deep_trenches:barbeled_loosejaw_bucket", EntityTypes.BARBELED_LOOSEJAW);
+		BETTA_BUCKET = createFishBucket("deep_trenches:betta_bucket", EntityTypes.BETTA);
+		BLACK_LOOSEJAW_BUCKET = createFishBucket("deep_trenches:black_loosejaw_bucket", EntityTypes.BLACK_LOOSEJAW);
+		LIGHT_LOOSEJAW_BUCKET = createFishBucket("deep_trenches:light_loosejaw_bucket", EntityTypes.LIGHT_LOOSEJAW);
 
-		DEEP_LAKE_BETTA_BUCKET = tagFishBucket("deep_trenches:deep_lake_betta_bucket", EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA);
-		GIANT_HATCHETFISH_BUCKET = tagFishBucket("deep_trenches:giant_hatchetfish_bucket", EntityTypes.GIANT_HATCHETFISH,  EntityTypeTags.ARGYROPELECUS_GIGAS);
-		SMALLTOOTH_DRAGONFISH_BUCKET = tagFishBucket("deep_trenches:smalltooth_dragonfish_bucket", EntityTypes.SMALLTOOTH_DRAGONFISH, EntityTypeTags.PACHYSTOMIAS_MICRODON);
+		DEEP_LAKE_BETTA_BUCKET = createFishBucket("deep_trenches:deep_lake_betta_bucket", EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA);
+		GIANT_HATCHETFISH_BUCKET = createFishBucket("deep_trenches:giant_hatchetfish_bucket", EntityTypes.GIANT_HATCHETFISH,  EntityTypeTags.ARGYROPELECUS_GIGAS);
+		SMALLTOOTH_DRAGONFISH_BUCKET = createFishBucket("deep_trenches:smalltooth_dragonfish_bucket", EntityTypes.SMALLTOOTH_DRAGONFISH, EntityTypeTags.PACHYSTOMIAS_MICRODON);
 
 		/* -------------------------------- SPAWN EGGS ------------------------------------------- */
-		BARBELED_LOOSEJAW_SPAWN_EGG = spawnEgg("deep_trenches:barbeled_loosejaw_spawn_egg", EntityTypes.BARBELED_LOOSEJAW, 921113, 15859744);
-		BETTA_SPAWN_EGG = spawnEgg("deep_trenches:betta_spawn_egg", EntityTypes.BETTA,7347502, 9183521);
-		BLACK_LOOSEJAW_SPAWN_EGG = spawnEgg("deep_trenches:black_loosejaw_spawn_egg", EntityTypes.BLACK_LOOSEJAW,2102566, 11010053);
-		LIGHT_LOOSEJAW_SPAWN_EGG = spawnEgg("deep_trenches:light_loosejaw_spawn_egg", EntityTypes.LIGHT_LOOSEJAW,1643048, 4836351);
-		STASP_SPAWN_EGG = tagSpawnEgg("deep_trenches:stasp_spawn_egg", EntityTypes.ORANGE_WINGED_STASP, EntityTypeTags.STASPS, 2695792, 5124510);
+		BARBELED_LOOSEJAW_SPAWN_EGG = createSpawnEgg("deep_trenches:barbeled_loosejaw_spawn_egg", EntityTypes.BARBELED_LOOSEJAW, 921113, 15859744);
+		BETTA_SPAWN_EGG = createSpawnEgg("deep_trenches:betta_spawn_egg", EntityTypes.BETTA,7347502, 9183521);
+		BLACK_LOOSEJAW_SPAWN_EGG = createSpawnEgg("deep_trenches:black_loosejaw_spawn_egg", EntityTypes.BLACK_LOOSEJAW,2102566, 11010053);
+		LIGHT_LOOSEJAW_SPAWN_EGG = createSpawnEgg("deep_trenches:light_loosejaw_spawn_egg", EntityTypes.LIGHT_LOOSEJAW,1643048, 4836351);
+		STASP_SPAWN_EGG = createSpawnEgg("deep_trenches:stasp_spawn_egg", EntityTypes.ORANGE_WINGED_STASP, EntityTypeTags.STASPS, 2695792, 5124510);
 
-		DEEP_LAKE_BETTA_SPAWN_EGG = tagSpawnEgg("deep_trenches:deep_lake_betta_spawn_egg", EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA, 1189390, 5013319);
-		GIANT_HATCHETFISH_SPAWN_EGG = tagSpawnEgg("deep_trenches:giant_hatchetfish_spawn_egg", EntityTypes.GIANT_HATCHETFISH, EntityTypeTags.ARGYROPELECUS_GIGAS, 9870757, 12311039);
-		SMALLTOOTH_DRAGONFISH_SPAWN_EGG = tagSpawnEgg("deep_trenches:smalltooth_dragonfish_spawn_egg", EntityTypes.SMALLTOOTH_DRAGONFISH, EntityTypeTags.PACHYSTOMIAS_MICRODON, 1250598, 16728832);
+		DEEP_LAKE_BETTA_SPAWN_EGG = createSpawnEgg("deep_trenches:deep_lake_betta_spawn_egg", EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA, 1189390, 5013319);
+		GIANT_HATCHETFISH_SPAWN_EGG = createSpawnEgg("deep_trenches:giant_hatchetfish_spawn_egg", EntityTypes.GIANT_HATCHETFISH, EntityTypeTags.ARGYROPELECUS_GIGAS, 9870757, 12311039);
+		SMALLTOOTH_DRAGONFISH_SPAWN_EGG = createSpawnEgg("deep_trenches:smalltooth_dragonfish_spawn_egg", EntityTypes.SMALLTOOTH_DRAGONFISH, EntityTypeTags.PACHYSTOMIAS_MICRODON, 1250598, 16728832);
 
 		/* -------------------------------- FRUITS ------------------------------------------- */
-		ALMOND = food("deep_trenches:almond", SWEET_BERRIES);
-		ALMOND_DRUPE = food("deep_trenches:almond_drupe", SWEET_BERRIES);
-		AQUEAN_SAP = item("deep_trenches:aquean_sap", GENERAL);
-		BOTTLE_OF_AQUEAN_SAP = item("deep_trenches:bottle_of_aquean_sap", GENERAL);
-		CHERRY = food("deep_trenches:cherry", SWEET_BERRIES);
-		CROLOOD_FRUIT = food("deep_trenches:crolood_fruit", APPLE);
-		DARK_CROLOOD_FRUIT = food("deep_trenches:dark_crolood_fruit", APPLE);
-		PERSIMMON_FRUIT = food("deep_trenches:persimmon_fruit", APPLE);
-		PIN_CHERRY = food("deep_trenches:pin_cherry", SWEET_BERRIES);
-		PLUM = food("deep_trenches:plum", APPLE);
-		THUNDERCLOUD_PLUM = food("deep_trenches:thundercloud_plum", APPLE);
+		ALMOND = createFood("deep_trenches:almond", SWEET_BERRIES);
+		ALMOND_DRUPE = createFood("deep_trenches:almond_drupe", SWEET_BERRIES);
+		AQUEAN_SAP = createItem("deep_trenches:aquean_sap", GENERAL);
+		BOTTLE_OF_AQUEAN_SAP = createItem("deep_trenches:bottle_of_aquean_sap", GENERAL);
+		CHERRY = createFood("deep_trenches:cherry", SWEET_BERRIES);
+		CROLOOD_FRUIT = createFood("deep_trenches:crolood_fruit", APPLE);
+		DARK_CROLOOD_FRUIT = createFood("deep_trenches:dark_crolood_fruit", APPLE);
+		PERSIMMON_FRUIT = createFood("deep_trenches:persimmon_fruit", APPLE);
+		PIN_CHERRY = createFood("deep_trenches:pin_cherry", SWEET_BERRIES);
+		PLUM = createFood("deep_trenches:plum", APPLE);
+		THUNDERCLOUD_PLUM = createFood("deep_trenches:thundercloud_plum", APPLE);
 
 		/* -------------------------------- BOAT ------------------------------------------- */
-		ALMOND_BOAT = boat("deep_trenches:almond_boat", WoodType.ALMOND);
-		ANAMEATA_BOAT = boat("deep_trenches:anameata_boat", WoodType.ANAMEATA);
-		ANGELS_TRUMPET_BOAT = boat("deep_trenches:angels_trumpet_boat", WoodType.AQUEAN);
-		AQUEAN_BOAT = boat("deep_trenches:aquean_boat", WoodType.AQUEAN);
-		BARSHROOKLE_BOAT = boat("deep_trenches:barshrookle_boat", WoodType.BARSHROOKLE);
-		BLACK_BIRCH_BOAT = boat("deep_trenches:black_birch_boat", WoodType.BLACK_BIRCH);
-		BLUE_MAHOE_BOAT = boat("deep_trenches:blue_mahoe_boat", WoodType.BARSHROOKLE);
-		BLUE_SPRUCE_BOAT = boat("deep_trenches:blue_spruce_boat", WoodType.BARSHROOKLE);
-		BOTTLEBRUSH_BOAT = boat("deep_trenches:bottlebrush_boat", WoodType.BARSHROOKLE);
-		BROMYA_BOAT = boat("deep_trenches:bromya_boat", WoodType.BARSHROOKLE);
-		BUBBLETREE_BOAT = boat("deep_trenches:bubbletree_boat", WoodType.BARSHROOKLE);
-		CALCEARB_BOAT = boat("deep_trenches:calcearb_boat", WoodType.BARSHROOKLE);
-		CHERRY_BOAT = boat("deep_trenches:cherry_boat", WoodType.CHERRY);
-		CHOTORN_BOAT = boat("deep_trenches:chotorn_boat", WoodType.CHERRY);
-		COOK_PINE_BOAT = boat("deep_trenches:cook_pine_boat", WoodType.COOK_PINE);
-		CROLOOD_BOAT = boat("deep_trenches:crolood_boat", WoodType.CROLOOD);
-		DARK_CROLOOD_BOAT = boat("deep_trenches:dark_crolood_boat", WoodType.DARK_CROLOOD);
-		DARK_FUSHSITRA_BOAT = boat("deep_trenches:dark_fuchsitra_boat", WoodType.DARK_CROLOOD);
-		DARK_RED_ELM_BOAT = boat("deep_trenches:dark_red_elm_boat", WoodType.DARK_CROLOOD);
-		DEAD_WART_TREE_BOAT = boat("deep_trenches:dead_wart_tree_boat", WoodType.DARK_CROLOOD);
-		DRIGYUS_BOAT = boat("deep_trenches:drigyus_boat", WoodType.DARK_CROLOOD);
-		EBONY_BOAT = boat("deep_trenches:ebony_boat", WoodType.EBONY);
-		ENDERHEART_BOAT = boat("deep_trenches:enderheart_boat", WoodType.EBONY);
-		FLALM_BOAT = boat("deep_trenches:flalm_boat", WoodType.EBONY);
-		FRUCE_BOAT = boat("deep_trenches:fruce_boat", WoodType.EBONY);
-		FUCHSITRA_BOAT = boat("deep_trenches:fuchsitra_boat", WoodType.FUCHSITRA);
-		FUGMOS_BOAT = boat("deep_trenches:fugmos_boat", WoodType.FUCHSITRA);
-		FUNERANITE_BOAT = boat("deep_trenches:funeranite_boat", WoodType.FUNERANITE);
-		GHOSHROOM_BOAT = boat("deep_trenches:ghoshroom_boat", WoodType.GHOSHROOM);
-		GIANT_VIOLET_BOAT = boat("deep_trenches:giant_violet_boat", WoodType.GHOSHROOM);
-		GUAIACUM_BOAT = boat("deep_trenches:guaiacum_boat", WoodType.GHOSHROOM);
-		JOSHUA_BOAT = boat("deep_trenches:joshua_boat", WoodType.GHOSHROOM);
-		KLINKII_PINE_BOAT = boat("deep_trenches:klinkii_pine_boat", WoodType.GHOSHROOM);
-		MELALEUCA_BOAT = boat("deep_trenches:melaleuca_boat", WoodType.GHOSHROOM);
-		MURKANTUAN_BOAT = boat("deep_trenches:murkantuan_boat", WoodType.MURKANTUAN);
-		NORFOLK_PINE_BOAT = boat("deep_trenches:norfolk_pine_boat", WoodType.MURKANTUAN);
-		OBSCRUS_BOAT = boat("deep_trenches:obscrus_boat", WoodType.MURKANTUAN);
-		ORHPRIS_BOAT = boat("deep_trenches:orhpris_boat", WoodType.MURKANTUAN);
-		PELTOGYNE_BOAT = boat("deep_trenches:peltogyne_boat", WoodType.PELTOGYNE);
-		PIN_CHERRY_BOAT = boat("deep_trenches:pin_cherry_boat", WoodType.PIN_CHERRY);
-		PLUM_BOAT = boat("deep_trenches:plum_boat", WoodType.PLUM);
-		PURFUNGA_BOAT = boat("deep_trenches:purfunga_boat", WoodType.PURFUNGA);
-		RARK_BOAT = boat("deep_trenches:rark_boat", WoodType.PURFUNGA);
-		RED_ELM_BOAT = boat("deep_trenches:red_elm_boat", WoodType.PURFUNGA);
-		RHADI_BOAT = boat("deep_trenches:rhadi_boat", WoodType.PURFUNGA);
-		SANGUART_BOAT = boat("deep_trenches:sanguart_boat", WoodType.PURFUNGA);
-		SCARLET_THIORCEN_BOAT = boat("deep_trenches:scarlet_thiorcen_boat", WoodType.PURFUNGA);
-		SEQUOIA_BOAT = boat("deep_trenches:sequoia_boat", WoodType.PURFUNGA);
-		SPROOM_BOAT = boat("deep_trenches:sproom_boat", WoodType.SPROOM);
-		STORTREEAN_BOAT = boat("deep_trenches:stortreean_boat", WoodType.STORTREEAN);
-		STROOMEAN_BOAT = boat("deep_trenches:stroomean_boat", WoodType.STROOMEAN);
-		SUNRISE_FUNGUS_BOAT = boat("deep_trenches:sunrise_fungus_boat", WoodType.SUNRISE_FUNGUS);
-		TARK_BOAT = boat("deep_trenches:tark_boat", WoodType.SUNRISE_FUNGUS);
-		TEAK_BOAT = boat("deep_trenches:teak_boat", WoodType.TEAK);
-		THUNDERCLOUD_PLUM_BOAT = boat("deep_trenches:thundercloud_plum_boat", WoodType.THUNDERCLOUD_PLUM);
-		VYNHERT_BOAT = boat("deep_trenches:vynhert_boat", WoodType.THUNDERCLOUD_PLUM);
-		WART_TREE_BOAT = boat("deep_trenches:wart_tree_boat", WoodType.THUNDERCLOUD_PLUM);
-		WENGE_BOAT = boat("deep_trenches:wenge_boat", WoodType.THUNDERCLOUD_PLUM);
-		YEW_BOAT = boat("deep_trenches:yew_boat", WoodType.THUNDERCLOUD_PLUM);
+		ALMOND_BOAT = createBoat("deep_trenches:almond_boat", WoodType.ALMOND);
+		ANAMEATA_BOAT = createBoat("deep_trenches:anameata_boat", WoodType.ANAMEATA);
+		ANGELS_TRUMPET_BOAT = createBoat("deep_trenches:angels_trumpet_boat", WoodType.AQUEAN);
+		AQUEAN_BOAT = createBoat("deep_trenches:aquean_boat", WoodType.AQUEAN);
+		BARSHROOKLE_BOAT = createBoat("deep_trenches:barshrookle_boat", WoodType.BARSHROOKLE);
+		BLACK_BIRCH_BOAT = createBoat("deep_trenches:black_birch_boat", WoodType.BLACK_BIRCH);
+		BLUE_MAHOE_BOAT = createBoat("deep_trenches:blue_mahoe_boat", WoodType.BARSHROOKLE);
+		BLUE_SPRUCE_BOAT = createBoat("deep_trenches:blue_spruce_boat", WoodType.BARSHROOKLE);
+		BOTTLEBRUSH_BOAT = createBoat("deep_trenches:bottlebrush_boat", WoodType.BARSHROOKLE);
+		BROMYA_BOAT = createBoat("deep_trenches:bromya_boat", WoodType.BARSHROOKLE);
+		BUBBLETREE_BOAT = createBoat("deep_trenches:bubbletree_boat", WoodType.BARSHROOKLE);
+		CALCEARB_BOAT = createBoat("deep_trenches:calcearb_boat", WoodType.BARSHROOKLE);
+		CHERRY_BOAT = createBoat("deep_trenches:cherry_boat", WoodType.CHERRY);
+		CHOTORN_BOAT = createBoat("deep_trenches:chotorn_boat", WoodType.CHERRY);
+		COOK_PINE_BOAT = createBoat("deep_trenches:cook_pine_boat", WoodType.COOK_PINE);
+		CROLOOD_BOAT = createBoat("deep_trenches:crolood_boat", WoodType.CROLOOD);
+		DARK_CROLOOD_BOAT = createBoat("deep_trenches:dark_crolood_boat", WoodType.DARK_CROLOOD);
+		DARK_FUSHSITRA_BOAT = createBoat("deep_trenches:dark_fuchsitra_boat", WoodType.DARK_CROLOOD);
+		DARK_RED_ELM_BOAT = createBoat("deep_trenches:dark_red_elm_boat", WoodType.DARK_CROLOOD);
+		DEAD_WART_TREE_BOAT = createBoat("deep_trenches:dead_wart_tree_boat", WoodType.DARK_CROLOOD);
+		DRIGYUS_BOAT = createBoat("deep_trenches:drigyus_boat", WoodType.DARK_CROLOOD);
+		EBONY_BOAT = createBoat("deep_trenches:ebony_boat", WoodType.EBONY);
+		ENDERHEART_BOAT = createBoat("deep_trenches:enderheart_boat", WoodType.EBONY);
+		FLALM_BOAT = createBoat("deep_trenches:flalm_boat", WoodType.EBONY);
+		FRUCE_BOAT = createBoat("deep_trenches:fruce_boat", WoodType.EBONY);
+		FUCHSITRA_BOAT = createBoat("deep_trenches:fuchsitra_boat", WoodType.FUCHSITRA);
+		FUGMOS_BOAT = createBoat("deep_trenches:fugmos_boat", WoodType.FUCHSITRA);
+		FUNERANITE_BOAT = createBoat("deep_trenches:funeranite_boat", WoodType.FUNERANITE);
+		GHOSHROOM_BOAT = createBoat("deep_trenches:ghoshroom_boat", WoodType.GHOSHROOM);
+		GIANT_VIOLET_BOAT = createBoat("deep_trenches:giant_violet_boat", WoodType.GHOSHROOM);
+		GUAIACUM_BOAT = createBoat("deep_trenches:guaiacum_boat", WoodType.GHOSHROOM);
+		JOSHUA_BOAT = createBoat("deep_trenches:joshua_boat", WoodType.GHOSHROOM);
+		KLINKII_PINE_BOAT = createBoat("deep_trenches:klinkii_pine_boat", WoodType.GHOSHROOM);
+		MELALEUCA_BOAT = createBoat("deep_trenches:melaleuca_boat", WoodType.GHOSHROOM);
+		MURKANTUAN_BOAT = createBoat("deep_trenches:murkantuan_boat", WoodType.MURKANTUAN);
+		NORFOLK_PINE_BOAT = createBoat("deep_trenches:norfolk_pine_boat", WoodType.MURKANTUAN);
+		OBSCRUS_BOAT = createBoat("deep_trenches:obscrus_boat", WoodType.MURKANTUAN);
+		ORHPRIS_BOAT = createBoat("deep_trenches:orhpris_boat", WoodType.MURKANTUAN);
+		PELTOGYNE_BOAT = createBoat("deep_trenches:peltogyne_boat", WoodType.PELTOGYNE);
+		PIN_CHERRY_BOAT = createBoat("deep_trenches:pin_cherry_boat", WoodType.PIN_CHERRY);
+		PLUM_BOAT = createBoat("deep_trenches:plum_boat", WoodType.PLUM);
+		PURFUNGA_BOAT = createBoat("deep_trenches:purfunga_boat", WoodType.PURFUNGA);
+		RARK_BOAT = createBoat("deep_trenches:rark_boat", WoodType.PURFUNGA);
+		RED_ELM_BOAT = createBoat("deep_trenches:red_elm_boat", WoodType.PURFUNGA);
+		RHADI_BOAT = createBoat("deep_trenches:rhadi_boat", WoodType.PURFUNGA);
+		SANGUART_BOAT = createBoat("deep_trenches:sanguart_boat", WoodType.PURFUNGA);
+		SCARLET_THIORCEN_BOAT = createBoat("deep_trenches:scarlet_thiorcen_boat", WoodType.PURFUNGA);
+		SEQUOIA_BOAT = createBoat("deep_trenches:sequoia_boat", WoodType.PURFUNGA);
+		SPROOM_BOAT = createBoat("deep_trenches:sproom_boat", WoodType.SPROOM);
+		STORTREEAN_BOAT = createBoat("deep_trenches:stortreean_boat", WoodType.STORTREEAN);
+		STROOMEAN_BOAT = createBoat("deep_trenches:stroomean_boat", WoodType.STROOMEAN);
+		SUNRISE_FUNGUS_BOAT = createBoat("deep_trenches:sunrise_fungus_boat", WoodType.SUNRISE_FUNGUS);
+		TARK_BOAT = createBoat("deep_trenches:tark_boat", WoodType.SUNRISE_FUNGUS);
+		TEAK_BOAT = createBoat("deep_trenches:teak_boat", WoodType.TEAK);
+		THUNDERCLOUD_PLUM_BOAT = createBoat("deep_trenches:thundercloud_plum_boat", WoodType.THUNDERCLOUD_PLUM);
+		VYNHERT_BOAT = createBoat("deep_trenches:vynhert_boat", WoodType.THUNDERCLOUD_PLUM);
+		WART_TREE_BOAT = createBoat("deep_trenches:wart_tree_boat", WoodType.THUNDERCLOUD_PLUM);
+		WENGE_BOAT = createBoat("deep_trenches:wenge_boat", WoodType.THUNDERCLOUD_PLUM);
+		YEW_BOAT = createBoat("deep_trenches:yew_boat", WoodType.THUNDERCLOUD_PLUM);
 
 		/* -------------------------------- STICK ------------------------------------------- */
-		ALMOND_STICK = item("deep_trenches:almond_stick", GENERAL);
-		ANAMEATA_STICK = item("deep_trenches:anameata_stick", GENERAL);
-		ANGELS_TRUMPET_STICK = boat("deep_trenches:angels_trumpet_stick", WoodType.AQUEAN);
-		AQUEAN_STICK = item("deep_trenches:aquean_stick", GENERAL);
-		BARSHROOKLE_STICK = item("deep_trenches:barshrookle_stick", GENERAL);
-		BLACK_BIRCH_STICK = item("deep_trenches:black_birch_stick", GENERAL);
-		BLUE_MAHOE_STICK = boat("deep_trenches:blue_mahoe_stick", WoodType.BARSHROOKLE);
-		BLUE_SPRUCE_STICK = boat("deep_trenches:blue_spruce_stick", WoodType.BARSHROOKLE);
-		BOTTLEBRUSH_STICK = boat("deep_trenches:bottlebrush_stick", WoodType.BARSHROOKLE);
-		BROMYA_STICK = boat("deep_trenches:bromya_stick", WoodType.BARSHROOKLE);
-		BUBBLETREE_STICK = boat("deep_trenches:bubbletree_stick", WoodType.BARSHROOKLE);
-		CALCEARB_STICK = boat("deep_trenches:calcearb_stick", WoodType.BARSHROOKLE);
-		CHERRY_STICK = item("deep_trenches:cherry_stick", GENERAL);
-		CHOTORN_STICK = boat("deep_trenches:chotorn_stick", WoodType.CHERRY);
-		COOK_PINE_STICK = item("deep_trenches:cook_pine_stick", GENERAL);
-		CROLOOD_STICK = item("deep_trenches:crolood_stick", GENERAL);
-		DARK_CROLOOD_STICK = item("deep_trenches:dark_crolood_stick", GENERAL);
-		DARK_FUSHSITRA_STICK = boat("deep_trenches:dark_fuchsitra_stick", WoodType.DARK_CROLOOD);
-		DARK_RED_ELM_STICK = boat("deep_trenches:dark_red_elm_stick", WoodType.DARK_CROLOOD);
-		DEAD_WART_TREE_STICK = boat("deep_trenches:dead_wart_tree_stick", WoodType.DARK_CROLOOD);
-		DRIGYUS_STICK = boat("deep_trenches:drigyus_stick", WoodType.DARK_CROLOOD);
-		EBONY_STICK = item("deep_trenches:ebony_stick", GENERAL);
-		ENDERHEART_STICK = boat("deep_trenches:enderheart_stick", WoodType.EBONY);
-		FLALM_STICK = boat("deep_trenches:flalm_stick", WoodType.EBONY);
-		FRUCE_STICK = boat("deep_trenches:fruce_stick", WoodType.EBONY);
-		FUCHSITRA_STICK = item("deep_trenches:fuchsitra_stick", GENERAL);
-		FUGMOS_STICK = boat("deep_trenches:fugmos_stick", WoodType.FUCHSITRA);
-		FUNERANITE_STICK = item("deep_trenches:funeranite_stick", GENERAL);
-		GHOSHROOM_STICK = item("deep_trenches:ghoshroom_stick", GENERAL);
-		GIANT_VIOLET_STICK = boat("deep_trenches:giant_violet_stick", WoodType.GHOSHROOM);
-		GUAIACUM_STICK = boat("deep_trenches:guaiacum_stick", WoodType.GHOSHROOM);
-		JOSHUA_STICK = boat("deep_trenches:joshua_stick", WoodType.GHOSHROOM);
-		KLINKII_PINE_STICK = boat("deep_trenches:klinkii_pine_stick", WoodType.GHOSHROOM);
-		MELALEUCA_STICK = boat("deep_trenches:melaleuca_stick", WoodType.GHOSHROOM);
-		GYLDELION_STICK = item("deep_trenches:gyldelion_stick", GENERAL);
-		MURKANTUAN_STICK = item("deep_trenches:murkantuan_stick", GENERAL);
-		NORFOLK_PINE_STICK = boat("deep_trenches:norfolk_pine_stick", WoodType.MURKANTUAN);
-		OBSCRUS_STICK = boat("deep_trenches:obscrus_stick", WoodType.MURKANTUAN);
-		ORHPRIS_STICK = boat("deep_trenches:orhpris_stick", WoodType.MURKANTUAN);
-		PELTOGYNE_STICK = item("deep_trenches:peltogyne_stick", GENERAL);
-		PIN_CHERRY_STICK = item("deep_trenches:pin_cherry_stick", GENERAL);
-		PLUM_STICK = item("deep_trenches:plum_stick", GENERAL);
-		PURFUNGA_STICK = item("deep_trenches:purfunga_stick", GENERAL);
-		RARK_STICK = boat("deep_trenches:rark_stick", WoodType.PURFUNGA);
-		RED_ELM_STICK = boat("deep_trenches:red_elm_stick", WoodType.PURFUNGA);
-		RHADI_STICK = boat("deep_trenches:rhadi_stick", WoodType.PURFUNGA);
-		SANGUART_STICK = boat("deep_trenches:sanguart_stick", WoodType.PURFUNGA);
-		SCARLET_THIORCEN_STICK = boat("deep_trenches:scarlet_thiorcen_stick", WoodType.PURFUNGA);
-		SEQUOIA_STICK = boat("deep_trenches:sequoia_stick", WoodType.PURFUNGA);
-		SPROOM_STICK = item("deep_trenches:sproom_stick", GENERAL);
-		STORTREEAN_STICK = item("deep_trenches:stortreean_stick", GENERAL);
-		STROOMEAN_STICK = item("deep_trenches:stroomean_stick", GENERAL);
-		SUNRISE_FUNGUS_STICK = item("deep_trenches:sunrise_fungus_stick", GENERAL);
-		TARK_STICK = boat("deep_trenches:tark_stick", WoodType.SUNRISE_FUNGUS);
-		TEAK_STICK = item("deep_trenches:teak_stick", GENERAL);
-		THUNDERCLOUD_PLUM_STICK = item("deep_trenches:thundercloud_plum_stick", GENERAL);
-		VYNHERT_STICK = boat("deep_trenches:vynhert_stick", WoodType.THUNDERCLOUD_PLUM);
-		WART_TREE_STICK = boat("deep_trenches:wart_tree_stick", WoodType.THUNDERCLOUD_PLUM);
-		WENGE_STICK = boat("deep_trenches:wenge_stick", WoodType.THUNDERCLOUD_PLUM);
-		YEW_STICK = boat("deep_trenches:yew_stick", WoodType.THUNDERCLOUD_PLUM);
+		ALMOND_STICK = createItem("deep_trenches:almond_stick", GENERAL);
+		ANAMEATA_STICK = createItem("deep_trenches:anameata_stick", GENERAL);
+		ANGELS_TRUMPET_STICK = createBoat("deep_trenches:angels_trumpet_stick", WoodType.AQUEAN);
+		AQUEAN_STICK = createItem("deep_trenches:aquean_stick", GENERAL);
+		BARSHROOKLE_STICK = createItem("deep_trenches:barshrookle_stick", GENERAL);
+		BLACK_BIRCH_STICK = createItem("deep_trenches:black_birch_stick", GENERAL);
+		BLUE_MAHOE_STICK = createBoat("deep_trenches:blue_mahoe_stick", WoodType.BARSHROOKLE);
+		BLUE_SPRUCE_STICK = createBoat("deep_trenches:blue_spruce_stick", WoodType.BARSHROOKLE);
+		BOTTLEBRUSH_STICK = createBoat("deep_trenches:bottlebrush_stick", WoodType.BARSHROOKLE);
+		BROMYA_STICK = createBoat("deep_trenches:bromya_stick", WoodType.BARSHROOKLE);
+		BUBBLETREE_STICK = createBoat("deep_trenches:bubbletree_stick", WoodType.BARSHROOKLE);
+		CALCEARB_STICK = createBoat("deep_trenches:calcearb_stick", WoodType.BARSHROOKLE);
+		CHERRY_STICK = createItem("deep_trenches:cherry_stick", GENERAL);
+		CHOTORN_STICK = createBoat("deep_trenches:chotorn_stick", WoodType.CHERRY);
+		COOK_PINE_STICK = createItem("deep_trenches:cook_pine_stick", GENERAL);
+		CROLOOD_STICK = createItem("deep_trenches:crolood_stick", GENERAL);
+		DARK_CROLOOD_STICK = createItem("deep_trenches:dark_crolood_stick", GENERAL);
+		DARK_FUSHSITRA_STICK = createBoat("deep_trenches:dark_fuchsitra_stick", WoodType.DARK_CROLOOD);
+		DARK_RED_ELM_STICK = createBoat("deep_trenches:dark_red_elm_stick", WoodType.DARK_CROLOOD);
+		DEAD_WART_TREE_STICK = createBoat("deep_trenches:dead_wart_tree_stick", WoodType.DARK_CROLOOD);
+		DRIGYUS_STICK = createBoat("deep_trenches:drigyus_stick", WoodType.DARK_CROLOOD);
+		EBONY_STICK = createItem("deep_trenches:ebony_stick", GENERAL);
+		ENDERHEART_STICK = createBoat("deep_trenches:enderheart_stick", WoodType.EBONY);
+		FLALM_STICK = createBoat("deep_trenches:flalm_stick", WoodType.EBONY);
+		FRUCE_STICK = createBoat("deep_trenches:fruce_stick", WoodType.EBONY);
+		FUCHSITRA_STICK = createItem("deep_trenches:fuchsitra_stick", GENERAL);
+		FUGMOS_STICK = createBoat("deep_trenches:fugmos_stick", WoodType.FUCHSITRA);
+		FUNERANITE_STICK = createItem("deep_trenches:funeranite_stick", GENERAL);
+		GHOSHROOM_STICK = createItem("deep_trenches:ghoshroom_stick", GENERAL);
+		GIANT_VIOLET_STICK = createBoat("deep_trenches:giant_violet_stick", WoodType.GHOSHROOM);
+		GUAIACUM_STICK = createBoat("deep_trenches:guaiacum_stick", WoodType.GHOSHROOM);
+		JOSHUA_STICK = createBoat("deep_trenches:joshua_stick", WoodType.GHOSHROOM);
+		KLINKII_PINE_STICK = createBoat("deep_trenches:klinkii_pine_stick", WoodType.GHOSHROOM);
+		MELALEUCA_STICK = createBoat("deep_trenches:melaleuca_stick", WoodType.GHOSHROOM);
+		GYLDELION_STICK = createItem("deep_trenches:gyldelion_stick", GENERAL);
+		MURKANTUAN_STICK = createItem("deep_trenches:murkantuan_stick", GENERAL);
+		NORFOLK_PINE_STICK = createBoat("deep_trenches:norfolk_pine_stick", WoodType.MURKANTUAN);
+		OBSCRUS_STICK = createBoat("deep_trenches:obscrus_stick", WoodType.MURKANTUAN);
+		ORHPRIS_STICK = createBoat("deep_trenches:orhpris_stick", WoodType.MURKANTUAN);
+		PELTOGYNE_STICK = createItem("deep_trenches:peltogyne_stick", GENERAL);
+		PIN_CHERRY_STICK = createItem("deep_trenches:pin_cherry_stick", GENERAL);
+		PLUM_STICK = createItem("deep_trenches:plum_stick", GENERAL);
+		PURFUNGA_STICK = createItem("deep_trenches:purfunga_stick", GENERAL);
+		RARK_STICK = createBoat("deep_trenches:rark_stick", WoodType.PURFUNGA);
+		RED_ELM_STICK = createBoat("deep_trenches:red_elm_stick", WoodType.PURFUNGA);
+		RHADI_STICK = createBoat("deep_trenches:rhadi_stick", WoodType.PURFUNGA);
+		SANGUART_STICK = createBoat("deep_trenches:sanguart_stick", WoodType.PURFUNGA);
+		SCARLET_THIORCEN_STICK = createBoat("deep_trenches:scarlet_thiorcen_stick", WoodType.PURFUNGA);
+		SEQUOIA_STICK = createBoat("deep_trenches:sequoia_stick", WoodType.PURFUNGA);
+		SPROOM_STICK = createItem("deep_trenches:sproom_stick", GENERAL);
+		STORTREEAN_STICK = createItem("deep_trenches:stortreean_stick", GENERAL);
+		STROOMEAN_STICK = createItem("deep_trenches:stroomean_stick", GENERAL);
+		SUNRISE_FUNGUS_STICK = createItem("deep_trenches:sunrise_fungus_stick", GENERAL);
+		TARK_STICK = createBoat("deep_trenches:tark_stick", WoodType.SUNRISE_FUNGUS);
+		TEAK_STICK = createItem("deep_trenches:teak_stick", GENERAL);
+		THUNDERCLOUD_PLUM_STICK = createItem("deep_trenches:thundercloud_plum_stick", GENERAL);
+		VYNHERT_STICK = createBoat("deep_trenches:vynhert_stick", WoodType.THUNDERCLOUD_PLUM);
+		WART_TREE_STICK = createBoat("deep_trenches:wart_tree_stick", WoodType.THUNDERCLOUD_PLUM);
+		WENGE_STICK = createBoat("deep_trenches:wenge_stick", WoodType.THUNDERCLOUD_PLUM);
+		YEW_STICK = createBoat("deep_trenches:yew_stick", WoodType.THUNDERCLOUD_PLUM);
 
 		/* -------------------------------- FOOD ------------------------------------------- */
-		BARBELED_LOOSEJAW = food("deep_trenches:barbeled_loosejaw", STORCEAN_FISH);
-		BETTA = food("deep_trenches:betta", STORCEAN_FISH);
-		BLACK_LOOSEJAW = food("deep_trenches:black_loosejaw", STORCEAN_FISH);
-		DEEP_LAKE_BETTA = food("deep_trenches:deep_lake_betta", STORCEAN_FISH);
-		GIANT_HATCHETFISH = food("deep_trenches:giant_hatchetfish", ModFoodComponents.GIANT_HATCHETFISH);
-		LIGHT_LOOSEJAW = food("deep_trenches:light_loosejaw", STORCEAN_FISH);
-		SMALLTOOTH_DRAGONFISH =  food("deep_trenches:smalltooth_dragonfish", STORCEAN_FISH);
+		BARBELED_LOOSEJAW = createFood("deep_trenches:barbeled_loosejaw", STORCEAN_FISH);
+		BETTA = createFood("deep_trenches:betta", STORCEAN_FISH);
+		BLACK_LOOSEJAW = createFood("deep_trenches:black_loosejaw", STORCEAN_FISH);
+		DEEP_LAKE_BETTA = createFood("deep_trenches:deep_lake_betta", STORCEAN_FISH);
+		GIANT_HATCHETFISH = createFood("deep_trenches:giant_hatchetfish", ModFoodComponents.GIANT_HATCHETFISH);
+		LIGHT_LOOSEJAW = createFood("deep_trenches:light_loosejaw", STORCEAN_FISH);
+		SMALLTOOTH_DRAGONFISH =  createFood("deep_trenches:smalltooth_dragonfish", STORCEAN_FISH);
 
 		/* -------------------------------- COOKED FOOD ------------------------------------------- */
-		COOKED_GIANT_HATCHETFISH = food("deep_trenches:cooked_giant_hatchetfish", ModFoodComponents.COOKED_GIANT_HATCHETFISH);
+		COOKED_GIANT_HATCHETFISH = createFood("deep_trenches:cooked_giant_hatchetfish", ModFoodComponents.COOKED_GIANT_HATCHETFISH);
 
 		/* -------------------------------- WEAPONS ------------------------------------------- */
 		ADAIGGER = register("deep_trenches:adaigger", new AdaiggerItem(new Settings().group(GENERAL)));
 
 		/* -------------------------------- GOO's ------------------------------------------- */
-		CYAN_BIOLUMINESCENT_GOO = item("deep_trenches:cyan_bioluminescent_goo", GENERAL);
-		GREEN_BIOLUMINESCENT_GOO = item("deep_trenches:green_bioluminescent_goo", GENERAL);
-		LIGHT_BLUE_BIOLUMINESCENT_GOO = item("deep_trenches:light_blue_bioluminescent_goo", GENERAL);
+		CYAN_BIOLUMINESCENT_GOO = createItem("deep_trenches:cyan_bioluminescent_goo", GENERAL);
+		GREEN_BIOLUMINESCENT_GOO = createItem("deep_trenches:green_bioluminescent_goo", GENERAL);
+		LIGHT_BLUE_BIOLUMINESCENT_GOO = createItem("deep_trenches:light_blue_bioluminescent_goo", GENERAL);
 
 		/* -------------------------------- GYNDELION ------------------------------------------- */
-		GYLDELION_DYE = item("deep_trenches:gyldelion_dye", GENERAL);
-		GYLDELION_INGOT = item("deep_trenches:gyldelion_ingot", GENERAL);
-		GYLDELION_NUGGET = item("deep_trenches:gyldelion_nugget", GENERAL);
+		GYLDELION_DYE = createItem("deep_trenches:gyldelion_dye", GENERAL);
+		GYLDELION_INGOT = createItem("deep_trenches:gyldelion_ingot", GENERAL);
+		GYLDELION_NUGGET = createItem("deep_trenches:gyldelion_nugget", GENERAL);
 
 		/* -------------------------------- MOB DROPS ------------------------------------------- */
-		LOOSEJAW_TOOTH = item("deep_trenches:loosejaw_tooth", GENERAL);
+		LOOSEJAW_TOOTH = createItem("deep_trenches:loosejaw_tooth", GENERAL);
+
+		AIRIAL_MOSS = createBlockItem("deep_trenches:airial_moss", ModBlocks.AIRIAL_MOSS, GENERAL);
 	}
 
 }

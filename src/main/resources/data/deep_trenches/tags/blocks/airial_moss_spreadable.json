@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"deep_trenches:dritean",
+		"deep_trenches:poinine",
+		"deep_trenches:rhodonite",
+		"deep_trenches:skysoil",
+		"deep_trenches:skystone",
+		"deep_trenches:storcerack",
+		"deep_trenches:storcendite",
+		"minecraft:andesite",
+		"minecraft:basalt",
+		"minecraft:blackstone",
+		"minecraft:coarse_dirt",
+		"minecraft:diorite",
+		"minecraft:dirt",
+		"minecraft:granite",
+		"minecraft:netherrack",
+		"minecraft:sand",
+		"minecraft:stone"
+	]
+}

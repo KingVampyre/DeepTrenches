@@ -1,4 +1,6 @@
 {
+    "block.deep_trenches.airial_bush": "Airial Bush",
+    "block.deep_trenches.airial_moss": "Airial Moss",
     "block.deep_trenches.almond_button": "Almond Button",
     "block.deep_trenches.almond_door": "Almond Door",
     "block.deep_trenches.almond_fence": "Almond Fence",
@@ -906,6 +908,8 @@
     "block.deep_trenches.sequoia_wall_sign": "Sequoia Wall Sign",
     "block.deep_trenches.sequoia_wood": "Sequoia Wood",
     "block.deep_trenches.skalk": "Skalk",
+    "block.deep_trenches.skysoil": "Skysoil",
+    "block.deep_trenches.skystone": "Skystone",
     "block.deep_trenches.spidreet": "Spidreet",
     "block.deep_trenches.spike_lavender": "Spike Lavender",
     "block.deep_trenches.sprinly": "Sprinly",

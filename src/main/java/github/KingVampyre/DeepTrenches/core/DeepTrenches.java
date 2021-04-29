@@ -1,5 +1,7 @@
 package github.KingVampyre.DeepTrenches.core;
 
+import github.KingVampyre.DeepTrenches.common.event.block.BlockReplacementCallback;
+import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
 import github.KingVampyre.DeepTrenches.core.init.*;
 import github.KingVampyre.DeepTrenches.core.util.DefaultAttributeHelper;
 import net.fabricmc.api.ModInitializer;
@@ -21,8 +23,10 @@ public class  DeepTrenches implements ModInitializer {
 
     @Override
     public void onInitialize() {
+		/* ------------------------ Events ------------------------------ */
+		BlockReplacementCallback.EVENT.register(AirialMossCallback.INSTANCE);
 
-		/* -------------------------------- Attributes ------------------------------------------- */
+    	/* -------------------------------- Attributes ------------------------------------------- */
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:blink_interval"), ModEntityAttributes.BLINK_INTERVAL);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:blink_range"), ModEntityAttributes.BLINK_RANGE);
 		Registry.register(ATTRIBUTE, new Identifier("deep_trenches:blink_delay"), ModEntityAttributes.BLINK_DELAY);
@@ -353,6 +357,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:trumpetear_coral_wall_fan"), TRUMPETEAR_CORAL_WALL_FAN);
 
 		// Flowers, plants and pots
+		Registry.register(BLOCK, new Identifier("deep_trenches:airial_bush"), AIRIAL_BUSH);
 		Registry.register(BLOCK, new Identifier("deep_trenches:black_lily"), BLACK_LILY);
 		Registry.register(BLOCK, new Identifier("deep_trenches:black_pansy"), BLACK_PANSY);
 		Registry.register(BLOCK, new Identifier("deep_trenches:blue_pansy"), BLUE_PANSY);
@@ -427,6 +432,9 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, new Identifier("deep_trenches:gyldelion_block"), GYLDELION_BLOCK);
 
         /* -------------------------------- Items ------------------------------------------- */
+
+		Registry.register(ITEM, new Identifier("deep_trenches:skystone"), new BlockItem(SKYSTONE, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:skysoil"), new BlockItem(SKYSOIL, new Item.Settings().group(GENERAL)));
 
 		// Coral Items
 		Registry.register(ITEM, new Identifier("deep_trenches:dead_blackgreen_tree_coral"), new BlockItem(DEAD_BLACKGREEN_TREE_CORAL, new Item.Settings().group(GENERAL)));
@@ -1591,6 +1599,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:green_bioluminescent_block"), new BlockItem(GREEN_BIOLUMINESCENT_BLOCK, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:light_blue_bioluminescent_block"), new BlockItem(LIGHT_BLUE_BIOLUMINESCENT_BLOCK, new Item.Settings().group(GENERAL)));
 
+		Registry.register(ITEM, new Identifier("deep_trenches:airial_bush"), new BlockItem(AIRIAL_BUSH, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:dritean"), new BlockItem(DRITEAN, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:gyldelion_block"), new BlockItem(GYLDELION_BLOCK, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:mosoil"), new BlockItem(MOSOIL, new Item.Settings().group(GENERAL)));

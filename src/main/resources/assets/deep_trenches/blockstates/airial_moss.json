@@ -1,0 +1,106 @@
+{
+	"variants": {
+		"type=andesite,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_andesite"
+		},
+		"type=andesite,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_andesite"
+		},
+		"type=basalt,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_basalt"
+		},
+		"type=basalt,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_basalt"
+		},
+		"type=blackstone,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_blackstone"
+		},
+		"type=blackstone,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_blackstone"
+		},
+		"type=coarse_dirt,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_coarse_dirt"
+		},
+		"type=coarse_dirt,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_coarse_dirt"
+		},
+		"type=diorite,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_diorite"
+		},
+		"type=diorite,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_diorite"
+		},
+		"type=dirt,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_dirt"
+		},
+		"type=dirt,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_dirt"
+		},
+		"type=dritean,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_dritean"
+		},
+		"type=dritean,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_dritean"
+		},
+		"type=granite,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_granite"
+		},
+		"type=granite,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_granite"
+		},
+		"type=netherrack,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_netherrack"
+		},
+		"type=netherrack,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_netherrack"
+		},
+		"type=poinine,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_poinine"
+		},
+		"type=poinine,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_poinine"
+		},
+		"type=rhodonite,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_rhodonite"
+		},
+		"type=rhodonite,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_rhodonite"
+		},
+		"type=sand,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_sand"
+		},
+		"type=sand,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_sand"
+		},
+		"type=skysoil,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_skysoil"
+		},
+		"type=skysoil,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_skysoil"
+		},
+		"type=skystone,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_skystone"
+		},
+		"type=skystone,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_skystone"
+		},
+		"type=stone,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_stone"
+		},
+		"type=stone,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_stone"
+		},
+		"type=storcendite,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_storcendite"
+		},
+		"type=storcendite,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_storcendite"
+		},
+		"type=storcerack,snowy=false": {
+			"model": "deep_trenches:block/airial_moss_on_storcerack"
+		},
+		"type=storcerack,snowy=true": {
+			"model": "deep_trenches:block/snowy_airial_moss_on_storcerack"
+		}
+	}
+}

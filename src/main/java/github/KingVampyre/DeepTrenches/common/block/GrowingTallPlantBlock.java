@@ -43,6 +43,7 @@ public abstract class GrowingTallPlantBlock extends PlantBlock implements Fertil
 
     protected abstract void onBreakInCreative(World world, BlockPos pos, BlockState state, PlayerEntity player);
 
+    @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
 
         if (!world.isClient) {
