@@ -1,0 +1,9 @@
+{   "parent": "minecraft:block/grass_block",
+    "textures": {
+        "top": "deep_trenches:block/airial_moss_top",
+        "bottom": "deep_trenches:block/poinine",
+        "side": "deep_trenches:block/poinine",
+        "particle": "deep_trenches:block/poinine",
+        "overlay": "deep_trenches:block/airial_moss_side_overlay"
+    }
+}

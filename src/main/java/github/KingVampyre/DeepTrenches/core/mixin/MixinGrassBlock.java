@@ -16,7 +16,13 @@ public class MixinGrassBlock {
     public BlockState getDefaultState(Block block) {
         GrassBlock thisBlock = (GrassBlock) (Object)  this;
 
-        return thisBlock == ModBlocks.MOSOIL ? ModBlocks.REEBLOON.getDefaultState() : Blocks.GRASS.getDefaultState();
+        if(thisBlock == ModBlocks.AIRIAL_MOSS)
+            return ModBlocks.AIRIAL_BUSH.getDefaultState();
+
+        if(thisBlock == ModBlocks.MOSOIL)
+            return ModBlocks.REEBLOON.getDefaultState();
+
+        return Blocks.GRASS.getDefaultState();
     }
 
 }

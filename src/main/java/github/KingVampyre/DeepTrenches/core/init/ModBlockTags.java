@@ -7,6 +7,8 @@ import net.minecraft.util.Identifier;
 
 public class ModBlockTags {
 
+    public static final Tag<Block> AIRIAL_MOSS_SPREADABLE = TagRegistry.block(new Identifier("deep_trenches:airial_moss_spreadable"));
+
     public static final Tag<Block> AQUEAN_LOGS = TagRegistry.block(new Identifier("deep_trenches:aquean_logs"));
 
     public static final Tag<Block> BLUE_MAHOE_FLOWER_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:blue_mahoe_flower_plantable"));

@@ -43,11 +43,14 @@ public class ModBlocks {
 	public static final Block POININE;
 	public static final Block RHODONITE;
 	public static final Block SPRILIUM;
+	public static final Block SKYSOIL;
+	public static final Block SKYSTONE;
 	public static final Block STORCEAN_MARINE_SNOW;
 	public static final Block STORCENDITE;
 	public static final Block STORCERACK;
 	public static final Block VERDINE;
 
+	public static final Block AIRIAL_BUSH = new AirialBushBlock(Settings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block BLACK_LILY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block BLACK_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block BLUE_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
@@ -2742,6 +2745,8 @@ public class ModBlocks {
 		POININE = createPillar("deep_trenches:poinine", BASALT);
 		RHODONITE = createCopy("deep_trenches:rhodonite", QUARTZ_BLOCK);
 		SPRILIUM = createCopy("deep_trenches:sprilium", CRIMSON_NYLIUM);
+		SKYSOIL = createCopy("deep_trenches:skysoil", DIRT);
+		SKYSTONE = createCopy("deep_trenches:skystone", STONE);
 		STORCEAN_MARINE_SNOW = createCopy("deep_trenches:storcean_marine_snow", SOUL_SAND);
 		STORCENDITE = createCopy("deep_trenches:storcendite", STONE);
 		STORCERACK = createCopy("deep_trenches:storcerack", STONE);

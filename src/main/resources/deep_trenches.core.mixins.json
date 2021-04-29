@@ -10,6 +10,7 @@
     "InvokerMemoryModuleType",
     "InvokerSensorType",
     "InvokerSpreadableBlock",
+    "MixinAbstractBlockState",
     "MixinBrewingRecipeRegistry",
     "MixinEnchantment",
     "MixinEnchantmentHelper",
