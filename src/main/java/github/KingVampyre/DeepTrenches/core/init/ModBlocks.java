@@ -112,181 +112,199 @@ public class ModBlocks {
 	public static final Block GIANT_VIOLET_PETAL = new Block(Settings.copy(COCOA));
 	public static final Block GIANT_VIOLET_PISTIL = new Block(Settings.copy(COCOA));
 
-	public static final Block DEAD_BLACKGREEN_TREE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_BLACKGREEN_TREE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_BLACKGREEN_TREE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block BLACKGREEN_TREE_CORAL = new CoralBlock(DEAD_BLACKGREEN_TREE_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block BLACKGREEN_TREE_CORAL_BLOCK = new CoralBlockBlock(DEAD_BLACKGREEN_TREE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block BLACKGREEN_TREE_CORAL_FAN = new CoralFanBlock(DEAD_BLACKGREEN_TREE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block BLACKGREEN_TREE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	
-	public static final Block DEAD_BROCCOLI_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_BROCCOLI_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_BROCCOLI_CORAL_BUBBLES = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_BROCCOLI_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_BROCCOLI_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block BROCCOLI_CORAL = new CoralBlock(DEAD_BROCCOLI_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block BROCCOLI_CORAL_BLOCK = new CoralBlockBlock(DEAD_BROCCOLI_CORAL_BUBBLES, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block BROCCOLI_CORAL_BUBBLES = new CoralBlockBlock(DEAD_BROCCOLI_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block BROCCOLI_CORAL_FAN = new CoralFanBlock(DEAD_BROCCOLI_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block BROCCOLI_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_BROCCOLI_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_BLACKGREEN_TREE_CORAL;
+	public static final Block DEAD_BLACKGREEN_TREE_CORAL_BLOCK;
+	public static final Block DEAD_BLACKGREEN_TREE_CORAL_FAN;
+	public static final Block DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN;
 
-	public static final Block DEAD_BUBBLEGUM_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_BUBBLEGUM_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_BUBBLEGUM_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_BUBBLEGUM_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block BUBBLEGUM_CORAL = new CoralBlock(DEAD_BUBBLEGUM_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block BUBBLEGUM_CORAL_BLOCK = new CoralBlockBlock(DEAD_BUBBLEGUM_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block BUBBLEGUM_CORAL_FAN = new CoralFanBlock(DEAD_BUBBLEGUM_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block BUBBLEGUM_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_BUBBLEGUM_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block BLACKGREEN_TREE_CORAL;
+	public static final Block BLACKGREEN_TREE_CORAL_BLOCK;
+	public static final Block BLACKGREEN_TREE_CORAL_FAN;
+	public static final Block BLACKGREEN_TREE_CORAL_WALL_FAN;
+	
+	public static final Block DEAD_BROCCOLI_CORAL;
+	public static final Block DEAD_BROCCOLI_CORAL_BLOCK;
+	public static final Block DEAD_BROCCOLI_CORAL_BUBBLES;
+	public static final Block DEAD_BROCCOLI_CORAL_FAN;
+	public static final Block DEAD_BROCCOLI_CORAL_WALL_FAN;
 
-	public static final Block DEAD_CABBAGE_TREE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_CABBAGE_TREE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_CABBAGE_TREE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_CABBAGE_TREE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block CABBAGE_TREE_CORAL = new CoralBlock(DEAD_CABBAGE_TREE_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block CABBAGE_TREE_CORAL_BLOCK = new CoralBlockBlock(DEAD_CABBAGE_TREE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block CABBAGE_TREE_CORAL_FAN = new CoralFanBlock(DEAD_CABBAGE_TREE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block CABBAGE_TREE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_CABBAGE_TREE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block BROCCOLI_CORAL;
+	public static final Block BROCCOLI_CORAL_BLOCK;
+	public static final Block BROCCOLI_CORAL_BUBBLES;
+	public static final Block BROCCOLI_CORAL_FAN;
+	public static final Block BROCCOLI_CORAL_WALL_FAN;
+
+	public static final Block DEAD_BUBBLEGUM_CORAL;
+	public static final Block DEAD_BUBBLEGUM_CORAL_BLOCK;
+	public static final Block DEAD_BUBBLEGUM_CORAL_FAN;
+	public static final Block DEAD_BUBBLEGUM_CORAL_WALL_FAN;
+
+	public static final Block BUBBLEGUM_CORAL;
+	public static final Block BUBBLEGUM_CORAL_BLOCK;
+	public static final Block BUBBLEGUM_CORAL_FAN;
+	public static final Block BUBBLEGUM_CORAL_WALL_FAN;
+
+	public static final Block DEAD_CABBAGE_TREE_CORAL;
+	public static final Block DEAD_CABBAGE_TREE_CORAL_BLOCK;
+	public static final Block DEAD_CABBAGE_TREE_CORAL_FAN;
+	public static final Block DEAD_CABBAGE_TREE_CORAL_WALL_FAN;
+
+	public static final Block CABBAGE_TREE_CORAL;
+	public static final Block CABBAGE_TREE_CORAL_BLOCK;
+	public static final Block CABBAGE_TREE_CORAL_FAN;
+	public static final Block CABBAGE_TREE_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_FLOWERTUBE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_FLOWERTUBE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_FLOWERTUBE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_FLOWERTUBE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block FLOWERTUBE_CORAL = new CoralBlock(DEAD_FLOWERTUBE_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block FLOWERTUBE_CORAL_BLOCK = new CoralBlockBlock(DEAD_FLOWERTUBE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block FLOWERTUBE_CORAL_FAN = new CoralFanBlock(DEAD_FLOWERTUBE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block FLOWERTUBE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_FLOWERTUBE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_FLOWERTUBE_CORAL;
+	public static final Block DEAD_FLOWERTUBE_CORAL_BLOCK;
+	public static final Block DEAD_FLOWERTUBE_CORAL_FAN;
+	public static final Block DEAD_FLOWERTUBE_CORAL_WALL_FAN;
+
+	public static final Block FLOWERTUBE_CORAL;
+	public static final Block FLOWERTUBE_CORAL_BLOCK;
+	public static final Block FLOWERTUBE_CORAL_FAN;
+	public static final Block FLOWERTUBE_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_GARNET_SPIRAL_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_GARNET_SPIRAL_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_GARNET_SPIRAL_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_GARNET_SPIRAL_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block GARNET_SPIRAL_CORAL = new CoralBlock(DEAD_GARNET_SPIRAL_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block GARNET_SPIRAL_CORAL_BLOCK = new CoralBlockBlock(DEAD_GARNET_SPIRAL_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block GARNET_SPIRAL_CORAL_FAN = new CoralFanBlock(DEAD_GARNET_SPIRAL_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block GARNET_SPIRAL_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_GARNET_SPIRAL_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_GARNET_SPIRAL_CORAL;
+	public static final Block DEAD_GARNET_SPIRAL_CORAL_BLOCK;
+	public static final Block DEAD_GARNET_SPIRAL_CORAL_FAN;
+	public static final Block DEAD_GARNET_SPIRAL_CORAL_WALL_FAN;
+
+	public static final Block GARNET_SPIRAL_CORAL;
+	public static final Block GARNET_SPIRAL_CORAL_BLOCK;
+	public static final Block GARNET_SPIRAL_CORAL_FAN;
+	public static final Block GARNET_SPIRAL_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_GLOW_FOREST_CORAL = new DeadTallCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_GLOW_FOREST_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_GLOW_FOREST_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_GLOW_FOREST_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block GLOW_FOREST_CORAL = new TallCoralBlock(DEAD_GLOW_FOREST_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block GLOW_FOREST_CORAL_BLOCK = new CoralBlockBlock(DEAD_GLOW_FOREST_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block GLOW_FOREST_CORAL_FAN = new CoralFanBlock(DEAD_GLOW_FOREST_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block GLOW_FOREST_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_GLOW_FOREST_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_GLOW_FOREST_CORAL;
+	public static final Block DEAD_GLOW_FOREST_CORAL_BLOCK;
+	public static final Block DEAD_GLOW_FOREST_CORAL_FAN;
+	public static final Block DEAD_GLOW_FOREST_CORAL_WALL_FAN;
+
+	public static final Block GLOW_FOREST_CORAL;
+	public static final Block GLOW_FOREST_CORAL_BLOCK;
+	public static final Block GLOW_FOREST_CORAL_FAN;
+	public static final Block GLOW_FOREST_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_GLOWTONGUE_TUBE_CORA_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block GLOWTONGUE_TUBE_CORAL = new CoralBlock(DEAD_GLOWTONGUE_TUBE_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block GLOWTONGUE_TUBE_CORAL_BLOCK = new CoralBlockBlock(DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block GLOWTONGUE_TUBE_CORAL_FAN = new CoralFanBlock(DEAD_GLOWTONGUE_TUBE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block GLOWTONGUE_TUBE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_GLOWTONGUE_TUBE_CORA_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL;
+	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK;
+	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_FAN;
+	public static final Block DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN;
+
+	public static final Block GLOWTONGUE_TUBE_CORAL;
+	public static final Block GLOWTONGUE_TUBE_CORAL_BLOCK;
+	public static final Block GLOWTONGUE_TUBE_CORAL_FAN;
+	public static final Block GLOWTONGUE_TUBE_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_IVORY_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_IVORY_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_IVORY_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_IVORY_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block IVORY_CORAL = new CoralBlock(DEAD_IVORY_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block IVORY_CORAL_BLOCK = new CoralBlockBlock(DEAD_IVORY_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block IVORY_CORAL_FAN = new CoralFanBlock(DEAD_IVORY_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block IVORY_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_IVORY_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_IVORY_CORAL;
+	public static final Block DEAD_IVORY_CORAL_BLOCK;
+	public static final Block DEAD_IVORY_CORAL_FAN;
+	public static final Block DEAD_IVORY_CORAL_WALL_FAN;
+
+	public static final Block IVORY_CORAL;
+	public static final Block IVORY_CORAL_BLOCK;
+	public static final Block IVORY_CORAL_FAN;
+	public static final Block IVORY_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_LIME_BRAIN_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_LIME_BRAIN_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_LIME_BRAIN_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_LIME_BRAIN_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block LIME_BRAIN_CORAL = new CoralBlock(DEAD_LIME_BRAIN_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block LIME_BRAIN_CORAL_BLOCK = new CoralBlockBlock(DEAD_LIME_BRAIN_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block LIME_BRAIN_CORAL_FAN = new CoralFanBlock(DEAD_LIME_BRAIN_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block LIME_BRAIN_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_LIME_BRAIN_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_LIME_BRAIN_CORAL;
+	public static final Block DEAD_LIME_BRAIN_CORAL_BLOCK;
+	public static final Block DEAD_LIME_BRAIN_CORAL_FAN;
+	public static final Block DEAD_LIME_BRAIN_CORAL_WALL_FAN;
+
+	public static final Block LIME_BRAIN_CORAL;
+	public static final Block LIME_BRAIN_CORAL_BLOCK;
+	public static final Block LIME_BRAIN_CORAL_FAN;
+	public static final Block LIME_BRAIN_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_LOPHELIA_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_LOPHELIA_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_LOPHELIA_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_LOPHELIA_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block LOPHELIA_CORAL = new CoralBlock(DEAD_LOPHELIA_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block LOPHELIA_CORAL_BLOCK = new CoralBlockBlock(DEAD_LOPHELIA_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block LOPHELIA_CORAL_FAN = new CoralFanBlock(DEAD_LOPHELIA_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block LOPHELIA_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_LOPHELIA_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_LOPHELIA_CORAL;
+	public static final Block DEAD_LOPHELIA_CORAL_BLOCK;
+	public static final Block DEAD_LOPHELIA_CORAL_FAN;
+	public static final Block DEAD_LOPHELIA_CORAL_WALL_FAN;
+
+	public static final Block LOPHELIA_CORAL;
+	public static final Block LOPHELIA_CORAL_BLOCK;
+	public static final Block LOPHELIA_CORAL_FAN;
+	public static final Block LOPHELIA_CORAL_WALL_FAN;
 		
-	public static final Block DEAD_PIPE_ORGAN_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_PIPE_ORGAN_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_PIPE_ORGAN_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_PIPE_ORGAN_TENTACLES = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_PIPE_ORGAN_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block PIPE_ORGAN_CORAL = new CoralBlock(DEAD_PIPE_ORGAN_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block PIPE_ORGAN_CORAL_BLOCK = new CoralBlockBlock(DEAD_PIPE_ORGAN_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block PIPE_ORGAN_CORAL_FAN = new CoralFanBlock(DEAD_PIPE_ORGAN_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block PIPE_ORGAN_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_PIPE_ORGAN_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block PIPE_ORGAN_TENTACLES = new CoralBlock(DEAD_PIPE_ORGAN_TENTACLES, Settings.copy(TUBE_CORAL));
+	public static final Block DEAD_PIPE_ORGAN_CORAL;
+	public static final Block DEAD_PIPE_ORGAN_CORAL_BLOCK;
+	public static final Block DEAD_PIPE_ORGAN_CORAL_FAN;
+	public static final Block DEAD_PIPE_ORGAN_TENTACLES;
+	public static final Block DEAD_PIPE_ORGAN_CORAL_WALL_FAN;
+
+	public static final Block PIPE_ORGAN_CORAL;
+	public static final Block PIPE_ORGAN_CORAL_BLOCK;
+	public static final Block PIPE_ORGAN_CORAL_FAN;
+	public static final Block PIPE_ORGAN_CORAL_WALL_FAN;
+	public static final Block PIPE_ORGAN_TENTACLES;
 	
-	public static final Block DEAD_RED_TREE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_RED_TREE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_RED_TREE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_RED_TREE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block RED_TREE_CORAL = new CoralBlock(DEAD_RED_TREE_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block RED_TREE_CORAL_BLOCK = new CoralBlockBlock(DEAD_RED_TREE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block RED_TREE_CORAL_FAN = new CoralFanBlock(DEAD_RED_TREE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block RED_TREE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_RED_TREE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_RED_TREE_CORAL;
+	public static final Block DEAD_RED_TREE_CORAL_BLOCK;
+	public static final Block DEAD_RED_TREE_CORAL_FAN;
+	public static final Block DEAD_RED_TREE_CORAL_WALL_FAN;
+
+	public static final Block RED_TREE_CORAL;
+	public static final Block RED_TREE_CORAL_BLOCK;
+	public static final Block RED_TREE_CORAL_FAN;
+	public static final Block RED_TREE_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_SEAFAN_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_SEAFAN_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_SEAFAN_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_SEAFAN_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block SEAFAN_CORAL = new CoralBlock(DEAD_SEAFAN_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block SEAFAN_CORAL_BLOCK = new CoralBlockBlock(DEAD_SEAFAN_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block SEAFAN_CORAL_FAN = new CoralFanBlock(DEAD_SEAFAN_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block SEAFAN_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_SEAFAN_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_SEAFAN_CORAL;
+	public static final Block DEAD_SEAFAN_CORAL_BLOCK;
+	public static final Block DEAD_SEAFAN_CORAL_FAN;
+	public static final Block DEAD_SEAFAN_CORAL_WALL_FAN;
+
+	public static final Block SEAFAN_CORAL;
+	public static final Block SEAFAN_CORAL_BLOCK;
+	public static final Block SEAFAN_CORAL_FAN;
+	public static final Block SEAFAN_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block STRAIGHT_WILLOW_CORAL = new CoralBlock(DEAD_STRAIGHT_WILLOW_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block STRAIGHT_WILLOW_CORAL_BLOCK = new CoralBlockBlock(DEAD_STRAIGHT_WILLOW_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block STRAIGHT_WILLOW_CORAL_FAN = new CoralFanBlock(DEAD_STRAIGHT_WILLOW_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block STRAIGHT_WILLOW_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL;
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_BLOCK;
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_FAN;
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN;
+
+	public static final Block STRAIGHT_WILLOW_CORAL;
+	public static final Block STRAIGHT_WILLOW_CORAL_BLOCK;
+	public static final Block STRAIGHT_WILLOW_CORAL_FAN;
+	public static final Block STRAIGHT_WILLOW_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_SUNRISE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_SUNRISE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_SUNRISE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_SUNRISE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block SUNRISE_CORAL = new CoralBlock(DEAD_SUNRISE_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block SUNRISE_CORAL_BLOCK = new CoralBlockBlock(DEAD_SUNRISE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block SUNRISE_CORAL_FAN = new CoralFanBlock(DEAD_SUNRISE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block SUNRISE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_SUNRISE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_SUNRISE_CORAL;
+	public static final Block DEAD_SUNRISE_CORAL_BLOCK;
+	public static final Block DEAD_SUNRISE_CORAL_FAN;
+	public static final Block DEAD_SUNRISE_CORAL_WALL_FAN;
+
+	public static final Block SUNRISE_CORAL;
+	public static final Block SUNRISE_CORAL_BLOCK;
+	public static final Block SUNRISE_CORAL_FAN;
+	public static final Block SUNRISE_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_TABLE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_TABLE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_TABLE_CORAL_FAN = new DeadCoralFanBlock( Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_TABLE_CORAL_WALL_FAN = new DeadCoralWallFanBlock( Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block TABLE_CORAL = new CoralBlock(DEAD_TABLE_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block TABLE_CORAL_BLOCK = new CoralBlockBlock(DEAD_TABLE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block TABLE_CORAL_FAN = new CoralFanBlock(DEAD_TABLE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block TABLE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_TABLE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_TABLE_CORAL;
+	public static final Block DEAD_TABLE_CORAL_BLOCK;
+	public static final Block DEAD_TABLE_CORAL_FAN;
+	public static final Block DEAD_TABLE_CORAL_WALL_FAN;
+
+	public static final Block TABLE_CORAL;
+	public static final Block TABLE_CORAL_BLOCK;
+	public static final Block TABLE_CORAL_FAN;
+	public static final Block TABLE_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_THIN_BLADE_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_THIN_BLADE_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_THIN_BLADE_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_THIN_BLADE_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block THIN_BLADE_CORAL = new CoralBlock(DEAD_THIN_BLADE_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block THIN_BLADE_CORAL_BLOCK = new CoralBlockBlock(DEAD_THIN_BLADE_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block THIN_BLADE_CORAL_FAN = new CoralFanBlock(DEAD_THIN_BLADE_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block THIN_BLADE_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_THIN_BLADE_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_THIN_BLADE_CORAL;
+	public static final Block DEAD_THIN_BLADE_CORAL_BLOCK;
+	public static final Block DEAD_THIN_BLADE_CORAL_FAN;
+	public static final Block DEAD_THIN_BLADE_CORAL_WALL_FAN;
+
+	public static final Block THIN_BLADE_CORAL;
+	public static final Block THIN_BLADE_CORAL_BLOCK;
+	public static final Block THIN_BLADE_CORAL_FAN;
+	public static final Block THIN_BLADE_CORAL_WALL_FAN;
 	
-	public static final Block DEAD_TRUMPETEAR_CORAL = new DeadCoralBlock(Settings.copy(DEAD_TUBE_CORAL));
-	public static final Block DEAD_TRUMPETEAR_CORAL_BLOCK = new Block(Settings.copy(DEAD_TUBE_CORAL_BLOCK));
-	public static final Block DEAD_TRUMPETEAR_CORAL_FAN = new DeadCoralFanBlock(Settings.copy(DEAD_TUBE_CORAL_FAN));
-	public static final Block DEAD_TRUMPETEAR_CORAL_WALL_FAN = new DeadCoralWallFanBlock(Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
-	public static final Block TRUMPETEAR_CORAL = new CoralBlock(DEAD_TRUMPETEAR_CORAL, Settings.copy(TUBE_CORAL));
-	public static final Block TRUMPETEAR_CORAL_BLOCK = new CoralBlockBlock(DEAD_TRUMPETEAR_CORAL_BLOCK, Settings.copy(TUBE_CORAL_BLOCK));
-	public static final Block TRUMPETEAR_CORAL_FAN = new CoralFanBlock(DEAD_TRUMPETEAR_CORAL_FAN, Settings.copy(TUBE_CORAL_FAN));
-	public static final Block TRUMPETEAR_CORAL_WALL_FAN = new CoralWallFanBlock(DEAD_TRUMPETEAR_CORAL_WALL_FAN, Settings.copy(DEAD_TUBE_CORAL_WALL_FAN));
+	public static final Block DEAD_TRUMPETEAR_CORAL;
+	public static final Block DEAD_TRUMPETEAR_CORAL_BLOCK;
+	public static final Block DEAD_TRUMPETEAR_CORAL_FAN;
+	public static final Block DEAD_TRUMPETEAR_CORAL_WALL_FAN;
+
+	public static final Block TRUMPETEAR_CORAL;
+	public static final Block TRUMPETEAR_CORAL_BLOCK;
+	public static final Block TRUMPETEAR_CORAL_FAN;
+	public static final Block TRUMPETEAR_CORAL_WALL_FAN;
 
 	public static final Block ALMOND_BUTTON;
 	public static final Block ALMOND_DOOR;
@@ -1457,14 +1475,6 @@ public class ModBlocks {
 		return Registry.register(BLOCK, id, block);
 	}
 
-	protected static Block createCap(String id) {
-		return register(id, new CapBlock(Settings.of(FUNGUS).strength(0.2F, 0.2F)));
-	}
-
-	protected static Block createCopy(String id, Block block) {
-		return register(id, new Block(Settings.copy(block)));
-	}
-
 	protected static Block createBlock(String id, Function<Settings, Block> function, Settings settings) {
 		return register(id, function.apply(settings));
 	}
@@ -1473,16 +1483,52 @@ public class ModBlocks {
 		return createBlock(id, function, Settings.copy(block));
 	}
 
+	protected static Block createCap(String id) {
+		return register(id, new CapBlock(Settings.of(FUNGUS).strength(0.2F, 0.2F)));
+	}
+
+	protected static Block createCopy(String id, Block block) {
+		return register(id, new Block(Settings.copy(block)));
+	}
+
+	protected static Block createCoral(String id, Block block) {
+		return register(id, new CoralBlock(block, Settings.copy(TUBE_CORAL)));
+	}
+
+	protected static Block createCoralBlock(String id, Block block) {
+		return register(id, new CoralBlockBlock(block, Settings.copy(TUBE_CORAL_BLOCK)));
+	}
+
+	protected static Block createCoralFan(String id, Block block) {
+		return register(id, new CoralFanBlock(block, Settings.copy(TUBE_CORAL_FAN)));
+	}
+
+	protected static Block createCoralWallFan(String id, Block block) {
+		return register(id, new CoralWallFanBlock(block, Settings.copy(TUBE_CORAL_WALL_FAN)));
+	}
+
+	protected static Block createDeadCoral(String id) {
+		return createBlock(id, DeadCoralBlock::new, DEAD_TUBE_CORAL);
+	}
+
+	protected static Block createDeadCoralBlock(String id) {
+		return createCopy(id, DEAD_TUBE_CORAL_BLOCK);
+	}
+
+	protected static Block createDeadCoralFan(String id) {
+		return createBlock(id, DeadCoralFanBlock::new, DEAD_TUBE_CORAL_FAN);
+	}
+
+	protected static Block createDeadCoralWallFan(String id) {
+		return createBlock(id, DeadCoralWallFanBlock::new, DEAD_TUBE_CORAL_WALL_FAN);
+	}
+
 	protected static Block createFlowerPot(String id, Block block, Settings settings) {
 		return register(id, new FlowerPotBlock(block, settings));
 	}
 
 	protected static Block createFlowerPot(String id, Block block) {
 		return register(id, new FlowerPotBlock(block, Settings.copy(Blocks.POTTED_POPPY)));
-	}
-
-	protected static Block createLeavesFlower(String id, Function<Settings, Block> function) {
-		return register(id, function.apply(Settings.copy(OAK_LEAVES)));
 	}
 
 	protected static Block createOakButton(String id) {
@@ -1569,7 +1615,205 @@ public class ModBlocks {
 	    return register(id, new TallFlowerBlock(Settings.copy(ROSE_BUSH)));
     }
 
+	protected static Block createTallCoral(String id, Block block) {
+		return register(id, new TallCoralBlock(block, Settings.copy(TUBE_CORAL)));
+	}
+
 	static {
+		DEAD_BLACKGREEN_TREE_CORAL = createDeadCoral("deep_trenches:dead_blackgreen_tree_coral");
+		DEAD_BLACKGREEN_TREE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_blackgreen_tree_coral_block");
+		DEAD_BLACKGREEN_TREE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_blackgreen_tree_coral_fan");
+		DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_blackgreen_tree_coral_wall_fan");
+
+		BLACKGREEN_TREE_CORAL = createCoral("deep_trenches:blackgreen_tree_coral", DEAD_BLACKGREEN_TREE_CORAL);
+		BLACKGREEN_TREE_CORAL_BLOCK = createCoralBlock("deep_trenches:blackgreen_tree_coral_block", DEAD_BLACKGREEN_TREE_CORAL_BLOCK);
+		BLACKGREEN_TREE_CORAL_FAN = createCoralFan("deep_trenches:blackgreen_tree_coral_fan", DEAD_BLACKGREEN_TREE_CORAL_FAN);
+		BLACKGREEN_TREE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:blackgreen_tree_coral_wall_fan", DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN);
+
+		DEAD_BROCCOLI_CORAL = createDeadCoral("deep_trenches:dead_broccoli_coral");
+		DEAD_BROCCOLI_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_broccoli_coral_block");
+		DEAD_BROCCOLI_CORAL_BUBBLES = createDeadCoralBlock("deep_trenches:dead_broccoli_coral_bubbles");
+		DEAD_BROCCOLI_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_broccoli_coral_fan");
+		DEAD_BROCCOLI_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_broccoli_coral_wall_fan");
+
+		BROCCOLI_CORAL = createCoral("deep_trenches:broccoli_coral", DEAD_BROCCOLI_CORAL);
+		BROCCOLI_CORAL_BLOCK = createCoralBlock("deep_trenches:broccoli_coral_block", DEAD_BROCCOLI_CORAL_BLOCK);
+		BROCCOLI_CORAL_BUBBLES = createCoralBlock("deep_trenches:broccoli_coral_bubbles", DEAD_BROCCOLI_CORAL_BUBBLES);
+		BROCCOLI_CORAL_FAN = createCoralFan("deep_trenches:broccoli_coral_fan", DEAD_BROCCOLI_CORAL_FAN);
+		BROCCOLI_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:broccoli_coral_wall_fan", DEAD_BROCCOLI_CORAL_WALL_FAN);
+
+		DEAD_BUBBLEGUM_CORAL = createDeadCoral("deep_trenches:dead_bubblegum_coral");
+		DEAD_BUBBLEGUM_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_bubblegum_coral_block");
+		DEAD_BUBBLEGUM_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_bubblegum_coral_fan");
+		DEAD_BUBBLEGUM_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_bubblegum_coral_wall_fan");
+
+		BUBBLEGUM_CORAL = createCoral("deep_trenches:bubblegum_coral", DEAD_BUBBLEGUM_CORAL);
+		BUBBLEGUM_CORAL_BLOCK = createCoralBlock("deep_trenches:bubblegum_coral_block", DEAD_BUBBLEGUM_CORAL_BLOCK);
+		BUBBLEGUM_CORAL_FAN = createCoralFan("deep_trenches:bubblegum_coral_fan", DEAD_BUBBLEGUM_CORAL_FAN);
+		BUBBLEGUM_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:bubblegum_coral_wall_fan", DEAD_BUBBLEGUM_CORAL_WALL_FAN);
+
+		DEAD_CABBAGE_TREE_CORAL = createDeadCoral("deep_trenches:dead_cabbage_tree_coral");
+		DEAD_CABBAGE_TREE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_cabbage_tree_coral_block");
+		DEAD_CABBAGE_TREE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_cabbage_tree_coral_fan");
+		DEAD_CABBAGE_TREE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_cabbage_tree_coral_wall_fan");
+
+		CABBAGE_TREE_CORAL = createCoral("deep_trenches:cabbage_tree_coral", DEAD_CABBAGE_TREE_CORAL);
+		CABBAGE_TREE_CORAL_BLOCK = createCoralBlock("deep_trenches:cabbage_tree_coral_block", DEAD_CABBAGE_TREE_CORAL_BLOCK);
+		CABBAGE_TREE_CORAL_FAN = createCoralFan("deep_trenches:cabbage_tree_coral_fan", DEAD_CABBAGE_TREE_CORAL_FAN);
+		CABBAGE_TREE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:cabbage_tree_coral_wall_fan", DEAD_CABBAGE_TREE_CORAL_WALL_FAN);
+
+		DEAD_FLOWERTUBE_CORAL = createDeadCoral("deep_trenches:dead_flowertube_coral");
+		DEAD_FLOWERTUBE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_flowertube_coral_block");
+		DEAD_FLOWERTUBE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_flowertube_coral_fan");
+		DEAD_FLOWERTUBE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_flowertube_coral_wall_fan");
+
+		FLOWERTUBE_CORAL = createCoral("deep_trenches:flowertube_coral", DEAD_FLOWERTUBE_CORAL);
+		FLOWERTUBE_CORAL_BLOCK = createCoralBlock("deep_trenches:flowertube_coral_block", DEAD_FLOWERTUBE_CORAL_BLOCK);
+		FLOWERTUBE_CORAL_FAN = createCoralFan("deep_trenches:flowertube_coral_fan", DEAD_FLOWERTUBE_CORAL_FAN);
+		FLOWERTUBE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:flowertube_coral_wall_fan", DEAD_FLOWERTUBE_CORAL_WALL_FAN);
+
+		DEAD_GARNET_SPIRAL_CORAL = createDeadCoral("deep_trenches:dead_garnet_spiral_coral");
+		DEAD_GARNET_SPIRAL_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_garnet_spiral_coral_block");
+		DEAD_GARNET_SPIRAL_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_garnet_spiral_coral_fan");
+		DEAD_GARNET_SPIRAL_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_garnet_spiral_coral_wall_fan");
+
+		GARNET_SPIRAL_CORAL = createCoral("deep_trenches:garnet_spiral_coral", DEAD_GARNET_SPIRAL_CORAL);
+		GARNET_SPIRAL_CORAL_BLOCK = createCoralBlock("deep_trenches:garnet_spiral_coral_block", DEAD_GARNET_SPIRAL_CORAL_BLOCK);
+		GARNET_SPIRAL_CORAL_FAN = createCoralFan("deep_trenches:garnet_spiral_coral_fan", DEAD_GARNET_SPIRAL_CORAL_FAN);
+		GARNET_SPIRAL_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:garnet_spiral_coral_wall_fan", DEAD_GARNET_SPIRAL_CORAL_WALL_FAN);
+
+		DEAD_GLOW_FOREST_CORAL = createBlock("deep_trenches:dead_glow_forest_coral", DeadTallCoralBlock::new, DEAD_TUBE_CORAL);
+		DEAD_GLOW_FOREST_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_glow_forest_coral_block");
+		DEAD_GLOW_FOREST_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_glow_forest_coral_fan");
+		DEAD_GLOW_FOREST_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_glow_forest_coral_wall_fan");
+
+		GLOW_FOREST_CORAL = createTallCoral("deep_trenches:glow_forest_coral", DEAD_GLOW_FOREST_CORAL);
+		GLOW_FOREST_CORAL_BLOCK = createCoralBlock("deep_trenches:glow_forest_coral_block", DEAD_GLOW_FOREST_CORAL_BLOCK);
+		GLOW_FOREST_CORAL_FAN = createCoralFan("deep_trenches:glow_forest_coral_fan", DEAD_GLOW_FOREST_CORAL_FAN);
+		GLOW_FOREST_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:glow_forest_coral_wall_fan", DEAD_GLOW_FOREST_CORAL_WALL_FAN);
+
+		DEAD_GLOWTONGUE_TUBE_CORAL = createDeadCoral("deep_trenches:dead_glowtongue_tube_coral");
+		DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_glowtongue_tube_coral_block");
+		DEAD_GLOWTONGUE_TUBE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_glowtongue_tube_coral_fan");
+		DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_glowtongue_tube_coral_wall_fan");
+
+		GLOWTONGUE_TUBE_CORAL = createCoral("deep_trenches:glowtongue_tube_coral", DEAD_GLOWTONGUE_TUBE_CORAL);
+		GLOWTONGUE_TUBE_CORAL_BLOCK = createCoralBlock("deep_trenches:glowtongue_tube_coral_block", DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK);
+		GLOWTONGUE_TUBE_CORAL_FAN = createCoralFan("deep_trenches:glowtongue_tube_coral_fan", DEAD_GLOWTONGUE_TUBE_CORAL_FAN);
+		GLOWTONGUE_TUBE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:glowtongue_tube_coral_wall_fan", DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN);
+
+		DEAD_IVORY_CORAL = createDeadCoral("deep_trenches:dead_ivory_coral");
+		DEAD_IVORY_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_ivory_coral_block");
+		DEAD_IVORY_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_ivory_coral_fan");
+		DEAD_IVORY_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_ivory_coral_wall_fan");
+
+		IVORY_CORAL = createCoral("deep_trenches:ivory_coral", DEAD_IVORY_CORAL);
+		IVORY_CORAL_BLOCK = createCoralBlock("deep_trenches:ivory_coral_block", DEAD_IVORY_CORAL_BLOCK);
+		IVORY_CORAL_FAN = createCoralFan("deep_trenches:ivory_coral_fan", DEAD_IVORY_CORAL_FAN);
+		IVORY_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:ivory_coral_wall_fan", DEAD_IVORY_CORAL_WALL_FAN);
+
+		DEAD_LIME_BRAIN_CORAL = createDeadCoral("deep_trenches:dead_lime_brain_coral");
+		DEAD_LIME_BRAIN_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_lime_brain_coral_block");
+		DEAD_LIME_BRAIN_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_lime_brain_coral_fan");
+		DEAD_LIME_BRAIN_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_lime_brain_coral_wall_fan");
+
+		LIME_BRAIN_CORAL = createCoral("deep_trenches:lime_brain_coral", DEAD_LIME_BRAIN_CORAL);
+		LIME_BRAIN_CORAL_BLOCK = createCoralBlock("deep_trenches:lime_brain_coral_block", DEAD_LIME_BRAIN_CORAL_BLOCK);
+		LIME_BRAIN_CORAL_FAN = createCoralFan("deep_trenches:lime_brain_coral_fan", DEAD_LIME_BRAIN_CORAL_FAN);
+		LIME_BRAIN_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:lime_brain_coral_wall_fan", DEAD_LIME_BRAIN_CORAL_WALL_FAN);
+
+		DEAD_LOPHELIA_CORAL = createDeadCoral("deep_trenches:dead_lophelia_coral");
+		DEAD_LOPHELIA_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_lophelia_coral_block");
+		DEAD_LOPHELIA_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_lophelia_coral_fan");
+		DEAD_LOPHELIA_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_lophelia_coral_wall_fan");
+
+		LOPHELIA_CORAL = createCoral("deep_trenches:lophelia_coral", DEAD_LOPHELIA_CORAL);
+		LOPHELIA_CORAL_BLOCK = createCoralBlock("deep_trenches:lophelia_coral_block", DEAD_LOPHELIA_CORAL_BLOCK);
+		LOPHELIA_CORAL_FAN = createCoralFan("deep_trenches:lophelia_coral_fan", DEAD_LOPHELIA_CORAL_FAN);
+		LOPHELIA_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:lophelia_coral_wall_fan", DEAD_LOPHELIA_CORAL_WALL_FAN);
+
+		DEAD_PIPE_ORGAN_CORAL = createDeadCoral("deep_trenches:dead_pipe_organ_coral");
+		DEAD_PIPE_ORGAN_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_pipe_organ_coral_block");
+		DEAD_PIPE_ORGAN_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_pipe_organ_coral_fan");
+		DEAD_PIPE_ORGAN_TENTACLES = createDeadCoral("deep_trenches:dead_pipe_organ_tentacles");
+		DEAD_PIPE_ORGAN_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_pipe_organ_coral_wall_fan");
+
+		PIPE_ORGAN_CORAL = createCoral("deep_trenches:pipe_organ_coral", DEAD_PIPE_ORGAN_CORAL);
+		PIPE_ORGAN_CORAL_BLOCK = createCoralBlock("deep_trenches:pipe_organ_coral_block", DEAD_PIPE_ORGAN_CORAL_BLOCK);
+		PIPE_ORGAN_CORAL_FAN = createCoralFan("deep_trenches:pipe_organ_coral_fan", DEAD_PIPE_ORGAN_CORAL_FAN);
+		PIPE_ORGAN_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:pipe_organ_coral_wall_fan", DEAD_PIPE_ORGAN_CORAL_WALL_FAN);
+		PIPE_ORGAN_TENTACLES = createCoral("deep_trenches:pipe_organ_tentacles", DEAD_PIPE_ORGAN_TENTACLES);
+
+		DEAD_RED_TREE_CORAL = createDeadCoral("deep_trenches:dead_red_tree_coral");
+		DEAD_RED_TREE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_red_tree_coral_block");
+		DEAD_RED_TREE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_red_tree_coral_fan");
+		DEAD_RED_TREE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_red_tree_coral_wall_fan");
+
+		RED_TREE_CORAL = createCoral("deep_trenches:red_tree_coral", DEAD_RED_TREE_CORAL);
+		RED_TREE_CORAL_BLOCK = createCoralBlock("deep_trenches:red_tree_coral_block", DEAD_RED_TREE_CORAL);
+		RED_TREE_CORAL_FAN = createCoralFan("deep_trenches:red_tree_coral_fan", DEAD_RED_TREE_CORAL_FAN);
+		RED_TREE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:red_tree_coral_wall_fan", DEAD_RED_TREE_CORAL_WALL_FAN);
+
+		DEAD_SEAFAN_CORAL = createDeadCoral("deep_trenches:dead_seafan_coral");
+		DEAD_SEAFAN_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_seafan_coral_block");
+		DEAD_SEAFAN_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_seafan_coral_fan");
+		DEAD_SEAFAN_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_seafan_coral_wall_fan");
+
+		SEAFAN_CORAL = createCoral("deep_trenches:seafan_coral", DEAD_SEAFAN_CORAL);
+		SEAFAN_CORAL_BLOCK = createCoralBlock("deep_trenches:seafan_coral_block", DEAD_SEAFAN_CORAL_BLOCK);
+		SEAFAN_CORAL_FAN = createCoralFan("deep_trenches:seafan_coral_fan", DEAD_SEAFAN_CORAL_FAN);
+		SEAFAN_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:seafan_coral_wall_fan", DEAD_SEAFAN_CORAL_WALL_FAN);
+
+		DEAD_STRAIGHT_WILLOW_CORAL = createDeadCoral("deep_trenches:dead_straight_willow_coral");
+		DEAD_STRAIGHT_WILLOW_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_straight_willow_coral_block");
+		DEAD_STRAIGHT_WILLOW_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_straight_willow_coral_fan");
+		DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_straight_willow_coral_wall_fan");
+
+		STRAIGHT_WILLOW_CORAL = createCoral("deep_trenches:straight_willow_coral", DEAD_STRAIGHT_WILLOW_CORAL);
+		STRAIGHT_WILLOW_CORAL_BLOCK = createCoralBlock("deep_trenches:straight_willow_coral_block", DEAD_STRAIGHT_WILLOW_CORAL_BLOCK);
+		STRAIGHT_WILLOW_CORAL_FAN = createCoralFan("deep_trenches:straight_willow_coral_fan", DEAD_STRAIGHT_WILLOW_CORAL_FAN);
+		STRAIGHT_WILLOW_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:straight_willow_coral_wall_fan", DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN);
+
+		DEAD_SUNRISE_CORAL = createDeadCoral("deep_trenches:dead_sunrise_coral");
+		DEAD_SUNRISE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_sunrise_coral_block");
+		DEAD_SUNRISE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_sunrise_coral_fan");
+		DEAD_SUNRISE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_sunrise_coral_wall_fan");
+
+		SUNRISE_CORAL = createCoral("deep_trenches:sunrise_coral", DEAD_SUNRISE_CORAL);
+		SUNRISE_CORAL_BLOCK = createCoralBlock("deep_trenches:sunrise_coral_block", DEAD_SUNRISE_CORAL_BLOCK);
+		SUNRISE_CORAL_FAN = createCoralFan("deep_trenches:sunrise_coral_fan", DEAD_SUNRISE_CORAL_FAN);
+		SUNRISE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:sunrise_coral_wall_fan", DEAD_SUNRISE_CORAL_WALL_FAN);
+
+		DEAD_TABLE_CORAL = createDeadCoral("deep_trenches:dead_table_coral");
+		DEAD_TABLE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_table_coral_block");
+		DEAD_TABLE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_table_coral_fan");
+		DEAD_TABLE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_table_coral_wall_fan");
+
+		TABLE_CORAL = createCoral("deep_trenches:table_coral", DEAD_TABLE_CORAL);
+		TABLE_CORAL_BLOCK = createCoralBlock("deep_trenches:table_coral_block", DEAD_TABLE_CORAL_BLOCK);
+		TABLE_CORAL_FAN = createCoralFan("deep_trenches:table_coral_fan", DEAD_TABLE_CORAL_FAN);
+		TABLE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:table_coral_wall_fan", DEAD_TABLE_CORAL_WALL_FAN);
+
+		DEAD_THIN_BLADE_CORAL = createDeadCoral("deep_trenches:dead_thin_blade_coral");
+		DEAD_THIN_BLADE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_thin_blade_coral_block");
+		DEAD_THIN_BLADE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_thin_blade_coral_fan");
+		DEAD_THIN_BLADE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_thin_blade_coral_wall_fan");
+
+		THIN_BLADE_CORAL = createCoral("deep_trenches:thin_blade_coral", DEAD_THIN_BLADE_CORAL);
+		THIN_BLADE_CORAL_BLOCK = createCoralBlock("deep_trenches:thin_blade_coral_block", DEAD_THIN_BLADE_CORAL_BLOCK);
+		THIN_BLADE_CORAL_FAN = createCoralFan("deep_trenches:thin_blade_coral_fan", DEAD_THIN_BLADE_CORAL_FAN);
+		THIN_BLADE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:thin_blade_coral_wall_fan", DEAD_THIN_BLADE_CORAL_WALL_FAN);
+
+		DEAD_TRUMPETEAR_CORAL = createDeadCoral("deep_trenches:dead_trumpetear_coral");
+		DEAD_TRUMPETEAR_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_trumpetear_coral_block");
+		DEAD_TRUMPETEAR_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_trumpetear_coral_fan");
+		DEAD_TRUMPETEAR_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_trumpetear_coral_wall_fan");
+
+		TRUMPETEAR_CORAL = createCoral("deep_trenches:trumpetear_coral", DEAD_TRUMPETEAR_CORAL);
+		TRUMPETEAR_CORAL_BLOCK = createCoralBlock("deep_trenches:trumpetear_coral_block", DEAD_TRUMPETEAR_CORAL_BLOCK);
+		TRUMPETEAR_CORAL_FAN = createCoralFan("deep_trenches:trumpetear_coral_fan", DEAD_TRUMPETEAR_CORAL_FAN);
+		TRUMPETEAR_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:trumpetear_coral_wall_fan", DEAD_TRUMPETEAR_CORAL_WALL_FAN);
+
 		ALMOND_BUTTON = createOakButton("deep_trenches:almond_button");
 		ALMOND_DOOR = createOakDoor("deep_trenches:almond_door");
 		ALMOND_FENCE = createOakFence("deep_trenches:almond_fence");
