@@ -1,6 +1,6 @@
 {
-	"parent": "block/coral_fan",
-	"textures": {
-		"fan": "deep_trenches:block/corals/fans/dead_thin_blade"
-	}
+    "parent": "block/coral_fan",
+    "textures": {
+        "fan": "deep_trenches:block/dead_thin_blade_coral_fan"
+    }
 }

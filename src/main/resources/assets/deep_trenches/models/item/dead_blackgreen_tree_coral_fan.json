@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "deep_trenches:block/corals/fans/dead_blackgreen_tree"
-	}
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "deep_trenches:block/dead_blackgreen_tree_coral_fan"
+    }
 }

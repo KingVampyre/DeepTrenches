@@ -1,6 +1,6 @@
 {
-	"parent": "block/coral_fan",
-	"textures": {
-		"fan": "deep_trenches:block/corals/fans/blackgreen_tree"
-	}
+    "parent": "block/coral_fan",
+    "textures": {
+        "fan": "deep_trenches:block/blackgreen_tree_coral_fan"
+    }
 }

@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "deep_trenches:block/corals/fans/glow_forest"
+		"layer0": "deep_trenches:block/glow_forest_coral_fan"
 	}
 }

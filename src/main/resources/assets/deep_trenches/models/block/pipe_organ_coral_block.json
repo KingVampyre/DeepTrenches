@@ -1,6 +1,6 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "deep_trenches:block/corals/blocks/pipe_organ"
-	}
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/pipe_organ_coral_block"
+    }
 }

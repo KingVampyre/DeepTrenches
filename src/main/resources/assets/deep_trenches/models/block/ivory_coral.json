@@ -1,6 +1,6 @@
 {
-	"parent": "block/cross",
-	"textures": {
-		"cross": "deep_trenches:block/corals/ivory"
-	}
+    "parent": "block/cross",
+    "textures": {
+        "cross": "deep_trenches:block/ivory_coral"
+    }
 }

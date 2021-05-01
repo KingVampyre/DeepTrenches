@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "deep_trenches:block/corals/broccoli"
-	}
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "deep_trenches:block/broccoli_coral"
+    }
 }

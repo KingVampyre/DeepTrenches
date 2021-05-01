@@ -1,6 +1,6 @@
 {
-	"parent": "block/cross",
-	"textures": {
-		"cross": "deep_trenches:block/corals/dead_lime_brain"
-	}
+    "parent": "block/cross",
+    "textures": {
+        "cross": "deep_trenches:block/dead_lime_brain_coral"
+    }
 }

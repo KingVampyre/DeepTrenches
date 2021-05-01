@@ -1,6 +1,6 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "deep_trenches:block/corals/blocks/dead_ivory"
-	}
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/dead_ivory_coral_block"
+    }
 }

@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "deep_trenches:block/corals/fans/seafan"
-	}
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "deep_trenches:block/seafan_coral_fan"
+    }
 }

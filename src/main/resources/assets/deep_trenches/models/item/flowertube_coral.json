@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "deep_trenches:block/corals/flowertube"
-	}
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "deep_trenches:block/flowertube_coral"
+    }
 }

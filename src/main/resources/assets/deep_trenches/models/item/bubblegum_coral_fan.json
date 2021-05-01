@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "deep_trenches:block/corals/fans/bubblegum"
-	}
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "deep_trenches:block/bubblegum_coral_fan"
+    }
 }

@@ -1,6 +1,6 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "deep_trenches:block/corals/blocks/cabbage_tree"
-	}
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/cabbage_tree_coral_block"
+    }
 }

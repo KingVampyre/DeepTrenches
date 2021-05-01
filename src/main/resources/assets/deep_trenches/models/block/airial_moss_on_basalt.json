@@ -1,9 +1,9 @@
 {   "parent": "minecraft:block/grass_block",
     "textures": {
         "top": "deep_trenches:block/airial_moss_top",
-        "bottom": "minecraft:block/basalt",
-        "side": "deep_trenches:block/basalt",
-        "particle": "minecraft:block/basalt",
+        "bottom": "minecraft:block/basalt_side",
+        "side": "minecraft:block/basalt_side",
+        "particle": "minecraft:block/basalt_side",
         "overlay": "deep_trenches:block/airial_moss_side_overlay"
     }
 }

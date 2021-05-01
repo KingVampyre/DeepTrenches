@@ -1,6 +1,6 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "deep_trenches:block/corals/blocks/trumpetear"
-	}
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/trumpetear_coral_block"
+    }
 }

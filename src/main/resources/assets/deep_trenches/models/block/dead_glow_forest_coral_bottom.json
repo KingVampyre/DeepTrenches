@@ -1,6 +1,6 @@
 {
 	"parent": "block/cross",
 	"textures": {
-		"cross": "deep_trenches:block/corals/dead_glow_forest_bottom"
+		"cross": "deep_trenches:block/dead_glow_forest_coral_bottom"
 	}
 }

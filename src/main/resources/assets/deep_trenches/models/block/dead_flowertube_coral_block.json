@@ -1,6 +1,6 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "deep_trenches:block/corals/blocks/dead_flowertube"
-	}
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/dead_flowertube_coral_block"
+    }
 }

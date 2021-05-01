@@ -1,6 +1,6 @@
 {
-	"parent": "block/cross",
-	"textures": {
-		"cross": "deep_trenches:block/corals/dead_glowtongue_tube"
-	}
+    "parent": "block/cross",
+    "textures": {
+        "cross": "deep_trenches:block/dead_glowtongue_tube_coral"
+    }
 }

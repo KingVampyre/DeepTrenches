@@ -1,6 +1,6 @@
 {
-	"parent": "block/coral_wall_fan",
-	"textures": {
-		"fan": "deep_trenches:block/corals/fans/dead_broccoli"
-	}
+    "parent": "block/coral_wall_fan",
+    "textures": {
+        "fan": "deep_trenches:block/dead_broccoli_coral_fan"
+    }
 }

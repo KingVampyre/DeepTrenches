@@ -1,6 +1,6 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "deep_trenches:block/corals/blocks/lophelia"
-	}
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/lophelia_coral_block"
+    }
 }

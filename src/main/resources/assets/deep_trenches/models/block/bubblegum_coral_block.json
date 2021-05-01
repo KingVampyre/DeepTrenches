@@ -1,6 +1,6 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "deep_trenches:block/corals/blocks/bubblegum"
-	}
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/bubblegum_coral_block"
+    }
 }

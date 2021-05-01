@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "deep_trenches:block/corals/blocks/glow_forest"
+		"all": "deep_trenches:block/glow_forest_coral_block"
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "deep_trenches:block/corals/dead_glow_forest_top"
+		"layer0": "deep_trenches:block/dead_glow_forest_coral_top"
 	}
 }

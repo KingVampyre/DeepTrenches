@@ -2,7 +2,7 @@
     "textures": {
         "top": "deep_trenches:block/airial_moss_top",
         "bottom": "minecraft:block/blackstone",
-        "side": "deep_trenches:block/blackstone",
+        "side": "minecraft:block/blackstone",
         "particle": "minecraft:block/blackstone",
         "overlay": "deep_trenches:block/airial_moss_side_overlay"
     }

@@ -1,6 +1,6 @@
 {
-	"parent": "block/coral_fan",
-	"textures": {
-		"fan": "deep_trenches:block/corals/fans/flowertube"
-	}
+    "parent": "block/coral_fan",
+    "textures": {
+        "fan": "deep_trenches:block/flowertube_coral_fan"
+    }
 }

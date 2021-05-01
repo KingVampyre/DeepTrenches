@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "deep_trenches:block/corals/dead_garnet_spiral"
-	}
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "deep_trenches:block/dead_garnet_spiral_coral"
+    }
 }

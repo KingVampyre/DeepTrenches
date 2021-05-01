@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "deep_trenches:block/corals/fans/cabbage_tree"
-	}
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "deep_trenches:block/cabbage_tree_coral_fan"
+    }
 }
