@@ -1,6 +1,9 @@
 {
     "variants": {
-        "": {
+        "snowy=true": {
+            "model": "deep_trenches:block/enrotium"
+        },
+        "snowy=false": {
             "model": "deep_trenches:block/enrotium"
         }
     }

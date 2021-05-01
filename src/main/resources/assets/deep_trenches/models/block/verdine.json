@@ -1,7 +1,6 @@
 {
-	"parent": "block/cube_column",
+	"parent": "block/cube_all",
 	"textures": {
-		"end": "deep_trenches:block/verdine_top",
-		"side": "deep_trenches:block/verdine_log"
+		"all": "deep_trenches:block/verdine"
 	}
 }

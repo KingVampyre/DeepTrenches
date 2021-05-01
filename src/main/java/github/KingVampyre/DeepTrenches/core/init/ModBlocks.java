@@ -67,6 +67,7 @@ public class ModBlocks {
 	public static final Block GARDEN_PINKS = new FlowerBlock(FIRE_RESISTANCE, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block GREEN_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block GYLDELION_FLOWER = new FlowerBlock(GLOWING, 12, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block HARSHLES = new HarshlesBlock(Settings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block LIME_SPURGE = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block LUPIN_FLOWER = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 	public static final Block MARSH_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
@@ -2988,13 +2989,13 @@ public class ModBlocks {
 		OPALITE = createCopy("deep_trenches:opalite", QUARTZ_BLOCK);
 		POININE = createPillar("deep_trenches:poinine", BASALT);
 		RHODONITE = createCopy("deep_trenches:rhodonite", QUARTZ_BLOCK);
-		SPRILIUM = createCopy("deep_trenches:sprilium", CRIMSON_NYLIUM);
+		SPRILIUM = createBlock("deep_trenches:sprilium", SpriliumBlock::new, CRIMSON_NYLIUM);
 		SKYSOIL = createCopy("deep_trenches:skysoil", DIRT);
 		SKYSTONE = createCopy("deep_trenches:skystone", STONE);
 		STORCEAN_MARINE_SNOW = createCopy("deep_trenches:storcean_marine_snow", SOUL_SAND);
 		STORCENDITE = createCopy("deep_trenches:storcendite", STONE);
 		STORCERACK = createCopy("deep_trenches:storcerack", STONE);
-		VERDINE = createPillar("deep_trenches:verdine", STONE);
+		VERDINE = createCopy("deep_trenches:verdine", STONE);
 	}
 
 }

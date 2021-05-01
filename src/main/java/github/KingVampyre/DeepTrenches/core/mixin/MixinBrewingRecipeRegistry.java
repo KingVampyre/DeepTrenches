@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class MixinBrewingRecipeRegistry {
 
     @Shadow
-    protected static void registerPotionRecipe(Potion input, Item item, Potion output) {
+    private static void registerPotionRecipe(Potion input, Item item, Potion output) {
 
     }
 
