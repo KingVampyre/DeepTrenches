@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
-import github.KingVampyre.DeepTrenches.core.init.ModEnchantments;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -10,6 +9,10 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
+
+import static github.KingVampyre.DeepTrenches.core.init.ModItems.ADAIGGER;
+import static net.minecraft.enchantment.EnchantmentTarget.WEAPON;
+import static net.minecraft.enchantment.Enchantments.LOYALTY;
 
 @Mixin(EnchantmentHelper.class)
 public class MixinEnchantmentHelper {
@@ -26,12 +29,10 @@ public class MixinEnchantmentHelper {
 
     @Redirect(method = "getPossibleEntries", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/EnchantmentTarget;isAcceptableItem(Lnet/minecraft/item/Item;)Z"))
     private static boolean isAcceptableItem(EnchantmentTarget enchantmentTarget, Item item) {
+        ItemStack stack = new ItemStack(item);
 
-        if(currentEnchantment == ModEnchantments.SOUL_DRAINING) {
-            ItemStack stack = new ItemStack(item);
-
-            return currentEnchantment.isAcceptableItem(stack);
-        }
+        if(item == ADAIGGER)
+            return currentEnchantment.isAcceptableItem(stack) || currentEnchantment.type == WEAPON || currentEnchantment == LOYALTY;
 
         return enchantmentTarget.isAcceptableItem(item);
     }

@@ -12,7 +12,6 @@
     "InvokerSpreadableBlock",
     "MixinAbstractBlockState",
     "MixinBrewingRecipeRegistry",
-    "MixinEnchantment",
     "MixinEnchantmentHelper",
     "MixinGrassBlock",
     "MixinLivingEntity",
