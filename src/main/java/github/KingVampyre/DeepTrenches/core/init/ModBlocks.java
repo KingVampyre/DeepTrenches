@@ -7,7 +7,7 @@ import github.Louwind.Features.impl.block.FeaturesSaplingBlock;
 import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.*;
-import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.SignType;
 import net.minecraft.util.registry.Registry;
 
@@ -22,16 +22,16 @@ import static net.minecraft.util.registry.Registry.BLOCK;
 
 public class ModBlocks {
 
-	public static final Block CYAN_BIOLUMINESCENT_BLOCK = new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F));
-	public static final Block GREEN_BIOLUMINESCENT_BLOCK = new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F));
-	public static final Block LIGHT_BLUE_BIOLUMINESCENT_BLOCK = new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F));
+	public static final Block CYAN_BIOLUMINESCENT_BLOCK;
+	public static final Block GREEN_BIOLUMINESCENT_BLOCK;
+	public static final Block LIGHT_BLUE_BIOLUMINESCENT_BLOCK;
 
-	public static final Block AIRIAL_MOSS = new AirialMossBlock(Settings.copy(GRASS_BLOCK));
-	public static final Block BLACK_MARBLE = new Block(Settings.copy(STONE));
-	public static final Block BLUE_STORCERACK = new Block(Settings.copy(STONE));
-	public static final Block DRITEAN = new Block(Settings.copy(DIRT));
-	public static final Block ENROTIUM = new EnrotiumBlock(Settings.copy(CRIMSON_NYLIUM));
-	public static final Block GYLDELION_BLOCK = new Block(Settings.copy(IRON_BLOCK));
+	public static final Block AIRIAL_MOSS;
+	public static final Block BLACK_MARBLE;
+	public static final Block BLUE_STORCERACK;
+	public static final Block DRITEAN;
+	public static final Block ENROTIUM;
+	public static final Block GYLDELION_BLOCK;
 
 	public static final Block LIGHT_OPALITE;
 	public static final Block LUSHINE;
@@ -50,68 +50,68 @@ public class ModBlocks {
 	public static final Block STORCERACK;
 	public static final Block VERDINE;
 
-	public static final Block AIRIAL_BUSH = new AirialBushBlock(Settings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block BLACK_LILY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block BLACK_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block BLUE_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block BLUE_POPPY = new FlowerBlock(NIGHT_VISION, 8, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block BLUE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block BONNET_SPURGE = new FlowerBlock(POISON, 8, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block BROWN_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block BULLTHORN = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block CACTLOW = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block CHOCOLATE_COSMOS_FLOWER = new FlowerBlock(COSMOS_BEAUTY, 14, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block CLAWBULB = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block CYAN_BLUE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block CYCAWLER = new StorceanFlowerBlock(CYCAWLER_BEAUTY, 24000, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block GARDEN_PINKS = new FlowerBlock(FIRE_RESISTANCE, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block GREEN_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block GYLDELION_FLOWER = new FlowerBlock(GLOWING, 12, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block HARSHLES = new HarshlesBlock(Settings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block LIME_SPURGE = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block LUPIN_FLOWER = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block MARSH_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block MURKSTEM = new MurkstemBlock(Settings.of(Material.PLANT).ticksRandomly().noCollision().breakInstantly().sounds(BlockSoundGroup.WOOD));
-	public static final Block NATIVE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block OPIUM_POPPY = new FlowerBlock(WEAKNESS, 11, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block ORANGE_LILY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block PIGAL = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block PINK_AND_ORANGE_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block PINK_BRAITOR_FLOWER = new FlowerBlock(BRAITOR_BEAUTY, 21, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block PINK_MARSH_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block PINK_ROSE = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block PINK_ROSE_BUSH = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block POPPY = new FlowerBlock(NIGHT_VISION, 5, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block PURPLE_AND_ORANGE_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block PURPROUND = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block RED_BRAITOR_FLOWER = new FlowerBlock(BRAITOR_BEAUTY, 21, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block RED_CHOCOLATE_COSMOS_FLOWER = new FlowerBlock(COSMOS_BEAUTY, 14, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block RED_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block RED_ROSE = new FlowerBlock(FLOWER_BEAUTY, 13, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block REEBLOON = new ReebloonBlock(Settings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block RUBRA_BLUE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block SKALK = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block SPIDREET = new StorceanFlowerBlock(REGENERATION, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block SPIKE_LAVENDER = new FlowerBlock(FLOWER_BEAUTY, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block SPRINLY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block SPROOM_SPIKE = new SproomSpikeBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block SQUISACLE = new StorceanFlowerBlock(LEVITATION, 4, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block SWEET_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block TOPPED_LAVENDER = new FlowerBlock(FLOWER_BEAUTY, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block VASLAME = new StorceanFlowerBlock(FIRE_RESISTANCE, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block VELVET_LILY = new TallFlowerBlock(Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block WEEPISTIL = new StorceanFlowerBlock(NAUSEA, 4, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block WEEPY_HOLLOWER = new StorceanFlowerBlock(GLOWING, 6, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block WHITE_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block WILD_PANSY = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
-	public static final Block YELLOW_VIOLET = new FlowerBlock(RESISTANCE, 9, Settings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+	public static final Block AIRIAL_BUSH;
+	public static final Block BLACK_LILY;
+	public static final Block BLACK_PANSY;
+	public static final Block BLUE_PANSY;
+	public static final Block BLUE_POPPY;
+	public static final Block BLUE_VIOLET;
+	public static final Block BONNET_SPURGE;
+	public static final Block BROWN_PANSY;
+	public static final Block BULLTHORN;
+	public static final Block CACTLOW;
+	public static final Block CHOCOLATE_COSMOS_FLOWER;
+	public static final Block CLAWBULB;
+	public static final Block CYAN_BLUE_VIOLET;
+	public static final Block CYCAWLER;
+	public static final Block GARDEN_PINKS;
+	public static final Block GREEN_PANSY;
+	public static final Block GYLDELION_FLOWER;
+	public static final Block HARSHLES;
+	public static final Block LIME_SPURGE;
+	public static final Block LUPIN_FLOWER;
+	public static final Block MARSH_VIOLET;
+	public static final Block MURKSTEM;
+	public static final Block NATIVE_VIOLET;
+	public static final Block OPIUM_POPPY;
+	public static final Block ORANGE_LILY;
+	public static final Block PIGAL;
+	public static final Block PINK_AND_ORANGE_PANSY;
+	public static final Block PINK_BRAITOR_FLOWER;
+	public static final Block PINK_MARSH_VIOLET;
+	public static final Block PINK_ROSE;
+	public static final Block PINK_ROSE_BUSH;
+	public static final Block POPPY;
+	public static final Block PURPLE_AND_ORANGE_PANSY;
+	public static final Block PURPROUND;
+	public static final Block RED_BRAITOR_FLOWER;
+	public static final Block RED_CHOCOLATE_COSMOS_FLOWER;
+	public static final Block RED_PANSY;
+	public static final Block RED_ROSE;
+	public static final Block REEBLOON;
+	public static final Block RUBRA_BLUE_VIOLET;
+	public static final Block SKALK;
+	public static final Block SPIDREET;
+	public static final Block SPIKE_LAVENDER;
+	public static final Block SPRINLY;
+	public static final Block SPROOM_SPIKE;
+	public static final Block SQUISACLE;
+	public static final Block SWEET_VIOLET;
+	public static final Block TOPPED_LAVENDER;
+	public static final Block VASLAME;
+	public static final Block VELVET_LILY;
+	public static final Block WEEPISTIL;
+	public static final Block WEEPY_HOLLOWER;
+	public static final Block WHITE_VIOLET;
+	public static final Block WILD_PANSY;
+	public static final Block YELLOW_VIOLET;
 
-	public static final Block STASP_NEST = new StaspNestBlock(Settings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD));
+	public static final Block STASP_NEST;
 
-	public static final Block GIANT_VIOLET = new TallFlowerBlock(Settings.copy(RED_TULIP));
-	public static final Block GIANT_VIOLET_LEAF = new Block(Settings.copy(COCOA));
-	public static final Block GIANT_VIOLET_PETAL = new Block(Settings.copy(COCOA));
-	public static final Block GIANT_VIOLET_PISTIL = new Block(Settings.copy(COCOA));
+	public static final Block GIANT_VIOLET;
+	public static final Block GIANT_VIOLET_LEAF;
+	public static final Block GIANT_VIOLET_PETAL;
+	public static final Block GIANT_VIOLET_PISTIL;
 
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL;
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL_BLOCK;
@@ -1476,6 +1476,10 @@ public class ModBlocks {
 		return Registry.register(BLOCK, id, block);
 	}
 
+	protected static Block createBioluminescentBlock(String id) {
+		return register(id, new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F)));
+	}
+
 	protected static Block createBlock(String id, Function<Settings, Block> function, Settings settings) {
 		return register(id, function.apply(settings));
 	}
@@ -1522,6 +1526,14 @@ public class ModBlocks {
 
 	protected static Block createDeadCoralWallFan(String id) {
 		return createBlock(id, DeadCoralWallFanBlock::new, DEAD_TUBE_CORAL_WALL_FAN);
+	}
+
+	protected static Block createFlowerBlock(String id, StatusEffect effect, int effectDuration) {
+		return register(id, new FlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP)));
+	}
+
+	protected static Block createStorceanFlower(String id, StatusEffect effect, int effectDuration) {
+		return register(id, new StorceanFlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP)));
 	}
 
 	protected static Block createFlowerPot(String id, Block block, Settings settings) {
@@ -1612,8 +1624,8 @@ public class ModBlocks {
 		return register(id, new StorceanTallSaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING)));
 	}
 
-    protected static Block createTallFlower(String id) {
-	    return register(id, new TallFlowerBlock(Settings.copy(ROSE_BUSH)));
+    protected static Block createTallFlower(String id, Block block) {
+	    return register(id, new TallFlowerBlock(Settings.copy(block)));
     }
 
 	protected static Block createTallCoral(String id, Block block) {
@@ -1621,6 +1633,82 @@ public class ModBlocks {
 	}
 
 	static {
+		AIRIAL_MOSS = createBlock("deep_trenches:airial_moss", AirialMossBlock::new, GRASS_BLOCK);
+		BLACK_MARBLE = createCopy("deep_trenches:black_marble", STONE);
+		BLUE_STORCERACK = createCopy("deep_trenches:blue_storcerack", STONE);
+		DRITEAN = createCopy("deep_trenches:dritean", DIRT);
+		ENROTIUM = createBlock("deep_trenches:enrotium", EnrotiumBlock::new, CRIMSON_NYLIUM);
+		GYLDELION_BLOCK = createCopy("deep_trenches:gyldelion_block", IRON_BLOCK);
+
+		STASP_NEST = createBlock("deep_trenches:stasp_nest", StaspNestBlock::new, OAK_WOOD);
+
+		GIANT_VIOLET = createTallFlower("deep_trenches:giant_violet", RED_TULIP);
+		GIANT_VIOLET_LEAF = createCopy("deep_trenches:giant_violet_leaf", COCOA);
+		GIANT_VIOLET_PETAL = createCopy("deep_trenches:giant_violet_petal", COCOA);
+		GIANT_VIOLET_PISTIL = createCopy("deep_trenches:giant_violet_pistil", COCOA);
+
+		CYAN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock("deep_trenches:cyan_bioluminescent_block");
+		GREEN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock("deep_trenches:green_bioluminescent_block");
+		LIGHT_BLUE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock("deep_trenches:light_blue_bioluminescent_block");
+
+		BLACK_PANSY = createFlowerBlock("deep_trenches:black_pansy", RESISTANCE, 9);
+		BLUE_PANSY = createFlowerBlock("deep_trenches:blue_pansy", RESISTANCE, 9);
+		BLUE_POPPY = createFlowerBlock("deep_trenches:blue_poppy", NIGHT_VISION, 8);
+		BLUE_VIOLET = createFlowerBlock("deep_trenches:blue_violet", RESISTANCE, 9);
+		BONNET_SPURGE = createFlowerBlock("deep_trenches:bonnet_spurge", POISON, 8);
+		BROWN_PANSY = createFlowerBlock("deep_trenches:brown_pansy", RESISTANCE, 9);
+		CHOCOLATE_COSMOS_FLOWER = createFlowerBlock("deep_trenches:chocolate_cosmos_flower", COSMOS_BEAUTY, 14);
+		CYAN_BLUE_VIOLET = createFlowerBlock("deep_trenches:cyan_blue_violet", RESISTANCE, 9);
+		CYCAWLER = createStorceanFlower("deep_trenches:cycawler", CYCAWLER_BEAUTY, 24000);
+		GARDEN_PINKS = createFlowerBlock("deep_trenches:garden_pinks", FIRE_RESISTANCE, 6);
+		GREEN_PANSY = createFlowerBlock("deep_trenches:green_pansy", RESISTANCE, 9);
+		GYLDELION_FLOWER = createFlowerBlock("deep_trenches:gyndelion_flower", GLOWING, 12);
+		MARSH_VIOLET = createFlowerBlock("deep_trenches:marsh_violet", RESISTANCE, 9);
+		NATIVE_VIOLET = createFlowerBlock("deep_trenches:native_violet", RESISTANCE, 9);
+		OPIUM_POPPY = createFlowerBlock("deep_trenches:opium_poppy", WEAKNESS, 11);
+		PINK_AND_ORANGE_PANSY = createFlowerBlock("deep_trenches:pink_and_orange_pansy", RESISTANCE, 9);
+		PINK_BRAITOR_FLOWER = createFlowerBlock("deep_trenches:pink_braitor_flower", BRAITOR_BEAUTY, 21);
+		PINK_MARSH_VIOLET = createFlowerBlock("deep_trenches:pink_marsh_violet", RESISTANCE, 9);
+		PINK_ROSE = createFlowerBlock("deep_trenches:pink_rose", FLOWER_BEAUTY, 13);
+		PINK_ROSE_BUSH = createFlowerBlock("deep_trenches:pink_rose_bush", FLOWER_BEAUTY, 13);
+		POPPY = createFlowerBlock("deep_trenches:poppy", NIGHT_VISION, 5);
+		PURPLE_AND_ORANGE_PANSY = createFlowerBlock("deep_trenches:purple_and_orange_pansy", RESISTANCE, 9);
+		RED_BRAITOR_FLOWER = createFlowerBlock("deep_trenches:red_braitor_flower", BRAITOR_BEAUTY, 21);
+		RED_CHOCOLATE_COSMOS_FLOWER = createFlowerBlock("deep_trenches:red_chocolate_cosmos_flower", COSMOS_BEAUTY, 14);
+		RED_PANSY = createFlowerBlock("deep_trenches:red_pansy", RESISTANCE, 9);
+		RED_ROSE = createFlowerBlock("deep_trenches:red_rose", FLOWER_BEAUTY, 13);
+		RUBRA_BLUE_VIOLET = createFlowerBlock("deep_trenches:rubra_blue_violet", RESISTANCE, 9);
+		SPIDREET = createStorceanFlower("deep_trenches:spidreet", REGENERATION, 6);
+		SPIKE_LAVENDER = createFlowerBlock("deep_trenches:spike_lavender", FLOWER_BEAUTY, 6);
+		SQUISACLE = createStorceanFlower("deep_trenches:squisacle", LEVITATION, 4);
+		SWEET_VIOLET = createFlowerBlock("deep_trenches:sweet_violet", RESISTANCE, 9);
+		TOPPED_LAVENDER = createFlowerBlock("deep_trenches:topped_lavender", FLOWER_BEAUTY, 6);
+		VASLAME = createStorceanFlower("deep_trenches:vaslame", FIRE_RESISTANCE, 6);
+		WEEPISTIL = createStorceanFlower("deep_trenches:weeppistil", NAUSEA, 4);
+		WEEPY_HOLLOWER = createStorceanFlower("deep_trenches:weepy_hollower", GLOWING, 6);
+		WHITE_VIOLET = createFlowerBlock("deep_trenches:white_violet", RESISTANCE, 9);
+		WILD_PANSY = createFlowerBlock("deep_trenches:wild_pansy", RESISTANCE, 9);
+		YELLOW_VIOLET = createFlowerBlock("deep_trenches:yellow_violet", RESISTANCE, 9);
+
+		AIRIAL_BUSH = createBlock("deep_trenches:airial_bush", AirialBushBlock::new, GRASS);
+		HARSHLES = createBlock("deep_trenches:harshles", HarshlesBlock::new, GRASS);
+		REEBLOON = createBlock("deep_trenches:reebloon", ReebloonBlock::new, GRASS);
+		MURKSTEM = createBlock("deep_trenches:murkstem", MurkstemBlock::new, SUNFLOWER);
+		SPROOM_SPIKE = createBlock("deep_trenches:sproom_spike", SproomSpikeBlock::new, SUNFLOWER);
+
+		BLACK_LILY = createTallFlower("deep_trenches:black_lily", SUNFLOWER);
+		BULLTHORN = createTallFlower("deep_trenches:bullthorn", SUNFLOWER);
+		CACTLOW = createTallFlower("deep_trenches:cactlow", SUNFLOWER);
+		CLAWBULB = createTallFlower("deep_trenches:clawbulb", SUNFLOWER);
+		LIME_SPURGE = createTallFlower("deep_trenches:lime_spruge", SUNFLOWER);
+		LUPIN_FLOWER = createTallFlower("deep_trenches:lupin_flower", SUNFLOWER);
+		ORANGE_LILY = createTallFlower("deep_trenches:orange_lily", SUNFLOWER);
+		PIGAL = createTallFlower("deep_trenches:pigal", SUNFLOWER);
+		PURPROUND = createTallFlower("deep_trenches:purpround", SUNFLOWER);
+		SKALK = createTallFlower("deep_trenches:skalk", SUNFLOWER);
+		SPRINLY = createTallFlower("deep_trenches:sprinly", SUNFLOWER);
+		VELVET_LILY = createTallFlower("deep_trenches:velvet_lily", SUNFLOWER);
+
 		DEAD_BLACKGREEN_TREE_CORAL = createDeadCoral("deep_trenches:dead_blackgreen_tree_coral");
 		DEAD_BLACKGREEN_TREE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_blackgreen_tree_coral_block");
 		DEAD_BLACKGREEN_TREE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_blackgreen_tree_coral_fan");
@@ -1965,7 +2053,7 @@ public class ModBlocks {
 		BROMYA_DOOR = createOakDoor("deep_trenches:bromya_door");
 		BROMYA_FENCE = createOakFence("deep_trenches:bromya_fence");
 		BROMYA_FENCE_GATE = createOakFenceGate("deep_trenches:bromya_fence_gate");
-		BROMYA_FLOWER = createTallFlower("deep_trenches:bromya_flower");
+		BROMYA_FLOWER = createTallFlower("deep_trenches:bromya_flower", ROSE_BUSH);
 		BROMYA_LEAVES = createOakLeaves("deep_trenches:bromya_leaves");
 		BROMYA_LOG = createOakLog("deep_trenches:bromya_log");
 		BROMYA_PLANKS = createOakPlanks("deep_trenches:bromya_planks");
@@ -2183,7 +2271,7 @@ public class ModBlocks {
 		ENDERHEART_WALL_SIGN = createOakWallSign("deep_trenches:enderheart_wall_sign", SignTypes.ENDERHEART);
 		ENDERHEART_WOOD = createOakWood("deep_trenches:enderheart_wood");
 
-		FLALM = createTallFlower("deep_trenches:flalm");
+		FLALM = createTallFlower("deep_trenches:flalm", ROSE_BUSH);
 		FLALM_BUTTON = createOakButton("deep_trenches:flalm_button");
 		FLALM_DOOR = createOakDoor("deep_trenches:flalm_door");
 		FLALM_FENCE = createOakFence("deep_trenches:flalm_fence");
