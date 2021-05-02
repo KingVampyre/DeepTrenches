@@ -93,6 +93,7 @@ public class ModBlocks {
 	public static final Block SKALK;
 	public static final Block SPIDREET;
 	public static final Block SPIKE_LAVENDER;
+	public static final Block SPRIDELION;
 	public static final Block SPRINLY;
 	public static final Block SPROOM_SPIKE;
 	public static final Block SQUISACLE;
@@ -1662,7 +1663,7 @@ public class ModBlocks {
 		CYCAWLER = createStorceanFlower("deep_trenches:cycawler", CYCAWLER_BEAUTY, 24000);
 		GARDEN_PINKS = createFlowerBlock("deep_trenches:garden_pinks", FIRE_RESISTANCE, 6);
 		GREEN_PANSY = createFlowerBlock("deep_trenches:green_pansy", RESISTANCE, 9);
-		GYLDELION_FLOWER = createFlowerBlock("deep_trenches:gyndelion_flower", GLOWING, 12);
+		GYLDELION_FLOWER = createFlowerBlock("deep_trenches:gyldelion_flower", GLOWING, 12);
 		MARSH_VIOLET = createFlowerBlock("deep_trenches:marsh_violet", RESISTANCE, 9);
 		NATIVE_VIOLET = createFlowerBlock("deep_trenches:native_violet", RESISTANCE, 9);
 		OPIUM_POPPY = createFlowerBlock("deep_trenches:opium_poppy", WEAKNESS, 11);
@@ -1680,11 +1681,12 @@ public class ModBlocks {
 		RUBRA_BLUE_VIOLET = createFlowerBlock("deep_trenches:rubra_blue_violet", RESISTANCE, 9);
 		SPIDREET = createStorceanFlower("deep_trenches:spidreet", REGENERATION, 6);
 		SPIKE_LAVENDER = createFlowerBlock("deep_trenches:spike_lavender", FLOWER_BEAUTY, 6);
+		SPRIDELION = register("deep_trenches:spridelion", new SpridelionBlock(900, Settings.copy(RED_TULIP)));
 		SQUISACLE = createStorceanFlower("deep_trenches:squisacle", LEVITATION, 4);
 		SWEET_VIOLET = createFlowerBlock("deep_trenches:sweet_violet", RESISTANCE, 9);
 		TOPPED_LAVENDER = createFlowerBlock("deep_trenches:topped_lavender", FLOWER_BEAUTY, 6);
 		VASLAME = createStorceanFlower("deep_trenches:vaslame", FIRE_RESISTANCE, 6);
-		WEEPISTIL = createStorceanFlower("deep_trenches:weeppistil", NAUSEA, 4);
+		WEEPISTIL = createStorceanFlower("deep_trenches:weepistil", NAUSEA, 4);
 		WEEPY_HOLLOWER = createStorceanFlower("deep_trenches:weepy_hollower", GLOWING, 6);
 		WHITE_VIOLET = createFlowerBlock("deep_trenches:white_violet", RESISTANCE, 9);
 		WILD_PANSY = createFlowerBlock("deep_trenches:wild_pansy", RESISTANCE, 9);
@@ -1700,7 +1702,7 @@ public class ModBlocks {
 		BULLTHORN = createTallFlower("deep_trenches:bullthorn", SUNFLOWER);
 		CACTLOW = createTallFlower("deep_trenches:cactlow", SUNFLOWER);
 		CLAWBULB = createTallFlower("deep_trenches:clawbulb", SUNFLOWER);
-		LIME_SPURGE = createTallFlower("deep_trenches:lime_spruge", SUNFLOWER);
+		LIME_SPURGE = createTallFlower("deep_trenches:lime_spurge", SUNFLOWER);
 		LUPIN_FLOWER = createTallFlower("deep_trenches:lupin_flower", SUNFLOWER);
 		ORANGE_LILY = createTallFlower("deep_trenches:orange_lily", SUNFLOWER);
 		PIGAL = createTallFlower("deep_trenches:pigal", SUNFLOWER);

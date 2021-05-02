@@ -16,4 +16,5 @@ accessible method net/minecraft/block/TrapdoorBlock         <init>   (Lnet/minec
 accessible method net/minecraft/block/WoodenButtonBlock     <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/WallSignBlock         <init>   (Lnet/minecraft/block/AbstractBlock$Settings;Lnet/minecraft/util/SignType;)V
 
+accessible method net/minecraft/client/particle/SpellParticle <init> (Lnet/minecraft/client/world/ClientWorld;DDDDDDLnet/minecraft/client/particle/SpriteProvider;)V
 accessible method net/minecraft/util/SignType               <init>   (Ljava/lang/String;)V

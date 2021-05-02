@@ -26,6 +26,9 @@ public class MixinGrassBlock {
         if(thisBlock == MOSOIL)
             return REEBLOON.getDefaultState();
 
+        if(thisBlock == SPRILIUM)
+            return SPRIDELION.getDefaultState();
+
         return GRASS.getDefaultState();
     }
 

@@ -159,9 +159,11 @@ public class  DeepTrenches implements ModInitializer {
 
 		/* -------------------------------- Status Effects ------------------------------------------- */
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:braitor_beauty"), BRAITOR_BEAUTY);
+		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:corrosion"), CORROSION);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cosmos_beauty"), COSMOS_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cycawler_beauty"), CYCAWLER_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:flower_beauty"), FLOWER_BEAUTY);
+		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:gaseous_corrosion"), GASEOUS_CORROSION);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:sleepy"), SLEEPY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:softbones"), SOFTBONES);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:soul_draining"), SOUL_DRAINING);
@@ -1397,6 +1399,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ITEM, new Identifier("deep_trenches:skalk"), new BlockItem(SKALK, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:spidreet"), new BlockItem(SPIDREET, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:spike_lavender"), new BlockItem(SPIKE_LAVENDER, new Item.Settings().group(GENERAL)));
+		Registry.register(ITEM, new Identifier("deep_trenches:spridelion"), new BlockItem(SPRIDELION, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:sprinly"), new BlockItem(SPRINLY, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:sproom_spike"), new BlockItem(SPROOM_SPIKE, new Item.Settings().group(GENERAL)));
 		Registry.register(ITEM, new Identifier("deep_trenches:squisacle"), new BlockItem(SQUISACLE, new Item.Settings().group(GENERAL)));

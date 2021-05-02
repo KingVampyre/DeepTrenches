@@ -27,7 +27,7 @@ import static net.minecraft.entity.damage.DamageSource.*;
 public abstract class MixinLivingEntity {
 
     @Shadow
-    private float knockbackVelocity;
+    public float knockbackVelocity;
 
     @Shadow
     protected abstract void applyDamage(DamageSource source, float amount);
@@ -87,7 +87,7 @@ public abstract class MixinLivingEntity {
                 LivingEntity attacker = (LivingEntity) source.getAttacker();
                 LivingEntity living = (LivingEntity) (Object) this;
 
-                if(sourceEntity instanceof ArrowEntity) {
+                if(attacker != null && sourceEntity instanceof ArrowEntity) {
                     ItemStack stack = attacker.getEquippedStack(MAINHAND);
 
                     ModEnchantmentHelper.applySoulDraining(attacker, living, stack);
@@ -116,7 +116,7 @@ public abstract class MixinLivingEntity {
             if(source.getName().equals("soul_draining")) {
                 LivingEntity attacker = (LivingEntity) source.getAttacker();
 
-                if(attacker.hasStatusEffect(StatusEffects.SOUL_RAVENING)) {
+                if(attacker != null && attacker.hasStatusEffect(StatusEffects.SOUL_RAVENING)) {
                     StatusEffectInstance instance = attacker.getActiveStatusEffects().get(StatusEffects.SOUL_RAVENING);
 
                     instance.applyUpdateEffect(attacker);

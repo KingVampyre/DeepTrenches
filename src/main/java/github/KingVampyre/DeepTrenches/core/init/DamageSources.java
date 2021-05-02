@@ -8,6 +8,7 @@ import net.minecraft.entity.damage.ProjectileDamageSource;
 
 public class DamageSources {
 
+	public static final DamageSource ACID = InvokerDamageSource.create("acid");
 	public static final DamageSource SPROOM_SPIKE = InvokerDamageSource.create("sproom_spike");
 	public static final DamageSource STORCEAN_THORNS = InvokerDamageSource.create("storcean_thorns");
 

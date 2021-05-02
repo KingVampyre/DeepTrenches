@@ -1,7 +1,10 @@
 {
     "variants": {
-        "": {
+        "snowy=false": {
             "model": "deep_trenches:block/sprilium"
+        },
+        "snowy=true": {
+            "model": "deep_trenches:block/snowy_sprilium"
         }
     }
 }
