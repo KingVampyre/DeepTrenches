@@ -32,7 +32,7 @@ public class ResourceReloadListeners {
 
     public static final SpritesResourceReloadLoader STORCEAN_MESOPELAGIC_WATER = new SpritesResourceReloadLoader("deep_trenches:storcean_mesopelagic_water", Sprites.STORCEAN_MESOPELAGIC_WATER);
 
-    public static final SpritesResourceReloadLoader STORCEAN_VERDIPELAGIC_WATER = new SpritesResourceReloadLoader("deep_trenches:storcean_verdipelagic_water", Sprites.STORCEAN_VERDIPELAGIC_WATER);
+    public static final SpritesResourceReloadLoader STORCEAN_VIRDIPELAGIC_WATER = new SpritesResourceReloadLoader("deep_trenches:storcean_verdipelagic_water", Sprites.STORCEAN_VIRDIPELAGIC_WATER);
 
     public static final SpritesResourceReloadLoader STORCEAN_WATER = new SpritesResourceReloadLoader("deep_trenches:storcean_water", Sprites.STORCEAN_WATER);
 

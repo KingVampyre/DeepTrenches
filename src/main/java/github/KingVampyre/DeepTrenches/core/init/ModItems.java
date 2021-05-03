@@ -48,7 +48,7 @@ public class ModItems {
 	public static final Item STORCEAN_HADOPELAGIC_WATER_BUCKET;
 	public static final Item STORCEAN_INFINIPELAGIC_WATER_BUCKET;
 	public static final Item STORCEAN_MESOPELAGIC_WATER_BUCKET;
-	public static final Item STORCEAN_VERDIPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_VIRDIPELAGIC_WATER_BUCKET;
 	public static final Item STORCEAN_WATER_BUCKET;
 
 	/* ----------------- SPAWN EGGS ------------------- */
@@ -300,7 +300,7 @@ public class ModItems {
 		STORCEAN_HADOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_hadopelagic_water_bucket", ModFluids.STORCEAN_HADOPELAGIC_WATER);
 		STORCEAN_INFINIPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_infinipelagic_water_bucket", ModFluids.STORCEAN_INFINIPELAGIC_WATER);
 		STORCEAN_MESOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_mesopelagic_water_bucket", ModFluids.STORCEAN_MESOPELAGIC_WATER);
-		STORCEAN_VERDIPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_verdipelagic_water_bucket", ModFluids.STORCEAN_VERDIPELAGIC_WATER);
+		STORCEAN_VIRDIPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_virdipelagic_water_bucket", ModFluids.STORCEAN_VIRDIPELAGIC_WATER);
 		STORCEAN_WATER_BUCKET = createBucket("deep_trenches:storcean_water_bucket", ModFluids.STORCEAN_WATER);
 
 		DEEP_LAKE_BETTA_BUCKET = createFishBucket("deep_trenches:deep_lake_betta_bucket", EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA);

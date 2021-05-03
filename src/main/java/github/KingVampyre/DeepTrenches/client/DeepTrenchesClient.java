@@ -64,7 +64,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_HADOPELAGIC_WATER);
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_INFINIPELAGIC_WATER);
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_MESOPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_VERDIPELAGIC_WATER);
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_VIRDIPELAGIC_WATER);
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_WATER);
 
         /* ------------------------------------------ FLUID SPRITES ----------------------------------------------------- */
@@ -110,8 +110,8 @@ public class DeepTrenchesClient implements ClientModInitializer {
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_MESOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_MESOPELAGIC_WATER);
         FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_MESOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_MESOPELAGIC_WATER);
 
-        FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_VERDIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_VERDIPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_VERDIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_VERDIPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_VIRDIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_VIRDIPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_VIRDIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_VIRDIPELAGIC_WATER);
 
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_WATER, FluidRenderHandlers.STORCEAN_WATER);
         FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_WATER, FluidRenderHandlers.STORCEAN_WATER);
@@ -166,8 +166,8 @@ public class DeepTrenchesClient implements ClientModInitializer {
             registry.register(STORCEAN_MESOPELAGIC_WATER_FLOW);
             registry.register(STORCEAN_MESOPELAGIC_WATER_STILL);
 
-            registry.register(STORCEAN_VERDIPELAGIC_WATER_FLOW);
-            registry.register(STORCEAN_VERDIPELAGIC_WATER_STILL);
+            registry.register(STORCEAN_VIRDIPELAGIC_WATER_FLOW);
+            registry.register(STORCEAN_VIRDIPELAGIC_WATER_STILL);
 
             registry.register(STORCEAN_WATER_FLOW);
             registry.register(STORCEAN_WATER_STILL);
@@ -558,8 +558,8 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_MESOPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_MESOPELAGIC_WATER, RenderLayer.getTranslucent());
 
-        BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_VERDIPELAGIC_WATER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_VERDIPELAGIC_WATER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_VIRDIPELAGIC_WATER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_VIRDIPELAGIC_WATER, RenderLayer.getTranslucent());
 
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_WATER, RenderLayer.getTranslucent());

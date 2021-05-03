@@ -33,7 +33,7 @@ public class FluidRenderHandlers {
 
     public static final FluidRenderHandler STORCEAN_MESOPELAGIC_WATER = new ColoredSpriteRenderHandler(Sprites.STORCEAN_MESOPELAGIC_WATER);
 
-    public static final FluidRenderHandler STORCEAN_VERDIPELAGIC_WATER = new ColoredSpriteRenderHandler(Sprites.STORCEAN_VERDIPELAGIC_WATER);
+    public static final FluidRenderHandler STORCEAN_VIRDIPELAGIC_WATER = new ColoredSpriteRenderHandler(Sprites.STORCEAN_VIRDIPELAGIC_WATER);
 
     public static final FluidRenderHandler STORCEAN_WATER = new ColoredSpriteRenderHandler(Sprites.STORCEAN_WATER);
 

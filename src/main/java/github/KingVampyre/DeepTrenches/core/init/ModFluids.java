@@ -51,8 +51,8 @@ public class ModFluids {
     public static final FlowableFluid STORCEAN_MESOPELAGIC_WATER = register("deep_trenches:storcean_mesopelagic_water", new StorceanMesopelagicWaterFluid.Still());
     public static final FlowableFluid FLOWING_STORCEAN_MESOPELAGIC_WATER = register("deep_trenches:flowing_storcean_mesopelagic_water", new StorceanMesopelagicWaterFluid.Flowing());
 
-    public static final FlowableFluid STORCEAN_VERDIPELAGIC_WATER = register("deep_trenches:storcean_verdipelagic_water", new StorceanVerdipelagicWaterFluid.Still());
-    public static final FlowableFluid FLOWING_STORCEAN_VERDIPELAGIC_WATER = register("deep_trenches:flowing_storcean_verdipelagic_water", new StorceanVerdipelagicWaterFluid.Flowing());
+    public static final FlowableFluid STORCEAN_VIRDIPELAGIC_WATER = register("deep_trenches:storcean_virdipelagic_water", new StorceanVirdipelagicWaterFluid.Still());
+    public static final FlowableFluid FLOWING_STORCEAN_VIRDIPELAGIC_WATER = register("deep_trenches:flowing_storcean_verdipelagic_water", new StorceanVirdipelagicWaterFluid.Flowing());
 
     public static final FlowableFluid STORCEAN_WATER = register("deep_trenches:storcean_water", new StorceanWaterFluid.Still());
     public static final FlowableFluid FLOWING_STORCEAN_WATER = register("deep_trenches:flowing_storcean_water", new StorceanWaterFluid.Flowing());

@@ -9,7 +9,6 @@ import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.fluid.FlowableFluid;
-import net.minecraft.fluid.Fluid;
 import net.minecraft.util.SignType;
 import net.minecraft.util.registry.Registry;
 
@@ -130,7 +129,7 @@ public class ModBlocks {
 	public static final Block STORCEAN_HADOPELAGIC_WATER;
 	public static final Block STORCEAN_INFINIPELAGIC_WATER;
 	public static final Block STORCEAN_MESOPELAGIC_WATER;
-	public static final Block STORCEAN_VERDIPELAGIC_WATER;
+	public static final Block STORCEAN_VIRDIPELAGIC_WATER;
 	public static final Block STORCEAN_WATER;
 
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL;
@@ -3118,13 +3117,13 @@ public class ModBlocks {
 		HADOPELAGIC_WATER = createFluid("deep_trenches:hadopelagic_water", ModFluids.HADOPELAGIC_WATER);
 		MESOPELAGIC_WATER = createFluid("deep_trenches:mesopelagic_water", ModFluids.MESOPELAGIC_WATER);
 		STORCEAN_ABYSSOPELAGIC_WATER = createFluid("deep_trenches:storcean_abyssopelagic_water", ModFluids.STORCEAN_ABYSSOPELAGIC_WATER);
-		STORCEAN_BATHYPELAGIC_WATER = createFluid("deep_trenches:storcean_abyssopelagic_water", ModFluids.STORCEAN_BATHYPELAGIC_WATER);
-		STORCEAN_ENDERPELAGIC_WATER = createFluid("deep_trenches:storcean_abyssopelagic_water", ModFluids.STORCEAN_ENDERPELAGIC_WATER);
-		STORCEAN_GASOPELAGIC_WATER = createFluid("deep_trenches:storcean_abyssopelagic_water", ModFluids.STORCEAN_GASOPELAGIC_WATER);
-		STORCEAN_HADOPELAGIC_WATER = createFluid("deep_trenches:storcean_abyssopelagic_water", ModFluids.STORCEAN_HADOPELAGIC_WATER);
-		STORCEAN_INFINIPELAGIC_WATER = createFluid("deep_trenches:storcean_abyssopelagic_water", ModFluids.STORCEAN_INFINIPELAGIC_WATER);
-		STORCEAN_MESOPELAGIC_WATER = createFluid("deep_trenches:storcean_abyssopelagic_water", ModFluids.STORCEAN_MESOPELAGIC_WATER);
-		STORCEAN_VERDIPELAGIC_WATER = createFluid("deep_trenches:storcean_abyssopelagic_water", ModFluids.STORCEAN_VERDIPELAGIC_WATER);
+		STORCEAN_BATHYPELAGIC_WATER = createFluid("deep_trenches:storcean_bathypelagic_water", ModFluids.STORCEAN_BATHYPELAGIC_WATER);
+		STORCEAN_ENDERPELAGIC_WATER = createFluid("deep_trenches:storcean_enderpelagic_water", ModFluids.STORCEAN_ENDERPELAGIC_WATER);
+		STORCEAN_GASOPELAGIC_WATER = createFluid("deep_trenches:storcean_gasopelagic_water", ModFluids.STORCEAN_GASOPELAGIC_WATER);
+		STORCEAN_HADOPELAGIC_WATER = createFluid("deep_trenches:storcean_hadopelagic_water", ModFluids.STORCEAN_HADOPELAGIC_WATER);
+		STORCEAN_INFINIPELAGIC_WATER = createFluid("deep_trenches:storcean_infinipelagic_water", ModFluids.STORCEAN_INFINIPELAGIC_WATER);
+		STORCEAN_MESOPELAGIC_WATER = createFluid("deep_trenches:storcean_mesopelagic_water", ModFluids.STORCEAN_MESOPELAGIC_WATER);
+		STORCEAN_VIRDIPELAGIC_WATER = createFluid("deep_trenches:storcean_virdipelagic_water", ModFluids.STORCEAN_VIRDIPELAGIC_WATER);
 		STORCEAN_WATER = createFluid("deep_trenches:storcean_water", ModFluids.ABYSSOPELAGIC_WATER);
 	}
 

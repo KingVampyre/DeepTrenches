@@ -1,7 +1,7 @@
 {
-	"variants": {
-		"": {
-			"model": "deep_trenches:block/abyssopelagic_water"
-		}
-	}
+    "variants": {
+        "": {
+            "model": "deep_trenches:block/abyssopelagic_water"
+        }
+    }
 }

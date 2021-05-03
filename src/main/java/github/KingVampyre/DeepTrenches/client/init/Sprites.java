@@ -77,9 +77,9 @@ public class Sprites {
             STORCEAN_MESOPELAGIC_WATER_STILL
     ));
 
-    public static final SpriteLoader STORCEAN_VERDIPELAGIC_WATER = new SpriteLoader(ImmutableList.of(
-            STORCEAN_VERDIPELAGIC_WATER_FLOW,
-            STORCEAN_VERDIPELAGIC_WATER_STILL
+    public static final SpriteLoader STORCEAN_VIRDIPELAGIC_WATER = new SpriteLoader(ImmutableList.of(
+            STORCEAN_VIRDIPELAGIC_WATER_FLOW,
+            STORCEAN_VIRDIPELAGIC_WATER_STILL
     ));
 
     public static final SpriteLoader STORCEAN_WATER = new SpriteLoader(ImmutableList.of(
