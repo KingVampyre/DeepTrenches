@@ -11,6 +11,7 @@ accessible method net/minecraft/block/DeadCoralBlock        <init>   (Lnet/minec
 accessible method net/minecraft/block/DeadCoralFanBlock     <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/DeadCoralWallFanBlock <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/DoorBlock             <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/FluidBlock            <init>   (Lnet/minecraft/fluid/FlowableFluid;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/PressurePlateBlock    <init>   (Lnet/minecraft/block/PressurePlateBlock$ActivationRule;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/SignBlock             <init>   (Lnet/minecraft/block/AbstractBlock$Settings;Lnet/minecraft/util/SignType;)V
 accessible method net/minecraft/block/StairsBlock           <init>   (Lnet/minecraft/block/BlockState;Lnet/minecraft/block/AbstractBlock$Settings;)V
@@ -18,5 +19,5 @@ accessible method net/minecraft/block/TrapdoorBlock         <init>   (Lnet/minec
 accessible method net/minecraft/block/WoodenButtonBlock     <init>   (Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/WallSignBlock         <init>   (Lnet/minecraft/block/AbstractBlock$Settings;Lnet/minecraft/util/SignType;)V
 
-accessible method net/minecraft/client/particle/SpellParticle <init> (Lnet/minecraft/client/world/ClientWorld;DDDDDDLnet/minecraft/client/particle/SpriteProvider;)V
-accessible method net/minecraft/util/SignType               <init>   (Ljava/lang/String;)V
+accessible method net/minecraft/client/particle/SpellParticle   <init>      (Lnet/minecraft/client/world/ClientWorld;DDDDDDLnet/minecraft/client/particle/SpriteProvider;)V
+accessible method net/minecraft/util/SignType                   <init>      (Ljava/lang/String;)V

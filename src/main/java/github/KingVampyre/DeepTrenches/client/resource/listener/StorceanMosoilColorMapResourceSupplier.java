@@ -1,10 +1,9 @@
-package github.KingVampyre.DeepTrenches.client.resource;
+package github.KingVampyre.DeepTrenches.client.resource.listener;
 
-import github.KingVampyre.DeepTrenches.core.init.ColorMaps;
+import github.KingVampyre.DeepTrenches.client.init.ColorMaps;
 import net.fabricmc.fabric.api.resource.SimpleResourceReloadListener;
 import net.minecraft.client.util.RawTextureDataLoader;
 import net.minecraft.resource.ResourceManager;
-import net.minecraft.resource.SinglePreparationResourceReloadListener;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.profiler.Profiler;
 

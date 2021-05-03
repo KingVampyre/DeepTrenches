@@ -3,29 +3,39 @@ package github.KingVampyre.DeepTrenches.client;
 import github.KingVampyre.DeepTrenches.client.color.block.FoliageColorProvider;
 import github.KingVampyre.DeepTrenches.client.color.block.MosoilColorProvider;
 import github.KingVampyre.DeepTrenches.client.color.block.StorceanFoliageColorProvider;
+import github.KingVampyre.DeepTrenches.client.init.ColorMaps;
+import github.KingVampyre.DeepTrenches.client.init.FluidRenderHandlers;
+import github.KingVampyre.DeepTrenches.client.init.ResourceReloadListeners;
 import github.KingVampyre.DeepTrenches.client.particle.SkullParticle;
 import github.KingVampyre.DeepTrenches.client.render.block.entity.CustomSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
-import github.KingVampyre.DeepTrenches.client.resource.StorceanFoliageColorMapResourceSupplier;
-import github.KingVampyre.DeepTrenches.client.resource.StorceanMosoilColorMapResourceSupplier;
-import github.KingVampyre.DeepTrenches.client.resource.StorceanWaterColorMapResourceSupplier;
+import github.KingVampyre.DeepTrenches.client.resource.listener.StorceanFoliageColorMapResourceSupplier;
+import github.KingVampyre.DeepTrenches.client.resource.listener.StorceanMosoilColorMapResourceSupplier;
+import github.KingVampyre.DeepTrenches.client.resource.listener.StorceanWaterColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.ModBoatEntityRenderer;
-import github.KingVampyre.DeepTrenches.core.init.*;
+import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
+import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
+import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
+import github.KingVampyre.DeepTrenches.core.init.SignTypes;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;
 
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.AMBIENT_CORRODED_SKULL;
+import static github.KingVampyre.DeepTrenches.client.init.Textures.*;
+import static github.KingVampyre.DeepTrenches.core.init.ModFluids.*;
+import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.ENTITY_CORRODED_SKULL;
 import static net.minecraft.client.render.TexturedRenderLayers.SIGNS_ATLAS_TEXTURE;
+import static net.minecraft.resource.ResourceType.CLIENT_RESOURCES;
+import static net.minecraft.screen.PlayerScreenHandler.BLOCK_ATLAS_TEXTURE;
 
 public class DeepTrenchesClient implements ClientModInitializer {
 
@@ -34,10 +44,17 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(AMBIENT_CORRODED_SKULL, SkullParticle.EntityAmbientFactory::new);
         ParticleFactoryRegistry.getInstance().register(ENTITY_CORRODED_SKULL, SkullParticle.EntityFactory::new);
 
-        /* ------------------------------------------ ColorMaps ----------------------------------------------------- */
-        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanFoliageColorMapResourceSupplier());
-        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanMosoilColorMapResourceSupplier());
-        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new StorceanWaterColorMapResourceSupplier());
+        /* ------------------------------------------ COLOR MAPS ----------------------------------------------------- */
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new StorceanFoliageColorMapResourceSupplier());
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new StorceanMosoilColorMapResourceSupplier());
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new StorceanWaterColorMapResourceSupplier());
+
+        /* ------------------------------------------ FLUID SPRITES ----------------------------------------------------- */
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.ABYSSOPELAGIC_WATER);
+
+        /* ------------------------------------------ FLUID SPRITES ----------------------------------------------------- */
+        FluidRenderHandlerRegistry.INSTANCE.register(ABYSSOPELAGIC_WATER, FluidRenderHandlers.ABYSSOPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_ABYSSOPELAGIC_WATER, FluidRenderHandlers.ABYSSOPELAGIC_WATER);
 
         /* ------------------------------------------ TEXTURE ATLAS ----------------------------------------------------- */
         ClientSpriteRegistryCallback.event(SIGNS_ATLAS_TEXTURE).register((atlas, registry) -> {
@@ -45,6 +62,11 @@ public class DeepTrenchesClient implements ClientModInitializer {
                     .map(signType -> "deep_trenches:entity/signs/" + signType.getName())
                     .map(Identifier::new)
                     .forEach(registry::register);
+        });
+
+        ClientSpriteRegistryCallback.event(BLOCK_ATLAS_TEXTURE).register((atlas, registry) -> {
+            registry.register(ABYSSOPELAGIC_WATER_FLOW);
+            registry.register(ABYSSOPELAGIC_WATER_STILL);
         });
 
         /* ------------------------------------------ BLOCK COLORS ----------------------------------------------------- */
@@ -388,6 +410,10 @@ public class DeepTrenchesClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AIRIAL_MOSS, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MOSOIL, RenderLayer.getCutoutMipped());
+
+        /* ------------------------------------------ FLUID RENDER LAYERS ----------------------------------------------------- */
+        BlockRenderLayerMap.INSTANCE.putFluid(ABYSSOPELAGIC_WATER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_ABYSSOPELAGIC_WATER, RenderLayer.getTranslucent());
 
         /* ------------------------------------------ BLOCK ENTITY RENDERERS ----------------------------------------------------- */
         BlockEntityRendererRegistry.INSTANCE.register(BlockEntityTypes.SIGN, CustomSignBlockEntityRenderer::new);

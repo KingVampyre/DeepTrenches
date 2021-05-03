@@ -6,6 +6,7 @@ import github.KingVampyre.DeepTrenches.common.item.TagSpawnEggItem;
 import github.KingVampyre.DeepTrenches.core.item.AdaiggerItem;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.*;
 import net.minecraft.item.Item.Settings;
 import net.minecraft.tag.Tag;
@@ -18,6 +19,7 @@ import static github.KingVampyre.DeepTrenches.core.init.ModFoodComponents.STORCE
 import static net.minecraft.fluid.Fluids.WATER;
 import static net.minecraft.item.FoodComponents.APPLE;
 import static net.minecraft.item.FoodComponents.SWEET_BERRIES;
+import static net.minecraft.item.Items.BUCKET;
 import static net.minecraft.util.registry.Registry.ITEM;
 
 public class ModItems {
@@ -30,6 +32,9 @@ public class ModItems {
 	public static final Item GIANT_HATCHETFISH_BUCKET;
 	public static final Item LIGHT_LOOSEJAW_BUCKET;
 	public static final Item SMALLTOOTH_DRAGONFISH_BUCKET;
+
+	/* --------------- FLUID BUCKETS ----------------- */
+	public static final Item ABYSSOPELAGIC_WATER_BUCKET;
 
 	/* ----------------- SPAWN EGGS ------------------- */
 	public static final Item BARBELED_LOOSEJAW_SPAWN_EGG;
@@ -220,6 +225,10 @@ public class ModItems {
 		return register(id, new ModBoatItem(type, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
 	}
 
+	protected static Item createBucket(String id, FlowableFluid fluid) {
+		return register(id, new BucketItem(fluid,  new Item.Settings().recipeRemainder(BUCKET).maxCount(1).group(ItemGroups.GENERAL)));
+	}
+
 	protected static Item createFishBucket(String id, EntityType<?> type) {
 		return register(id, new FishBucketItem(type, WATER, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
 	}
@@ -230,14 +239,6 @@ public class ModItems {
 
 	protected static Item createFood(String id, FoodComponent food) {
 		return createItem(id, new Settings().group(GENERAL).food(food));
-	}
-
-	protected static Item createSpawnEgg(String id, EntityType<?> type, int primaryColor, int secondaryColor) {
-		return register(id, new SpawnEggItem(type, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
-	}
-
-	protected static Item createSpawnEgg(String id, EntityType<?> type, Tag<EntityType<?>> tag, int primaryColor, int secondaryColor) {
-		return register(id, new TagSpawnEggItem(type, tag, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
 	}
 
 	protected static Item createItem(String id, ItemGroup itemGroup) {
@@ -252,6 +253,14 @@ public class ModItems {
 		return register(id, function.apply(settings));
 	}
 
+	protected static Item createSpawnEgg(String id, EntityType<?> type, int primaryColor, int secondaryColor) {
+		return register(id, new SpawnEggItem(type, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
+	}
+
+	protected static Item createSpawnEgg(String id, EntityType<?> type, Tag<EntityType<?>> tag, int primaryColor, int secondaryColor) {
+		return register(id, new TagSpawnEggItem(type, tag, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(ItemGroups.GENERAL)));
+	}
+
 	protected static Item register(String id, Item item) {
 		return Registry.register(ITEM, id, item);
 	}
@@ -261,6 +270,8 @@ public class ModItems {
 		BETTA_BUCKET = createFishBucket("deep_trenches:betta_bucket", EntityTypes.BETTA);
 		BLACK_LOOSEJAW_BUCKET = createFishBucket("deep_trenches:black_loosejaw_bucket", EntityTypes.BLACK_LOOSEJAW);
 		LIGHT_LOOSEJAW_BUCKET = createFishBucket("deep_trenches:light_loosejaw_bucket", EntityTypes.LIGHT_LOOSEJAW);
+
+		ABYSSOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:abyssopelagic_water_bucket", ModFluids.ABYSSOPELAGIC_WATER);
 
 		DEEP_LAKE_BETTA_BUCKET = createFishBucket("deep_trenches:deep_lake_betta_bucket", EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA);
 		GIANT_HATCHETFISH_BUCKET = createFishBucket("deep_trenches:giant_hatchetfish_bucket", EntityTypes.GIANT_HATCHETFISH,  EntityTypeTags.ARGYROPELECUS_GIGAS);

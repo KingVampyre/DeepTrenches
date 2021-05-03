@@ -8,6 +8,8 @@ import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.fluid.FlowableFluid;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.util.SignType;
 import net.minecraft.util.registry.Registry;
 
@@ -113,6 +115,8 @@ public class ModBlocks {
 	public static final Block GIANT_VIOLET_LEAF;
 	public static final Block GIANT_VIOLET_PETAL;
 	public static final Block GIANT_VIOLET_PISTIL;
+
+	public static final Block ABYSSOPELAGIC_WATER;
 
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL;
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL_BLOCK;
@@ -1543,6 +1547,10 @@ public class ModBlocks {
 
 	protected static Block createFlowerPot(String id, Block block) {
 		return register(id, new FlowerPotBlock(block, Settings.copy(Blocks.POTTED_POPPY)));
+	}
+
+	protected static Block createFluid(String id, FlowableFluid fluid) {
+		return register(id, new FluidBlock(fluid, Settings.copy(WATER)));
 	}
 
 	protected static Block createOakButton(String id) {
@@ -3086,6 +3094,8 @@ public class ModBlocks {
 		STORCENDITE = createCopy("deep_trenches:storcendite", STONE);
 		STORCERACK = createCopy("deep_trenches:storcerack", STONE);
 		VERDINE = createCopy("deep_trenches:verdine", STONE);
+
+		ABYSSOPELAGIC_WATER = createFluid("deep_trenches:abyssopelagic_water", ModFluids.ABYSSOPELAGIC_WATER);
 	}
 
 }

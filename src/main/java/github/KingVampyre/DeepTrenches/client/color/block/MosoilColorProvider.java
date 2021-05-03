@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.client.color.block;
 
-import github.KingVampyre.DeepTrenches.core.init.ColorMaps;
+import github.KingVampyre.DeepTrenches.client.init.ColorMaps;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.block.BlockColorProvider;
