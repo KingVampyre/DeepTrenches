@@ -10,37 +10,37 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.ABYSSOPELAGIC_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_ABYSSOPELAGIC_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.ModFluids.STORCEAN_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_STORCEAN_WATER;
 
-public abstract class AbyssopelagicWaterFluid extends AbstractWaterFluid {
+public abstract class StorceanWaterFluid extends AbstractWaterFluid {
 
     @Override
     public Item getBucketItem() {
-        return ModItems.ABYSSOPELAGIC_WATER_BUCKET;
+        return ModItems.STORCEAN_WATER_BUCKET;
     }
 
     @Override
     public Fluid getFlowing() {
-        return FLOWING_ABYSSOPELAGIC_WATER;
+        return FLOWING_STORCEAN_WATER;
     }
 
     @Override
     public Fluid getStill() {
-        return ABYSSOPELAGIC_WATER;
+        return STORCEAN_WATER;
     }
 
     @Override
     public boolean matchesType(Fluid fluid) {
-        return fluid == ABYSSOPELAGIC_WATER || fluid == FLOWING_ABYSSOPELAGIC_WATER;
+        return fluid == STORCEAN_WATER || fluid == FLOWING_STORCEAN_WATER;
     }
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModBlocks.ABYSSOPELAGIC_WATER.getDefaultState().with(FluidBlock.LEVEL, method_15741(state));
+        return ModBlocks.STORCEAN_WATER.getDefaultState().with(FluidBlock.LEVEL, method_15741(state));
     }
 
-    public static class Flowing extends AbyssopelagicWaterFluid {
+    public static class Flowing extends StorceanWaterFluid {
 
         @Override
         protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
@@ -61,7 +61,7 @@ public abstract class AbyssopelagicWaterFluid extends AbstractWaterFluid {
 
     }
 
-    public static class Still extends AbyssopelagicWaterFluid {
+    public static class Still extends StorceanWaterFluid {
 
         @Override
         public int getLevel(FluidState state) {

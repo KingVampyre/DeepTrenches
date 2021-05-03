@@ -21,7 +21,7 @@ import net.minecraft.world.WorldView;
 
 import java.util.Random;
 
-public abstract class StorceanWaterFluid extends FlowableFluid {
+public abstract class AbstractWaterFluid extends FlowableFluid {
 
     @Override
     protected void beforeBreakingBlock(WorldAccess world, BlockPos pos, BlockState state) {

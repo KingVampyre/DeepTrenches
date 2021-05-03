@@ -35,6 +35,21 @@ public class ModItems {
 
 	/* --------------- FLUID BUCKETS ----------------- */
 	public static final Item ABYSSOPELAGIC_WATER_BUCKET;
+	public static final Item ACID_BUCKET;
+	public static final Item BATHYPELAGIC_WATER_BUCKET;
+	public static final Item BRINE_BUCKET;
+	public static final Item CLEAR_WATER_BUCKET;
+	public static final Item HADOPELAGIC_WATER_BUCKET;
+	public static final Item MESOPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_ABYSSOPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_BATHYPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_ENDERPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_GASOPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_HADOPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_INFINIPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_MESOPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_VERDIPELAGIC_WATER_BUCKET;
+	public static final Item STORCEAN_WATER_BUCKET;
 
 	/* ----------------- SPAWN EGGS ------------------- */
 	public static final Item BARBELED_LOOSEJAW_SPAWN_EGG;
@@ -272,6 +287,21 @@ public class ModItems {
 		LIGHT_LOOSEJAW_BUCKET = createFishBucket("deep_trenches:light_loosejaw_bucket", EntityTypes.LIGHT_LOOSEJAW);
 
 		ABYSSOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:abyssopelagic_water_bucket", ModFluids.ABYSSOPELAGIC_WATER);
+		ACID_BUCKET = createBucket("deep_trenches:acid_bucket", ModFluids.ACID);
+		BATHYPELAGIC_WATER_BUCKET = createBucket("deep_trenches:bathypelagic_water_bucket", ModFluids.BATHYPELAGIC_WATER);
+		BRINE_BUCKET = createBucket("deep_trenches:brine_bucket", ModFluids.BRINE);
+		CLEAR_WATER_BUCKET = createBucket("deep_trenches:clear_water_bucket", ModFluids.CLEAR_WATER);
+		HADOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:hadopelagic_water_bucket", ModFluids.HADOPELAGIC_WATER);
+		MESOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:mesopelagic_water_bucket", ModFluids.MESOPELAGIC_WATER);
+		STORCEAN_ABYSSOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_abyssopelagic_water_bucket", ModFluids.STORCEAN_ABYSSOPELAGIC_WATER);
+		STORCEAN_BATHYPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_bathypelagic_water_bucket", ModFluids.STORCEAN_BATHYPELAGIC_WATER);
+		STORCEAN_ENDERPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_enderpelagic_water_bucket", ModFluids.STORCEAN_ENDERPELAGIC_WATER);
+		STORCEAN_GASOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_gasopelagic_water_bucket", ModFluids.STORCEAN_GASOPELAGIC_WATER);
+		STORCEAN_HADOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_hadopelagic_water_bucket", ModFluids.STORCEAN_HADOPELAGIC_WATER);
+		STORCEAN_INFINIPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_infinipelagic_water_bucket", ModFluids.STORCEAN_INFINIPELAGIC_WATER);
+		STORCEAN_MESOPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_mesopelagic_water_bucket", ModFluids.STORCEAN_MESOPELAGIC_WATER);
+		STORCEAN_VERDIPELAGIC_WATER_BUCKET = createBucket("deep_trenches:storcean_verdipelagic_water_bucket", ModFluids.STORCEAN_VERDIPELAGIC_WATER);
+		STORCEAN_WATER_BUCKET = createBucket("deep_trenches:storcean_water_bucket", ModFluids.STORCEAN_WATER);
 
 		DEEP_LAKE_BETTA_BUCKET = createFishBucket("deep_trenches:deep_lake_betta_bucket", EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA);
 		GIANT_HATCHETFISH_BUCKET = createFishBucket("deep_trenches:giant_hatchetfish_bucket", EntityTypes.GIANT_HATCHETFISH,  EntityTypeTags.ARGYROPELECUS_GIGAS);
