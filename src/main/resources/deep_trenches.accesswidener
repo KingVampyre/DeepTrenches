@@ -2,6 +2,8 @@ accessWidener   v1  named
 accessible class net/minecraft/entity/ai/brain/task/CompositeTask$Order
 accessible class net/minecraft/entity/ai/brain/task/CompositeTask$RunMode
 
+accessible field net/minecraft/entity/effect/StatusEffectInstance type Lnet/minecraft/entity/effect/StatusEffect;
+
 accessible method net/minecraft/block/CoralBlock            <init>   (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/CoralFanBlock         <init>   (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/CoralWallFanBlock     <init>   (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V

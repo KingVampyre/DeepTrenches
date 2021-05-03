@@ -15,10 +15,12 @@ public class SpriliumBlock extends GrassBlock {
 
     public SpriliumBlock(Settings settings) {
         super(settings);
+
+        this.setDefaultState(this.stateManager.getDefaultState().with(SNOWY, false));
     }
 
     @Override
-    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!InvokerSpreadableBlock.canSurvive(state, world, pos))
             world.setBlockState(pos, VERDINE.getDefaultState());
         else {

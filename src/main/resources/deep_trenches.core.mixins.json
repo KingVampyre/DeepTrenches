@@ -4,7 +4,6 @@
   "package": "github.KingVampyre.DeepTrenches.core.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "AccessorStatusEffectInstance",
     "AccessorTridentEntity",
     "InvokerDamageSource",
     "InvokerMemoryModuleType",

@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.common.entity.effect;
 
-import github.KingVampyre.DeepTrenches.core.mixin.AccessorStatusEffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -9,7 +8,7 @@ import java.util.function.Consumer;
 
 public class EntityStatusEffectInstance extends StatusEffectInstance {
 
-    private Consumer<LivingEntity> consumer;
+    private final Consumer<LivingEntity> consumer;
 
     public EntityStatusEffectInstance(StatusEffect type, int duration, int amplifier, Consumer<LivingEntity> consumer) {
         super(type, duration, amplifier);
@@ -19,15 +18,13 @@ public class EntityStatusEffectInstance extends StatusEffectInstance {
 
     @Override
     public boolean update(LivingEntity entity, Runnable overwriteCallback) {
-        AccessorStatusEffectInstance accessor = (AccessorStatusEffectInstance) this;
+        int amplifier = this.getAmplifier();
+        int duration = this.getDuration();
 
-        int amplifier = accessor.getAmplifier();
-        int duration = accessor.getDuration();
-        StatusEffect type = accessor.getType();
-
-        if (duration > 0 && type.canApplyUpdateEffect(duration, amplifier))
+        if (duration > 0 && this.type.canApplyUpdateEffect(duration, amplifier))
             this.consumer.accept(entity);
 
         return super.update(entity, overwriteCallback);
     }
+
 }

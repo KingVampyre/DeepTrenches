@@ -11,7 +11,6 @@ import net.minecraft.world.WorldAccess;
 import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.POININE;
-import static net.minecraft.block.Blocks.AIR;
 import static net.minecraft.block.Blocks.SNOW;
 import static net.minecraft.block.Blocks.SNOW_BLOCK;
 
@@ -25,7 +24,7 @@ public class EnrotiumBlock extends GrassBlock {
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
 
         if(direction == Direction.UP && newState.isOf(SNOW_BLOCK) || newState.isOf(SNOW))
-            return AIR.getDefaultState();
+            return POININE.getDefaultState();
 
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
     }

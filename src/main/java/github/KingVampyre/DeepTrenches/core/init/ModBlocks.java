@@ -3079,7 +3079,7 @@ public class ModBlocks {
 		OPALITE = createCopy("deep_trenches:opalite", QUARTZ_BLOCK);
 		POININE = createPillar("deep_trenches:poinine", BASALT);
 		RHODONITE = createCopy("deep_trenches:rhodonite", QUARTZ_BLOCK);
-		SPRILIUM = createBlock("deep_trenches:sprilium", SpriliumBlock::new, CRIMSON_NYLIUM);
+		SPRILIUM = createBlock("deep_trenches:sprilium", SpriliumBlock::new, Settings.copy(STONE).ticksRandomly());
 		SKYSOIL = createCopy("deep_trenches:skysoil", DIRT);
 		SKYSTONE = createCopy("deep_trenches:skystone", STONE);
 		STORCEAN_MARINE_SNOW = createCopy("deep_trenches:storcean_marine_snow", SOUL_SAND);

@@ -158,12 +158,12 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:tamable_hurt_by"), SensorTypes.TAMABLE_HURT_BY);
 
 		/* -------------------------------- Status Effects ------------------------------------------- */
+		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:acid_corrosion"), ACID_CORROSION);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:braitor_beauty"), BRAITOR_BEAUTY);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:corrosion"), CORROSION);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cosmos_beauty"), COSMOS_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cycawler_beauty"), CYCAWLER_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:flower_beauty"), FLOWER_BEAUTY);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:gaseous_corrosion"), GASEOUS_CORROSION);
+		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:gas_corrosion"), GAS_CORROSION);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:sleepy"), SLEEPY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:softbones"), SOFTBONES);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:soul_draining"), SOUL_DRAINING);
