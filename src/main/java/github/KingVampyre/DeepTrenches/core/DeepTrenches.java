@@ -172,14 +172,31 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:beach"), BEACH);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:beethoven_piano"), BEETHOVEN_PIANO);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:beethoven_upright_piano"), BEETHOVEN_UPRIGHT_PIANO);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:begone_creepy"), BEGONE_CREEPY);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:black_loosejaw_and_giant_seed_shrimp"), BLACK_LOOSEJAW_AND_GIANT_SEED_SHRIMP);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:black_loosejaw_in_marine_snow"), BLACK_LOOSEJAW_IN_MARINE_SNOW);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:black_seadevil"), BLACK_SEADEVIL);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:bloorshroom"), BLOORSHROOM);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:blue_moon_nightscape"), BLUE_MOON_NIGHTSCAPE);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:blue_violet_garden"), BLUE_VIOLET_GARDEN);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:bubbles_and_snow"), BUBBLES_AND_SNOW);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:creepers_morning"), CREEPERS_MORNING);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:disorted_head"), DISORTED_HEAD);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:icheel"), ICHEEL);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:jungle"), JUNGLE);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:meowing_tractor"), MEOWING_TRACTOR);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:scutigera"), SCUTIGERA);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:soul"), SOUL);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:steve_and_boats"), STEVE_AND_BOATS);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:storcean_island"), STORCEAN_ISLAND);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:stormy_seascape"), STORMY_SEASCAPE);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:sunrise_desert"), SUNRISE_DESERT);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:sunrise_with_trees"), SUNRISE_WITH_TREES);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:sunset_and_flowers"), SUNSET_AND_FLOWERS);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:toothy_soul"), TOOTHY_SOUL);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:violet_pot"), VIOLET_POT);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:vivid_face"), VIVID_FACE);
+		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:vivid_face_2"), VIVID_FACE_2);
 
         /* -------------------------------- Items ------------------------------------------- */
 
