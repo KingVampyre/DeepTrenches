@@ -6,9 +6,9 @@ import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 
-public class SkullParticle extends SpellParticle {
+public class StatusEffectParticle extends SpellParticle {
 
-    public SkullParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
+    public StatusEffectParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
         super(world, x, y, z, velocityX, velocityY, velocityZ, spriteProvider);
     }
 
@@ -22,7 +22,7 @@ public class SkullParticle extends SpellParticle {
         }
 
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            SkullParticle particle = new SkullParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider);
+            StatusEffectParticle particle = new StatusEffectParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider);
             particle.setColorAlpha(0.15F);
 
             return particle;
@@ -40,7 +40,7 @@ public class SkullParticle extends SpellParticle {
         }
 
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            return new SkullParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider);
+            return new StatusEffectParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider);
         }
 
     }

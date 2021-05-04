@@ -6,7 +6,9 @@ import github.KingVampyre.DeepTrenches.client.color.block.StorceanFoliageColorPr
 import github.KingVampyre.DeepTrenches.client.init.ColorMaps;
 import github.KingVampyre.DeepTrenches.client.init.FluidRenderHandlers;
 import github.KingVampyre.DeepTrenches.client.init.ResourceReloadListeners;
-import github.KingVampyre.DeepTrenches.client.particle.SkullParticle;
+import github.KingVampyre.DeepTrenches.client.particle.AcidParticle;
+import github.KingVampyre.DeepTrenches.client.particle.MarineSnowParticle;
+import github.KingVampyre.DeepTrenches.client.particle.StatusEffectParticle;
 import github.KingVampyre.DeepTrenches.client.render.block.entity.CustomSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
 import github.KingVampyre.DeepTrenches.client.resource.listener.StorceanFoliageColorMapResourceSupplier;
@@ -31,8 +33,7 @@ import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.client.init.Textures.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.*;
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.AMBIENT_CORRODED_SKULL;
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.ENTITY_CORRODED_SKULL;
+import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
 import static net.minecraft.client.render.TexturedRenderLayers.SIGNS_ATLAS_TEXTURE;
 import static net.minecraft.resource.ResourceType.CLIENT_RESOURCES;
 import static net.minecraft.screen.PlayerScreenHandler.BLOCK_ATLAS_TEXTURE;
@@ -41,8 +42,24 @@ public class DeepTrenchesClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        ParticleFactoryRegistry.getInstance().register(AMBIENT_CORRODED_SKULL, SkullParticle.EntityAmbientFactory::new);
-        ParticleFactoryRegistry.getInstance().register(ENTITY_CORRODED_SKULL, SkullParticle.EntityFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ACID_DRIPLET, AcidParticle.DripletFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ACID_DRIPPING, AcidParticle.DrippingFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ACID_FALLING, AcidParticle.FallingFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ACID_LANDING, AcidParticle.LandingFactory::new);
+
+        ParticleFactoryRegistry.getInstance().register(AMBIENT_CORRODED_SKULL, StatusEffectParticle.EntityAmbientFactory::new);
+        ParticleFactoryRegistry.getInstance().register(AMBIENT_NEAR_GASEOUS_ACID, StatusEffectParticle.EntityAmbientFactory::new);
+
+        ParticleFactoryRegistry.getInstance().register(ENTITY_CORRODED_SKULL, StatusEffectParticle.EntityFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ENTITY_NEAR_GASEOUS_ACID, StatusEffectParticle.EntityFactory::new);
+
+        ParticleFactoryRegistry.getInstance().register(MARINE_SNOW_BIG, MarineSnowParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MARINE_SNOW_CHUNK, MarineSnowParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MARINE_SNOW_SMALL, MarineSnowParticle.Factory::new);
+
+        ParticleFactoryRegistry.getInstance().register(STORCEAN_MARINE_SNOW_BIG, MarineSnowParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(STORCEAN_MARINE_SNOW_CHUNK, MarineSnowParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(STORCEAN_MARINE_SNOW_SMALL, MarineSnowParticle.Factory::new);
 
         /* ------------------------------------------ COLOR MAPS ----------------------------------------------------- */
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new StorceanFoliageColorMapResourceSupplier());
@@ -69,53 +86,38 @@ public class DeepTrenchesClient implements ClientModInitializer {
 
         /* ------------------------------------------ FLUID SPRITES ----------------------------------------------------- */
         FluidRenderHandlerRegistry.INSTANCE.register(ABYSSOPELAGIC_WATER, FluidRenderHandlers.ABYSSOPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_ABYSSOPELAGIC_WATER, FluidRenderHandlers.ABYSSOPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(ACID, FluidRenderHandlers.ACID);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_ACID, FluidRenderHandlers.ACID);
-
         FluidRenderHandlerRegistry.INSTANCE.register(BATHYPELAGIC_WATER, FluidRenderHandlers.BATHYPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_BATHYPELAGIC_WATER, FluidRenderHandlers.BATHYPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(BRINE, FluidRenderHandlers.BRINE);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_BRINE, FluidRenderHandlers.BRINE);
-
         FluidRenderHandlerRegistry.INSTANCE.register(CLEAR_WATER, FluidRenderHandlers.CLEAR_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_CLEAR_WATER, FluidRenderHandlers.CLEAR_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(HADOPELAGIC_WATER, FluidRenderHandlers.HADOPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_HADOPELAGIC_WATER, FluidRenderHandlers.HADOPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(MESOPELAGIC_WATER, FluidRenderHandlers.MESOPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_MESOPELAGIC_WATER, FluidRenderHandlers.MESOPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_ABYSSOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_ABYSSOPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_ABYSSOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_ABYSSOPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_BATHYPELAGIC_WATER, FluidRenderHandlers.STORCEAN_BATHYPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_BATHYPELAGIC_WATER, FluidRenderHandlers.STORCEAN_BATHYPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_ENDERPELAGIC_WATER, FluidRenderHandlers.STORCEAN_ENDERPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_ENDERPELAGIC_WATER, FluidRenderHandlers.STORCEAN_ENDERPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_GASOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_GASOPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_GASOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_GASOPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_HADOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_HADOPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_HADOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_HADOPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_INFINIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_INFINIPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_INFINIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_INFINIPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_MESOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_MESOPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_MESOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_MESOPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_VIRDIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_VIRDIPELAGIC_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_VIRDIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_VIRDIPELAGIC_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(STORCEAN_WATER, FluidRenderHandlers.STORCEAN_WATER);
-        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_WATER, FluidRenderHandlers.STORCEAN_WATER);
 
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_ABYSSOPELAGIC_WATER, FluidRenderHandlers.ABYSSOPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_ACID, FluidRenderHandlers.ACID);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_BATHYPELAGIC_WATER, FluidRenderHandlers.BATHYPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_BRINE, FluidRenderHandlers.BRINE);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_CLEAR_WATER, FluidRenderHandlers.CLEAR_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_HADOPELAGIC_WATER, FluidRenderHandlers.HADOPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_MESOPELAGIC_WATER, FluidRenderHandlers.MESOPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_ABYSSOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_ABYSSOPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_BATHYPELAGIC_WATER, FluidRenderHandlers.STORCEAN_BATHYPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_ENDERPELAGIC_WATER, FluidRenderHandlers.STORCEAN_ENDERPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_GASOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_GASOPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_HADOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_HADOPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_INFINIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_INFINIPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_MESOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_MESOPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_VIRDIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_VIRDIPELAGIC_WATER);
+        FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_WATER, FluidRenderHandlers.STORCEAN_WATER);
 
         /* ------------------------------------------ TEXTURE ATLAS ----------------------------------------------------- */
         ClientSpriteRegistryCallback.event(SIGNS_ATLAS_TEXTURE).register((atlas, registry) -> SignTypes.steam()
@@ -126,49 +128,34 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ClientSpriteRegistryCallback.event(BLOCK_ATLAS_TEXTURE).register((atlas, registry) -> {
             registry.register(ABYSSOPELAGIC_WATER_FLOW);
             registry.register(ABYSSOPELAGIC_WATER_STILL);
-
             registry.register(ACID_FLOW);
             registry.register(ACID_STILL);
-
             registry.register(BATHYPELAGIC_WATER_FLOW);
             registry.register(BATHYPELAGIC_WATER_STILL);
-
             registry.register(BRINE_FLOW);
             registry.register(BRINE_STILL);
-
             registry.register(CLEAR_WATER_FLOW);
             registry.register(CLEAR_WATER_STILL);
-
             registry.register(HADOPELAGIC_WATER_FLOW);
             registry.register(HADOPELAGIC_WATER_STILL);
-
             registry.register(MESOPELAGIC_WATER_FLOW);
             registry.register(MESOPELAGIC_WATER_STILL);
-
             registry.register(STORCEAN_ABYSSOPELAGIC_WATER_FLOW);
             registry.register(STORCEAN_ABYSSOPELAGIC_WATER_STILL);
-
             registry.register(STORCEAN_BATHYPELAGIC_WATER_FLOW);
             registry.register(STORCEAN_BATHYPELAGIC_WATER_STILL);
-
             registry.register(STORCEAN_ENDERPELAGIC_WATER_FLOW);
             registry.register(STORCEAN_ENDERPELAGIC_WATER_STILL);
-
             registry.register(STORCEAN_GASOPELAGIC_WATER_FLOW);
             registry.register(STORCEAN_GASOPELAGIC_WATER_STILL);
-
             registry.register(STORCEAN_HADOPELAGIC_WATER_FLOW);
             registry.register(STORCEAN_HADOPELAGIC_WATER_STILL);
-
             registry.register(STORCEAN_INFINIPELAGIC_WATER_FLOW);
             registry.register(STORCEAN_INFINIPELAGIC_WATER_STILL);
-
             registry.register(STORCEAN_MESOPELAGIC_WATER_FLOW);
             registry.register(STORCEAN_MESOPELAGIC_WATER_STILL);
-
             registry.register(STORCEAN_VIRDIPELAGIC_WATER_FLOW);
             registry.register(STORCEAN_VIRDIPELAGIC_WATER_STILL);
-
             registry.register(STORCEAN_WATER_FLOW);
             registry.register(STORCEAN_WATER_STILL);
         });
