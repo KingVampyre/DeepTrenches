@@ -1,6 +1,7 @@
 {
-	"parent": "block/cross",
+	"parent": "block/cube_column",
 	"textures": {
-		"cross": "deep_trenches:block/rhadi_fruit"
+		"end": "deep_trenches:block/rhadi_fruit_top",
+		"side": "deep_trenches:block/rhadi_fruit"
 	}
 }

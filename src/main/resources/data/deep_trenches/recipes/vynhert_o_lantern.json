@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"A",
+		"B"
+	],
+	"key": {
+		"A": {
+			"item": "deep_trenches:carved_rhadi_fruit"
+		},
+		"B": {
+			"item": "minecraft:torch"
+		}
+	},
+	"result": {
+		"item": "deep_trenches:rhadi_o_lantern"
+	}
+}

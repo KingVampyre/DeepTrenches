@@ -1,6 +1,7 @@
 {
-	"parent": "block/cube_all",
+	"parent": "block/cube_column",
 	"textures": {
-		"all": "deep_trenches:block/vynhert_fruit"
+		"end": "deep_trenches:block/vynhert_fruit_top",
+		"side": "deep_trenches:block/vynhert_fruit"
 	}
 }

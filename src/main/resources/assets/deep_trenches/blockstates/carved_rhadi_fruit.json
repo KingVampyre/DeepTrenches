@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=east": {
+			"model": "deep_trenches:block/carved_rhadi_fruit",
+			"y": 90
+		},
+		"facing=north": {
+			"model": "deep_trenches:block/carved_rhadi_fruit"
+		},
+		"facing=south": {
+			"model": "deep_trenches:block/carved_rhadi_fruit",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "deep_trenches:block/carved_rhadi_fruit",
+			"y": 270
+		}
+	}
+}

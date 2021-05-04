@@ -2,6 +2,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.common.block.CustomSignBlock;
 import github.KingVampyre.DeepTrenches.common.block.CustomWallSignBlock;
+import github.KingVampyre.DeepTrenches.common.block.HorizontalBlock;
 import github.KingVampyre.DeepTrenches.core.block.*;
 import github.Louwind.Features.impl.block.FeaturesSaplingBlock;
 import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
@@ -51,7 +52,6 @@ public class ModBlocks {
 	public static final Block STORCERACK;
 	public static final Block VERDINE;
 
-	public static final Block AIRIAL_BUSH;
 	public static final Block BLACK_LILY;
 	public static final Block BLACK_PANSY;
 	public static final Block BLUE_PANSY;
@@ -68,7 +68,6 @@ public class ModBlocks {
 	public static final Block GARDEN_PINKS;
 	public static final Block GREEN_PANSY;
 	public static final Block GYLDELION_FLOWER;
-	public static final Block HARSHLES;
 	public static final Block LIME_SPURGE;
 	public static final Block LUPIN_FLOWER;
 	public static final Block MARSH_VIOLET;
@@ -89,7 +88,6 @@ public class ModBlocks {
 	public static final Block RED_CHOCOLATE_COSMOS_FLOWER;
 	public static final Block RED_PANSY;
 	public static final Block RED_ROSE;
-	public static final Block REEBLOON;
 	public static final Block RUBRA_BLUE_VIOLET;
 	public static final Block SKALK;
 	public static final Block SPIDREET;
@@ -107,6 +105,11 @@ public class ModBlocks {
 	public static final Block WHITE_VIOLET;
 	public static final Block WILD_PANSY;
 	public static final Block YELLOW_VIOLET;
+
+	public static final Block AIRIAL_BUSH;
+	public static final Block HARSHLES;
+	public static final Block REEBLOON;
+	public static final Block SQUISH_TIPS;
 
 	public static final Block STASP_NEST;
 
@@ -1039,6 +1042,7 @@ public class ModBlocks {
 	public static final Block RHADI_FENCE;
 	public static final Block RHADI_FENCE_GATE;
 	public static final Block RHADI_FRUIT;
+	public static final Block CARVED_RHADI_FRUIT;
 	public static final Block RHADI_LEAVES;
 	public static final Block RHADI_LOG;
 	public static final Block RHADI_O_LANTERN;
@@ -1336,6 +1340,7 @@ public class ModBlocks {
 	public static final Block VYNHERT_FENCE;
 	public static final Block VYNHERT_FENCE_GATE;
 	public static final Block VYNHERT_FRUIT;
+	public static final Block CARVED_VYNHERT_FRUIT;
 	public static final Block VYNHERT_LEAF;
 	public static final Block VYNHERT_LOG;
 	public static final Block VYNHERT_O_LANTERN;
@@ -1567,6 +1572,10 @@ public class ModBlocks {
 		return register(id, new FluidBlock(fluid, Settings.copy(WATER)));
 	}
 
+	protected static Block createHorizontalBlock(String id, Block block) {
+		return register(id, new HorizontalBlock(Settings.copy(block)));
+	}
+
 	protected static Block createOakButton(String id) {
 		return register(id, new WoodenButtonBlock(Settings.copy(OAK_BUTTON)));
 	}
@@ -1651,10 +1660,6 @@ public class ModBlocks {
 	    return register(id, new TallFlowerBlock(Settings.copy(block)));
     }
 
-	protected static Block createTallCoral(String id, Block block) {
-		return register(id, new TallCoralBlock(block, Settings.copy(TUBE_CORAL)));
-	}
-
 	static {
 		AIRIAL_MOSS = createBlock("deep_trenches:airial_moss", AirialMossBlock::new, GRASS_BLOCK);
 		BLACK_MARBLE = createCopy("deep_trenches:black_marble", STONE);
@@ -1718,6 +1723,7 @@ public class ModBlocks {
 		HARSHLES = createBlock("deep_trenches:harshles", HarshlesBlock::new, GRASS);
 		REEBLOON = createBlock("deep_trenches:reebloon", ReebloonBlock::new, GRASS);
 		MURKSTEM = createBlock("deep_trenches:murkstem", MurkstemBlock::new, SUNFLOWER);
+		SQUISH_TIPS = createBlock("deep_trenches:squish_tips", SquishTipsBlock::new, GRASS);
 		SPROOM_SPIKE = createBlock("deep_trenches:sproom_spike", SproomSpikeBlock::new, SUNFLOWER);
 
 		BLACK_LILY = createTallFlower("deep_trenches:black_lily", SUNFLOWER);
@@ -1800,7 +1806,7 @@ public class ModBlocks {
 		DEAD_GLOW_FOREST_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_glow_forest_coral_fan");
 		DEAD_GLOW_FOREST_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_glow_forest_coral_wall_fan");
 
-		GLOW_FOREST_CORAL = createTallCoral("deep_trenches:glow_forest_coral", DEAD_GLOW_FOREST_CORAL);
+		GLOW_FOREST_CORAL = register("deep_trenches:glow_forest_coral", new TallCoralBlock(DEAD_GLOW_FOREST_CORAL, Settings.copy(TUBE_CORAL)));
 		GLOW_FOREST_CORAL_BLOCK = createCoralBlock("deep_trenches:glow_forest_coral_block", DEAD_GLOW_FOREST_CORAL_BLOCK);
 		GLOW_FOREST_CORAL_FAN = createCoralFan("deep_trenches:glow_forest_coral_fan", DEAD_GLOW_FOREST_CORAL_FAN);
 		GLOW_FOREST_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:glow_forest_coral_wall_fan", DEAD_GLOW_FOREST_CORAL_WALL_FAN);
@@ -2639,10 +2645,11 @@ public class ModBlocks {
 		RHADI_DOOR = createOakDoor("deep_trenches:rhadi_door");
 		RHADI_FENCE = createOakFence("deep_trenches:rhadi_fence");
 		RHADI_FENCE_GATE = createOakFenceGate("deep_trenches:rhadi_fence_gate");
-		RHADI_FRUIT = createCopy("deep_trenches:rhadi_fruit", MELON);
+		RHADI_FRUIT = createBlock("deep_trenches:rhadi_fruit", RhadiFruit::new, MELON);
+		CARVED_RHADI_FRUIT = createHorizontalBlock("deep_trenches:carved_rhadi_fruit", MELON);
 		RHADI_LEAVES = createOakLeaves("deep_trenches:rhadi_leaves");
 		RHADI_LOG = createOakLog("deep_trenches:rhadi_log");
-		RHADI_O_LANTERN = createCopy("deep_trenches:rhadi_o_lantern", JACK_O_LANTERN);
+		RHADI_O_LANTERN = createHorizontalBlock("deep_trenches:rhadi_o_lantern", JACK_O_LANTERN);
 		RHADI_PLANKS = createOakPlanks("deep_trenches:rhadi_planks");
 		RHADI_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:rhadi_pressure_plate");
 		RHADI_SAPLING = createOakSapling("deep_trenches:rhadi_sapling", SaplingGenerators.RHADI);
@@ -2936,10 +2943,11 @@ public class ModBlocks {
 		VYNHERT_DOOR = createOakDoor("deep_trenches:vynhert_door");
 		VYNHERT_FENCE = createOakFence("deep_trenches:vynhert_fence");
 		VYNHERT_FENCE_GATE = createOakFenceGate("deep_trenches:vynhert_fence_gate");
-		VYNHERT_FRUIT = createCopy("deep_trenches:vynhert_fruit", MELON);
+		VYNHERT_FRUIT = createBlock("deep_trenches:vynhert_fruit", VynhertFruit::new, MELON);
+		CARVED_VYNHERT_FRUIT = createHorizontalBlock("deep_trenches:carved_vynhert_fruit", MELON);
 		VYNHERT_LEAF = createBlock("deep_trenches:vynhert_leaf", VynhertLeafBlock::new, ROSE_BUSH);
 		VYNHERT_LOG = createOakLog("deep_trenches:vynhert_log");
-		VYNHERT_O_LANTERN = createCopy("deep_trenches:vynhert_o_lantern", JACK_O_LANTERN);
+		VYNHERT_O_LANTERN = createHorizontalBlock("deep_trenches:vynhert_o_lantern", JACK_O_LANTERN);
 		VYNHERT_PLANKS = createOakPlanks("deep_trenches:vynhert_planks");
 		VYNHERT_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:vynhert_pressure_plate");
 		VYNHERT_SAPLING = createOakSapling("deep_trenches:vynhert_sapling", SaplingGenerators.VYNHERT);

@@ -2,7 +2,7 @@
 	"parent": "minecraft:block/orientable",
 	"textures": {
 		"top": "deep_trenches:block/vynhert_fruit_top",
-		"front": "deep_trenches:block/vynhert_o_lantern",
+		"front": "deep_trenches:block/carved_vynhert_fruit",
 		"side": "deep_trenches:block/vynhert_fruit"
 	}
 }
