@@ -29,7 +29,7 @@ public class ModEnchantmentHelper {
                     float hearts = 1 << amplifier;
                     float amount = 2 + hearts;
 
-                    living.damage(source, amount);
+                    entity.damage(source, amount);
                 }));
 
             }

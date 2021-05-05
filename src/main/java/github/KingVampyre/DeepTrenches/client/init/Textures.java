@@ -52,5 +52,7 @@ public class Textures {
     public static final Identifier STORCEAN_WATER_FLOW = new Identifier("deep_trenches:block/storcean_water_flow");
     public static final Identifier STORCEAN_WATER_STILL = new Identifier("deep_trenches:block/storcean_water_still");
 
+    public static final Identifier GUI_ACID_CORRODED_ICONS = new Identifier("deep_trenches:textures/gui/acid_corroded_icons.png");
+    public static final Identifier GUI_GAS_CORRODED_ICONS = new Identifier("deep_trenches:textures/gui/gas_corroded_icons.png");
 
 }

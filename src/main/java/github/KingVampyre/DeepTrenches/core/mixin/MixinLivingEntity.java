@@ -6,11 +6,14 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.ProjectileDamageSource;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -18,8 +21,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.CYCAWLER_BEAUTY;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SOFTBONES;
+import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
 import static net.minecraft.entity.EquipmentSlot.MAINHAND;
 import static net.minecraft.entity.damage.DamageSource.*;
 
@@ -27,16 +30,20 @@ import static net.minecraft.entity.damage.DamageSource.*;
 public abstract class MixinLivingEntity {
 
     @Shadow
+    @Final
+    private static TrackedData<Boolean> POTION_SWIRLS_AMBIENT;
+
+    @Shadow
     public float knockbackVelocity;
+
+    @Shadow
+    protected boolean dead;
 
     @Shadow
     protected abstract void applyDamage(DamageSource source, float amount);
 
     @Shadow
     public abstract boolean damage(DamageSource source, float amount);
-
-    @Shadow
-    protected boolean dead;
 
     @Inject(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;applyDamage(Lnet/minecraft/entity/damage/DamageSource;F)V"), cancellable = true)
     private void applyDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
@@ -135,6 +142,23 @@ public abstract class MixinLivingEntity {
             this.knockbackVelocity = (float)((int)(Math.random() * 2.0D) * 180);
 
             cir.cancel();
+        }
+
+    }
+
+    @Inject(method = "tickStatusEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V"), cancellable = true)
+    protected void tickStatusEffects(CallbackInfo ci) {
+        LivingEntity living = (LivingEntity) (Object) this;
+        DataTracker dataTracker = living.getDataTracker();
+
+        if(living.hasStatusEffect(ACID_CORROSION)) {
+            living.world.addParticle(dataTracker.get(POTION_SWIRLS_AMBIENT) ? AMBIENT_NEAR_GASEOUS_ACID : ENTITY_NEAR_GASEOUS_ACID, living.getParticleX(0.5D), living.getRandomBodyY(), living.getParticleZ(0.5D), 0, 0, 0);
+            ci.cancel();
+        }
+
+        if(living.hasStatusEffect(GAS_CORROSION)) {
+            living.world.addParticle(dataTracker.get(POTION_SWIRLS_AMBIENT) ? AMBIENT_CORRODED_SKULL : ENTITY_CORRODED_SKULL, living.getParticleX(0.5D), living.getRandomBodyY(), living.getParticleZ(0.5D), 0, 0, 0);
+            ci.cancel();
         }
 
     }

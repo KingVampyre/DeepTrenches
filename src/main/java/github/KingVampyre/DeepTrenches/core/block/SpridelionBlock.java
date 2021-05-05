@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.KingVampyre.DeepTrenches.common.entity.effect.EntityStatusEffectInstance;
+import github.KingVampyre.DeepTrenches.core.util.StatusEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.ShapeContext;
@@ -31,7 +31,7 @@ public class SpridelionBlock extends FlowerBlock {
             LivingEntity living = (LivingEntity) entity;
 
             if (!living.isInvulnerableTo(ACID))
-                living.addStatusEffect(new EntityStatusEffectInstance(GAS_CORROSION, 900, 0, instance -> {}));
+                StatusEffectHelper.addCorrosionEffect(living, GAS_CORROSION, 0, 900, 840, 540);
 
         }
 

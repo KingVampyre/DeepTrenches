@@ -8,9 +8,9 @@ import java.util.function.Consumer;
 
 public class EntityStatusEffectInstance extends StatusEffectInstance {
 
-    private final Consumer<LivingEntity> consumer;
+    private final Consumer<StatusEffectInstance> consumer;
 
-    public EntityStatusEffectInstance(StatusEffect type, int duration, int amplifier, Consumer<LivingEntity> consumer) {
+    public EntityStatusEffectInstance(StatusEffect type, int duration, int amplifier, Consumer<StatusEffectInstance> consumer) {
         super(type, duration, amplifier);
 
         this.consumer = consumer;
@@ -22,7 +22,7 @@ public class EntityStatusEffectInstance extends StatusEffectInstance {
         int duration = this.getDuration();
 
         if (duration > 0 && this.type.canApplyUpdateEffect(duration, amplifier))
-            this.consumer.accept(entity);
+            this.consumer.accept(this);
 
         return super.update(entity, overwriteCallback);
     }

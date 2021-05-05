@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 public class CorrosionStatusEffect extends StatusEffect {
 
     public CorrosionStatusEffect(StatusEffectType type) {
-        super(type, 0);
+        super(type, 9708684);
     }
 
     @Override
