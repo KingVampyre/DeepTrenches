@@ -164,6 +164,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cycawler_beauty"), CYCAWLER_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:flower_beauty"), FLOWER_BEAUTY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:gas_corrosion"), GAS_CORROSION);
+		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:sinking"), SINKING);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:sleepy"), SLEEPY);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:softbones"), SOFTBONES);
 		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:soul_draining"), SOUL_DRAINING);

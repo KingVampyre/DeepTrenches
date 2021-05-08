@@ -8,6 +8,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.ProjectileDamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.TridentEntity;
@@ -18,6 +19,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
@@ -44,6 +46,8 @@ public abstract class MixinLivingEntity {
 
     @Shadow
     public abstract boolean damage(DamageSource source, float amount);
+
+    @Shadow public abstract boolean hasStatusEffect(StatusEffect effect);
 
     @Inject(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;applyDamage(Lnet/minecraft/entity/damage/DamageSource;F)V"), cancellable = true)
     private void applyDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
@@ -161,6 +165,16 @@ public abstract class MixinLivingEntity {
             ci.cancel();
         }
 
+    }
+
+    @ModifyVariable(method = "travel", at = @At(value = "STORE"))
+    public double travel(double original) {
+
+        if(this.hasStatusEffect(SINKING)) {
+            return 2 * original;
+        }
+
+        return original;
     }
 
 }

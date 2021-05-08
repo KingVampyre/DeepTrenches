@@ -16,6 +16,7 @@ public class StatusEffects {
 	public static final StatusEffect CYCAWLER_BEAUTY = new CycawlerBeautyStatusEffect(BENEFICIAL, 7689983);
 	public static final StatusEffect FLOWER_BEAUTY = new FlowerBeautyStatusEffect(NEUTRAL, 12001933);
 	public static final StatusEffect GAS_CORROSION = new CorrosionStatusEffect(HARMFUL, 735782);
+	public static final StatusEffect SINKING = new SinkingStatusEffect(NEUTRAL, 728094);
 	public static final StatusEffect SLEEPY = new SleepyStatusEffect(NEUTRAL, 3549040);
 	public static final StatusEffect SOFTBONES = new SoftBonesStatusEffect(NEUTRAL, 10592434);
 	public static final StatusEffect SOUL_DRAINING = new DrainingStatusEffect(HARMFUL, 4004144);
