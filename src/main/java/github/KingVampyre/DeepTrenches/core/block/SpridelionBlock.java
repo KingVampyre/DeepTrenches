@@ -31,7 +31,7 @@ public class SpridelionBlock extends FlowerBlock {
             LivingEntity living = (LivingEntity) entity;
 
             if (!living.isInvulnerableTo(ACID))
-                StatusEffectHelper.addCorrosionEffect(living, GAS_CORROSION, 0, 900, 840, 540);
+                StatusEffectHelper.addCorrosionEffect(living, GAS_CORROSION, 1, 900);
 
         }
 

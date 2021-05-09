@@ -28,7 +28,7 @@ public abstract class AcidFluid extends AbstractWaterFluid implements FluidStatu
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
-        StatusEffectHelper.addCorrosionEffect(living, ACID_CORROSION, 0, 200, 160, 40);
+        StatusEffectHelper.addCorrosionEffect(living, ACID_CORROSION, 2, 900);
     }
 
     @Override

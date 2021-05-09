@@ -27,8 +27,8 @@ public class PressureStatusEffect extends StatusEffect {
 
         if(entity.isSubmergedIn(WATER)) {
             int armor = entity.getArmor();
-            float factor = (amplifier + 1) / (0.4F * armor + 2);
-            float amount = Math.round(factor * 2.5F);
+            float factor = (amplifier + 1) / (0.15F * armor + 2);
+            float amount = Math.round(factor * 3.5F);
 
             entity.damage(PRESSURE, amount);
         }
