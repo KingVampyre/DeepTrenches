@@ -1,10 +1,13 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
+import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
+import github.KingVampyre.DeepTrenches.core.init.DamageSources;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
-import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
@@ -12,12 +15,24 @@ import net.minecraft.state.StateManager;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.STORCEAN_BATHYPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_STORCEAN_BATHYPELAGIC_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.ModItems.STORCEAN_BATHYPELAGIC_WATER_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.PRESSURE;
 
-public abstract class StorceanBathypelagicWaterFluid extends AbstractWaterFluid {
+public abstract class StorceanBathypelagicWaterFluid extends AbstractWaterFluid implements FluidStatusEffect {
+
+    @Override
+    public void applyStatusEffects(LivingEntity living) {
+        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 70, 0, false, false, true));
+    }
+
+    @Override
+    public boolean canApplyStatusEffects(LivingEntity living) {
+        return !living.isInvulnerableTo(DamageSources.PRESSURE);
+    }
 
     @Override
     public Item getBucketItem() {
-        return ModItems.STORCEAN_BATHYPELAGIC_WATER_BUCKET;
+        return STORCEAN_BATHYPELAGIC_WATER_BUCKET;
     }
 
     @Override

@@ -1,10 +1,14 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
+import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
@@ -12,8 +16,21 @@ import net.minecraft.state.StateManager;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.BRINE;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_BRINE;
+import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SINKING;
+import static net.minecraft.entity.effect.StatusEffects.POISON;
 
-public abstract class BrineFluid extends AbstractWaterFluid {
+public abstract class BrineFluid extends AbstractWaterFluid implements FluidStatusEffect {
+
+    @Override
+    public void applyStatusEffects(LivingEntity living) {
+        living.addStatusEffect(new StatusEffectInstance(POISON, 100));
+        living.addStatusEffect(new StatusEffectInstance(SINKING, 100, 1, false, false, true));
+    }
+
+    @Override
+    public boolean canApplyStatusEffects(LivingEntity living) {
+        return !living.isInvulnerableTo(DamageSource.MAGIC);
+    }
 
     @Override
     public Item getBucketItem() {

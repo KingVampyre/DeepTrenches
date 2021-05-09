@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
+import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
 import github.KingVampyre.DeepTrenches.core.init.StatusEffects;
 import github.KingVampyre.DeepTrenches.core.util.ModEnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -12,7 +13,11 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.TridentEntity;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
@@ -86,6 +91,29 @@ public abstract class MixinLivingEntity extends MixinEntity {
                 this.applyDamage(source, MathHelper.ceil(amount * 0.1F));
 
                 cir.cancel();
+            }
+
+        }
+
+    }
+
+    @Inject(method = "baseTick", at = @At("HEAD"))
+    void baseTick(CallbackInfo callbackInformation) {
+        Box collisionBox = this.getBoundingBox();
+
+        if(!this.world.isClient) {
+            for (BlockPos pos : (Iterable<BlockPos>) () -> BlockPos.stream(collisionBox).iterator()) {
+                FluidState state = this.world.getFluidState(pos);
+                Fluid fluid  = state.getFluid();
+
+                if(fluid instanceof FluidStatusEffect) {
+                    FluidStatusEffect effect = (FluidStatusEffect) fluid;
+                    LivingEntity living = (LivingEntity) (Object) this;
+
+                    if(effect.canApplyStatusEffects(living))
+                        effect.applyStatusEffects(living);
+                }
+
             }
 
         }
@@ -179,9 +207,16 @@ public abstract class MixinLivingEntity extends MixinEntity {
             StatusEffectInstance effectInstance = this.getStatusEffect(SINKING);
 
             if(effectInstance != null) {
-                int amplifier = effectInstance.getAmplifier() + 1;
+                int amplifier = effectInstance.getAmplifier();
 
-                return 0.02 * amplifier + original;
+                if(this.hasStatusEffect(SOFTBONES)) {
+                    StatusEffectInstance instance = this.getStatusEffect(SOFTBONES);
+
+                    if(instance != null && instance.getAmplifier() >= amplifier)
+                        return original;
+                }
+
+                return 0.05 * (amplifier + 1) + original;
             }
 
         }
