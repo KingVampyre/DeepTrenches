@@ -157,19 +157,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:skittish_hurt_by"), SensorTypes.SKITTISH_HURT_BY);
 		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:tamable_hurt_by"), SensorTypes.TAMABLE_HURT_BY);
 
-		/* -------------------------------- Status Effects ------------------------------------------- */
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:acid_corrosion"), ACID_CORROSION);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:braitor_beauty"), BRAITOR_BEAUTY);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cosmos_beauty"), COSMOS_BEAUTY);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:cycawler_beauty"), CYCAWLER_BEAUTY);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:flower_beauty"), FLOWER_BEAUTY);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:gas_corrosion"), GAS_CORROSION);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:sinking"), SINKING);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:sleepy"), SLEEPY);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:softbones"), SOFTBONES);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:soul_draining"), SOUL_DRAINING);
-		Registry.register(STATUS_EFFECT, new Identifier("deep_trenches:soul_ravening"), SOUL_RAVENING);
-
+		/* -------------------------------- Painting Motive ------------------------------------------- */
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:beach"), BEACH);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:beethoven_piano"), BEETHOVEN_PIANO);
 		Registry.register(PAINTING_MOTIVE, new Identifier("deep_trenches:beethoven_upright_piano"), BEETHOVEN_UPRIGHT_PIANO);

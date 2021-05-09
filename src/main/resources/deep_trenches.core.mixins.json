@@ -13,6 +13,7 @@
     "MixinAbstractBlockState",
     "MixinBrewingRecipeRegistry",
     "MixinEnchantmentHelper",
+    "MixinEntity",
     "MixinGrassBlock",
     "MixinLivingEntity",
     "MixinPlayerEntity",

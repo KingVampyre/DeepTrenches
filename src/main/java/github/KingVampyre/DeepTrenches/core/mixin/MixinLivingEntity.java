@@ -14,6 +14,7 @@ import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -29,7 +30,7 @@ import static net.minecraft.entity.EquipmentSlot.MAINHAND;
 import static net.minecraft.entity.damage.DamageSource.*;
 
 @Mixin(LivingEntity.class)
-public abstract class MixinLivingEntity {
+public abstract class MixinLivingEntity extends MixinEntity {
 
     @Shadow
     @Final
@@ -48,6 +49,10 @@ public abstract class MixinLivingEntity {
     public abstract boolean damage(DamageSource source, float amount);
 
     @Shadow public abstract boolean hasStatusEffect(StatusEffect effect);
+
+    @Shadow
+    @Nullable
+    public abstract StatusEffectInstance getStatusEffect(StatusEffect effect);
 
     @Inject(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;applyDamage(Lnet/minecraft/entity/damage/DamageSource;F)V"), cancellable = true)
     private void applyDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
@@ -170,8 +175,15 @@ public abstract class MixinLivingEntity {
     @ModifyVariable(method = "travel", at = @At(value = "STORE"))
     public double travel(double original) {
 
-        if(this.hasStatusEffect(SINKING)) {
-            return 2 * original;
+        if(this.hasStatusEffect(SINKING) && this.isTouchingWater()) {
+            StatusEffectInstance effectInstance = this.getStatusEffect(SINKING);
+
+            if(effectInstance != null) {
+                int amplifier = effectInstance.getAmplifier() + 1;
+
+                return 0.02 * amplifier + original;
+            }
+
         }
 
         return original;
