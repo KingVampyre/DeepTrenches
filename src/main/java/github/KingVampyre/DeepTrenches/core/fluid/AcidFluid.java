@@ -11,7 +11,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -22,6 +21,7 @@ import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.ACID;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_ACID;
+import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.ENTITY_NEAR_GASEOUS_ACID;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.ACID_CORROSION;
 
 public abstract class AcidFluid extends AbstractWaterFluid implements FluidStatusEffect {
@@ -65,12 +65,12 @@ public abstract class AcidFluid extends AbstractWaterFluid implements FluidStatu
     public void randomDisplayTick(World world, BlockPos pos, FluidState state, Random random) {
 
         if (random.nextInt(10) == 0) {
-            for(int i = 0; i < 4; ++i) {
+            for(int i = 0; i < 3; ++i) {
                 double x = (double)pos.getX() + random.nextDouble();
-                double y = (double)pos.getY() + 1.5D;
+                double y = (double)pos.getY() + 0.5D;
                 double z = (double)pos.getZ() + random.nextDouble();
 
-                world.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0D, 5.0E-4D, 0.0D);
+                world.addParticle(ENTITY_NEAR_GASEOUS_ACID, x, y, z, 0.0D, 0.05, 0.0D);
             }
         }
 

@@ -4,6 +4,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectType;
+import net.minecraft.util.math.MathHelper;
 
 import static github.KingVampyre.DeepTrenches.core.init.DamageSources.PRESSURE;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SOFTBONES;
@@ -27,10 +28,11 @@ public class PressureStatusEffect extends StatusEffect {
 
         if(entity.isSubmergedIn(WATER)) {
             int armor = entity.getArmor();
-            float factor = (amplifier + 1) / (0.15F * armor + 2);
-            float amount = Math.round(factor * 3.5F);
+            float factor = (amplifier + 1) / (0.1F * armor + 2);
+            float amount = MathHelper.ceil(factor * 3.5F);
 
-            entity.damage(PRESSURE, amount);
+            if(amount > 0)
+                entity.damage(PRESSURE, amount);
         }
 
     }

@@ -1,6 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
 import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
+import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.core.init.StatusEffects;
 import github.KingVampyre.DeepTrenches.core.util.ModEnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -53,7 +54,8 @@ public abstract class MixinLivingEntity extends MixinEntity {
     @Shadow
     public abstract boolean damage(DamageSource source, float amount);
 
-    @Shadow public abstract boolean hasStatusEffect(StatusEffect effect);
+    @Shadow
+    public abstract boolean hasStatusEffect(StatusEffect effect);
 
     @Shadow
     @Nullable
@@ -151,6 +153,31 @@ public abstract class MixinLivingEntity extends MixinEntity {
 
     }
 
+    @Inject(method = "getNextAirUnderwater", at = @At("HEAD"), cancellable = true)
+    private void getNextAirUnderwater(int air, CallbackInfoReturnable<Integer> cir) {
+        Box collisionBox = this.getBoundingBox();
+
+        if(!this.world.isClient) {
+            for (BlockPos pos : (Iterable<BlockPos>) () -> BlockPos.stream(collisionBox).iterator()) {
+                FluidState state = this.world.getFluidState(pos);
+                Fluid fluid  = state.getFluid();
+
+                if(fluid instanceof OxygenatedFluid) {
+                    OxygenatedFluid oxygenatedFluid = (OxygenatedFluid) fluid;
+                    LivingEntity living = (LivingEntity) (Object) this;
+
+                    int nextAir = oxygenatedFluid.getNextAirUnderwater(living, this.world.random, air);
+
+                    cir.setReturnValue(nextAir);
+                    break;
+                }
+
+            }
+
+        }
+
+    }
+
     @Inject(method = "onDeath", at = @At("HEAD"))
     private void onDeath(DamageSource source, CallbackInfo ci) {
         LivingEntity living = (LivingEntity) (Object) this;
@@ -216,7 +243,7 @@ public abstract class MixinLivingEntity extends MixinEntity {
                         return original;
                 }
 
-                return 0.05 * (amplifier + 1) + original;
+                return 0.1 * (amplifier + 1) + original;
             }
 
         }

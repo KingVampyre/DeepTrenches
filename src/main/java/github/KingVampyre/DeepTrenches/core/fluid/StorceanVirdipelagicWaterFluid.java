@@ -1,19 +1,34 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
+import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 
+import java.util.Random;
+
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_STORCEAN_VIRDIPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.STORCEAN_VIRDIPELAGIC_WATER;
 
-public abstract class StorceanVirdipelagicWaterFluid extends AbstractWaterFluid {
+public abstract class StorceanVirdipelagicWaterFluid extends AbstractWaterFluid implements OxygenatedFluid {
+
+    @Override
+    public int getNextAirUnderwater(LivingEntity living, Random random, int air) {
+        int respiration = EnchantmentHelper.getRespiration(living);
+
+        if(respiration > 0 && random.nextInt(respiration + 1) > 0)
+            return air;
+
+        return air - 1;
+    }
 
     @Override
     public Item getBucketItem() {

@@ -2,11 +2,13 @@ package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
+import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.core.init.DamageSources;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.fluid.Fluid;
@@ -14,11 +16,13 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 
+import java.util.Random;
+
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.ABYSSOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_ABYSSOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.PRESSURE;
 
-public abstract class AbyssopelagicWaterFluid extends AbstractWaterFluid implements FluidStatusEffect {
+public abstract class AbyssopelagicWaterFluid extends AbstractWaterFluid implements FluidStatusEffect, OxygenatedFluid {
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
@@ -28,6 +32,14 @@ public abstract class AbyssopelagicWaterFluid extends AbstractWaterFluid impleme
     @Override
     public boolean canApplyStatusEffects(LivingEntity living) {
         return !living.isInvulnerableTo(DamageSources.PRESSURE);
+    }
+
+    @Override
+    public int getNextAirUnderwater(LivingEntity living, Random random, int air) {
+        int respiration = EnchantmentHelper.getRespiration(living);
+        int nextAir = air - random.nextInt(2) - 3;
+
+        return respiration > 0 && random.nextInt(respiration + 1) > 0 ? air : nextAir;
     }
 
     @Override
