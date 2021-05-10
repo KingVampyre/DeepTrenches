@@ -41,7 +41,7 @@ public abstract class StorceanHadopelagicWaterFluid extends AbstractWaterFluid i
         if(respiration > 0 && random.nextInt(respiration + 1) > 0)
             return air;
 
-        return air - 1;
+        return random.nextInt(6) > 0 ? air : air - 1;
     }
 
     @Override

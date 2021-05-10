@@ -157,21 +157,18 @@ public abstract class MixinLivingEntity extends MixinEntity {
     private void getNextAirUnderwater(int air, CallbackInfoReturnable<Integer> cir) {
         Box collisionBox = this.getBoundingBox();
 
-        if(!this.world.isClient) {
-            for (BlockPos pos : (Iterable<BlockPos>) () -> BlockPos.stream(collisionBox).iterator()) {
-                FluidState state = this.world.getFluidState(pos);
-                Fluid fluid  = state.getFluid();
+        for (BlockPos pos : (Iterable<BlockPos>) () -> BlockPos.stream(collisionBox).iterator()) {
+            FluidState state = this.world.getFluidState(pos);
+            Fluid fluid  = state.getFluid();
 
-                if(fluid instanceof OxygenatedFluid) {
-                    OxygenatedFluid oxygenatedFluid = (OxygenatedFluid) fluid;
-                    LivingEntity living = (LivingEntity) (Object) this;
+            if(fluid instanceof OxygenatedFluid) {
+                OxygenatedFluid oxygenatedFluid = (OxygenatedFluid) fluid;
+                LivingEntity living = (LivingEntity) (Object) this;
 
-                    int nextAir = oxygenatedFluid.getNextAirUnderwater(living, this.world.random, air);
+                int nextAir = oxygenatedFluid.getNextAirUnderwater(living, this.world.random, air);
 
-                    cir.setReturnValue(nextAir);
-                    break;
-                }
-
+                cir.setReturnValue(nextAir);
+                break;
             }
 
         }
