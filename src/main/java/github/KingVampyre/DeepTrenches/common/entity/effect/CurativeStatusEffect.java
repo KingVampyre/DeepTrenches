@@ -7,13 +7,14 @@ import net.minecraft.world.World;
 
 public class CurativeStatusEffect extends StatusEffect {
 
+	protected StatusEffect effect;
 	protected float healing;
-	protected StatusEffect statusEffect;
 
-	public CurativeStatusEffect(StatusEffectType statusEffectType, StatusEffect statusEffect, float healing, int i) {
-		super(statusEffectType, i);
+	public CurativeStatusEffect(StatusEffectType effectType, StatusEffect effect, float healing, int i) {
+		super(effectType, i);
 
-		this.statusEffect = statusEffect;
+		this.effect = effect;
+		this.healing = healing;
 	}
 
 	@Override
@@ -32,12 +33,13 @@ public class CurativeStatusEffect extends StatusEffect {
 		World world = entityLiving.getEntityWorld();
 
 		if (!world.isClient) {
-			entityLiving.removeStatusEffect(this.statusEffect);
+			entityLiving.removeStatusEffect(this.effect);
 
 			if (entityLiving.getHealth() < entityLiving.getMaxHealth())
 				entityLiving.heal(this.healing);
 
 		}
+
 	}
 
 }

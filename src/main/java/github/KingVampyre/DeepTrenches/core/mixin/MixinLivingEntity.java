@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
-import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
+import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.core.init.StatusEffects;
 import github.KingVampyre.DeepTrenches.core.util.ModEnchantmentHelper;
@@ -30,6 +30,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import static github.KingVampyre.DeepTrenches.core.init.ModFluidTags.SINKING_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
 import static net.minecraft.entity.EquipmentSlot.MAINHAND;
@@ -108,8 +109,8 @@ public abstract class MixinLivingEntity extends MixinEntity {
                 FluidState state = this.world.getFluidState(pos);
                 Fluid fluid  = state.getFluid();
 
-                if(fluid instanceof FluidStatusEffect) {
-                    FluidStatusEffect effect = (FluidStatusEffect) fluid;
+                if(fluid instanceof StatusEffectFluid) {
+                    StatusEffectFluid effect = (StatusEffectFluid) fluid;
                     LivingEntity living = (LivingEntity) (Object) this;
 
                     if(effect.canApplyStatusEffects(living))
@@ -227,20 +228,31 @@ public abstract class MixinLivingEntity extends MixinEntity {
     @ModifyVariable(method = "travel", at = @At(value = "STORE"))
     public double travel(double original) {
 
-        if(this.hasStatusEffect(SINKING) && this.isTouchingWater()) {
-            StatusEffectInstance effectInstance = this.getStatusEffect(SINKING);
+        if(this.hasStatusEffect(SINKING)) {
+            Box collisionBox = this.getBoundingBox();
 
-            if(effectInstance != null) {
-                int amplifier = effectInstance.getAmplifier();
+            for (BlockPos pos : (Iterable<BlockPos>) () -> BlockPos.stream(collisionBox).iterator()) {
+                FluidState state = this.world.getFluidState(pos);
+                Fluid fluid  = state.getFluid();
 
-                if(this.hasStatusEffect(SOFTBONES)) {
-                    StatusEffectInstance instance = this.getStatusEffect(SOFTBONES);
+                if(fluid.isIn(SINKING_WATER)) {
+                    StatusEffectInstance effectInstance = this.getStatusEffect(SINKING);
 
-                    if(instance != null && instance.getAmplifier() >= amplifier)
-                        return original;
+                    if (effectInstance != null) {
+                        int amplifier = effectInstance.getAmplifier();
+
+                        if (this.hasStatusEffect(SOFTBONES)) {
+                            StatusEffectInstance instance = this.getStatusEffect(SOFTBONES);
+
+                            if (instance != null && instance.getAmplifier() >= amplifier)
+                                return original;
+                        }
+
+                        return 0.2 * (amplifier + 1) + original;
+                    }
+
                 }
 
-                return 0.1 * (amplifier + 1) + original;
             }
 
         }

@@ -5,6 +5,7 @@ import github.KingVampyre.DeepTrenches.common.entity.effect.ArmorDamageStatusEff
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.item.ItemStack;
 
@@ -12,12 +13,22 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
+import static github.KingVampyre.DeepTrenches.core.init.DamageSources.ACID;
+import static github.KingVampyre.DeepTrenches.core.init.DamageSources.GAS;
+import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.ACID_CORROSION;
 import static net.minecraft.entity.attribute.EntityAttributes.GENERIC_MAX_HEALTH;
 
 public class CorrosionStatusEffect extends ArmorDamageStatusEffect {
 
     public CorrosionStatusEffect(StatusEffectType type, int color) {
         super(type, color);
+    }
+
+    @Override
+    public void applyUpdateEffect(LivingEntity entity, int amplifier) {
+        super.applyUpdateEffect(entity, amplifier);
+
+        entity.damage(this == ACID_CORROSION ? ACID :  GAS, (amplifier + 1) * 2.0F);
     }
 
     @Override
@@ -41,8 +52,20 @@ public class CorrosionStatusEffect extends ArmorDamageStatusEffect {
 
         EntityAttributeInstance attributeInstance = attributes.getCustomInstance(GENERIC_MAX_HEALTH);
 
-        if(attributeInstance != null)
-            attributeInstance.removeModifier(UUID.fromString("d5fd30f3-3e18-4d37-8754-2ff20a71dec4"));
+        if(attributeInstance != null) {
+            EntityAttributeModifier modifier = attributeInstance.getModifier(UUID.fromString("d5fd30f3-3e18-4d37-8754-2ff20a71dec4"));
+
+            if(modifier != null) {
+                float maxHealth = entity.getMaxHealth();
+                float value = (float) modifier.getValue();
+                float health = maxHealth - value;
+
+                entity.setHealth(health <= 0 ? 1 : health);
+                attributeInstance.removeModifier(modifier);
+            }
+
+        }
+
     }
 
 }

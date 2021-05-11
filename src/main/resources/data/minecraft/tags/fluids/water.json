@@ -3,6 +3,8 @@
 	"values": [
 		"deep_trenches:abyssopelagic_water",
 		"deep_trenches:flowing_abyssopelagic_water",
+		"deep_trenches:acid",
+		"deep_trenches:flowing_acid",
 		"deep_trenches:bathypelagic_water",
 		"deep_trenches:flowing_bathypelagic_water",
 		"deep_trenches:brine",

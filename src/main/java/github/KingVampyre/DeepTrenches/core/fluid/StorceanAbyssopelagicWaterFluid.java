@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
-import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
+import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.core.init.DamageSources;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
@@ -21,11 +21,13 @@ import static github.KingVampyre.DeepTrenches.core.init.ModFluids.STORCEAN_ABYSS
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_STORCEAN_ABYSSOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.STORCEAN_ABYSSOPELAGIC_WATER_BUCKET;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.PRESSURE;
+import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SINKING;
 
-public abstract class StorceanAbyssopelagicWaterFluid extends AbstractWaterFluid implements FluidStatusEffect, OxygenatedFluid {
+public abstract class StorceanAbyssopelagicWaterFluid extends AbstractWaterFluid implements StatusEffectFluid, OxygenatedFluid {
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
+        living.addStatusEffect(new StatusEffectInstance(SINKING, 100, 1, false, false, true));
         living.addStatusEffect(new StatusEffectInstance(PRESSURE, 120, 3, false, false, true));
     }
 

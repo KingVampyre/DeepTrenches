@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"deep_trenches:brine",
+		"deep_trenches:storcean_abyssopelagic_water",
+		"deep_trenches:storcean_bathypelagic_water",
+		"deep_trenches:storcean_mesopelagic_water"
+	]
+}

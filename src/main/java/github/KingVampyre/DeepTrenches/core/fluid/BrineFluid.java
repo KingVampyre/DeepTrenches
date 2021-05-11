@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
-import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
+import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import net.minecraft.block.BlockState;
@@ -19,7 +19,7 @@ import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_BRINE;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SINKING;
 import static net.minecraft.entity.effect.StatusEffects.POISON;
 
-public abstract class BrineFluid extends AbstractWaterFluid implements FluidStatusEffect {
+public abstract class BrineFluid extends AbstractWaterFluid implements StatusEffectFluid {
 
     @Override
     public void applyStatusEffects(LivingEntity living) {

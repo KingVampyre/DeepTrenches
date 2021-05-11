@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
-import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
+import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.core.init.DamageSources;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
@@ -22,7 +22,7 @@ import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_STORCE
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.STORCEAN_BATHYPELAGIC_WATER_BUCKET;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.PRESSURE;
 
-public abstract class StorceanBathypelagicWaterFluid extends AbstractWaterFluid implements FluidStatusEffect, OxygenatedFluid {
+public abstract class StorceanBathypelagicWaterFluid extends AbstractWaterFluid implements StatusEffectFluid, OxygenatedFluid {
 
     @Override
     public void applyStatusEffects(LivingEntity living) {

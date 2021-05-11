@@ -9,11 +9,13 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.DamageSources.ACID;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.SPRILIUM;
 import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.ENTITY_CORRODED_SKULL;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.GAS_CORROSION;
 import static net.minecraft.world.Difficulty.PEACEFUL;
@@ -25,13 +27,18 @@ public class SpridelionBlock extends FlowerBlock {
     }
 
     @Override
+    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+        return floor.isOf(SPRILIUM);
+    }
+
+    @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
 
         if (!world.isClient && world.getDifficulty() != PEACEFUL && entity instanceof LivingEntity) {
             LivingEntity living = (LivingEntity) entity;
 
             if (!living.isInvulnerableTo(ACID))
-                StatusEffectHelper.addCorrosionEffect(living, GAS_CORROSION, 1, 900);
+                StatusEffectHelper.addCorrosionEffect(living, GAS_CORROSION, 0, 600);
 
         }
 

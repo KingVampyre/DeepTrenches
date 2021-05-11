@@ -1,12 +1,14 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
-import github.KingVampyre.DeepTrenches.common.fluid.FluidStatusEffect;
+import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
+import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import github.KingVampyre.DeepTrenches.core.util.StatusEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
@@ -24,16 +26,24 @@ import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_ACID;
 import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.ENTITY_NEAR_GASEOUS_ACID;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.ACID_CORROSION;
 
-public abstract class AcidFluid extends AbstractWaterFluid implements FluidStatusEffect {
+public abstract class AcidFluid extends AbstractWaterFluid implements StatusEffectFluid, OxygenatedFluid {
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
-        StatusEffectHelper.addCorrosionEffect(living, ACID_CORROSION, 2, 900);
+        StatusEffectHelper.addCorrosionEffect(living, ACID_CORROSION, 1, 600);
     }
 
     @Override
     public boolean canApplyStatusEffects(LivingEntity living) {
         return !living.hasStatusEffect(ACID_CORROSION);
+    }
+
+    @Override
+    public int getNextAirUnderwater(LivingEntity living, Random random, int air) {
+        int respiration = EnchantmentHelper.getRespiration(living);
+        int nextAir = air + random.nextInt(2) - 1;
+
+        return respiration > 0 && random.nextInt(respiration + 1) > 0 ? air : nextAir;
     }
 
     @Override

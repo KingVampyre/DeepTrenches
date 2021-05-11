@@ -145,12 +145,6 @@ public class  DeepTrenches implements ModInitializer {
 		/* -------------------------------- Loot Conditions ------------------------------------------- */
 		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);
 
-		/* -------------------------------- Potions ------------------------------------------- */
-		Registry.register(POTION, new Identifier("deep_trenches:long_softbones"), ModPotions.LONG_SOFTBONES);
-		Registry.register(POTION, new Identifier("deep_trenches:long_strong_softbones"), ModPotions.LONG_STRONG_SOFTBONES);
-		Registry.register(POTION, new Identifier("deep_trenches:softbones"), ModPotions.SOFTBONES);
-		Registry.register(POTION, new Identifier("deep_trenches:strong_softbones"), ModPotions.STRONG_SOFTBONES);
-
 		/* -------------------------------- Sensor Type ------------------------------------------- */
 		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:cod_tempting"), SensorTypes.COD_TEMPTING);
 		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:nearest_adult"), SensorTypes.NEAREST_ADULT);

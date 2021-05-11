@@ -13,9 +13,6 @@ public abstract class MixinEntity {
     public World world;
 
     @Shadow
-    public abstract boolean isTouchingWater();
-
-    @Shadow
     public abstract Box getBoundingBox();
 
 }
