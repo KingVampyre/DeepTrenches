@@ -56,11 +56,14 @@ public class CorrosionStatusEffect extends ArmorDamageStatusEffect {
             EntityAttributeModifier modifier = attributeInstance.getModifier(UUID.fromString("d5fd30f3-3e18-4d37-8754-2ff20a71dec4"));
 
             if(modifier != null) {
-                float maxHealth = entity.getMaxHealth();
-                float value = (float) modifier.getValue();
-                float health = maxHealth - value;
+                double maxHealth = attributeInstance.getBaseValue();
+                double value = modifier.getValue();
+                float health = entity.getHealth();
+                float newHealth = (float) (maxHealth + value);
 
-                entity.setHealth(health <= 0 ? 1 : health);
+                if(health >= newHealth)
+                    entity.setHealth(newHealth);
+
                 attributeInstance.removeModifier(modifier);
             }
 
