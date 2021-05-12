@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.KingVampyre.DeepTrenches.common.block.GrowingTallPlantBlock;
+import github.KingVampyre.DeepTrenches.common.block.GrowingStemBlock;
 import github.KingVampyre.DeepTrenches.core.block.enums.BlockThird;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,6 +10,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.state.StateManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
@@ -21,17 +22,23 @@ import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.block.enums.BlockThird.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModProperties.BLOCK_THIRD;
+import static github.KingVampyre.DeepTrenches.core.init.ModProperties.FRUIT;
 import static net.minecraft.block.Blocks.AIR;
 import static net.minecraft.state.property.Properties.AGE_25;
 import static net.minecraft.util.math.Direction.DOWN;
 import static net.minecraft.util.math.Direction.UP;
 
-public class MurkstemBlock extends GrowingTallPlantBlock {
+public class MurkstemBlock extends GrowingStemBlock {
 
     public MurkstemBlock(Settings settings) {
         super(settings);
 
         this.setDefaultState(this.stateManager.getDefaultState().with(AGE_25, 0).with(BLOCK_THIRD, BOTTOM));
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(AGE_25, BLOCK_THIRD, FRUIT);
     }
 
     @Override
@@ -51,7 +58,7 @@ public class MurkstemBlock extends GrowingTallPlantBlock {
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
 
-        if(state.contains(BLOCK_THIRD)) {
+        if(state.isOf(this)) {
             BlockThird third = state.get(BLOCK_THIRD);
 
             if (third == BOTTOM)
@@ -60,13 +67,13 @@ public class MurkstemBlock extends GrowingTallPlantBlock {
             BlockPos down = pos.down();
             BlockPos up = pos.up();
 
-            if(!world.isAir(down) && this.getHeight(world, pos) < 25)
+            if(!world.isAir(down) && this.getHeight(world, pos) < this.getMaxHeight())
                 return third != MIDDLE || !world.isAir(up);
 
             return false;
         }
 
-        return state.isAir() && this.getHeight(world, pos) < 25;
+        return state.isAir() && this.getHeight(world, pos) < this.getMaxHeight();
     }
 
     @Override
@@ -94,6 +101,11 @@ public class MurkstemBlock extends GrowingTallPlantBlock {
     @Override
     protected int getMaxAge() {
         return 5;
+    }
+
+    @Override
+    protected int getMaxHeight() {
+        return 25;
     }
 
     @Override
@@ -148,7 +160,7 @@ public class MurkstemBlock extends GrowingTallPlantBlock {
 
             while (downState.isOf(this)) {
                 if (downState.get(BLOCK_THIRD) == BOTTOM) {
-                    world.setBlockState(down, Blocks.AIR.getDefaultState(), 35);
+                    world.setBlockState(down, Blocks.AIR.getDefaultState(), 3);
                     world.syncWorldEvent(player, 2001, down, Block.getRawIdFromState(downState));
                 }
 

@@ -1,7 +1,6 @@
 {
     "variants": {
-        "": {
-            "model": "deep_trenches:block/obscrus"
-        }
+        "half=lower": { "model": "deep_trenches:block/obscrus_bottom" },
+        "half=upper": { "model": "deep_trenches:block/obscrus_top" }
     }
 }

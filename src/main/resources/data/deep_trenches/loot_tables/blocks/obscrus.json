@@ -6,7 +6,21 @@
             "entries": [
                 {
                     "type": "minecraft:item",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:block_state_property",
+                            "block": "deep_trenches:obscrus",
+                            "properties": {
+                                "half": "upper"
+                            }
+                        }
+                    ],
                     "name": "deep_trenches:obscrus"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
                 }
             ]
         }

@@ -19,7 +19,7 @@ public class StorceanSaplingBlock extends FeaturesSaplingBlock {
 
 	@Override
 	protected boolean canPlantOnTop(BlockState floor, BlockView view, BlockPos pos) {
-		return this.isIn(DRITEAN_OR_DIRT_SAPLING) ? floor.isIn(DRITEAN_OR_DIRT) : floor.isIn(DRITEAN);
+		return this.isIn(HYBRID_STORCEAN_SAPLING) ? floor.isIn(HYBRID_STORCEAN_SAPLING_PLANTABLE) : floor.isIn(DRITEAN);
 	}
 
 	@Override

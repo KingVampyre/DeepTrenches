@@ -13,21 +13,21 @@ public class ModBlockTags {
 
     public static final Tag<Block> BLUE_MAHOE_FLOWER_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:blue_mahoe_flower_plantable"));
 
-    public static final Tag<Block> BOTTLEBRUSH_FLOWERS_SPREAD = TagRegistry.block(new Identifier("deep_trenches:bottlebrush_flowers_spread"));
+    public static final Tag<Block> BOTTLEBRUSH_FLOWERS_SPREADABLE = TagRegistry.block(new Identifier("deep_trenches:bottlebrush_flowers_spreadable"));
 
     public static final Tag<Block> DRITEAN = TagRegistry.block(new Identifier("deep_trenches:dritean"));
 
-    public static final Tag<Block> DRITEAN_OR_DIRT = TagRegistry.block(new Identifier("deep_trenches:dritean_or_dirt"));
+    public static final Tag<Block> HYBRID_STORCEAN_SAPLING_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:hybrid_storcean_sapling_plantable"));
 
-    public static final Tag<Block> DRITEAN_OR_DIRT_SAPLING = TagRegistry.block(new Identifier("deep_trenches:dritean_or_dirt_sapling"));
+    public static final Tag<Block> HYBRID_STORCEAN_SAPLING = TagRegistry.block(new Identifier("deep_trenches:hybrid_storcean_sapling"));
 
     public static final Tag<Block> FLALM_LOGS = TagRegistry.block(new Identifier("deep_trenches:flalm_logs"));
 
     public static final Tag<Block> FUCHSITRA_LOGS = TagRegistry.block(new Identifier("deep_trenches:fuchsitra_logs"));
 
-    public static final Tag<Block> GUAIACUM_FLOWERS_SPREAD = TagRegistry.block(new Identifier("deep_trenches:guaiacum_flowers_spread"));
+    public static final Tag<Block> GUAIACUM_FLOWERS_SPREADABLE = TagRegistry.block(new Identifier("deep_trenches:guaiacum_flowers_spreadable"));
 
-    public static final Tag<Block> MELALEUCA_FLOWERS_SPREAD = TagRegistry.block(new Identifier("deep_trenches:melaleuca_flowers_spread"));
+    public static final Tag<Block> MELALEUCA_FLOWERS_SPREADABLE = TagRegistry.block(new Identifier("deep_trenches:melaleuca_flowers_spreadable"));
 
     public static final Tag<Block> MURKANTUAN_FLOWER_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:murkantuan_flower_plantable"));
 

@@ -30,15 +30,9 @@ public class AcuaticFungusBlock extends FungusBlock {
 
 		FluidState fluidState = world.getFluidState(pos);
 		Fluid fluid = fluidState.getFluid();
-
 		BlockPos down = pos.down();
 
-		if (fluid == WATER)
-			return this.canPlantOnTop(world.getBlockState(down), world, down);
-		else if (fluid == EMPTY)
-			return this.canPlantOnTop(world.getBlockState(down), world, down);
-
-		return false;
+		return (fluid == WATER || fluid == EMPTY) && this.canPlantOnTop(world.getBlockState(down), world, down);
 	}
 
 	@Override

@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.common.block;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Fertilizable;
 import net.minecraft.block.PlantBlock;
@@ -8,20 +7,18 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.StateManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModProperties.BLOCK_THIRD;
 import static net.minecraft.block.Blocks.AIR;
 import static net.minecraft.state.property.Properties.AGE_25;
 
-public abstract class GrowingTallPlantBlock extends PlantBlock implements Fertilizable {
+public abstract class GrowingStemBlock extends PlantBlock implements Fertilizable {
 
-    public GrowingTallPlantBlock(Settings settings) {
+    public GrowingStemBlock(Settings settings) {
         super(settings);
     }
 
@@ -30,16 +27,11 @@ public abstract class GrowingTallPlantBlock extends PlantBlock implements Fertil
         super.afterBreak(world, player, pos, AIR.getDefaultState(), blockEntity, stack);
     }
 
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        super.appendProperties(builder);
-
-        builder.add(AGE_25, BLOCK_THIRD);
-    }
-
     protected abstract int getHeight(WorldView world, BlockPos pos);
 
     protected abstract int getMaxAge();
+
+    protected abstract int getMaxHeight();
 
     protected abstract void onBreakInCreative(World world, BlockPos pos, BlockState state, PlayerEntity player);
 

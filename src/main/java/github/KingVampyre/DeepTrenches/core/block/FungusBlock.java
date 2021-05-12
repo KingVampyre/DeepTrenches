@@ -11,6 +11,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager.Builder;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
@@ -58,9 +59,13 @@ public class FungusBlock extends StorceanSaplingBlock {
 
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
-		FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
+		BlockState state = super.getPlacementState(ctx);
+		BlockPos pos = ctx.getBlockPos();
+		World world = ctx.getWorld();
 
-		return super.getPlacementState(ctx).with(WATERLOGGED, fluidState.getFluid() == WATER);
+		FluidState fluidState = world.getFluidState(pos);
+
+		return state != null ? state.with(WATERLOGGED, fluidState.getFluid() == WATER) : null;
 	}
 
 	@Override

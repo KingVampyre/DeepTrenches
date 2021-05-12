@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.KingVampyre.DeepTrenches.common.block.GrowingTallPlantBlock;
+import github.KingVampyre.DeepTrenches.common.block.GrowingStemBlock;
 import github.KingVampyre.DeepTrenches.core.block.enums.BlockThird;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -24,10 +24,9 @@ import static github.KingVampyre.DeepTrenches.core.init.ModProperties.BLOCK_THIR
 import static github.KingVampyre.DeepTrenches.core.init.ModProperties.FRUIT;
 import static net.minecraft.block.Blocks.AIR;
 import static net.minecraft.state.property.Properties.AGE_25;
-import static net.minecraft.util.math.Direction.DOWN;
 import static net.minecraft.util.math.Direction.UP;
 
-public class VynhertLeafBlock extends GrowingTallPlantBlock {
+public class VynhertLeafBlock extends GrowingStemBlock {
 
     public VynhertLeafBlock(Settings settings) {
         super(settings);
@@ -37,9 +36,7 @@ public class VynhertLeafBlock extends GrowingTallPlantBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        super.appendProperties(builder);
-
-        builder.add(FRUIT);
+        builder.add(AGE_25, BLOCK_THIRD, FRUIT);
     }
 
     @Override
@@ -72,13 +69,13 @@ public class VynhertLeafBlock extends GrowingTallPlantBlock {
                 return this.canPlantOnTop(upState, world, up);
             }
 
-            if(down.getY() >= 0 && !world.isAir(up) && this.getHeight(world, pos) < 25)
+            if(down.getY() >= 0 && !world.isAir(up) && this.getHeight(world, pos) < this.getMaxHeight())
                 return third != MIDDLE || !world.isAir(down);
 
             return false;
         }
 
-        return state.isAir() && this.getHeight(world, pos) < 25;
+        return state.isAir() && this.getHeight(world, pos) < this.getMaxHeight();
     }
 
     @Override
@@ -106,6 +103,11 @@ public class VynhertLeafBlock extends GrowingTallPlantBlock {
     @Override
     protected int getMaxAge() {
         return 6;
+    }
+
+    @Override
+    protected int getMaxHeight() {
+        return 25;
     }
 
     @Override

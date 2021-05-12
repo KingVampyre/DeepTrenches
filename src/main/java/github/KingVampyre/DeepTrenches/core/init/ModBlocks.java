@@ -1500,6 +1500,10 @@ public class ModBlocks {
 		return Registry.register(BLOCK, id, block);
 	}
 
+	protected static Block createAcuaticFungus(String id, FeaturesSaplingGenerator saplingGenerator) {
+		return register(id, new AcuaticFungusBlock(saplingGenerator, Settings.of(FUNGUS).strength(0, 0)));
+	}
+
 	protected static Block createBioluminescentBlock(String id) {
 		return register(id, new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F)));
 	}
@@ -1730,7 +1734,6 @@ public class ModBlocks {
 		AIRIAL_BUSH = createBlock("deep_trenches:airial_bush", AirialBushBlock::new, GRASS);
 		HARSHLES = createBlock("deep_trenches:harshles", HarshlesBlock::new, GRASS);
 		REEBLOON = createBlock("deep_trenches:reebloon", ReebloonBlock::new, GRASS);
-		MURKSTEM = createBlock("deep_trenches:murkstem", MurkstemBlock::new, SUNFLOWER);
 		SQUISH_TIPS = createBlock("deep_trenches:squish_tips", SquishTipsBlock::new, GRASS);
 		SPROOM_SPIKE = createBlock("deep_trenches:sproom_spike", SproomSpikeBlock::new, SUNFLOWER);
 
@@ -1743,9 +1746,11 @@ public class ModBlocks {
 		ORANGE_LILY = createTallFlower("deep_trenches:orange_lily", SUNFLOWER);
 		PIGAL = createTallFlower("deep_trenches:pigal", SUNFLOWER);
 		PURPROUND = createTallFlower("deep_trenches:purpround", SUNFLOWER);
-		SKALK = createTallFlower("deep_trenches:skalk", SUNFLOWER);
 		SPRINLY = createTallFlower("deep_trenches:sprinly", SUNFLOWER);
 		VELVET_LILY = createTallFlower("deep_trenches:velvet_lily", SUNFLOWER);
+
+		MURKSTEM = createBlock("deep_trenches:murkstem", MurkstemBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
+		SKALK = createBlock("deep_trenches:skalk", SkalkBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
 
 		DEAD_BLACKGREEN_TREE_CORAL = createDeadCoral("deep_trenches:dead_blackgreen_tree_coral");
 		DEAD_BLACKGREEN_TREE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_blackgreen_tree_coral_block");
@@ -2013,7 +2018,7 @@ public class ModBlocks {
 		BARSHROOKLE_LOG = createOakLog("deep_trenches:barshrookle_log");
 		BARSHROOKLE_PLANKS = createOakPlanks("deep_trenches:barshrookle_planks");
 		BARSHROOKLE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:barshrookle_pressure_plate");
-		BARSHROOKLE_SAPLING = createOakSapling("deep_trenches:barshrookle_sapling", SaplingGenerators.BARSHROOKLE);
+		BARSHROOKLE_SAPLING = createAcuaticFungus("deep_trenches:barshrookle_sapling", SaplingGenerators.BARSHROOKLE);
 		BARSHROOKLE_SIGN = createOakSign("deep_trenches:barshrookle_sign", SignTypes.BARSHROOKLE);
 		BARSHROOKLE_SLAB = createOakSlab("deep_trenches:barshrookle_slab");
 		BARSHROOKLE_STAIRS = createOakStairs("deep_trenches:barshrookle_stairs", BARSHROOKLE_PLANKS);
@@ -2521,7 +2526,7 @@ public class ModBlocks {
 		NORFOLK_PINE_WALL_SIGN = createOakWallSign("deep_trenches:norfolk_pine_wall_sign", SignTypes.NORFOLK_PINE);
 		NORFOLK_PINE_WOOD = createOakWood("deep_trenches:norfolk_pine_wood");
 
-		OBSCRUS = createCopy("deep_trenches:obscrus", KELP_PLANT);
+		OBSCRUS = createBlock("deep_trenches:obscrus", ObscrusBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
 		OBSCRUS_BUTTON = createOakButton("deep_trenches:obscrus_button");
 		OBSCRUS_DOOR = createOakDoor("deep_trenches:obscrus_door");
 		OBSCRUS_FENCE = createOakFence("deep_trenches:obscrus_fence");
@@ -2609,7 +2614,7 @@ public class ModBlocks {
 		PURFUNGA_LOG = createOakLog("deep_trenches:purfunga_log");
 		PURFUNGA_PLANKS = createOakPlanks("deep_trenches:purfunga_planks");
 		PURFUNGA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:purfunga_pressure_plate");
-		PURFUNGA_SAPLING = createOakSapling("deep_trenches:purfunga_sapling", SaplingGenerators.PURFUNGA);
+		PURFUNGA_SAPLING = createAcuaticFungus("deep_trenches:purfunga_sapling", SaplingGenerators.PURFUNGA);
 		PURFUNGA_SIGN = createOakSign("deep_trenches:purfunga_sign", SignTypes.PURFUNGA);
 		PURFUNGA_SLAB = createOakSlab("deep_trenches:purfunga_slab");
 		PURFUNGA_STAIRS = createOakStairs("deep_trenches:purfunga_stairs", PURFUNGA_PLANKS);
@@ -2875,7 +2880,7 @@ public class ModBlocks {
 		STROOMEAN_LOG = createOakLog("deep_trenches:stroomean_log");
 		STROOMEAN_PLANKS = createOakPlanks("deep_trenches:stroomean_planks");
 		STROOMEAN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:stroomean_pressure_plate");
-		STROOMEAN_SAPLING = createOakSapling("deep_trenches:stroomean_sapling", SaplingGenerators.STROOMEAN);
+		STROOMEAN_SAPLING = createAcuaticFungus("deep_trenches:stroomean_sapling", SaplingGenerators.STROOMEAN);
 		STROOMEAN_SIGN = createOakSign("deep_trenches:stroomean_sign", SignTypes.STORTREEAN);
 		STROOMEAN_SLAB = createOakSlab("deep_trenches:stroomean_slab");
 		STROOMEAN_STAIRS = createOakStairs("deep_trenches:stroomean_stairs", STROOMEAN_PLANKS);
@@ -2891,7 +2896,7 @@ public class ModBlocks {
 		SUNRISE_FUNGUS_LOG = createOakLog("deep_trenches:sunrise_fungus_log");
 		SUNRISE_FUNGUS_PLANKS = createOakPlanks("deep_trenches:sunrise_fungus_planks");
 		SUNRISE_FUNGUS_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:sunrise_fungus_pressure_plate");
-		SUNRISE_FUNGUS_SAPLING = createOakSapling("deep_trenches:sunrise_fungus_sapling", SaplingGenerators.SUNRISE_FUNGUS);
+		SUNRISE_FUNGUS_SAPLING = createAcuaticFungus("deep_trenches:sunrise_fungus_sapling", SaplingGenerators.SUNRISE_FUNGUS);
 		SUNRISE_FUNGUS_SIGN = createOakSign("deep_trenches:sunrise_fungus_sign", SignTypes.SUNRISE_FUNGUS);
 		SUNRISE_FUNGUS_SLAB = createOakSlab("deep_trenches:sunrise_fungus_slab");
 		SUNRISE_FUNGUS_STAIRS = createOakStairs("deep_trenches:sunrise_fungus_stairs", SUNRISE_FUNGUS_PLANKS);
