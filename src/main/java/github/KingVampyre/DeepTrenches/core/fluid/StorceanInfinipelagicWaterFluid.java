@@ -26,7 +26,7 @@ public abstract class StorceanInfinipelagicWaterFluid extends AbstractWaterFluid
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
-        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 120, 4, false, false, true));
+        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 240, 4, false, false, true));
     }
 
     @Override

@@ -17,6 +17,7 @@ import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tag.Tag;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
@@ -191,6 +192,26 @@ public abstract class MixinLivingEntity extends MixinEntity {
                     instance.applyUpdateEffect(attacker);
                 }
 
+            }
+
+        }
+
+    }
+
+    @Inject(method = "swimUpward", at = @At("HEAD"), cancellable = true)
+    private void swimUpward(Tag<Fluid> fluid, CallbackInfo ci) {
+
+        if(this.hasStatusEffect(SINKING)) {
+            StatusEffectInstance effectInstance = this.getStatusEffect(SINKING);
+
+            if (effectInstance != null) {
+                int amplifier = effectInstance.getAmplifier();
+
+                double y = 0.15 / (amplifier + 4) + 0.005;
+                double minY = Math.min(y, 0.03999999910593033D);
+
+                this.setVelocity(this.getVelocity().add(0, minY, 0));
+                ci.cancel();
             }
 
         }

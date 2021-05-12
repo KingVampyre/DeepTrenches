@@ -26,7 +26,7 @@ public abstract class HadopelagicWaterFluid extends AbstractWaterFluid implement
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
-        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 120, 1, false, false, true));
+        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 240, 1, false, false, true));
     }
 
     @Override

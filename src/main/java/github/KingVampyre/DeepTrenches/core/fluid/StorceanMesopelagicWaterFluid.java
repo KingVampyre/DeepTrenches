@@ -25,7 +25,7 @@ public abstract class StorceanMesopelagicWaterFluid extends AbstractWaterFluid i
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
-        living.addStatusEffect(new StatusEffectInstance(SINKING, 100, 1, false, false, true));
+        living.addStatusEffect(new StatusEffectInstance(SINKING, 210, 1, false, false, true));
     }
 
     @Override
