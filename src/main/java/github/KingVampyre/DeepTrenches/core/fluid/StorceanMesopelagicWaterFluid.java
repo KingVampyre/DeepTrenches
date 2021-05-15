@@ -1,8 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
-import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
+import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
-import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
@@ -12,16 +11,20 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.state.StateManager;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_STORCEAN_MESOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.STORCEAN_MESOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.STORCEAN_MESOPELAGIC_WATER_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SINKING;
+import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
-public abstract class StorceanMesopelagicWaterFluid extends AbstractWaterFluid implements StatusEffectFluid, OxygenatedFluid {
+public abstract class StorceanMesopelagicWaterFluid extends AbstractOxygenatedWaterFluid implements StatusEffectFluid {
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
@@ -59,8 +62,20 @@ public abstract class StorceanMesopelagicWaterFluid extends AbstractWaterFluid i
     }
 
     @Override
-    public boolean matchesType(Fluid fluid) {
-        return fluid == STORCEAN_MESOPELAGIC_WATER || fluid == FLOWING_STORCEAN_MESOPELAGIC_WATER;
+    @Nullable
+    protected ParticleEffect getUnderwaterParticle(Random random) {
+
+        if(random.nextInt(12) == 0)
+            return BUBBLE;
+
+        if(random.nextInt(5) == 0) {
+            if(random.nextBoolean())
+                return random.nextInt(3) == 0 ? STORCEAN_MARINE_SNOW_BIG : STORCEAN_MARINE_SNOW_CHUNK;
+
+            return STORCEAN_MARINE_SNOW_SMALL;
+        }
+
+        return null;
     }
 
     @Override

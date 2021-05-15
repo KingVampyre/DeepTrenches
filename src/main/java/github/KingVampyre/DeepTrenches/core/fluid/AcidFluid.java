@@ -1,8 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
-import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
+import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import github.KingVampyre.DeepTrenches.core.util.StatusEffectHelper;
@@ -13,17 +13,19 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import org.apache.commons.lang3.RandomUtils;
 
 import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.ACID;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_ACID;
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.ENTITY_NEAR_GASEOUS_ACID;
+import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.ACID_CORROSION;
 
 public abstract class AcidFluid extends AbstractWaterFluid implements StatusEffectFluid, OxygenatedFluid {
@@ -59,6 +61,11 @@ public abstract class AcidFluid extends AbstractWaterFluid implements StatusEffe
     @Override
     public Fluid getFlowing() {
         return FLOWING_ACID;
+    }
+
+    @Override
+    protected ParticleEffect getParticle() {
+        return RandomUtils.nextDouble() < 0.65 ? ACID_DRIPPING : ACID_DRIPLET;
     }
 
     @Override

@@ -60,6 +60,11 @@ public abstract class AbstractWaterFluid extends FlowableFluid {
         return true;
     }
 
+    @Override
+    public boolean matchesType(Fluid fluid) {
+        return fluid == this.getStill() || fluid == this.getFlowing();
+    }
+
     @Environment(EnvType.CLIENT)
     public void randomDisplayTick(World world, BlockPos pos, FluidState state, Random random) {
         if (!state.isStill() && !state.get(FALLING)) {
