@@ -1,6 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.particle;
 
 import github.KingVampyre.DeepTrenches.core.init.ParticleTypes;
+import github.KingVampyre.DeepTrenches.core.particle.ColoredWaterFluidParticleEffect;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.BlockLeakParticle;
@@ -14,14 +15,14 @@ import net.minecraft.particle.ParticleEffect;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.ACID;
 
-public class AcidParticle extends BlockLeakParticle {
+public class LeakParticle extends BlockLeakParticle {
 
-    public AcidParticle(ClientWorld world, double x, double y, double z, Fluid fluid) {
+    public LeakParticle(ClientWorld world, double x, double y, double z, Fluid fluid) {
         super(world, x, y, z, fluid);
     }
 
     @Environment(EnvType.CLIENT)
-    public static class ContinuousFalling extends AcidParticle.Falling {
+    public static class ContinuousFalling extends LeakParticle.Falling {
         protected final ParticleEffect nextParticle;
 
         protected ContinuousFalling(ClientWorld clientWorld, double x, double y, double z, Fluid fluid, ParticleEffect nextParticle) {
@@ -42,7 +43,7 @@ public class AcidParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class Dripping extends AcidParticle {
+    public static class Dripping extends LeakParticle {
         private final ParticleEffect nextParticle;
 
         protected Dripping(ClientWorld clientWorld, double x, double y, double z, Fluid fluid, ParticleEffect nextParticle) {
@@ -65,7 +66,7 @@ public class AcidParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class Falling extends AcidParticle {
+    public static class Falling extends LeakParticle {
 
         protected Falling(ClientWorld world, double x, double y, double z, Fluid fluid) {
             super(world, x, y, z, fluid);
@@ -83,7 +84,7 @@ public class AcidParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class Landing extends AcidParticle {
+    public static class Landing extends LeakParticle {
 
         protected Landing(ClientWorld world, double x, double y, double z, Fluid fluid) {
             super(world, x, y, z, fluid);
@@ -94,17 +95,17 @@ public class AcidParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class DripletFactory implements ParticleFactory<DefaultParticleType> {
+    public static class AcidDripletFactory implements ParticleFactory<DefaultParticleType> {
 
         protected final SpriteProvider spriteProvider;
 
-        public DripletFactory(SpriteProvider spriteProvider) {
+        public AcidDripletFactory(SpriteProvider spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            AcidParticle particle = new AcidParticle.Dripping(world, x, y, z, ACID, ParticleTypes.ACID_FALLING);
+            LeakParticle particle = new LeakParticle.Dripping(world, x, y, z, ACID, ParticleTypes.ACID_FALLING);
             particle.setSprite(this.spriteProvider);
 
             return particle;
@@ -113,17 +114,17 @@ public class AcidParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class DrippingFactory implements ParticleFactory<DefaultParticleType> {
+    public static class AcidDrippingFactory implements ParticleFactory<DefaultParticleType> {
 
         protected final SpriteProvider spriteProvider;
 
-        public DrippingFactory(SpriteProvider spriteProvider) {
+        public AcidDrippingFactory(SpriteProvider spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            AcidParticle particle = new AcidParticle.Dripping(world, x, y, z, ACID, ParticleTypes.ACID_FALLING);
+            LeakParticle particle = new LeakParticle.Dripping(world, x, y, z, ACID, ParticleTypes.ACID_FALLING);
             particle.setSprite(this.spriteProvider);
 
             return particle;
@@ -132,17 +133,17 @@ public class AcidParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class FallingFactory implements ParticleFactory<DefaultParticleType> {
+    public static class AcidFallingFactory implements ParticleFactory<DefaultParticleType> {
 
         protected final SpriteProvider spriteProvider;
 
-        public FallingFactory(SpriteProvider spriteProvider) {
+        public AcidFallingFactory(SpriteProvider spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            AcidParticle particle = new AcidParticle.ContinuousFalling(world, x, y, z, ACID, ParticleTypes.ACID_LANDING);
+            LeakParticle particle = new LeakParticle.ContinuousFalling(world, x, y, z, ACID, ParticleTypes.ACID_LANDING);
             particle.setSprite(this.spriteProvider);
 
             return particle;
@@ -151,17 +152,59 @@ public class AcidParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class LandingFactory implements ParticleFactory<DefaultParticleType> {
+    public static class AcidLandingFactory implements ParticleFactory<DefaultParticleType> {
 
         protected final SpriteProvider spriteProvider;
 
-        public LandingFactory(SpriteProvider spriteProvider) {
+        public AcidLandingFactory(SpriteProvider spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            AcidParticle particle = new AcidParticle.Landing(world, x, y, z, ACID);
+            LeakParticle particle = new LeakParticle.Landing(world, x, y, z, ACID);
+            particle.setSprite(this.spriteProvider);
+
+            return particle;
+        }
+
+    }
+
+    @Environment(EnvType.CLIENT)
+    public static class ColoredWaterDrippingFactory implements ParticleFactory<ColoredWaterFluidParticleEffect> {
+
+        protected final SpriteProvider spriteProvider;
+
+        public ColoredWaterDrippingFactory(SpriteProvider spriteProvider) {
+            this.spriteProvider = spriteProvider;
+        }
+
+        @Override
+        public Particle createParticle(ColoredWaterFluidParticleEffect parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+            LeakParticle particle = new LeakParticle.Dripping(world, x, y, z, parameters.fluid, parameters);
+
+            particle.setColor(parameters.red, parameters.green, parameters.blue);
+            particle.setSprite(this.spriteProvider);
+
+            return particle;
+        }
+
+    }
+
+    @Environment(EnvType.CLIENT)
+    public static class ColoredWaterFallingFactory implements ParticleFactory<ColoredWaterFluidParticleEffect> {
+
+        protected final SpriteProvider spriteProvider;
+
+        public ColoredWaterFallingFactory(SpriteProvider spriteProvider) {
+            this.spriteProvider = spriteProvider;
+        }
+
+        @Override
+        public Particle createParticle(ColoredWaterFluidParticleEffect parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+            LeakParticle particle = new LeakParticle.ContinuousFalling(world, x, y, z, parameters.fluid, parameters);
+
+            particle.setColor(parameters.red, parameters.green, parameters.blue);
             particle.setSprite(this.spriteProvider);
 
             return particle;

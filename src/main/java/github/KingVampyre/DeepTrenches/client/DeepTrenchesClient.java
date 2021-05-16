@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.client.color.block.StorceanFoliageColorPr
 import github.KingVampyre.DeepTrenches.client.init.ColorMaps;
 import github.KingVampyre.DeepTrenches.client.init.FluidRenderHandlers;
 import github.KingVampyre.DeepTrenches.client.init.ResourceReloadListeners;
-import github.KingVampyre.DeepTrenches.client.particle.AcidParticle;
+import github.KingVampyre.DeepTrenches.client.particle.LeakParticle;
 import github.KingVampyre.DeepTrenches.client.particle.MarineSnowParticle;
 import github.KingVampyre.DeepTrenches.client.particle.StatusEffectParticle;
 import github.KingVampyre.DeepTrenches.client.render.block.entity.CustomSignBlockEntityRenderer;
@@ -42,10 +42,13 @@ public class DeepTrenchesClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        ParticleFactoryRegistry.getInstance().register(ACID_DRIPLET, AcidParticle.DripletFactory::new);
-        ParticleFactoryRegistry.getInstance().register(ACID_DRIPPING, AcidParticle.DrippingFactory::new);
-        ParticleFactoryRegistry.getInstance().register(ACID_FALLING, AcidParticle.FallingFactory::new);
-        ParticleFactoryRegistry.getInstance().register(ACID_LANDING, AcidParticle.LandingFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ACID_DRIPLET, LeakParticle.AcidDripletFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ACID_DRIPPING, LeakParticle.AcidDrippingFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ACID_FALLING, LeakParticle.AcidFallingFactory::new);
+        ParticleFactoryRegistry.getInstance().register(ACID_LANDING, LeakParticle.AcidLandingFactory::new);
+
+        ParticleFactoryRegistry.getInstance().register(DRIPPING_COLORED_WATER, LeakParticle.ColoredWaterDrippingFactory::new);
+        ParticleFactoryRegistry.getInstance().register(FALLING_COLORED_WATER, LeakParticle.ColoredWaterFallingFactory::new);
 
         ParticleFactoryRegistry.getInstance().register(AMBIENT_CORRODED_SKULL, StatusEffectParticle.EntityAmbientFactory::new);
         ParticleFactoryRegistry.getInstance().register(AMBIENT_NEAR_GASEOUS_ACID, StatusEffectParticle.EntityAmbientFactory::new);
@@ -509,49 +512,34 @@ public class DeepTrenchesClient implements ClientModInitializer {
         /* ------------------------------------------ FLUID RENDER LAYERS ----------------------------------------------------- */
         BlockRenderLayerMap.INSTANCE.putFluid(ABYSSOPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_ABYSSOPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(ACID, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_ACID, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(BATHYPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_BATHYPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(BRINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_BRINE, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(CLEAR_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_CLEAR_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(HADOPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_HADOPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(MESOPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_MESOPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_ABYSSOPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_ABYSSOPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_BATHYPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_BATHYPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_ENDERPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_ENDERPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_GASOPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_GASOPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_HADOPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_HADOPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_INFINIPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_INFINIPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_MESOPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_MESOPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_VIRDIPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_VIRDIPELAGIC_WATER, RenderLayer.getTranslucent());
-
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_WATER, RenderLayer.getTranslucent());
 
