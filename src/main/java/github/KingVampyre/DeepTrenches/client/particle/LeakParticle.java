@@ -2,12 +2,10 @@ package github.KingVampyre.DeepTrenches.client.particle;
 
 import github.KingVampyre.DeepTrenches.core.init.ParticleTypes;
 import github.KingVampyre.DeepTrenches.core.particle.ColoredWaterFluidParticleEffect;
+import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.particle.BlockLeakParticle;
-import net.minecraft.client.particle.Particle;
-import net.minecraft.client.particle.ParticleFactory;
-import net.minecraft.client.particle.SpriteProvider;
+import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.particle.DefaultParticleType;
@@ -79,8 +77,8 @@ public class LeakParticle extends BlockLeakParticle {
 
             if (this.onGround)
                 this.markDead();
-
         }
+
     }
 
     @Environment(EnvType.CLIENT)
@@ -181,12 +179,13 @@ public class LeakParticle extends BlockLeakParticle {
 
         @Override
         public Particle createParticle(ColoredWaterFluidParticleEffect parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            LeakParticle particle = new LeakParticle.Dripping(world, x, y, z, parameters.fluid, parameters);
+            ParticleEffect particleEffect = ParticleEffectHelper.getFallingEffect(parameters.fluid, parameters.red, parameters.green, parameters.blue);
+            LeakParticle dripping = new LeakParticle.Dripping(world, x, y, z, parameters.fluid, particleEffect);
 
-            particle.setColor(parameters.red, parameters.green, parameters.blue);
-            particle.setSprite(this.spriteProvider);
+            dripping.setColor(parameters.red, parameters.green, parameters.blue);
+            dripping.setSprite(this.spriteProvider);
 
-            return particle;
+            return dripping;
         }
 
     }
@@ -202,7 +201,29 @@ public class LeakParticle extends BlockLeakParticle {
 
         @Override
         public Particle createParticle(ColoredWaterFluidParticleEffect parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            LeakParticle particle = new LeakParticle.ContinuousFalling(world, x, y, z, parameters.fluid, parameters);
+            ParticleEffect particleEffect = ParticleEffectHelper.getSplashingEffect(parameters.fluid, parameters.red, parameters.green, parameters.blue);
+            LeakParticle particle = new LeakParticle.ContinuousFalling(world, x, y, z, parameters.fluid, particleEffect);
+
+            particle.setColor(parameters.red, parameters.green, parameters.blue);
+            particle.setSprite(this.spriteProvider);
+
+            return particle;
+        }
+
+    }
+
+    @Environment(EnvType.CLIENT)
+    public static class ColoredWaterSplashingFactory implements ParticleFactory<ColoredWaterFluidParticleEffect> {
+
+        protected final SpriteProvider spriteProvider;
+
+        public ColoredWaterSplashingFactory(SpriteProvider spriteProvider) {
+            this.spriteProvider = spriteProvider;
+        }
+
+        @Override
+        public Particle createParticle(ColoredWaterFluidParticleEffect parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+            WaterSplashParticle particle = new WaterSplashParticle(world, x, y, z, velocityX, velocityY, velocityZ);
 
             particle.setColor(parameters.red, parameters.green, parameters.blue);
             particle.setSprite(this.spriteProvider);

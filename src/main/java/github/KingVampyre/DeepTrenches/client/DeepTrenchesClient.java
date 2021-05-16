@@ -49,6 +49,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
 
         ParticleFactoryRegistry.getInstance().register(DRIPPING_COLORED_WATER, LeakParticle.ColoredWaterDrippingFactory::new);
         ParticleFactoryRegistry.getInstance().register(FALLING_COLORED_WATER, LeakParticle.ColoredWaterFallingFactory::new);
+        ParticleFactoryRegistry.getInstance().register(SPLASHING_COLORED_WATER, LeakParticle.ColoredWaterSplashingFactory::new);
 
         ParticleFactoryRegistry.getInstance().register(AMBIENT_CORRODED_SKULL, StatusEffectParticle.EntityAmbientFactory::new);
         ParticleFactoryRegistry.getInstance().register(AMBIENT_NEAR_GASEOUS_ACID, StatusEffectParticle.EntityAmbientFactory::new);

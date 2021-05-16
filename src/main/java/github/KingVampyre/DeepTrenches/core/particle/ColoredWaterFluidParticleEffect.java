@@ -21,11 +21,11 @@ public class ColoredWaterFluidParticleEffect implements ParticleEffect {
             Identifier id = Identifier.tryParse(reader.readString());
             Fluid fluid = FLUID.get(id);
             reader.expect(' ');
-            int red = reader.readInt();
+            float red = reader.readFloat();
             reader.expect(' ');
-            int green = reader.readInt();
+            float green = reader.readFloat();
             reader.expect(' ');
-            int blue = reader.readInt();
+            float blue = reader.readFloat();
 
             return new ColoredWaterFluidParticleEffect(type, fluid, red, green, blue);
         }
@@ -35,9 +35,9 @@ public class ColoredWaterFluidParticleEffect implements ParticleEffect {
             Identifier id = Identifier.tryParse(buf.readString());
 
             Fluid fluid = FLUID.get(id);
-            int red = buf.readInt();
-            int green = buf.readInt();
-            int blue = buf.readInt();
+            float red = buf.readFloat();
+            float green = buf.readFloat();
+            float blue = buf.readFloat();
 
             return new ColoredWaterFluidParticleEffect(type, fluid, red, green, blue);
         }
@@ -46,11 +46,11 @@ public class ColoredWaterFluidParticleEffect implements ParticleEffect {
 
     public final ParticleType<ColoredWaterFluidParticleEffect> type;
     public final Fluid fluid;
-    public final int red;
-    public final int green;
-    public final int blue;
+    public final float red;
+    public final float green;
+    public final float blue;
 
-    public ColoredWaterFluidParticleEffect(ParticleType<ColoredWaterFluidParticleEffect> type, Fluid fluid, int red, int green, int blue) {
+    public ColoredWaterFluidParticleEffect(ParticleType<ColoredWaterFluidParticleEffect> type, Fluid fluid, float red, float green, float blue) {
         this.type = type;
         this.fluid = fluid;
         this.red = red;
@@ -68,9 +68,9 @@ public class ColoredWaterFluidParticleEffect implements ParticleEffect {
         Identifier id = FLUID.getId(this.fluid);
 
         buf.writeString(id.toString());
-        buf.writeInt(this.red);
-        buf.writeInt(this.green);
-        buf.writeInt(this.blue);
+        buf.writeFloat(this.red);
+        buf.writeFloat(this.green);
+        buf.writeFloat(this.blue);
     }
 
     @Override

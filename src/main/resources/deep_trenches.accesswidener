@@ -22,6 +22,7 @@ accessible method net/minecraft/block/WallSignBlock         <init>   (Lnet/minec
 accessible method net/minecraft/client/particle/BlockLeakParticle       <init>      (Lnet/minecraft/client/world/ClientWorld;DDDLnet/minecraft/fluid/Fluid;)V
 accessible method net/minecraft/client/particle/SpellParticle           <init>      (Lnet/minecraft/client/world/ClientWorld;DDDDDDLnet/minecraft/client/particle/SpriteProvider;)V
 accessible method net/minecraft/client/particle/WaterSuspendParticle    <init>      (Lnet/minecraft/client/world/ClientWorld;DDD)V
+accessible method net/minecraft/client/particle/WaterSplashParticle     <init>      (Lnet/minecraft/client/world/ClientWorld;DDDDDD)V
 accessible method net/minecraft/client/particle/WaterSuspendParticle    <init>      (Lnet/minecraft/client/world/ClientWorld;DDDDDD)V
 accessible method net/minecraft/entity/effect/StatusEffect              <init>      (Lnet/minecraft/entity/effect/StatusEffectType;I)V
 accessible method net/minecraft/util/SignType                           <init>      (Ljava/lang/String;)V

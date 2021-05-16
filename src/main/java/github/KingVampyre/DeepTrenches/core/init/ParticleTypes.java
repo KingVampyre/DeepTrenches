@@ -17,6 +17,7 @@ public class ParticleTypes {
 
     public static final ParticleType<ColoredWaterFluidParticleEffect> DRIPPING_COLORED_WATER = Registry.register(PARTICLE_TYPE, "deep_trenches:colored_water_dripping", FabricParticleTypes.complex(ColoredWaterFluidParticleEffect.PARAMETERS_FACTORY));
     public static final ParticleType<ColoredWaterFluidParticleEffect> FALLING_COLORED_WATER = Registry.register(PARTICLE_TYPE, "deep_trenches:colored_water_falling", FabricParticleTypes.complex(ColoredWaterFluidParticleEffect.PARAMETERS_FACTORY));
+    public static final ParticleType<ColoredWaterFluidParticleEffect> SPLASHING_COLORED_WATER = Registry.register(PARTICLE_TYPE, "deep_trenches:colored_water_splashing", FabricParticleTypes.complex(ColoredWaterFluidParticleEffect.PARAMETERS_FACTORY));
 
     public static final DefaultParticleType AMBIENT_NEAR_GASEOUS_ACID = Registry.register(PARTICLE_TYPE, "deep_trenches:ambient_near_gaseous_acid", FabricParticleTypes.simple());
     public static final DefaultParticleType AMBIENT_CORRODED_SKULL = Registry.register(PARTICLE_TYPE, "deep_trenches:ambient_corroded_skull", FabricParticleTypes.simple());

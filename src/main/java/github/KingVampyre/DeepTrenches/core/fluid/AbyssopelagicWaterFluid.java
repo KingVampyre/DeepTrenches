@@ -5,6 +5,7 @@ import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.core.init.DamageSources;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
+import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -53,6 +54,11 @@ public abstract class AbyssopelagicWaterFluid extends AbstractOxygenatedWaterFlu
     @Override
     public Fluid getFlowing() {
         return FLOWING_ABYSSOPELAGIC_WATER;
+    }
+
+    @Override
+    protected ParticleEffect getParticle() {
+        return ParticleEffectHelper.getDrippingEffect(this, 0.145F, 0.239F, 0.470F);
     }
 
     @Override

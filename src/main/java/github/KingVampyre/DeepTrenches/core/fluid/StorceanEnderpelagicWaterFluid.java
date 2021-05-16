@@ -3,6 +3,7 @@ package github.KingVampyre.DeepTrenches.core.fluid;
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.ModItems;
+import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -42,6 +43,11 @@ public abstract class StorceanEnderpelagicWaterFluid extends AbstractOxygenatedW
     @Override
     public Fluid getFlowing() {
         return FLOWING_STORCEAN_ENDERPELAGIC_WATER;
+    }
+
+    @Override
+    protected ParticleEffect getParticle() {
+        return ParticleEffectHelper.getDrippingEffect(this, 0.8F, 0.576F, 0.949F);
     }
 
     @Override
