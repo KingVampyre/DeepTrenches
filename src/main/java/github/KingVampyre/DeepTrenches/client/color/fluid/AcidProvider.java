@@ -11,7 +11,7 @@ public class AcidProvider implements FluidColorProvider {
     public static final AcidProvider INSTANCE = new AcidProvider();
 
     @Override
-    public int getColor(@Nullable BlockRenderView blockRenderView, @Nullable BlockPos blockPos, FluidState fluidState) {
+    public int getColor(@Nullable BlockRenderView view, @Nullable BlockPos pos, FluidState fluidState) {
         return 11654073;
     }
 

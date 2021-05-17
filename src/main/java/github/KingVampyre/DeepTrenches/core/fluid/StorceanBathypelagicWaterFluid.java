@@ -24,6 +24,7 @@ import static github.KingVampyre.DeepTrenches.core.init.ModFluids.STORCEAN_BATHY
 import static github.KingVampyre.DeepTrenches.core.init.ModItems.STORCEAN_BATHYPELAGIC_WATER_BUCKET;
 import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.PRESSURE;
+import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SINKING;
 import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class StorceanBathypelagicWaterFluid extends AbstractOxygenatedWaterFluid implements StatusEffectFluid {
@@ -31,6 +32,7 @@ public abstract class StorceanBathypelagicWaterFluid extends AbstractOxygenatedW
     @Override
     public void applyStatusEffects(LivingEntity living) {
         living.addStatusEffect(new StatusEffectInstance(PRESSURE, 210, 0, false, false, true));
+        living.addStatusEffect(new StatusEffectInstance(SINKING, 210, 0, false, false, true));
     }
 
     @Override
