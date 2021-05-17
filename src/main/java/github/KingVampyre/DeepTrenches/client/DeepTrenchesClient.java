@@ -5,20 +5,19 @@ import github.KingVampyre.DeepTrenches.client.color.block.MosoilColorProvider;
 import github.KingVampyre.DeepTrenches.client.color.block.StorceanFoliageColorProvider;
 import github.KingVampyre.DeepTrenches.client.init.ColorMaps;
 import github.KingVampyre.DeepTrenches.client.init.FluidRenderHandlers;
-import github.KingVampyre.DeepTrenches.client.init.ResourceReloadListeners;
+import github.KingVampyre.DeepTrenches.client.init.Sprites;
 import github.KingVampyre.DeepTrenches.client.particle.LeakParticle;
 import github.KingVampyre.DeepTrenches.client.particle.MarineSnowParticle;
 import github.KingVampyre.DeepTrenches.client.particle.StatusEffectParticle;
 import github.KingVampyre.DeepTrenches.client.render.block.entity.CustomSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
-import github.KingVampyre.DeepTrenches.client.resource.listener.StorceanFoliageColorMapResourceSupplier;
-import github.KingVampyre.DeepTrenches.client.resource.listener.StorceanMosoilColorMapResourceSupplier;
-import github.KingVampyre.DeepTrenches.client.resource.listener.StorceanWaterColorMapResourceSupplier;
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.ModBoatEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.SignTypes;
+import github.Louwind.Reload.client.resource.ColorMapReloadListener;
+import github.Louwind.Reload.client.resource.sprite.BlockSpritesReloadListener;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
@@ -31,6 +30,7 @@ import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 
+import static github.KingVampyre.DeepTrenches.client.init.ColorMaps.STORCEAN_FOLIAGE;
 import static github.KingVampyre.DeepTrenches.client.init.Textures.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.*;
 import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
@@ -66,27 +66,27 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(STORCEAN_MARINE_SNOW_SMALL, MarineSnowParticle.Factory::new);
 
         /* ------------------------------------------ COLOR MAPS ----------------------------------------------------- */
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new StorceanFoliageColorMapResourceSupplier());
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new StorceanMosoilColorMapResourceSupplier());
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new StorceanWaterColorMapResourceSupplier());
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_foliage_colormap", STORCEAN_FOLIAGE_COLORMAP, ColorMaps.STORCEAN_FOLIAGE));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_mosoil_colormap", STORCEAN_MOSOIL_COLORMAP, ColorMaps.STORCEAN_MOSOIL));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_water_colormap", STORCEAN_WATER_COLORMAP, ColorMaps.STORCEAN_WATER));
 
         /* ------------------------------------------ FLUID SPRITES ----------------------------------------------------- */
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.ABYSSOPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.ACID);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.BATHYPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.BRINE);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.CLEAR_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.HADOPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.MESOPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_ABYSSOPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_BATHYPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_ENDERPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_GASOPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_HADOPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_INFINIPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_MESOPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_VIRDIPELAGIC_WATER);
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(ResourceReloadListeners.STORCEAN_WATER);
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:abyssopelagic_water", Sprites.ABYSSOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:acid", Sprites.ACID));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:bathypelagic_water", Sprites.BATHYPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:brine", Sprites.BRINE));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:clear_water", Sprites.CLEAR_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:hadopelagic_water", Sprites.HADOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:mesopelagic_water", Sprites.MESOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_abyssopelagic_water", Sprites.STORCEAN_ABYSSOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_bathypelagic_water", Sprites.STORCEAN_BATHYPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_enderpelagic_water", Sprites.STORCEAN_ENDERPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_gasopelagic_water", Sprites.STORCEAN_GASOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_hadopelagic_water", Sprites.STORCEAN_HADOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_infinipelagic_water", Sprites.STORCEAN_INFINIPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_mesopelagic_water", Sprites.STORCEAN_MESOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_verdipelagic_water", Sprites.STORCEAN_VIRDIPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_water", Sprites.STORCEAN_WATER));
 
         /* ------------------------------------------ FLUID SPRITES ----------------------------------------------------- */
         FluidRenderHandlerRegistry.INSTANCE.register(ABYSSOPELAGIC_WATER, FluidRenderHandlers.ABYSSOPELAGIC_WATER);
@@ -172,7 +172,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         /* ------------------------------------------ ITEM COLORS ----------------------------------------------------- */
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_MOSOIL.getDefaultColor(), ModBlocks.REEBLOON);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_MOSOIL.getDefaultColor(), ModBlocks.MOSOIL);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_FOLIAGE.getDefaultColor(), ModBlocks.AQUEAN_LEAVES);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> STORCEAN_FOLIAGE.getDefaultColor(), ModBlocks.AQUEAN_LEAVES);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, ModBlocks.ALMOND_LEAVES, ModBlocks.BLACK_BIRCH_LEAVES, ModBlocks.COOK_PINE_LEAVES, ModBlocks.EBONY_LEAVES, ModBlocks.PELTOGYNE_LEAVES, ModBlocks.PLUM_LEAVES, ModBlocks.TEAK_LEAVES);
 
         /* ------------------------------------------ BLOCK RENDER LAYERS ----------------------------------------------------- */

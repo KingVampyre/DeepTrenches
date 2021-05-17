@@ -1,10 +1,11 @@
 package github.KingVampyre.DeepTrenches.client.color.world;
 
+import github.Louwind.Reload.client.color.ColorMap;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
 @Environment(EnvType.CLIENT)
-public class StorceanColors {
+public class StorceanColors implements ColorMap {
 
     private final int defaultColor;
     private int[] colorMap;
@@ -14,18 +15,20 @@ public class StorceanColors {
     }
 
     public int getColor(double temperature, double humidity) {
-        int i = (int)((1 - temperature) * 255);
-        int j = (int)((1 - humidity * temperature) * 255);
+        int i = (int) ((1 - temperature) * 255);
+        int j = (int) ((1 - humidity * temperature) * 255);
 
-        return colorMap[j << 8 | i];
+        return this.colorMap[j << 8 | i];
     }
 
+    @Override
     public int getDefaultColor() {
         return this.defaultColor;
     }
 
+    @Override
     public void setColorMap(int[] pixels) {
-        colorMap = pixels;
+        this.colorMap = pixels;
     }
 
 }

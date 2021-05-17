@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.init;
 
 import com.google.common.collect.ImmutableList;
-import github.KingVampyre.DeepTrenches.client.texture.SpriteLoader;
+import github.Louwind.Reload.client.texture.SpriteLoader;
 
 import static github.KingVampyre.DeepTrenches.client.init.Textures.*;
 

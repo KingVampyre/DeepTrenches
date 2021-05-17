@@ -19,7 +19,7 @@ public class StorceanFoliageColorProvider implements BlockColorProvider {
             ClientWorld client = MinecraftClient.getInstance().world;
 
             if(client != null)
-                return client.calculateColor(pos, (biome, d, e) -> {
+                return client.calculateColor(pos, (biome, x, z) -> {
                     double temperature = biome.getTemperature();
                     double humidity = biome.getDownfall();
 
@@ -29,4 +29,5 @@ public class StorceanFoliageColorProvider implements BlockColorProvider {
 
         return ColorMaps.STORCEAN_FOLIAGE.getDefaultColor();
     }
+
 }

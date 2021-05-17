@@ -46,6 +46,9 @@ dependencies {
 	// Features API
 	modImplementation "com.github.Louwind:Features-API:1.5.1"
 
+	// Reload
+	modImplementation 'com.github.Louwind:Reload:837ff01fc7'
+
 	// Geckolib
 	modImplementation 'software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0:dev'
 }

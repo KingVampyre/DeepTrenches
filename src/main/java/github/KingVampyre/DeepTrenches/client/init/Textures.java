@@ -55,4 +55,8 @@ public class Textures {
     public static final Identifier GUI_ACID_CORRODED_ICONS = new Identifier("deep_trenches:textures/gui/acid_corroded_icons.png");
     public static final Identifier GUI_GAS_CORRODED_ICONS = new Identifier("deep_trenches:textures/gui/gas_corroded_icons.png");
 
+    public static final Identifier STORCEAN_FOLIAGE_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_foliage.png");
+    public static final Identifier STORCEAN_MOSOIL_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_mosoil.png");
+    public static final Identifier STORCEAN_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_water.png");
+
 }
