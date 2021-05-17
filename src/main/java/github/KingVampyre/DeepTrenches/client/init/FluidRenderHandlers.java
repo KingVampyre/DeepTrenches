@@ -8,11 +8,11 @@ public class FluidRenderHandlers {
 
     public static final FluidRenderHandler ABYSSOPELAGIC_WATER = new SpritesFluidRenderHandler(Sprites.ABYSSOPELAGIC_WATER);
 
-    public static final FluidRenderHandler ACID = new SpritesFluidRenderHandler(Sprites.ACID);
+    public static final FluidRenderHandler ACID = new SpritesFluidRenderHandler(AcidProvider.INSTANCE, Sprites.ACID);
 
     public static final FluidRenderHandler BATHYPELAGIC_WATER = new SpritesFluidRenderHandler(Sprites.BATHYPELAGIC_WATER);
 
-    public static final FluidRenderHandler BRINE = new SpritesFluidRenderHandler(Sprites.BRINE);
+    public static final FluidRenderHandler BRINE = new SpritesFluidRenderHandler(BrineProvider.INSTANCE, Sprites.BRINE);
 
     public static final FluidRenderHandler CLEAR_WATER = new SpritesFluidRenderHandler(ClearWaterProvider.INSTANCE, Sprites.CLEAR_WATER);
 
