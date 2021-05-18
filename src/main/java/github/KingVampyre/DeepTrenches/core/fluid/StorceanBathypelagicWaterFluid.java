@@ -31,8 +31,8 @@ public abstract class StorceanBathypelagicWaterFluid extends AbstractOxygenatedW
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
-        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 210, 0, false, false, true));
-        living.addStatusEffect(new StatusEffectInstance(SINKING, 210, 0, false, false, true));
+        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 210, 1, false, false, true));
+        living.addStatusEffect(new StatusEffectInstance(SINKING, 210, 3, false, false, true));
     }
 
     @Override

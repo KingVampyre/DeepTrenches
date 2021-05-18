@@ -8,7 +8,7 @@ public class ColorMaps {
 
     public static final StorceanColors STORCEAN_ABYSSOPELAGIC_WATER = new StorceanColors(2440568);
 
-    public static final StorceanColors STORCEAN_CLEAR_WATER = new StorceanColors(0);
+    public static final StorceanColors STORCEAN_CLEAR_WATER = new StorceanColors(10266311);
 
     public static final StorceanColors STORCEAN_ENDERPELAGIC_WATER = new StorceanColors(13407218);
 

@@ -30,7 +30,7 @@ public abstract class StorceanHadopelagicWaterFluid extends AbstractOxygenatedWa
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
-        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 240, 3, false, false, true));
+        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 240, 4, false, false, true));
     }
 
     @Override
