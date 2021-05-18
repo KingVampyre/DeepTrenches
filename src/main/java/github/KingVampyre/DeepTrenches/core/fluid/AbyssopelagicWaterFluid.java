@@ -30,7 +30,7 @@ public abstract class AbyssopelagicWaterFluid extends AbstractOxygenatedWaterFlu
 
     @Override
     public void applyStatusEffects(LivingEntity living) {
-        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 210, 1, false, false, true));
+        living.addStatusEffect(new StatusEffectInstance(PRESSURE, 240, 1, false, false, true));
     }
 
     @Override
