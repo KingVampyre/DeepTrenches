@@ -4,7 +4,6 @@ import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
-import github.KingVampyre.DeepTrenches.core.init.ModItems;
 import github.KingVampyre.DeepTrenches.core.util.StatusEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
@@ -25,6 +24,7 @@ import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.ACID;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_ACID;
+import static github.KingVampyre.DeepTrenches.core.init.ModItems.ACID_BUCKET;
 import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.ACID_CORROSION;
 
@@ -55,7 +55,7 @@ public abstract class AcidFluid extends AbstractWaterFluid implements StatusEffe
 
     @Override
     public Item getBucketItem() {
-        return ModItems.ACID_BUCKET;
+        return ACID_BUCKET;
     }
 
     @Override
