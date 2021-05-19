@@ -2,6 +2,8 @@ package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
+import software.bernie.geckolib3.core.processor.IBone;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
@@ -78,6 +80,23 @@ public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
         }
 
         return null;
+    }
+
+    @Override
+    public void setLivingAnimations(LightLoosejawEntity entity, Integer uniqueID, AnimationEvent customPredicate) {
+        super.setLivingAnimations(entity, uniqueID, customPredicate);
+
+        if (entity.isBaby()) {
+            IBone root = this.getAnimationProcessor().getBone("root");
+
+            if (root != null) {
+                root.setScaleX(0.5F);
+                root.setScaleY(0.5F);
+                root.setScaleZ(0.5F);
+            }
+
+        }
+
     }
 
 }
