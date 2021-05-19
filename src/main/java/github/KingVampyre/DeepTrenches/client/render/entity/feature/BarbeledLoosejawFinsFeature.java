@@ -1,14 +1,16 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.feature;
 
 import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
-import github.KingVampyre.DeepTrenches.client.render.entity.model.BarbeledLoosejawModel;
 import github.KingVampyre.DeepTrenches.common.render.entity.feature.SingleRenderLayerFeature;
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.geo.render.built.GeoModel;
+import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
 
-public class BarbeledLoosejawFinsFeature extends SingleRenderLayerFeature<BarbeledLoosejawEntity, BarbeledLoosejawModel> {
+public class BarbeledLoosejawFinsFeature extends SingleRenderLayerFeature<BarbeledLoosejawEntity> {
+
+    private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/barbeled_loosejaw.json");
 
     private static final RenderLayer[] RENDER_LAYERS = {
             CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/translucent_layer.png")),
@@ -19,13 +21,18 @@ public class BarbeledLoosejawFinsFeature extends SingleRenderLayerFeature<Barbel
             CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/translucent_layer.png"))
     };
 
-    public BarbeledLoosejawFinsFeature(FeatureRendererContext<BarbeledLoosejawEntity, BarbeledLoosejawModel> context) {
-        super(context);
+    public BarbeledLoosejawFinsFeature(IGeoRenderer<BarbeledLoosejawEntity> renderer) {
+        super(renderer);
     }
 
     @Override
-    protected RenderLayer getRenderLayer(BarbeledLoosejawEntity entity) {
-        return RENDER_LAYERS[entity.getLoosejawType()];
+    protected GeoModel getModel(BarbeledLoosejawEntity entity) {
+        return this.getEntityModel().getModel(MODEL);
+    }
+
+    @Override
+    protected RenderLayer getRenderLayer(BarbeledLoosejawEntity living) {
+        return RENDER_LAYERS[living.getLoosejawType()];
     }
 
 }

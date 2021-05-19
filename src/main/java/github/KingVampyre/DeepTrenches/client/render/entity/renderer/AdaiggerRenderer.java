@@ -19,23 +19,23 @@ import net.minecraft.util.math.MathHelper;
 @Environment(EnvType.CLIENT)
 public class AdaiggerRenderer extends TridentEntityRenderer {
 
-	private final EntityModel<AdaiggerEntity> model = new EntityModel<AdaiggerEntity>() {
+	private final EntityModel<AdaiggerEntity> model = new EntityModel<>() {
 
 		@Override
 		public void setAngles(AdaiggerEntity entity, float limbAngle, float limbDistance, float animationProgress,
-				float headYaw, float headPitch) {
+							  float headYaw, float headPitch) {
 			// TODO Auto-generated method stub
 
 		}
 
 		@Override
 		public void render(MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red,
-				float green, float blue, float alpha) {
+						   float green, float blue, float alpha) {
 			// TODO Auto-generated method stub
 
 		}
-		
-		
+
+
 	};
 
 	public AdaiggerRenderer(EntityRenderDispatcher entityRenderDispatcher) {

@@ -9,7 +9,6 @@ import github.KingVampyre.DeepTrenches.core.entity.ai.pathing.StaspNavigation;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.Durations;
-import net.minecraft.entity.ai.goal.UniversalAngerGoal;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.entity.damage.DamageSource;
@@ -27,14 +26,15 @@ import net.minecraft.util.math.IntRange;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.manager.EntityAnimationManager;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.UUID;
 
 import static net.minecraft.entity.attribute.EntityAttributes.*;
 
-public class StaspEntity extends PathAwareEntity implements Angerable, Chargable, IAnimatedEntity {
+public class StaspEntity extends PathAwareEntity implements Angerable, Chargable, IAnimatable {
 
 	private static final TrackedData<Integer> ANGER = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.INTEGER);
 	private static final TrackedData<Boolean> CHARGING = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
@@ -42,14 +42,12 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 
 	private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
 
-	private final EntityAnimationManager animationManager;
 	private BlockPos nestPos;
 	private UUID targetUuid;
 
 	public StaspEntity(EntityType<? extends StaspEntity> entityType, World world) {
 		super(entityType, world);
 
-		this.animationManager = new EntityAnimationManager();
 		this.moveControl = new StaspFlightMoveControl(this, 20, 90, false);
 		this.lookControl = new AngerLookControl<StaspEntity>(this);
 
@@ -69,11 +67,6 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 		navigation.setCanEnterOpenDoors(true);
 
 		return navigation;
-	}
-
-	@Override
-	public EntityAnimationManager getAnimationManager() {
-		return this.animationManager;
 	}
 
 	@Override
@@ -226,6 +219,16 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 
 		if (this.hasNest())
 			tag.put("NestPos", NbtHelper.fromBlockPos(this.nestPos));
+	}
+
+	@Override
+	public void registerControllers(AnimationData data) {
+
+	}
+
+	@Override
+	public AnimationFactory getFactory() {
+		return null;
 	}
 
 }

@@ -3,18 +3,24 @@ package github.KingVampyre.DeepTrenches.core.entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.world.World;
-import software.bernie.geckolib.entity.IAnimatedEntity;
-import software.bernie.geckolib.manager.EntityAnimationManager;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class BottleFlyMaggotEntity extends PathAwareEntity implements IAnimatedEntity {
+public class BottleFlyMaggotEntity extends PathAwareEntity implements IAnimatable {
 
     public BottleFlyMaggotEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 
     @Override
-    public EntityAnimationManager getAnimationManager() {
+    public AnimationFactory getFactory() {
         return null;
+    }
+
+    @Override
+    public void registerControllers(AnimationData data) {
+
     }
 
 }

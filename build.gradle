@@ -20,14 +20,14 @@ allprojects {
 }
 
 repositories {
-    maven {
+	maven {
+		name = "Geckolib"
+		url "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven"
+	}
+	maven {
         name = "Ladysnake Libs"
         url = "https://dl.bintray.com/ladysnake/libs"
     }
-	maven {
-		name = "Geckolib"
-		url 'https://repo.repsy.io/mvn/gandiber/geckolib'
-	}
 }
 
 dependencies {
@@ -35,22 +35,13 @@ dependencies {
 
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
-	// Fabric API
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-	// Cardinal Components API
 	modImplementation "io.github.onyxstudios:Cardinal-Components-API:2.7.2"
-	
-	// Features API
 	modImplementation "com.github.Louwind:Features-API:1.5.1"
-
-	// Reload
 	modImplementation 'com.github.Louwind:Reload:837ff01fc7'
-
-	// Geckolib
-	modImplementation 'software.bernie.geckolib:fabric-1.16.2-geckolib:2.0.0:dev'
+	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.33:dev'
 }
 
 minecraft {

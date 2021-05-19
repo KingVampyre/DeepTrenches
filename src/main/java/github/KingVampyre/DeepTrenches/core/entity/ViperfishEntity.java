@@ -6,7 +6,6 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
-import software.bernie.geckolib.manager.EntityAnimationManager;
 
 public class ViperfishEntity extends AnimatedFishEntity {
 
@@ -21,11 +20,6 @@ public class ViperfishEntity extends AnimatedFishEntity {
 
     @Override
     protected SoundEvent getFlopSound() {
-        return null;
-    }
-
-    @Override
-    public EntityAnimationManager getAnimationManager() {
         return null;
     }
 

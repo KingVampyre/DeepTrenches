@@ -3,20 +3,14 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.TelescopefishModel;
 import github.KingVampyre.DeepTrenches.core.entity.TelescopefishEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
-import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
-public class TelescopefishEntityRenderer extends MobEntityRenderer<TelescopefishEntity, TelescopefishModel> {
-
-    public static final Identifier TEXTURE = new Identifier("deep_trenches:textures/entity/telescopefish.png");
+public class TelescopefishEntityRenderer extends GeoEntityRenderer<TelescopefishEntity> {
 
     public TelescopefishEntityRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new TelescopefishModel(), 0.3F);
-    }
+        super(entityRenderDispatcher, new TelescopefishModel());
 
-    @Override
-    public Identifier getTexture(TelescopefishEntity entity) {
-        return TEXTURE;
+        this.shadowRadius = 0.3F;
     }
 
 }

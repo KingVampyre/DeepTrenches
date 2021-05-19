@@ -4,59 +4,15 @@ import github.KingVampyre.DeepTrenches.client.render.entity.feature.BlackLooseja
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BlackLoosejawModel;
 import github.KingVampyre.DeepTrenches.core.entity.BlackLoosejawEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
-import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
-public class BlackLoosejawRenderer extends MobEntityRenderer<BlackLoosejawEntity, BlackLoosejawModel> {
-
-    private static final Identifier[] NORTHERN_BLACK_LOOSEJAW = {
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/all_unlit.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/flank.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/flank_and_lure.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/flank_and_suborbital.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/lure.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/suborbital.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/suborbital_and_lure.png")
-    };
-
-    private static final Identifier[] SOUTHERN_BLACK_LOOSEJAW = {
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/all_unlit.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank_and_lure.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank_and_suborbital.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/lure.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/suborbital.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/suborbital_and_lure.png")
-    };
+public class BlackLoosejawRenderer extends GeoEntityRenderer<BlackLoosejawEntity> {
 
     public BlackLoosejawRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new BlackLoosejawModel(), 0.4F);
+        super(entityRenderDispatcher, new BlackLoosejawModel());
 
-        this.addFeature(new BlackLoosejawFinsFeature(this));
-    }
-
-    @Override
-    public Identifier getTexture(BlackLoosejawEntity entity) {
-        int index = entity.getLightStateIndex();
-
-        switch (entity.getLoosejawType()) {
-            case 0:
-                return NORTHERN_BLACK_LOOSEJAW[index];
-            case 1:
-                return SOUTHERN_BLACK_LOOSEJAW[index];
-        }
-
-        return null;
-    }
-
-    @Override
-    protected void setupTransforms(BlackLoosejawEntity entity, MatrixStack matrices, float animationProgress, float bodyYaw, float tickDelta) {
-        super.setupTransforms(entity, matrices, animationProgress, bodyYaw, tickDelta);
-
-        matrices.translate(0.0F, 0.08F, -0.1F);
+        this.shadowRadius = 0.4F;
+        this.addLayer(new BlackLoosejawFinsFeature(this));
     }
 
 }

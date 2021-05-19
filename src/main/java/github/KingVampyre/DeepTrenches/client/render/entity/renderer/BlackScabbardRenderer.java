@@ -3,20 +3,14 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BlackScabbardModel;
 import github.KingVampyre.DeepTrenches.core.entity.BlackScabbardEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
-import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
-public class BlackScabbardRenderer extends MobEntityRenderer<BlackScabbardEntity, BlackScabbardModel> {
-
-    public static final Identifier TEXTURE = new Identifier("deep_trenches:textures/entity/black_scabbard.png");
+public class BlackScabbardRenderer extends GeoEntityRenderer<BlackScabbardEntity> {
 
     public BlackScabbardRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new BlackScabbardModel(), 0.3F);
-    }
+        super(entityRenderDispatcher, new BlackScabbardModel());
 
-    @Override
-    public Identifier getTexture(BlackScabbardEntity entity) {
-        return TEXTURE;
+        this.shadowRadius = 0.3F;
     }
 
 }

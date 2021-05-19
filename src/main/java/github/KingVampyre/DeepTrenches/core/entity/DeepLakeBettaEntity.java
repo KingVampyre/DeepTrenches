@@ -12,7 +12,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.math.IntRange;
 import net.minecraft.world.World;
-import software.bernie.geckolib.manager.EntityAnimationManager;
 
 import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_250;
 
@@ -20,12 +19,6 @@ public class DeepLakeBettaEntity extends TamableFishEntity {
 
     public DeepLakeBettaEntity(EntityType<? extends DeepLakeBettaEntity> type, World world) {
         super(type, world);
-    }
-
-    @Override
-    public EntityAnimationManager getAnimationManager() {
-        // TODO animation manager
-        return null;
     }
 
     @Override

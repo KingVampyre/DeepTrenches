@@ -3,18 +3,14 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BrownBearModel;
 import github.KingVampyre.DeepTrenches.core.entity.BrownBearEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
-import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
-public class BrownBearRenderer extends MobEntityRenderer<BrownBearEntity, BrownBearModel> {
+public class BrownBearRenderer extends GeoEntityRenderer<BrownBearEntity> {
 
     public BrownBearRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new BrownBearModel(), 0.3F);
-    }
+        super(entityRenderDispatcher, new BrownBearModel());
 
-    @Override
-    public Identifier getTexture(BrownBearEntity entity) {
-        return null;
+        this.shadowRadius = 0.3F;
     }
 
 }

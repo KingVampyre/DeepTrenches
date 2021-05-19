@@ -3,18 +3,14 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BeardedSeadevilModel;
 import github.KingVampyre.DeepTrenches.core.entity.BeardedSeadevilEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
-import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
-public class BeardedSeadevilRenderer extends MobEntityRenderer<BeardedSeadevilEntity, BeardedSeadevilModel> {
+public class BeardedSeadevilRenderer extends GeoEntityRenderer<BeardedSeadevilEntity> {
 
     public BeardedSeadevilRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new BeardedSeadevilModel(), 0.3F);
-    }
+        super(entityRenderDispatcher, new BeardedSeadevilModel());
 
-    @Override
-    public Identifier getTexture(BeardedSeadevilEntity entity) {
-        return null;
+        this.shadowRadius = 0.3F;
     }
 
 }

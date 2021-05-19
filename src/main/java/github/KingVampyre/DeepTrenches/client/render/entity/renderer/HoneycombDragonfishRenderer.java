@@ -3,18 +3,14 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.HoneycombDragonfishModel;
 import github.KingVampyre.DeepTrenches.core.entity.HoneycombDragonfishEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
-import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
-public class HoneycombDragonfishRenderer extends MobEntityRenderer<HoneycombDragonfishEntity, HoneycombDragonfishModel> {
+public class HoneycombDragonfishRenderer extends GeoEntityRenderer<HoneycombDragonfishEntity> {
 
     public HoneycombDragonfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new HoneycombDragonfishModel(), 0.3F);
-    }
+        super(entityRenderDispatcher, new HoneycombDragonfishModel());
 
-    @Override
-    public Identifier getTexture(HoneycombDragonfishEntity entity) {
-        return null;
+        this.shadowRadius = 0.3F;
     }
 
 }

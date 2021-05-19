@@ -1,14 +1,16 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.feature;
 
 import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
-import github.KingVampyre.DeepTrenches.client.render.entity.model.LightLoosejawModel;
 import github.KingVampyre.DeepTrenches.common.render.entity.feature.SingleRenderLayerFeature;
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.geo.render.built.GeoModel;
+import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
 
-public class LightLoosejawFinsFeature extends SingleRenderLayerFeature<LightLoosejawEntity, LightLoosejawModel> {
+public class LightLoosejawFinsFeature extends SingleRenderLayerFeature<LightLoosejawEntity> {
+
+    private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/light_loosejaw.json");
 
     private static final RenderLayer[] RENDER_LAYERS = {
             CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/translucent_layer.png")),
@@ -19,13 +21,18 @@ public class LightLoosejawFinsFeature extends SingleRenderLayerFeature<LightLoos
             CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/translucent_layer.png"))
     };
 
-    public LightLoosejawFinsFeature(FeatureRendererContext<LightLoosejawEntity, LightLoosejawModel> context) {
-        super(context);
+    public LightLoosejawFinsFeature(IGeoRenderer<LightLoosejawEntity> renderer) {
+        super(renderer);
     }
 
     @Override
-    protected RenderLayer getRenderLayer(LightLoosejawEntity entity) {
-        return RENDER_LAYERS[entity.getLoosejawType()];
+    protected GeoModel getModel(LightLoosejawEntity living) {
+        return this.getEntityModel().getModel(MODEL);
+    }
+
+    @Override
+    protected RenderLayer getRenderLayer(LightLoosejawEntity living) {
+        return RENDER_LAYERS[living.getLoosejawType()];
     }
 
 }

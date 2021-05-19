@@ -3,18 +3,14 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.VoidBeastModel;
 import github.KingVampyre.DeepTrenches.core.entity.VoidBeastEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
-import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
-public class VoidBeastRenderer extends MobEntityRenderer<VoidBeastEntity, VoidBeastModel> {
+public class VoidBeastRenderer extends GeoEntityRenderer<VoidBeastEntity> {
 
     public VoidBeastRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new VoidBeastModel(), 0.3F);
-    }
+        super(entityRenderDispatcher, new VoidBeastModel());
 
-    @Override
-    public Identifier getTexture(VoidBeastEntity entity) {
-        return null;
+        this.shadowRadius = 0.3F;
     }
 
 }

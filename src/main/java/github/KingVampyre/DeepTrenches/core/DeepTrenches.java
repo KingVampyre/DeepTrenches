@@ -12,6 +12,7 @@ import net.minecraft.item.SignItem;
 import net.minecraft.item.WallStandingBlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import software.bernie.geckolib3.GeckoLib;
 
 import static github.KingVampyre.DeepTrenches.core.init.ItemGroups.GENERAL;
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
@@ -23,6 +24,8 @@ public class  DeepTrenches implements ModInitializer {
 
     @Override
     public void onInitialize() {
+		GeckoLib.initialize();
+
 		/* ------------------------ Events ------------------------------ */
 		BlockReplacementCallback.EVENT.register(AirialMossCallback.INSTANCE);
 
