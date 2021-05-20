@@ -1,0 +1,117 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.stasp",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "root",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 20, 0], "size": [4, 4, 6], "uv": [0, 8]}
+					]
+				},
+				{
+					"name": "Trunk",
+					"parent": "Body",
+					"pivot": [-2, 22, 6],
+					"rotation": [-18.25, 0, 0],
+					"cubes": [
+						{"origin": [-2.5, 21.5, 6], "size": [1, 1, 8], "uv": [18, 0]}
+					]
+				},
+				{
+					"name": "Abdomen",
+					"parent": "Trunk",
+					"pivot": [-2, 22, 12],
+					"cubes": [
+						{"origin": [-3.5, 20.5, 12], "size": [3, 3, 7], "uv": [36, 0]}
+					]
+				},
+				{
+					"name": "Dart",
+					"parent": "Abdomen",
+					"pivot": [-2.5, 22, 18.2],
+					"rotation": [39.13, 0, 0],
+					"cubes": [
+						{"origin": [-2, 15, 18.2], "size": [0, 7, 1], "uv": [53, 9]}
+					]
+				},
+				{
+					"name": "Eyes",
+					"parent": "Body",
+					"pivot": [1, 25, -1],
+					"cubes": [
+						{"origin": [-5, 21, -1], "size": [6, 4, 4], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Antenas",
+					"parent": "Eyes",
+					"pivot": [-2, 24.6, -1],
+					"rotation": [-2.61, 0, 0],
+					"cubes": [
+						{"origin": [-6, 25, -13.7], "size": [8, 0, 13], "uv": [22, 17]}
+					]
+				},
+				{
+					"name": "Legs_1",
+					"parent": "Body",
+					"pivot": [-2, 20, 0.8],
+					"rotation": [10.43, 0, 0],
+					"cubes": [
+						{"origin": [-4, 16, 0.8], "size": [4, 4, 0], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "Legs_2",
+					"parent": "Body",
+					"pivot": [-2, 20, 1.7],
+					"rotation": [10.43, 0, 0],
+					"cubes": [
+						{"origin": [-4, 16, 1.7], "size": [4, 4, 0], "uv": [0, 24]}
+					]
+				},
+				{
+					"name": "Legs_3",
+					"parent": "Body",
+					"pivot": [-2, 20, 2.6],
+					"rotation": [10.43, 0, 0],
+					"cubes": [
+						{"origin": [-4, 16, 2.6], "size": [4, 4, 0], "uv": [9, 24]}
+					]
+				},
+				{
+					"name": "Wing_1",
+					"parent": "Body",
+					"pivot": [-2, 23, 4.8],
+					"rotation": [13.04, 0, 0],
+					"cubes": [
+						{"origin": [-2, 23.6, 4.8], "size": [6, 0, 13], "uv": [8, 17], "mirror": true}
+					]
+				},
+				{
+					"name": "Wing_2",
+					"parent": "Body",
+					"pivot": [-2, 23, 4.8],
+					"rotation": [13.04, 0, 0],
+					"cubes": [
+						{"origin": [-8, 23.6, 4.8], "size": [6, 0, 13], "uv": [8, 17]}
+					]
+				}
+			]
+		}
+	]
+}

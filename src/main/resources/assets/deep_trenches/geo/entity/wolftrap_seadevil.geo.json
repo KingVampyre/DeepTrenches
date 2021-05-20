@@ -1,0 +1,194 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.wolftrap_seadevil",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "root",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-2, 21, 0], "size": [4, 6, 11], "uv": [16, 0]}
+					]
+				},
+				{
+					"name": "Caudal",
+					"parent": "Body",
+					"pivot": [0, 24, 10.7],
+					"cubes": [
+						{"origin": [0, 20.5, 10.7], "size": [0, 7, 8], "uv": [0, 10]}
+					]
+				},
+				{
+					"name": "Upper_jaw",
+					"parent": "Body",
+					"pivot": [0, 25, 0],
+					"cubes": [
+						{"origin": [-1.5, 23.5, -7.8], "size": [3, 3, 8], "uv": [42, 21]}
+					]
+				},
+				{
+					"name": "Lure_bottom",
+					"parent": "Upper_jaw",
+					"pivot": [0, 25, -4],
+					"rotation": [-28.7, 0, 0],
+					"cubes": [
+						{"origin": [0, 24.8, -4.5], "size": [0, 13, 1], "uv": [46, 0]}
+					]
+				},
+				{
+					"name": "Lure_top",
+					"parent": "Lure_bottom",
+					"pivot": [0, 37.3, -4],
+					"rotation": [41.74, 0, 0],
+					"cubes": [
+						{"origin": [0, 36.8, -4], "size": [0, 1, 14], "uv": [0, 17]}
+					]
+				},
+				{
+					"name": "Lure",
+					"parent": "Lure_top",
+					"pivot": [0.5, 37.3, 9.4],
+					"cubes": [
+						{"origin": [-0.5, 36.8, 9.4], "size": [1, 1, 1], "uv": [0, 29]}
+					]
+				},
+				{
+					"name": "Lure_decoration_1",
+					"parent": "Lure",
+					"pivot": [0, 37.3, 9.4],
+					"rotation": [36.52, 0, 0],
+					"cubes": [
+						{"origin": [0, 36.8, 9.4], "size": [0, 1, 4], "uv": [3, 25]}
+					]
+				},
+				{
+					"name": "Lure_decoration_2",
+					"parent": "Lure",
+					"pivot": [0, 37.3, 9.4],
+					"rotation": [5.22, 0, 0],
+					"cubes": [
+						{"origin": [0, 36.8, 9.4], "size": [0, 1, 4], "uv": [3, 23]}
+					]
+				},
+				{
+					"name": "Lure_tooth",
+					"parent": "Lure",
+					"pivot": [0, 37.1, 9.9],
+					"rotation": [-36.52, 0, 0],
+					"cubes": [
+						{"origin": [0, 35.1, 9.4], "size": [0, 2, 1], "uv": [0, 26]}
+					]
+				},
+				{
+					"name": "Horn",
+					"parent": "Upper_jaw",
+					"pivot": [0, 26, -1.1],
+					"rotation": [-23.48, 0, 0],
+					"cubes": [
+						{"origin": [0, 26.3, -1.6], "size": [0, 2, 1], "uv": [50, 17]}
+					]
+				},
+				{
+					"name": "Joint_1",
+					"parent": "Upper_jaw",
+					"pivot": [-1.5, 24.5, -4],
+					"cubes": [
+						{"origin": [-1.5, 24, -3.5], "size": [0, 1, 1], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Upper_jaw_trap_2",
+					"parent": "Joint_1",
+					"pivot": [-1.5, 24, -4],
+					"rotation": [0, 0, -15.3],
+					"cubes": [
+						{"origin": [-1.6, 23.5, -7.7], "size": [0, 7, 8], "uv": [34, 14], "mirror": true}
+					]
+				},
+				{
+					"name": "Joint_2",
+					"parent": "Upper_jaw",
+					"pivot": [1.5, 24.5, -4],
+					"cubes": [
+						{"origin": [1.5, 24, -4.5], "size": [0, 1, 1], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Upper_jaw_trap_1",
+					"parent": "Joint_2",
+					"pivot": [1.5, 24, -4],
+					"rotation": [2.48, 0, 15.3],
+					"cubes": [
+						{"origin": [1.6, 23.5, -7.7], "size": [0, 7, 8], "uv": [34, 14]}
+					]
+				},
+				{
+					"name": "Pectoral_fin_1",
+					"parent": "Body",
+					"pivot": [2, 24, 3.5],
+					"rotation": [13.04, 10.43, 0],
+					"cubes": [
+						{"origin": [2, 22.5, 3.5], "size": [0, 3, 3], "uv": [35, 5]}
+					]
+				},
+				{
+					"name": "Lower_jaw",
+					"parent": "Body",
+					"pivot": [0, 22.5, 0],
+					"rotation": [2.9, 0, 0],
+					"cubes": [
+						{"origin": [-1, 21.3, -7.8], "size": [2, 2, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Lower_jaw_teeth_1",
+					"parent": "Lower_jaw",
+					"pivot": [0.5, 23, 0],
+					"rotation": [2.61, 0, 0],
+					"cubes": [
+						{"origin": [0.9, 23, -7.8], "size": [0, 1, 8], "uv": [0, 7]}
+					]
+				},
+				{
+					"name": "Lower_jaw_teeth_2",
+					"parent": "Lower_jaw",
+					"pivot": [-0.5, 23, 0],
+					"rotation": [2.61, 0, 0],
+					"cubes": [
+						{"origin": [-0.9, 23, -7.7], "size": [0, 1, 8], "uv": [0, 7]}
+					]
+				},
+				{
+					"name": "Lower_jaw_teeth_front",
+					"parent": "Lower_jaw",
+					"pivot": [0, 23, -7.7],
+					"cubes": [
+						{"origin": [-1, 23, -7.7], "size": [2, 1, 0], "uv": [0, 13]}
+					]
+				},
+				{
+					"name": "Pectoral_fin_2",
+					"parent": "Body",
+					"pivot": [-2, 24, 3.5],
+					"rotation": [13.04, -10.43, 0],
+					"cubes": [
+						{"origin": [-2, 22.5, 3.5], "size": [0, 3, 3], "uv": [35, 5]}
+					]
+				}
+			]
+		}
+	]
+}

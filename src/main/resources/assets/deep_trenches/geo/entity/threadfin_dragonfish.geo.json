@@ -1,0 +1,248 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.threadfin_dragonfish",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "root",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-1.5, 22.5, 0], "size": [3, 3, 16], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "Body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-1.5, 22.5, -4.8], "size": [3, 3, 5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Upper_jaw_teeth_1",
+					"parent": "Head",
+					"pivot": [1.4, 23.5, -2.5],
+					"rotation": [15.65, 0, 0],
+					"cubes": [
+						{"origin": [1.35, 21.6, -4.5], "size": [0, 2, 5], "uv": [24, 8]}
+					]
+				},
+				{
+					"name": "Upper_jaw_teeth_2",
+					"parent": "Head",
+					"pivot": [-1.4, 23.5, -2.5],
+					"rotation": [15.65, 0, 0],
+					"cubes": [
+						{"origin": [-1.45, 21.6, -4.5], "size": [0, 2, 5], "uv": [24, 8]}
+					]
+				},
+				{
+					"name": "Upper_teeth_front",
+					"parent": "Head",
+					"pivot": [0, 22.7, -4.7],
+					"cubes": [
+						{"origin": [-1.5, 21.7, -4.7], "size": [3, 1, 0], "uv": [24, 11]}
+					]
+				},
+				{
+					"name": "Eye_1",
+					"parent": "Head",
+					"pivot": [1.5, 24.6, -3.3],
+					"cubes": [
+						{"origin": [0.51, 24.1, -3.8], "size": [1, 1, 1], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Eye_2",
+					"parent": "Head",
+					"pivot": [-0.5, 24.6, -3.3],
+					"cubes": [
+						{"origin": [-1.51, 24.1, -3.8], "size": [1, 1, 1], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Uhmmm",
+					"parent": "Head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-1.5, 22.5, 0], "size": [3, 2, 1], "uv": [49, 10]}
+					]
+				},
+				{
+					"name": "Lower_jaw",
+					"parent": "Body",
+					"pivot": [0, 24, 0],
+					"rotation": [20.87, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, 22.5, -4.8], "size": [3, 1, 5], "uv": [0, 8]}
+					]
+				},
+				{
+					"name": "Teeth_1",
+					"parent": "Lower_jaw",
+					"pivot": [1.48, 22.9, 0.2],
+					"rotation": [-7.83, 0, 0],
+					"cubes": [
+						{"origin": [1.48, 22.9, -4.8], "size": [0, 2, 5], "uv": [35, 8]}
+					]
+				},
+				{
+					"name": "Teeth_2",
+					"parent": "Lower_jaw",
+					"pivot": [-1.48, 22.8, 0.2],
+					"rotation": [-7.83, 0, 0],
+					"cubes": [
+						{"origin": [-1.48, 22.8, -4.8], "size": [0, 2, 5], "uv": [35, 8]}
+					]
+				},
+				{
+					"name": "Lower_jaw_frontteeth",
+					"parent": "Lower_jaw",
+					"pivot": [0, 23.5, -4.7],
+					"cubes": [
+						{"origin": [-1.5, 23.4, -4.7], "size": [3, 1, 0], "uv": [35, 11]}
+					]
+				},
+				{
+					"name": "Lower_jaw_front_tooth_1",
+					"parent": "Lower_jaw",
+					"pivot": [0, 24, -5],
+					"cubes": [
+						{"origin": [0, 23.5, -5.3], "size": [0, 2, 1], "uv": [42, 9]}
+					]
+				},
+				{
+					"name": "Barbel_joint",
+					"parent": "Lower_jaw",
+					"pivot": [0, 22.5, -3.8],
+					"cubes": [
+						{"origin": [-0.5, 22.5, -4.3], "size": [1, 0, 1], "uv": [0, 3]}
+					]
+				},
+				{
+					"name": "Barbel",
+					"parent": "Barbel_joint",
+					"pivot": [0, 22.5, -3.8],
+					"cubes": [
+						{"origin": [0, 16.5, -4.3], "size": [0, 6, 1], "uv": [37, 0]}
+					]
+				},
+				{
+					"name": "Barbel_bulb",
+					"parent": "Barbel",
+					"pivot": [0.5, 16.9, -3.8],
+					"cubes": [
+						{"origin": [-0.5, 15.9, -4.3], "size": [1, 1, 1], "uv": [39, 1]}
+					]
+				},
+				{
+					"name": "Barbel_bulb_appandage",
+					"parent": "Barbel_bulb",
+					"pivot": [0, 16, -3.8],
+					"cubes": [
+						{"origin": [0, 14, -4.3], "size": [0, 2, 1], "uv": [39, 3]}
+					]
+				},
+				{
+					"name": "Caudal",
+					"parent": "Body",
+					"pivot": [0, 24, 15.7],
+					"cubes": [
+						{"origin": [-1.5, 22.5, 15.7], "size": [3, 3, 8], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "Caudal_fin",
+					"parent": "Caudal",
+					"pivot": [0, 24, 23.4],
+					"cubes": [
+						{"origin": [0, 19.5, 23.4], "size": [0, 9, 13], "uv": [22, 8]}
+					]
+				},
+				{
+					"name": "Pelvic_fin_1",
+					"parent": "Caudal",
+					"pivot": [1.5, 23, 15.8],
+					"rotation": [49.57, 0, 0],
+					"cubes": [
+						{"origin": [1.5, 19, 15.3], "size": [0, 4, 1], "uv": [34, 0]}
+					]
+				},
+				{
+					"name": "Pelvic_fin_2",
+					"parent": "Caudal",
+					"pivot": [-1.5, 23, 15.8],
+					"rotation": [49.57, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, 19, 15.3], "size": [0, 4, 1], "uv": [34, 0]}
+					]
+				},
+				{
+					"name": "Dorsal_fin",
+					"parent": "Caudal",
+					"pivot": [0, 25.5, 20.2],
+					"cubes": [
+						{"origin": [0, 25.4, 18.6], "size": [0, 3, 4], "uv": [14, 19]}
+					]
+				},
+				{
+					"name": "Anal_fin",
+					"parent": "Caudal",
+					"pivot": [0, 22.9, 21.2],
+					"cubes": [
+						{"origin": [0, 19.9, 19.7], "size": [0, 3, 4], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "Pectoral_fin_1",
+					"parent": "Body",
+					"pivot": [1.5, 22.5, 0.5],
+					"rotation": [13.04, 0, 0],
+					"cubes": [
+						{"origin": [1.5, 20.5, 0], "size": [0, 2, 1], "uv": [28, 0]}
+					]
+				},
+				{
+					"name": "Pectoral_thread_1",
+					"parent": "Pectoral_fin_1",
+					"pivot": [1.4, 22.5, 0],
+					"rotation": [15.65, 7.83, -5.22],
+					"cubes": [
+						{"origin": [1.4, 14.5, -0.5], "size": [0, 8, 1], "uv": [31, 0]}
+					]
+				},
+				{
+					"name": "Pectoral_fin_2",
+					"parent": "Body",
+					"pivot": [-1.5, 22.5, 0.5],
+					"rotation": [13.04, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, 20.5, 0], "size": [0, 2, 1], "uv": [28, 0]}
+					]
+				},
+				{
+					"name": "Pectoral_thread_2",
+					"parent": "Pectoral_fin_2",
+					"pivot": [-1.4, 22.5, 0],
+					"rotation": [15.65, -7.83, 5.22],
+					"cubes": [
+						{"origin": [-1.4, 14.5, -0.5], "size": [0, 8, 1], "uv": [31, 0]}
+					]
+				}
+			]
+		}
+	]
+}
