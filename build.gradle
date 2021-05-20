@@ -38,7 +38,7 @@ dependencies {
 
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "io.github.onyxstudios:Cardinal-Components-API:2.7.2"
+	modImplementation "io.github.onyxstudios:Cardinal-Components-API:2.8.3"
 	modImplementation "com.github.Louwind:Features-API:1.5.1"
 	modImplementation 'com.github.Louwind:Reload:837ff01fc7'
 	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.16.5:3.0.33:dev'
