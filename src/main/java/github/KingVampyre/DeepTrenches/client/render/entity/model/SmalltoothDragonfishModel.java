@@ -26,7 +26,7 @@ public class SmalltoothDragonfishModel extends AnimatedGeoModel<SmalltoothDragon
 
     @Override
     public Identifier getModelLocation(SmalltoothDragonfishEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/smalltooth_dragonfish.geo.json");
     }
 
     @Override

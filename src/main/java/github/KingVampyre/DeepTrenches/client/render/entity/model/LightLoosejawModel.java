@@ -57,7 +57,7 @@ public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
 
     @Override
     public Identifier getModelLocation(LightLoosejawEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/light_loosejaw.geo.json");
     }
 
     @Override

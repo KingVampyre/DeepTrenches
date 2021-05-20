@@ -81,7 +81,7 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
 
     @Override
     public Identifier getModelLocation(BarbeledLoosejawEntity object) {
-        return new Identifier("deep_trenches:geo/entity/barbeled_loosejaw.json");
+        return new Identifier("deep_trenches:geo/entity/barbeled_loosejaw.geo.json");
     }
 
     @Override

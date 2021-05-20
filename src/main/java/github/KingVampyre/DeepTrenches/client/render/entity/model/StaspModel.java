@@ -18,7 +18,7 @@ public class StaspModel extends AnimatedGeoModel<StaspEntity> {
 
     @Override
     public Identifier getModelLocation(StaspEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/stasp.geo.json");
     }
 
     @Override

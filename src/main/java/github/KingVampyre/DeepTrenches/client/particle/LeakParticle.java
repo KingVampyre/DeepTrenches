@@ -38,6 +38,7 @@ public class LeakParticle extends BlockLeakParticle {
             }
 
         }
+
     }
 
     @Environment(EnvType.CLIENT)

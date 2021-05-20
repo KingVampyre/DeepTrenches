@@ -10,7 +10,7 @@ import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
 
 public class BlackLoosejawFinsFeature extends SingleRenderLayerFeature<BlackLoosejawEntity> {
 
-    private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/black_loosejaw.json");
+    private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/black_loosejaw.geo.json");
 
     private static final RenderLayer[] RENDER_LAYERS = {
             CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/translucent_layer.png")),
