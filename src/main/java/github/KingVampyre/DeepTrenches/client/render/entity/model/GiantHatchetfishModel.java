@@ -13,7 +13,7 @@ public class GiantHatchetfishModel extends AnimatedGeoModel<GiantHatchetfishEnti
 
     @Override
     public Identifier getModelLocation(GiantHatchetfishEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/giant_hatchetfish.geo.json");
     }
 
     @Override

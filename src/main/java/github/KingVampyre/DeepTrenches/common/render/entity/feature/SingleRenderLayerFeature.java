@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.common.render.entity.feature;
 
+import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
@@ -28,7 +29,7 @@ public abstract class SingleRenderLayerFeature<T extends LivingEntity & IAnimata
         RenderLayer layer = this.getRenderLayer(living);
         GeoModel model = this.getModel(living);
 
-        this.renderer.render(model, living, partialTicks, layer, matrixStackIn, bufferIn, bufferIn.getBuffer(layer), packedLightIn, 0, 1.0F, 1.0F, 1.0F, 1.0F);
+        this.renderer.render(model, living, partialTicks, layer, matrixStackIn, bufferIn, bufferIn.getBuffer(layer), packedLightIn, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
     }
 
 }

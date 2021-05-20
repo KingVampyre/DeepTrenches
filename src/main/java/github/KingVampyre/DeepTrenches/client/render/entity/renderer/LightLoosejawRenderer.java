@@ -2,13 +2,13 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import github.KingVampyre.DeepTrenches.client.render.entity.feature.LightLoosejawFinsFeature;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.LightLoosejawModel;
+import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
-import software.bernie.geckolib3.renderer.geo.GeoEntityRenderer;
 
-public class LightLoosejawRenderer extends GeoEntityRenderer<LightLoosejawEntity> {
+public class LightLoosejawRenderer extends NoCullingEntityRenderer<LightLoosejawEntity> {
     
     public LightLoosejawRenderer(EntityRenderDispatcher entityRenderDispatcher) {
         super(entityRenderDispatcher, new LightLoosejawModel());

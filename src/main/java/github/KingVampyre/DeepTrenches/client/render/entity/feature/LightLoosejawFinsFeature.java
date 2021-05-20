@@ -13,12 +13,12 @@ public class LightLoosejawFinsFeature extends SingleRenderLayerFeature<LightLoos
     private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/light_loosejaw.geo.json");
 
     private static final RenderLayer[] RENDER_LAYERS = {
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/translucent_layer.png")),
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/translucent_layer.png")),
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/translucent_layer.png")),
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/translucent_layer.png")),
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/translucent_layer.png")),
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/translucent_layer.png"))
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/goodyears/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/guernes/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/liems/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/remarkable_light/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/small_light/translucent_layer.png"))
     };
 
     public LightLoosejawFinsFeature(IGeoRenderer<LightLoosejawEntity> renderer) {

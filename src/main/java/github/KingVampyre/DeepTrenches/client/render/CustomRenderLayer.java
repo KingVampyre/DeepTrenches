@@ -37,7 +37,7 @@ public class CustomRenderLayer extends RenderLayer {
                         .cull(DISABLE_CULLING)
                         .layering(VIEW_OFFSET_Z_LAYERING)
                         .shadeModel(SMOOTH_SHADE_MODEL)
-                        .build(false));
+                        .build(true));
     }
 
 }

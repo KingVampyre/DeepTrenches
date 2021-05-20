@@ -25,7 +25,7 @@ public class BettaModel extends AnimatedGeoModel<BettaEntity> {
 
     @Override
     public Identifier getModelLocation(BettaEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/betta.geo.json");
     }
 
     @Override

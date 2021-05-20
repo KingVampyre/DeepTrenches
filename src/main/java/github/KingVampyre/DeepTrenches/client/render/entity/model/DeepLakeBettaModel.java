@@ -13,7 +13,7 @@ public class DeepLakeBettaModel extends AnimatedGeoModel<DeepLakeBettaEntity> {
 
     @Override
     public Identifier getModelLocation(DeepLakeBettaEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/deep_lake_betta.geo.json");
     }
 
     @Override
