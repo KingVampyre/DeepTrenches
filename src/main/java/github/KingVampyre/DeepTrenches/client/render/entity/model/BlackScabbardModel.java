@@ -13,7 +13,7 @@ public class BlackScabbardModel extends AnimatedGeoModel<BlackScabbardEntity> {
 
     @Override
     public Identifier getModelLocation(BlackScabbardEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/black_scabbard.geo.json");
     }
 
     @Override

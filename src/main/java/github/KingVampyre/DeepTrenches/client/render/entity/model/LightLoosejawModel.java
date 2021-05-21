@@ -50,6 +50,15 @@ public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
             new Identifier("deep_trenches:textures/entity/light_loosejaw/small_light/lure.png"),
     };
 
+    private static final Identifier[][] TEXTURES = {
+            BIGLAMP_LIGHT_LOOSEJAW,
+            GOODYEARS_LIGHT_LOOSEJAW,
+            GUERNES_LIGHT_LOOSEJAW,
+            LIEMS_LIGHT_LOOSEJAW,
+            REMARKABLE_LIGHT_LOOSEJAW,
+            SMALL_LIGHT_LOOSEJAW
+    };
+
     @Override
     public Identifier getAnimationFileLocation(LightLoosejawEntity animatable) {
         return new Identifier("deep_trenches:animations/light_loosejaw.json");
@@ -63,23 +72,9 @@ public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
     @Override
     public Identifier getTextureLocation(LightLoosejawEntity object) {
         int index = object.getLightStateIndex();
+        int type = object.getLoosejawType();
 
-        switch (object.getLoosejawType()) {
-            case 0:
-                return BIGLAMP_LIGHT_LOOSEJAW[index];
-            case 1:
-                return GOODYEARS_LIGHT_LOOSEJAW[index];
-            case 2:
-                return GUERNES_LIGHT_LOOSEJAW[index];
-            case 3:
-                return LIEMS_LIGHT_LOOSEJAW[index];
-            case 4:
-                return REMARKABLE_LIGHT_LOOSEJAW[index];
-            case 5:
-                return SMALL_LIGHT_LOOSEJAW[index];
-        }
-
-        return null;
+        return TEXTURES[type][index];
     }
 
     @Override

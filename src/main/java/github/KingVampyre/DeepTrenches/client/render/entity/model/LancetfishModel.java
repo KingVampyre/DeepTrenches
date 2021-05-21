@@ -13,7 +13,7 @@ public class LancetfishModel extends AnimatedGeoModel<LancetfishEntity> {
 
     @Override
     public Identifier getModelLocation(LancetfishEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/lancetfish.geo.json");
     }
 
     @Override

@@ -13,7 +13,7 @@ public class BlobfishModel extends AnimatedGeoModel<BlobfishEntity> {
 
     @Override
     public Identifier getModelLocation(BlobfishEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/blobfish.geo.json");
     }
 
     @Override

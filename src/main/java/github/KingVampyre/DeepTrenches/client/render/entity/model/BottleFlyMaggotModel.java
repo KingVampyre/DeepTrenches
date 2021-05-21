@@ -13,7 +13,7 @@ public class BottleFlyMaggotModel extends AnimatedGeoModel<BottleFlyMaggotEntity
 
     @Override
     public Identifier getModelLocation(BottleFlyMaggotEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/bottle_fly_maggot.geo.json");
     }
 
     @Override

@@ -13,7 +13,7 @@ public class TelescopefishModel extends AnimatedGeoModel<TelescopefishEntity> {
 
     @Override
     public Identifier getModelLocation(TelescopefishEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/telescopefish.geo.json");
     }
 
     @Override

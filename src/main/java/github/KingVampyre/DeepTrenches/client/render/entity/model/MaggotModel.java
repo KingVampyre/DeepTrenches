@@ -13,7 +13,7 @@ public class MaggotModel extends AnimatedGeoModel<MaggotEntity> {
 
     @Override
     public Identifier getModelLocation(MaggotEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/maggot.geo.json");
     }
 
     @Override

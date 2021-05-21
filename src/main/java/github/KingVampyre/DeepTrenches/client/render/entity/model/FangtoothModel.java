@@ -13,7 +13,7 @@ public class FangtoothModel extends AnimatedGeoModel<FangtoothEntity> {
 
     @Override
     public Identifier getModelLocation(FangtoothEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/fangtooth.geo.json");
     }
 
     @Override

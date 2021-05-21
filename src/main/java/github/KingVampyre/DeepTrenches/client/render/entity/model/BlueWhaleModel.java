@@ -13,7 +13,7 @@ public class BlueWhaleModel extends AnimatedGeoModel<BlueWhaleEntity> {
 
     @Override
     public Identifier getModelLocation(BlueWhaleEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/blue_whale.geo.json");
     }
 
     @Override

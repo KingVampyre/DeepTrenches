@@ -13,7 +13,7 @@ public class GiantSeedShrimpModel extends AnimatedGeoModel<GiantSeedShrimpEntity
 
     @Override
     public Identifier getModelLocation(GiantSeedShrimpEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/giant_seed_shrimp.geo.json");
     }
 
     @Override

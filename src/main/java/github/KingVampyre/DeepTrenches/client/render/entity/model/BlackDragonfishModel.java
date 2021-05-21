@@ -6,19 +6,26 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class BlackDragonfishModel extends AnimatedGeoModel<BlackDragonfishEntity> {
 
-    @Override
-    public Identifier getModelLocation(BlackDragonfishEntity object) {
-        return null;
-    }
-
-    @Override
-    public Identifier getTextureLocation(BlackDragonfishEntity object) {
-        return null;
-    }
+    private static final Identifier[] TEXTURES = {
+            new Identifier("deep_trenches:textures/entity/black_dragonfish/all_lit.png"),
+            new Identifier("deep_trenches:textures/entity/black_dragonfish/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/black_dragonfish/flank.png"),
+            new Identifier("deep_trenches:textures/entity/black_dragonfish/lure.png")
+    };
 
     @Override
     public Identifier getAnimationFileLocation(BlackDragonfishEntity animatable) {
         return new Identifier("deep_trenches:animations/black_dragonfish.json");
+    }
+
+    @Override
+    public Identifier getModelLocation(BlackDragonfishEntity object) {
+        return new Identifier("deep_trenches:geo/entity/bearded_seadevil.geo.json");
+    }
+
+    @Override
+    public Identifier getTextureLocation(BlackDragonfishEntity object) {
+        return TEXTURES[object.getLightStateIndex()];
     }
 
 }

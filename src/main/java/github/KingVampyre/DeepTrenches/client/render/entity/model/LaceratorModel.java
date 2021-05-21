@@ -13,7 +13,7 @@ public class LaceratorModel extends AnimatedGeoModel<LaceratorEntity> {
 
     @Override
     public Identifier getModelLocation(LaceratorEntity object) {
-        return null;
+        return new Identifier("deep_trenches:geo/entity/lacerator.geo.json");
     }
 
     @Override

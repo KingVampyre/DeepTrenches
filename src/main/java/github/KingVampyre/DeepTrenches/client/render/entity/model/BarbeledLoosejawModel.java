@@ -74,6 +74,15 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/suborbital_and_lure.png")
     };
 
+    private static final Identifier[][] TEXTURES = {
+            ATLANTIC_BARBELED_LOOSEJAW,
+            GLOWING_BARBELED_LOOSEJAW,
+            GRIMALDIS_BARBELED_LOOSEJAW,
+            MANY_RAYED_BARBELED_LOOSEJAW,
+            SHINY_BARBELED_LOOSEJAW,
+            TITTMANNS_BARBELED_LOOSEJAW
+    };
+
     @Override
     public Identifier getAnimationFileLocation(BarbeledLoosejawEntity animatable) {
         return new Identifier("deep_trenches:animations/barbeled_loosejaw.json");
@@ -87,23 +96,9 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
     @Override
     public Identifier getTextureLocation(BarbeledLoosejawEntity object) {
         int index = object.getLightStateIndex();
+        int type = object.getLoosejawType();
 
-        switch (object.getLoosejawType()) {
-            case 0:
-                return ATLANTIC_BARBELED_LOOSEJAW[index];
-            case 1:
-                return GLOWING_BARBELED_LOOSEJAW[index];
-            case 2:
-                return GRIMALDIS_BARBELED_LOOSEJAW[index];
-            case 3:
-                return MANY_RAYED_BARBELED_LOOSEJAW[index];
-            case 4:
-                return SHINY_BARBELED_LOOSEJAW[index];
-            case 5:
-                return TITTMANNS_BARBELED_LOOSEJAW[index];
-        }
-
-        return null;
+        return TEXTURES[type][index];
     }
 
     @Override
