@@ -30,7 +30,7 @@ public class BottleFlyModel extends AnimatedGeoModel<BottleFlyEntity> {
 
     @Override
     public Identifier getTextureLocation(BottleFlyEntity object) {
-        return TEXTURES[object.getBottleFlyType()];
+        return TEXTURES[object.getFlyType()];
     }
 
 }

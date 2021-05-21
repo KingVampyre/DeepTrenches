@@ -1,24 +1,22 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import github.KingVampyre.DeepTrenches.common.entity.FlyingHangBugEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.control.AngerLookControl;
 import github.KingVampyre.DeepTrenches.common.entity.ai.goal.AngryAttackGoal;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Chargable;
 import github.KingVampyre.DeepTrenches.core.entity.ai.control.StaspFlightMoveControl;
 import github.KingVampyre.DeepTrenches.core.entity.ai.goal.*;
 import github.KingVampyre.DeepTrenches.core.entity.ai.pathing.StaspNavigation;
-import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.ai.pathing.PathNodeType;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.Angerable;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtHelper;
@@ -26,25 +24,18 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.IntRange;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
-import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.UUID;
 
-import static net.minecraft.entity.attribute.EntityAttributes.*;
+import static net.minecraft.entity.attribute.EntityAttributes.GENERIC_FLYING_SPEED;
 
-public class StaspEntity extends PathAwareEntity implements Angerable, Chargable, IAnimatable {
+public class StaspEntity extends FlyingHangBugEntity implements Angerable, Chargable {
 
 	private static final TrackedData<Integer> ANGER = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.INTEGER);
 	private static final TrackedData<Boolean> CHARGING = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
-	private static final TrackedData<Boolean> HANGING = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
-
 	private static final TrackedData<Integer> STASP_TYPE = DataTracker.registerData(BettaEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
 	private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
@@ -52,7 +43,7 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 	private BlockPos nestPos;
 	private UUID targetUuid;
 
-	public StaspEntity(EntityType<? extends StaspEntity> entityType, World world) {
+	public StaspEntity(EntityType<? extends FlyingHangBugEntity> entityType, World world) {
 		super(entityType, world);
 
 		this.moveControl = new StaspFlightMoveControl(this, 20, 90, false);
@@ -74,13 +65,6 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 		navigation.setCanEnterOpenDoors(true);
 
 		return navigation;
-	}
-
-	@Override
-	public float getPathfindingFavor(BlockPos pos, WorldView world) {
-		BlockState state = world.getBlockState(pos);
-
-		return state.isAir() ? 10.0F : 0.0F;
 	}
 
 	public int getStaspType() {
@@ -115,17 +99,9 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 		return this.dataTracker.get(ANGER);
 	}
 
-	public boolean getIsHanging() {
-		return this.dataTracker.get(HANGING);
-	}
-
 	@Override
 	public void setAngerTime(int ticks) {
 		this.dataTracker.set(ANGER, ticks);
-	}
-
-	public void setIsHanging(boolean isHanging) {
-		this.dataTracker.set(HANGING, isHanging);
 	}
 
 	@Override
@@ -177,49 +153,8 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 
 		this.dataTracker.startTracking(ANGER, 0);
 		this.dataTracker.startTracking(CHARGING, false);
-		this.dataTracker.startTracking(HANGING, false);
 
 		this.dataTracker.startTracking(STASP_TYPE, 0);
-	}
-
-	@Override
-	public void tick() {
-		super.tick();
-
-		if (this.getIsHanging())
-			this.setVelocity(Vec3d.ZERO);
-	}
-
-	@Override
-	public boolean canAvoidTraps() {
-		return true;
-	}
-
-	@Override
-	protected boolean canClimb() {
-		return false;
-	}
-
-	@Override
-	public boolean handleFallDamage(float fallDistance, float damageMultiplier) {
-		return false;
-	}
-
-	@Override
-	protected void fall(double heightDifference, boolean onGround, BlockState landedState, BlockPos landedPosition) {
-
-	}
-
-	@Override
-	public boolean damage(DamageSource source, float amount) {
-
-		if (this.isInvulnerableTo(source))
-			return false;
-
-		if (!this.world.isClient() && this.getIsHanging())
-			this.setIsHanging(false);
-
-		return super.damage(source, amount);
 	}
 
 	@Override
@@ -258,16 +193,6 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 			tag.put("NestPos", NbtHelper.fromBlockPos(this.nestPos));
 
 		tag.putInt("StaspType", this.getStaspType());
-	}
-
-	@Override
-	public void registerControllers(AnimationData data) {
-
-	}
-
-	@Override
-	public AnimationFactory getFactory() {
-		return null;
 	}
 
 	public static class StaspData extends PassiveEntity.PassiveData {

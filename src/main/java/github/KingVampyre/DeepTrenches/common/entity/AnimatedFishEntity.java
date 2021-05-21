@@ -13,7 +13,7 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 public abstract class AnimatedFishEntity extends FishEntity implements IAnimatable, Skittish {
 
-	protected final AnimationFactory animationFactory;
+	protected AnimationFactory animationFactory;
 
 	protected AnimatedFishEntity(EntityType<? extends AnimatedFishEntity> type, World world) {
 		super(type, world);

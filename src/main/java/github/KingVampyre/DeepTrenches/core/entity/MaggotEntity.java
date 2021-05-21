@@ -1,26 +1,13 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import github.KingVampyre.DeepTrenches.common.entity.CrawlingBugEntity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.world.World;
-import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class MaggotEntity extends PathAwareEntity implements IAnimatable {
+public class MaggotEntity extends CrawlingBugEntity {
 
-    public MaggotEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+    public MaggotEntity(EntityType<? extends CrawlingBugEntity> entityType, World world) {
         super(entityType, world);
-    }
-
-    @Override
-    public AnimationFactory getFactory() {
-        return null;
-    }
-
-    @Override
-    public void registerControllers(AnimationData data) {
-
     }
 
 }

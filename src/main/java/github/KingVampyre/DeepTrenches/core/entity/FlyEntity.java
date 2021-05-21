@@ -1,27 +1,41 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import github.KingVampyre.DeepTrenches.common.entity.FlyingBugEntity;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
-public class FlyEntity extends PathAwareEntity implements IAnimatable {
+public class FlyEntity extends FlyingBugEntity {
 
     private static final TrackedData<Integer> FLY_TYPE = DataTracker.registerData(BettaEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
-    public FlyEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+    public FlyEntity(EntityType<? extends FlyingBugEntity> entityType, World world) {
         super(entityType, world);
+    }
+
+    @Override
+    protected <E extends IAnimatable> PlayState getMovementAnimation(AnimationEvent<E> event) {
+
+        if(this.isEating())
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("walking"));
+
+        return super.getMovementAnimation(event);
+    }
+
+    public boolean isEating() {
+        return false;
     }
 
     public int getFlyType() {
@@ -30,16 +44,6 @@ public class FlyEntity extends PathAwareEntity implements IAnimatable {
 
     public void setFlyType(int flyType) {
         this.dataTracker.set(FLY_TYPE, flyType);
-    }
-
-    @Override
-    public AnimationFactory getFactory() {
-        return null;
-    }
-
-    @Override
-    public void registerControllers(AnimationData data) {
-
     }
 
     @Override
