@@ -14,22 +14,28 @@ public class CustomRenderLayer extends RenderLayer {
         super(name, vertexFormat, drawMode, expectedBufferSize, hasCrumbling, translucent, startAction, endAction);
     }
 
-    public static RenderLayer getBrightTexture(Identifier texture) {
-        RenderPhase.Texture renderPhase = new RenderPhase.Texture(texture, false, false);
+    public static RenderLayer getBrightOverlayTexture(String texture) {
+        Identifier identifier = Identifier.tryParse(texture);
 
-        return RenderLayer.of("bright", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, 7, 256, false, true,
-                RenderLayer.MultiPhaseParameters.builder().texture(renderPhase)
-                        .transparency(ADDITIVE_TRANSPARENCY)
-                        .alpha(ONE_TENTH_ALPHA)
-                        .writeMaskState(COLOR_MASK)
-                        .fog(BLACK_FOG)
-                        .build(false));
+        if(identifier != null) {
+            RenderPhase.Texture renderPhase = new RenderPhase.Texture(identifier, false, false);
+
+            return RenderLayer.of("deep_trenches:bright_overlay", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, 7, 256, false, true,
+                    RenderLayer.MultiPhaseParameters.builder().texture(renderPhase)
+                            .transparency(ADDITIVE_TRANSPARENCY)
+                            .alpha(ONE_TENTH_ALPHA)
+                            .writeMaskState(COLOR_MASK)
+                            .fog(BLACK_FOG)
+                            .build(false));
+        }
+
+        return null;
     }
 
-    public static RenderLayer getLoosejawFinsLayer(Identifier texture) {
+    public static RenderLayer getFinsLayer(Identifier texture) {
         RenderPhase.Texture renderPhase = new RenderPhase.Texture(texture, false, false);
 
-        return RenderLayer.of("loosejaw_fins", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, 7, 256, false, true,
+        return RenderLayer.of("deep_trenches:fins_overlay", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, 7, 256, false, true,
                 RenderLayer.MultiPhaseParameters.builder().texture(renderPhase)
                         .transparency(TRANSLUCENT_TRANSPARENCY)
                         .alpha(ONE_SEVENTH_ALPHA)

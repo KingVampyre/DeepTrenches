@@ -6,6 +6,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class CetachsalModel extends AnimatedGeoModel<CetachsalEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/cetachsal.geo.json");
+
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/cetachsal/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/cetachsal/all_unlit.png")
@@ -18,7 +20,7 @@ public class CetachsalModel extends AnimatedGeoModel<CetachsalEntity> {
 
     @Override
     public Identifier getModelLocation(CetachsalEntity object) {
-        return new Identifier("deep_trenches:geo/entity/cetachsal.geo.json");
+        return MODEL;
     }
 
     @Override

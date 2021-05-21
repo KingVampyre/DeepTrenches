@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
-import github.KingVampyre.DeepTrenches.client.render.entity.feature.StaspAntennasFeatureRenderer;
+import github.KingVampyre.DeepTrenches.client.render.entity.feature.StaspAntennasLayerFeature;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel;
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
@@ -14,7 +14,7 @@ public class StaspRenderer extends NoCullingEntityRenderer<StaspEntity> {
 		super(entityRenderDispatcher, new StaspModel());
 
 		this.shadowRadius = 0.35F;
-		this.addLayer(new StaspAntennasFeatureRenderer(this));
+		this.addLayer(new StaspAntennasLayerFeature(this));
 	}
 
 	@Override

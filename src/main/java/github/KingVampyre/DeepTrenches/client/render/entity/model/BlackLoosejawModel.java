@@ -8,6 +8,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class BlackLoosejawModel extends AnimatedGeoModel<BlackLoosejawEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/black_loosejaw.geo.json");
+
     private static final Identifier[] NORTHERN_BLACK_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/all_unlit.png"),
@@ -37,7 +39,7 @@ public class BlackLoosejawModel extends AnimatedGeoModel<BlackLoosejawEntity> {
 
     @Override
     public Identifier getModelLocation(BlackLoosejawEntity object) {
-        return new Identifier("deep_trenches:geo/entity/black_loosejaw.geo.json");
+        return MODEL;
     }
 
     @Override

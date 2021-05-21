@@ -6,6 +6,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class BlackSeadevilModel extends AnimatedGeoModel<BlackSeadevilEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/black_seadevil.geo.json");
+
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/black_seadevil/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/black_seadevil/all_unlit.png")
@@ -18,7 +20,7 @@ public class BlackSeadevilModel extends AnimatedGeoModel<BlackSeadevilEntity> {
 
     @Override
     public Identifier getModelLocation(BlackSeadevilEntity object) {
-        return new Identifier("deep_trenches:geo/model/black_seadevil.geo.json");
+        return MODEL;
     }
 
     @Override

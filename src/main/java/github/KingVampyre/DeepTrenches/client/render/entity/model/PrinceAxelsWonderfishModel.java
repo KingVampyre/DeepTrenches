@@ -6,6 +6,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class PrinceAxelsWonderfishModel extends AnimatedGeoModel<PrinceAxelsWonderfishEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/prince_axels_wonderfish.geo.json");
+
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/prince_axels_wonderfish/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/prince_axels_wonderfish/all_unlit.png")
@@ -18,7 +20,7 @@ public class PrinceAxelsWonderfishModel extends AnimatedGeoModel<PrinceAxelsWond
 
     @Override
     public Identifier getModelLocation(PrinceAxelsWonderfishEntity object) {
-        return new Identifier("deep_trenches:geo/entity/prince_axels_wonderfish.geo.json");
+        return MODEL;
     }
 
     @Override

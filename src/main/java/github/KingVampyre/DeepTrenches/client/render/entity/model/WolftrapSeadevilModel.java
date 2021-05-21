@@ -6,9 +6,11 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class WolftrapSeadevilModel extends AnimatedGeoModel<WolftrapSeadevilEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/wolftrap_seadevil.geo.json");
+
     private static final Identifier[] TEXTURES = {
-            new Identifier("deep_trenches:textures/entity/void_beast/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/void_beast/all_unlit.png")
+            new Identifier("deep_trenches:textures/entity/wolftrap_seadevil/all_lit.png"),
+            new Identifier("deep_trenches:textures/entity/wolftrap_seadevil/all_unlit.png")
     };
 
     @Override
@@ -18,7 +20,7 @@ public class WolftrapSeadevilModel extends AnimatedGeoModel<WolftrapSeadevilEnti
 
     @Override
     public Identifier getModelLocation(WolftrapSeadevilEntity object) {
-        return new Identifier("deep_trenches:geo/entity/wolftrap_seadevil.geo.json");
+        return MODEL;
     }
 
     @Override

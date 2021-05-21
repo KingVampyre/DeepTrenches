@@ -8,6 +8,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class SmalltoothDragonfishModel extends AnimatedGeoModel<SmalltoothDragonfishEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/smalltooth_dragonfish.geo.json");
+
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/all_unlit.png"),
@@ -26,7 +28,7 @@ public class SmalltoothDragonfishModel extends AnimatedGeoModel<SmalltoothDragon
 
     @Override
     public Identifier getModelLocation(SmalltoothDragonfishEntity object) {
-        return new Identifier("deep_trenches:geo/entity/smalltooth_dragonfish.geo.json");
+        return MODEL;
     }
 
     @Override

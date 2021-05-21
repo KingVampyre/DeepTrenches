@@ -12,7 +12,7 @@ public class SmalltoothDragonfishFinsFeature extends SingleRenderLayerFeature<Sm
 
     private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/smalltooth_dragonfish.geo.json");
 
-    private static final RenderLayer TEXTURE = CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/translucent_layer.png"));
+    private static final RenderLayer TEXTURE = CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/translucent_layer.png"));
 
     public SmalltoothDragonfishFinsFeature(IGeoRenderer<SmalltoothDragonfishEntity> renderer) {
         super(renderer);

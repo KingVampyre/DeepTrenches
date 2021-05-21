@@ -13,8 +13,8 @@ public class BlackLoosejawFinsFeature extends SingleRenderLayerFeature<BlackLoos
     private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/black_loosejaw.geo.json");
 
     private static final RenderLayer[] RENDER_LAYERS = {
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/translucent_layer.png")),
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/translucent_layer.png"))
+            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/translucent_layer.png")),
+            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/translucent_layer.png"))
     };
 
     public BlackLoosejawFinsFeature(IGeoRenderer<BlackLoosejawEntity> renderer) {

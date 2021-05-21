@@ -6,6 +6,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class VoidBeastModel extends AnimatedGeoModel<VoidBeastEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/void_beast.geo.json");
+
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/void_beast/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/void_beast/all_unlit.png"),
@@ -20,7 +22,7 @@ public class VoidBeastModel extends AnimatedGeoModel<VoidBeastEntity> {
 
     @Override
     public Identifier getModelLocation(VoidBeastEntity object) {
-        return new Identifier("deep_trenches:geo/entity/void_beast.geo.json");
+        return MODEL;
     }
 
     @Override

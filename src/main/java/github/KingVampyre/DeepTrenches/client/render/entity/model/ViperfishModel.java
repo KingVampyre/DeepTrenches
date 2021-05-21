@@ -6,6 +6,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class ViperfishModel extends AnimatedGeoModel<ViperfishEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/viperfish.geo.json");
+
     private static final Identifier[] PACIFIC_VIPERFISH = {
             new Identifier("deep_trenches:textures/entity/viperfish/pacific/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/viperfish/pacific/all_unlit.png"),
@@ -32,7 +34,7 @@ public class ViperfishModel extends AnimatedGeoModel<ViperfishEntity> {
 
     @Override
     public Identifier getModelLocation(ViperfishEntity object) {
-        return new Identifier("deep_trenches:geo/entity/viperfish.geo.json");
+        return MODEL;
     }
 
     @Override

@@ -6,6 +6,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class DeepLakeBettaModel extends AnimatedGeoModel<DeepLakeBettaEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/deep_lake_betta.geo.json");
+
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_unlit.png"),
@@ -20,7 +22,7 @@ public class DeepLakeBettaModel extends AnimatedGeoModel<DeepLakeBettaEntity> {
 
     @Override
     public Identifier getModelLocation(DeepLakeBettaEntity object) {
-        return new Identifier("deep_trenches:geo/entity/deep_lake_betta.geo.json");
+        return MODEL;
     }
 
     @Override

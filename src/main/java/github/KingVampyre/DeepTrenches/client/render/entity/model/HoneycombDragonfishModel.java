@@ -6,6 +6,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class HoneycombDragonfishModel extends AnimatedGeoModel<HoneycombDragonfishEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/honeycomb_dragonfish.geo.json");
+
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/honeycomb_dragonfish/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/honeycomb_dragonfish/all_unlit.png"),
@@ -20,7 +22,7 @@ public class HoneycombDragonfishModel extends AnimatedGeoModel<HoneycombDragonfi
 
     @Override
     public Identifier getModelLocation(HoneycombDragonfishEntity object) {
-        return new Identifier("deep_trenches:geo/entity/honeycomb_dragonfish.geo.json");
+        return MODEL;
     }
 
     @Override

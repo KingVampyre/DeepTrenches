@@ -6,6 +6,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class FinangiteModel extends AnimatedGeoModel<FinangiteEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/finangite.geo.json");
+
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/finangite/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/finangite/all_unlit.png"),
@@ -24,7 +26,7 @@ public class FinangiteModel extends AnimatedGeoModel<FinangiteEntity> {
 
     @Override
     public Identifier getModelLocation(FinangiteEntity object) {
-        return new Identifier("deep_trenches:geo/entity/finangite.geo.json");
+        return MODEL;
     }
 
     @Override

@@ -8,6 +8,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/light_loosejaw.geo.json");
+
     private static final Identifier[] BIGLAMP_LIGHT_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/all_lit.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/all_unlit.png"),
@@ -66,7 +68,7 @@ public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
 
     @Override
     public Identifier getModelLocation(LightLoosejawEntity object) {
-        return new Identifier("deep_trenches:geo/entity/light_loosejaw.geo.json");
+        return MODEL;
     }
 
     @Override

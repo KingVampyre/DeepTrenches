@@ -51,6 +51,8 @@ public class StaspModel extends AnimatedGeoModel<StaspEntity> {
             new Identifier("deep_trenches:textures/entity/stasp/orange_winged_stasp/with_pollen.png")
     };
 
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/stasp.geo.json");
+
     @Override
     public Identifier getAnimationFileLocation(StaspEntity animatable) {
         return new Identifier("deep_trenches:animations/stasp.json");
@@ -58,7 +60,7 @@ public class StaspModel extends AnimatedGeoModel<StaspEntity> {
 
     @Override
     public Identifier getModelLocation(StaspEntity object) {
-        return new Identifier("deep_trenches:geo/entity/stasp.geo.json");
+        return MODEL;
     }
 
     @Override

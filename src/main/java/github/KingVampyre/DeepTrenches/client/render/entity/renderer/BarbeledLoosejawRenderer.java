@@ -2,11 +2,14 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import github.KingVampyre.DeepTrenches.client.render.entity.feature.BarbeledLoosejawFinsFeature;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BarbeledLoosejawModel;
+import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLayerFeature;
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
+
+import static github.KingVampyre.DeepTrenches.client.render.entity.model.BarbeledLoosejawModel.MODEL;
 
 public class BarbeledLoosejawRenderer extends NoCullingEntityRenderer<BarbeledLoosejawEntity> {
 
@@ -15,7 +18,8 @@ public class BarbeledLoosejawRenderer extends NoCullingEntityRenderer<BarbeledLo
 
 	    this.shadowRadius = 0.4F;
 	    this.addLayer(new BarbeledLoosejawFinsFeature(this));
-    }
+		this.addLayer(new LuminousLayerFeature<>(this, MODEL, null));
+	}
 
     @Override
 	public void render(BarbeledLoosejawEntity entity, float entityYaw, float partialTicks, MatrixStack stack, VertexConsumerProvider bufferIn, int packedLightIn) {

@@ -9,17 +9,17 @@ import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.geo.render.built.GeoModel;
 import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
 
-public class StaspAntennasFeatureRenderer extends SingleRenderLayerFeature<StaspEntity> {
+import static github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel.MODEL;
 
-    private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/stasp.geo.json");
+public class StaspAntennasLayerFeature extends SingleRenderLayerFeature<StaspEntity> {
 
-    private static final RenderLayer BRIGHT_BLACK_ANTENNAS = CustomRenderLayer.getBrightTexture(new Identifier("deep_trenches:textures/entity/black_stasp_antennas.png"));
-    private static final RenderLayer BRIGHT_STASP_ANTENNAS = CustomRenderLayer.getBrightTexture(new Identifier("deep_trenches:textures/entity/stasp_antennas.png"));
+    private static final RenderLayer BRIGHT_BLACK_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/black_stasp_antennas.png");
+    private static final RenderLayer BRIGHT_STASP_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/stasp_antennas.png");
 
     private static final RenderLayer BLACK_STASP_ANTENNAS = RenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/black_stasp_antennas.png"));
     private static final RenderLayer STASP_ANTENNAS = RenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/stasp_antennas.png"));
 
-    public StaspAntennasFeatureRenderer(IGeoRenderer<StaspEntity> renderer) {
+    public StaspAntennasLayerFeature(IGeoRenderer<StaspEntity> renderer) {
         super(renderer);
     }
 
