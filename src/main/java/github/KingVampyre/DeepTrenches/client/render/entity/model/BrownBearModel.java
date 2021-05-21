@@ -24,8 +24,7 @@ public class BrownBearModel extends AnimatedGeoModel<BrownBearEntity> {
 
     @Override
     public Identifier getTextureLocation(BrownBearEntity object) {
-//      TODO return TEXTURES[object.getBrownBearType()];
-        return TEXTURES[0];
+        return TEXTURES[object.getBrownBearType()];
     }
 
 }

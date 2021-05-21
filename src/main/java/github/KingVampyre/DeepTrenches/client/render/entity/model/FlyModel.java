@@ -25,8 +25,7 @@ public class FlyModel extends AnimatedGeoModel<FlyEntity> {
 
     @Override
     public Identifier getTextureLocation(FlyEntity object) {
-//      TODO return TEXTURES[object.getFlyType()];
-        return TEXTURES[0];
+        return TEXTURES[object.getFlyType()];
     }
 
 }

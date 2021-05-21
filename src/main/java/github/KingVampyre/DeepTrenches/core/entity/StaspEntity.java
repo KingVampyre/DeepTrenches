@@ -7,7 +7,9 @@ import github.KingVampyre.DeepTrenches.core.entity.ai.control.StaspFlightMoveCon
 import github.KingVampyre.DeepTrenches.core.entity.ai.goal.*;
 import github.KingVampyre.DeepTrenches.core.entity.ai.pathing.StaspNavigation;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.ai.pathing.PathNodeType;
@@ -17,6 +19,7 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.Angerable;
 import net.minecraft.entity.mob.PathAwareEntity;
+import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtHelper;
 import net.minecraft.server.world.ServerWorld;
@@ -24,6 +27,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.IntRange;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -39,6 +44,8 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 	private static final TrackedData<Integer> ANGER = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.INTEGER);
 	private static final TrackedData<Boolean> CHARGING = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 	private static final TrackedData<Boolean> HANGING = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+
+	private static final TrackedData<Integer> STASP_TYPE = DataTracker.registerData(BettaEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
 	private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
 
@@ -74,6 +81,33 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 		BlockState state = world.getBlockState(pos);
 
 		return state.isAir() ? 10.0F : 0.0F;
+	}
+
+	public int getStaspType() {
+		return this.dataTracker.get(STASP_TYPE);
+	}
+
+	public void setStaspType(int viperfishType) {
+		this.dataTracker.set(STASP_TYPE, viperfishType);
+	}
+
+	@Override
+	public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag) {
+		EntityData data = super.initialize(world, difficulty, spawnReason, entityData, entityTag);
+
+		if (entityTag != null && entityTag.contains("StaspType"))
+			this.setStaspType(entityTag.getInt("StaspType"));
+
+		else if (entityData instanceof StaspData)
+			this.setStaspType(((StaspData)entityData).type);
+		else {
+			int type = this.random.nextInt(4);
+			this.setStaspType(type);
+
+			return new StaspData(type);
+		}
+
+		return data;
 	}
 
 	@Override
@@ -144,6 +178,8 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 		this.dataTracker.startTracking(ANGER, 0);
 		this.dataTracker.startTracking(CHARGING, false);
 		this.dataTracker.startTracking(HANGING, false);
+
+		this.dataTracker.startTracking(STASP_TYPE, 0);
 	}
 
 	@Override
@@ -197,6 +233,7 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 		if (tag.contains("NestPos"))
 			this.nestPos = NbtHelper.toBlockPos(tag.getCompound("NestPos"));
 
+		this.setStaspType(tag.getInt("StaspType"));
 	}
 
 	public boolean hasNest() {
@@ -219,6 +256,8 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 
 		if (this.hasNest())
 			tag.put("NestPos", NbtHelper.fromBlockPos(this.nestPos));
+
+		tag.putInt("StaspType", this.getStaspType());
 	}
 
 	@Override
@@ -229,6 +268,18 @@ public class StaspEntity extends PathAwareEntity implements Angerable, Chargable
 	@Override
 	public AnimationFactory getFactory() {
 		return null;
+	}
+
+	public static class StaspData extends PassiveEntity.PassiveData {
+
+		public final int type;
+
+		public StaspData(int type) {
+			super(1.0F);
+
+			this.type = type;
+		}
+
 	}
 
 }

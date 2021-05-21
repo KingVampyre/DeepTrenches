@@ -23,8 +23,7 @@ public class CetachsalModel extends AnimatedGeoModel<CetachsalEntity> {
 
     @Override
     public Identifier getTextureLocation(CetachsalEntity object) {
-//      TODO return TEXTURES[object.getLightStateIndex()];
-        return TEXTURES[0];
+        return TEXTURES[object.getLightStateIndex()];
     }
 
 }

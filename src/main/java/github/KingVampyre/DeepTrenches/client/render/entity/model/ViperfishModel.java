@@ -38,8 +38,7 @@ public class ViperfishModel extends AnimatedGeoModel<ViperfishEntity> {
     @Override
     public Identifier getTextureLocation(ViperfishEntity object) {
         int index = object.getLightStateIndex();
-        int type = 0;
-//      TODO int type = object.getViperfishType();
+        int type = object.getViperfishType();
 
         return TEXTURES[type][index];
     }

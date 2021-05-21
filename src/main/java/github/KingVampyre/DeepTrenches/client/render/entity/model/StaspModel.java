@@ -64,8 +64,7 @@ public class StaspModel extends AnimatedGeoModel<StaspEntity> {
     @Override
     public Identifier getTextureLocation(StaspEntity object) {
         StaspPollenComponent pollen = (StaspPollenComponent) POLLEN.get(object);
-        int type = 0;
-//      TODO int type = object.getStaspType();
+        int type = object.getStaspType();
 
         if(object.hasAngerTime())
             return pollen.hasAqueanSap() ? ANGRY_WITH_AQUEAN_SAP[type] : pollen.hasPollen() ? ANGRY_WITH_POLLEN[type] : ANGRY_TEXTURES[type];
