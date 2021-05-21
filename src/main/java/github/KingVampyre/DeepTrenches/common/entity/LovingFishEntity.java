@@ -26,7 +26,7 @@ import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.LOVING
 
 public abstract class LovingFishEntity extends AngerableFishEntity implements Lovable {
 
-    protected LovingFishEntity(EntityType<? extends LovingFishEntity> type, World world) {
+    public LovingFishEntity(EntityType<? extends LovingFishEntity> type, World world) {
         super(type, world);
     }
 

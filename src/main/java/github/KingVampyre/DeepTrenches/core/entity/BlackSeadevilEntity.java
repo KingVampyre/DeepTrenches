@@ -1,15 +1,15 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
-import github.KingVampyre.DeepTrenches.common.entity.AnimatedFishEntity;
+import github.KingVampyre.DeepTrenches.common.entity.LuminousFishEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
 
-public class BlackSeadevilEntity extends AnimatedFishEntity {
+public class BlackSeadevilEntity extends LuminousFishEntity {
 
-    public BlackSeadevilEntity(EntityType<? extends AnimatedFishEntity> type, World world) {
+    public BlackSeadevilEntity(EntityType<? extends LuminousFishEntity> type, World world) {
         super(type, world);
     }
 

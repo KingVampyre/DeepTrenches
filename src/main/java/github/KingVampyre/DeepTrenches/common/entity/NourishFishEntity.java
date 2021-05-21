@@ -11,11 +11,11 @@ import net.minecraft.world.World;
 
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 
-public abstract class NourishFishEntity extends AnimatedFishEntity implements Nourish {
+public abstract class NourishFishEntity extends LuminousFishEntity implements Nourish {
 
     private static final TrackedData<Boolean> BABY = DataTracker.registerData(NourishFishEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
-    protected NourishFishEntity(EntityType<? extends NourishFishEntity> type, World world) {
+    public NourishFishEntity(EntityType<? extends NourishFishEntity> type, World world) {
         super(type, world);
     }
 

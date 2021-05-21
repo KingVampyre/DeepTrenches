@@ -18,7 +18,7 @@ public abstract class AngerableFishEntity extends NourishFishEntity implements A
 
     protected UUID targetUuid;
 
-    protected AngerableFishEntity(EntityType<? extends AngerableFishEntity> type, World world) {
+    public AngerableFishEntity(EntityType<? extends AngerableFishEntity> type, World world) {
         super(type, world);
     }
 

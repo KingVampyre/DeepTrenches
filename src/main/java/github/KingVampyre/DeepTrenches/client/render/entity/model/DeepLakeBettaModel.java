@@ -6,6 +6,13 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class DeepLakeBettaModel extends AnimatedGeoModel<DeepLakeBettaEntity> {
 
+    private static final Identifier[] TEXTURES = {
+            new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_lit.png"),
+            new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/deep_lake_betta/body.png"),
+            new Identifier("deep_trenches:textures/entity/deep_lake_betta/lure.png")
+    };
+
     @Override
     public Identifier getAnimationFileLocation(DeepLakeBettaEntity animatable) {
         return new Identifier("deep_trenches:animations/deep_lake_betta.json");
@@ -18,7 +25,7 @@ public class DeepLakeBettaModel extends AnimatedGeoModel<DeepLakeBettaEntity> {
 
     @Override
     public Identifier getTextureLocation(DeepLakeBettaEntity object) {
-        return new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_lit.png");
+        return TEXTURES[object.getLightStateIndex()];
     }
 
 }

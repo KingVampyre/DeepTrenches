@@ -6,19 +6,27 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class FlyModel extends AnimatedGeoModel<FlyEntity> {
 
-    @Override
-    public Identifier getModelLocation(FlyEntity object) {
-        return null;
-    }
-
-    @Override
-    public Identifier getTextureLocation(FlyEntity object) {
-        return null;
-    }
+    private static final Identifier[] TEXTURES = {
+            new Identifier("deep_trenches:textures/entity/fly/brown_fly.png"),
+            new Identifier("deep_trenches:textures/entity/fly/fly.png"),
+            new Identifier("deep_trenches:textures/entity/fly/phaonia_fly.png"),
+            new Identifier("deep_trenches:textures/entity/fly/root_fly.png")
+    };
 
     @Override
     public Identifier getAnimationFileLocation(FlyEntity animatable) {
         return new Identifier("deep_trenches:animations/fly.json");
+    }
+
+    @Override
+    public Identifier getModelLocation(FlyEntity object) {
+        return new Identifier("deep_trenches:geo/entity/fly.geo.json");
+    }
+
+    @Override
+    public Identifier getTextureLocation(FlyEntity object) {
+//      TODO return TEXTURES[object.getFlyType()];
+        return TEXTURES[0];
     }
 
 }

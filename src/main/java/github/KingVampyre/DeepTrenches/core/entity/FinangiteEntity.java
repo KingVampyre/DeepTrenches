@@ -1,26 +1,31 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import github.KingVampyre.DeepTrenches.common.entity.LuminousFishEntity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.mob.PathAwareEntity;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
-import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class FinangiteEntity extends PathAwareEntity implements IAnimatable {
+public class FinangiteEntity extends LuminousFishEntity {
 
-    public FinangiteEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+    public FinangiteEntity(EntityType<? extends LuminousFishEntity> entityType, World world) {
         super(entityType, world);
     }
 
     @Override
-    public AnimationFactory getFactory() {
+    public EntityAttributeModifier getSpeedModifier() {
         return null;
     }
 
     @Override
-    public void registerControllers(AnimationData data) {
+    protected ItemStack getFishBucketItem() {
+        return null;
+    }
 
+    @Override
+    protected SoundEvent getFlopSound() {
+        return null;
     }
 
 }

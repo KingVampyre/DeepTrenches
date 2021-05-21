@@ -4,8 +4,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Dynamic;
-import github.KingVampyre.DeepTrenches.common.entity.ai.mob.LightState;
-import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lightable;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTask;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTemptingTask;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.TamableFishFollowOwnerTask;
@@ -42,12 +40,11 @@ import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
 import static net.minecraft.item.Items.COD;
 
-public abstract class AbstractLoosejawEntity extends TamableFishEntity implements Lightable {
+public abstract class AbstractLoosejawEntity extends TamableFishEntity {
 
     protected static final ImmutableList<? extends MemoryModuleType<?>> MEMORY_MODULES = ImmutableList.of(ATTACK_TARGET, ATTACK_COOLING_DOWN, NEAREST_PLAYERS, NEAREST_VISIBLE_PLAYER, NEAREST_VISIBLE_TARGETABLE_PLAYER, BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, LOVE_TICKS, LOVING_PLAYER, OWNER, SITTING, TAMED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, HURT_BY, HURT_BY_ENTITY, LOOK_TARGET, PATH, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, TEMPTED, VISIBLE_MOBS, WALK_TARGET);
     protected static final ImmutableList<SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SensorType.NEAREST_PLAYERS, TAMABLE_HURT_BY);
 
-    private static final TrackedData<Integer> LIGHT_STATE = DataTracker.registerData(AbstractLoosejawEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final TrackedData<Integer> LOOSEJAW_TYPE = DataTracker.registerData(AbstractLoosejawEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     protected AbstractLoosejawEntity(EntityType<? extends AbstractLoosejawEntity> type, World world) {
@@ -142,29 +139,8 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
         this.setBreedingAge(baby ? -36000 : 0);
     }
 
-    @Override
-    public LightState getLightState() {
-        ImmutableList<LightState> container = this.getLightContainer();
-        int state = this.getLightStateIndex();
-
-        return container.get(state);
-    }
-
-    @Override
-    public int getLightStateIndex() {
-        return this.dataTracker.get(LIGHT_STATE);
-    }
-
     public int getLoosejawType() {
         return this.dataTracker.get(LOOSEJAW_TYPE);
-    }
-
-    @Override
-    public void setLightState(LightState state) {
-        ImmutableList<LightState> container = this.getLightContainer();
-        int index = container.indexOf(state);
-
-        this.dataTracker.set(LIGHT_STATE, index);
     }
 
     public void setLoosejawType(int loosejawType) {
@@ -177,7 +153,6 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
     protected void initDataTracker() {
         super.initDataTracker();
 
-        this.dataTracker.startTracking(LIGHT_STATE, 0);
         this.dataTracker.startTracking(LOOSEJAW_TYPE, 0);
     }
 
@@ -231,7 +206,6 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
     public void readCustomDataFromTag(CompoundTag tag) {
         super.readCustomDataFromTag(tag);
 
-        this.lightableToTag(tag);
         this.setLoosejawType(tag.getInt("LoosejawType"));
     }
 
@@ -239,7 +213,6 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
     public void writeCustomDataToTag(CompoundTag tag) {
         super.writeCustomDataToTag(tag);
 
-        this.lightableFromTag(tag);
         tag.putInt("LoosejawType", this.getLoosejawType());
     }
 

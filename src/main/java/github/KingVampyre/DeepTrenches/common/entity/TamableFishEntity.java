@@ -23,7 +23,7 @@ import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 
 public abstract class TamableFishEntity extends LovingFishEntity implements Tamable {
 
-    protected TamableFishEntity(EntityType<? extends TamableFishEntity> type, World world) {
+    public TamableFishEntity(EntityType<? extends TamableFishEntity> type, World world) {
         super(type, world);
     }
 

@@ -6,19 +6,26 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class BeardedSeadevilModel extends AnimatedGeoModel<BeardedSeadevilEntity> {
 
-    @Override
-    public Identifier getModelLocation(BeardedSeadevilEntity object) {
-        return null;
-    }
-
-    @Override
-    public Identifier getTextureLocation(BeardedSeadevilEntity object) {
-        return null;
-    }
+    private static final Identifier[] TEXTURES = {
+            new Identifier("deep_trenches:textures/entity/bearded_seadevil/all_lit.png"),
+            new Identifier("deep_trenches:textures/entity/bearded_seadevil/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/bearded_seadevil/beard.png"),
+            new Identifier("deep_trenches:textures/entity/bearded_seadevil/lure.png")
+    };
 
     @Override
     public Identifier getAnimationFileLocation(BeardedSeadevilEntity animatable) {
         return new Identifier("deep_trenches:animations/bearded_seadevil.json");
+    }
+
+    @Override
+    public Identifier getModelLocation(BeardedSeadevilEntity object) {
+        return new Identifier("deep_trenches:geo/entity/bearded_seadevil.geo.json");
+    }
+
+    @Override
+    public Identifier getTextureLocation(BeardedSeadevilEntity object) {
+        return TEXTURES[object.getLightStateIndex()];
     }
 
 }

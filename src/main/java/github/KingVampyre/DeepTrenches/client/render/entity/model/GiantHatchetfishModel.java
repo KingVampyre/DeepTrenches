@@ -6,6 +6,11 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class GiantHatchetfishModel extends AnimatedGeoModel<GiantHatchetfishEntity> {
 
+    private static final Identifier[] TEXTURES = {
+            new Identifier("deep_trenches:textures/entity/giant_hatchetfish/tittmanns/all_lit.png"),
+            new Identifier("deep_trenches:textures/entity/giant_hatchetfish/tittmanns/all_unlit.png")
+    };
+
     @Override
     public Identifier getAnimationFileLocation(GiantHatchetfishEntity animatable) {
         return new Identifier("deep_trenches:animations/giant_hatchetfish.json");
@@ -18,7 +23,7 @@ public class GiantHatchetfishModel extends AnimatedGeoModel<GiantHatchetfishEnti
 
     @Override
     public Identifier getTextureLocation(GiantHatchetfishEntity object) {
-        return new Identifier("deep_trenches:textures/entity/giant_hatchetfish/all_lit.png");
+        return TEXTURES[object.getLightStateIndex()];
     }
 
 }
