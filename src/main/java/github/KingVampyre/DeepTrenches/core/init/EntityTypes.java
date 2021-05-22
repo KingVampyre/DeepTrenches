@@ -149,22 +149,7 @@ public class EntityTypes {
 			.dimensions(EntityDimensions.fixed(1.35F, 0.4255F))
 			.build();
 
-	public static final EntityType<StaspEntity> BLACK_STASP = FabricEntityTypeBuilder
-			.create(SpawnGroup.CREATURE, StaspEntity::new)
-			.dimensions(EntityDimensions.fixed(0.7F, 0.6F))
-			.build();
-
-	public static final EntityType<StaspEntity> BLUE_WINGED_STASP = FabricEntityTypeBuilder
-			.create(SpawnGroup.CREATURE, StaspEntity::new)
-			.dimensions(EntityDimensions.fixed(0.7F, 0.6F))
-			.build();
-
-	public static final EntityType<StaspEntity> FUCHSITRA_STASP = FabricEntityTypeBuilder
-			.create(SpawnGroup.CREATURE, StaspEntity::new)
-			.dimensions(EntityDimensions.fixed(0.7F, 0.6F))
-			.build();
-
-	public static final EntityType<StaspEntity> ORANGE_WINGED_STASP = FabricEntityTypeBuilder
+	public static final EntityType<StaspEntity> STASP = FabricEntityTypeBuilder
 			.create(SpawnGroup.CREATURE, StaspEntity::new)
 			.dimensions(EntityDimensions.fixed(0.7F, 0.6F))
 			.build();

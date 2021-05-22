@@ -312,7 +312,7 @@ public class ModItems {
 		BETTA_SPAWN_EGG = createSpawnEgg("deep_trenches:betta_spawn_egg", EntityTypes.BETTA,7347502, 9183521);
 		BLACK_LOOSEJAW_SPAWN_EGG = createSpawnEgg("deep_trenches:black_loosejaw_spawn_egg", EntityTypes.BLACK_LOOSEJAW,2102566, 11010053);
 		LIGHT_LOOSEJAW_SPAWN_EGG = createSpawnEgg("deep_trenches:light_loosejaw_spawn_egg", EntityTypes.LIGHT_LOOSEJAW,1643048, 4836351);
-		STASP_SPAWN_EGG = createSpawnEgg("deep_trenches:stasp_spawn_egg", EntityTypes.ORANGE_WINGED_STASP, EntityTypeTags.STASPS, 2695792, 5124510);
+		STASP_SPAWN_EGG = createSpawnEgg("deep_trenches:stasp_spawn_egg", EntityTypes.STASP, 2695792, 5124510);
 
 		DEEP_LAKE_BETTA_SPAWN_EGG = createSpawnEgg("deep_trenches:deep_lake_betta_spawn_egg", EntityTypes.DEEP_LAKE_BETTA, EntityTypeTags.TRELOSIAGNUS_BETTA, 1189390, 5013319);
 		GIANT_HATCHETFISH_SPAWN_EGG = createSpawnEgg("deep_trenches:giant_hatchetfish_spawn_egg", EntityTypes.GIANT_HATCHETFISH, EntityTypeTags.ARGYROPELECUS_GIGAS, 9870757, 12311039);

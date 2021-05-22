@@ -4,7 +4,6 @@ import github.KingVampyre.DeepTrenches.client.render.entity.feature.StaspAntenna
 import github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel;
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
 
@@ -15,15 +14,15 @@ public class StaspRenderer extends NoCullingEntityRenderer<StaspEntity> {
 	public StaspRenderer(EntityRenderDispatcher entityRenderDispatcher) {
 		super(entityRenderDispatcher, new StaspModel());
 
-		this.shadowRadius = 0.35F;
+		this.shadowRadius = 0.375F;
 		this.addLayer(new StaspAntennasLayerFeature(this, MODEL));
 	}
 
 	@Override
-	public void render(StaspEntity entity, float entityYaw, float partialTicks, MatrixStack stack, VertexConsumerProvider bufferIn, int packedLightIn) {
-		super.render(entity, entityYaw, partialTicks, stack, bufferIn, packedLightIn);
+	protected void applyRotations(StaspEntity entityLiving, MatrixStack matrixStackIn, float ageInTicks, float rotationYaw, float partialTicks) {
+		super.applyRotations(entityLiving, matrixStackIn, ageInTicks, rotationYaw, partialTicks);
 
-		stack.translate(-0.1F, -1F, -0.2F);
+		matrixStackIn.translate(-0.1F, -0.1F, -0.2F);
 	}
 
 }

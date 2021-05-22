@@ -17,7 +17,6 @@ import software.bernie.geckolib3.GeckoLib;
 import static github.KingVampyre.DeepTrenches.core.init.ItemGroups.GENERAL;
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
 import static github.KingVampyre.DeepTrenches.core.init.PaintingMotives.*;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
 import static net.minecraft.util.registry.Registry.*;
 
 public class  DeepTrenches implements ModInitializer {
@@ -76,12 +75,7 @@ public class  DeepTrenches implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(EntityTypes.MAGGOT, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.PRINCE_AXELS_WONDERFISH, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.SMALLTOOTH_DRAGONFISH, DefaultAttributeHelper.createSmalltoothDragonfishAttributes());
-
-		FabricDefaultAttributeRegistry.register(EntityTypes.BLACK_STASP, DefaultAttributeHelper.createStaspAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.BLUE_WINGED_STASP, DefaultAttributeHelper.createStaspAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.FUCHSITRA_STASP, DefaultAttributeHelper.createStaspAttributes());
-		FabricDefaultAttributeRegistry.register(EntityTypes.ORANGE_WINGED_STASP, DefaultAttributeHelper.createStaspAttributes());
-
+		FabricDefaultAttributeRegistry.register(EntityTypes.STASP, DefaultAttributeHelper.createStaspAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.TELESCOPEFISH, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.THREADFIN_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(EntityTypes.VIPERFISH, DefaultAttributeHelper.createMobAttributes());
@@ -120,12 +114,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:maggot"), EntityTypes.MAGGOT);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:prince_axels_wonderfish"), EntityTypes.PRINCE_AXELS_WONDERFISH);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:smalltooth_dragonfish"), EntityTypes.SMALLTOOTH_DRAGONFISH);
-
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:black_stasp"), EntityTypes.BLACK_STASP);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:blue_winged_stasp"), EntityTypes.BLUE_WINGED_STASP);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:fuchsitra_stasp"), EntityTypes.FUCHSITRA_STASP);
-		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:orange_winged_stasp"), EntityTypes.ORANGE_WINGED_STASP);
-
+		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:stasp"), EntityTypes.STASP);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:telescopefish"), EntityTypes.TELESCOPEFISH);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:threadfin_dragonfish"), EntityTypes.THREADFIN_DRAGONFISH);
 		Registry.register(ENTITY_TYPE, new Identifier("deep_trenches:viperfish"), EntityTypes.VIPERFISH);

@@ -576,12 +576,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(EntityTypes.MAGGOT, (dispatcher, context) -> new MaggotRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.PRINCE_AXELS_WONDERFISH, (dispatcher, context) -> new PrinceAxelsWonderfishRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.SMALLTOOTH_DRAGONFISH, (dispatcher, context) -> new SmalltoothDragonfishRenderer(dispatcher));
-
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_WINGED_STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.FUCHSITRA_STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.ORANGE_WINGED_STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
-
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.TELESCOPEFISH, (dispatcher, context) -> new TelescopefishEntityRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.THREADFIN_DRAGONFISH, (dispatcher, context) -> new ThreadfinDragonfishRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.VIPERFISH, (dispatcher, context) -> new ViperfishRenderer(dispatcher));

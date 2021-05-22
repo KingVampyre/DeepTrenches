@@ -1,9 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"deep_trenches:black_stasp",
-		"deep_trenches:blue_winged_stasp",
-		"deep_trenches:fuchsitra_stasp",
-		"deep_trenches:orange_winged_stasp"
+		"deep_trenches:stasp"
 	]
 }
