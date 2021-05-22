@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 public abstract class LuminousFishEntity extends SkittishFishEntity implements Luminous {
 
-    private static final TrackedData<Integer> LIGHT_STATE = DataTracker.registerData(AbstractLoosejawEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    private static final TrackedData<Integer> LIGHT_STATE = DataTracker.registerData(LuminousFishEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     public LuminousFishEntity(EntityType<? extends AnimatedFishEntity> type, World world) {
         super(type, world);
