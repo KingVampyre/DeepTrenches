@@ -7,7 +7,6 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.SmalltoothDragonfishEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
 
@@ -35,10 +34,10 @@ public class SmalltoothDragonfishRenderer extends NoCullingEntityRenderer<Smallt
 	}
 
 	@Override
-	public void render(SmalltoothDragonfishEntity entity, float entityYaw, float partialTicks, MatrixStack stack, VertexConsumerProvider bufferIn, int packedLightIn) {
-		super.render(entity, entityYaw, partialTicks, stack, bufferIn, packedLightIn);
+	protected void applyRotations(SmalltoothDragonfishEntity entityLiving, MatrixStack matrixStackIn, float ageInTicks, float rotationYaw, float partialTicks) {
+		super.applyRotations(entityLiving, matrixStackIn, ageInTicks, rotationYaw, partialTicks);
 
-		stack.translate(0.0F, 0.08F, 0.15F);
+		matrixStackIn.translate(0.0F, 0.08F, 0.15F);
 	}
 
 }

@@ -7,7 +7,6 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousVari
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
 
@@ -75,10 +74,10 @@ public class LightLoosejawRenderer extends NoCullingEntityRenderer<LightLoosejaw
     }
 
     @Override
-    public void render(LightLoosejawEntity entity, float entityYaw, float partialTicks, MatrixStack stack, VertexConsumerProvider bufferIn, int packedLightIn) {
-        super.render(entity, entityYaw, partialTicks, stack, bufferIn, packedLightIn);
+    protected void applyRotations(LightLoosejawEntity entityLiving, MatrixStack matrixStackIn, float ageInTicks, float rotationYaw, float partialTicks) {
+        super.applyRotations(entityLiving, matrixStackIn, ageInTicks, rotationYaw, partialTicks);
 
-        stack.translate(0.0F, 0.08F, -0.005F);
+        matrixStackIn.translate(0.0F, 0.08F, -0.005F);
     }
 
 }

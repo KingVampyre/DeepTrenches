@@ -3,7 +3,6 @@ package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BettaModel;
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
 
@@ -16,16 +15,16 @@ public class BettaRenderer extends NoCullingEntityRenderer<BettaEntity> {
     }
 
     @Override
-    public void render(BettaEntity entity, float entityYaw, float partialTicks, MatrixStack stack, VertexConsumerProvider bufferIn, int packedLightIn) {
-        super.render(entity, entityYaw, partialTicks, stack, bufferIn, packedLightIn);
+    protected void applyRotations(BettaEntity entityLiving, MatrixStack matrixStackIn, float ageInTicks, float rotationYaw, float partialTicks) {
+        super.applyRotations(entityLiving, matrixStackIn, ageInTicks, rotationYaw, partialTicks);
 
-        if (!entity.isTouchingWater())
-            stack.translate(0.1F, -0.1F, -0.1F);
+        if (!entityLiving.isTouchingWater())
+            matrixStackIn.translate(0.1F, -0.1F, -0.1F);
         else
-            stack.translate(0, 0.1F, -0.1F);
+            matrixStackIn.translate(0, 0.1F, -0.1F);
 
-        if(entity.isBaby())
-            stack.translate(0, -0.7F, 0);
+        if(entityLiving.isBaby())
+            matrixStackIn.translate(0, -0.7F, 0);
     }
 
 }
