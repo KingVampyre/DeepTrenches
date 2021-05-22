@@ -17,7 +17,6 @@ import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.Angerable;
-import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtHelper;
 import net.minecraft.server.world.ServerWorld;
@@ -36,7 +35,6 @@ public class StaspEntity extends FlyingHangBugEntity implements Angerable, Charg
 
 	private static final TrackedData<Integer> ANGER = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.INTEGER);
 	private static final TrackedData<Boolean> CHARGING = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
-	private static final TrackedData<Integer> STASP_TYPE = DataTracker.registerData(BettaEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
 	private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
 
@@ -67,31 +65,11 @@ public class StaspEntity extends FlyingHangBugEntity implements Angerable, Charg
 		return navigation;
 	}
 
-	public int getStaspType() {
-		return this.dataTracker.get(STASP_TYPE);
-	}
-
-	public void setStaspType(int viperfishType) {
-		this.dataTracker.set(STASP_TYPE, viperfishType);
-	}
-
 	@Override
 	public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag) {
-		EntityData data = super.initialize(world, difficulty, spawnReason, entityData, entityTag);
+		this.setVariant(this.random.nextInt(4));
 
-		if (entityTag != null && entityTag.contains("StaspType"))
-			this.setStaspType(entityTag.getInt("StaspType"));
-
-		else if (entityData instanceof StaspData)
-			this.setStaspType(((StaspData)entityData).type);
-		else {
-			int type = this.random.nextInt(4);
-			this.setStaspType(type);
-
-			return new StaspData(type);
-		}
-
-		return data;
+		return super.initialize(world, difficulty, spawnReason, entityData, entityTag);
 	}
 
 	@Override
@@ -153,8 +131,6 @@ public class StaspEntity extends FlyingHangBugEntity implements Angerable, Charg
 
 		this.dataTracker.startTracking(ANGER, 0);
 		this.dataTracker.startTracking(CHARGING, false);
-
-		this.dataTracker.startTracking(STASP_TYPE, 0);
 	}
 
 	@Override
@@ -167,8 +143,6 @@ public class StaspEntity extends FlyingHangBugEntity implements Angerable, Charg
 
 		if (tag.contains("NestPos"))
 			this.nestPos = NbtHelper.toBlockPos(tag.getCompound("NestPos"));
-
-		this.setStaspType(tag.getInt("StaspType"));
 	}
 
 	public boolean hasNest() {
@@ -191,20 +165,6 @@ public class StaspEntity extends FlyingHangBugEntity implements Angerable, Charg
 
 		if (this.hasNest())
 			tag.put("NestPos", NbtHelper.fromBlockPos(this.nestPos));
-
-		tag.putInt("StaspType", this.getStaspType());
-	}
-
-	public static class StaspData extends PassiveEntity.PassiveData {
-
-		public final int type;
-
-		public StaspData(int type) {
-			super(1.0F);
-
-			this.type = type;
-		}
-
 	}
 
 }

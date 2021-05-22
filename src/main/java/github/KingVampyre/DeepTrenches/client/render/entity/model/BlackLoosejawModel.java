@@ -32,6 +32,11 @@ public class BlackLoosejawModel extends AnimatedGeoModel<BlackLoosejawEntity> {
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/suborbital_and_lure.png")
     };
 
+    private static final Identifier[][] TEXTURES = {
+            NORTHERN_BLACK_LOOSEJAW,
+            SOUTHERN_BLACK_LOOSEJAW
+    };
+
     @Override
     public Identifier getAnimationFileLocation(BlackLoosejawEntity animatable) {
         return new Identifier("deep_trenches:animations/black_loosejaw.json");
@@ -44,16 +49,7 @@ public class BlackLoosejawModel extends AnimatedGeoModel<BlackLoosejawEntity> {
 
     @Override
     public Identifier getTextureLocation(BlackLoosejawEntity object) {
-        int index = object.getLightStateIndex();
-
-        switch (object.getLoosejawType()) {
-            case 0:
-                return NORTHERN_BLACK_LOOSEJAW[index];
-            case 1:
-                return SOUTHERN_BLACK_LOOSEJAW[index];
-        }
-
-        return null;
+        return TEXTURES[object.getVariant()][object.getLightStateIndex()];
     }
 
     @Override

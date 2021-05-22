@@ -32,18 +32,24 @@ public class CustomRenderLayer extends RenderLayer {
         return null;
     }
 
-    public static RenderLayer getFinsLayer(Identifier texture) {
-        RenderPhase.Texture renderPhase = new RenderPhase.Texture(texture, false, false);
+    public static RenderLayer getFinsLayer(String texture) {
+        Identifier identifier = Identifier.tryParse(texture);
 
-        return RenderLayer.of("deep_trenches:fins_overlay", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, 7, 256, false, true,
-                RenderLayer.MultiPhaseParameters.builder().texture(renderPhase)
-                        .transparency(TRANSLUCENT_TRANSPARENCY)
-                        .alpha(ONE_SEVENTH_ALPHA)
-                        .writeMaskState(ALL_MASK)
-                        .cull(DISABLE_CULLING)
-                        .layering(VIEW_OFFSET_Z_LAYERING)
-                        .shadeModel(SMOOTH_SHADE_MODEL)
-                        .build(true));
+        if(identifier != null) {
+            RenderPhase.Texture renderPhase = new RenderPhase.Texture(identifier, false, false);
+
+            return RenderLayer.of("deep_trenches:fins_overlay", VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, 7, 256, false, true,
+                    RenderLayer.MultiPhaseParameters.builder().texture(renderPhase)
+                            .transparency(TRANSLUCENT_TRANSPARENCY)
+                            .alpha(ONE_SEVENTH_ALPHA)
+                            .writeMaskState(ALL_MASK)
+                            .cull(DISABLE_CULLING)
+                            .layering(VIEW_OFFSET_Z_LAYERING)
+                            .shadeModel(SMOOTH_SHADE_MODEL)
+                            .build(true));
+        }
+
+        return null;
     }
 
 }

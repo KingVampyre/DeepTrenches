@@ -5,27 +5,19 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.SingleRender
 import github.KingVampyre.DeepTrenches.core.entity.SmalltoothDragonfishEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib3.geo.render.built.GeoModel;
 import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
 
 public class SmalltoothDragonfishFinsFeature extends SingleRenderLayerFeature<SmalltoothDragonfishEntity> {
 
-    private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/smalltooth_dragonfish.geo.json");
+    private static final RenderLayer LAYER = CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/smalltooth_dragonfish/translucent_layer.png");
 
-    private static final RenderLayer TEXTURE = CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/translucent_layer.png"));
-
-    public SmalltoothDragonfishFinsFeature(IGeoRenderer<SmalltoothDragonfishEntity> renderer) {
-        super(renderer);
-    }
-
-    @Override
-    protected GeoModel getModel(SmalltoothDragonfishEntity living) {
-        return this.getEntityModel().getModel(MODEL);
+    public SmalltoothDragonfishFinsFeature(IGeoRenderer<SmalltoothDragonfishEntity> renderer, Identifier model) {
+        super(renderer, model);
     }
 
     @Override
     protected RenderLayer getRenderLayer(SmalltoothDragonfishEntity living) {
-        return TEXTURE;
+        return LAYER;
     }
 
 }

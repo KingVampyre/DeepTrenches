@@ -5,34 +5,26 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.SingleRender
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib3.geo.render.built.GeoModel;
 import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
 
 public class LightLoosejawFinsFeature extends SingleRenderLayerFeature<LightLoosejawEntity> {
 
-    private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/light_loosejaw.geo.json");
-
     private static final RenderLayer[] RENDER_LAYERS = {
-            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/translucent_layer.png")),
-            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/goodyears/translucent_layer.png")),
-            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/guernes/translucent_layer.png")),
-            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/liems/translucent_layer.png")),
-            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/remarkable_light/translucent_layer.png")),
-            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/small_light/translucent_layer.png"))
+            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/biglamp/translucent_layer.png"),
+            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/goodyears/translucent_layer.png"),
+            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/guernes/translucent_layer.png"),
+            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/liems/translucent_layer.png"),
+            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/remarkable_light/translucent_layer.png"),
+            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/small_light/translucent_layer.png")
     };
 
-    public LightLoosejawFinsFeature(IGeoRenderer<LightLoosejawEntity> renderer) {
-        super(renderer);
-    }
-
-    @Override
-    protected GeoModel getModel(LightLoosejawEntity living) {
-        return this.getEntityModel().getModel(MODEL);
+    public LightLoosejawFinsFeature(IGeoRenderer<LightLoosejawEntity> renderer, Identifier model) {
+        super(renderer, model);
     }
 
     @Override
     protected RenderLayer getRenderLayer(LightLoosejawEntity living) {
-        return RENDER_LAYERS[living.getLoosejawType()];
+        return RENDER_LAYERS[living.getVariant()];
     }
 
 }

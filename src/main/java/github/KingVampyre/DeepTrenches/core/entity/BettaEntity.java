@@ -6,6 +6,7 @@ import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Dynamic;
 import github.KingVampyre.DeepTrenches.common.entity.TamableFishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
+import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Variant;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTask;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTemptingTask;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.TamableFishFollowOwnerTask;
@@ -45,7 +46,7 @@ import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
 import static net.minecraft.item.Items.COD;
 
-public class BettaEntity extends TamableFishEntity {
+public class BettaEntity extends TamableFishEntity implements Variant {
 
     protected static final ImmutableList<? extends MemoryModuleType<?>> MEMORY_MODULES = ImmutableList.of(BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, LOVE_TICKS, LOVING_PLAYER, OWNER, SITTING, TAMED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, HURT_BY, HURT_BY_ENTITY, LOOK_TARGET, PATH, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, TEMPTED, VISIBLE_MOBS, WALK_TARGET);
     protected static final ImmutableList<SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SKITTISH_HURT_BY);
@@ -63,12 +64,20 @@ public class BettaEntity extends TamableFishEntity {
     }
 
     @Override
+    public int getVariant() {
+        return this.dataTracker.get(BETTA_TYPE);
+    }
+
+    @Override
+    public void setVariant(int bettaType) {
+        this.dataTracker.set(BETTA_TYPE, bettaType);
+    }
+
+    @Override
     protected void copyDataToStack(ItemStack stack) {
         super.copyDataToStack(stack);
 
-        CompoundTag compound = stack.getOrCreateTag();
-
-        compound.putInt("BettaType", this.getBettaType());
+        stack.getOrCreateTag().putInt("Variant", this.getVariant());
     }
 
     @Override
@@ -83,7 +92,7 @@ public class BettaEntity extends TamableFishEntity {
         if(betta != null) {
             PlayerEntity player = lovable.getLovingPlayer();
 
-            betta.setBettaType(this.random.nextInt(7));
+            betta.setVariant(this.random.nextInt(7));
             betta.setTamedBy(player);
         }
 
@@ -162,10 +171,6 @@ public class BettaEntity extends TamableFishEntity {
         return MOVEMENT_SPEED_BOOST_235;
     }
 
-    public int getBettaType() {
-        return this.dataTracker.get(BETTA_TYPE);
-    }
-
     @Override
     public boolean isBreedingItem(ItemStack stack) {
         return stack.getItem() == COD;
@@ -181,10 +186,6 @@ public class BettaEntity extends TamableFishEntity {
         this.setBreedingAge(baby ? -24000 : 0);
     }
 
-    public void setBettaType(int bettaType) {
-        this.dataTracker.set(BETTA_TYPE, bettaType);
-    }
-
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
@@ -194,21 +195,9 @@ public class BettaEntity extends TamableFishEntity {
 
     @Override
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag) {
-        EntityData data = super.initialize(world, difficulty, spawnReason, entityData, entityTag);
+        this.setVariant(this.random.nextInt(7));
 
-        if (entityTag != null && entityTag.contains("BettaType"))
-            this.setBettaType(entityTag.getInt("BettaType"));
-
-        else if (entityData instanceof BettaData)
-            this.setBettaType(((BettaData)entityData).type);
-        else {
-            int bettaType = this.random.nextInt(7);
-            this.setBettaType(bettaType);
-
-            return new BettaData(bettaType);
-        }
-
-        return data;
+        return super.initialize(world, difficulty, spawnReason, entityData != null ? entityData : new PassiveEntity.PassiveData(false), entityTag);
     }
 
     @SuppressWarnings("unchecked")
@@ -230,26 +219,14 @@ public class BettaEntity extends TamableFishEntity {
     public void readCustomDataFromTag(CompoundTag tag) {
         super.readCustomDataFromTag(tag);
 
-        this.setBettaType(tag.getInt("BettaType"));
+        this.variantFromTag(tag);
     }
 
     @Override
     public void writeCustomDataToTag(CompoundTag tag) {
         super.writeCustomDataToTag(tag);
 
-        tag.putInt("BettaType", this.getBettaType());
-    }
-
-    public static class BettaData extends PassiveEntity.PassiveData {
-
-        public final int type;
-
-        public BettaData(int type) {
-            super(1.0F);
-
-            this.type = type;
-        }
-
+        this.variantToTag(tag);
     }
 
 }

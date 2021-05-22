@@ -30,7 +30,7 @@ public class BettaModel extends AnimatedGeoModel<BettaEntity> {
 
     @Override
     public Identifier getTextureLocation(BettaEntity object) {
-        return TEXTURES[object.getBettaType()];
+        return TEXTURES[object.getVariant()];
     }
 
     @Override

@@ -10,7 +10,7 @@ public class LightState {
 
     @Override
     public String toString() {
-        return "LightState{" + "name='" + this.name + '\'' + '}';
+        return this.name;
     }
 
 }

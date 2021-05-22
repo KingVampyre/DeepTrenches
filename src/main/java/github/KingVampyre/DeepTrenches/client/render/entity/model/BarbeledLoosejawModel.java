@@ -98,7 +98,7 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
     @Override
     public Identifier getTextureLocation(BarbeledLoosejawEntity object) {
         int index = object.getLightStateIndex();
-        int type = object.getLoosejawType();
+        int type = object.getVariant();
 
         return TEXTURES[type][index];
     }

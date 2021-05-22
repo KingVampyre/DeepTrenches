@@ -74,7 +74,7 @@ public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
     @Override
     public Identifier getTextureLocation(LightLoosejawEntity object) {
         int index = object.getLightStateIndex();
-        int type = object.getLoosejawType();
+        int type = object.getVariant();
 
         return TEXTURES[type][index];
     }

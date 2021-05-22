@@ -1,9 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
-import com.google.common.collect.ImmutableMap;
 import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.GiantHatchetfishModel;
-import github.KingVampyre.DeepTrenches.common.entity.ai.mob.LightState;
 import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLayerFeature;
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.GiantHatchetfishEntity;
@@ -12,15 +10,14 @@ import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
 
-import java.util.Map;
-import java.util.Objects;
-
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.GiantHatchetfishModel.MODEL;
-import static github.KingVampyre.DeepTrenches.core.init.LightStates.ALL_LIT;
 
 public class GiantHatchetfishRenderer extends NoCullingEntityRenderer<GiantHatchetfishEntity> {
 
-	private static final Map<LightState, RenderLayer> LAYERS = ImmutableMap.of(ALL_LIT, Objects.requireNonNull(CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/deep_lake_betta/all_lit_layer.png")));
+	private static final RenderLayer[] LAYERS = {
+			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/giant_hatchetfish/tittmanns/all_lit_layer.png"),
+			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/giant_hatchetfish/tittmanns/all_unlit_layer.png")
+	};
 
 	public GiantHatchetfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
 		super(entityRenderDispatcher, new GiantHatchetfishModel());

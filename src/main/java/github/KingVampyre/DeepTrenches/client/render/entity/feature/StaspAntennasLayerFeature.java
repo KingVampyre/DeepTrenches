@@ -6,10 +6,7 @@ import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib3.geo.render.built.GeoModel;
 import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
-
-import static github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel.MODEL;
 
 public class StaspAntennasLayerFeature extends SingleRenderLayerFeature<StaspEntity> {
 
@@ -19,13 +16,8 @@ public class StaspAntennasLayerFeature extends SingleRenderLayerFeature<StaspEnt
     private static final RenderLayer BLACK_STASP_ANTENNAS = RenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/black_stasp_antennas.png"));
     private static final RenderLayer STASP_ANTENNAS = RenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/stasp_antennas.png"));
 
-    public StaspAntennasLayerFeature(IGeoRenderer<StaspEntity> renderer) {
-        super(renderer);
-    }
-
-    @Override
-    protected GeoModel getModel(StaspEntity living) {
-        return this.getEntityModel().getModel(MODEL);
+    public StaspAntennasLayerFeature(IGeoRenderer<StaspEntity> renderer, Identifier model) {
+        super(renderer, model);
     }
 
     @Override

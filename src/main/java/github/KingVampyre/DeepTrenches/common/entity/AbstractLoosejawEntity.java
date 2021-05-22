@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Dynamic;
+import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Variant;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTask;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTemptingTask;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.TamableFishFollowOwnerTask;
@@ -40,7 +41,7 @@ import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
 import static net.minecraft.item.Items.COD;
 
-public abstract class AbstractLoosejawEntity extends TamableFishEntity {
+public abstract class AbstractLoosejawEntity extends TamableFishEntity implements Variant {
 
     protected static final ImmutableList<? extends MemoryModuleType<?>> MEMORY_MODULES = ImmutableList.of(ATTACK_TARGET, ATTACK_COOLING_DOWN, NEAREST_PLAYERS, NEAREST_VISIBLE_PLAYER, NEAREST_VISIBLE_TARGETABLE_PLAYER, BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, LOVE_TICKS, LOVING_PLAYER, OWNER, SITTING, TAMED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, HURT_BY, HURT_BY_ENTITY, LOOK_TARGET, PATH, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, TEMPTED, VISIBLE_MOBS, WALK_TARGET);
     protected static final ImmutableList<SensorType<? extends Sensor<? super BettaEntity>>> SENSORS = ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SensorType.NEAREST_PLAYERS, TAMABLE_HURT_BY);
@@ -57,12 +58,20 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity {
     }
 
     @Override
+    public int getVariant() {
+        return this.dataTracker.get(LOOSEJAW_TYPE);
+    }
+
+    @Override
+    public void setVariant(int variant) {
+        this.dataTracker.set(LOOSEJAW_TYPE, variant);
+    }
+
+    @Override
     protected void copyDataToStack(ItemStack stack) {
         super.copyDataToStack(stack);
 
-        CompoundTag compound = stack.getOrCreateTag();
-
-        compound.putInt("LoosejawType", this.getLoosejawType());
+        stack.getOrCreateTag().putInt("Variant", this.getVariant());
     }
 
     @Override
@@ -139,14 +148,6 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity {
         this.setBreedingAge(baby ? -36000 : 0);
     }
 
-    public int getLoosejawType() {
-        return this.dataTracker.get(LOOSEJAW_TYPE);
-    }
-
-    public void setLoosejawType(int loosejawType) {
-        this.dataTracker.set(LOOSEJAW_TYPE, loosejawType);
-    }
-
     public abstract int chooseType();
 
     @Override
@@ -168,21 +169,9 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity {
 
     @Override
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag) {
-        EntityData data = super.initialize(world, difficulty, spawnReason, entityData, entityTag);
+        this.setVariant(this.chooseType());
 
-        if (entityTag != null && entityTag.contains("LoosejawType"))
-            this.setLoosejawType(entityTag.getInt("LoosejawType"));
-
-        else if (entityData instanceof LoosejawData)
-            this.setLoosejawType(((LoosejawData) entityData).type);
-        else {
-            int loosejawType = this.chooseType();
-            this.setLoosejawType(loosejawType);
-
-            return new LoosejawData(loosejawType);
-        }
-
-        return data;
+        return super.initialize(world, difficulty, spawnReason, entityData != null ? entityData : new PassiveEntity.PassiveData(false), entityTag);
     }
 
     @SuppressWarnings("unchecked")
@@ -206,26 +195,14 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity {
     public void readCustomDataFromTag(CompoundTag tag) {
         super.readCustomDataFromTag(tag);
 
-        this.setLoosejawType(tag.getInt("LoosejawType"));
+        this.variantFromTag(tag);
     }
 
     @Override
     public void writeCustomDataToTag(CompoundTag tag) {
         super.writeCustomDataToTag(tag);
 
-        tag.putInt("LoosejawType", this.getLoosejawType());
-    }
-
-    public static class LoosejawData extends PassiveEntity.PassiveData {
-
-        public final int type;
-
-        public LoosejawData(int type) {
-            super(1.0F);
-
-            this.type = type;
-        }
-
+        this.variantToTag(tag);
     }
 
 }

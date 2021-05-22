@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
+import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Variant;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
@@ -16,20 +17,22 @@ import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class BrownBearEntity extends PathAwareEntity implements IAnimatable {
+public class BrownBearEntity extends PathAwareEntity implements IAnimatable, Variant {
 
-    private static final TrackedData<Integer> BROWN_BEAR_TYPE = DataTracker.registerData(BettaEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    private static final TrackedData<Integer> VARIANT = DataTracker.registerData(BrownBearEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     public BrownBearEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public int getBrownBearType() {
-        return this.dataTracker.get(BROWN_BEAR_TYPE);
+    @Override
+    public int getVariant() {
+        return this.dataTracker.get(VARIANT);
     }
 
-    public void setBrownBearType(int brownBearType) {
-        this.dataTracker.set(BROWN_BEAR_TYPE, brownBearType);
+    @Override
+    public void setVariant(int variant) {
+        this.dataTracker.set(VARIANT, variant);
     }
 
     @Override
@@ -46,52 +49,28 @@ public class BrownBearEntity extends PathAwareEntity implements IAnimatable {
     protected void initDataTracker() {
         super.initDataTracker();
 
-        this.dataTracker.startTracking(BROWN_BEAR_TYPE, 0);
+        this.dataTracker.startTracking(VARIANT, 0);
     }
 
     @Override
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag) {
-        EntityData data = super.initialize(world, difficulty, spawnReason, entityData, entityTag);
+        this.setVariant(this.random.nextInt(3));
 
-        if (entityTag != null && entityTag.contains("BrownBearType"))
-            this.setBrownBearType(entityTag.getInt("BrownBearType"));
-
-        else if (entityData instanceof BrownBearData)
-            this.setBrownBearType(((BrownBearData)entityData).type);
-        else {
-            int type = this.random.nextInt(3);
-            this.setBrownBearType(type);
-
-            return new BrownBearData(type);
-        }
-
-        return data;
+        return super.initialize(world, difficulty, spawnReason, entityData != null ? entityData : new PassiveEntity.PassiveData(false), entityTag);
     }
 
     @Override
     public void readCustomDataFromTag(CompoundTag tag) {
         super.readCustomDataFromTag(tag);
 
-        this.setBrownBearType(tag.getInt("BrownBearType"));
+        this.variantFromTag(tag);
     }
 
     @Override
     public void writeCustomDataToTag(CompoundTag tag) {
         super.writeCustomDataToTag(tag);
 
-        tag.putInt("BrownBearType", this.getBrownBearType());
-    }
-
-    public static class BrownBearData extends PassiveEntity.PassiveData {
-
-        public final int type;
-
-        public BrownBearData(int type) {
-            super(1.0F);
-
-            this.type = type;
-        }
-
+        this.variantToTag(tag);
     }
 
 }

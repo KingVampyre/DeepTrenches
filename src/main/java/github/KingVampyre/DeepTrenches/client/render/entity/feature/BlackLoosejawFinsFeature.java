@@ -5,7 +5,6 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.SingleRender
 import github.KingVampyre.DeepTrenches.core.entity.BlackLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib3.geo.render.built.GeoModel;
 import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
 
 public class BlackLoosejawFinsFeature extends SingleRenderLayerFeature<BlackLoosejawEntity> {
@@ -13,22 +12,17 @@ public class BlackLoosejawFinsFeature extends SingleRenderLayerFeature<BlackLoos
     private static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/black_loosejaw.geo.json");
 
     private static final RenderLayer[] RENDER_LAYERS = {
-            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/translucent_layer.png")),
-            CustomRenderLayer.getFinsLayer(new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/translucent_layer.png"))
+            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/black_loosejaw/northern/translucent_layer.png"),
+            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/black_loosejaw/southern/translucent_layer.png")
     };
 
-    public BlackLoosejawFinsFeature(IGeoRenderer<BlackLoosejawEntity> renderer) {
-        super(renderer);
-    }
-
-    @Override
-    protected GeoModel getModel(BlackLoosejawEntity living) {
-        return this.getEntityModel().getModel(MODEL);
+    public BlackLoosejawFinsFeature(IGeoRenderer<BlackLoosejawEntity> renderer, Identifier model) {
+        super(renderer, model);
     }
 
     @Override
     protected RenderLayer getRenderLayer(BlackLoosejawEntity living) {
-        return RENDER_LAYERS[living.getLoosejawType()];
+        return RENDER_LAYERS[living.getVariant()];
     }
 
 }

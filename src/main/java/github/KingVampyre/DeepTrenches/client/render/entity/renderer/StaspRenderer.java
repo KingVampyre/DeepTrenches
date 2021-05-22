@@ -8,13 +8,15 @@ import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
 
+import static github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel.MODEL;
+
 public class StaspRenderer extends NoCullingEntityRenderer<StaspEntity> {
 
 	public StaspRenderer(EntityRenderDispatcher entityRenderDispatcher) {
 		super(entityRenderDispatcher, new StaspModel());
 
 		this.shadowRadius = 0.35F;
-		this.addLayer(new StaspAntennasLayerFeature(this));
+		this.addLayer(new StaspAntennasLayerFeature(this, MODEL));
 	}
 
 	@Override
