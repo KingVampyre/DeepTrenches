@@ -6,7 +6,7 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class BlackDragonfishModel extends AnimatedGeoModel<BlackDragonfishEntity> {
 
-    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/bearded_seadevil.geo.json");
+    public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/black_dragonfish.geo.json");
 
     private static final Identifier[] TEXTURES = {
             new Identifier("deep_trenches:textures/entity/black_dragonfish/all_lit.png"),
