@@ -106,7 +106,7 @@ public class EntityTypes {
 
 	public static final EntityType<GiantHatchetfishEntity> GIANT_HATCHETFISH = FabricEntityTypeBuilder
 			.create(SpawnGroup.WATER_CREATURE, GiantHatchetfishEntity::new)
-			.dimensions(EntityDimensions.fixed(0.2F, 0.4F))
+			.dimensions(EntityDimensions.fixed(0.6F, 0.4F))
 			.build();
 
 	public static final EntityType<GiantSeedShrimpEntity> GIANT_SEED_SHRIMP = FabricEntityTypeBuilder

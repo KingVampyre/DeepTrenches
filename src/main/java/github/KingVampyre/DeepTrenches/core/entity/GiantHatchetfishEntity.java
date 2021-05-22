@@ -8,6 +8,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 
 import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_150;
@@ -31,8 +32,7 @@ public class GiantHatchetfishEntity extends HatchetfishEntity {
 
 	@Override
 	protected SoundEvent getFlopSound() {
-		// TODO Auto-generated method stub
-		return null;
+		return SoundEvents.ENTITY_SALMON_FLOP;
 	}
 
 	@Override
