@@ -15,8 +15,8 @@ import static github.KingVampyre.DeepTrenches.client.render.entity.model.GiantHa
 public class GiantHatchetfishRenderer extends NoCullingEntityRenderer<GiantHatchetfishEntity> {
 
 	private static final RenderLayer[] LAYERS = {
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/giant_hatchetfish/tittmanns/all_lit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/giant_hatchetfish/tittmanns/all_unlit_layer.png")
+			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/giant_hatchetfish/all_lit_layer.png"),
+			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/giant_hatchetfish/all_unlit_layer.png")
 	};
 
 	public GiantHatchetfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {

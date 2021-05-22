@@ -9,8 +9,8 @@ public class GiantHatchetfishModel extends AnimatedGeoModel<GiantHatchetfishEnti
     public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/giant_hatchetfish.geo.json");
 
     private static final Identifier[] TEXTURES = {
-            new Identifier("deep_trenches:textures/entity/giant_hatchetfish/tittmanns/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/giant_hatchetfish/tittmanns/all_unlit.png")
+            new Identifier("deep_trenches:textures/entity/giant_hatchetfish/all_lit.png"),
+            new Identifier("deep_trenches:textures/entity/giant_hatchetfish/all_unlit.png")
     };
 
     @Override
