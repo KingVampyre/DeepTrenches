@@ -22,7 +22,7 @@ public class StaspRenderer extends NoCullingEntityRenderer<StaspEntity> {
 	protected void applyRotations(StaspEntity entityLiving, MatrixStack matrixStackIn, float ageInTicks, float rotationYaw, float partialTicks) {
 		super.applyRotations(entityLiving, matrixStackIn, ageInTicks, rotationYaw, partialTicks);
 
-		matrixStackIn.translate(-0.1F, -0.1F, -0.2F);
+		matrixStackIn.translate(-0.1F, -1.0F, -0.2F);
 	}
 
 }
