@@ -3,7 +3,6 @@ package github.KingVampyre.DeepTrenches.core.entity;
 import github.KingVampyre.DeepTrenches.common.entity.FlyingHangBugEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.control.AngerLookControl;
 import github.KingVampyre.DeepTrenches.common.entity.ai.goal.AngryAttackGoal;
-import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Chargable;
 import github.KingVampyre.DeepTrenches.core.entity.ai.control.StaspFlightMoveControl;
 import github.KingVampyre.DeepTrenches.core.entity.ai.goal.*;
 import github.KingVampyre.DeepTrenches.core.entity.ai.pathing.StaspNavigation;
@@ -13,13 +12,8 @@ import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.ai.pathing.PathNodeType;
-import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.data.TrackedData;
-import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.mob.Angerable;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtHelper;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.IntRange;
@@ -27,19 +21,13 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 
-import java.util.UUID;
-
 import static net.minecraft.entity.attribute.EntityAttributes.GENERIC_FLYING_SPEED;
 
-public class StaspEntity extends FlyingHangBugEntity implements Angerable, Chargable {
-
-	private static final TrackedData<Integer> ANGER = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.INTEGER);
-	private static final TrackedData<Boolean> CHARGING = DataTracker.registerData(StaspEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+public class StaspEntity extends FlyingHangBugEntity {
 
 	private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
 
 	private BlockPos nestPos;
-	private UUID targetUuid;
 
 	public StaspEntity(EntityType<? extends FlyingHangBugEntity> entityType, World world) {
 		super(entityType, world);
@@ -52,6 +40,11 @@ public class StaspEntity extends FlyingHangBugEntity implements Angerable, Charg
 		this.setPathfindingPenalty(PathNodeType.FENCE, -1.0F);
 		this.setPathfindingPenalty(PathNodeType.WATER, -1.0F);
 		this.setPathfindingPenalty(PathNodeType.WATER_BORDER, 16.0F);
+	}
+
+	@Override
+	public void chooseRandomAngerTime() {
+		this.setAngerTime(ANGER_TIME_RANGE.choose(this.random));
 	}
 
 	@Override
@@ -73,41 +66,6 @@ public class StaspEntity extends FlyingHangBugEntity implements Angerable, Charg
 	}
 
 	@Override
-	public int getAngerTime() {
-		return this.dataTracker.get(ANGER);
-	}
-
-	@Override
-	public void setAngerTime(int ticks) {
-		this.dataTracker.set(ANGER, ticks);
-	}
-
-	@Override
-	public UUID getAngryAt() {
-		return this.targetUuid;
-	}
-
-	@Override
-	public void setAngryAt(UUID uuid) {
-		this.targetUuid = uuid;
-	}
-
-	@Override
-	public void chooseRandomAngerTime() {
-		this.setAngerTime(ANGER_TIME_RANGE.choose(this.random));
-	}
-
-	@Override
-	public boolean isCharging() {
-		return this.dataTracker.get(CHARGING);
-	}
-
-	@Override
-	public void setCharging(boolean charging) {
-		this.dataTracker.set(CHARGING, charging);
-	}
-
-	@Override
 	protected void initGoals() {
 		Box box = new Box(-5, -15, -5, 5, 15,5);
 
@@ -126,20 +84,8 @@ public class StaspEntity extends FlyingHangBugEntity implements Angerable, Charg
 	}
 
 	@Override
-	protected void initDataTracker() {
-		super.initDataTracker();
-
-		this.dataTracker.startTracking(ANGER, 0);
-		this.dataTracker.startTracking(CHARGING, false);
-	}
-
-	@Override
 	public void readCustomDataFromTag(CompoundTag tag) {
 		super.readCustomDataFromTag(tag);
-
-		ServerWorld server = (ServerWorld) this.world;
-
-		this.angerFromTag(server, tag);
 
 		if (tag.contains("NestPos"))
 			this.nestPos = NbtHelper.toBlockPos(tag.getCompound("NestPos"));
@@ -160,8 +106,6 @@ public class StaspEntity extends FlyingHangBugEntity implements Angerable, Charg
 	@Override
 	public void writeCustomDataToTag(CompoundTag tag) {
 		super.writeCustomDataToTag(tag);
-
-		this.angerToTag(tag);
 
 		if (this.hasNest())
 			tag.put("NestPos", NbtHelper.fromBlockPos(this.nestPos));

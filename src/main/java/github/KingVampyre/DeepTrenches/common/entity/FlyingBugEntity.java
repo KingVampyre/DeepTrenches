@@ -2,7 +2,6 @@ package github.KingVampyre.DeepTrenches.common.entity;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
@@ -12,9 +11,9 @@ import software.bernie.geckolib3.core.builder.AnimationBuilder;
 import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
-public class FlyingBugEntity extends BugEntity {
+public class FlyingBugEntity extends AngryBugEntity {
 
-    public FlyingBugEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+    public FlyingBugEntity(EntityType<? extends AngryBugEntity> entityType, World world) {
         super(entityType, world);
     }
 

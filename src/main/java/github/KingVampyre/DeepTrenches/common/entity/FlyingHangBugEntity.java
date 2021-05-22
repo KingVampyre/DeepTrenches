@@ -5,6 +5,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -30,6 +31,15 @@ public class FlyingHangBugEntity extends FlyingBugEntity {
     }
 
     @Override
+    protected <E extends IAnimatable> PlayState getMovementAnimation(AnimationEvent<E> event) {
+
+        if(this.getIsHanging())
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("on_side"));
+
+        return super.getMovementAnimation(event);
+    }
+
+    @Override
     public boolean canAvoidTraps() {
         return true;
     }
@@ -52,15 +62,6 @@ public class FlyingHangBugEntity extends FlyingBugEntity {
     }
 
     @Override
-    protected <E extends IAnimatable> PlayState getMovementAnimation(AnimationEvent<E> event) {
-
-        if(this.getIsHanging())
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("on_side"));
-
-        return super.getMovementAnimation(event);
-    }
-
-    @Override
     protected void initDataTracker() {
         super.initDataTracker();
 
@@ -73,6 +74,20 @@ public class FlyingHangBugEntity extends FlyingBugEntity {
 
         if (this.getIsHanging())
             this.setVelocity(ZERO);
+    }
+
+    @Override
+    public void readCustomDataFromTag(CompoundTag tag) {
+        super.readCustomDataFromTag(tag);
+
+        this.setIsHanging(tag.getBoolean("Hanging"));
+    }
+
+    @Override
+    public void writeCustomDataToTag(CompoundTag tag) {
+        super.writeCustomDataToTag(tag);
+
+        tag.putBoolean("Hanging", this.getIsHanging());
     }
 
 }
