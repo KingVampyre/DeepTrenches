@@ -45,9 +45,9 @@ public class ModEntityAttributes {
         LURE_MIN_LIT = createClamped("deep_trenches:lure_min_lit", "attribute.lure.min_lit", 10, 1, 1000);
         LURE_MIN_UNLIT = createClamped("deep_trenches:lure_min_unlit", "attribute.lure.min_unlit", 10, 1, 1000);
         PREY_DETECTION = createClamped("deep_trenches:prey_detection", "attribute.prey_detection", 5, 1, 16);
-        SUBORBITAL_DELAY = createClamped("deep_trenches:suborbital_delay", "loosejaw.suborbital.delay", 100, 1, 1000);
-        SUBORBITAL_MAX_LIT = createClamped("deep_trenches:suborbital_max_lit", "loosejaw.suborbital.maxLit", 1, 1, 200);
-        SUBORBITAL_MIN_LIT = createClamped("deep_trenches:suborbital_min_lit", "loosejaw.suborbital.minLit", 1, 1, 100);
+        SUBORBITAL_DELAY = createClamped("deep_trenches:suborbital_delay", "attribute.suborbital.delay", 100, 1, 1000);
+        SUBORBITAL_MAX_LIT = createClamped("deep_trenches:suborbital_max_lit", "attribute.suborbital.max_lit", 1, 1, 200);
+        SUBORBITAL_MIN_LIT = createClamped("deep_trenches:suborbital_min_lit", "attribute.suborbital.min_lit", 1, 1, 100);
     }
 
 }
