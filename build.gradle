@@ -36,7 +36,7 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 
 	modImplementation "github.louwind.features-api:Features-API:${project.features_version}"
-	modImplementation "github.Louwind.reload-api:Reload:${project.reload_version}"
+	modImplementation "github.louwind.reload-api:Reload:${project.reload_version}"
 
 	modImplementation "io.github.onyxstudios:Cardinal-Components-API:${project.cardinal_components_version}"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
