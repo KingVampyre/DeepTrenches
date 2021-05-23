@@ -25,8 +25,6 @@ public abstract class FacingExceptDownPlantBlock extends PlantBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        super.appendProperties(builder);
-
         builder.add(FACING_EXCEPT_DOWN);
     }
 

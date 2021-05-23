@@ -18,8 +18,9 @@ import net.minecraft.world.WorldView;
 import java.util.Random;
 
 import static net.minecraft.block.Blocks.*;
+import static net.minecraft.fluid.Fluids.EMPTY;
+import static net.minecraft.fluid.Fluids.FLOWING_WATER;
 import static net.minecraft.fluid.Fluids.WATER;
-import static net.minecraft.fluid.Fluids.*;
 import static net.minecraft.state.property.Properties.WATERLOGGED;
 
 public class FungusBlock extends StorceanSaplingBlock {
