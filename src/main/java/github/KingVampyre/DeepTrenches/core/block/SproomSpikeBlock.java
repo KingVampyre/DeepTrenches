@@ -37,6 +37,8 @@ public class SproomSpikeBlock extends PlantBlock {
 
 	public SproomSpikeBlock(Settings settings) {
 		super(settings);
+
+		this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0).with(FACING, NORTH).with(BLOCK_HALF, TOP));
 	}
 
 	@Override
@@ -98,16 +100,19 @@ public class SproomSpikeBlock extends PlantBlock {
 
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
-		BlockState state = super.getPlacementState(ctx).with(AGE, 0).with(FACING, NORTH).with(BLOCK_HALF, TOP);
+		BlockState state = super.getPlacementState(ctx);
 
 		BlockPos pos = ctx.getBlockPos();
 		World world = ctx.getWorld();
 
-		for (Direction direction : ctx.getPlacementDirections()) {
-			state = state.with(FACING, direction.getOpposite());
+		if(state != null) {
+			for (Direction direction : ctx.getPlacementDirections()) {
+				state = state.with(FACING, direction.getOpposite());
 
-			if (state.canPlaceAt(world, pos))
-				return state;
+				if (state.canPlaceAt(world, pos))
+					return state;
+			}
+
 		}
 
 		return null;

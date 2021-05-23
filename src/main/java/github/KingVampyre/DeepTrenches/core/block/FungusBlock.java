@@ -26,6 +26,8 @@ public class FungusBlock extends StorceanSaplingBlock {
 
 	public FungusBlock(FeaturesSaplingGenerator generator, AbstractBlock.Settings settings) {
 		super(generator, settings);
+
+		this.setDefaultState(this.stateManager.getDefaultState().with(STAGE, 0).with(WATERLOGGED, false));
 	}
 
 	@Override
