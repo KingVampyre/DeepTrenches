@@ -1,0 +1,53 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.giant_seed_shrimp",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "root",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-2.5, 21.5, 0], "size": [5, 5, 5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Antennas",
+					"parent": "Body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-2.5, 24, -6], "size": [5, 0, 6], "uv": [12, 16]}
+					]
+				},
+				{
+					"name": "Leg_side_1",
+					"parent": "Body",
+					"pivot": [2, 23, 1],
+					"cubes": [
+						{"origin": [2, 23, -2], "size": [5, 0, 5], "uv": [0, 17]}
+					]
+				},
+				{
+					"name": "Leg_side_2",
+					"parent": "Body",
+					"pivot": [-2, 23, 1],
+					"cubes": [
+						{"origin": [-7, 23, -2], "size": [5, 0, 5], "uv": [0, 17], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}
