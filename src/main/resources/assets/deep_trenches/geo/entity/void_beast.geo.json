@@ -1,0 +1,107 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.void_beast",
+				"texture_width": 100,
+				"texture_height": 64,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "root",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-2, 22, 0], "size": [4, 4, 16], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Shell",
+					"parent": "Body",
+					"pivot": [0, 27, 10],
+					"cubes": [
+						{"origin": [-4, 23, 5], "size": [8, 8, 10], "uv": [41, 0]}
+					]
+				},
+				{
+					"name": "Leg_1",
+					"parent": "Body",
+					"pivot": [-2, 23, 6],
+					"rotation": [0, 0, -62.25],
+					"cubes": [
+						{"origin": [-3, -9, 5], "size": [2, 32, 2], "uv": [53, 21]}
+					]
+				},
+				{
+					"name": "Leg_2",
+					"parent": "Body",
+					"pivot": [2, 23, 6],
+					"rotation": [0, 0, 62.25],
+					"cubes": [
+						{"origin": [1, -9, 5], "size": [2, 32, 2], "uv": [53, 21]}
+					]
+				},
+				{
+					"name": "Tail",
+					"parent": "Body",
+					"pivot": [0, 24.5, 15],
+					"rotation": [31.3, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, 23, 15], "size": [3, 3, 23], "uv": [0, 22]}
+					]
+				},
+				{
+					"name": "Upper_jaw",
+					"parent": "Body",
+					"pivot": [0, 25.5, 0],
+					"rotation": [-10.43, 0, 0],
+					"cubes": [
+						{"origin": [-2.5, 23.5, -5], "size": [5, 4, 6], "uv": [0, 21]}
+					]
+				},
+				{
+					"name": "Upper_jaw_floor",
+					"parent": "Upper_jaw",
+					"pivot": [0, 27.49, 0],
+					"cubes": [
+						{"origin": [-2.5, 26.46, -5], "size": [5, 0, 6], "uv": [0, 49]}
+					]
+				},
+				{
+					"name": "Lower_jaw",
+					"parent": "Body",
+					"pivot": [0, 23, 0],
+					"rotation": [13.04, 0, 0],
+					"cubes": [
+						{"origin": [-2.5, 22, -5], "size": [5, 2, 6], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "Tongue_1",
+					"parent": "Body",
+					"pivot": [0, 24, 8],
+					"cubes": [
+						{"origin": [-0.5, 23.5, 0], "size": [1, 1, 8], "uv": [30, 21]}
+					]
+				},
+				{
+					"name": "Tongue_2",
+					"parent": "Tongue_1",
+					"pivot": [0, 24, 0],
+					"rotation": [20.87, -13.04, 0],
+					"cubes": [
+						{"origin": [-0.5, 23.5, -8], "size": [1, 1, 8], "uv": [26, 0]}
+					]
+				}
+			]
+		}
+	]
+}

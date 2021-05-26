@@ -1,0 +1,71 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.bottlefly_maggot",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "root",
+					"pivot": [0, 1.7, -2],
+					"cubes": [
+						{"origin": [-1.5, 0.2, -5], "size": [3, 3, 4], "uv": [0, 5]}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "Body",
+					"pivot": [0, 1.2, -5],
+					"cubes": [
+						{"origin": [-1, 0.2, -7], "size": [2, 2, 3], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Mouth_hook_1",
+					"parent": "Head",
+					"pivot": [-0.9, 1, -6.6],
+					"rotation": [31.3, 0, 0],
+					"cubes": [
+						{"origin": [-0.9, 0, -7.1], "size": [0, 1, 1], "uv": [9, 0]}
+					]
+				},
+				{
+					"name": "Mouth_hook_2",
+					"parent": "Head",
+					"pivot": [0.9, 1, -6.6],
+					"rotation": [31.3, 0, 0],
+					"cubes": [
+						{"origin": [0.9, 0, -7.1], "size": [0, 1, 1], "uv": [12, 0]}
+					]
+				},
+				{
+					"name": "Rear_part",
+					"parent": "Body",
+					"pivot": [0, 2.2, -2],
+					"cubes": [
+						{"origin": [-2, 0.2, -2], "size": [4, 4, 8], "uv": [0, 13]}
+					]
+				},
+				{
+					"name": "Rear_protudences",
+					"parent": "Rear_part",
+					"pivot": [0, 2.2, 6],
+					"cubes": [
+						{"origin": [-2, 0.2, 6], "size": [4, 4, 1], "uv": [0, 26]}
+					]
+				}
+			]
+		}
+	]
+}
