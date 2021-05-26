@@ -10,6 +10,7 @@ import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.fluid.FlowableFluid;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.SignType;
 import net.minecraft.util.registry.Registry;
 
@@ -1501,7 +1502,8 @@ public class ModBlocks {
 	}
 
 	protected static Block createAcuaticFungus(String id, FeaturesSaplingGenerator saplingGenerator) {
-		return register(id, new AcuaticFungusBlock(saplingGenerator, Settings.of(FUNGUS).strength(0, 0)));
+		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
+		return register(id, new AcuaticFungusBlock(saplingGenerator, Settings.of(FUNGUS).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
 	}
 
 	protected static Block createBioluminescentBlock(String id) {
@@ -1517,7 +1519,8 @@ public class ModBlocks {
 	}
 
 	protected static Block createCap(String id) {
-		return register(id, new CapBlock(Settings.of(FUNGUS).strength(0.2F, 0.2F)));
+		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
+		return register(id, new CapBlock(Settings.of(FUNGUS).strength(0.2F, 0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
 	}
 
 	protected static Block createCopy(String id, Block block) {

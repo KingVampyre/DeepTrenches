@@ -22,7 +22,7 @@ public class CapBlock extends LeavesBlock {
 	public CapBlock(Settings settings) {
 		super(settings);
 
-		this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false));
+		this.setDefaultState(this.stateManager.getDefaultState().with(DISTANCE, 7).with(PERSISTENT, false).with(WATERLOGGED, false));
 	}
 
 	@Override
