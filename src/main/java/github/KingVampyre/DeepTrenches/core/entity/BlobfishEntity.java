@@ -14,7 +14,7 @@ public class BlobfishEntity extends SkittishFishEntity {
     }
 
     @Override
-    protected ItemStack getFishBucketItem() {
+    public ItemStack getBucketItem() {
         return null;
     }
 

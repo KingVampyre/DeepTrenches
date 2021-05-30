@@ -21,7 +21,7 @@ public class GiantHatchetfishEntity extends HatchetfishEntity {
 	}
 
 	@Override
-	protected ItemStack getFishBucketItem() {
+	public ItemStack getBucketItem() {
 		return new ItemStack(ModItems.GIANT_HATCHETFISH_BUCKET);
 	}
 

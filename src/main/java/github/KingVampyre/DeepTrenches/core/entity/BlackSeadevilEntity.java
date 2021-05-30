@@ -14,7 +14,7 @@ public class BlackSeadevilEntity extends LuminousFishEntity {
     }
 
     @Override
-    protected ItemStack getFishBucketItem() {
+    public ItemStack getBucketItem() {
         return null;
     }
 

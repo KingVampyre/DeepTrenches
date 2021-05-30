@@ -5,7 +5,7 @@ import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Tamable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.TargetFinder;
+import net.minecraft.entity.ai.FuzzyTargeting;
 import net.minecraft.entity.ai.brain.Brain;
 import net.minecraft.entity.ai.brain.EntityLookTarget;
 import net.minecraft.entity.ai.brain.WalkTarget;
@@ -129,7 +129,7 @@ public class FollowOwnerTask<T extends PathAwareEntity & Tamable> extends Task<T
         BlockPos pos = owner.getBlockPos();
         Vec3d vec3d = Vec3d.ofCenter(pos);
 
-        return TargetFinder.findTargetTowards(entity, 3, 1, vec3d);
+        return FuzzyTargeting.findTo(entity, 3, 1, vec3d);
     }
 
     protected void tryTeleport(ServerWorld world, T entity, LivingEntity owner) {

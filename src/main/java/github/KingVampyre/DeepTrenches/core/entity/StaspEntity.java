@@ -10,17 +10,18 @@ import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.ai.pathing.PathNodeType;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtHelper;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.IntRange;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 public class StaspEntity extends FlyingHangBugEntity {
 
-	private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
+	private static final UniformIntProvider ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
 
 	private BlockPos nestPos;
 
@@ -39,7 +40,7 @@ public class StaspEntity extends FlyingHangBugEntity {
 
 	@Override
 	public void chooseRandomAngerTime() {
-		this.setAngerTime(ANGER_TIME_RANGE.choose(this.random));
+		this.setAngerTime(ANGER_TIME_RANGE.get(this.random));
 	}
 
 	@Override
@@ -53,19 +54,28 @@ public class StaspEntity extends FlyingHangBugEntity {
 		return navigation;
 	}
 
+	@Nullable
 	@Override
-	public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag) {
+	public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
 		this.setVariant(this.random.nextInt(4));
 
-		return super.initialize(world, difficulty, spawnReason, entityData, entityTag);
+		return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
 	}
 
 	@Override
-	public void readCustomDataFromTag(CompoundTag tag) {
-		super.readCustomDataFromTag(tag);
+	public void readCustomDataFromNbt(NbtCompound nbt) {
+		super.readCustomDataFromNbt(nbt);
 
-		if (tag.contains("NestPos"))
-			this.nestPos = NbtHelper.toBlockPos(tag.getCompound("NestPos"));
+		if (nbt.contains("NestPos"))
+			this.nestPos = NbtHelper.toBlockPos(nbt.getCompound("NestPos"));
+	}
+
+	@Override
+	public void writeCustomDataToNbt(NbtCompound nbt) {
+		super.writeCustomDataToNbt(nbt);
+
+		if (nbt.contains("NestPos"))
+			this.nestPos = NbtHelper.toBlockPos(nbt.getCompound("NestPos"));
 	}
 
 	public boolean hasNest() {
@@ -78,14 +88,6 @@ public class StaspEntity extends FlyingHangBugEntity {
 
 	public void setNestPos(BlockPos nestPos) {
 		this.nestPos = nestPos;
-	}
-
-	@Override
-	public void writeCustomDataToTag(CompoundTag tag) {
-		super.writeCustomDataToTag(tag);
-
-		if (this.hasNest())
-			tag.put("NestPos", NbtHelper.fromBlockPos(this.nestPos));
 	}
 
 }

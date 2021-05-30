@@ -2,13 +2,11 @@
   "required": true,
   "minVersion": "0.8",
   "package": "github.KingVampyre.DeepTrenches.client.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "MixinSignBlockEntityRenderer",
     "MixinTexturedRenderLayers"
   ],
   "client": [
-    "MixinClientPlayNetworkHandler",
     "MixinInGameHud"
   ],
   "injectors": {

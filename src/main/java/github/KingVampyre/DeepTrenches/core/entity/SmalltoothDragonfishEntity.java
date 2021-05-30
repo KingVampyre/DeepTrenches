@@ -11,7 +11,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.IntRange;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 
 import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_260;
@@ -22,7 +22,7 @@ import static github.KingVampyre.DeepTrenches.core.init.ModItems.SMALLTOOTH_DRAG
 
 public class SmalltoothDragonfishEntity extends AbstractLoosejawEntity {
 
-    protected static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(35, 40);
+    protected static final UniformIntProvider ANGER_TIME_RANGE = Durations.betweenSeconds(35, 40);
 
     public SmalltoothDragonfishEntity(EntityType<? extends SmalltoothDragonfishEntity> type, World world) {
         super(type, world);
@@ -47,12 +47,12 @@ public class SmalltoothDragonfishEntity extends AbstractLoosejawEntity {
     }
 
     @Override
-    protected IntRange getAngerTimeRange() {
+    protected UniformIntProvider getAngerTimeRange() {
         return ANGER_TIME_RANGE;
     }
 
     @Override
-    protected ItemStack getFishBucketItem() {
+    public ItemStack getBucketItem() {
         return new ItemStack(SMALLTOOTH_DRAGONFISH_BUCKET);
     }
 

@@ -21,25 +21,18 @@
 		],
 		"client": [
 			"github.KingVampyre.DeepTrenches.client.DeepTrenchesClient"
-		],
-		"cardinal-components-entity": [
-			"github.KingVampyre.DeepTrenches.core.util.ComponentInitializer"
 		]
 	},
 	"accessWidener" : "deep_trenches.accesswidener",
-	"custom": {
-        "cardinal-components": [
-			"deep_trenches:pollen"
-		]
-    },
 	"mixins": [
 		"deep_trenches.client.mixins.json",
 		"deep_trenches.core.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.7.4",
+		"fabricloader": ">=0.11.3",
 		"fabric": "*",
-		"minecraft": "1.16.x"
+		"minecraft": "1.17.x",
+		"java": ">=16"
 	},
 	"suggests": {
 		"flamingo": "*"

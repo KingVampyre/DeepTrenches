@@ -5,7 +5,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -45,11 +45,6 @@ public class FlyingHangBugEntity extends FlyingBugEntity {
     }
 
     @Override
-    protected boolean canClimb() {
-        return false;
-    }
-
-    @Override
     public boolean damage(DamageSource source, float amount) {
 
         if (this.isInvulnerableTo(source))
@@ -77,17 +72,17 @@ public class FlyingHangBugEntity extends FlyingBugEntity {
     }
 
     @Override
-    public void readCustomDataFromTag(CompoundTag tag) {
-        super.readCustomDataFromTag(tag);
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
 
-        this.setIsHanging(tag.getBoolean("Hanging"));
+        this.setIsHanging(nbt.getBoolean("Hanging"));
     }
 
     @Override
-    public void writeCustomDataToTag(CompoundTag tag) {
-        super.writeCustomDataToTag(tag);
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
 
-        tag.putBoolean("Hanging", this.getIsHanging());
+        nbt.putBoolean("Hanging", this.getIsHanging());
     }
 
 }

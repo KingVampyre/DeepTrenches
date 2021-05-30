@@ -7,8 +7,7 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.Angerable;
 import net.minecraft.entity.mob.PathAwareEntity;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.server.world.ServerWorld;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.World;
 
 import java.util.UUID;
@@ -68,17 +67,17 @@ public abstract class AngryBugEntity extends BugEntity implements Angerable, Cha
     }
 
     @Override
-    public void readCustomDataFromTag(CompoundTag tag) {
-        super.readCustomDataFromTag(tag);
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
 
-        this.angerFromTag((ServerWorld) this.world, tag);
+        this.readAngerFromNbt(this.world, nbt);
     }
 
     @Override
-    public void writeCustomDataToTag(CompoundTag tag) {
-        super.writeCustomDataToTag(tag);
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
 
-        this.angerToTag(tag);
+        this.writeAngerToNbt(nbt);
     }
 
 }

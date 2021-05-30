@@ -10,6 +10,7 @@ import net.minecraft.block.FluidBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
@@ -61,7 +62,7 @@ public abstract class BrineFluid extends AbstractWaterFluid implements StatusEff
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModBlocks.BRINE.getDefaultState().with(FluidBlock.LEVEL, method_15741(state));
+        return ModBlocks.BRINE.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
     }
 
     public static class Flowing extends BrineFluid {

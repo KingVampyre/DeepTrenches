@@ -4,7 +4,6 @@ import com.mojang.serialization.Codec;
 import github.KingVampyre.DeepTrenches.core.mixin.InvokerMemoryModuleType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.brain.MemoryModuleType;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.registry.Registry;
 
 import java.util.Optional;
@@ -27,9 +26,6 @@ public class MemoryModuleTypes {
     public static final MemoryModuleType<UUID> OWNER;
     public static final MemoryModuleType<Boolean> SITTING;
     public static final MemoryModuleType<Boolean> TAMED;
-    public static final MemoryModuleType<Integer> TEMPTATION_COOLDOWN_TICKS;
-    public static final MemoryModuleType<Boolean> TEMPTED;
-    public static final MemoryModuleType<PlayerEntity> TEMPTING_PLAYER;
 
     private static <U> MemoryModuleType<U> createMemoryModule(String id, Codec<U> codec) {
         return Registry.register(MEMORY_MODULE_TYPE, id, InvokerMemoryModuleType.create(Optional.of(codec)));
@@ -50,9 +46,6 @@ public class MemoryModuleTypes {
         OWNER = createMemoryModule("deep_trenches:owner", CODEC);
         SITTING = createMemoryModule("deep_trenches:sitting", BOOL);
         TAMED = createMemoryModule("deep_trenches:tamed", BOOL);
-        TEMPTATION_COOLDOWN_TICKS = createMemoryModule("deep_trenches:temptation_cooldown_ticks", INT);
-        TEMPTED = createMemoryModule("deep_trenches:tempted", BOOL);
-        TEMPTING_PLAYER = createMemoryModule("deep_trenches:tempting_player");
     }
 
 }

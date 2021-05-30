@@ -5,9 +5,9 @@ import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.Angerable;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.IntRange;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 
 import java.util.UUID;
@@ -42,7 +42,7 @@ public abstract class AngerableFishEntity extends NourishFishEntity implements A
         this.targetUuid = uuid;
     }
 
-    protected abstract IntRange getAngerTimeRange();
+    protected abstract UniformIntProvider getAngerTimeRange();
 
     protected boolean isAngerToPlayersPermanent() {
         return false;
@@ -50,9 +50,9 @@ public abstract class AngerableFishEntity extends NourishFishEntity implements A
 
     @Override
     public void chooseRandomAngerTime() {
-        IntRange range = this.getAngerTimeRange();
+        UniformIntProvider range = this.getAngerTimeRange();
 
-        this.setAngerTime(range.choose(this.random));
+        this.setAngerTime(range.get(this.random));
     }
 
     @Override
@@ -75,18 +75,17 @@ public abstract class AngerableFishEntity extends NourishFishEntity implements A
     }
 
     @Override
-    public void readCustomDataFromTag(CompoundTag tag) {
-        super.readCustomDataFromTag(tag);
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
 
-        ServerWorld server = (ServerWorld) this.world;
-        this.angerFromTag(server, tag);
+        this.readAngerFromNbt(this.world, nbt);
     }
 
     @Override
-    public void writeCustomDataToTag(CompoundTag tag) {
-        super.writeCustomDataToTag(tag);
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
 
-        this.angerToTag(tag);
+        this.writeAngerToNbt(nbt);
     }
 
 }

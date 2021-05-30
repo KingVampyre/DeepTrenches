@@ -3,7 +3,6 @@ package github.KingVampyre.DeepTrenches.core.entity;
 import com.google.common.collect.ImmutableList;
 import github.KingVampyre.DeepTrenches.common.entity.AbstractBettaEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.LightState;
-import github.KingVampyre.DeepTrenches.core.init.LightStates;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.brain.Brain;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -36,14 +35,14 @@ public class DeepLakeBettaEntity extends AbstractBettaEntity {
     }
 
     @Override
-    protected ItemStack getFishBucketItem() {
+    public ItemStack getBucketItem() {
         return new ItemStack(DEEP_LAKE_BETTA_BUCKET);
     }
 
     @Override
     protected Brain.Profile<?> createBrainProfile() {
         return Brain.createProfile(
-                ImmutableList.of(OWNER, SITTING, TAMED, LOVE_TICKS, LOVING_PLAYER, BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, HURT_BY, HURT_BY_ENTITY, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, TEMPTED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, LOOK_TARGET, PATH, VISIBLE_MOBS, WALK_TARGET),
+                ImmutableList.of(OWNER, SITTING, TAMED, LOVE_TICKS, LOVING_PLAYER, BREEDING_AGE, FORCED_AGE, HAPPY_TICKS_REMAINING, HURT_BY, HURT_BY_ENTITY, TEMPTATION_COOLDOWN_TICKS, TEMPTING_PLAYER, IS_TEMPTED, BREEDING_TARGET, CANT_REACH_WALK_TARGET_SINCE, LOOK_TARGET, PATH, VISIBLE_MOBS, WALK_TARGET),
                 ImmutableList.of(COD_TEMPTING, NEAREST_LIVING_ENTITIES, SKITTISH_HURT_BY));
     }
 

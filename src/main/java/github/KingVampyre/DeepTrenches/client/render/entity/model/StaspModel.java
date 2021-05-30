@@ -1,11 +1,8 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.model;
 
-import github.KingVampyre.DeepTrenches.core.component.StaspPollenComponent;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
-
-import static github.KingVampyre.DeepTrenches.core.init.Components.POLLEN;
 
 public class StaspModel extends AnimatedGeoModel<StaspEntity> {
 
@@ -65,13 +62,17 @@ public class StaspModel extends AnimatedGeoModel<StaspEntity> {
 
     @Override
     public Identifier getTextureLocation(StaspEntity object) {
+        /*
         StaspPollenComponent pollen = (StaspPollenComponent) POLLEN.get(object);
-        int type = object.getVariant();
 
         if(object.hasAngerTime())
             return pollen.hasAqueanSap() ? ANGRY_WITH_AQUEAN_SAP[type] : pollen.hasPollen() ? ANGRY_WITH_POLLEN[type] : ANGRY_TEXTURES[type];
 
         return pollen.hasAqueanSap() ? WITH_AQUEAN_SAP[type] : pollen.hasPollen() ? WITH_POLLEN[type] : TEXTURES[type];
+        */
+        int type = object.getVariant();
+
+        return TEXTURES[type];
     }
 
 }

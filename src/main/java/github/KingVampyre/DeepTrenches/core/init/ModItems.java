@@ -6,9 +6,11 @@ import github.KingVampyre.DeepTrenches.common.item.TagSpawnEggItem;
 import github.KingVampyre.DeepTrenches.core.item.AdaiggerItem;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.*;
 import net.minecraft.item.Item.Settings;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.registry.Registry;
 
@@ -251,11 +253,11 @@ public class ModItems {
 	}
 
 	protected static Item createFishBucket(String id, EntityType<?> type) {
-		return register(id, new FishBucketItem(type, WATER, new Item.Settings().maxCount(1).group(MISC)));
+		return register(id, new EntityBucketItem(type, WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1).group(MISC)));
 	}
 
 	protected static Item createFishBucket(String id, EntityType<?> type, Tag<EntityType<?>> tag) {
-		return register(id, new TagFishBucketItem(type, tag, WATER, new Item.Settings().maxCount(1).group(MISC)));
+		return register(id, new TagFishBucketItem(type, tag, WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1).group(MISC)));
 	}
 
 	protected static Item createFood(String id, FoodComponent food) {
@@ -278,11 +280,11 @@ public class ModItems {
 		register(id, new SignItem(new Settings().maxCount(16).group(WOODS), standingBlock, block));
 	}
 
-	protected static Item createSpawnEgg(String id, EntityType<?> type, int primaryColor, int secondaryColor) {
+	protected static Item createSpawnEgg(String id, EntityType<? extends MobEntity> type, int primaryColor, int secondaryColor) {
 		return register(id, new SpawnEggItem(type, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(MISC)));
 	}
 
-	protected static Item createSpawnEgg(String id, EntityType<?> type, Tag<EntityType<?>> tag, int primaryColor, int secondaryColor) {
+	protected static Item createSpawnEgg(String id, EntityType<? extends MobEntity> type, Tag<EntityType<?>> tag, int primaryColor, int secondaryColor) {
 		return register(id, new TagSpawnEggItem(type, tag, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(MISC)));
 	}
 

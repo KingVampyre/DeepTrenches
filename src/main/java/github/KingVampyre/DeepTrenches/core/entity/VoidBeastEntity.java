@@ -21,7 +21,7 @@ public class VoidBeastEntity extends LuminousFishEntity {
     }
 
     @Override
-    protected ItemStack getFishBucketItem() {
+    public ItemStack getBucketItem() {
         return null;
     }
 

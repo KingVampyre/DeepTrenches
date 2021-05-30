@@ -16,7 +16,6 @@ import net.minecraft.util.registry.Registry;
 
 import java.util.function.Function;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModMaterials.FUNGUS;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
 import static net.minecraft.block.Blocks.*;
 import static net.minecraft.block.PressurePlateBlock.ActivationRule.EVERYTHING;
@@ -1503,7 +1502,7 @@ public class ModBlocks {
 
 	protected static Block createAcuaticFungus(String id, FeaturesSaplingGenerator saplingGenerator) {
 		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
-		return register(id, new AcuaticFungusBlock(saplingGenerator, Settings.of(FUNGUS).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+		return register(id, new AcuaticFungusBlock(saplingGenerator, Settings.of(Material.LEAVES).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
 	}
 
 	protected static Block createBioluminescentBlock(String id) {
@@ -1520,7 +1519,7 @@ public class ModBlocks {
 
 	protected static Block createCap(String id) {
 		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
-		return register(id, new CapBlock(Settings.of(FUNGUS).strength(0.2F, 0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+		return register(id, new CapBlock(Settings.of(Material.LEAVES).strength(0.2F, 0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
 	}
 
 	protected static Block createCopy(String id, Block block) {

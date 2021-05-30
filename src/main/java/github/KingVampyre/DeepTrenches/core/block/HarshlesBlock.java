@@ -36,13 +36,13 @@ public class HarshlesBlock extends AbstractPlantStemBlock {
     }
 
     @Override
-    protected Block getPlant() {
-        return HARSHLES;
+    protected int getGrowthLength(Random random) {
+        return 1;
     }
 
     @Override
-    protected int method_26376(Random random) {
-        return 1;
+    protected Block getPlant() {
+        return HARSHLES;
     }
 
 }

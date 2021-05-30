@@ -10,10 +10,7 @@ import github.KingVampyre.DeepTrenches.client.particle.LeakParticle;
 import github.KingVampyre.DeepTrenches.client.particle.MarineSnowParticle;
 import github.KingVampyre.DeepTrenches.client.particle.StatusEffectParticle;
 import github.KingVampyre.DeepTrenches.client.render.block.entity.CustomSignBlockEntityRenderer;
-import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
-import github.KingVampyre.DeepTrenches.common.render.entity.renderer.ModBoatEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
-import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.SignTypes;
 import github.Louwind.Reload.client.resource.ColorMapReloadListener;
@@ -23,7 +20,6 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
-import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -548,6 +544,8 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockEntityRendererRegistry.INSTANCE.register(BlockEntityTypes.SIGN, CustomSignBlockEntityRenderer::new);
 
         /* ------------------------------------------ ENTITY RENDERERS ----------------------------------------------------- */
+        /*
+        TODO: update GeckoLib
         EntityRendererRegistry.INSTANCE.register(EntityTypes.ADAIGGER, (dispatcher, context) -> new AdaiggerRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BEARDED_SEADEVIL, (dispatcher, context) -> new BeardedSeadevilRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
@@ -582,6 +580,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(EntityTypes.VIPERFISH, (dispatcher, context) -> new ViperfishRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.VOID_BEAST, (dispatcher, context) -> new VoidBeastRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(EntityTypes.WOLFTRAP_SEADEVIL, (dispatcher, context) -> new WolftrapSeadevilRenderer(dispatcher));
+        */
     }
 
 }

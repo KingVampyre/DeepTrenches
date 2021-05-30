@@ -8,6 +8,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
@@ -62,7 +63,7 @@ public abstract class ClearWaterFluid extends AbstractOxygenatedWaterFluid {
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModBlocks.CLEAR_WATER.getDefaultState().with(FluidBlock.LEVEL, method_15741(state));
+        return ModBlocks.CLEAR_WATER.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
     }
 
     public static class Flowing extends ClearWaterFluid {

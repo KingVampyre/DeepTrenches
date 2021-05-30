@@ -41,15 +41,15 @@ public class AdaiggerItem extends SwordItem {
 
 				AdaiggerEntity adaigger = new AdaiggerEntity(world, player, stack);
 
-				adaigger.setProperties(player, player.pitch, player.yaw, 0, 3, 1);
+				adaigger.setProperties(player, player.getPitch(), player.getYaw(), 0, 3, 1);
 
-				if (player.abilities.creativeMode)
+				if (player.isCreative())
 					adaigger.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
 
 				world.spawnEntity(adaigger);
 
-				if (!player.abilities.creativeMode)
-					player.inventory.removeOne(stack);
+				if (!player.isCreative())
+					player.getInventory().removeOne(stack);
 			}
 
 			player.incrementStat(Stats.USED.getOrCreateStat(this));

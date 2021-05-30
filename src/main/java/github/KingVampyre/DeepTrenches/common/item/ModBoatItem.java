@@ -64,7 +64,7 @@ public class ModBoatItem extends BoatItem {
 			ModBoatEntity boatEntity = new ModBoatEntity(world, pos.x, pos.y, pos.z);
 
 			boatEntity.setWoodType(this.woodType);
-			boatEntity.yaw = user.yaw;
+			boatEntity.setYaw(user.getYaw());
 
 			if (!world.isSpaceEmpty(boatEntity, boatEntity.getBoundingBox().expand(-0.1D)))
 				return TypedActionResult.fail(itemStack);
@@ -72,7 +72,7 @@ public class ModBoatItem extends BoatItem {
 				if (!world.isClient) {
 					world.spawnEntity(boatEntity);
 
-					if (!user.abilities.creativeMode)
+					if (!user.isCreative())
 						itemStack.decrement(1);
 				}
 

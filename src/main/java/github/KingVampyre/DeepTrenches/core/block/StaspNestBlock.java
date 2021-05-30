@@ -1,7 +1,5 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import static net.minecraft.item.Items.GLASS_BOTTLE;
-
 import github.KingVampyre.DeepTrenches.core.block.entity.StaspNestBlockEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -15,8 +13,10 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import static net.minecraft.item.Items.GLASS_BOTTLE;
 
 public class StaspNestBlock extends BlockWithEntity {
 
@@ -44,13 +44,8 @@ public class StaspNestBlock extends BlockWithEntity {
 	}
 
 	@Override
-	public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, BlockEntity blockEntity,
-			ItemStack stack) {
-
-		if (!world.isClient()) {
-			// TODO: Stasp Nest Disturb
-		}
-
+	public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack stack) {
+		// TODO: Stasp Nest Disturb on server side
 		super.afterBreak(world, player, pos, state, blockEntity, stack);
 	}
 
@@ -61,9 +56,10 @@ public class StaspNestBlock extends BlockWithEntity {
 		builder.add(SAP);
 	}
 
+	@Nullable
 	@Override
-	public BlockEntity createBlockEntity(BlockView world) {
-		return new StaspNestBlockEntity();
+	public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+		return new StaspNestBlockEntity(pos, state);
 	}
 
 }

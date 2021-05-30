@@ -1,24 +1,15 @@
 package github.KingVampyre.DeepTrenches.common.entity.ai.goal;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.entity.ai.TargetFinder;
+import net.minecraft.entity.ai.FuzzyTargeting;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.mob.PathAwareEntity;
-import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.*;
 import net.minecraft.world.World;
 
 import java.util.function.Predicate;
 
 public class FlyOntoTreeGoal extends WanderAroundFarGoal {
-
-    public static final Predicate<BlockState> TREE = state -> {
-        Block block = state.getBlock();
-
-        return block instanceof LeavesBlock || block.isIn(BlockTags.LOGS);
-    };
 
     protected final Box box;
     protected final Predicate<BlockState> predicate;
@@ -30,16 +21,12 @@ public class FlyOntoTreeGoal extends WanderAroundFarGoal {
         this.predicate = predicate;
     }
 
-    public FlyOntoTreeGoal(PathAwareEntity pathAwareEntity, Box box, double speed, float probability) {
-        this(pathAwareEntity, box, TREE, speed, probability);
-    }
-
     @Override
     protected Vec3d getWanderTarget() {
         Vec3d target = super.getWanderTarget();
 
         if (this.mob.isTouchingWater()) {
-            Vec3d vec3d = TargetFinder.findGroundTarget(this.mob, 15, 15);
+            Vec3d vec3d = FuzzyTargeting.find(this.mob, 15, 15);
 
             return target == null ? vec3d : target;
         }

@@ -2,6 +2,7 @@ package github.KingVampyre.DeepTrenches.common.entity;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
@@ -42,8 +43,8 @@ public class FlyingBugEntity extends AngryBugEntity {
     }
 
     @Override
-    public boolean handleFallDamage(float fallDistance, float damageMultiplier) {
-        return false;
+    public boolean handleFallDamage(float fallDistance, float damageMultiplier, DamageSource damageSource) {
+        return super.handleFallDamage(fallDistance, damageMultiplier, damageSource);
     }
 
     public boolean isInAir() {

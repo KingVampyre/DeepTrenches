@@ -15,8 +15,8 @@ import static net.minecraft.tag.FluidTags.WATER;
 
 public class MarineSnowParticle extends WaterSuspendParticle {
 
-    public MarineSnowParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-        super(world, x, y, z);
+    public MarineSnowParticle(ClientWorld world, SpriteProvider spriteProvider, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+        super(world, spriteProvider, x, y, z);
 
         this.velocityX = velocityX;
         this.velocityY = velocityY;
@@ -43,13 +43,13 @@ public class MarineSnowParticle extends WaterSuspendParticle {
 
         @Override
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            double velocity = clientWorld.random.nextGaussian() * 9.999999747378752E-5D + (Math.random() - 1.0D) * 0.4000000059604645D;
+            float velocity = (float) (clientWorld.random.nextGaussian() * 9.999999747378752E-5D + (Math.random() - 1.0D) * 0.4000000059604645D);
 
             float factor = (float) (Math.random() + Math.random() + 1.0D) * 0.15F;
             float sqrt = MathHelper.sqrt(velocity * velocity);
             double velocityY = velocity / (double) sqrt * (double) factor * 0.4000000059604645D;
 
-            MarineSnowParticle particle = new MarineSnowParticle(clientWorld, d, e, f, 0, velocityY, 0);
+            MarineSnowParticle particle = new MarineSnowParticle(clientWorld, this.spriteProvider, d, e, f, 0, velocityY, 0);
             particle.setSprite(this.spriteProvider);
 
             return particle;

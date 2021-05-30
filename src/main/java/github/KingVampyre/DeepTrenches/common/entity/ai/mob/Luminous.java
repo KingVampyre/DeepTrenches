@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.common.entity.ai.mob;
 
 import com.google.common.collect.ImmutableList;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 
 public interface Luminous {
 
@@ -18,15 +18,15 @@ public interface Luminous {
 
     void setLightState(LightState state);
 
-    default void luminousToTag(CompoundTag tag) {
+    default void luminousToNbt(NbtCompound nbt) {
         int index = this.getLightStateIndex();
 
-        tag.putInt("LightState", index);
+        nbt.putInt("LightState", index);
     }
 
-    default void luminousFromTag(CompoundTag tag) {
+    default void luminousFromNbt(NbtCompound nbt) {
         ImmutableList<LightState> container = this.getLightContainer();
-        LightState state = container.get(tag.getInt("LightState"));
+        LightState state = container.get(nbt.getInt("LightState"));
 
         this.setLightState(state);
     }

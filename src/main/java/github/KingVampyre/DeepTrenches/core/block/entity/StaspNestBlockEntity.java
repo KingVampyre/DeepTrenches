@@ -1,22 +1,15 @@
 package github.KingVampyre.DeepTrenches.core.block.entity;
 
-import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.util.math.BlockPos;
 
 import static github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes.STASP_NEST;
 
 public class StaspNestBlockEntity extends BlockEntity {
 
-    public StaspNestBlockEntity() {
-        super(STASP_NEST);
-    }
-
-    public boolean isFullOfStasps() {
-        return false;
-    }
-
-    public void tryEnterHive(StaspEntity stasp) {
-
+    public StaspNestBlockEntity(BlockPos pos, BlockState state) {
+        super(STASP_NEST, pos, state);
     }
 
 }

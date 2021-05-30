@@ -181,7 +181,7 @@ public abstract class MixinLivingEntity extends MixinEntity {
     private void onDeath(DamageSource source, CallbackInfo ci) {
         LivingEntity living = (LivingEntity) (Object) this;
 
-        if(!living.removed && !this.dead) {
+        if(!living.isRemoved() && !this.dead) {
 
             if(source.getName().equals("soul_draining")) {
                 LivingEntity attacker = (LivingEntity) source.getAttacker();
@@ -218,7 +218,7 @@ public abstract class MixinLivingEntity extends MixinEntity {
 
     }
 
-    @Inject(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;takeKnockback(FDD)V"), cancellable = true)
+    @Inject(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;takeKnockback(DDD)V"), cancellable = true)
     private void takeKnockback(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
 
         if(source.getName().equals("soul_draining")) {

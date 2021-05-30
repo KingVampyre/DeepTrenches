@@ -30,9 +30,9 @@ public class StaspFlightMoveControl extends FlightMoveControl {
 
             stasp.setNoGravity(true);
 
-            double dx = this.targetX - stasp.getX();
-            double dy = this.targetY - stasp.getY();
-            double dz = this.targetZ - stasp.getZ();
+            float dx = (float) (this.targetX - stasp.getX());
+            float dy = (float) (this.targetY - stasp.getY());
+            float dz = (float) (this.targetZ - stasp.getZ());
 
             double area = dx * dx + dy * dy + dz * dz;
 
@@ -54,16 +54,18 @@ public class StaspFlightMoveControl extends FlightMoveControl {
                 double adz = pos.getZ() - stasp.getZ();
 
                 float angle = (float) (MathHelper.atan2(adx, adz) * 57.2957763671875D) - this.maxYawChange;
+                float yaw = -this.wrapDegrees(this.entity.getYaw(), angle, this.maxYawChange);
 
-                stasp.yaw = -this.changeAngle(this.entity.yaw, angle, this.maxYawChange);
+                this.entity.setYaw(yaw);
 
             } else if (target != null) {
                 double adx = target.getX() - stasp.getX();
                 double adz = target.getZ() - stasp.getZ();
 
                 float angle = (float) (MathHelper.atan2(adx, adz) * 57.2957763671875D) - this.maxYawChange;
+                float yaw = -this.wrapDegrees(this.entity.getPitch(), angle, this.maxYawChange);
 
-                stasp.yaw = -this.changeAngle(this.entity.yaw, angle, this.maxYawChange);
+                this.entity.setYaw(yaw);
             }
 
             this.entity.setMovementSpeed(speed);
@@ -71,7 +73,9 @@ public class StaspFlightMoveControl extends FlightMoveControl {
             double sqrt = MathHelper.sqrt(dx * dx + dz * dz);
             float angle = (float) (MathHelper.atan2(dy, sqrt) * 57.2957763671875D);
 
-            this.entity.pitch = this.changeAngle(this.entity.pitch, angle, (float) this.maxPitchChange);
+            float pitch = this.wrapDegrees(this.entity.getPitch(), angle, this.maxPitchChange);
+
+            this.entity.setPitch(pitch);
             this.entity.setUpwardSpeed(dy > 0.0D ? speed : -speed);
 
         } else {

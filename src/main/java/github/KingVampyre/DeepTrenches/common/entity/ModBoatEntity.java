@@ -76,7 +76,7 @@ public class ModBoatEntity extends BoatEntity {
 				GameRules gameRules = this.world.getGameRules();
 				PlayerEntity player = (PlayerEntity) trueSource;
 
-				if (!player.abilities.creativeMode && gameRules.getBoolean(DO_ENTITY_DROPS)) {
+				if (!player.isCreative() && gameRules.getBoolean(DO_ENTITY_DROPS)) {
 					ServerWorld server = (ServerWorld) this.world;
 					WoodType woodType = this.getWoodType();
 
@@ -85,13 +85,13 @@ public class ModBoatEntity extends BoatEntity {
 
 					if (this.getDamageWobbleStrength() > 40.0F) {
 						this.dropLoot(context);
-						this.remove();
+						this.discard();
 					}
 
 				}
 
-				if (player.abilities.creativeMode)
-					this.remove();
+				if (player.isCreative())
+					this.discard();
 
 			}
 		}
@@ -140,11 +140,6 @@ public class ModBoatEntity extends BoatEntity {
 		super.initDataTracker();
 
 		this.dataTracker.startTracking(BOAT_TYPE, WoodType.ALMOND.getName());
-	}
-
-	@Override
-	public void setHeadYaw(float headYaw) {
-		this.yaw = headYaw;
 	}
 
 	public void setWoodType(WoodType boatType) {

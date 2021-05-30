@@ -20,10 +20,6 @@ repositories {
 		url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven"
 	}
 	maven {
-		name = "Ladysnake Libs"
-		url = "https://ladysnake.jfrog.io/artifactory/mods"
-	}
-	maven {
 		name = "Reload"
 		url = "https://dl.cloudsmith.io/public/louwinds-mods/reload/maven"
 	}
@@ -38,7 +34,6 @@ dependencies {
 	modImplementation "github.louwind.features-api:Features-API:${project.features_version}"
 	modImplementation "github.louwind.reload-api:Reload:${project.reload_version}"
 
-	modImplementation "io.github.onyxstudios:Cardinal-Components-API:${project.cardinal_components_version}"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.16.5:${project.geckolib_version}"

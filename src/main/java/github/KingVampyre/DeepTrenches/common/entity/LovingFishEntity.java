@@ -32,7 +32,7 @@ public abstract class LovingFishEntity extends AngerableFishEntity implements Lo
 
     @Override
     public void eat(PlayerEntity player, ItemStack stack) {
-        if (!player.abilities.creativeMode)
+        if (!player.isCreative())
             stack.decrement(1);
     }
 

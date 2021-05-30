@@ -11,7 +11,7 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.IntRange;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 
 import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_260;
@@ -22,7 +22,7 @@ import static github.KingVampyre.DeepTrenches.core.init.LightStates.*;
 
 public class BarbeledLoosejawEntity extends AbstractLoosejawEntity {
 
-    private static final IntRange ANGER_TIME_RANGE = Durations.betweenSeconds(30, 35);
+    private static final UniformIntProvider ANGER_TIME_RANGE = Durations.betweenSeconds(30, 35);
 
     public BarbeledLoosejawEntity(EntityType<? extends BarbeledLoosejawEntity> type, World world) {
         super(type, world);
@@ -47,12 +47,12 @@ public class BarbeledLoosejawEntity extends AbstractLoosejawEntity {
     }
 
     @Override
-    protected IntRange getAngerTimeRange() {
+    protected UniformIntProvider getAngerTimeRange() {
         return ANGER_TIME_RANGE;
     }
 
     @Override
-    protected ItemStack getFishBucketItem() {
+    public ItemStack getBucketItem() {
         return new ItemStack(BARBELED_LOOSEJAW_BUCKET);
     }
 
