@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.FinangiteEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.FinangiteModel.MODEL;
 
@@ -23,8 +23,8 @@ public class FinangiteRenderer extends NoCullingEntityRenderer<FinangiteEntity> 
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/finangite/pectoral_fin_rear_layer.png"),
     };
 
-    public FinangiteRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new FinangiteModel());
+    public FinangiteRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new FinangiteModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

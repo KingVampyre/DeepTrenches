@@ -8,8 +8,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.geo.render.built.GeoModel;
-import software.bernie.geckolib3.renderer.geo.GeoLayerRenderer;
-import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
+import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
+import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 public abstract class SingleRenderLayerFeature<T extends LivingEntity & IAnimatable> extends GeoLayerRenderer<T> {
 
@@ -23,12 +23,10 @@ public abstract class SingleRenderLayerFeature<T extends LivingEntity & IAnimata
         this.renderer = renderer;
     }
 
+    protected abstract RenderLayer getRenderLayer(T living);
+
     protected GeoModel getModel(T living) {
         return this.getEntityModel().getModel(this.model);
-    }
-
-    protected RenderLayer getRenderLayer(T living) {
-        return null;
     }
 
     @Override

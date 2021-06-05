@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.DeepLakeBettaEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.DeepLakeBettaModel.MODEL;
@@ -20,8 +20,8 @@ public class DeepLakeBettaRenderer extends NoCullingEntityRenderer<DeepLakeBetta
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/deep_lake_betta/lure_layer.png")
     };
 
-    public DeepLakeBettaRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-	    super(entityRenderDispatcher, new DeepLakeBettaModel());
+    public DeepLakeBettaRenderer(EntityRendererFactory.Context ctx) {
+	    super(ctx, new DeepLakeBettaModel());
 
 	    this.shadowRadius = 0.35F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

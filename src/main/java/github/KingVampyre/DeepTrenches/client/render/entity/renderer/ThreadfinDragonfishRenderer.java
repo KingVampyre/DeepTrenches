@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.ThreadfinDragonfishEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.ThreadfinDragonfishModel.MODEL;
 
@@ -19,8 +19,8 @@ public class ThreadfinDragonfishRenderer extends NoCullingEntityRenderer<Threadf
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/threadfin_dragonfish/lure_layer.png")
     };
 
-    public ThreadfinDragonfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new ThreadfinDragonfishModel());
+    public ThreadfinDragonfishRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new ThreadfinDragonfishModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

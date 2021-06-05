@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.VoidBeastEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.VoidBeastModel.MODEL;
 
@@ -19,8 +19,8 @@ public class VoidBeastRenderer extends NoCullingEntityRenderer<VoidBeastEntity> 
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/void_beast/tongue_layer.png")
     };
 
-    public VoidBeastRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new VoidBeastModel());
+    public VoidBeastRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new VoidBeastModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

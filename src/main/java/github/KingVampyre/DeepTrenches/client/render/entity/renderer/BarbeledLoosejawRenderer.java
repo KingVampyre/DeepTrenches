@@ -7,7 +7,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousVari
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.BarbeledLoosejawModel.MODEL;
@@ -89,8 +89,8 @@ public class BarbeledLoosejawRenderer extends NoCullingEntityRenderer<BarbeledLo
 			TITTMANNS_BARBELED_LOOSEJAW
 	};
 
-	public BarbeledLoosejawRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-	    super(entityRenderDispatcher, new BarbeledLoosejawModel());
+	public BarbeledLoosejawRenderer(EntityRendererFactory.Context ctx) {
+	    super(ctx, new BarbeledLoosejawModel());
 
 	    this.shadowRadius = 0.4F;
 	    this.addLayer(new BarbeledLoosejawFinsFeature(this));

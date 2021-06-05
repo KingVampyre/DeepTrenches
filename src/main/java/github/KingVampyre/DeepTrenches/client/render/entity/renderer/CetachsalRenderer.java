@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.CetachsalEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.CetachsalModel.MODEL;
 
@@ -17,8 +17,8 @@ public class CetachsalRenderer extends NoCullingEntityRenderer<CetachsalEntity> 
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/cetachsal/all_unlit_layer.png")
     };
 
-    public CetachsalRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new CetachsalModel());
+    public CetachsalRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new CetachsalModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

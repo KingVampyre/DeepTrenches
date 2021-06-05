@@ -7,7 +7,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousVari
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BlackLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.BlackLoosejawModel.MODEL;
@@ -41,8 +41,8 @@ public class BlackLoosejawRenderer extends NoCullingEntityRenderer<BlackLoosejaw
             SOUTHERN_BLACK_LOOSEJAW
     };
 
-    public BlackLoosejawRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new BlackLoosejawModel());
+    public BlackLoosejawRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new BlackLoosejawModel());
 
         this.shadowRadius = 0.4F;
         this.addLayer(new BlackLoosejawFinsFeature(this, MODEL));

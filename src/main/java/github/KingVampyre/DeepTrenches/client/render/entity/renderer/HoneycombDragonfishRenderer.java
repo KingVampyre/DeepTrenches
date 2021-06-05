@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.HoneycombDragonfishEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.HoneycombDragonfishModel.MODEL;
 
@@ -19,8 +19,8 @@ public class HoneycombDragonfishRenderer extends NoCullingEntityRenderer<Honeyco
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/honeycomb_dragonfish/lure_layer.png")
     };
 
-    public HoneycombDragonfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new HoneycombDragonfishModel());
+    public HoneycombDragonfishRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new HoneycombDragonfishModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

@@ -10,7 +10,10 @@ import github.KingVampyre.DeepTrenches.client.particle.LeakParticle;
 import github.KingVampyre.DeepTrenches.client.particle.MarineSnowParticle;
 import github.KingVampyre.DeepTrenches.client.particle.StatusEffectParticle;
 import github.KingVampyre.DeepTrenches.client.render.block.entity.CustomSignBlockEntityRenderer;
+import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
+import github.KingVampyre.DeepTrenches.common.render.entity.renderer.ModBoatEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
+import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.KingVampyre.DeepTrenches.core.init.SignTypes;
 import github.Louwind.Reload.client.resource.ColorMapReloadListener;
@@ -20,6 +23,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -544,43 +548,40 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockEntityRendererRegistry.INSTANCE.register(BlockEntityTypes.SIGN, CustomSignBlockEntityRenderer::new);
 
         /* ------------------------------------------ ENTITY RENDERERS ----------------------------------------------------- */
-        /*
-        TODO: update GeckoLib
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.ADAIGGER, (dispatcher, context) -> new AdaiggerRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BEARDED_SEADEVIL, (dispatcher, context) -> new BeardedSeadevilRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BARBELED_LOOSEJAW, (dispatcher, context) -> new BarbeledLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BETTA, (dispatcher, context) -> new BettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_DRAGONFISH, (dispatcher, context) -> new BlackDragonfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_SCABBARD, (dispatcher, context) -> new BlackScabbardRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_SEADEVIL, (dispatcher, context) -> new BlackSeadevilRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLOBFISH, (dispatcher, context) -> new BlobfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_WHALE, (dispatcher, context) -> new BlueWhaleRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BOAT, (dispatcher, context) -> new ModBoatEntityRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BOTTLE_FLY, (dispatcher, context) -> new BottleFlyRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BOTTLE_FLY_MAGGOT, (dispatcher, context) -> new BottleFlyMaggotRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BROWN_BEAR, (dispatcher, context) -> new BrownBearRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.CETACHSAL, (dispatcher, context) -> new CetachsalRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.DEEP_LAKE_BETTA, (dispatcher, context) -> new DeepLakeBettaRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.FANGTOOTH, (dispatcher, context) -> new FangtoothRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.FINANGITE, (dispatcher, context) -> new FinangiteRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.FLY, (dispatcher, context) -> new FlyRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.GIANT_HATCHETFISH, (dispatcher, context) -> new GiantHatchetfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.GIANT_SEED_SHRIMP, (dispatcher, context) -> new GiantSeedShrimpRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.HONEYCOMB_DRAGONFISH, (dispatcher, context) -> new HoneycombDragonfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.LACERATOR, (dispatcher, context) -> new LaceratorRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.LANCETFISH, (dispatcher, context) -> new LancetfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_LOOSEJAW, (dispatcher, context) -> new BlackLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.LIGHT_LOOSEJAW, (dispatcher, context) -> new LightLoosejawRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.MAGGOT, (dispatcher, context) -> new MaggotRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.PRINCE_AXELS_WONDERFISH, (dispatcher, context) -> new PrinceAxelsWonderfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.SMALLTOOTH_DRAGONFISH, (dispatcher, context) -> new SmalltoothDragonfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.STASP, (dispatcher, context) -> new StaspRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.TELESCOPEFISH, (dispatcher, context) -> new TelescopefishEntityRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.THREADFIN_DRAGONFISH, (dispatcher, context) -> new ThreadfinDragonfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.VIPERFISH, (dispatcher, context) -> new ViperfishRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.VOID_BEAST, (dispatcher, context) -> new VoidBeastRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.WOLFTRAP_SEADEVIL, (dispatcher, context) -> new WolftrapSeadevilRenderer(dispatcher));
-        */
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.ADAIGGER, AdaiggerRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BEARDED_SEADEVIL, BeardedSeadevilRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BARBELED_LOOSEJAW, BarbeledLoosejawRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BETTA, BettaRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_DRAGONFISH, BlackDragonfishRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_SCABBARD, BlackScabbardRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_SEADEVIL, BlackSeadevilRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLOBFISH, BlobfishRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_WHALE, BlueWhaleRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BOAT, ModBoatEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BOTTLE_FLY, BottleFlyRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BOTTLE_FLY_MAGGOT, BottleFlyMaggotRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BROWN_BEAR, BrownBearRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.CETACHSAL, CetachsalRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.DEEP_LAKE_BETTA, DeepLakeBettaRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.FANGTOOTH, FangtoothRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.FINANGITE, FinangiteRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.FLY, FlyRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.GIANT_HATCHETFISH, GiantHatchetfishRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.GIANT_SEED_SHRIMP, GiantSeedShrimpRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.HONEYCOMB_DRAGONFISH, HoneycombDragonfishRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.LACERATOR, LaceratorRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.LANCETFISH, LancetfishRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_LOOSEJAW, BlackLoosejawRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.LIGHT_LOOSEJAW, LightLoosejawRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.MAGGOT, MaggotRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.PRINCE_AXELS_WONDERFISH, PrinceAxelsWonderfishRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.SMALLTOOTH_DRAGONFISH, SmalltoothDragonfishRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.STASP, StaspRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.TELESCOPEFISH, TelescopefishEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.THREADFIN_DRAGONFISH, ThreadfinDragonfishRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.VIPERFISH, ViperfishRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.VOID_BEAST, VoidBeastRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.WOLFTRAP_SEADEVIL, WolftrapSeadevilRenderer::new);
     }
 
 }

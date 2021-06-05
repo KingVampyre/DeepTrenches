@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousVari
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.ViperfishEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.ViperfishModel.MODEL;
 
@@ -31,8 +31,8 @@ public class ViperfishRenderer extends NoCullingEntityRenderer<ViperfishEntity> 
             SLOANES_VIPERFISH
     };
 
-    public ViperfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new ViperfishModel());
+    public ViperfishRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new ViperfishModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousVariantLayerFeature<>(this, MODEL, LAYERS));

@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.GiantHatchetfishEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.GiantHatchetfishModel.MODEL;
@@ -18,8 +18,8 @@ public class GiantHatchetfishRenderer extends NoCullingEntityRenderer<GiantHatch
 			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/giant_hatchetfish/all_unlit_layer.png")
 	};
 
-	public GiantHatchetfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-		super(entityRenderDispatcher, new GiantHatchetfishModel());
+	public GiantHatchetfishRenderer(EntityRendererFactory.Context ctx) {
+		super(ctx, new GiantHatchetfishModel());
 
 		this.shadowRadius = 0.3F;
 		this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

@@ -7,7 +7,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousVari
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.LightLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.LightLoosejawModel.MODEL;
@@ -65,8 +65,8 @@ public class LightLoosejawRenderer extends NoCullingEntityRenderer<LightLoosejaw
             SMALL_LIGHT_LOOSEJAW
     };
 
-    public LightLoosejawRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new LightLoosejawModel());
+    public LightLoosejawRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new LightLoosejawModel());
 
         this.shadowRadius = 0.4F;
         this.addLayer(new LightLoosejawFinsFeature(this, MODEL));

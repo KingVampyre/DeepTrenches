@@ -5,7 +5,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.SingleRender
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
+import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 public class StaspAntennasLayerFeature extends SingleRenderLayerFeature<StaspEntity> {
 

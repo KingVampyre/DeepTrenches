@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BlackSeadevilEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.BlackSeadevilModel.MODEL;
 
@@ -17,8 +17,8 @@ public class BlackSeadevilRenderer extends NoCullingEntityRenderer<BlackSeadevil
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/black_seadevil/all_unlit_layer.png")
     };
 
-    public BlackSeadevilRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new BlackSeadevilModel());
+    public BlackSeadevilRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new BlackSeadevilModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

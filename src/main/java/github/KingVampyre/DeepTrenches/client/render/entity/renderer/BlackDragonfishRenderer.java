@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BlackDragonfishEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.BlackDragonfishModel.MODEL;
 
@@ -19,8 +19,8 @@ public class BlackDragonfishRenderer extends NoCullingEntityRenderer<BlackDragon
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/black_dragonfish/lure_layer.png")
     };
 
-    public BlackDragonfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new BlackDragonfishModel());
+    public BlackDragonfishRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new BlackDragonfishModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

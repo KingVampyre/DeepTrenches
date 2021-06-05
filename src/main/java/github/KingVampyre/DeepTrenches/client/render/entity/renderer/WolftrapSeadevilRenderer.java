@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.WolftrapSeadevilEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.WolftrapSeadevilModel.MODEL;
 
@@ -17,8 +17,8 @@ public class WolftrapSeadevilRenderer extends NoCullingEntityRenderer<WolftrapSe
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/wolftrap_seadevil/all_unlit_layer.png")
     };
 
-    public WolftrapSeadevilRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new WolftrapSeadevilModel());
+    public WolftrapSeadevilRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new WolftrapSeadevilModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));

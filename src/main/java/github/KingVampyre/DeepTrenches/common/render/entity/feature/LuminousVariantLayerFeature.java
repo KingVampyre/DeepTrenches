@@ -6,7 +6,7 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.renderer.geo.IGeoRenderer;
+import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 import static github.KingVampyre.DeepTrenches.core.init.LightStates.ALL_UNLIT;
 

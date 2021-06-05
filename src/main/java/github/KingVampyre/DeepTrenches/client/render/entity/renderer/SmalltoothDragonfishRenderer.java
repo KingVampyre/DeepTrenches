@@ -7,7 +7,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.SmalltoothDragonfishEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.SmalltoothDragonfishModel.MODEL;
@@ -25,8 +25,8 @@ public class SmalltoothDragonfishRenderer extends NoCullingEntityRenderer<Smallt
 			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/smalltooth_dragonfish/suborbital_and_lure_layer.png")
 	};
 
-	public SmalltoothDragonfishRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-	    super(entityRenderDispatcher, new SmalltoothDragonfishModel());
+	public SmalltoothDragonfishRenderer(EntityRendererFactory.Context ctx) {
+	    super(ctx, new SmalltoothDragonfishModel());
 
 	    this.shadowRadius = 0.4F;
 	    this.addLayer(new SmalltoothDragonfishFinsFeature(this, MODEL));

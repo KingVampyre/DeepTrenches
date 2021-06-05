@@ -6,7 +6,7 @@ import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLaye
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BeardedSeadevilEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.BeardedSeadevilModel.MODEL;
 
@@ -19,8 +19,8 @@ public class BeardedSeadevilRenderer extends NoCullingEntityRenderer<BeardedSead
             CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/bearded_seadevil/lure_layer.png")
     };
 
-    public BeardedSeadevilRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new BeardedSeadevilModel());
+    public BeardedSeadevilRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new BeardedSeadevilModel());
 
         this.shadowRadius = 0.3F;
         this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));
