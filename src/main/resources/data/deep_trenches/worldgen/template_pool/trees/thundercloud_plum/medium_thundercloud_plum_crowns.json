@@ -1,0 +1,51 @@
+{
+  "name": "deep_trenches:trees/thundercloud_plum/medium_crowns",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/thundercloud_plum/crown/medium_crown_01",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/thundercloud_plum/crown/medium_crown_02",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/thundercloud_plum/crown/medium_crown_03",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/thundercloud_plum/crown/medium_crown_04",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/thundercloud_plum/crown/medium_crown_05",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

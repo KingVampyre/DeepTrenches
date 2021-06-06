@@ -1,0 +1,15 @@
+{
+  "name": "deep_trenches:trees/crolood/crowns",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/crolood/crown/crown_01",
+        "processors": "deep_trenches:no_persistent_crolood_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

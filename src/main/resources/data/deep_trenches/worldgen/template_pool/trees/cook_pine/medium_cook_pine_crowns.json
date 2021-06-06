@@ -1,0 +1,33 @@
+{
+  "name": "deep_trenches:trees/cook_pine/medium_crowns",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/cook_pine/crown/medium_crown_01",
+        "processors": "deep_trenches:no_persistent_cook_pine_leaves"
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+	{
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/cook_pine/crown/medium_crown_02",
+        "processors": "deep_trenches:no_persistent_cook_pine_leaves",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+	{
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/cook_pine/crown/medium_crown_03",
+        "processors": "deep_trenches:no_persistent_cook_pine_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

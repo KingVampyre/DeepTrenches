@@ -1,8 +1,0 @@
-{
-  "configurations": {
-    "deep_trenches:small_teak": {
-      "type": "features:jigsaw",
-      "start_pool": "deep_trenches:trees/teak/small_crowns"
-    }
-  }
-}

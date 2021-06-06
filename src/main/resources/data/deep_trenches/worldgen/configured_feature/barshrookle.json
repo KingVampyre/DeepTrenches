@@ -1,0 +1,53 @@
+{
+  "features": "minecraft:tree",
+  "config": {
+    "trunk_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "name": "deep_trenches:barshrookle_log"
+      }
+    },
+    "trunk_placer": {
+      "type": "minecraft:straight_trunk_placer",
+      "base_height": 6,
+      "height_rand_a": 3,
+      "height_rand_b": 0
+    },
+    "foliage_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "name": "deep_trenches:barshrookle_cap"
+      }
+    },
+    "foliage_placer": {
+      "type": "minecraft:blob_foliage_placer",
+      "radius": {
+        "type": "minecraft:constant",
+        "value": 2
+      },
+      "offset": {
+        "type": "minecraft:constant",
+        "value": 0
+      },
+      "height": 3
+    },
+    "sapling_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "name": "deep_trenches:barshrookle_sapling"
+      }
+    },
+    "dirt_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "name": "deep_trenches:dritean"
+      }
+    },
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 1
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "deep_trenches:trees/stortreean/branches",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/stortreean/branches/branch_01",
+        "processors": "deep_trenches:no_persistent_stortreean_leaves",
+        "projection": "rigid"
+      },
+      "weight": 3
+    },
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/stortreean/branches/branch_02",
+        "processors": "deep_trenches:no_persistent_stortreean_leaves",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/stortreean/branches/branch_03",
+        "processors": "deep_trenches:no_persistent_stortreean_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

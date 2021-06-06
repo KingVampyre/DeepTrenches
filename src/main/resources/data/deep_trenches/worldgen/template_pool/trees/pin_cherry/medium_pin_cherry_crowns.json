@@ -1,0 +1,42 @@
+{
+  "name": "deep_trenches:trees/pin_cherry/medium_crowns",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/pin_cherry/crown/medium_crown_01",
+        "processors": "deep_trenches:no_persistent_pin_cherry_leaves",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/pin_cherry/crown/medium_crown_02",
+        "processors": "deep_trenches:no_persistent_pin_cherry_leaves",
+        "projection": "rigid"
+      },
+      "weight": 4
+    },
+	{
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/pin_cherry/crown/medium_crown_03",
+        "processors": "deep_trenches:no_persistent_pin_cherry_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+	{
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/pin_cherry/crown/medium_crown_04",
+        "processors": "deep_trenches:no_persistent_pin_cherry_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

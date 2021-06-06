@@ -1,0 +1,24 @@
+{
+  "name": "deep_trenches:trees/ebony/crowns",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/ebony/crown/crown_01",
+        "processors": "deep_trenches:no_persistent_ebony_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/ebony/crown/crown_02",
+        "processors": "deep_trenches:no_persistent_ebony_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

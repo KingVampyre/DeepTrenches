@@ -1,8 +1,0 @@
-{
-  "configurations": {
-    "deep_trenches:crolood_basement_with_roots": {
-      "type": "features:jigsaw",
-      "start_pool": "deep_trenches:trees/crolood/basements_with_roots"
-    }
-  }
-}

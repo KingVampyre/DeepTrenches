@@ -1,0 +1,15 @@
+{
+  "name": "deep_trenches:trees/thundercloud_plum/small_crowns",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/thundercloud_plum/crown/small_crown_01",
+        "processors": "deep_trenches:no_persistent_thundercloud_plum_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

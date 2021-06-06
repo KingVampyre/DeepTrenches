@@ -1,0 +1,21 @@
+{
+  "processors": [
+    {
+      "processor": "minecraft:rule",
+      "rules": [
+        {
+          "position_predicate": {
+            "test": "minecraft:block_match",
+            "block": "deep_trenches:sunrise_fungus_cap"
+          },
+          "output_state": {
+            "name": "deep_trenches:sunrise_fungus_cap",
+            "properties": {
+              "persistent": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

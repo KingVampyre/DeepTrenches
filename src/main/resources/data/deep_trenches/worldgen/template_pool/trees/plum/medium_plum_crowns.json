@@ -1,0 +1,15 @@
+{
+  "name": "deep_trenches:trees/plum/medium_crowns",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "features:no_update_neighbors",
+        "location": "deep_trenches:trees/plum/crown/medium_crown_01",
+        "processors": "deep_trenches:no_persistent_plum_leaves",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}
