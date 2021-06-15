@@ -12,16 +12,16 @@ group = project.maven_group
 
 repositories {
 	maven {
-		name = "Features-API"
-		url = "https://dl.cloudsmith.io/public/louwinds-mods/features-api/maven"
-	}
-	maven {
 		name = "Geckolib"
 		url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven"
 	}
 	maven {
 		name = "Reload"
 		url = "https://dl.cloudsmith.io/public/louwinds-mods/reload/maven"
+	}
+	maven {
+		name = "Worldgen-API"
+		url = "https://dl.cloudsmith.io/public/louwinds-mods/worldgen-api/maven"
 	}
 }
 
@@ -31,8 +31,8 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 
-	modImplementation "github.louwind.features-api:Features-API:${project.features_version}"
 	modImplementation "github.louwind.reload-api:Reload:${project.reload_version}"
+	modImplementation "github.louwind.worldgen-api:Worldgen-API:${project.worldgen_version}"
 
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"

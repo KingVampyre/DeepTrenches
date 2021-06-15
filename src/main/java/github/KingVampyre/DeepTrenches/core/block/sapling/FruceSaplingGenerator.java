@@ -7,7 +7,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class BubbletreeSaplingGenerator extends SaplingGenerator {
+public class FruceSaplingGenerator extends SaplingGenerator {
 
     @Nullable
     @Override

@@ -1,8 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.Louwind.Features.impl.block.FeaturesSaplingBlock;
-import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
@@ -11,9 +11,9 @@ import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.*;
 
-public class StorceanSaplingBlock extends FeaturesSaplingBlock {
+public class StorceanSaplingBlock extends SaplingBlock {
 
-	public StorceanSaplingBlock(FeaturesSaplingGenerator generator, Settings settings) {
+	public StorceanSaplingBlock(SaplingGenerator generator, Settings settings) {
 		super(generator, settings);
 	}
 

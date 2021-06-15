@@ -4,10 +4,10 @@ import github.KingVampyre.DeepTrenches.common.block.CustomSignBlock;
 import github.KingVampyre.DeepTrenches.common.block.CustomWallSignBlock;
 import github.KingVampyre.DeepTrenches.common.block.HorizontalBlock;
 import github.KingVampyre.DeepTrenches.core.block.*;
-import github.Louwind.Features.impl.block.FeaturesSaplingBlock;
-import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
+
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.*;
+import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.sound.BlockSoundGroup;
@@ -1500,7 +1500,7 @@ public class ModBlocks {
 		return Registry.register(BLOCK, id, block);
 	}
 
-	protected static Block createAcuaticFungus(String id, FeaturesSaplingGenerator saplingGenerator) {
+	protected static Block createAcuaticFungus(String id, SaplingGenerator saplingGenerator) {
 		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
 		return register(id, new AcuaticFungusBlock(saplingGenerator, Settings.of(Material.LEAVES).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
 	}
@@ -1614,8 +1614,8 @@ public class ModBlocks {
 		return register(id, new PressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE)));
 	}
 
-	protected static Block createOakSapling(String id, FeaturesSaplingGenerator saplingGenerator) {
-		return register(id, new FeaturesSaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING)));
+	protected static Block createOakSapling(String id, SaplingGenerator saplingGenerator) {
+		return register(id, new SaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING)));
 	}
 
 	protected static Block createOakSign(String id, SignType type) {
@@ -1658,7 +1658,7 @@ public class ModBlocks {
 		return register(id, new PillarBlock(Settings.copy(STRIPPED_OAK_WOOD)));
 	}
 
-	protected static Block createStorceanSapling(String id, FeaturesSaplingGenerator saplingGenerator) {
+	protected static Block createStorceanSapling(String id, SaplingGenerator saplingGenerator) {
 		return register(id, new StorceanTallSaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING)));
 	}
 

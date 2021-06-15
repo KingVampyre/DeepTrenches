@@ -42,6 +42,7 @@ public class ModBoatEntityRenderer extends EntityRenderer<ModBoatEntity> {
 			matrices.multiply(new Quaternion(new Vec3f(1.0F, 0.0F, 1.0F), entity.interpolateBubbleWobble(tickDelta), true));
 		}
 
+		// TODO check boats
 		Identifier identifier = null;
 		BoatEntityModel entityModel = null;
 
@@ -54,7 +55,7 @@ public class ModBoatEntityRenderer extends EntityRenderer<ModBoatEntity> {
 
 		if (!entity.isSubmergedInWater()) {
 			VertexConsumer vertexConsumer2 = vertexConsumers.getBuffer(RenderLayer.getWaterMask());
-			entityModel.getBottom().render(matrices, vertexConsumer2, light, OverlayTexture.DEFAULT_UV);
+			entityModel.getWaterPatch().render(matrices, vertexConsumer2, light, OverlayTexture.DEFAULT_UV);
 		}
 
 		matrices.pop();

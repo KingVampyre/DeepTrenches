@@ -1,20 +1,22 @@
 package github.KingVampyre.DeepTrenches.core.block.sapling;
 
-import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
+import github.Louwind.worldgen.util.RegistryHelper;
+import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
-
-public class CroloodSaplingGenerator implements FeaturesSaplingGenerator {
+public class CroloodSaplingGenerator extends SaplingGenerator {
 
     private static final Identifier CROLOOD = new Identifier("deep_trenches:crolood_from_sapling");
 
+    @Nullable
     @Override
-    public ConfiguredFeature<?, ?> createTreeFeature(Random random, boolean sapling) {
-        return CONFIGURED_FEATURE.get(CROLOOD);
+    public ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
+        return RegistryHelper.getTree(CROLOOD);
     }
 
 }

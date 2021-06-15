@@ -1,31 +1,27 @@
 package github.KingVampyre.DeepTrenches.core.block.sapling;
 
-import github.Louwind.Features.impl.block.sapling.FeaturesThickSaplingGenerator;
-import net.minecraft.block.Block;
+import github.Louwind.worldgen.util.RegistryHelper;
+import net.minecraft.block.sapling.LargeTreeSaplingGenerator;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.PURFUNGA_SAPLING;
-import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
-
-public class PurfungaSaplingGenerator implements FeaturesThickSaplingGenerator {
+public class PurfungaSaplingGenerator extends LargeTreeSaplingGenerator {
 
     private static final Identifier PURFUNGA = new Identifier("deep_trenches:purfunga");
 
+    @Nullable
     @Override
-    public ConfiguredFeature<?, ?> createThickTreeFeature(Random random, boolean sapling) {
-        return CONFIGURED_FEATURE.get(PURFUNGA);
+    protected ConfiguredFeature<TreeFeatureConfig, ?> createLargeTreeFeature(Random random) {
+        return RegistryHelper.getTree(PURFUNGA);
     }
 
+    @Nullable
     @Override
-    public Block getSaplingBlock() {
-        return PURFUNGA_SAPLING;
-    }
-
-    @Override
-    public ConfiguredFeature<?, ?> createTreeFeature(Random random, boolean sapling) {
+    public ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
         return null;
     }
 

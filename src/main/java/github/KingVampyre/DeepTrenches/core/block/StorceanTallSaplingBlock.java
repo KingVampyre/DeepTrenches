@@ -1,10 +1,10 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.enums.SlabType;
+import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager.Builder;
@@ -27,7 +27,7 @@ public class StorceanTallSaplingBlock extends StorceanSaplingBlock {
 	public static final IntProperty AGE = Properties.AGE_25;
 	public static final EnumProperty<SlabType> TYPE = Properties.SLAB_TYPE;
 
-	public StorceanTallSaplingBlock(FeaturesSaplingGenerator generator, AbstractBlock.Settings settings) {
+	public StorceanTallSaplingBlock(SaplingGenerator generator, AbstractBlock.Settings settings) {
 		super(generator, settings);
 
 		this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0).with(STAGE, 0).with(TYPE, DOUBLE));
@@ -95,7 +95,7 @@ public class StorceanTallSaplingBlock extends StorceanSaplingBlock {
 			if (state.get(AGE) == 24) {
 				ChunkGenerator chunkGenerator = worldIn.getChunkManager().getChunkGenerator();
 
-				this.generator.generate(worldIn, chunkGenerator, type == BOTTOM ? pos : pos.down(), state, rand, true);
+				this.generator.generate(worldIn, chunkGenerator, type == BOTTOM ? pos : pos.down(), state, rand);
 			}
 
 		}

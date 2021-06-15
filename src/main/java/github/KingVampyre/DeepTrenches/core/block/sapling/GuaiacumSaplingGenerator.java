@@ -1,14 +1,17 @@
 package github.KingVampyre.DeepTrenches.core.block.sapling;
 
-import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
+import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class GuaiacumSaplingGenerator implements FeaturesSaplingGenerator {
+public class GuaiacumSaplingGenerator extends SaplingGenerator {
 
+    @Nullable
     @Override
-    public ConfiguredFeature<?, ?> createTreeFeature(Random random, boolean b) {
+    public ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
         return null;
     }
 

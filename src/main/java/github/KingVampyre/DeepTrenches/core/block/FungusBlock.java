@@ -1,9 +1,9 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.Louwind.Features.impl.block.sapling.FeaturesSaplingGenerator;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemPlacementContext;
@@ -25,7 +25,7 @@ import static net.minecraft.state.property.Properties.WATERLOGGED;
 
 public class FungusBlock extends StorceanSaplingBlock {
 
-	public FungusBlock(FeaturesSaplingGenerator generator, AbstractBlock.Settings settings) {
+	public FungusBlock(SaplingGenerator generator, AbstractBlock.Settings settings) {
 		super(generator, settings);
 
 		this.setDefaultState(this.stateManager.getDefaultState().with(STAGE, 0).with(WATERLOGGED, false));
