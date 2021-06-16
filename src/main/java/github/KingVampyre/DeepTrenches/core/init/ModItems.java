@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import github.KingVampyre.DeepTrenches.common.item.ModBoatItem;
 import github.KingVampyre.DeepTrenches.common.item.TagFishBucketItem;
 import github.KingVampyre.DeepTrenches.common.item.TagSpawnEggItem;
 import github.KingVampyre.DeepTrenches.core.item.AdaiggerItem;
@@ -241,7 +240,9 @@ public class ModItems {
 	}
 
 	protected static Item createBoat(String id, WoodType type) {
-		return register(id, new ModBoatItem(type, new Item.Settings().maxCount(1).group(WOODS)));
+		// TODO register boat
+//		return register(id, new ModBoatItem(type, new Item.Settings().maxCount(1).group(WOODS)));
+		return createItem(id, WOODS);
 	}
 
 	protected static void createCoralFan(String id, Block standingBlock, Block block) {

@@ -12,6 +12,10 @@ group = project.maven_group
 
 repositories {
 	maven {
+		name = "EntityUtils"
+		url = "https://dl.cloudsmith.io/public/louwinds-mods/entity-utils/maven"
+	}
+	maven {
 		name = "Geckolib"
 		url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven"
 	}
@@ -31,6 +35,7 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 
+	modImplementation "github.louwind.entity-utils:EntityUtils:${project.entityutils_version}"
 	modImplementation "github.louwind.reload-api:Reload:${project.reload_version}"
 	modImplementation "github.louwind.worldgen-api:Worldgen-API:${project.worldgen_version}"
 

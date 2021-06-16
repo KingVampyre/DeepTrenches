@@ -20,7 +20,7 @@ public class ItemGroups {
             () -> new ItemStack(PIPE_ORGAN_CORAL));
 
     public static final ItemGroup WOODS = FabricItemGroupBuilder.build(
-            new Identifier("deep_trenches:sea_blocks"),
+            new Identifier("deep_trenches:woods"),
             () -> new ItemStack(FUCHSITRA_LOG));
 
 }

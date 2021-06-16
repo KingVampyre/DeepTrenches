@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import github.KingVampyre.DeepTrenches.common.entity.ModBoatEntity;
 import github.KingVampyre.DeepTrenches.core.entity.*;
 import github.KingVampyre.DeepTrenches.core.util.DefaultAttributeHelper;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -25,7 +24,6 @@ public class EntityTypes {
 	public static final EntityType<BlackSeadevilEntity> BLACK_SEADEVIL;
 	public static final EntityType<BlobfishEntity> BLOBFISH;
 	public static final EntityType<BlueWhaleEntity> BLUE_WHALE;
-	public static final EntityType<ModBoatEntity> BOAT;
 	public static final EntityType<BottleFlyEntity> BOTTLE_FLY;
 	public static final EntityType<BottleFlyMaggotEntity> BOTTLE_FLY_MAGGOT;
 	public static final EntityType<BrownBearEntity> BROWN_BEAR;
@@ -103,11 +101,6 @@ public class EntityTypes {
 		BLUE_WHALE = createEntityType("deep_trenches:blue_whale", FabricEntityTypeBuilder
 				.create(SpawnGroup.CREATURE, BlueWhaleEntity::new)
 				.dimensions(EntityDimensions.fixed(1F, 1F))
-				.build());
-
-		BOAT = createEntityType("deep_trenches:boat", FabricEntityTypeBuilder
-				.<ModBoatEntity>create(SpawnGroup.MISC, ModBoatEntity::new)
-				.dimensions(EntityDimensions.fixed(1.375F, 0.5625F))
 				.build());
 
 		BOTTLE_FLY = createEntityType("deep_trenches:bottle_fly", FabricEntityTypeBuilder

@@ -3,7 +3,6 @@ package github.KingVampyre.DeepTrenches.core;
 import github.KingVampyre.DeepTrenches.common.event.block.BlockReplacementCallback;
 import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
-import github.KingVampyre.DeepTrenches.core.init.LootConditionTypes;
 import github.KingVampyre.DeepTrenches.core.init.SensorTypes;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -20,9 +19,6 @@ public class  DeepTrenches implements ModInitializer {
 
 		/* EVENTS */
 		BlockReplacementCallback.EVENT.register(AirialMossCallback.INSTANCE);
-
-		/* LOOT CONDITIONS */
-		Registry.register(LOOT_CONDITION_TYPE, new Identifier("deep_trenches:check_wood_type"), LootConditionTypes.CHECK_WOOD_TYPE);
 
 		/* SENSOR TYPE */
 		Registry.register(SENSOR_TYPE, new Identifier("deep_trenches:cod_tempting"), SensorTypes.COD_TEMPTING);

@@ -1,14 +1,15 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import github.KingVampyre.DeepTrenches.common.block.entity.CustomSignBlockEntity;
+import github.KingVampyre.DeepTrenches.core.block.entity.CustomSignBlockEntity;
 import github.KingVampyre.DeepTrenches.core.block.entity.StaspNestBlockEntity;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
 
 public class BlockEntityTypes {
 
-	public static final BlockEntityType<CustomSignBlockEntity> SIGN = BlockEntityType.Builder.create(
+	public static final BlockEntityType<CustomSignBlockEntity> SIGN = FabricBlockEntityTypeBuilder.create(
 			CustomSignBlockEntity::new,
 			ALMOND_SIGN, ALMOND_WALL_SIGN,
 			ANAMEATA_SIGN, ANAMEATA_WALL_SIGN,
@@ -71,7 +72,6 @@ public class BlockEntityTypes {
 			YEW_SIGN, YEW_WALL_SIGN
 	).build(null);
 
-	  public static final BlockEntityType<StaspNestBlockEntity> STASP_NEST = BlockEntityType.Builder
-	 		.create(StaspNestBlockEntity::new, ModBlocks.STASP_NEST).build(null);
+	  public static final BlockEntityType<StaspNestBlockEntity> STASP_NEST = FabricBlockEntityTypeBuilder.create(StaspNestBlockEntity::new, ModBlocks.STASP_NEST).build(null);
 
 }

@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.client.mixin;
+package github.KingVampyre.DeepTrenches.core.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawableHelper;

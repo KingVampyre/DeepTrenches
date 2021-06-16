@@ -5,9 +5,6 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "AccessorTridentEntity",
-    "InvokerDamageSource",
-    "InvokerMemoryModuleType",
-    "InvokerSensorType",
     "InvokerSpreadableBlock",
     "MixinAbstractBlockState",
     "MixinBrewingRecipeRegistry",
@@ -21,6 +18,7 @@
     "MixinVineBlock"
   ],
   "client": [
+    "MixinInGameHud"
   ],
   "injectors": {
     "defaultRequire": 1

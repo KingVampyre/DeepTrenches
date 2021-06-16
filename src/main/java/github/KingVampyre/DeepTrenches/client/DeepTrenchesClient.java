@@ -9,15 +9,13 @@ import github.KingVampyre.DeepTrenches.client.init.Sprites;
 import github.KingVampyre.DeepTrenches.client.particle.LeakParticle;
 import github.KingVampyre.DeepTrenches.client.particle.MarineSnowParticle;
 import github.KingVampyre.DeepTrenches.client.particle.StatusEffectParticle;
-import github.KingVampyre.DeepTrenches.client.render.block.entity.CustomSignBlockEntityRenderer;
 import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
-import github.KingVampyre.DeepTrenches.common.render.entity.renderer.ModBoatEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.EntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
-import github.KingVampyre.DeepTrenches.core.init.SignTypes;
 import github.Louwind.Reload.client.resource.ColorMapReloadListener;
 import github.Louwind.Reload.client.resource.sprite.BlockSpritesReloadListener;
+import github.Louwind.entityutils.core.block.entity.render.FabricSignBlockEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
@@ -28,13 +26,11 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.client.init.ColorMaps.STORCEAN_FOLIAGE;
 import static github.KingVampyre.DeepTrenches.client.init.Textures.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModFluids.*;
 import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
-import static net.minecraft.client.render.TexturedRenderLayers.SIGNS_ATLAS_TEXTURE;
 import static net.minecraft.resource.ResourceType.CLIENT_RESOURCES;
 import static net.minecraft.screen.PlayerScreenHandler.BLOCK_ATLAS_TEXTURE;
 
@@ -124,11 +120,6 @@ public class DeepTrenchesClient implements ClientModInitializer {
         FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_WATER, FluidRenderHandlers.STORCEAN_WATER);
 
         /* ------------------------------------------ TEXTURE ATLAS ----------------------------------------------------- */
-        ClientSpriteRegistryCallback.event(SIGNS_ATLAS_TEXTURE).register((atlas, registry) -> SignTypes.steam()
-                .map(signType -> "deep_trenches:entity/signs/" + signType.getName())
-                .map(Identifier::new)
-                .forEach(registry::register));
-
         ClientSpriteRegistryCallback.event(BLOCK_ATLAS_TEXTURE).register((atlas, registry) -> {
             registry.register(ABYSSOPELAGIC_WATER_FLOW);
             registry.register(ABYSSOPELAGIC_WATER_STILL);
@@ -174,6 +165,9 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ColorMaps.STORCEAN_MOSOIL.getDefaultColor(), ModBlocks.MOSOIL);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> STORCEAN_FOLIAGE.getDefaultColor(), ModBlocks.AQUEAN_LEAVES);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, ModBlocks.ALMOND_LEAVES, ModBlocks.BLACK_BIRCH_LEAVES, ModBlocks.COOK_PINE_LEAVES, ModBlocks.EBONY_LEAVES, ModBlocks.PELTOGYNE_LEAVES, ModBlocks.PLUM_LEAVES, ModBlocks.TEAK_LEAVES);
+
+        /* ------------------------------------------ BLOCK ENTITY RENDERERS ----------------------------------------------------- */
+        BlockEntityRendererRegistry.INSTANCE.register(BlockEntityTypes.SIGN, FabricSignBlockEntityRenderer::new);
 
         /* ------------------------------------------ BLOCK RENDER LAYERS ----------------------------------------------------- */
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DEAD_BLACKGREEN_TREE_CORAL, RenderLayer.getCutout());
@@ -544,9 +538,6 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putFluid(STORCEAN_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_WATER, RenderLayer.getTranslucent());
 
-        /* ------------------------------------------ BLOCK ENTITY RENDERERS ----------------------------------------------------- */
-        BlockEntityRendererRegistry.INSTANCE.register(BlockEntityTypes.SIGN, CustomSignBlockEntityRenderer::new);
-
         /* ------------------------------------------ ENTITY RENDERERS ----------------------------------------------------- */
         EntityRendererRegistry.INSTANCE.register(EntityTypes.ADAIGGER, AdaiggerRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BEARDED_SEADEVIL, BeardedSeadevilRenderer::new);
@@ -557,7 +548,6 @@ public class DeepTrenchesClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_SEADEVIL, BlackSeadevilRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLOBFISH, BlobfishRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLUE_WHALE, BlueWhaleRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(EntityTypes.BOAT, ModBoatEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BOTTLE_FLY, BottleFlyRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BOTTLE_FLY_MAGGOT, BottleFlyMaggotRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BROWN_BEAR, BrownBearRenderer::new);

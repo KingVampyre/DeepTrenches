@@ -1,7 +1,5 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import github.KingVampyre.DeepTrenches.common.block.CustomSignBlock;
-import github.KingVampyre.DeepTrenches.common.block.CustomWallSignBlock;
 import github.KingVampyre.DeepTrenches.common.block.HorizontalBlock;
 import github.KingVampyre.DeepTrenches.core.block.*;
 
@@ -1619,7 +1617,7 @@ public class ModBlocks {
 	}
 
 	protected static Block createOakSign(String id, SignType type) {
-		return register(id, new CustomSignBlock(Settings.copy(OAK_SIGN), type));
+		return register(id, new SignBlock(Settings.copy(OAK_SIGN), type));
 	}
 
 	protected static Block createOakSlab(String id) {
@@ -1635,7 +1633,7 @@ public class ModBlocks {
 	}
 
 	protected static Block createOakWallSign(String id, SignType type) {
-		return register(id, new CustomWallSignBlock(Settings.copy(OAK_SIGN), type));
+		return register(id, new WallSignBlock(Settings.copy(OAK_SIGN), type));
 	}
 
 	protected static Block createOakWood(String id) {
