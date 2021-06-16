@@ -1,22 +1,26 @@
 {
-  "features": "minecraft:tree",
+  "type": "minecraft:tree",
   "config": {
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "name": "deep_trenches:barshrookle_log"
+        "Name": "deep_trenches:almond_log",
+        "Properties": {
+          "axis": "y"
+        }
       }
     },
     "trunk_placer": {
       "type": "minecraft:straight_trunk_placer",
-      "base_height": 6,
+      "base_height": 4,
       "height_rand_a": 3,
       "height_rand_b": 0
     },
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "name": "deep_trenches:barshrookle_cap"
+        "Name": "deep_trenches:almond_cap",
+        "Properties": {}
       }
     },
     "foliage_placer": {
@@ -34,13 +38,17 @@
     "sapling_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "name": "deep_trenches:barshrookle_sapling"
+        "Name": "deep_trenches:almond_sapling",
+        "Properties": {
+          "stage": "0"
+        }
       }
     },
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "name": "deep_trenches:dritean"
+        "Name": "deep_trenches:dritean",
+        "Properties": {}
       }
     },
     "minimum_size": {
@@ -48,6 +56,7 @@
       "limit": 1,
       "lower_size": 0,
       "upper_size": 1
-    }
+    },
+    "decorators": []
   }
 }
