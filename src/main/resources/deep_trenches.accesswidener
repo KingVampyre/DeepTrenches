@@ -1,5 +1,6 @@
 accessWidener   v1  named
 accessible class net/minecraft/block/entity/BlockEntityType$BlockEntityFactory
+accessible class net/minecraft/client/gui/hud/InGameHud$HeartType
 accessible class net/minecraft/client/render/RenderLayer$MultiPhase
 accessible class net/minecraft/entity/ai/brain/task/CompositeTask$Order
 accessible class net/minecraft/entity/ai/brain/task/CompositeTask$RunMode
@@ -32,5 +33,6 @@ accessible method net/minecraft/client/render/RenderLayer$MultiPhase    <init>  
 accessible method net/minecraft/entity/effect/StatusEffect              <init>      (Lnet/minecraft/entity/effect/StatusEffectType;I)V
 accessible method net/minecraft/util/SignType                           <init>      (Ljava/lang/String;)V
 
-accessible method net/minecraft/item/EntityBucketItem       spawnEntity     (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
-extendable method net/minecraft/item/EntityBucketItem       spawnEntity     (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
+accessible method net/minecraft/client/gui/hud/InGameHud$HeartType      fromPlayerState     (Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/client/gui/hud/InGameHud$HeartType;
+accessible method net/minecraft/item/EntityBucketItem                   spawnEntity         (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
+extendable method net/minecraft/item/EntityBucketItem                   spawnEntity         (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V

@@ -19,14 +19,11 @@ import static github.KingVampyre.DeepTrenches.client.init.Textures.GUI_ACID_CORR
 import static github.KingVampyre.DeepTrenches.client.init.Textures.GUI_GAS_CORRODED_ICONS;
 import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
 import static net.minecraft.entity.effect.StatusEffects.REGENERATION;
-import static net.minecraft.entity.effect.StatusEffects.WITHER;
 
 @Mixin(InGameHud.class)
 public abstract class MixinInGameHud extends DrawableHelper {
 
-    @Final
-    @Shadow
-    private MinecraftClient client;
+    @Shadow @Final private MinecraftClient client;
 
     @Shadow protected abstract PlayerEntity getCameraPlayer();
 
@@ -45,11 +42,6 @@ public abstract class MixinInGameHud extends DrawableHelper {
 
         }
 
-    }
-
-    @Redirect(method = "renderStatusBars", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;hasStatusEffect(Lnet/minecraft/entity/effect/StatusEffect;)Z", ordinal = 2))
-    private boolean renderSoulDraining(PlayerEntity playerEntity, StatusEffect effect) {
-        return playerEntity.hasStatusEffect(WITHER) || playerEntity.hasStatusEffect(SOUL_DRAINING);
     }
 
     @Redirect(method = "renderStatusBars", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;hasStatusEffect(Lnet/minecraft/entity/effect/StatusEffect;)Z", ordinal = 0))
