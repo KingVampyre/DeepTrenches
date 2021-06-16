@@ -12,8 +12,8 @@ import java.util.Random;
 public class AlmondSaplingGenerator extends LargeTreeSaplingGenerator {
 
     private static final Identifier BIG_ALMOND = new Identifier("deep_trenches:big_almond");
-    private static final Identifier MEDIUM_ALMOND = new Identifier("deep_trenches:medium_almond");
-    private static final Identifier SMALL_ALMOND = new Identifier("deep_trenches:small_almond");
+    private static final Identifier FANCY_ALMOND = new Identifier("deep_trenches:fancy_almond");
+    private static final Identifier ALMOND = new Identifier("deep_trenches:almond");
 
     @Nullable
     @Override
@@ -24,7 +24,7 @@ public class AlmondSaplingGenerator extends LargeTreeSaplingGenerator {
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
-        return RegistryHelper.getTree(random.nextInt(5) == 0 ? MEDIUM_ALMOND : SMALL_ALMOND);
+        return RegistryHelper.getTree(random.nextInt(5) == 0 ? FANCY_ALMOND : ALMOND);
     }
 
 }
