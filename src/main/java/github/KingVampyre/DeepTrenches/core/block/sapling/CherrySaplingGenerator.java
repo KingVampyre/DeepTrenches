@@ -12,8 +12,8 @@ import java.util.Random;
 public class CherrySaplingGenerator extends LargeTreeSaplingGenerator {
 
     private static final Identifier BIG_CHERRY = new Identifier("deep_trenches:big_cherry");
-    private static final Identifier MEDIUM_CHERRY = new Identifier("deep_trenches:medium_cherry");
-    private static final Identifier SMALL_CHERRY = new Identifier("deep_trenches:small_cherry");
+    private static final Identifier FANCY_CHERRY = new Identifier("deep_trenches:fancy_cherry");
+    private static final Identifier CHERRY = new Identifier("deep_trenches:cherry");
 
     @Nullable
     @Override
@@ -24,7 +24,7 @@ public class CherrySaplingGenerator extends LargeTreeSaplingGenerator {
     @Nullable
     @Override
     public ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
-        return RegistryHelper.getTree(random.nextInt(5) == 0 ? MEDIUM_CHERRY : SMALL_CHERRY);
+        return RegistryHelper.getTree(random.nextInt(5) == 0 ? FANCY_CHERRY : CHERRY);
     }
 
 }
