@@ -2,7 +2,6 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.common.block.HorizontalBlock;
 import github.KingVampyre.DeepTrenches.core.block.*;
-
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.*;
 import net.minecraft.block.sapling.SaplingGenerator;
@@ -10,7 +9,6 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.SignType;
-import net.minecraft.util.registry.Registry;
 
 import java.util.function.Function;
 
@@ -18,7 +16,6 @@ import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
 import static net.minecraft.block.Blocks.*;
 import static net.minecraft.block.PressurePlateBlock.ActivationRule.EVERYTHING;
 import static net.minecraft.entity.effect.StatusEffects.*;
-import static net.minecraft.util.registry.Registry.BLOCK;
 
 public class ModBlocks {
 
@@ -50,30 +47,22 @@ public class ModBlocks {
 	public static final Block STORCERACK;
 	public static final Block VERDINE;
 
-	public static final Block BLACK_LILY;
 	public static final Block BLACK_PANSY;
 	public static final Block BLUE_PANSY;
 	public static final Block BLUE_POPPY;
 	public static final Block BLUE_VIOLET;
 	public static final Block BONNET_SPURGE;
 	public static final Block BROWN_PANSY;
-	public static final Block BULLTHORN;
-	public static final Block CACTLOW;
 	public static final Block CHOCOLATE_COSMOS_FLOWER;
-	public static final Block CLAWBULB;
 	public static final Block CYAN_BLUE_VIOLET;
 	public static final Block CYCAWLER;
 	public static final Block GARDEN_PINKS;
 	public static final Block GREEN_PANSY;
 	public static final Block GYLDELION_FLOWER;
-	public static final Block LIME_SPURGE;
-	public static final Block LUPIN_FLOWER;
 	public static final Block MARSH_VIOLET;
 	public static final Block MURKSTEM;
 	public static final Block NATIVE_VIOLET;
 	public static final Block OPIUM_POPPY;
-	public static final Block ORANGE_LILY;
-	public static final Block PIGAL;
 	public static final Block PINK_AND_ORANGE_PANSY;
 	public static final Block PINK_BRAITOR_FLOWER;
 	public static final Block PINK_MARSH_VIOLET;
@@ -81,7 +70,6 @@ public class ModBlocks {
 	public static final Block PINK_ROSE_BUSH;
 	public static final Block POPPY;
 	public static final Block PURPLE_AND_ORANGE_PANSY;
-	public static final Block PURPROUND;
 	public static final Block RED_BRAITOR_FLOWER;
 	public static final Block RED_CHOCOLATE_COSMOS_FLOWER;
 	public static final Block RED_PANSY;
@@ -91,18 +79,28 @@ public class ModBlocks {
 	public static final Block SPIDREET;
 	public static final Block SPIKE_LAVENDER;
 	public static final Block SPRIDELION;
-	public static final Block SPRINLY;
 	public static final Block SPROOM_SPIKE;
 	public static final Block SQUISACLE;
 	public static final Block SWEET_VIOLET;
 	public static final Block TOPPED_LAVENDER;
 	public static final Block VASLAME;
-	public static final Block VELVET_LILY;
 	public static final Block WEEPISTIL;
 	public static final Block WEEPY_HOLLOWER;
 	public static final Block WHITE_VIOLET;
 	public static final Block WILD_PANSY;
 	public static final Block YELLOW_VIOLET;
+
+	public static final Block BLACK_LILY;
+	public static final Block BULLTHORN;
+	public static final Block CACTLOW;
+	public static final Block CLAWBULB;
+	public static final Block LIME_SPURGE;
+	public static final Block LUPIN_FLOWER;
+	public static final Block ORANGE_LILY;
+	public static final Block PIGAL;
+	public static final Block PURPROUND;
+	public static final Block SPRINLY;
+	public static final Block VELVET_LILY;
 
 	public static final Block AIRIAL_BUSH;
 	public static final Block HARSHLES;
@@ -490,11 +488,11 @@ public class ModBlocks {
 	public static final Block BROMYA_WALL_SIGN;
 	public static final Block BROMYA_WOOD;
 
-	public static final Block BUBBLETREE_BUBBLES;
 	public static final Block BUBBLETREE_BUTTON;
 	public static final Block BUBBLETREE_DOOR;
 	public static final Block BUBBLETREE_FENCE;
 	public static final Block BUBBLETREE_FENCE_GATE;
+	public static final Block BUBBLETREE_BUBBLES;
 	public static final Block BUBBLETREE_LOG;
 	public static final Block BUBBLETREE_PLANKS;
 	public static final Block BUBBLETREE_PRESSURE_PLATE;
@@ -647,7 +645,6 @@ public class ModBlocks {
 	public static final Block DEAD_WART_TREE_WALL_SIGN;
 	public static final Block DEAD_WART_TREE_WOOD;
 
-	public static final Block DRIGYUS;
 	public static final Block DRIGYUS_BUTTON;
 	public static final Block DRIGYUS_DOOR;
 	public static final Block DRIGYUS_FENCE;
@@ -655,6 +652,7 @@ public class ModBlocks {
 	public static final Block DRIGYUS_LOG;
 	public static final Block DRIGYUS_PLANKS;
 	public static final Block DRIGYUS_PRESSURE_PLATE;
+	public static final Block DRIGYUS;
 	public static final Block DRIGYUS_SIGN;
 	public static final Block DRIGYUS_SLAB;
 	public static final Block DRIGYUS_STAIRS;
@@ -695,7 +693,6 @@ public class ModBlocks {
 	public static final Block ENDERHEART_WALL_SIGN;
 	public static final Block ENDERHEART_WOOD;
 
-	public static final Block FLALM;
 	public static final Block FLALM_BUTTON;
 	public static final Block FLALM_DOOR;
 	public static final Block FLALM_FENCE;
@@ -703,6 +700,7 @@ public class ModBlocks {
 	public static final Block FLALM_PETAL_BLOCK;
 	public static final Block FLALM_PLANKS;
 	public static final Block FLALM_PRESSURE_PLATE;
+	public static final Block FLALM;
 	public static final Block FLALM_SIGN;
 	public static final Block FLALM_SLAB;
 	public static final Block FLALM_STAIRS;
@@ -872,8 +870,6 @@ public class ModBlocks {
 	public static final Block MELALEUCA_WALL_SIGN;
 	public static final Block MELALEUCA_WOOD;
 
-	public static final Block MOSSY_YEW_LOG;
-
 	public static final Block MURKANTUAN_BUTTON;
 	public static final Block MURKANTUAN_DOOR;
 	public static final Block MURKANTUAN_FENCE;
@@ -907,7 +903,6 @@ public class ModBlocks {
 	public static final Block NORFOLK_PINE_WALL_SIGN;
 	public static final Block NORFOLK_PINE_WOOD;
 
-	public static final Block OBSCRUS;
 	public static final Block OBSCRUS_BUTTON;
 	public static final Block OBSCRUS_DOOR;
 	public static final Block OBSCRUS_FENCE;
@@ -916,6 +911,7 @@ public class ModBlocks {
 	public static final Block OBSCRUS_LOG;
 	public static final Block OBSCRUS_PLANKS;
 	public static final Block OBSCRUS_PRESSURE_PLATE;
+	public static final Block OBSCRUS;
 	public static final Block OBSCRUS_SIGN;
 	public static final Block OBSCRUS_SLAB;
 	public static final Block OBSCRUS_STAIRS;
@@ -1071,7 +1067,6 @@ public class ModBlocks {
 	public static final Block SANGUART_WALL_SIGN;
 	public static final Block SANGUART_WOOD;
 
-	public static final Block SCARLET_THIORCEN;
 	public static final Block SCARLET_THIORCEN_BUTTON;
 	public static final Block SCARLET_THIORCEN_DOOR;
 	public static final Block SCARLET_THIORCEN_FENCE;
@@ -1079,6 +1074,7 @@ public class ModBlocks {
 	public static final Block SCARLET_THIORCEN_LOG;
 	public static final Block SCARLET_THIORCEN_PLANKS;
 	public static final Block SCARLET_THIORCEN_PRESSURE_PLATE;
+	public static final Block SCARLET_THIORCEN;
 	public static final Block SCARLET_THIORCEN_SIGN;
 	public static final Block SCARLET_THIORCEN_SLAB;
 	public static final Block SCARLET_THIORCEN_STAIRS;
@@ -1358,6 +1354,7 @@ public class ModBlocks {
 	public static final Block WART_TREE_DOOR;
 	public static final Block WART_TREE_FENCE;
 	public static final Block WART_TREE_FENCE_GATE;
+	public static final Block WART_TREE_WARTS;
 	public static final Block WART_TREE_LOG;
 	public static final Block WART_TREE_PLANKS;
 	public static final Block WART_TREE_PRESSURE_PLATE;
@@ -1366,7 +1363,6 @@ public class ModBlocks {
 	public static final Block WART_TREE_STAIRS;
 	public static final Block WART_TREE_TRAPDOOR;
 	public static final Block WART_TREE_WALL_SIGN;
-	public static final Block WART_TREE_WARTS;
 	public static final Block WART_TREE_WOOD;
 
 	public static final Block WENGE_BUTTON;
@@ -1391,6 +1387,7 @@ public class ModBlocks {
 	public static final Block YEW_FENCE_GATE;
 	public static final Block YEW_LEAVES;
 	public static final Block YEW_LOG;
+	public static final Block MOSSY_YEW_LOG;
 	public static final Block YEW_PLANKS;
 	public static final Block YEW_PRESSURE_PLATE;
 	public static final Block YEW_SAPLING;
@@ -1494,1658 +1491,1650 @@ public class ModBlocks {
 	public static final Block POTTED_WEEPY_HOLLOWER;
 	public static final Block POTTED_YELLOW_VIOLET;
 
-	protected static Block register(String id, Block block) {
-		return Registry.register(BLOCK, id, block);
-	}
-
-	protected static Block createAcuaticFungus(String id, SaplingGenerator saplingGenerator) {
+	protected static Block createAcuaticFungus(SaplingGenerator saplingGenerator) {
 		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
-		return register(id, new AcuaticFungusBlock(saplingGenerator, Settings.of(Material.LEAVES).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+		return new AcuaticFungusBlock(saplingGenerator, Settings.of(Material.LEAVES).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque());
 	}
 
-	protected static Block createBioluminescentBlock(String id) {
-		return register(id, new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F)));
+	protected static Block createBioluminescentBlock() {
+		return new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F));
 	}
 
-	protected static Block createBlock(String id, Function<Settings, Block> function, Settings settings) {
-		return register(id, function.apply(settings));
+	protected static Block createBlock(Function<Settings, Block> function, Settings settings) {
+		return function.apply(settings);
 	}
 
-	protected static Block createBlock(String id, Function<Settings, Block> function, Block block) {
-		return createBlock(id, function, Settings.copy(block));
+	protected static Block createBlock(Function<Settings, Block> function, Block block) {
+		return createBlock(function, Settings.copy(block));
 	}
 
-	protected static Block createCap(String id) {
+	protected static Block createCap() {
 		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
-		return register(id, new CapBlock(Settings.of(Material.LEAVES).strength(0.2F, 0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque()));
+		return new CapBlock(Settings.of(Material.LEAVES).strength(0.2F, 0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque());
 	}
 
-	protected static Block createCopy(String id, Block block) {
-		return register(id, new Block(Settings.copy(block)));
+	protected static Block createCopy(Block block) {
+		return new Block(Settings.copy(block));
 	}
 
-	protected static Block createCoral(String id, Block block) {
-		return register(id, new CoralBlock(block, Settings.copy(TUBE_CORAL)));
+	protected static Block createCoral(Block block) {
+		return new CoralBlock(block, Settings.copy(TUBE_CORAL));
 	}
 
-	protected static Block createCoralBlock(String id, Block block) {
-		return register(id, new CoralBlockBlock(block, Settings.copy(TUBE_CORAL_BLOCK)));
+	protected static Block createCoralBlock(Block block) {
+		return new CoralBlockBlock(block, Settings.copy(TUBE_CORAL_BLOCK));
 	}
 
-	protected static Block createCoralFan(String id, Block block) {
-		return register(id, new CoralFanBlock(block, Settings.copy(TUBE_CORAL_FAN)));
+	protected static Block createCoralFan(Block block) {
+		return new CoralFanBlock(block, Settings.copy(TUBE_CORAL_FAN));
 	}
 
-	protected static Block createCoralWallFan(String id, Block block) {
-		return register(id, new CoralWallFanBlock(block, Settings.copy(TUBE_CORAL_WALL_FAN)));
+	protected static Block createCoralWallFan(Block block) {
+		return new CoralWallFanBlock(block, Settings.copy(TUBE_CORAL_WALL_FAN));
 	}
 
-	protected static Block createDeadCoral(String id) {
-		return createBlock(id, DeadCoralBlock::new, DEAD_TUBE_CORAL);
+	protected static Block createDeadCoral() {
+		return createBlock(DeadCoralBlock::new, DEAD_TUBE_CORAL);
 	}
 
-	protected static Block createDeadCoralBlock(String id) {
-		return createCopy(id, DEAD_TUBE_CORAL_BLOCK);
+	protected static Block createDeadCoralBlock() {
+		return createCopy(DEAD_TUBE_CORAL_BLOCK);
 	}
 
-	protected static Block createDeadCoralFan(String id) {
-		return createBlock(id, DeadCoralFanBlock::new, DEAD_TUBE_CORAL_FAN);
+	protected static Block createDeadCoralFan() {
+		return createBlock(DeadCoralFanBlock::new, DEAD_TUBE_CORAL_FAN);
 	}
 
-	protected static Block createDeadCoralWallFan(String id) {
-		return createBlock(id, DeadCoralWallFanBlock::new, DEAD_TUBE_CORAL_WALL_FAN);
+	protected static Block createDeadCoralWallFan() {
+		return createBlock(DeadCoralWallFanBlock::new, DEAD_TUBE_CORAL_WALL_FAN);
 	}
 
-	protected static Block createFlowerBlock(String id, StatusEffect effect, int effectDuration) {
-		return register(id, new FlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP)));
+	protected static Block createFlowerBlock(StatusEffect effect, int effectDuration) {
+		return new FlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP));
 	}
 
-	protected static Block createStorceanFlower(String id, StatusEffect effect, int effectDuration) {
-		return register(id, new StorceanFlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP)));
+	protected static Block createStorceanFlower(StatusEffect effect, int effectDuration) {
+		return new StorceanFlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP));
 	}
 
-	protected static Block createFlowerPot(String id, Block block, Settings settings) {
-		return register(id, new FlowerPotBlock(block, settings));
+	protected static Block createFlowerPot(Block block, Settings settings) {
+		return new FlowerPotBlock(block, settings);
 	}
 
-	protected static Block createFlowerPot(String id, Block block) {
-		return register(id, new FlowerPotBlock(block, Settings.copy(Blocks.POTTED_POPPY)));
+	protected static Block createFlowerPot(Block block) {
+		return new FlowerPotBlock(block, Settings.copy(Blocks.POTTED_POPPY));
 	}
 
-	protected static Block createFluid(String id, FlowableFluid fluid, Settings settings) {
-		return register(id, new FluidBlock(fluid, settings));
+	protected static Block createFluid(FlowableFluid fluid, Settings settings) {
+		return new FluidBlock(fluid, settings);
 	}
 
-	protected static Block createHorizontalBlock(String id, Block block) {
-		return register(id, new HorizontalBlock(Settings.copy(block)));
+	protected static Block createHorizontalBlock(Block block) {
+		return new HorizontalBlock(Settings.copy(block));
 	}
 
-	protected static Block createOakButton(String id) {
-		return register(id, new WoodenButtonBlock(Settings.copy(OAK_BUTTON)));
+	protected static Block createOakButton() {
+		return new WoodenButtonBlock(Settings.copy(OAK_BUTTON));
 	}
 
-	protected static Block createOakDoor(String id) {
-		return register(id, new DoorBlock(Settings.copy(OAK_DOOR)));
+	protected static Block createOakDoor() {
+		return new DoorBlock(Settings.copy(OAK_DOOR));
 	}
 
-	protected static Block createOakFence(String id) {
-		return register(id, new FenceBlock(Settings.copy(OAK_FENCE)));
+	protected static Block createOakFence() {
+		return new FenceBlock(Settings.copy(OAK_FENCE));
 	}
 
-	protected static Block createOakFenceGate(String id) {
-		return register(id, new FenceGateBlock(Settings.copy(OAK_FENCE_GATE)));
+	protected static Block createOakFenceGate() {
+		return new FenceGateBlock(Settings.copy(OAK_FENCE_GATE));
 	}
 
-	protected static Block createOakLeaves(String id) {
-		return register(id, new LeavesBlock(Settings.copy(OAK_LEAVES)));
+	protected static Block createOakLeaves() {
+		return new LeavesBlock(Settings.copy(OAK_LEAVES));
 	}
 
-	protected static Block createOakLog(String id) {
-		return register(id, new PillarBlock(Settings.copy(OAK_LOG)));
+	protected static Block createOakLog() {
+		return new PillarBlock(Settings.copy(OAK_LOG));
 	}
 
-	protected static Block createOakPlanks(String id) {
-		return register(id, new Block(Settings.copy(OAK_PLANKS)));
+	protected static Block createOakPlanks() {
+		return new Block(Settings.copy(OAK_PLANKS));
 	}
 
-	protected static Block createOakPressurePlate(String id) {
-		return register(id, new PressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE)));
+	protected static Block createOakPressurePlate() {
+		return new PressurePlateBlock(EVERYTHING, Settings.copy(OAK_PRESSURE_PLATE));
 	}
 
-	protected static Block createOakSapling(String id, SaplingGenerator saplingGenerator) {
-		return register(id, new SaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING)));
+	protected static Block createOakSapling(SaplingGenerator saplingGenerator) {
+		return new SaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING));
 	}
 
-	protected static Block createOakSign(String id, SignType type) {
-		return register(id, new SignBlock(Settings.copy(OAK_SIGN), type));
+	protected static Block createOakSign(SignType type) {
+		return new SignBlock(Settings.copy(OAK_SIGN), type);
 	}
 
-	protected static Block createOakSlab(String id) {
-		return register(id, new SlabBlock(Settings.copy(OAK_SLAB)));
+	protected static Block createOakSlab() {
+		return new SlabBlock(Settings.copy(OAK_SLAB));
 	}
 
-	protected static Block createOakStairs(String id, Block block) {
-		return register(id, new StairsBlock(block.getDefaultState(), Settings.copy(OAK_STAIRS)));
+	protected static Block createOakStairs(Block block) {
+		return new StairsBlock(block.getDefaultState(), Settings.copy(OAK_STAIRS));
 	}
 
-	protected static Block createOakTrapdoor(String id) {
-		return register(id, new TrapdoorBlock(Settings.copy(OAK_TRAPDOOR)));
+	protected static Block createOakTrapdoor() {
+		return new TrapdoorBlock(Settings.copy(OAK_TRAPDOOR));
 	}
 
-	protected static Block createOakWallSign(String id, SignType type) {
-		return register(id, new WallSignBlock(Settings.copy(OAK_SIGN), type));
+	protected static Block createOakWallSign(SignType type) {
+		return new WallSignBlock(Settings.copy(OAK_SIGN), type);
 	}
 
-	protected static Block createOakWood(String id) {
-		return register(id, new PillarBlock(Settings.copy(OAK_WOOD)));
+	protected static Block createOakWood() {
+		return new PillarBlock(Settings.copy(OAK_WOOD));
 	}
 
-    protected static Block createPillar(String id, Block block) {
-        return register(id, new PillarBlock(Settings.copy(block)));
+    protected static Block createPillar(Block block) {
+        return new PillarBlock(Settings.copy(block));
     }
 
-	protected static Block createPottedSapling(String id, Block block) {
-		return createFlowerPot(id, block, Settings.copy(POTTED_OAK_SAPLING));
+	protected static Block createPottedSapling(Block block) {
+		return createFlowerPot(block, Settings.copy(POTTED_OAK_SAPLING));
 	}
 
-	protected static Block createStrippedOakLog(String id) {
-		return register(id, new PillarBlock(Settings.copy(STRIPPED_OAK_LOG)));
+	protected static Block createStrippedOakLog() {
+		return new PillarBlock(Settings.copy(STRIPPED_OAK_LOG));
 	}
 
-	protected static Block createStrippedOakWood(String id) {
-		return register(id, new PillarBlock(Settings.copy(STRIPPED_OAK_WOOD)));
+	protected static Block createStrippedOakWood() {
+		return new PillarBlock(Settings.copy(STRIPPED_OAK_WOOD));
 	}
 
-	protected static Block createStorceanSapling(String id, SaplingGenerator saplingGenerator) {
-		return register(id, new StorceanTallSaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING)));
+	protected static Block createStorceanSapling(SaplingGenerator saplingGenerator) {
+		return new StorceanTallSaplingBlock(saplingGenerator, Settings.copy(OAK_SAPLING));
 	}
 
-	protected static Block createTallFlower(String id, Block block) {
-	    return register(id, new TallFlowerBlock(Settings.copy(block)));
+	protected static Block createTallFlower(Block block) {
+	    return new TallFlowerBlock(Settings.copy(block));
     }
 
-	protected static Block createWaterFluid(String id, FlowableFluid fluid) {
-		return createWaterFluid(id, fluid, 1F);
-	}
-
-	protected static Block createWaterFluid(String id, FlowableFluid fluid, float multiplier) {
-		return createFluid(id, fluid, Settings.copy(WATER).velocityMultiplier(multiplier));
+	protected static Block createWaterFluid(FlowableFluid fluid, float multiplier) {
+		return createFluid(fluid, Settings.copy(WATER).velocityMultiplier(multiplier));
 	}
 
 	static {
-		AIRIAL_MOSS = createBlock("deep_trenches:airial_moss", AirialMossBlock::new, GRASS_BLOCK);
-		BLACK_MARBLE = createCopy("deep_trenches:black_marble", STONE);
-		BLUE_STORCERACK = createCopy("deep_trenches:blue_storcerack", STONE);
-		DRITEAN = createCopy("deep_trenches:dritean", DIRT);
-		ENROTIUM = createBlock("deep_trenches:enrotium", EnrotiumBlock::new, CRIMSON_NYLIUM);
-		GYLDELION_BLOCK = createCopy("deep_trenches:gyldelion_block", IRON_BLOCK);
-
-		STASP_NEST = createBlock("deep_trenches:stasp_nest", StaspNestBlock::new, OAK_WOOD);
-
-		GIANT_VIOLET = createTallFlower("deep_trenches:giant_violet", RED_TULIP);
-		GIANT_VIOLET_LEAF = createCopy("deep_trenches:giant_violet_leaf", COCOA);
-		GIANT_VIOLET_PETAL = createCopy("deep_trenches:giant_violet_petal", COCOA);
-		GIANT_VIOLET_PISTIL = createCopy("deep_trenches:giant_violet_pistil", COCOA);
-
-		CYAN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock("deep_trenches:cyan_bioluminescent_block");
-		GREEN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock("deep_trenches:green_bioluminescent_block");
-		LIGHT_BLUE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock("deep_trenches:light_blue_bioluminescent_block");
-
-		BLACK_PANSY = createFlowerBlock("deep_trenches:black_pansy", RESISTANCE, 9);
-		BLUE_PANSY = createFlowerBlock("deep_trenches:blue_pansy", RESISTANCE, 9);
-		BLUE_POPPY = createFlowerBlock("deep_trenches:blue_poppy", NIGHT_VISION, 8);
-		BLUE_VIOLET = createFlowerBlock("deep_trenches:blue_violet", RESISTANCE, 9);
-		BONNET_SPURGE = createFlowerBlock("deep_trenches:bonnet_spurge", POISON, 8);
-		BROWN_PANSY = createFlowerBlock("deep_trenches:brown_pansy", RESISTANCE, 9);
-		CHOCOLATE_COSMOS_FLOWER = createFlowerBlock("deep_trenches:chocolate_cosmos_flower", COSMOS_BEAUTY, 14);
-		CYAN_BLUE_VIOLET = createFlowerBlock("deep_trenches:cyan_blue_violet", RESISTANCE, 9);
-		CYCAWLER = createStorceanFlower("deep_trenches:cycawler", CYCAWLER_BEAUTY, 24000);
-		GARDEN_PINKS = createFlowerBlock("deep_trenches:garden_pinks", FIRE_RESISTANCE, 6);
-		GREEN_PANSY = createFlowerBlock("deep_trenches:green_pansy", RESISTANCE, 9);
-		GYLDELION_FLOWER = createFlowerBlock("deep_trenches:gyldelion_flower", GLOWING, 12);
-		MARSH_VIOLET = createFlowerBlock("deep_trenches:marsh_violet", RESISTANCE, 9);
-		NATIVE_VIOLET = createFlowerBlock("deep_trenches:native_violet", RESISTANCE, 9);
-		OPIUM_POPPY = createFlowerBlock("deep_trenches:opium_poppy", WEAKNESS, 11);
-		PINK_AND_ORANGE_PANSY = createFlowerBlock("deep_trenches:pink_and_orange_pansy", RESISTANCE, 9);
-		PINK_BRAITOR_FLOWER = createFlowerBlock("deep_trenches:pink_braitor_flower", BRAITOR_BEAUTY, 21);
-		PINK_MARSH_VIOLET = createFlowerBlock("deep_trenches:pink_marsh_violet", RESISTANCE, 9);
-		PINK_ROSE = createFlowerBlock("deep_trenches:pink_rose", FLOWER_BEAUTY, 13);
-		PINK_ROSE_BUSH = createFlowerBlock("deep_trenches:pink_rose_bush", FLOWER_BEAUTY, 13);
-		POPPY = createFlowerBlock("deep_trenches:poppy", NIGHT_VISION, 5);
-		PURPLE_AND_ORANGE_PANSY = createFlowerBlock("deep_trenches:purple_and_orange_pansy", RESISTANCE, 9);
-		RED_BRAITOR_FLOWER = createFlowerBlock("deep_trenches:red_braitor_flower", BRAITOR_BEAUTY, 21);
-		RED_CHOCOLATE_COSMOS_FLOWER = createFlowerBlock("deep_trenches:red_chocolate_cosmos_flower", COSMOS_BEAUTY, 14);
-		RED_PANSY = createFlowerBlock("deep_trenches:red_pansy", RESISTANCE, 9);
-		RED_ROSE = createFlowerBlock("deep_trenches:red_rose", FLOWER_BEAUTY, 13);
-		RUBRA_BLUE_VIOLET = createFlowerBlock("deep_trenches:rubra_blue_violet", RESISTANCE, 9);
-		SPIDREET = createStorceanFlower("deep_trenches:spidreet", REGENERATION, 6);
-		SPIKE_LAVENDER = createFlowerBlock("deep_trenches:spike_lavender", FLOWER_BEAUTY, 6);
-		SPRIDELION = register("deep_trenches:spridelion", new SpridelionBlock(900, Settings.copy(RED_TULIP)));
-		SQUISACLE = createStorceanFlower("deep_trenches:squisacle", LEVITATION, 4);
-		SWEET_VIOLET = createFlowerBlock("deep_trenches:sweet_violet", RESISTANCE, 9);
-		TOPPED_LAVENDER = createFlowerBlock("deep_trenches:topped_lavender", FLOWER_BEAUTY, 6);
-		VASLAME = createStorceanFlower("deep_trenches:vaslame", FIRE_RESISTANCE, 6);
-		WEEPISTIL = createStorceanFlower("deep_trenches:weepistil", NAUSEA, 4);
-		WEEPY_HOLLOWER = createStorceanFlower("deep_trenches:weepy_hollower", GLOWING, 6);
-		WHITE_VIOLET = createFlowerBlock("deep_trenches:white_violet", RESISTANCE, 9);
-		WILD_PANSY = createFlowerBlock("deep_trenches:wild_pansy", RESISTANCE, 9);
-		YELLOW_VIOLET = createFlowerBlock("deep_trenches:yellow_violet", RESISTANCE, 9);
-
-		AIRIAL_BUSH = createBlock("deep_trenches:airial_bush", AirialBushBlock::new, GRASS);
-		HARSHLES = createBlock("deep_trenches:harshles", HarshlesBlock::new, GRASS);
-		REEBLOON = createBlock("deep_trenches:reebloon", ReebloonBlock::new, GRASS);
-		SQUISH_TIPS = createBlock("deep_trenches:squish_tips", SquishTipsBlock::new, GRASS);
-		SPROOM_SPIKE = createBlock("deep_trenches:sproom_spike", SproomSpikeBlock::new, SUNFLOWER);
-
-		BLACK_LILY = createTallFlower("deep_trenches:black_lily", SUNFLOWER);
-		BULLTHORN = createTallFlower("deep_trenches:bullthorn", SUNFLOWER);
-		CACTLOW = createTallFlower("deep_trenches:cactlow", SUNFLOWER);
-		CLAWBULB = createTallFlower("deep_trenches:clawbulb", SUNFLOWER);
-		LIME_SPURGE = createTallFlower("deep_trenches:lime_spurge", SUNFLOWER);
-		LUPIN_FLOWER = createTallFlower("deep_trenches:lupin_flower", SUNFLOWER);
-		ORANGE_LILY = createTallFlower("deep_trenches:orange_lily", SUNFLOWER);
-		PIGAL = createTallFlower("deep_trenches:pigal", SUNFLOWER);
-		PURPROUND = createTallFlower("deep_trenches:purpround", SUNFLOWER);
-		SPRINLY = createTallFlower("deep_trenches:sprinly", SUNFLOWER);
-		VELVET_LILY = createTallFlower("deep_trenches:velvet_lily", SUNFLOWER);
-
-		MURKSTEM = createBlock("deep_trenches:murkstem", MurkstemBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
-		SKALK = createBlock("deep_trenches:skalk", SkalkBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
-
-		DEAD_BLACKGREEN_TREE_CORAL = createDeadCoral("deep_trenches:dead_blackgreen_tree_coral");
-		DEAD_BLACKGREEN_TREE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_blackgreen_tree_coral_block");
-		DEAD_BLACKGREEN_TREE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_blackgreen_tree_coral_fan");
-		DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_blackgreen_tree_coral_wall_fan");
-
-		BLACKGREEN_TREE_CORAL = createCoral("deep_trenches:blackgreen_tree_coral", DEAD_BLACKGREEN_TREE_CORAL);
-		BLACKGREEN_TREE_CORAL_BLOCK = createCoralBlock("deep_trenches:blackgreen_tree_coral_block", DEAD_BLACKGREEN_TREE_CORAL_BLOCK);
-		BLACKGREEN_TREE_CORAL_FAN = createCoralFan("deep_trenches:blackgreen_tree_coral_fan", DEAD_BLACKGREEN_TREE_CORAL_FAN);
-		BLACKGREEN_TREE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:blackgreen_tree_coral_wall_fan", DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN);
-
-		DEAD_BROCCOLI_CORAL = createDeadCoral("deep_trenches:dead_broccoli_coral");
-		DEAD_BROCCOLI_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_broccoli_coral_block");
-		DEAD_BROCCOLI_CORAL_BUBBLES = createDeadCoralBlock("deep_trenches:dead_broccoli_coral_bubbles");
-		DEAD_BROCCOLI_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_broccoli_coral_fan");
-		DEAD_BROCCOLI_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_broccoli_coral_wall_fan");
-
-		BROCCOLI_CORAL = createCoral("deep_trenches:broccoli_coral", DEAD_BROCCOLI_CORAL);
-		BROCCOLI_CORAL_BLOCK = createCoralBlock("deep_trenches:broccoli_coral_block", DEAD_BROCCOLI_CORAL_BLOCK);
-		BROCCOLI_CORAL_BUBBLES = createCoralBlock("deep_trenches:broccoli_coral_bubbles", DEAD_BROCCOLI_CORAL_BUBBLES);
-		BROCCOLI_CORAL_FAN = createCoralFan("deep_trenches:broccoli_coral_fan", DEAD_BROCCOLI_CORAL_FAN);
-		BROCCOLI_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:broccoli_coral_wall_fan", DEAD_BROCCOLI_CORAL_WALL_FAN);
-
-		DEAD_BUBBLEGUM_CORAL = createDeadCoral("deep_trenches:dead_bubblegum_coral");
-		DEAD_BUBBLEGUM_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_bubblegum_coral_block");
-		DEAD_BUBBLEGUM_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_bubblegum_coral_fan");
-		DEAD_BUBBLEGUM_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_bubblegum_coral_wall_fan");
-
-		BUBBLEGUM_CORAL = createCoral("deep_trenches:bubblegum_coral", DEAD_BUBBLEGUM_CORAL);
-		BUBBLEGUM_CORAL_BLOCK = createCoralBlock("deep_trenches:bubblegum_coral_block", DEAD_BUBBLEGUM_CORAL_BLOCK);
-		BUBBLEGUM_CORAL_FAN = createCoralFan("deep_trenches:bubblegum_coral_fan", DEAD_BUBBLEGUM_CORAL_FAN);
-		BUBBLEGUM_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:bubblegum_coral_wall_fan", DEAD_BUBBLEGUM_CORAL_WALL_FAN);
-
-		DEAD_CABBAGE_TREE_CORAL = createDeadCoral("deep_trenches:dead_cabbage_tree_coral");
-		DEAD_CABBAGE_TREE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_cabbage_tree_coral_block");
-		DEAD_CABBAGE_TREE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_cabbage_tree_coral_fan");
-		DEAD_CABBAGE_TREE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_cabbage_tree_coral_wall_fan");
-
-		CABBAGE_TREE_CORAL = createCoral("deep_trenches:cabbage_tree_coral", DEAD_CABBAGE_TREE_CORAL);
-		CABBAGE_TREE_CORAL_BLOCK = createCoralBlock("deep_trenches:cabbage_tree_coral_block", DEAD_CABBAGE_TREE_CORAL_BLOCK);
-		CABBAGE_TREE_CORAL_FAN = createCoralFan("deep_trenches:cabbage_tree_coral_fan", DEAD_CABBAGE_TREE_CORAL_FAN);
-		CABBAGE_TREE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:cabbage_tree_coral_wall_fan", DEAD_CABBAGE_TREE_CORAL_WALL_FAN);
-
-		DEAD_FLOWERTUBE_CORAL = createDeadCoral("deep_trenches:dead_flowertube_coral");
-		DEAD_FLOWERTUBE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_flowertube_coral_block");
-		DEAD_FLOWERTUBE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_flowertube_coral_fan");
-		DEAD_FLOWERTUBE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_flowertube_coral_wall_fan");
-
-		FLOWERTUBE_CORAL = createCoral("deep_trenches:flowertube_coral", DEAD_FLOWERTUBE_CORAL);
-		FLOWERTUBE_CORAL_BLOCK = createCoralBlock("deep_trenches:flowertube_coral_block", DEAD_FLOWERTUBE_CORAL_BLOCK);
-		FLOWERTUBE_CORAL_FAN = createCoralFan("deep_trenches:flowertube_coral_fan", DEAD_FLOWERTUBE_CORAL_FAN);
-		FLOWERTUBE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:flowertube_coral_wall_fan", DEAD_FLOWERTUBE_CORAL_WALL_FAN);
-
-		DEAD_GARNET_SPIRAL_CORAL = createDeadCoral("deep_trenches:dead_garnet_spiral_coral");
-		DEAD_GARNET_SPIRAL_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_garnet_spiral_coral_block");
-		DEAD_GARNET_SPIRAL_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_garnet_spiral_coral_fan");
-		DEAD_GARNET_SPIRAL_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_garnet_spiral_coral_wall_fan");
-
-		GARNET_SPIRAL_CORAL = createCoral("deep_trenches:garnet_spiral_coral", DEAD_GARNET_SPIRAL_CORAL);
-		GARNET_SPIRAL_CORAL_BLOCK = createCoralBlock("deep_trenches:garnet_spiral_coral_block", DEAD_GARNET_SPIRAL_CORAL_BLOCK);
-		GARNET_SPIRAL_CORAL_FAN = createCoralFan("deep_trenches:garnet_spiral_coral_fan", DEAD_GARNET_SPIRAL_CORAL_FAN);
-		GARNET_SPIRAL_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:garnet_spiral_coral_wall_fan", DEAD_GARNET_SPIRAL_CORAL_WALL_FAN);
-
-		DEAD_GLOW_FOREST_CORAL = createBlock("deep_trenches:dead_glow_forest_coral", DeadTallCoralBlock::new, DEAD_TUBE_CORAL);
-		DEAD_GLOW_FOREST_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_glow_forest_coral_block");
-		DEAD_GLOW_FOREST_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_glow_forest_coral_fan");
-		DEAD_GLOW_FOREST_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_glow_forest_coral_wall_fan");
-
-		GLOW_FOREST_CORAL = register("deep_trenches:glow_forest_coral", new TallCoralBlock(DEAD_GLOW_FOREST_CORAL, Settings.copy(TUBE_CORAL)));
-		GLOW_FOREST_CORAL_BLOCK = createCoralBlock("deep_trenches:glow_forest_coral_block", DEAD_GLOW_FOREST_CORAL_BLOCK);
-		GLOW_FOREST_CORAL_FAN = createCoralFan("deep_trenches:glow_forest_coral_fan", DEAD_GLOW_FOREST_CORAL_FAN);
-		GLOW_FOREST_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:glow_forest_coral_wall_fan", DEAD_GLOW_FOREST_CORAL_WALL_FAN);
-
-		DEAD_GLOWTONGUE_TUBE_CORAL = createDeadCoral("deep_trenches:dead_glowtongue_tube_coral");
-		DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_glowtongue_tube_coral_block");
-		DEAD_GLOWTONGUE_TUBE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_glowtongue_tube_coral_fan");
-		DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_glowtongue_tube_coral_wall_fan");
-
-		GLOWTONGUE_TUBE_CORAL = createCoral("deep_trenches:glowtongue_tube_coral", DEAD_GLOWTONGUE_TUBE_CORAL);
-		GLOWTONGUE_TUBE_CORAL_BLOCK = createCoralBlock("deep_trenches:glowtongue_tube_coral_block", DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK);
-		GLOWTONGUE_TUBE_CORAL_FAN = createCoralFan("deep_trenches:glowtongue_tube_coral_fan", DEAD_GLOWTONGUE_TUBE_CORAL_FAN);
-		GLOWTONGUE_TUBE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:glowtongue_tube_coral_wall_fan", DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN);
-
-		DEAD_IVORY_CORAL = createDeadCoral("deep_trenches:dead_ivory_coral");
-		DEAD_IVORY_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_ivory_coral_block");
-		DEAD_IVORY_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_ivory_coral_fan");
-		DEAD_IVORY_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_ivory_coral_wall_fan");
-
-		IVORY_CORAL = createCoral("deep_trenches:ivory_coral", DEAD_IVORY_CORAL);
-		IVORY_CORAL_BLOCK = createCoralBlock("deep_trenches:ivory_coral_block", DEAD_IVORY_CORAL_BLOCK);
-		IVORY_CORAL_FAN = createCoralFan("deep_trenches:ivory_coral_fan", DEAD_IVORY_CORAL_FAN);
-		IVORY_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:ivory_coral_wall_fan", DEAD_IVORY_CORAL_WALL_FAN);
-
-		DEAD_LIME_BRAIN_CORAL = createDeadCoral("deep_trenches:dead_lime_brain_coral");
-		DEAD_LIME_BRAIN_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_lime_brain_coral_block");
-		DEAD_LIME_BRAIN_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_lime_brain_coral_fan");
-		DEAD_LIME_BRAIN_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_lime_brain_coral_wall_fan");
-
-		LIME_BRAIN_CORAL = createCoral("deep_trenches:lime_brain_coral", DEAD_LIME_BRAIN_CORAL);
-		LIME_BRAIN_CORAL_BLOCK = createCoralBlock("deep_trenches:lime_brain_coral_block", DEAD_LIME_BRAIN_CORAL_BLOCK);
-		LIME_BRAIN_CORAL_FAN = createCoralFan("deep_trenches:lime_brain_coral_fan", DEAD_LIME_BRAIN_CORAL_FAN);
-		LIME_BRAIN_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:lime_brain_coral_wall_fan", DEAD_LIME_BRAIN_CORAL_WALL_FAN);
-
-		DEAD_LOPHELIA_CORAL = createDeadCoral("deep_trenches:dead_lophelia_coral");
-		DEAD_LOPHELIA_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_lophelia_coral_block");
-		DEAD_LOPHELIA_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_lophelia_coral_fan");
-		DEAD_LOPHELIA_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_lophelia_coral_wall_fan");
-
-		LOPHELIA_CORAL = createCoral("deep_trenches:lophelia_coral", DEAD_LOPHELIA_CORAL);
-		LOPHELIA_CORAL_BLOCK = createCoralBlock("deep_trenches:lophelia_coral_block", DEAD_LOPHELIA_CORAL_BLOCK);
-		LOPHELIA_CORAL_FAN = createCoralFan("deep_trenches:lophelia_coral_fan", DEAD_LOPHELIA_CORAL_FAN);
-		LOPHELIA_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:lophelia_coral_wall_fan", DEAD_LOPHELIA_CORAL_WALL_FAN);
-
-		DEAD_PIPE_ORGAN_CORAL = createDeadCoral("deep_trenches:dead_pipe_organ_coral");
-		DEAD_PIPE_ORGAN_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_pipe_organ_coral_block");
-		DEAD_PIPE_ORGAN_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_pipe_organ_coral_fan");
-		DEAD_PIPE_ORGAN_TENTACLES = createDeadCoral("deep_trenches:dead_pipe_organ_tentacles");
-		DEAD_PIPE_ORGAN_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_pipe_organ_coral_wall_fan");
-
-		PIPE_ORGAN_CORAL = createCoral("deep_trenches:pipe_organ_coral", DEAD_PIPE_ORGAN_CORAL);
-		PIPE_ORGAN_CORAL_BLOCK = createCoralBlock("deep_trenches:pipe_organ_coral_block", DEAD_PIPE_ORGAN_CORAL_BLOCK);
-		PIPE_ORGAN_CORAL_FAN = createCoralFan("deep_trenches:pipe_organ_coral_fan", DEAD_PIPE_ORGAN_CORAL_FAN);
-		PIPE_ORGAN_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:pipe_organ_coral_wall_fan", DEAD_PIPE_ORGAN_CORAL_WALL_FAN);
-		PIPE_ORGAN_TENTACLES = createCoral("deep_trenches:pipe_organ_tentacles", DEAD_PIPE_ORGAN_TENTACLES);
-
-		DEAD_RED_TREE_CORAL = createDeadCoral("deep_trenches:dead_red_tree_coral");
-		DEAD_RED_TREE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_red_tree_coral_block");
-		DEAD_RED_TREE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_red_tree_coral_fan");
-		DEAD_RED_TREE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_red_tree_coral_wall_fan");
-
-		RED_TREE_CORAL = createCoral("deep_trenches:red_tree_coral", DEAD_RED_TREE_CORAL);
-		RED_TREE_CORAL_BLOCK = createCoralBlock("deep_trenches:red_tree_coral_block", DEAD_RED_TREE_CORAL);
-		RED_TREE_CORAL_FAN = createCoralFan("deep_trenches:red_tree_coral_fan", DEAD_RED_TREE_CORAL_FAN);
-		RED_TREE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:red_tree_coral_wall_fan", DEAD_RED_TREE_CORAL_WALL_FAN);
-
-		DEAD_SEAFAN_CORAL = createDeadCoral("deep_trenches:dead_seafan_coral");
-		DEAD_SEAFAN_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_seafan_coral_block");
-		DEAD_SEAFAN_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_seafan_coral_fan");
-		DEAD_SEAFAN_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_seafan_coral_wall_fan");
-
-		SEAFAN_CORAL = createCoral("deep_trenches:seafan_coral", DEAD_SEAFAN_CORAL);
-		SEAFAN_CORAL_BLOCK = createCoralBlock("deep_trenches:seafan_coral_block", DEAD_SEAFAN_CORAL_BLOCK);
-		SEAFAN_CORAL_FAN = createCoralFan("deep_trenches:seafan_coral_fan", DEAD_SEAFAN_CORAL_FAN);
-		SEAFAN_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:seafan_coral_wall_fan", DEAD_SEAFAN_CORAL_WALL_FAN);
-
-		DEAD_STRAIGHT_WILLOW_CORAL = createDeadCoral("deep_trenches:dead_straight_willow_coral");
-		DEAD_STRAIGHT_WILLOW_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_straight_willow_coral_block");
-		DEAD_STRAIGHT_WILLOW_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_straight_willow_coral_fan");
-		DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_straight_willow_coral_wall_fan");
-
-		STRAIGHT_WILLOW_CORAL = createCoral("deep_trenches:straight_willow_coral", DEAD_STRAIGHT_WILLOW_CORAL);
-		STRAIGHT_WILLOW_CORAL_BLOCK = createCoralBlock("deep_trenches:straight_willow_coral_block", DEAD_STRAIGHT_WILLOW_CORAL_BLOCK);
-		STRAIGHT_WILLOW_CORAL_FAN = createCoralFan("deep_trenches:straight_willow_coral_fan", DEAD_STRAIGHT_WILLOW_CORAL_FAN);
-		STRAIGHT_WILLOW_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:straight_willow_coral_wall_fan", DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN);
-
-		DEAD_SUNRISE_CORAL = createDeadCoral("deep_trenches:dead_sunrise_coral");
-		DEAD_SUNRISE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_sunrise_coral_block");
-		DEAD_SUNRISE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_sunrise_coral_fan");
-		DEAD_SUNRISE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_sunrise_coral_wall_fan");
-
-		SUNRISE_CORAL = createCoral("deep_trenches:sunrise_coral", DEAD_SUNRISE_CORAL);
-		SUNRISE_CORAL_BLOCK = createCoralBlock("deep_trenches:sunrise_coral_block", DEAD_SUNRISE_CORAL_BLOCK);
-		SUNRISE_CORAL_FAN = createCoralFan("deep_trenches:sunrise_coral_fan", DEAD_SUNRISE_CORAL_FAN);
-		SUNRISE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:sunrise_coral_wall_fan", DEAD_SUNRISE_CORAL_WALL_FAN);
-
-		DEAD_TABLE_CORAL = createDeadCoral("deep_trenches:dead_table_coral");
-		DEAD_TABLE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_table_coral_block");
-		DEAD_TABLE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_table_coral_fan");
-		DEAD_TABLE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_table_coral_wall_fan");
-
-		TABLE_CORAL = createCoral("deep_trenches:table_coral", DEAD_TABLE_CORAL);
-		TABLE_CORAL_BLOCK = createCoralBlock("deep_trenches:table_coral_block", DEAD_TABLE_CORAL_BLOCK);
-		TABLE_CORAL_FAN = createCoralFan("deep_trenches:table_coral_fan", DEAD_TABLE_CORAL_FAN);
-		TABLE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:table_coral_wall_fan", DEAD_TABLE_CORAL_WALL_FAN);
-
-		DEAD_THIN_BLADE_CORAL = createDeadCoral("deep_trenches:dead_thin_blade_coral");
-		DEAD_THIN_BLADE_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_thin_blade_coral_block");
-		DEAD_THIN_BLADE_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_thin_blade_coral_fan");
-		DEAD_THIN_BLADE_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_thin_blade_coral_wall_fan");
-
-		THIN_BLADE_CORAL = createCoral("deep_trenches:thin_blade_coral", DEAD_THIN_BLADE_CORAL);
-		THIN_BLADE_CORAL_BLOCK = createCoralBlock("deep_trenches:thin_blade_coral_block", DEAD_THIN_BLADE_CORAL_BLOCK);
-		THIN_BLADE_CORAL_FAN = createCoralFan("deep_trenches:thin_blade_coral_fan", DEAD_THIN_BLADE_CORAL_FAN);
-		THIN_BLADE_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:thin_blade_coral_wall_fan", DEAD_THIN_BLADE_CORAL_WALL_FAN);
-
-		DEAD_TRUMPETEAR_CORAL = createDeadCoral("deep_trenches:dead_trumpetear_coral");
-		DEAD_TRUMPETEAR_CORAL_BLOCK = createDeadCoralBlock("deep_trenches:dead_trumpetear_coral_block");
-		DEAD_TRUMPETEAR_CORAL_FAN = createDeadCoralFan("deep_trenches:dead_trumpetear_coral_fan");
-		DEAD_TRUMPETEAR_CORAL_WALL_FAN = createDeadCoralWallFan("deep_trenches:dead_trumpetear_coral_wall_fan");
-
-		TRUMPETEAR_CORAL = createCoral("deep_trenches:trumpetear_coral", DEAD_TRUMPETEAR_CORAL);
-		TRUMPETEAR_CORAL_BLOCK = createCoralBlock("deep_trenches:trumpetear_coral_block", DEAD_TRUMPETEAR_CORAL_BLOCK);
-		TRUMPETEAR_CORAL_FAN = createCoralFan("deep_trenches:trumpetear_coral_fan", DEAD_TRUMPETEAR_CORAL_FAN);
-		TRUMPETEAR_CORAL_WALL_FAN = createCoralWallFan("deep_trenches:trumpetear_coral_wall_fan", DEAD_TRUMPETEAR_CORAL_WALL_FAN);
-
-		ALMOND_BUTTON = createOakButton("deep_trenches:almond_button");
-		ALMOND_DOOR = createOakDoor("deep_trenches:almond_door");
-		ALMOND_FENCE = createOakFence("deep_trenches:almond_fence");
-		ALMOND_FENCE_GATE = createOakFenceGate("deep_trenches:almond_fence_gate");
-		ALMOND_LEAVES = createOakLeaves("deep_trenches:almond_leaves");
-		ALMOND_LOG = createOakLog("deep_trenches:almond_log");
-		ALMOND_PLANKS = createOakPlanks("deep_trenches:almond_planks");
-		ALMOND_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:almond_pressure_plate");
-		ALMOND_SAPLING = createOakSapling("deep_trenches:almond_sapling", SaplingGenerators.ALMOND);
-		ALMOND_SIGN = createOakSign("deep_trenches:almond_sign", SignTypes.ALMOND);
-		ALMOND_SLAB = createOakSlab("deep_trenches:almond_slab");
-		ALMOND_STAIRS = createOakStairs("deep_trenches:almond_stairs", ALMOND_PLANKS);
-		ALMOND_TRAPDOOR = createOakTrapdoor("deep_trenches:almond_trapdoor");
-		ALMOND_WALL_SIGN = createOakWallSign("deep_trenches:almond_wall_sign", SignTypes.ALMOND);
-		ALMOND_WOOD = createOakWood("deep_trenches:almond_wood");
-
-		ANAMEATA_BUTTON = createOakButton("deep_trenches:anameata_button");
-		ANAMEATA_CAP = createCap("deep_trenches:anameata_cap");
-		ANAMEATA_DOOR = createOakDoor("deep_trenches:anameata_door");
-		ANAMEATA_FENCE = createOakFence("deep_trenches:anameata_fence");
-		ANAMEATA_FENCE_GATE = createOakFenceGate("deep_trenches:anameata_fence_gate");
-		ANAMEATA_LOG = createOakLog("deep_trenches:anameata_log");
-		ANAMEATA_PLANKS = createOakPlanks("deep_trenches:anameata_planks");
-		ANAMEATA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:anameata_pressure_plate");
-		ANAMEATA_SAPLING = createOakSapling("deep_trenches:anameata_sapling", SaplingGenerators.ANAMEATA);
-		ANAMEATA_SIGN = createOakSign("deep_trenches:anameata_sign", SignTypes.ANAMEATA);
-		ANAMEATA_SLAB = createOakSlab("deep_trenches:anameata_slab");
-		ANAMEATA_STAIRS = createOakStairs("deep_trenches:anameata_stairs", ANAMEATA_PLANKS);
-		ANAMEATA_TRAPDOOR = createOakTrapdoor("deep_trenches:anameata_trapdoor");
-		ANAMEATA_WALL_SIGN = createOakWallSign("deep_trenches:anameata_wall_sign", SignTypes.ANAMEATA);
-		ANAMEATA_WOOD = createOakWood("deep_trenches:anameata_wood");
-
-		ANGELS_TRUMPET_BUTTON = createOakButton("deep_trenches:angels_trumpet_button");
-		ANGELS_TRUMPET_DOOR = createOakDoor("deep_trenches:angels_trumpet_door");
-		ANGELS_TRUMPET_FENCE = createOakFence("deep_trenches:angels_trumpet_fence");
-		ANGELS_TRUMPET_FENCE_GATE = createOakFenceGate("deep_trenches:angels_trumpet_fence_gate");
-		ANGELS_TRUMPET_LEAVES = createOakLeaves("deep_trenches:angels_trumpet_leaves");
-		ANGELS_TRUMPET_LOG = createOakLog("deep_trenches:angels_trumpet_log");
-		ANGELS_TRUMPET_PLANKS = createOakPlanks("deep_trenches:angels_trumpet_planks");
-		ANGELS_TRUMPET_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:angels_trumpet_pressure_plate");
-		ANGELS_TRUMPET_SAPLING = createOakSapling("deep_trenches:angels_trumpet_sapling", SaplingGenerators.ANGELS_TRUMPET);
-		ANGELS_TRUMPET_SIGN = createOakSign("deep_trenches:angels_trumpet_sign", SignTypes.ANGELS_TRUMPET);
-		ANGELS_TRUMPET_SLAB = createOakSlab("deep_trenches:angels_trumpet_slab");
-		ANGELS_TRUMPET_STAIRS = createOakStairs("deep_trenches:angels_trumpet_stairs", ANGELS_TRUMPET_PLANKS);
-		ANGELS_TRUMPET_TRAPDOOR = createOakTrapdoor("deep_trenches:angels_trumpet_trapdoor");
-		ANGELS_TRUMPET_WALL_SIGN = createOakWallSign("deep_trenches:angels_trumpet_wall_sign", SignTypes.ANGELS_TRUMPET);
-		ANGELS_TRUMPET_WOOD = createOakWood("deep_trenches:angels_trumpet_wood");
-
-		AQUEAN_BUTTON = createOakButton("deep_trenches:aquean_button");
-		AQUEAN_DOOR = createOakDoor("deep_trenches:aquean_door");
-		AQUEAN_FENCE = createOakFence("deep_trenches:aquean_fence");
-		AQUEAN_FENCE_GATE = createOakFenceGate("deep_trenches:aquean_fence_gate");
-		AQUEAN_LEAVES = createOakLeaves("deep_trenches:aquean_leaves");
-		AQUEAN_LOG = createOakLog("deep_trenches:aquean_log");
-		AQUEAN_PLANKS = createOakPlanks("deep_trenches:aquean_planks");
-		AQUEAN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:aquean_pressure_plate");
-		AQUEAN_SAPLING = createOakSapling("deep_trenches:aquean_sapling", SaplingGenerators.AQUEAN);
-		AQUEAN_SIGN = createOakSign("deep_trenches:aquean_sign", SignTypes.AQUEAN);
-		AQUEAN_SLAB = createOakSlab("deep_trenches:aquean_slab");
-		AQUEAN_STAIRS = createOakStairs("deep_trenches:aquean_stairs", AQUEAN_PLANKS);
-		AQUEAN_TRAPDOOR = createOakTrapdoor("deep_trenches:aquean_trapdoor");
-		AQUEAN_WALL_SIGN = createOakWallSign("deep_trenches:aquean_wall_sign", SignTypes.AQUEAN);
-		AQUEAN_WOOD = createOakWood("deep_trenches:aquean_wood");
-
-		BARSHROOKLE_BUTTON = createOakButton("deep_trenches:barshrookle_button");
-		BARSHROOKLE_CAP = createCap("deep_trenches:barshrookle_cap");
-		BARSHROOKLE_DOOR = createOakDoor("deep_trenches:barshrookle_door");
-		BARSHROOKLE_FENCE = createOakFence("deep_trenches:barshrookle_fence");
-		BARSHROOKLE_FENCE_GATE = createOakFenceGate("deep_trenches:barshrookle_fence_gate");
-		BARSHROOKLE_LOG = createOakLog("deep_trenches:barshrookle_log");
-		BARSHROOKLE_PLANKS = createOakPlanks("deep_trenches:barshrookle_planks");
-		BARSHROOKLE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:barshrookle_pressure_plate");
-		BARSHROOKLE_SAPLING = createAcuaticFungus("deep_trenches:barshrookle_sapling", SaplingGenerators.BARSHROOKLE);
-		BARSHROOKLE_SIGN = createOakSign("deep_trenches:barshrookle_sign", SignTypes.BARSHROOKLE);
-		BARSHROOKLE_SLAB = createOakSlab("deep_trenches:barshrookle_slab");
-		BARSHROOKLE_STAIRS = createOakStairs("deep_trenches:barshrookle_stairs", BARSHROOKLE_PLANKS);
-		BARSHROOKLE_TRAPDOOR = createOakTrapdoor("deep_trenches:barshrookle_trapdoor");
-		BARSHROOKLE_WALL_SIGN = createOakWallSign("deep_trenches:barshrookle_wall_sign", SignTypes.BARSHROOKLE);
-		BARSHROOKLE_WOOD = createOakWood("deep_trenches:barshrookle_wood");
-
-		BLACK_BIRCH_BUTTON = createOakButton("deep_trenches:black_birch_button");
-		BLACK_BIRCH_DOOR = createOakDoor("deep_trenches:black_birch_door");
-		BLACK_BIRCH_FENCE = createOakFence("deep_trenches:black_birch_fence");
-		BLACK_BIRCH_FENCE_GATE = createOakFenceGate("deep_trenches:black_birch_fence_gate");
-		BLACK_BIRCH_LEAVES = createOakLeaves("deep_trenches:black_birch_leaves");
-		BLACK_BIRCH_LOG = createOakLog("deep_trenches:black_birch_log");
-		BLACK_BIRCH_PLANKS = createOakPlanks("deep_trenches:black_birch_planks");
-		BLACK_BIRCH_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:black_birch_pressure_plate");
-		BLACK_BIRCH_SAPLING = createOakSapling("deep_trenches:black_birch_sapling", SaplingGenerators.BLACK_BIRCH);
-		BLACK_BIRCH_SIGN = createOakSign("deep_trenches:black_birch_sign", SignTypes.BLACK_BIRCH);
-		BLACK_BIRCH_SLAB = createOakSlab("deep_trenches:black_birch_slab");
-		BLACK_BIRCH_STAIRS = createOakStairs("deep_trenches:black_birch_stairs", BLACK_BIRCH_PLANKS);
-		BLACK_BIRCH_TRAPDOOR = createOakTrapdoor("deep_trenches:black_birch_trapdoor");
-		BLACK_BIRCH_WALL_SIGN = createOakWallSign("deep_trenches:black_birch_wall_sign", SignTypes.BLACK_BIRCH);
-		BLACK_BIRCH_WOOD = createOakWood("deep_trenches:black_birch_wood");
-
-		BLUE_MAHOE_BUTTON = createOakButton("deep_trenches:blue_mahoe_button");
-		BLUE_MAHOE_DOOR = createOakDoor("deep_trenches:blue_mahoe_door");
-		BLUE_MAHOE_FENCE = createOakFence("deep_trenches:blue_mahoe_fence");
-		BLUE_MAHOE_FENCE_GATE = createOakFenceGate("deep_trenches:blue_mahoe_fence_gate");
-		BLUE_MAHOE_FLOWER = createBlock("deep_trenches:blue_mahoe_flower", BlueMahoeFlower::new, OAK_LEAVES);
-		BLUE_MAHOE_LEAVES = createOakLeaves("deep_trenches:blue_mahoe_leaves");
-		BLUE_MAHOE_LOG = createOakLog("deep_trenches:blue_mahoe_log");
-		BLUE_MAHOE_PLANKS = createOakPlanks("deep_trenches:blue_mahoe_planks");
-		BLUE_MAHOE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:blue_mahoe_pressure_plate");
-		BLUE_MAHOE_SAPLING = createOakSapling("deep_trenches:blue_mahoe_sapling", SaplingGenerators.BLUE_MAHOE);
-		BLUE_MAHOE_SIGN = createOakSign("deep_trenches:blue_mahoe_sign", SignTypes.BLUE_MAHOE);
-		BLUE_MAHOE_SLAB = createOakSlab("deep_trenches:blue_mahoe_slab");
-		BLUE_MAHOE_STAIRS = createOakStairs("deep_trenches:blue_mahoe_stairs", BLUE_MAHOE_PLANKS);
-		BLUE_MAHOE_TRAPDOOR = createOakTrapdoor("deep_trenches:blue_mahoe_trapdoor");
-		BLUE_MAHOE_WALL_SIGN = createOakWallSign("deep_trenches:blue_mahoe_wall_sign", SignTypes.BLUE_MAHOE);
-		BLUE_MAHOE_WOOD = createOakWood("deep_trenches:blue_mahoe_wood");
-
-		BLUE_SPRUCE_BUTTON = createOakButton("deep_trenches:blue_spruce_button");
-		BLUE_SPRUCE_DOOR = createOakDoor("deep_trenches:blue_spruce_door");
-		BLUE_SPRUCE_FENCE = createOakFence("deep_trenches:blue_spruce_fence");
-		BLUE_SPRUCE_FENCE_GATE = createOakFenceGate("deep_trenches:blue_spruce_fence_gate");
-		BLUE_SPRUCE_LEAVES = createOakLeaves("deep_trenches:blue_spruce_leaves");
-		BLUE_SPRUCE_LOG = createOakLog("deep_trenches:blue_spruce_log");
-		BLUE_SPRUCE_PLANKS = createOakPlanks("deep_trenches:blue_spruce_planks");
-		BLUE_SPRUCE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:blue_spruce_pressure_plate");
-		BLUE_SPRUCE_SAPLING = createOakSapling("deep_trenches:blue_spruce_sapling", SaplingGenerators.BLUE_SPRUCE);
-		BLUE_SPRUCE_SIGN = createOakSign("deep_trenches:blue_spruce_sign", SignTypes.BLUE_SPRUCE);
-		BLUE_SPRUCE_SLAB = createOakSlab("deep_trenches:blue_spruce_slab");
-		BLUE_SPRUCE_STAIRS = createOakStairs("deep_trenches:blue_spruce_stairs", BLUE_SPRUCE_PLANKS);
-		BLUE_SPRUCE_TRAPDOOR = createOakTrapdoor("deep_trenches:blue_spruce_trapdoor");
-		BLUE_SPRUCE_WALL_SIGN = createOakWallSign("deep_trenches:blue_spruce_wall_sign", SignTypes.BLUE_SPRUCE);
-		BLUE_SPRUCE_WOOD = createOakWood("deep_trenches:blue_spruce_wood");
-
-		BOTTLEBRUSH_BUTTON = createOakButton("deep_trenches:bottlebrush_button");
-		BOTTLEBRUSH_DOOR = createOakDoor("deep_trenches:bottlebrush_door");
-		BOTTLEBRUSH_FENCE = createOakFence("deep_trenches:bottlebrush_fence");
-		BOTTLEBRUSH_FENCE_GATE = createOakFenceGate("deep_trenches:bottlebrush_fence_gate");
-		BOTTLEBRUSH_FLOWERS = createBlock("deep_trenches:bottlebrush_flowers", BottlebrushFlowersBlock::new, OAK_LEAVES);
-		BOTTLEBRUSH_LEAVES = createOakLeaves("deep_trenches:bottlebrush_leaves");
-		BOTTLEBRUSH_LOG = createOakLog("deep_trenches:bottlebrush_log");
-		BOTTLEBRUSH_PLANKS = createOakPlanks("deep_trenches:bottlebrush_planks");
-		BOTTLEBRUSH_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:bottlebrush_pressure_plate");
-		BOTTLEBRUSH_SAPLING = createOakSapling("deep_trenches:bottlebrush_sapling", SaplingGenerators.BOTTLEBRUSH);
-		BOTTLEBRUSH_SIGN = createOakSign("deep_trenches:bottlebrush_sign", SignTypes.BOTTLEBRUSH);
-		BOTTLEBRUSH_SLAB = createOakSlab("deep_trenches:bottlebrush_slab");
-		BOTTLEBRUSH_STAIRS = createOakStairs("deep_trenches:bottlebrush_stairs", BOTTLEBRUSH_PLANKS);
-		BOTTLEBRUSH_TRAPDOOR = createOakTrapdoor("deep_trenches:bottlebrush_trapdoor");
-		BOTTLEBRUSH_WALL_SIGN = createOakWallSign("deep_trenches:bottlebrush_wall_sign", SignTypes.BOTTLEBRUSH);
-		BOTTLEBRUSH_WOOD = createOakWood("deep_trenches:bottlebrush_wood");
-
-		BROMYA_BUTTON = createOakButton("deep_trenches:bromya_button");
-		BROMYA_DOOR = createOakDoor("deep_trenches:bromya_door");
-		BROMYA_FENCE = createOakFence("deep_trenches:bromya_fence");
-		BROMYA_FENCE_GATE = createOakFenceGate("deep_trenches:bromya_fence_gate");
-		BROMYA_FLOWER = createTallFlower("deep_trenches:bromya_flower", ROSE_BUSH);
-		BROMYA_LEAVES = createOakLeaves("deep_trenches:bromya_leaves");
-		BROMYA_LOG = createOakLog("deep_trenches:bromya_log");
-		BROMYA_PLANKS = createOakPlanks("deep_trenches:bromya_planks");
-		BROMYA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:bromya_pressure_plate");
-		BROMYA_SAPLING = createOakSapling("deep_trenches:bromya_sapling", SaplingGenerators.BROMYA);
-		BROMYA_SIGN = createOakSign("deep_trenches:bromya_sign", SignTypes.BROMYA);
-		BROMYA_SLAB = createOakSlab("deep_trenches:bromya_slab");
-		BROMYA_STAIRS = createOakStairs("deep_trenches:bromya_stairs", BROMYA_PLANKS);
-		BROMYA_TRAPDOOR = createOakTrapdoor("deep_trenches:bromya_trapdoor");
-		BROMYA_WALL_SIGN = createOakWallSign("deep_trenches:bromya_wall_sign", SignTypes.BROMYA);
-		BROMYA_WOOD = createOakWood("deep_trenches:bromya_wood");
-
-		BUBBLETREE_BUBBLES = createCap("deep_trenches:bubbletree_bubbles");
-		BUBBLETREE_BUTTON = createOakButton("deep_trenches:bubbletree_button");
-		BUBBLETREE_DOOR = createOakDoor("deep_trenches:bubbletree_door");
-		BUBBLETREE_FENCE = createOakFence("deep_trenches:bubbletree_fence");
-		BUBBLETREE_FENCE_GATE = createOakFenceGate("deep_trenches:bubbletree_fence_gate");
-		BUBBLETREE_LOG = createOakLog("deep_trenches:bubbletree_log");
-		BUBBLETREE_PLANKS = createOakPlanks("deep_trenches:bubbletree_planks");
-		BUBBLETREE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:bubbletree_pressure_plate");
-		BUBBLETREE_SAPLING = createOakSapling("deep_trenches:bubbletree_sapling", SaplingGenerators.BUBBLETREE);
-		BUBBLETREE_SIGN = createOakSign("deep_trenches:bubbletree_sign", SignTypes.BUBBLETREE);
-		BUBBLETREE_SLAB = createOakSlab("deep_trenches:bubbletree_slab");
-		BUBBLETREE_STAIRS = createOakStairs("deep_trenches:bubbletree_stairs", BUBBLETREE_PLANKS);
-		BUBBLETREE_TRAPDOOR = createOakTrapdoor("deep_trenches:bubbletree_trapdoor");
-		BUBBLETREE_WALL_SIGN = createOakWallSign("deep_trenches:bubbletree_wall_sign", SignTypes.BUBBLETREE);
-		BUBBLETREE_WOOD = createOakWood("deep_trenches:bubbletree_wood");
-
-		CALCEARB_BUTTON = createOakButton("deep_trenches:calcearb_button");
-		CALCEARB_DOOR = createOakDoor("deep_trenches:calcearb_door");
-		CALCEARB_FENCE = createOakFence("deep_trenches:calcearb_fence");
-		CALCEARB_FENCE_GATE = createOakFenceGate("deep_trenches:calcearb_fence_gate");
-		CALCEARB_LEAVES = createOakLeaves("deep_trenches:calcearb_leaves");
-		CALCEARB_LOG = createOakLog("deep_trenches:calcearb_log");
-		CALCEARB_PLANKS = createOakPlanks("deep_trenches:calcearb_planks");
-		CALCEARB_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:calcearb_pressure_plate");
-		CALCEARB_SAPLING = createOakSapling("deep_trenches:calcearb_sapling", SaplingGenerators.CALCEARB);
-		CALCEARB_SIGN = createOakSign("deep_trenches:calcearb_sign", SignTypes.CALCEARB);
-		CALCEARB_SLAB = createOakSlab("deep_trenches:calcearb_slab");
-		CALCEARB_STAIRS = createOakStairs("deep_trenches:calcearb_stairs", CALCEARB_PLANKS);
-		CALCEARB_TRAPDOOR = createOakTrapdoor("deep_trenches:calcearb_trapdoor");
-		CALCEARB_WALL_SIGN = createOakWallSign("deep_trenches:calcearb_wall_sign", SignTypes.CALCEARB);
-		CALCEARB_WOOD = createOakWood("deep_trenches:calcearb_wood");
-
-		CHERRY_BUTTON = createOakButton("deep_trenches:cherry_button");
-		CHERRY_DOOR = createOakDoor("deep_trenches:cherry_door");
-		CHERRY_FENCE = createOakFence("deep_trenches:cherry_fence");
-		CHERRY_FENCE_GATE = createOakFenceGate("deep_trenches:cherry_fence_gate");
-		CHERRY_LEAVES = createOakLeaves("deep_trenches:cherry_leaves");
-		CHERRY_LOG = createOakLog("deep_trenches:cherry_log");
-		CHERRY_PLANKS = createOakPlanks("deep_trenches:cherry_planks");
-		CHERRY_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:cherry_pressure_plate");
-		CHERRY_SAPLING = createOakSapling("deep_trenches:cherry_sapling", SaplingGenerators.CHERRY);
-		CHERRY_SIGN = createOakSign("deep_trenches:cherry_sign", SignTypes.CHERRY);
-		CHERRY_SLAB = createOakSlab("deep_trenches:cherry_slab");
-		CHERRY_STAIRS = createOakStairs("deep_trenches:cherry_stairs", CHERRY_PLANKS);
-		CHERRY_TRAPDOOR = createOakTrapdoor("deep_trenches:cherry_trapdoor");
-		CHERRY_WALL_SIGN = createOakWallSign("deep_trenches:cherry_wall_sign", SignTypes.CHERRY);
-		CHERRY_WOOD = createOakWood("deep_trenches:cherry_wood");
-
-		CHOTORN_SAPLING = createOakSapling("deep_trenches:chotorn", SaplingGenerators.CHOTORN);
-		CHOTORN_BUTTON = createOakButton("deep_trenches:chotorn_button");
-		CHOTORN_DOOR = createOakDoor("deep_trenches:chotorn_door");
-		CHOTORN_FENCE = createOakFence("deep_trenches:chotorn_fence");
-		CHOTORN_FENCE_GATE = createOakFenceGate("deep_trenches:chotorn_fence_gate");
-		CHOTORN_LOG = createOakLog("deep_trenches:chotorn_log");
-		CHOTORN_PLANKS = createOakPlanks("deep_trenches:chotorn_planks");
-		CHOTORN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:chotorn_pressure_plate");
-		CHOTORN_SIGN = createOakSign("deep_trenches:chotorn_sign", SignTypes.CHOTORN);
-		CHOTORN_SLAB = createOakSlab("deep_trenches:chotorn_slab");
-		CHOTORN_STAIRS = createOakStairs("deep_trenches:chotorn_stairs", CHOTORN_PLANKS);
-		CHOTORN_TRAPDOOR = createOakTrapdoor("deep_trenches:chotorn_trapdoor");
-		CHOTORN_WALL_SIGN = createOakWallSign("deep_trenches:chotorn_wall_sign", SignTypes.CHOTORN);
-		CHOTORN_WOOD = createOakWood("deep_trenches:chotorn_wood");
-
-		COOK_PINE_BUTTON = createOakButton("deep_trenches:cook_pine_button");
-		COOK_PINE_DOOR = createOakDoor("deep_trenches:cook_pine_door");
-		COOK_PINE_FENCE = createOakFence("deep_trenches:cook_pine_fence");
-		COOK_PINE_FENCE_GATE = createOakFenceGate("deep_trenches:cook_pine_fence_gate");
-		COOK_PINE_LEAVES = createOakLeaves("deep_trenches:cook_pine_leaves");
-		COOK_PINE_LOG = createOakLog("deep_trenches:cook_pine_log");
-		COOK_PINE_PLANKS = createOakPlanks("deep_trenches:cook_pine_planks");
-		COOK_PINE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:cook_pine_pressure_plate");
-		COOK_PINE_SAPLING = createOakSapling("deep_trenches:cook_pine_sapling", SaplingGenerators.COOK_PINE);
-		COOK_PINE_SIGN = createOakSign("deep_trenches:cook_pine_sign", SignTypes.COOK_PINE);
-		COOK_PINE_SLAB = createOakSlab("deep_trenches:cook_pine_slab");
-		COOK_PINE_STAIRS = createOakStairs("deep_trenches:cook_pine_stairs", COOK_PINE_PLANKS);
-		COOK_PINE_TRAPDOOR = createOakTrapdoor("deep_trenches:cook_pine_trapdoor");
-		COOK_PINE_WALL_SIGN = createOakWallSign("deep_trenches:cook_pine_wall_sign", SignTypes.COOK_PINE);
-		COOK_PINE_WOOD = createOakWood("deep_trenches:cook_pine_wood");
-
-		CROLOOD_BUTTON = createOakButton("deep_trenches:crolood_button");
-		CROLOOD_DOOR = createOakDoor("deep_trenches:crolood_door");
-		CROLOOD_FENCE = createOakFence("deep_trenches:crolood_fence");
-		CROLOOD_FENCE_GATE = createOakFenceGate("deep_trenches:crolood_fence_gate");
-		CROLOOD_LEAVES = createOakLeaves("deep_trenches:crolood_leaves");
-		CROLOOD_LOG = createOakLog("deep_trenches:crolood_log");
-		CROLOOD_PLANKS = createOakPlanks("deep_trenches:crolood_planks");
-		CROLOOD_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:crolood_pressure_plate");
-		CROLOOD_SAPLING = createOakSapling("deep_trenches:crolood_sapling", SaplingGenerators.CROLOOD);
-		CROLOOD_SIGN = createOakSign("deep_trenches:crolood_sign", SignTypes.CROLOOD);
-		CROLOOD_SLAB = createOakSlab("deep_trenches:crolood_slab");
-		CROLOOD_STAIRS = createOakStairs("deep_trenches:crolood_stairs", CROLOOD_PLANKS);
-		CROLOOD_TRAPDOOR = createOakTrapdoor("deep_trenches:crolood_trapdoor");
-		CROLOOD_WALL_SIGN = createOakWallSign("deep_trenches:crolood_wall_sign", SignTypes.CROLOOD);
-		CROLOOD_WOOD = createOakWood("deep_trenches:crolood_wood");
-
-		DARK_CROLOOD_BUTTON = createOakButton("deep_trenches:dark_crolood_button");
-		DARK_CROLOOD_DOOR = createOakDoor("deep_trenches:dark_crolood_door");
-		DARK_CROLOOD_FENCE = createOakFence("deep_trenches:dark_crolood_fence");
-		DARK_CROLOOD_FENCE_GATE = createOakFenceGate("deep_trenches:dark_crolood_fence_gate");
-		DARK_CROLOOD_LEAVES = createOakLeaves("deep_trenches:dark_crolood_leaves");
-		DARK_CROLOOD_LOG = createOakLog("deep_trenches:dark_crolood_log");
-		DARK_CROLOOD_PLANKS = createOakPlanks("deep_trenches:dark_crolood_planks");
-		DARK_CROLOOD_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:dark_crolood_pressure_plate");
-		DARK_CROLOOD_SAPLING = createOakSapling("deep_trenches:dark_crolood_sapling", SaplingGenerators.DARK_CROLOOD);
-		DARK_CROLOOD_SIGN = createOakSign("deep_trenches:dark_crolood_sign", SignTypes.DARK_CROLOOD);
-		DARK_CROLOOD_SLAB = createOakSlab("deep_trenches:dark_crolood_slab");
-		DARK_CROLOOD_STAIRS = createOakStairs("deep_trenches:dark_crolood_stairs", DARK_CROLOOD_PLANKS);
-		DARK_CROLOOD_TRAPDOOR = createOakTrapdoor("deep_trenches:dark_crolood_trapdoor");
-		DARK_CROLOOD_WALL_SIGN = createOakWallSign("deep_trenches:dark_crolood_wall_sign", SignTypes.DARK_CROLOOD);
-		DARK_CROLOOD_WOOD = createOakWood("deep_trenches:dark_crolood_wood");
-
-		DARK_FUCHSITRA_BUTTON = createOakButton("deep_trenches:dark_fuchsitra_button");
-		DARK_FUCHSITRA_DOOR = createOakDoor("deep_trenches:dark_fuchsitra_door");
-		DARK_FUCHSITRA_FENCE = createOakFence("deep_trenches:dark_fuchsitra_fence");
-		DARK_FUCHSITRA_FENCE_GATE = createOakFenceGate("deep_trenches:dark_fuchsitra_fence_gate");
-		DARK_FUCHSITRA_LEAVES = createOakLeaves("deep_trenches:dark_fuchsitra_leaves");
-		DARK_FUCHSITRA_LOG = createOakLog("deep_trenches:dark_fuchsitra_log");
-		DARK_FUCHSITRA_PLANKS = createOakPlanks("deep_trenches:dark_fuchsitra_planks");
-		DARK_FUCHSITRA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:dark_fuchsitra_pressure_plate");
-		DARK_FUCHSITRA_SAPLING = createOakSapling("deep_trenches:dark_fuchsitra_sapling", SaplingGenerators.DARK_FUCHSITRA);
-		DARK_FUCHSITRA_SIGN = createOakSign("deep_trenches:dark_fuchsitra_sign", SignTypes.DARK_FUCHSITRA);
-		DARK_FUCHSITRA_SLAB = createOakSlab("deep_trenches:dark_fuchsitra_slab");
-		DARK_FUCHSITRA_STAIRS = createOakStairs("deep_trenches:dark_fuchsitra_stairs", DARK_FUCHSITRA_PLANKS);
-		DARK_FUCHSITRA_TRAPDOOR = createOakTrapdoor("deep_trenches:dark_fuchsitra_trapdoor");
-		DARK_FUCHSITRA_WALL_SIGN = createOakWallSign("deep_trenches:dark_fuchsitra_wall_sign", SignTypes.DARK_FUCHSITRA);
-		DARK_FUCHSITRA_WOOD = createOakWood("deep_trenches:dark_fuchsitra_wood");
-
-		DARK_RED_ELM_BUTTON = createOakButton("deep_trenches:dark_red_elm_button");
-		DARK_RED_ELM_DOOR = createOakDoor("deep_trenches:dark_red_elm_door");
-		DARK_RED_ELM_FENCE = createOakFence("deep_trenches:dark_red_elm_fence");
-		DARK_RED_ELM_FENCE_GATE = createOakFenceGate("deep_trenches:dark_red_elm_fence_gate");
-		DARK_RED_ELM_LEAVES = createOakLeaves("deep_trenches:dark_red_elm_leaves");
-		DARK_RED_ELM_LOG = createOakLog("deep_trenches:dark_red_elm_log");
-		DARK_RED_ELM_PLANKS = createOakPlanks("deep_trenches:dark_red_elm_planks");
-		DARK_RED_ELM_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:dark_red_elm_pressure_plate");
-		DARK_RED_ELM_SAPLING = createOakSapling("deep_trenches:dark_red_elm_sapling", SaplingGenerators.DARK_RED_ELM);
-		DARK_RED_ELM_SIGN = createOakSign("deep_trenches:dark_red_elm_sign", SignTypes.DARK_RED_ELM);
-		DARK_RED_ELM_SLAB = createOakSlab("deep_trenches:dark_red_elm_slab");
-		DARK_RED_ELM_STAIRS = createOakStairs("deep_trenches:dark_red_elm_stairs", DARK_RED_ELM_PLANKS);
-		DARK_RED_ELM_TRAPDOOR = createOakTrapdoor("deep_trenches:dark_red_elm_trapdoor");
-		DARK_RED_ELM_WALL_SIGN = createOakWallSign("deep_trenches:dark_red_elm_wall_sign", SignTypes.DARK_RED_ELM);
-		DARK_RED_ELM_WOOD = createOakWood("deep_trenches:dark_red_elm_wood");
-
-		DEAD_WART_TREE_BUTTON = createOakButton("deep_trenches:dead_wart_tree_button");
-		DEAD_WART_TREE_DOOR = createOakDoor("deep_trenches:dead_wart_tree_door");
-		DEAD_WART_TREE_FENCE = createOakFence("deep_trenches:dead_wart_tree_fence");
-		DEAD_WART_TREE_FENCE_GATE = createOakFenceGate("deep_trenches:dead_wart_tree_fence_gate");
-		DEAD_WART_TREE_LOG = createOakLog("deep_trenches:dead_wart_tree_log");
-		DEAD_WART_TREE_PLANKS = createOakPlanks("deep_trenches:dead_wart_tree_planks");
-		DEAD_WART_TREE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:dead_wart_tree_pressure_plate");
-		DEAD_WART_TREE_SIGN = createOakSign("deep_trenches:dead_wart_tree_sign", SignTypes.DEAD_WART_TREE);
-		DEAD_WART_TREE_SLAB = createOakSlab("deep_trenches:dead_wart_tree_slab");
-		DEAD_WART_TREE_STAIRS = createOakStairs("deep_trenches:dead_wart_tree_stairs", DEAD_WART_TREE_PLANKS);
-		DEAD_WART_TREE_TRAPDOOR = createOakTrapdoor("deep_trenches:dead_wart_tree_trapdoor");
-		DEAD_WART_TREE_WALL_SIGN = createOakWallSign("deep_trenches:dead_wart_tree_wall_sign", SignTypes.DEAD_WART_TREE);
-		DEAD_WART_TREE_WOOD = createOakWood("deep_trenches:dead_wart_tree_wood");
-
-		DRIGYUS = createCopy("deep_trenches:drigyus", DEAD_BUSH);
-		DRIGYUS_BUTTON = createOakButton("deep_trenches:drigyus_button");
-		DRIGYUS_DOOR = createOakDoor("deep_trenches:drigyus_door");
-		DRIGYUS_FENCE = createOakFence("deep_trenches:drigyus_fence");
-		DRIGYUS_FENCE_GATE = createOakFenceGate("deep_trenches:drigyus_fence_gate");
-		DRIGYUS_LOG = createOakLog("deep_trenches:drigyus_log");
-		DRIGYUS_PLANKS = createOakPlanks("deep_trenches:drigyus_planks");
-		DRIGYUS_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:drigyus_pressure_plate");
-		DRIGYUS_SIGN = createOakSign("deep_trenches:drigyus_sign", SignTypes.DRIGYUS);
-		DRIGYUS_SLAB = createOakSlab("deep_trenches:drigyus_slab");
-		DRIGYUS_STAIRS = createOakStairs("deep_trenches:drigyus_stairs", DRIGYUS_PLANKS);
-		DRIGYUS_TRAPDOOR = createOakTrapdoor("deep_trenches:drigyus_trapdoor");
-		DRIGYUS_WALL_SIGN = createOakWallSign("deep_trenches:drigyus_wall_sign", SignTypes.DRIGYUS);
-		DRIGYUS_WOOD = createOakWood("deep_trenches:drigyus_wood");
-
-		EBONY_BUTTON = createOakButton("deep_trenches:ebony_button");
-		EBONY_DOOR = createOakDoor("deep_trenches:ebony_door");
-		EBONY_FENCE = createOakFence("deep_trenches:ebony_fence");
-		EBONY_FENCE_GATE = createOakFenceGate("deep_trenches:ebony_fence_gate");
-		EBONY_LEAVES = createOakLeaves("deep_trenches:ebony_leaves");
-		EBONY_LOG = createOakLog("deep_trenches:ebony_log");
-		EBONY_PLANKS = createOakPlanks("deep_trenches:ebony_planks");
-		EBONY_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:ebony_pressure_plate");
-		EBONY_SAPLING = createOakSapling("deep_trenches:ebony_sapling", SaplingGenerators.EBONY);
-		EBONY_SIGN = createOakSign("deep_trenches:ebony_sign", SignTypes.EBONY);
-		EBONY_SLAB = createOakSlab("deep_trenches:ebony_slab");
-		EBONY_STAIRS = createOakStairs("deep_trenches:ebony_stairs", EBONY_PLANKS);
-		EBONY_TRAPDOOR = createOakTrapdoor("deep_trenches:ebony_trapdoor");
-		EBONY_WALL_SIGN = createOakWallSign("deep_trenches:ebony_wall_sign", SignTypes.EBONY);
-		EBONY_WOOD = createOakWood("deep_trenches:ebony_wood");
-
-		ENDERHEART_BUTTON = createOakButton("deep_trenches:enderheart_button");
-		ENDERHEART_DOOR = createOakDoor("deep_trenches:enderheart_door");
-		ENDERHEART_FENCE = createOakFence("deep_trenches:enderheart_fence");
-		ENDERHEART_FENCE_GATE = createOakFenceGate("deep_trenches:enderheart_fence_gate");
-		ENDERHEART_LEAVES = createOakLeaves("deep_trenches:enderheart_leaves");
-		ENDERHEART_LEAF = createCopy("deep_trenches:enderheart_leaf", OAK_LEAVES);
-		ENDERHEART_LOG = createOakLog("deep_trenches:enderheart_log");
-		ENDERHEART_PLANKS = createOakPlanks("deep_trenches:enderheart_planks");
-		ENDERHEART_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:enderheart_pressure_plate");
-		ENDERHEART_SAPLING = createOakSapling("deep_trenches:enderheart_sapling", SaplingGenerators.ENDERHEART);
-		ENDERHEART_SIGN = createOakSign("deep_trenches:enderheart_sign", SignTypes.ENDERHEART);
-		ENDERHEART_SLAB = createOakSlab("deep_trenches:enderheart_slab");
-		ENDERHEART_STAIRS = createOakStairs("deep_trenches:enderheart_stairs", ENDERHEART_PLANKS);
-		ENDERHEART_TRAPDOOR = createOakTrapdoor("deep_trenches:enderheart_trapdoor");
-		ENDERHEART_WALL_SIGN = createOakWallSign("deep_trenches:enderheart_wall_sign", SignTypes.ENDERHEART);
-		ENDERHEART_WOOD = createOakWood("deep_trenches:enderheart_wood");
-
-		FLALM = createTallFlower("deep_trenches:flalm", ROSE_BUSH);
-		FLALM_BUTTON = createOakButton("deep_trenches:flalm_button");
-		FLALM_DOOR = createOakDoor("deep_trenches:flalm_door");
-		FLALM_FENCE = createOakFence("deep_trenches:flalm_fence");
-		FLALM_FENCE_GATE = createOakFenceGate("deep_trenches:flalm_fence_gate");
-		FLALM_PETAL_BLOCK = createCap("deep_trenches:flalm_petal_block");
-		FLALM_PLANKS = createOakPlanks("deep_trenches:flalm_planks");
-		FLALM_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:flalm_pressure_plate");
-		FLALM_SIGN = createOakSign("deep_trenches:flalm_sign", SignTypes.FLALM);
-		FLALM_SLAB = createOakSlab("deep_trenches:flalm_slab");
-		FLALM_STAIRS = createOakStairs("deep_trenches:flalm_stairs", FLALM_PLANKS);
-		FLALM_STEM = createPillar("deep_trenches:flalm_stem", COCOA);
-		FLALM_THORNS = createBlock("deep_trenches:flalm_thorns", FlalmThornsBlock::new, OAK_LEAVES);
-		FLALM_TRAPDOOR = createOakTrapdoor("deep_trenches:flalm_trapdoor");
-		FLALM_WALL_SIGN = createOakWallSign("deep_trenches:flalm_wall_sign", SignTypes.FLALM);
-		FLALM_WOOD = createOakWood("deep_trenches:flalm_wood");
-
-		FRUCE_BUTTON = createOakButton("deep_trenches:fruce_button");
-		FRUCE_DOOR = createOakDoor("deep_trenches:fruce_door");
-		FRUCE_FENCE = createOakFence("deep_trenches:fruce_fence");
-		FRUCE_FENCE_GATE = createOakFenceGate("deep_trenches:fruce_fence_gate");
-		FRUCE_LEAVES = createOakLeaves("deep_trenches:fruce_leaves");
-		FRUCE_LOG = createOakLog("deep_trenches:fruce_log");
-		FRUCE_PLANKS = createOakPlanks("deep_trenches:fruce_planks");
-		FRUCE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:fruce_pressure_plate");
-		FRUCE_SAPLING = createOakSapling("deep_trenches:fruce_sapling", SaplingGenerators.FRUCE);
-		FRUCE_SIGN = createOakSign("deep_trenches:fruce_sign", SignTypes.FRUCE);
-		FRUCE_SLAB = createOakSlab("deep_trenches:fruce_slab");
-		FRUCE_STAIRS = createOakStairs("deep_trenches:fruce_stairs", FRUCE_PLANKS);
-		FRUCE_TRAPDOOR = createOakTrapdoor("deep_trenches:fruce_trapdoor");
-		FRUCE_WALL_SIGN = createOakWallSign("deep_trenches:fruce_wall_sign", SignTypes.FRUCE);
-		FRUCE_WOOD = createOakWood("deep_trenches:fruce_wood");
-
-		FUCHSITRA_BUTTON = createOakButton("deep_trenches:fuchsitra_button");
-		FUCHSITRA_DOOR = createOakDoor("deep_trenches:fuchsitra_door");
-		FUCHSITRA_FENCE = createOakFence("deep_trenches:fuchsitra_fence");
-		FUCHSITRA_FENCE_GATE = createOakFenceGate("deep_trenches:fuchsitra_fence_gate");
-		FUCHSITRA_LEAVES = createOakLeaves("deep_trenches:fuchsitra_leaves");
-		FUCHSITRA_LOG = createOakLog("deep_trenches:fuchsitra_log");
-		FUCHSITRA_PLANKS = createOakPlanks("deep_trenches:fuchsitra_planks");
-		FUCHSITRA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:fuchsitra_pressure_plate");
-		FUCHSITRA_SAPLING = createOakSapling("deep_trenches:fuchsitra_sapling", SaplingGenerators.FUCHSITRA);
-		FUCHSITRA_SIGN = createOakSign("deep_trenches:fuchsitra_sign", SignTypes.FUCHSITRA);
-		FUCHSITRA_SLAB = createOakSlab("deep_trenches:fuchsitra_slab");
-		FUCHSITRA_STAIRS = createOakStairs("deep_trenches:fuchsitra_stairs", FUCHSITRA_PLANKS);
-		FUCHSITRA_TRAPDOOR = createOakTrapdoor("deep_trenches:fuchsitra_trapdoor");
-		FUCHSITRA_WALL_SIGN = createOakWallSign("deep_trenches:fuchsitra_wall_sign", SignTypes.FUCHSITRA);
-		FUCHSITRA_WOOD = createOakWood("deep_trenches:fuchsitra_wood");
-
-		FUGMOS = createOakSapling("deep_trenches:fugmos", SaplingGenerators.FUGMOS);
-		FUGMOS_BUTTON = createOakButton("deep_trenches:fugmos_button");
-		FUGMOS_DOOR = createOakDoor("deep_trenches:fugmos_door");
-		FUGMOS_FENCE = createOakFence("deep_trenches:fugmos_fence");
-		FUGMOS_FENCE_GATE = createOakFenceGate("deep_trenches:fugmos_fence_gate");
-		FUGMOS_STEM = createOakLog("deep_trenches:fugmos_stem");
-		FUGMOS_MOSS = createOakLeaves("deep_trenches:fugmos_moss");
-		FUGMOS_PLANKS = createOakPlanks("deep_trenches:fugmos_planks");
-		FUGMOS_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:fugmos_pressure_plate");
-		FUGMOS_SIGN = createOakSign("deep_trenches:fugmos_sign", SignTypes.FUGMOS);
-		FUGMOS_SLAB = createOakSlab("deep_trenches:fugmos_slab");
-		FUGMOS_STAIRS = createOakStairs("deep_trenches:fugmos_stairs", FUGMOS_PLANKS);
-		FUGMOS_TRAPDOOR = createOakTrapdoor("deep_trenches:fugmos_trapdoor");
-		FUGMOS_WALL_SIGN = createOakWallSign("deep_trenches:fugmos_wall_sign", SignTypes.FUGMOS);
-		FUGMOS_WOOD = createOakWood("deep_trenches:fugmos_wood");
-
-		FUNERANITE_BUTTON = createOakButton("deep_trenches:funeranite_button");
-		FUNERANITE_CAP = createCap("deep_trenches:funeranite_cap");
-		FUNERANITE_DOOR = createOakDoor("deep_trenches:funeranite_door");
-		FUNERANITE_FENCE = createOakFence("deep_trenches:funeranite_fence");
-		FUNERANITE_FENCE_GATE = createOakFenceGate("deep_trenches:funeranite_fence_gate");
-		FUNERANITE_LOG = createOakLog("deep_trenches:funeranite_log");
-		FUNERANITE_PLANKS = createOakPlanks("deep_trenches:funeranite_planks");
-		FUNERANITE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:funeranite_pressure_plate");
-		FUNERANITE_SAPLING = createOakSapling("deep_trenches:funeranite_sapling", SaplingGenerators.FUNERANITE);
-		FUNERANITE_SIGN = createOakSign("deep_trenches:funeranite_sign", SignTypes.FUNERANITE);
-		FUNERANITE_SLAB = createOakSlab("deep_trenches:funeranite_slab");
-		FUNERANITE_STAIRS = createOakStairs("deep_trenches:funeranite_stairs", FUNERANITE_PLANKS);
-		FUNERANITE_TRAPDOOR = createOakTrapdoor("deep_trenches:funeranite_trapdoor");
-		FUNERANITE_WALL_SIGN = createOakWallSign("deep_trenches:funeranite_wall_sign", SignTypes.FUNERANITE);
-		FUNERANITE_WOOD = createOakWood("deep_trenches:funeranite_wood");
-
-		GHOSHROOM_BUTTON = createOakButton("deep_trenches:ghoshroom_button");
-		GHOSHROOM_CAP = createCap("deep_trenches:ghoshroom_cap");
-		GHOSHROOM_DOOR = createOakDoor("deep_trenches:ghoshroom_door");
-		GHOSHROOM_FENCE = createOakFence("deep_trenches:ghoshroom_fence");
-		GHOSHROOM_FENCE_GATE = createOakFenceGate("deep_trenches:ghoshroom_fence_gate");
-		GHOSHROOM_LOG = createOakLog("deep_trenches:ghoshroom_log");
-		GHOSHROOM_PLANKS = createOakPlanks("deep_trenches:ghoshroom_planks");
-		GHOSHROOM_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:ghoshroom_pressure_plate");
-		GHOSHROOM_SAPLING = createOakSapling("deep_trenches:ghoshroom_sapling", SaplingGenerators.GHOSHROOM);
-		GHOSHROOM_SIGN = createOakSign("deep_trenches:ghoshroom_sign", SignTypes.GHOSHROOM);
-		GHOSHROOM_SLAB = createOakSlab("deep_trenches:ghoshroom_slab");
-		GHOSHROOM_STAIRS = createOakStairs("deep_trenches:ghoshroom_stairs", GHOSHROOM_PLANKS);
-		GHOSHROOM_TRAPDOOR = createOakTrapdoor("deep_trenches:ghoshroom_trapdoor");
-		GHOSHROOM_WALL_SIGN = createOakWallSign("deep_trenches:ghoshroom_wall_sign", SignTypes.GHOSHROOM);
-		GHOSHROOM_WOOD = createOakWood("deep_trenches:ghoshroom_wood");
-
-		GIANT_VIOLET_BUTTON = createOakButton("deep_trenches:giant_violet_button");
-		GIANT_VIOLET_DOOR = createOakDoor("deep_trenches:giant_violet_door");
-		GIANT_VIOLET_FENCE = createOakFence("deep_trenches:giant_violet_fence");
-		GIANT_VIOLET_FENCE_GATE = createOakFenceGate("deep_trenches:giant_violet_fence_gate");
-		GIANT_VIOLET_PLANKS = createOakPlanks("deep_trenches:giant_violet_planks");
-		GIANT_VIOLET_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:giant_violet_pressure_plate");
-		GIANT_VIOLET_SIGN = createOakSign("deep_trenches:giant_violet_sign", SignTypes.GIANT_VIOLET);
-		GIANT_VIOLET_SLAB = createOakSlab("deep_trenches:giant_violet_slab");
-		GIANT_VIOLET_STAIRS = createOakStairs("deep_trenches:giant_violet_stairs", GIANT_VIOLET_PLANKS);
-		GIANT_VIOLET_STEM = createOakLog("deep_trenches:giant_violet_stem");
-		GIANT_VIOLET_TRAPDOOR = createOakTrapdoor("deep_trenches:giant_violet_trapdoor");
-		GIANT_VIOLET_WALL_SIGN = createOakWallSign("deep_trenches:giant_violet_wall_sign", SignTypes.GIANT_VIOLET);
-		GIANT_VIOLET_WOOD = createOakWood("deep_trenches:giant_violet_wood");
-
-		GUAIACUM_BUTTON = createOakButton("deep_trenches:guaiacum_button");
-		GUAIACUM_DOOR = createOakDoor("deep_trenches:guaiacum_door");
-		GUAIACUM_FENCE = createOakFence("deep_trenches:guaiacum_fence");
-		GUAIACUM_FENCE_GATE = createOakFenceGate("deep_trenches:guaiacum_fence_gate");
-		GUAIACUM_FLOWERS = createBlock("deep_trenches:guaiacum_flowers", GuaiacumFlowersBlock::new, OAK_LEAVES);
-		GUAIACUM_LEAVES = createOakLeaves("deep_trenches:guaiacum_leaves");
-		GUAIACUM_LOG = createOakLog("deep_trenches:guaiacum_log");
-		GUAIACUM_PLANKS = createOakPlanks("deep_trenches:guaiacum_planks");
-		GUAIACUM_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:guaiacum_pressure_plate");
-		GUAIACUM_SAPLING = createOakSapling("deep_trenches:guaiacum_sapling", SaplingGenerators.GUAIACUM);
-		GUAIACUM_SIGN = createOakSign("deep_trenches:guaiacum_sign", SignTypes.GUAIACUM);
-		GUAIACUM_SLAB = createOakSlab("deep_trenches:guaiacum_slab");
-		GUAIACUM_STAIRS = createOakStairs("deep_trenches:guaiacum_stairs", GUAIACUM_PLANKS);
-		GUAIACUM_TRAPDOOR = createOakTrapdoor("deep_trenches:guaiacum_trapdoor");
-		GUAIACUM_WALL_SIGN = createOakWallSign("deep_trenches:guaiacum_wall_sign", SignTypes.GUAIACUM);
-		GUAIACUM_WOOD = createOakWood("deep_trenches:guaiacum_wood");
-
-		JOSHUA_BUTTON = createOakButton("deep_trenches:joshua_button");
-		JOSHUA_DOOR = createOakDoor("deep_trenches:joshua_door");
-		JOSHUA_FENCE = createOakFence("deep_trenches:joshua_fence");
-		JOSHUA_FENCE_GATE = createOakFenceGate("deep_trenches:joshua_fence_gate");
-		JOSHUA_LEAVES = createOakLeaves("deep_trenches:joshua_leaves");
-		JOSHUA_LOG = createOakLog("deep_trenches:joshua_log");
-		JOSHUA_PLANKS = createOakPlanks("deep_trenches:joshua_planks");
-		JOSHUA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:joshua_pressure_plate");
-		JOSHUA_SAPLING = createOakSapling("deep_trenches:joshua_sapling", SaplingGenerators.JOSHUA);
-		JOSHUA_SIGN = createOakSign("deep_trenches:joshua_sign", SignTypes.JOSHUA);
-		JOSHUA_SLAB = createOakSlab("deep_trenches:joshua_slab");
-		JOSHUA_STAIRS = createOakStairs("deep_trenches:joshua_stairs", JOSHUA_PLANKS);
-		JOSHUA_TRAPDOOR = createOakTrapdoor("deep_trenches:joshua_trapdoor");
-		JOSHUA_WALL_SIGN = createOakWallSign("deep_trenches:joshua_wall_sign", SignTypes.JOSHUA);
-		JOSHUA_WOOD = createOakWood("deep_trenches:joshua_wood");
-
-		KLINKII_PINE_BUTTON = createOakButton("deep_trenches:klinkii_pine_button");
-		KLINKII_PINE_DOOR = createOakDoor("deep_trenches:klinkii_pine_door");
-		KLINKII_PINE_FENCE = createOakFence("deep_trenches:klinkii_pine_fence");
-		KLINKII_PINE_FENCE_GATE = createOakFenceGate("deep_trenches:klinkii_pine_fence_gate");
-		KLINKII_PINE_LEAVES = createOakLeaves("deep_trenches:klinkii_pine_leaves");
-		KLINKII_PINE_LOG = createOakLog("deep_trenches:klinkii_pine_log");
-		KLINKII_PINE_PLANKS = createOakPlanks("deep_trenches:klinkii_pine_planks");
-		KLINKII_PINE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:klinkii_pine_pressure_plate");
-		KLINKII_PINE_SAPLING = createOakSapling("deep_trenches:klinkii_pine_sapling", SaplingGenerators.KLINKII_PINE);
-		KLINKII_PINE_SIGN = createOakSign("deep_trenches:klinkii_pine_sign", SignTypes.KLINKII_PINE);
-		KLINKII_PINE_SLAB = createOakSlab("deep_trenches:klinkii_pine_slab");
-		KLINKII_PINE_STAIRS = createOakStairs("deep_trenches:klinkii_pine_stairs", KLINKII_PINE_PLANKS);
-		KLINKII_PINE_TRAPDOOR = createOakTrapdoor("deep_trenches:klinkii_pine_trapdoor");
-		KLINKII_PINE_WALL_SIGN = createOakWallSign("deep_trenches:klinkii_pine_wall_sign", SignTypes.KLINKII_PINE);
-		KLINKII_PINE_WOOD = createOakWood("deep_trenches:klinkii_pine_wood");
-
-		MELALEUCA_BUTTON = createOakButton("deep_trenches:melaleuca_button");
-		MELALEUCA_DOOR = createOakDoor("deep_trenches:melaleuca_door");
-		MELALEUCA_FENCE = createOakFence("deep_trenches:melaleuca_fence");
-		MELALEUCA_FENCE_GATE = createOakFenceGate("deep_trenches:melaleuca_fence_gate");
-		MELALEUCA_FLOWERS = createBlock("deep_trenches:melaleuca_flowers", MelaleucaFlowersBlock::new, OAK_LEAVES);
-		MELALEUCA_LEAVES = createOakLeaves("deep_trenches:melaleuca_leaves");
-		MELALEUCA_LOG = createOakLog("deep_trenches:melaleuca_log");
-		MELALEUCA_PLANKS = createOakPlanks("deep_trenches:melaleuca_planks");
-		MELALEUCA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:melaleuca_pressure_plate");
-		MELALEUCA_SAPLING = createOakSapling("deep_trenches:melaleuca_sapling", SaplingGenerators.MELALEUCA);
-		MELALEUCA_SIGN = createOakSign("deep_trenches:melaleuca_sign", SignTypes.MELALEUCA);
-		MELALEUCA_SLAB = createOakSlab("deep_trenches:melaleuca_slab");
-		MELALEUCA_STAIRS = createOakStairs("deep_trenches:melaleuca_stairs", MELALEUCA_PLANKS);
-		MELALEUCA_TRAPDOOR = createOakTrapdoor("deep_trenches:melaleuca_trapdoor");
-		MELALEUCA_WALL_SIGN = createOakWallSign("deep_trenches:melaleuca_wall_sign", SignTypes.MELALEUCA);
-		MELALEUCA_WOOD = createOakWood("deep_trenches:melaleuca_wood");
-
-		MOSSY_YEW_LOG = createOakLog("deep_trenches:mossy_yew_log");
-
-		MURKANTUAN_BUTTON = createOakButton("deep_trenches:murkantuan_button");
-		MURKANTUAN_DOOR = createOakDoor("deep_trenches:murkantuan_door");
-		MURKANTUAN_FENCE = createOakFence("deep_trenches:murkantuan_fence");
-		MURKANTUAN_FENCE_GATE = createOakFenceGate("deep_trenches:murkantuan_fence_gate");
-		MURKANTUAN_LEAVES = createOakLeaves("deep_trenches:murkantuan_leaves");
-		MURKANTUAN_FLOWER = createBlock("deep_trenches:murkantuan_flower", MurkantuanFlowerBlock::new, OAK_LEAVES);
-		MURKANTUAN_LOG = createOakLog("deep_trenches:murkantuan_log");
-		MURKANTUAN_PLANKS = createOakPlanks("deep_trenches:murkantuan_planks");
-		MURKANTUAN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:murkantuan_pressure_plate");
-		MURKANTUAN_SAPLING = createOakSapling("deep_trenches:murkantuan_sapling", SaplingGenerators.MURKANTUAN);
-		MURKANTUAN_SIGN = createOakSign("deep_trenches:murkantuan_sign", SignTypes.MURKANTUAN);
-		MURKANTUAN_SLAB = createOakSlab("deep_trenches:murkantuan_slab");
-		MURKANTUAN_STAIRS = createOakStairs("deep_trenches:murkantuan_stairs", MURKANTUAN_PLANKS);
-		MURKANTUAN_TRAPDOOR = createOakTrapdoor("deep_trenches:murkantuan_trapdoor");
-		MURKANTUAN_WALL_SIGN = createOakWallSign("deep_trenches:murkantuan_wall_sign", SignTypes.MURKANTUAN);
-		MURKANTUAN_WOOD = createOakWood("deep_trenches:murkantuan_wood");
-
-		NORFOLK_PINE_BUTTON = createOakButton("deep_trenches:norfolk_pine_button");
-		NORFOLK_PINE_DOOR = createOakDoor("deep_trenches:norfolk_pine_door");
-		NORFOLK_PINE_FENCE = createOakFence("deep_trenches:norfolk_pine_fence");
-		NORFOLK_PINE_FENCE_GATE = createOakFenceGate("deep_trenches:norfolk_pine_fence_gate");
-		NORFOLK_PINE_LEAVES = createOakLeaves("deep_trenches:norfolk_pine_leaves");
-		NORFOLK_PINE_LOG = createOakLog("deep_trenches:norfolk_pine_log");
-		NORFOLK_PINE_PLANKS = createOakPlanks("deep_trenches:norfolk_pine_planks");
-		NORFOLK_PINE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:norfolk_pine_pressure_plate");
-		NORFOLK_PINE_SAPLING = createOakSapling("deep_trenches:norfolk_pine_sapling", SaplingGenerators.NORFOLK_PINE);
-		NORFOLK_PINE_SIGN = createOakSign("deep_trenches:norfolk_pine_sign", SignTypes.NORFOLK_PINE);
-		NORFOLK_PINE_SLAB = createOakSlab("deep_trenches:norfolk_pine_slab");
-		NORFOLK_PINE_STAIRS = createOakStairs("deep_trenches:norfolk_pine_stairs", NORFOLK_PINE_PLANKS);
-		NORFOLK_PINE_TRAPDOOR = createOakTrapdoor("deep_trenches:norfolk_pine_trapdoor");
-		NORFOLK_PINE_WALL_SIGN = createOakWallSign("deep_trenches:norfolk_pine_wall_sign", SignTypes.NORFOLK_PINE);
-		NORFOLK_PINE_WOOD = createOakWood("deep_trenches:norfolk_pine_wood");
-
-		OBSCRUS = createBlock("deep_trenches:obscrus", ObscrusBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
-		OBSCRUS_BUTTON = createOakButton("deep_trenches:obscrus_button");
-		OBSCRUS_DOOR = createOakDoor("deep_trenches:obscrus_door");
-		OBSCRUS_FENCE = createOakFence("deep_trenches:obscrus_fence");
-		OBSCRUS_FENCE_GATE = createOakFenceGate("deep_trenches:obscrus_fence_gate");
-		OBSCRUS_LEAVES = createOakLeaves("deep_trenches:obscrus_leaves");
-		OBSCRUS_LOG = createOakLog("deep_trenches:obscrus_log");
-		OBSCRUS_PLANKS = createOakPlanks("deep_trenches:obscrus_planks");
-		OBSCRUS_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:obscrus_pressure_plate");
-		OBSCRUS_SIGN = createOakSign("deep_trenches:obscrus_sign", SignTypes.OBSCRUS);
-		OBSCRUS_SLAB = createOakSlab("deep_trenches:obscrus_slab");
-		OBSCRUS_STAIRS = createOakStairs("deep_trenches:obscrus_stairs", OBSCRUS_PLANKS);
-		OBSCRUS_TRAPDOOR = createOakTrapdoor("deep_trenches:obscrus_trapdoor");
-		OBSCRUS_WALL_SIGN = createOakWallSign("deep_trenches:obscrus_wall_sign", SignTypes.OBSCRUS);
-		OBSCRUS_WOOD = createOakWood("deep_trenches:obscrus_wood");
-
-		ORHPRIS_BUTTON = createOakButton("deep_trenches:orhpris_button");
-		ORHPRIS_DOOR = createOakDoor("deep_trenches:orhpris_door");
-		ORHPRIS_FENCE = createOakFence("deep_trenches:orhpris_fence");
-		ORHPRIS_FENCE_GATE = createOakFenceGate("deep_trenches:orhpris_fence_gate");
-		ORHPRIS_LEAVES = createOakLeaves("deep_trenches:orhpris_leaves");
-		ORHPRIS_LOG = createOakLog("deep_trenches:orhpris_log");
-		ORHPRIS_PLANKS = createOakPlanks("deep_trenches:orhpris_planks");
-		ORHPRIS_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:orhpris_pressure_plate");
-		ORHPRIS_SAPLING = createOakSapling("deep_trenches:orhpris_sapling", SaplingGenerators.ORHPRIS);
-		ORHPRIS_SIGN = createOakSign("deep_trenches:orhpris_sign", SignTypes.ORHPRIS);
-		ORHPRIS_SLAB = createOakSlab("deep_trenches:orhpris_slab");
-		ORHPRIS_STAIRS = createOakStairs("deep_trenches:orhpris_stairs", ORHPRIS_PLANKS);
-		ORHPRIS_TRAPDOOR = createOakTrapdoor("deep_trenches:orhpris_trapdoor");
-		ORHPRIS_WALL_SIGN = createOakWallSign("deep_trenches:orhpris_wall_sign", SignTypes.ORHPRIS);
-		ORHPRIS_WOOD = createOakWood("deep_trenches:orhpris_wood");
-
-		PELTOGYNE_BUTTON = createOakButton("deep_trenches:peltogyne_button");
-		PELTOGYNE_DOOR = createOakDoor("deep_trenches:peltogyne_door");
-		PELTOGYNE_FENCE = createOakFence("deep_trenches:peltogyne_fence");
-		PELTOGYNE_FENCE_GATE = createOakFenceGate("deep_trenches:peltogyne_fence_gate");
-		PELTOGYNE_LEAVES = createOakLeaves("deep_trenches:peltogyne_leaves");
-		PELTOGYNE_LOG = createOakLog("deep_trenches:peltogyne_log");
-		PELTOGYNE_PLANKS = createOakPlanks("deep_trenches:peltogyne_planks");
-		PELTOGYNE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:peltogyne_pressure_plate");
-		PELTOGYNE_SAPLING = createOakSapling("deep_trenches:peltogyne_sapling", SaplingGenerators.PELTOGYNE);
-		PELTOGYNE_SIGN = createOakSign("deep_trenches:peltogyne_sign", SignTypes.PELTOGYNE);
-		PELTOGYNE_SLAB = createOakSlab("deep_trenches:peltogyne_slab");
-		PELTOGYNE_STAIRS = createOakStairs("deep_trenches:peltogyne_stairs", PELTOGYNE_PLANKS);
-		PELTOGYNE_TRAPDOOR = createOakTrapdoor("deep_trenches:peltogyne_trapdoor");
-		PELTOGYNE_WALL_SIGN = createOakWallSign("deep_trenches:peltogyne_wall_sign", SignTypes.PELTOGYNE);
-		PELTOGYNE_WOOD = createOakWood("deep_trenches:peltogyne_wood");
-
-		PIN_CHERRY_BUTTON = createOakButton("deep_trenches:pin_cherry_button");
-		PIN_CHERRY_DOOR = createOakDoor("deep_trenches:pin_cherry_door");
-		PIN_CHERRY_FENCE = createOakFence("deep_trenches:pin_cherry_fence");
-		PIN_CHERRY_FENCE_GATE = createOakFenceGate("deep_trenches:pin_cherry_fence_gate");
-		PIN_CHERRY_LEAVES = createOakLeaves("deep_trenches:pin_cherry_leaves");
-		PIN_CHERRY_LOG = createOakLog("deep_trenches:pin_cherry_log");
-		PIN_CHERRY_PLANKS = createOakPlanks("deep_trenches:pin_cherry_planks");
-		PIN_CHERRY_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:pin_cherry_pressure_plate");
-		PIN_CHERRY_SAPLING = createOakSapling("deep_trenches:pin_cherry_sapling", SaplingGenerators.PIN_CHERRY);
-		PIN_CHERRY_SIGN = createOakSign("deep_trenches:pin_cherry_sign", SignTypes.PIN_CHERRY);
-		PIN_CHERRY_SLAB = createOakSlab("deep_trenches:pin_cherry_slab");
-		PIN_CHERRY_STAIRS = createOakStairs("deep_trenches:pin_cherry_stairs", PIN_CHERRY_PLANKS);
-		PIN_CHERRY_TRAPDOOR = createOakTrapdoor("deep_trenches:pin_cherry_trapdoor");
-		PIN_CHERRY_WALL_SIGN = createOakWallSign("deep_trenches:pin_cherry_wall_sign", SignTypes.PIN_CHERRY);
-		PIN_CHERRY_WOOD = createOakWood("deep_trenches:pin_cherry_wood");
-
-		PLUM_BUTTON = createOakButton("deep_trenches:plum_button");
-		PLUM_DOOR = createOakDoor("deep_trenches:plum_door");
-		PLUM_FENCE = createOakFence("deep_trenches:plum_fence");
-		PLUM_FENCE_GATE = createOakFenceGate("deep_trenches:plum_fence_gate");
-		PLUM_LEAVES = createOakLeaves("deep_trenches:plum_leaves");
-		PLUM_LOG = createOakLog("deep_trenches:plum_log");
-		PLUM_PLANKS = createOakPlanks("deep_trenches:plum_planks");
-		PLUM_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:plum_pressure_plate");
-		PLUM_SAPLING = createOakSapling("deep_trenches:plum_sapling", SaplingGenerators.PLUM);
-		PLUM_SIGN = createOakSign("deep_trenches:plum_sign", SignTypes.PLUM);
-		PLUM_SLAB = createOakSlab("deep_trenches:plum_slab");
-		PLUM_STAIRS = createOakStairs("deep_trenches:plum_stairs", PLUM_PLANKS);
-		PLUM_TRAPDOOR = createOakTrapdoor("deep_trenches:plum_trapdoor");
-		PLUM_WALL_SIGN = createOakWallSign("deep_trenches:plum_wall_sign", SignTypes.PLUM);
-		PLUM_WOOD = createOakWood("deep_trenches:plum_wood");
-
-		PURFUNGA_BUTTON = createOakButton("deep_trenches:purfunga_button");
-		PURFUNGA_CAP = createCap("deep_trenches:purfunga_cap");
-		PURFUNGA_DOOR = createOakDoor("deep_trenches:purfunga_door");
-		PURFUNGA_FENCE = createOakFence("deep_trenches:purfunga_fence");
-		PURFUNGA_FENCE_GATE = createOakFenceGate("deep_trenches:purfunga_fence_gate");
-		PURFUNGA_LOG = createOakLog("deep_trenches:purfunga_log");
-		PURFUNGA_PLANKS = createOakPlanks("deep_trenches:purfunga_planks");
-		PURFUNGA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:purfunga_pressure_plate");
-		PURFUNGA_SAPLING = createAcuaticFungus("deep_trenches:purfunga_sapling", SaplingGenerators.PURFUNGA);
-		PURFUNGA_SIGN = createOakSign("deep_trenches:purfunga_sign", SignTypes.PURFUNGA);
-		PURFUNGA_SLAB = createOakSlab("deep_trenches:purfunga_slab");
-		PURFUNGA_STAIRS = createOakStairs("deep_trenches:purfunga_stairs", PURFUNGA_PLANKS);
-		PURFUNGA_TRAPDOOR = createOakTrapdoor("deep_trenches:purfunga_trapdoor");
-		PURFUNGA_WALL_SIGN = createOakWallSign("deep_trenches:purfunga_wall_sign", SignTypes.PURFUNGA);
-		PURFUNGA_WOOD = createOakWood("deep_trenches:purfunga_wood");
-
-		RARK_BUTTON = createOakButton("deep_trenches:rark_button");
-		RARK_DOOR = createOakDoor("deep_trenches:rark_door");
-		RARK_FENCE = createOakFence("deep_trenches:rark_fence");
-		RARK_FENCE_GATE = createOakFenceGate("deep_trenches:rark_fence_gate");
-		RARK_LEAVES = createOakLeaves("deep_trenches:rark_leaves");
-		RARK_LOG = createOakLog("deep_trenches:rark_log");
-		RARK_PLANKS = createOakPlanks("deep_trenches:rark_planks");
-		RARK_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:rark_pressure_plate");
-		RARK_SAPLING = createOakSapling("deep_trenches:rark_sapling", SaplingGenerators.RARK);
-		RARK_SIGN = createOakSign("deep_trenches:rark_sign", SignTypes.RARK);
-		RARK_SLAB = createOakSlab("deep_trenches:rark_slab");
-		RARK_STAIRS = createOakStairs("deep_trenches:rark_stairs", RARK_PLANKS);
-		RARK_TRAPDOOR = createOakTrapdoor("deep_trenches:rark_trapdoor");
-		RARK_WALL_SIGN = createOakWallSign("deep_trenches:rark_wall_sign", SignTypes.RARK);
-		RARK_WOOD = createOakWood("deep_trenches:rark_wood");
-
-		RED_ELM_BUTTON = createOakButton("deep_trenches:red_elm_button");
-		RED_ELM_DOOR = createOakDoor("deep_trenches:red_elm_door");
-		RED_ELM_FENCE = createOakFence("deep_trenches:red_elm_fence");
-		RED_ELM_FENCE_GATE = createOakFenceGate("deep_trenches:red_elm_fence_gate");
-		RED_ELM_LEAVES = createOakLeaves("deep_trenches:red_elm_leaves");
-		RED_ELM_LOG = createOakLog("deep_trenches:red_elm_log");
-		RED_ELM_PLANKS = createOakPlanks("deep_trenches:red_elm_planks");
-		RED_ELM_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:red_elm_pressure_plate");
-		RED_ELM_SAPLING = createOakSapling("deep_trenches:red_elm_sapling", SaplingGenerators.RED_ELM);
-		RED_ELM_SIGN = createOakSign("deep_trenches:red_elm_sign", SignTypes.RED_ELM);
-		RED_ELM_SLAB = createOakSlab("deep_trenches:red_elm_slab");
-		RED_ELM_STAIRS = createOakStairs("deep_trenches:red_elm_stairs", RED_ELM_PLANKS);
-		RED_ELM_TRAPDOOR = createOakTrapdoor("deep_trenches:red_elm_trapdoor");
-		RED_ELM_WALL_SIGN = createOakWallSign("deep_trenches:red_elm_wall_sign", SignTypes.RED_ELM);
-		RED_ELM_WOOD = createOakWood("deep_trenches:red_elm_wood");
-
-		RHADI_BUTTON = createOakButton("deep_trenches:rhadi_button");
-		RHADI_DOOR = createOakDoor("deep_trenches:rhadi_door");
-		RHADI_FENCE = createOakFence("deep_trenches:rhadi_fence");
-		RHADI_FENCE_GATE = createOakFenceGate("deep_trenches:rhadi_fence_gate");
-		RHADI_FRUIT = createBlock("deep_trenches:rhadi_fruit", RhadiFruit::new, MELON);
-		CARVED_RHADI_FRUIT = createHorizontalBlock("deep_trenches:carved_rhadi_fruit", MELON);
-		RHADI_LEAVES = createOakLeaves("deep_trenches:rhadi_leaves");
-		RHADI_LOG = createOakLog("deep_trenches:rhadi_log");
-		RHADI_O_LANTERN = createHorizontalBlock("deep_trenches:rhadi_o_lantern", JACK_O_LANTERN);
-		RHADI_PLANKS = createOakPlanks("deep_trenches:rhadi_planks");
-		RHADI_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:rhadi_pressure_plate");
-		RHADI_SAPLING = createOakSapling("deep_trenches:rhadi_sapling", SaplingGenerators.RHADI);
-		RHADI_SIGN = createOakSign("deep_trenches:rhadi_sign", SignTypes.RHADI);
-		RHADI_SLAB = createOakSlab("deep_trenches:rhadi_slab");
-		RHADI_STAIRS = createOakStairs("deep_trenches:rhadi_stairs", RHADI_PLANKS);
-		RHADI_THORNS = createBlock("deep_trenches:rhadi_thorns", RhadiVineThornsBlock::new, OAK_LEAVES);
-		RHADI_TRAPDOOR = createOakTrapdoor("deep_trenches:rhadi_trapdoor");
-		RHADI_WALL_SIGN = createOakWallSign("deep_trenches:rhadi_wall_sign", SignTypes.RHADI);
-		RHADI_WOOD = createOakWood("deep_trenches:rhadi_wood");
-
-		SANGUART_BUTTON = createOakButton("deep_trenches:sanguart_button");
-		SANGUART_DOOR = createOakDoor("deep_trenches:sanguart_door");
-		SANGUART_FENCE = createOakFence("deep_trenches:sanguart_fence");
-		SANGUART_FENCE_GATE = createOakFenceGate("deep_trenches:sanguart_fence_gate");
-		SANGUART_LEAVES = createOakLeaves("deep_trenches:sanguart_leaves");
-		SANGUART_LOG = createOakLog("deep_trenches:sanguart_log");
-		SANGUART_PLANKS = createOakPlanks("deep_trenches:sanguart_planks");
-		SANGUART_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:sanguart_pressure_plate");
-		SANGUART_SAPLING = createOakSapling("deep_trenches:sanguart_sapling", SaplingGenerators.SANGUART);
-		SANGUART_SIGN = createOakSign("deep_trenches:sanguart_sign", SignTypes.SANGUART);
-		SANGUART_SLAB = createOakSlab("deep_trenches:sanguart_slab");
-		SANGUART_STAIRS = createOakStairs("deep_trenches:sanguart_stairs", SANGUART_PLANKS);
-		SANGUART_TRAPDOOR = createOakTrapdoor("deep_trenches:sanguart_trapdoor");
-		SANGUART_WALL_SIGN = createOakWallSign("deep_trenches:sanguart_wall_sign", SignTypes.SANGUART);
-		SANGUART_WOOD = createOakWood("deep_trenches:sanguart_wood");
-
-		SCARLET_THIORCEN = createCopy("deep_trenches:scarlet_thiorcen", DEAD_BUSH);
-		SCARLET_THIORCEN_BUTTON = createOakButton("deep_trenches:scarlet_thiorcen_button");
-		SCARLET_THIORCEN_DOOR = createOakDoor("deep_trenches:scarlet_thiorcen_door");
-		SCARLET_THIORCEN_FENCE = createOakFence("deep_trenches:scarlet_thiorcen_fence");
-		SCARLET_THIORCEN_FENCE_GATE = createOakFenceGate("deep_trenches:scarlet_thiorcen_fence_gate");
-		SCARLET_THIORCEN_LOG = createOakLog("deep_trenches:scarlet_thiorcen_log");
-		SCARLET_THIORCEN_PLANKS = createOakPlanks("deep_trenches:scarlet_thiorcen_planks");
-		SCARLET_THIORCEN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:scarlet_thiorcen_pressure_plate");
-		SCARLET_THIORCEN_SIGN = createOakSign("deep_trenches:scarlet_thiorcen_sign", SignTypes.SCARLET_THIORCEN);
-		SCARLET_THIORCEN_SLAB = createOakSlab("deep_trenches:scarlet_thiorcen_slab");
-		SCARLET_THIORCEN_STAIRS = createOakStairs("deep_trenches:scarlet_thiorcen_stairs", SCARLET_THIORCEN_PLANKS);
-		SCARLET_THIORCEN_TRAPDOOR = createOakTrapdoor("deep_trenches:scarlet_thiorcen_trapdoor");
-		SCARLET_THIORCEN_WALL_SIGN = createOakWallSign("deep_trenches:scarlet_thiorcen_wall_sign", SignTypes.SCARLET_THIORCEN);
-		SCARLET_THIORCEN_WOOD = createOakWood("deep_trenches:scarlet_thiorcen_wood");
-
-		SEQUOIA_BUTTON = createOakButton("deep_trenches:sequoia_button");
-		SEQUOIA_DOOR = createOakDoor("deep_trenches:sequoia_door");
-		SEQUOIA_FENCE = createOakFence("deep_trenches:sequoia_fence");
-		SEQUOIA_FENCE_GATE = createOakFenceGate("deep_trenches:sequoia_fence_gate");
-		SEQUOIA_LEAVES = createOakLeaves("deep_trenches:sequoia_leaves");
-		SEQUOIA_LOG = createOakLog("deep_trenches:sequoia_log");
-		SEQUOIA_PLANKS = createOakPlanks("deep_trenches:sequoia_planks");
-		SEQUOIA_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:sequoia_pressure_plate");
-		SEQUOIA_SAPLING = createOakSapling("deep_trenches:sequoia_sapling", SaplingGenerators.SEQUOIA);
-		SEQUOIA_SIGN = createOakSign("deep_trenches:sequoia_sign", SignTypes.SEQUOIA);
-		SEQUOIA_SLAB = createOakSlab("deep_trenches:sequoia_slab");
-		SEQUOIA_STAIRS = createOakStairs("deep_trenches:sequoia_stairs", SEQUOIA_PLANKS);
-		SEQUOIA_TRAPDOOR = createOakTrapdoor("deep_trenches:sequoia_trapdoor");
-		SEQUOIA_WALL_SIGN = createOakWallSign("deep_trenches:sequoia_wall_sign", SignTypes.SEQUOIA);
-		SEQUOIA_WOOD = createOakWood("deep_trenches:sequoia_wood");
-
-		SPROOM_BUTTON = createOakButton("deep_trenches:sproom_button");
-		SPROOM_DOOR = createOakDoor("deep_trenches:sproom_door");
-		SPROOM_FENCE = createOakFence("deep_trenches:sproom_fence");
-		SPROOM_FENCE_GATE = createOakFenceGate("deep_trenches:sproom_fence_gate");
-		SPROOM_LEAVES = createOakLeaves("deep_trenches:sproom_leaves");
-		SPROOM_LOG = createOakLog("deep_trenches:sproom_log");
-		SPROOM_PLANKS = createOakPlanks("deep_trenches:sproom_planks");
-		SPROOM_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:sproom_pressure_plate");
-		SPROOM_SAPLING = createStorceanSapling("deep_trenches:sproom_sapling", SaplingGenerators.SPROOM);
-		SPROOM_SIGN = createOakSign("deep_trenches:sproom_sign", SignTypes.SPROOM);
-		SPROOM_SLAB = createOakSlab("deep_trenches:sproom_slab");
-		SPROOM_STAIRS = createOakStairs("deep_trenches:sproom_stairs", SPROOM_PLANKS);
-		SPROOM_TRAPDOOR = createOakTrapdoor("deep_trenches:sproom_trapdoor");
-		SPROOM_WALL_SIGN = createOakWallSign("deep_trenches:sproom_wall_sign", SignTypes.SPROOM);
-		SPROOM_WOOD = createOakWood("deep_trenches:sproom_wood");
-
-		STORTREEAN_BUTTON = createOakButton("deep_trenches:stortreean_button");
-		STORTREEAN_DOOR = createOakDoor("deep_trenches:stortreean_door");
-		STORTREEAN_FENCE = createOakFence("deep_trenches:stortreean_fence");
-		STORTREEAN_FENCE_GATE = createOakFenceGate("deep_trenches:stortreean_fence_gate");
-		STORTREEAN_LEAVES = createOakLeaves("deep_trenches:stortreean_leaves");
-		STORTREEAN_LOG = createOakLog("deep_trenches:stortreean_log");
-		STORTREEAN_PLANKS = createOakPlanks("deep_trenches:stortreean_planks");
-		STORTREEAN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:stortreean_pressure_plate");
-		STORTREEAN_SAPLING = createStorceanSapling("deep_trenches:stortreean_sapling", SaplingGenerators.STORTREEAN);
-		STORTREEAN_SIGN = createOakSign("deep_trenches:stortreean_sign", SignTypes.STORTREEAN);
-		STORTREEAN_SLAB = createOakSlab("deep_trenches:stortreean_slab");
-		STORTREEAN_STAIRS = createOakStairs("deep_trenches:stortreean_stairs", STORTREEAN_PLANKS);
-		STORTREEAN_TRAPDOOR = createOakTrapdoor("deep_trenches:stortreean_trapdoor");
-		STORTREEAN_WALL_SIGN = createOakWallSign("deep_trenches:stortreean_wall_sign", SignTypes.STORTREEAN);
-		STORTREEAN_WOOD = createOakWood("deep_trenches:stortreean_wood");
-
-		STRIPPED_ALMOND_LOG = createStrippedOakLog("deep_trenches:stripped_almond_log");
-		STRIPPED_ALMOND_WOOD = createStrippedOakWood("deep_trenches:stripped_almond_wood");
-		STRIPPED_ANAMEATA_LOG = createStrippedOakLog("deep_trenches:stripped_anameata_log");
-		STRIPPED_ANAMEATA_WOOD = createStrippedOakWood("deep_trenches:stripped_anameata_wood");
-		STRIPPED_ANGELS_TRUMPET_LOG = createStrippedOakLog("deep_trenches:stripped_angels_trumpet_log");
-		STRIPPED_ANGELS_TRUMPET_WOOD = createStrippedOakWood("deep_trenches:stripped_angels_trumpet_wood");
-		STRIPPED_AQUEAN_LOG = createStrippedOakLog("deep_trenches:stripped_aquean_log");
-		STRIPPED_AQUEAN_WOOD = createStrippedOakWood("deep_trenches:stripped_aquean_wood");
-		STRIPPED_BARSHROOKLE_LOG = createStrippedOakLog("deep_trenches:stripped_barshrookle_log");
-		STRIPPED_BARSHROOKLE_WOOD = createStrippedOakWood("deep_trenches:stripped_barshrookle_wood");
-		STRIPPED_BLACK_BIRCH_LOG = createStrippedOakLog("deep_trenches:stripped_black_birch_log");
-		STRIPPED_BLACK_BIRCH_WOOD = createStrippedOakWood("deep_trenches:stripped_black_birch_wood");
-		STRIPPED_BLUE_MAHOE_LOG = createStrippedOakLog("deep_trenches:stripped_blue_mahoe_log");
-		STRIPPED_BLUE_MAHOE_WOOD = createStrippedOakWood("deep_trenches:stripped_blue_mahoe_wood");
-		STRIPPED_BLUE_SPRUCE_LOG = createStrippedOakLog("deep_trenches:stripped_blue_spruce_log");
-		STRIPPED_BLUE_SPRUCE_WOOD = createStrippedOakWood("deep_trenches:stripped_blue_spruce_wood");
-		STRIPPED_BOTTLEBRUSH_LOG = createStrippedOakLog("deep_trenches:stripped_bottlebrush_log");
-		STRIPPED_BOTTLEBRUSH_WOOD = createStrippedOakWood("deep_trenches:stripped_bottlebrush_wood");
-		STRIPPED_BROMYA_LOG = createStrippedOakLog("deep_trenches:stripped_bromya_log");
-		STRIPPED_BROMYA_WOOD = createStrippedOakWood("deep_trenches:stripped_bromya_wood");
-		STRIPPED_BUBBLETREE_LOG = createStrippedOakLog("deep_trenches:stripped_bubbletree_log");
-		STRIPPED_BUBBLETREE_WOOD = createStrippedOakWood("deep_trenches:stripped_bubbletree_wood");
-		STRIPPED_CALCEARB_LOG = createStrippedOakLog("deep_trenches:stripped_calcearb_log");
-		STRIPPED_CALCEARB_WOOD = createStrippedOakWood("deep_trenches:stripped_calcearb_wood");
-		STRIPPED_CHERRY_LOG = createStrippedOakLog("deep_trenches:stripped_cherry_log");
-		STRIPPED_CHERRY_WOOD = createStrippedOakWood("deep_trenches:stripped_cherry_wood");
-		STRIPPED_CHOTORN_LOG = createStrippedOakLog("deep_trenches:stripped_chotorn_log");
-		STRIPPED_CHOTORN_WOOD = createStrippedOakWood("deep_trenches:stripped_chotorn_wood");
-		STRIPPED_COOK_PINE_LOG = createStrippedOakLog("deep_trenches:stripped_cook_pine_log");
-		STRIPPED_COOK_PINE_WOOD = createStrippedOakWood("deep_trenches:stripped_cook_pine_wood");
-		STRIPPED_CROLOOD_LOG = createStrippedOakLog("deep_trenches:stripped_crolood_log");
-		STRIPPED_CROLOOD_WOOD = createStrippedOakWood("deep_trenches:stripped_crolood_wood");
-		STRIPPED_DARK_CROLOOD_LOG = createStrippedOakLog("deep_trenches:stripped_dark_crolood_log");
-		STRIPPED_DARK_CROLOOD_WOOD = createStrippedOakWood("deep_trenches:stripped_dark_crolood_wood");
-		STRIPPED_DARK_FUCHSITRA_LOG = createStrippedOakLog("deep_trenches:stripped_dark_fuchsitra_log");
-		STRIPPED_DARK_FUCHSITRA_WOOD = createStrippedOakWood("deep_trenches:stripped_dark_fuchsitra_wood");
-		STRIPPED_DARK_RED_ELM_LOG = createStrippedOakLog("deep_trenches:stripped_dark_red_elm_log");
-		STRIPPED_DARK_RED_ELM_WOOD = createStrippedOakWood("deep_trenches:stripped_dark_red_elm_wood");
-		STRIPPED_DEAD_WART_TREE_LOG = createStrippedOakLog("deep_trenches:stripped_dead_wart_tree_log");
-		STRIPPED_DEAD_WART_TREE_WOOD = createStrippedOakWood("deep_trenches:stripped_dead_wart_tree_wood");
-		STRIPPED_DRIGYUS_LOG = createStrippedOakLog("deep_trenches:stripped_drigyus_log");
-		STRIPPED_DRIGYUS_WOOD = createStrippedOakWood("deep_trenches:stripped_drigyus_wood");
-		STRIPPED_EBONY_LOG = createStrippedOakLog("deep_trenches:stripped_ebony_log");
-		STRIPPED_EBONY_WOOD = createStrippedOakWood("deep_trenches:stripped_ebony_wood");
-		STRIPPED_ENDERHEART_LOG = createStrippedOakLog("deep_trenches:stripped_enderheart_log");
-		STRIPPED_ENDERHEART_WOOD = createStrippedOakWood("deep_trenches:stripped_enderheart_wood");
-		STRIPPED_FLALM_STEM = createStrippedOakLog("deep_trenches:stripped_flalm_stem");
-		STRIPPED_FLALM_WOOD = createStrippedOakWood("deep_trenches:stripped_flalm_wood");
-		STRIPPED_FRUCE_LOG = createStrippedOakLog("deep_trenches:stripped_fruce_log");
-		STRIPPED_FRUCE_WOOD = createStrippedOakWood("deep_trenches:stripped_fruce_wood");
-		STRIPPED_FUCHSITRA_LOG = createStrippedOakLog("deep_trenches:stripped_fuchsitra_log");
-		STRIPPED_FUCHSITRA_WOOD = createStrippedOakWood("deep_trenches:stripped_fuchsitra_wood");
-		STRIPPED_FUGMOS_STEM = createStrippedOakLog("deep_trenches:stripped_fugmos_stem");
-		STRIPPED_FUGMOS_HYPHAE = createStrippedOakWood("deep_trenches:stripped_fugmos_hyphae");
-		STRIPPED_FUNERANITE_LOG = createStrippedOakLog("deep_trenches:stripped_funeranite_log");
-		STRIPPED_FUNERANITE_WOOD = createStrippedOakWood("deep_trenches:stripped_funeranite_wood");
-		STRIPPED_GHOSHROOM_LOG = createStrippedOakLog("deep_trenches:stripped_ghoshroom_log");
-		STRIPPED_GHOSHROOM_WOOD = createStrippedOakWood("deep_trenches:stripped_ghoshroom_wood");
-		STRIPPED_GIANT_VIOLET_STEM = createStrippedOakLog("deep_trenches:stripped_giant_violet_stem");
-		STRIPPED_GIANT_VIOLET_WOOD = createStrippedOakWood("deep_trenches:stripped_giant_violet_wood");
-		STRIPPED_GUAIACUM_LOG = createStrippedOakLog("deep_trenches:stripped_guaiacum_log");
-		STRIPPED_GUAIACUM_WOOD = createStrippedOakWood("deep_trenches:stripped_guaiacum_wood");
-		STRIPPED_JOSHUA_LOG = createStrippedOakLog("deep_trenches:stripped_joshua_log");
-		STRIPPED_JOSHUA_WOOD = createStrippedOakWood("deep_trenches:stripped_joshua_wood");
-		STRIPPED_KLINKII_PINE_LOG = createStrippedOakLog("deep_trenches:stripped_klinkii_pine_log");
-		STRIPPED_KLINKII_PINE_WOOD = createStrippedOakWood("deep_trenches:stripped_klinkii_pine_wood");
-		STRIPPED_MELALEUCA_LOG = createStrippedOakLog("deep_trenches:stripped_melaleuca_log");
-		STRIPPED_MELALEUCA_WOOD = createStrippedOakWood("deep_trenches:stripped_melaleuca_wood");
-		STRIPPED_MURKANTUAN_LOG = createStrippedOakLog("deep_trenches:stripped_murkantuan_log");
-		STRIPPED_MURKANTUAN_WOOD = createStrippedOakWood("deep_trenches:stripped_murkantuan_wood");
-		STRIPPED_NORFOLK_PINE_LOG = createStrippedOakLog("deep_trenches:stripped_norfolk_pine_log");
-		STRIPPED_NORFOLK_PINE_WOOD = createStrippedOakWood("deep_trenches:stripped_norfolk_pine_wood");
-		STRIPPED_OBSCRUS_LOG = createStrippedOakLog("deep_trenches:stripped_obscrus_log");
-		STRIPPED_OBSCRUS_WOOD = createStrippedOakWood("deep_trenches:stripped_obscrus_wood");
-		STRIPPED_ORHPRIS_LOG = createStrippedOakLog("deep_trenches:stripped_orhpris_log");
-		STRIPPED_ORHPRIS_WOOD = createStrippedOakWood("deep_trenches:stripped_orhpris_wood");
-		STRIPPED_PELTOGYNE_LOG = createStrippedOakLog("deep_trenches:stripped_peltogyne_log");
-		STRIPPED_PELTOGYNE_WOOD = createStrippedOakWood("deep_trenches:stripped_peltogyne_wood");
-		STRIPPED_PIN_CHERRY_LOG = createStrippedOakLog("deep_trenches:stripped_pin_cherry_log");
-		STRIPPED_PIN_CHERRY_WOOD = createStrippedOakWood("deep_trenches:stripped_pin_cherry_wood");
-		STRIPPED_PLUM_LOG = createStrippedOakLog("deep_trenches:stripped_plum_log");
-		STRIPPED_PLUM_WOOD = createStrippedOakWood("deep_trenches:stripped_plum_wood");
-		STRIPPED_PURFUNGA_LOG = createStrippedOakLog("deep_trenches:stripped_purfunga_log");
-		STRIPPED_PURFUNGA_WOOD = createStrippedOakWood("deep_trenches:stripped_purfunga_wood");
-		STRIPPED_RARK_LOG = createStrippedOakLog("deep_trenches:stripped_rark_log");
-		STRIPPED_RARK_WOOD = createStrippedOakWood("deep_trenches:stripped_rark_wood");
-		STRIPPED_RED_ELM_LOG = createStrippedOakLog("deep_trenches:stripped_red_elm_log");
-		STRIPPED_RED_ELM_WOOD = createStrippedOakWood("deep_trenches:stripped_red_elm_wood");
-		STRIPPED_RHADI_LOG = createStrippedOakLog("deep_trenches:stripped_rhadi_log");
-		STRIPPED_RHADI_WOOD = createStrippedOakWood("deep_trenches:stripped_rhadi_wood");
-		STRIPPED_SANGUART_LOG = createStrippedOakLog("deep_trenches:stripped_sanguart_log");
-		STRIPPED_SANGUART_WOOD = createStrippedOakWood("deep_trenches:stripped_sanguart_wood");
-		STRIPPED_SCARLET_THIORCEN_LOG = createStrippedOakLog("deep_trenches:stripped_scarlet_thiorcen_log");
-		STRIPPED_SCARLET_THIORCEN_WOOD = createStrippedOakWood("deep_trenches:stripped_scarlet_thiorcen_wood");
-		STRIPPED_SEQUOIA_LOG = createStrippedOakLog("deep_trenches:stripped_sequoia_log");
-		STRIPPED_SEQUOIA_WOOD = createStrippedOakWood("deep_trenches:stripped_sequoia_wood");
-		STRIPPED_SPROOM_LOG = createStrippedOakLog("deep_trenches:stripped_sproom_log");
-		STRIPPED_SPROOM_WOOD = createStrippedOakWood("deep_trenches:stripped_sproom_wood");
-		STRIPPED_STORTREEAN_LOG = createStrippedOakLog("deep_trenches:stripped_stortreean_log");
-		STRIPPED_STORTREEAN_WOOD = createStrippedOakWood("deep_trenches:stripped_stortreean_wood");
-		STRIPPED_STROOMEAN_LOG = createStrippedOakLog("deep_trenches:stripped_stroomean_log");
-		STRIPPED_STROOMEAN_WOOD = createStrippedOakWood("deep_trenches:stripped_stroomean_wood");
-		STRIPPED_SUNRISE_FUNGUS_LOG = createStrippedOakLog("deep_trenches:stripped_sunrise_fungus_log");
-		STRIPPED_SUNRISE_FUNGUS_WOOD = createStrippedOakWood("deep_trenches:stripped_sunrise_fungus_wood");
-		STRIPPED_TARK_LOG = createStrippedOakLog("deep_trenches:stripped_tark_log");
-		STRIPPED_TARK_WOOD = createStrippedOakWood("deep_trenches:stripped_tark_wood");
-		STRIPPED_TEAK_LOG = createStrippedOakLog("deep_trenches:stripped_teak_log");
-		STRIPPED_TEAK_WOOD = createStrippedOakWood("deep_trenches:stripped_teak_wood");
-		STRIPPED_THUNDERCLOUD_PLUM_LOG = createStrippedOakLog("deep_trenches:stripped_thundercloud_plum_log");
-		STRIPPED_THUNDERCLOUD_PLUM_WOOD = createStrippedOakWood("deep_trenches:stripped_thundercloud_plum_wood");
-		STRIPPED_VYNHERT_LOG = createStrippedOakLog("deep_trenches:stripped_vynhert_log");
-		STRIPPED_VYNHERT_WOOD = createStrippedOakWood("deep_trenches:stripped_vynhert_wood");
-		STRIPPED_WART_TREE_LOG = createStrippedOakLog("deep_trenches:stripped_wart_tree_log");
-		STRIPPED_WART_TREE_WOOD = createStrippedOakWood("deep_trenches:stripped_wart_tree_wood");
-		STRIPPED_WENGE_LOG = createStrippedOakLog("deep_trenches:stripped_wenge_log");
-		STRIPPED_WENGE_WOOD = createStrippedOakWood("deep_trenches:stripped_wenge_wood");
-		STRIPPED_YEW_LOG = createStrippedOakLog("deep_trenches:stripped_yew_log");
-		STRIPPED_YEW_WOOD = createStrippedOakWood("deep_trenches:stripped_yew_wood");
-
-		STROOMEAN_BUTTON = createOakButton("deep_trenches:stroomean_button");
-		STROOMEAN_CAP = createCap("deep_trenches:stroomean_cap");
-		STROOMEAN_DOOR = createOakDoor("deep_trenches:stroomean_door");
-		STROOMEAN_FENCE = createOakFence("deep_trenches:stroomean_fence");
-		STROOMEAN_FENCE_GATE = createOakFenceGate("deep_trenches:stroomean_fence_gate");
-		STROOMEAN_LOG = createOakLog("deep_trenches:stroomean_log");
-		STROOMEAN_PLANKS = createOakPlanks("deep_trenches:stroomean_planks");
-		STROOMEAN_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:stroomean_pressure_plate");
-		STROOMEAN_SAPLING = createAcuaticFungus("deep_trenches:stroomean_sapling", SaplingGenerators.STROOMEAN);
-		STROOMEAN_SIGN = createOakSign("deep_trenches:stroomean_sign", SignTypes.STORTREEAN);
-		STROOMEAN_SLAB = createOakSlab("deep_trenches:stroomean_slab");
-		STROOMEAN_STAIRS = createOakStairs("deep_trenches:stroomean_stairs", STROOMEAN_PLANKS);
-		STROOMEAN_TRAPDOOR = createOakTrapdoor("deep_trenches:stroomean_trapdoor");
-		STROOMEAN_WALL_SIGN = createOakWallSign("deep_trenches:stroomean_wall_sign", SignTypes.STROOMEAN);
-		STROOMEAN_WOOD = createOakWood("deep_trenches:stroomean_wood");
-
-		SUNRISE_FUNGUS_BUTTON = createOakButton("deep_trenches:sunrise_fungus_button");
-		SUNRISE_FUNGUS_CAP = createCap("deep_trenches:sunrise_fungus_cap");
-		SUNRISE_FUNGUS_DOOR = createOakDoor("deep_trenches:sunrise_fungus_door");
-		SUNRISE_FUNGUS_FENCE = createOakFence("deep_trenches:sunrise_fungus_fence");
-		SUNRISE_FUNGUS_FENCE_GATE = createOakFenceGate("deep_trenches:sunrise_fungus_fence_gate");
-		SUNRISE_FUNGUS_LOG = createOakLog("deep_trenches:sunrise_fungus_log");
-		SUNRISE_FUNGUS_PLANKS = createOakPlanks("deep_trenches:sunrise_fungus_planks");
-		SUNRISE_FUNGUS_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:sunrise_fungus_pressure_plate");
-		SUNRISE_FUNGUS_SAPLING = createAcuaticFungus("deep_trenches:sunrise_fungus_sapling", SaplingGenerators.SUNRISE_FUNGUS);
-		SUNRISE_FUNGUS_SIGN = createOakSign("deep_trenches:sunrise_fungus_sign", SignTypes.SUNRISE_FUNGUS);
-		SUNRISE_FUNGUS_SLAB = createOakSlab("deep_trenches:sunrise_fungus_slab");
-		SUNRISE_FUNGUS_STAIRS = createOakStairs("deep_trenches:sunrise_fungus_stairs", SUNRISE_FUNGUS_PLANKS);
-		SUNRISE_FUNGUS_TRAPDOOR = createOakTrapdoor("deep_trenches:sunrise_fungus_trapdoor");
-		SUNRISE_FUNGUS_WALL_SIGN = createOakWallSign("deep_trenches:sunrise_fungus_wall_sign", SignTypes.SUNRISE_FUNGUS);
-		SUNRISE_FUNGUS_WOOD = createOakWood("deep_trenches:sunrise_fungus_wood");
-
-		TARK_BUTTON = createOakButton("deep_trenches:tark_button");
-		TARK_DOOR = createOakDoor("deep_trenches:tark_door");
-		TARK_FENCE = createOakFence("deep_trenches:tark_fence");
-		TARK_FENCE_GATE = createOakFenceGate("deep_trenches:tark_fence_gate");
-		TARK_LEAVES = createOakLeaves("deep_trenches:tark_leaves");
-		TARK_LOG = createOakLog("deep_trenches:tark_log");
-		TARK_PLANKS = createOakPlanks("deep_trenches:tark_planks");
-		TARK_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:tark_pressure_plate");
-		TARK_SAPLING = createOakSapling("deep_trenches:tark_sapling", SaplingGenerators.TARK);
-		TARK_SIGN = createOakSign("deep_trenches:tark_sign", SignTypes.TARK);
-		TARK_SLAB = createOakSlab("deep_trenches:tark_slab");
-		TARK_STAIRS = createOakStairs("deep_trenches:tark_stairs", TARK_PLANKS);
-		TARK_TRAPDOOR = createOakTrapdoor("deep_trenches:tark_trapdoor");
-		TARK_WALL_SIGN = createOakWallSign("deep_trenches:tark_wall_sign", SignTypes.TARK);
-		TARK_WOOD = createOakWood("deep_trenches:tark_wood");
-
-		TEAK_BUTTON = createOakButton("deep_trenches:teak_button");
-		TEAK_DOOR = createOakDoor("deep_trenches:teak_door");
-		TEAK_FENCE = createOakFence("deep_trenches:teak_fence");
-		TEAK_FENCE_GATE = createOakFenceGate("deep_trenches:teak_fence_gate");
-		TEAK_LEAVES = createOakLeaves("deep_trenches:teak_leaves");
-		TEAK_LOG = createOakLog("deep_trenches:teak_log");
-		TEAK_PLANKS = createOakPlanks("deep_trenches:teak_planks");
-		TEAK_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:teak_pressure_plate");
-		TEAK_SAPLING = createOakSapling("deep_trenches:teak_sapling", SaplingGenerators.TEAK);
-		TEAK_SIGN = createOakSign("deep_trenches:teak_sign", SignTypes.TEAK);
-		TEAK_SLAB = createOakSlab("deep_trenches:teak_slab");
-		TEAK_STAIRS = createOakStairs("deep_trenches:teak_stairs", TEAK_PLANKS);
-		TEAK_TRAPDOOR = createOakTrapdoor("deep_trenches:teak_trapdoor");
-		TEAK_WALL_SIGN = createOakWallSign("deep_trenches:teak_wall_sign", SignTypes.TEAK);
-		TEAK_WOOD = createOakWood("deep_trenches:teak_wood");
-
-		THUNDERCLOUD_PLUM_BUTTON = createOakButton("deep_trenches:thundercloud_plum_button");
-		THUNDERCLOUD_PLUM_DOOR = createOakDoor("deep_trenches:thundercloud_plum_door");
-		THUNDERCLOUD_PLUM_FENCE = createOakFence("deep_trenches:thundercloud_plum_fence");
-		THUNDERCLOUD_PLUM_FENCE_GATE = createOakFenceGate("deep_trenches:thundercloud_plum_fence_gate");
-		THUNDERCLOUD_PLUM_LEAVES = createOakLeaves("deep_trenches:thundercloud_plum_leaves");
-		THUNDERCLOUD_PLUM_LOG = createOakLog("deep_trenches:thundercloud_plum_log");
-		THUNDERCLOUD_PLUM_PLANKS = createOakPlanks("deep_trenches:thundercloud_plum_planks");
-		THUNDERCLOUD_PLUM_SAPLING = createOakSapling("deep_trenches:thundercloud_plum_sapling", SaplingGenerators.THUNDERCLOUD_PLUM);
-		THUNDERCLOUD_PLUM_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:thundercloud_plum_pressure_plate");
-		THUNDERCLOUD_PLUM_SIGN = createOakSign("deep_trenches:thundercloud_plum_sign", SignTypes.THUNDERCLOUD_PLUM);
-		THUNDERCLOUD_PLUM_SLAB = createOakSlab("deep_trenches:thundercloud_plum_slab");
-		THUNDERCLOUD_PLUM_STAIRS = createOakStairs("deep_trenches:thundercloud_plum_stairs", THUNDERCLOUD_PLUM_PLANKS);
-		THUNDERCLOUD_PLUM_TRAPDOOR = createOakTrapdoor("deep_trenches:thundercloud_plum_trapdoor");
-		THUNDERCLOUD_PLUM_WALL_SIGN = createOakWallSign("deep_trenches:thundercloud_plum_wall_sign", SignTypes.THUNDERCLOUD_PLUM);
-		THUNDERCLOUD_PLUM_WOOD = createOakWood("deep_trenches:thundercloud_plum_wood");
-
-		VYNHERT_BUTTON = createOakButton("deep_trenches:vynhert_button");
-		VYNHERT_DOOR = createOakDoor("deep_trenches:vynhert_door");
-		VYNHERT_FENCE = createOakFence("deep_trenches:vynhert_fence");
-		VYNHERT_FENCE_GATE = createOakFenceGate("deep_trenches:vynhert_fence_gate");
-		VYNHERT_FRUIT = createBlock("deep_trenches:vynhert_fruit", VynhertFruit::new, MELON);
-		CARVED_VYNHERT_FRUIT = createHorizontalBlock("deep_trenches:carved_vynhert_fruit", MELON);
-		VYNHERT_LEAF = createBlock("deep_trenches:vynhert_leaf", VynhertLeafBlock::new, ROSE_BUSH);
-		VYNHERT_LOG = createOakLog("deep_trenches:vynhert_log");
-		VYNHERT_O_LANTERN = createHorizontalBlock("deep_trenches:vynhert_o_lantern", JACK_O_LANTERN);
-		VYNHERT_PLANKS = createOakPlanks("deep_trenches:vynhert_planks");
-		VYNHERT_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:vynhert_pressure_plate");
-		VYNHERT_SAPLING = createOakSapling("deep_trenches:vynhert_sapling", SaplingGenerators.VYNHERT);
-		VYNHERT_SIGN = createOakSign("deep_trenches:vynhert_sign", SignTypes.VYNHERT);
-		VYNHERT_SLAB = createOakSlab("deep_trenches:vynhert_slab");
-		VYNHERT_STAIRS = createOakStairs("deep_trenches:vynhert_stairs", VYNHERT_PLANKS);
-		VYNHERT_TENTACLES = createBlock("deep_trenches:vynhert_tentacles", VynhertThornsBlock::new, OAK_LEAVES);
-		VYNHERT_THORNS = createBlock("deep_trenches:vynhert_thorns", VynhertThornsBlock::new, OAK_LEAVES);
-		VYNHERT_TRAPDOOR = createOakTrapdoor("deep_trenches:vynhert_trapdoor");
-		VYNHERT_WALL_SIGN = createOakWallSign("deep_trenches:vynhert_wall_sign", SignTypes.VYNHERT);
-		VYNHERT_WOOD = createOakWood("deep_trenches:vynhert_wood");
-
-		WART_TREE_BUTTON = createOakButton("deep_trenches:wart_tree_button");
-		WART_TREE_DOOR = createOakDoor("deep_trenches:wart_tree_door");
-		WART_TREE_FENCE = createOakFence("deep_trenches:wart_tree_fence");
-		WART_TREE_FENCE_GATE = createOakFenceGate("deep_trenches:wart_tree_fence_gate");
-		WART_TREE_LOG = createOakLog("deep_trenches:wart_tree_log");
-		WART_TREE_PLANKS = createOakPlanks("deep_trenches:wart_tree_planks");
-		WART_TREE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:wart_tree_pressure_plate");
-		WART_TREE_SIGN = createOakSign("deep_trenches:wart_tree_sign", SignTypes.WART_TREE);
-		WART_TREE_SLAB = createOakSlab("deep_trenches:wart_tree_slab");
-		WART_TREE_STAIRS = createOakStairs("deep_trenches:wart_tree_stairs", WART_TREE_PLANKS);
-		WART_TREE_TRAPDOOR = createOakTrapdoor("deep_trenches:wart_tree_trapdoor");
-		WART_TREE_WALL_SIGN = createOakWallSign("deep_trenches:wart_tree_wall_sign", SignTypes.WART_TREE);
-		WART_TREE_WARTS = createCopy("deep_trenches:wart_tree_warts", NETHER_WART_BLOCK);
-		WART_TREE_WOOD = createOakWood("deep_trenches:wart_tree_wood");
-
-		WENGE_BUTTON = createOakButton("deep_trenches:wenge_button");
-		WENGE_DOOR = createOakDoor("deep_trenches:wenge_door");
-		WENGE_FENCE = createOakFence("deep_trenches:wenge_fence");
-		WENGE_FENCE_GATE = createOakFenceGate("deep_trenches:wenge_fence_gate");
-		WENGE_LEAVES = createOakLeaves("deep_trenches:wenge_leaves");
-		WENGE_LOG = createOakLog("deep_trenches:wenge_log");
-		WENGE_PLANKS = createOakPlanks("deep_trenches:wenge_planks");
-		WENGE_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:wenge_pressure_plate");
-		WENGE_SAPLING = createOakSapling("deep_trenches:wenge_sapling", SaplingGenerators.WENGE);
-		WENGE_SIGN = createOakSign("deep_trenches:wenge_sign", SignTypes.WENGE);
-		WENGE_SLAB = createOakSlab("deep_trenches:wenge_slab");
-		WENGE_STAIRS = createOakStairs("deep_trenches:wenge_stairs", WENGE_PLANKS);
-		WENGE_TRAPDOOR = createOakTrapdoor("deep_trenches:wenge_trapdoor");
-		WENGE_WALL_SIGN = createOakWallSign("deep_trenches:wenge_wall_sign", SignTypes.WENGE);
-		WENGE_WOOD = createOakWood("deep_trenches:wenge_wood");
-
-		YEW_BUTTON = createOakButton("deep_trenches:yew_button");
-		YEW_DOOR = createOakDoor("deep_trenches:yew_door");
-		YEW_FENCE = createOakFence("deep_trenches:yew_fence");
-		YEW_FENCE_GATE = createOakFenceGate("deep_trenches:yew_fence_gate");
-		YEW_LEAVES = createOakLeaves("deep_trenches:yew_leaves");
-		YEW_LOG = createOakLog("deep_trenches:yew_log");
-		YEW_PLANKS = createOakPlanks("deep_trenches:yew_planks");
-		YEW_PRESSURE_PLATE = createOakPressurePlate("deep_trenches:yew_pressure_plate");
-		YEW_SAPLING = createOakSapling("deep_trenches:yew_sapling", SaplingGenerators.YEW);
-		YEW_SIGN = createOakSign("deep_trenches:yew_sign", SignTypes.YEW);
-		YEW_SLAB = createOakSlab("deep_trenches:yew_slab");
-		YEW_STAIRS = createOakStairs("deep_trenches:yew_stairs", YEW_PLANKS);
-		YEW_TRAPDOOR = createOakTrapdoor("deep_trenches:yew_trapdoor");
-		YEW_WALL_SIGN = createOakWallSign("deep_trenches:yew_wall_sign", SignTypes.YEW);
-		YEW_WOOD = createOakWood("deep_trenches:yew_wood");
-
-		POTTED_ALMOND_SAPLING = createPottedSapling("deep_trenches:potted_almond_sapling", ALMOND_SAPLING);
-		POTTED_ANAMEATA_SAPLING = createPottedSapling("deep_trenches:potted_anameata_sapling", ANAMEATA_SAPLING);
-		POTTED_ANGELS_TRUMPET_SAPLING = createPottedSapling("deep_trenches:potted_angels_trumpet_sapling", ANGELS_TRUMPET_SAPLING);
-		POTTED_AQUEAN_SAPLING = createPottedSapling("deep_trenches:potted_aquean_sapling", AQUEAN_SAPLING);
-		POTTED_BARSHROOKLE_SAPLING = createPottedSapling("deep_trenches:potted_barshrookle_sapling", BARSHROOKLE_SAPLING);
-		POTTED_BLACK_BIRCH_SAPLING = createPottedSapling("deep_trenches:potted_black_birch_sapling", BLACK_BIRCH_SAPLING);
-		POTTED_BLUE_MAHOE_SAPLING = createPottedSapling("deep_trenches:potted_blue_mahoe_sapling", BLUE_MAHOE_SAPLING);
-		POTTED_BLUE_SPRUCE_SAPLING = createPottedSapling("deep_trenches:potted_blue_spruce_sapling", BLUE_SPRUCE_SAPLING);
-		POTTED_BOTTLEBRUSH_SAPLING = createPottedSapling("deep_trenches:potted_bottlebrush_sapling", BOTTLEBRUSH_SAPLING);
-		POTTED_BROMYA_SAPLING = createPottedSapling("deep_trenches:potted_bromya_sapling", BROMYA_SAPLING);
-		POTTED_BUBBLETREE_SAPLING = createPottedSapling("deep_trenches:potted_bubbletree_sapling", BUBBLETREE_SAPLING);
-		POTTED_CALCEARB_SAPLING = createPottedSapling("deep_trenches:potted_calcearb_sapling", CALCEARB_SAPLING);
-		POTTED_CHERRY_SAPLING = createPottedSapling("deep_trenches:potted_cherry_sapling", CHERRY_SAPLING);
-		POTTED_COOK_PINE_SAPLING = createPottedSapling("deep_trenches:potted_cook_pine_sapling", COOK_PINE_SAPLING);
-		POTTED_CROLOOD_SAPLING = createPottedSapling("deep_trenches:potted_crolood_sapling", CROLOOD_SAPLING);
-		POTTED_DARK_CROLOOD_SAPLING = createPottedSapling("deep_trenches:potted_dark_crolood_sapling", DARK_CROLOOD_SAPLING);
-		POTTED_DARK_FUCHSITRA_SAPLING = createPottedSapling("deep_trenches:potted_dark_fuchsitra_sapling", DARK_FUCHSITRA_SAPLING);
-		POTTED_DARK_RED_ELM_SAPLING = createPottedSapling("deep_trenches:potted_dark_red_elm_sapling", DARK_RED_ELM_SAPLING);
-		POTTED_EBONY_SAPLING = createPottedSapling("deep_trenches:potted_ebony_sapling", EBONY_SAPLING);
-		POTTED_ENDERHEART_SAPLING = createPottedSapling("deep_trenches:potted_enderheart_sapling", ENDERHEART_SAPLING);
-		POTTED_FRUCE_SAPLING = createPottedSapling("deep_trenches:potted_fruce_sapling", FRUCE_SAPLING);
-		POTTED_FUCHSITRA_SAPLING = createPottedSapling("deep_trenches:potted_fuchsitra_sapling", FUCHSITRA_SAPLING);
-		POTTED_FUGMOS = createPottedSapling("deep_trenches:potted_fugmos", FUGMOS);
-		POTTED_FUNERANITE_SAPLING = createPottedSapling("deep_trenches:potted_funeranite_sapling", FUNERANITE_SAPLING);
-		POTTED_GHOSHROOM_SAPLING = createPottedSapling("deep_trenches:potted_ghoshroom_sapling", GHOSHROOM_SAPLING);
-		POTTED_GUAIACUM_SAPLING = createPottedSapling("deep_trenches:potted_guaiacum_sapling", GUAIACUM_SAPLING);
-		POTTED_JOSHUA_SAPLING = createPottedSapling("deep_trenches:potted_joshua_sapling", JOSHUA_SAPLING);
-		POTTED_KLINKII_PINE_SAPLING = createPottedSapling("deep_trenches:potted_klinkii_pine_sapling", KLINKII_PINE_SAPLING);
-		POTTED_MELALEUCA_SAPLING = createPottedSapling("deep_trenches:potted_melaleuca_sapling", MELALEUCA_SAPLING);
-		POTTED_MURKANTUAN_SAPLING = createPottedSapling("deep_trenches:potted_murkantuan_sapling", MURKANTUAN_SAPLING);
-		POTTED_NORFOLK_PINE_SAPLING = createPottedSapling("deep_trenches:potted_norfolk_pine_sapling", NORFOLK_PINE_SAPLING);
-		POTTED_ORHPRIS_SAPLING = createPottedSapling("deep_trenches:potted_orhpris_sapling", ORHPRIS_SAPLING);
-		POTTED_PELTOGYNE_SAPLING = createPottedSapling("deep_trenches:potted_peltogyne_sapling", PELTOGYNE_SAPLING);
-		POTTED_PIN_CHERRY_SAPLING = createPottedSapling("deep_trenches:potted_pin_cherry_sapling", PIN_CHERRY_SAPLING);
-		POTTED_PLUM_SAPLING = createPottedSapling("deep_trenches:potted_plum_sapling", PLUM_SAPLING);
-		POTTED_PURFUNGA_SAPLING = createPottedSapling("deep_trenches:potted_purfunga_sapling", PURFUNGA_SAPLING);
-		POTTED_RARK_SAPLING = createPottedSapling("deep_trenches:potted_rark_sapling", RARK_SAPLING);
-		POTTED_RED_ELM_SAPLING = createPottedSapling("deep_trenches:potted_red_elm_sapling", RED_ELM_SAPLING);
-		POTTED_RHADI_SAPLING = createPottedSapling("deep_trenches:potted_rhadi_sapling", RHADI_SAPLING);
-		POTTED_SANGUART_SAPLING = createPottedSapling("deep_trenches:potted_sanguart_sapling", SANGUART_SAPLING);
-		POTTED_SEQUOIA_SAPLING = createPottedSapling("deep_trenches:potted_sequoia_sapling", SEQUOIA_SAPLING);
-		POTTED_SPROOM_SAPLING = createPottedSapling("deep_trenches:potted_sproom_sapling", SPROOM_SAPLING);
-		POTTED_STORTREEAN_SAPLING = createPottedSapling("deep_trenches:potted_stortreean_sapling", STORTREEAN_SAPLING);
-		POTTED_STROOMEAN_SAPLING = createPottedSapling("deep_trenches:potted_stroomean_sapling", STROOMEAN_SAPLING);
-		POTTED_SUNRISE_FUNGUS_SAPLING = createPottedSapling("deep_trenches:potted_sunrise_fungus_sapling", SUNRISE_FUNGUS_SAPLING);
-		POTTED_TARK_SAPLING = createPottedSapling("deep_trenches:potted_tark_sapling", TARK_SAPLING);
-		POTTED_TEAK_SAPLING = createPottedSapling("deep_trenches:potted_teak_sapling", TEAK_SAPLING);
-		POTTED_THUNDERCLOUD_PLUM_SAPLING = createPottedSapling("deep_trenches:potted_thundercloud_plum_sapling", THUNDERCLOUD_PLUM_SAPLING);
-		POTTED_VYNHERT_SAPLING = createPottedSapling("deep_trenches:potted_vynhert_sapling", VYNHERT_SAPLING);
-		POTTED_WENGE_SAPLING = createPottedSapling("deep_trenches:potted_wenge_sapling", WENGE_SAPLING);
-		POTTED_YEW_SAPLING = createPottedSapling("deep_trenches:potted_yew_sapling", YEW_SAPLING);
-
-		POTTED_BLACK_PANSY = createFlowerPot("deep_trenches:potted_black_pansy", BLACK_PANSY);
-		POTTED_BLUE_PANSY = createFlowerPot("deep_trenches:potted_blue_pansy", BLUE_PANSY);
-		POTTED_BLUE_POPPY = createFlowerPot("deep_trenches:potted_blue_poppy", BLUE_POPPY);
-		POTTED_BLUE_VIOLET = createFlowerPot("deep_trenches:potted_blue_violet", BLUE_VIOLET);
-		POTTED_BONNET_SPURGE = createFlowerPot("deep_trenches:potted_bonnet_spurge", BONNET_SPURGE);
-		POTTED_BROWN_PANSY = createFlowerPot("deep_trenches:potted_brown_pansy", BROWN_PANSY);
-		POTTED_CACTLOW = createFlowerPot("deep_trenches:potted_cactlow", CACTLOW);
-		POTTED_CHOCOLATE_COSMOS_FLOWER = createFlowerPot("deep_trenches:potted_chocolate_cosmos_flower", CHOCOLATE_COSMOS_FLOWER);
-		POTTED_CYAN_BLUE_VIOLET = createFlowerPot("deep_trenches:potted_cyan_blue_violet", CYAN_BLUE_VIOLET);
-		POTTED_CYCAWLER = createFlowerPot("deep_trenches:potted_cycawler", CYCAWLER);
-		POTTED_DRIGYUS = createFlowerPot("deep_trenches:potted_drigyus", DRIGYUS);
-		POTTED_GARDEN_PINKS = createFlowerPot("deep_trenches:potted_garden_pinks", GARDEN_PINKS);
-		POTTED_GREEN_PANSY = createFlowerPot("deep_trenches:potted_green_pansy", GREEN_PANSY);
-		POTTED_GYLDELION_FLOWER = createFlowerPot("deep_trenches:potted_gyldelion_flower", GYLDELION_FLOWER);
-		POTTED_MARSH_VIOLET = createFlowerPot("deep_trenches:potted_marsh_violet", MARSH_VIOLET);
-		POTTED_NATIVE_VIOLET = createFlowerPot("deep_trenches:potted_native_violet", NATIVE_VIOLET);
-		POTTED_OPIUM_POPPY = createFlowerPot("deep_trenches:potted_opium_poppy", OPIUM_POPPY);
-		POTTED_POPPY = createFlowerPot("deep_trenches:potted_poppy", POPPY);
-		POTTED_PINK_AND_ORANGE_PANSY = createFlowerPot("deep_trenches:potted_pink_and_orange_pansy", PINK_AND_ORANGE_PANSY);
-		POTTED_PINK_BRAITOR_FLOWER = createFlowerPot("deep_trenches:potted_pink_braitor_flower", PINK_BRAITOR_FLOWER);
-		POTTED_PINK_MARSH_VIOLET = createFlowerPot("deep_trenches:potted_pink_marsh_violet", PINK_MARSH_VIOLET);
-		POTTED_PINK_ROSE = createFlowerPot("deep_trenches:potted_pink_rose", PINK_ROSE);
-		POTTED_PINK_ROSE_BUSH = createFlowerPot("deep_trenches:potted_pink_rose_bush", PINK_ROSE_BUSH);
-		POTTED_PURPLE_AND_ORANGE_PANSY = createFlowerPot("deep_trenches:potted_purple_and_orange_pansy", PURPLE_AND_ORANGE_PANSY);
-		POTTED_SPIKE_LAVENDER = createFlowerPot("deep_trenches:potted_spike_lavender", SPIKE_LAVENDER);
-		POTTED_RED_BRAITOR_FLOWER = createFlowerPot("deep_trenches:potted_red_braitor_flower", RED_BRAITOR_FLOWER);
-		POTTED_RED_CHOCOLATE_COSMOS_FLOWER = createFlowerPot("deep_trenches:potted_red_chocolate_cosmos_flower", RED_CHOCOLATE_COSMOS_FLOWER);
-		POTTED_RED_PANSY = createFlowerPot("deep_trenches:potted_red_pansy", RED_PANSY);
-		POTTED_RED_ROSE = createFlowerPot("deep_trenches:potted_red_rose", RED_ROSE);
-		POTTED_RUBRA_BLUE_VIOLET = createFlowerPot("deep_trenches:potted_rubra_blue_violet", RUBRA_BLUE_VIOLET);
-		POTTED_SCARLET_THIORCEN = createFlowerPot("deep_trenches:potted_scarlet_thiorcen", SCARLET_THIORCEN);
-		POTTED_SPIDREET = createFlowerPot("deep_trenches:potted_spidreet", SPIDREET);
-		POTTED_SPROOM_SPIKE = createFlowerPot("deep_trenches:potted_sproom_spike", SPROOM_SPIKE);
-		POTTED_SQUISACLE = createFlowerPot("deep_trenches:potted_squisacle", SQUISACLE);
-		POTTED_SWEET_VIOLET = createFlowerPot("deep_trenches:potted_sweet_violet", SWEET_VIOLET);
-		POTTED_TOPPED_LAVENDER = createFlowerPot("deep_trenches:potted_topped_lavender", TOPPED_LAVENDER);
-		POTTED_VASLAME = createFlowerPot("deep_trenches:potted_vaslame", VASLAME);
-		POTTED_WEEPISTIL = createFlowerPot("deep_trenches:potted_weepistil", WEEPISTIL);
-		POTTED_WEEPY_HOLLOWER = createFlowerPot("deep_trenches:potted_weepy_hollower", WEEPY_HOLLOWER);
-		POTTED_YELLOW_VIOLET = createFlowerPot("deep_trenches:potted_yellow_violet", YELLOW_VIOLET);
-
-		LIGHT_OPALITE = createCopy("deep_trenches:light_opalite", QUARTZ_BLOCK);
-		LUSHINE = createCopy("deep_trenches:lushine", STONE);
-		LUSHINE_PILLAR = createPillar("deep_trenches:lushine_pillar", QUARTZ_PILLAR);
-		LUSTRITE = createCopy("deep_trenches:lustrite", STONE);
-		MARINE_SNOW = createCopy("deep_trenches:marine_snow", SOUL_SAND);
-		MOSOIL = createBlock("deep_trenches:mosoil", MosoilBlock::new, GRASS_BLOCK);
-		OPALITE = createCopy("deep_trenches:opalite", QUARTZ_BLOCK);
-		POININE = createPillar("deep_trenches:poinine", BASALT);
-		RHODONITE = createCopy("deep_trenches:rhodonite", QUARTZ_BLOCK);
-		SPRILIUM = createBlock("deep_trenches:sprilium", SpriliumBlock::new, Settings.copy(STONE).ticksRandomly());
-		SKYSOIL = createCopy("deep_trenches:skysoil", DIRT);
-		SKYSTONE = createCopy("deep_trenches:skystone", STONE);
-		STORCEAN_MARINE_SNOW = createCopy("deep_trenches:storcean_marine_snow", SOUL_SAND);
-		STORCENDITE = createCopy("deep_trenches:storcendite", STONE);
-		STORCERACK = createCopy("deep_trenches:storcerack", STONE);
-		VERDINE = createCopy("deep_trenches:verdine", STONE);
-
-		ABYSSOPELAGIC_WATER = createWaterFluid("deep_trenches:abyssopelagic_water", ModFluids.ABYSSOPELAGIC_WATER, 0.22F);
-		ACID = createWaterFluid("deep_trenches:acid", ModFluids.ACID);
-		BATHYPELAGIC_WATER = createWaterFluid("deep_trenches:bathypelagic_water", ModFluids.BATHYPELAGIC_WATER, 1.25F);
-		BRINE = createWaterFluid("deep_trenches:brine", ModFluids.BRINE);
-		CLEAR_WATER = createWaterFluid("deep_trenches:clear_water", ModFluids.CLEAR_WATER, 1.25F);
-		HADOPELAGIC_WATER = createWaterFluid("deep_trenches:hadopelagic_water", ModFluids.HADOPELAGIC_WATER, 0.16F);
-		MESOPELAGIC_WATER = createWaterFluid("deep_trenches:mesopelagic_water", ModFluids.MESOPELAGIC_WATER, 0.5F);
-		STORCEAN_ABYSSOPELAGIC_WATER = createWaterFluid("deep_trenches:storcean_abyssopelagic_water", ModFluids.STORCEAN_ABYSSOPELAGIC_WATER, 0.12F);
-		STORCEAN_BATHYPELAGIC_WATER = createWaterFluid("deep_trenches:storcean_bathypelagic_water", ModFluids.STORCEAN_BATHYPELAGIC_WATER, 0.16F);
-		STORCEAN_ENDERPELAGIC_WATER = createWaterFluid("deep_trenches:storcean_enderpelagic_water", ModFluids.STORCEAN_ENDERPELAGIC_WATER, 1.25F);
-		STORCEAN_GASOPELAGIC_WATER = createWaterFluid("deep_trenches:storcean_gasopelagic_water", ModFluids.STORCEAN_GASOPELAGIC_WATER, 1.35F);
-		STORCEAN_HADOPELAGIC_WATER = createWaterFluid("deep_trenches:storcean_hadopelagic_water", ModFluids.STORCEAN_HADOPELAGIC_WATER, 0.1F);
-		STORCEAN_INFINIPELAGIC_WATER = createWaterFluid("deep_trenches:storcean_infinipelagic_water", ModFluids.STORCEAN_INFINIPELAGIC_WATER, 0.05F);
-		STORCEAN_MESOPELAGIC_WATER = createWaterFluid("deep_trenches:storcean_mesopelagic_water", ModFluids.STORCEAN_MESOPELAGIC_WATER, 0.2F);
-		STORCEAN_VIRDIPELAGIC_WATER = createWaterFluid("deep_trenches:storcean_virdipelagic_water", ModFluids.STORCEAN_VIRDIPELAGIC_WATER, 1.25F);
-		STORCEAN_WATER = createWaterFluid("deep_trenches:storcean_water", ModFluids.ABYSSOPELAGIC_WATER, 0.5F);
+		AIRIAL_MOSS = createBlock(AirialMossBlock::new, GRASS_BLOCK);
+		BLACK_MARBLE = createCopy(STONE);
+		BLUE_STORCERACK = createCopy(STONE);
+		DRITEAN = createCopy(DIRT);
+		ENROTIUM = createBlock(EnrotiumBlock::new, CRIMSON_NYLIUM);
+		GYLDELION_BLOCK = createCopy(IRON_BLOCK);
+
+		STASP_NEST = createBlock(StaspNestBlock::new, OAK_WOOD);
+
+		GIANT_VIOLET = createTallFlower(RED_TULIP);
+		GIANT_VIOLET_LEAF = createCopy(COCOA);
+		GIANT_VIOLET_PETAL = createCopy(COCOA);
+		GIANT_VIOLET_PISTIL = createCopy(COCOA);
+
+		CYAN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		GREEN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		LIGHT_BLUE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+
+		BLACK_PANSY = createFlowerBlock(RESISTANCE, 9);
+		BLUE_PANSY = createFlowerBlock(RESISTANCE, 9);
+		BLUE_POPPY = createFlowerBlock(NIGHT_VISION, 8);
+		BLUE_VIOLET = createFlowerBlock(RESISTANCE, 9);
+		BONNET_SPURGE = createFlowerBlock(POISON, 8);
+		BROWN_PANSY = createFlowerBlock(RESISTANCE, 9);
+		CHOCOLATE_COSMOS_FLOWER = createFlowerBlock(COSMOS_BEAUTY, 14);
+		CYAN_BLUE_VIOLET = createFlowerBlock(RESISTANCE, 9);
+		CYCAWLER = createStorceanFlower(CYCAWLER_BEAUTY, 24000);
+		GARDEN_PINKS = createFlowerBlock(FIRE_RESISTANCE, 6);
+		GREEN_PANSY = createFlowerBlock(RESISTANCE, 9);
+		GYLDELION_FLOWER = createFlowerBlock(GLOWING, 12);
+		MARSH_VIOLET = createFlowerBlock(RESISTANCE, 9);
+		NATIVE_VIOLET = createFlowerBlock(RESISTANCE, 9);
+		OPIUM_POPPY = createFlowerBlock(WEAKNESS, 11);
+		PINK_AND_ORANGE_PANSY = createFlowerBlock(RESISTANCE, 9);
+		PINK_BRAITOR_FLOWER = createFlowerBlock(BRAITOR_BEAUTY, 21);
+		PINK_MARSH_VIOLET = createFlowerBlock(RESISTANCE, 9);
+		PINK_ROSE = createFlowerBlock(FLOWER_BEAUTY, 13);
+		PINK_ROSE_BUSH = createFlowerBlock(FLOWER_BEAUTY, 13);
+		POPPY = createFlowerBlock(NIGHT_VISION, 5);
+		PURPLE_AND_ORANGE_PANSY = createFlowerBlock(RESISTANCE, 9);
+		RED_BRAITOR_FLOWER = createFlowerBlock(BRAITOR_BEAUTY, 21);
+		RED_CHOCOLATE_COSMOS_FLOWER = createFlowerBlock(COSMOS_BEAUTY, 14);
+		RED_PANSY = createFlowerBlock(RESISTANCE, 9);
+		RED_ROSE = createFlowerBlock(FLOWER_BEAUTY, 13);
+		RUBRA_BLUE_VIOLET = createFlowerBlock(RESISTANCE, 9);
+		SPIDREET = createStorceanFlower(REGENERATION, 6);
+		SPIKE_LAVENDER = createFlowerBlock(FLOWER_BEAUTY, 6);
+		SPRIDELION = new SpridelionBlock(900, Settings.copy(RED_TULIP));
+		SQUISACLE = createStorceanFlower(LEVITATION, 4);
+		SWEET_VIOLET = createFlowerBlock(RESISTANCE, 9);
+		TOPPED_LAVENDER = createFlowerBlock(FLOWER_BEAUTY, 6);
+		VASLAME = createStorceanFlower(FIRE_RESISTANCE, 6);
+		WEEPISTIL = createStorceanFlower(NAUSEA, 4);
+		WEEPY_HOLLOWER = createStorceanFlower(GLOWING, 6);
+		WHITE_VIOLET = createFlowerBlock(RESISTANCE, 9);
+		WILD_PANSY = createFlowerBlock(RESISTANCE, 9);
+		YELLOW_VIOLET = createFlowerBlock(RESISTANCE, 9);
+
+		AIRIAL_BUSH = createBlock(AirialBushBlock::new, GRASS);
+		HARSHLES = createBlock(HarshlesBlock::new, GRASS);
+		REEBLOON = createBlock(ReebloonBlock::new, GRASS);
+		SQUISH_TIPS = createBlock(SquishTipsBlock::new, GRASS);
+		SPROOM_SPIKE = createBlock(SproomSpikeBlock::new, SUNFLOWER);
+
+		BLACK_LILY = createTallFlower(SUNFLOWER);
+		BULLTHORN = createTallFlower(SUNFLOWER);
+		CACTLOW = createTallFlower(SUNFLOWER);
+		CLAWBULB = createTallFlower(SUNFLOWER);
+		LIME_SPURGE = createTallFlower(SUNFLOWER);
+		LUPIN_FLOWER = createTallFlower(SUNFLOWER);
+		ORANGE_LILY = createTallFlower(SUNFLOWER);
+		PIGAL = createTallFlower(SUNFLOWER);
+		PURPROUND = createTallFlower(SUNFLOWER);
+		SPRINLY = createTallFlower(SUNFLOWER);
+		VELVET_LILY = createTallFlower(SUNFLOWER);
+
+		MURKSTEM = createBlock(MurkstemBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
+		SKALK = createBlock(SkalkBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
+
+		DEAD_BLACKGREEN_TREE_CORAL = createDeadCoral();
+		DEAD_BLACKGREEN_TREE_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_BLACKGREEN_TREE_CORAL_FAN = createDeadCoralFan();
+		DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		BLACKGREEN_TREE_CORAL = createCoral(DEAD_BLACKGREEN_TREE_CORAL);
+		BLACKGREEN_TREE_CORAL_BLOCK = createCoralBlock(DEAD_BLACKGREEN_TREE_CORAL_BLOCK);
+		BLACKGREEN_TREE_CORAL_FAN = createCoralFan(DEAD_BLACKGREEN_TREE_CORAL_FAN);
+		BLACKGREEN_TREE_CORAL_WALL_FAN = createCoralWallFan(DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN);
+
+		DEAD_BROCCOLI_CORAL = createDeadCoral();
+		DEAD_BROCCOLI_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_BROCCOLI_CORAL_BUBBLES = createDeadCoralBlock();
+		DEAD_BROCCOLI_CORAL_FAN = createDeadCoralFan();
+		DEAD_BROCCOLI_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		BROCCOLI_CORAL = createCoral(DEAD_BROCCOLI_CORAL);
+		BROCCOLI_CORAL_BLOCK = createCoralBlock(DEAD_BROCCOLI_CORAL_BLOCK);
+		BROCCOLI_CORAL_BUBBLES = createCoralBlock(DEAD_BROCCOLI_CORAL_BUBBLES);
+		BROCCOLI_CORAL_FAN = createCoralFan(DEAD_BROCCOLI_CORAL_FAN);
+		BROCCOLI_CORAL_WALL_FAN = createCoralWallFan(DEAD_BROCCOLI_CORAL_WALL_FAN);
+
+		DEAD_BUBBLEGUM_CORAL = createDeadCoral();
+		DEAD_BUBBLEGUM_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_BUBBLEGUM_CORAL_FAN = createDeadCoralFan();
+		DEAD_BUBBLEGUM_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		BUBBLEGUM_CORAL = createCoral(DEAD_BUBBLEGUM_CORAL);
+		BUBBLEGUM_CORAL_BLOCK = createCoralBlock(DEAD_BUBBLEGUM_CORAL_BLOCK);
+		BUBBLEGUM_CORAL_FAN = createCoralFan(DEAD_BUBBLEGUM_CORAL_FAN);
+		BUBBLEGUM_CORAL_WALL_FAN = createCoralWallFan(DEAD_BUBBLEGUM_CORAL_WALL_FAN);
+
+		DEAD_CABBAGE_TREE_CORAL = createDeadCoral();
+		DEAD_CABBAGE_TREE_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_CABBAGE_TREE_CORAL_FAN = createDeadCoralFan();
+		DEAD_CABBAGE_TREE_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		CABBAGE_TREE_CORAL = createCoral(DEAD_CABBAGE_TREE_CORAL);
+		CABBAGE_TREE_CORAL_BLOCK = createCoralBlock(DEAD_CABBAGE_TREE_CORAL_BLOCK);
+		CABBAGE_TREE_CORAL_FAN = createCoralFan(DEAD_CABBAGE_TREE_CORAL_FAN);
+		CABBAGE_TREE_CORAL_WALL_FAN = createCoralWallFan(DEAD_CABBAGE_TREE_CORAL_WALL_FAN);
+
+		DEAD_FLOWERTUBE_CORAL = createDeadCoral();
+		DEAD_FLOWERTUBE_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_FLOWERTUBE_CORAL_FAN = createDeadCoralFan();
+		DEAD_FLOWERTUBE_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		FLOWERTUBE_CORAL = createCoral(DEAD_FLOWERTUBE_CORAL);
+		FLOWERTUBE_CORAL_BLOCK = createCoralBlock(DEAD_FLOWERTUBE_CORAL_BLOCK);
+		FLOWERTUBE_CORAL_FAN = createCoralFan(DEAD_FLOWERTUBE_CORAL_FAN);
+		FLOWERTUBE_CORAL_WALL_FAN = createCoralWallFan(DEAD_FLOWERTUBE_CORAL_WALL_FAN);
+
+		DEAD_GARNET_SPIRAL_CORAL = createDeadCoral();
+		DEAD_GARNET_SPIRAL_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_GARNET_SPIRAL_CORAL_FAN = createDeadCoralFan();
+		DEAD_GARNET_SPIRAL_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		GARNET_SPIRAL_CORAL = createCoral(DEAD_GARNET_SPIRAL_CORAL);
+		GARNET_SPIRAL_CORAL_BLOCK = createCoralBlock(DEAD_GARNET_SPIRAL_CORAL_BLOCK);
+		GARNET_SPIRAL_CORAL_FAN = createCoralFan(DEAD_GARNET_SPIRAL_CORAL_FAN);
+		GARNET_SPIRAL_CORAL_WALL_FAN = createCoralWallFan(DEAD_GARNET_SPIRAL_CORAL_WALL_FAN);
+
+		DEAD_GLOW_FOREST_CORAL = createBlock(DeadTallCoralBlock::new, DEAD_TUBE_CORAL);
+		DEAD_GLOW_FOREST_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_GLOW_FOREST_CORAL_FAN = createDeadCoralFan();
+		DEAD_GLOW_FOREST_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		GLOW_FOREST_CORAL = new TallCoralBlock(DEAD_GLOW_FOREST_CORAL, Settings.copy(TUBE_CORAL));
+		GLOW_FOREST_CORAL_BLOCK = createCoralBlock(DEAD_GLOW_FOREST_CORAL_BLOCK);
+		GLOW_FOREST_CORAL_FAN = createCoralFan(DEAD_GLOW_FOREST_CORAL_FAN);
+		GLOW_FOREST_CORAL_WALL_FAN = createCoralWallFan(DEAD_GLOW_FOREST_CORAL_WALL_FAN);
+
+		DEAD_GLOWTONGUE_TUBE_CORAL = createDeadCoral();
+		DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_GLOWTONGUE_TUBE_CORAL_FAN = createDeadCoralFan();
+		DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		GLOWTONGUE_TUBE_CORAL = createCoral(DEAD_GLOWTONGUE_TUBE_CORAL);
+		GLOWTONGUE_TUBE_CORAL_BLOCK = createCoralBlock(DEAD_GLOWTONGUE_TUBE_CORAL_BLOCK);
+		GLOWTONGUE_TUBE_CORAL_FAN = createCoralFan(DEAD_GLOWTONGUE_TUBE_CORAL_FAN);
+		GLOWTONGUE_TUBE_CORAL_WALL_FAN = createCoralWallFan(DEAD_GLOWTONGUE_TUBE_CORAL_WALL_FAN);
+
+		DEAD_IVORY_CORAL = createDeadCoral();
+		DEAD_IVORY_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_IVORY_CORAL_FAN = createDeadCoralFan();
+		DEAD_IVORY_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		IVORY_CORAL = createCoral(DEAD_IVORY_CORAL);
+		IVORY_CORAL_BLOCK = createCoralBlock(DEAD_IVORY_CORAL_BLOCK);
+		IVORY_CORAL_FAN = createCoralFan(DEAD_IVORY_CORAL_FAN);
+		IVORY_CORAL_WALL_FAN = createCoralWallFan(DEAD_IVORY_CORAL_WALL_FAN);
+
+		DEAD_LIME_BRAIN_CORAL = createDeadCoral();
+		DEAD_LIME_BRAIN_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_LIME_BRAIN_CORAL_FAN = createDeadCoralFan();
+		DEAD_LIME_BRAIN_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		LIME_BRAIN_CORAL = createCoral(DEAD_LIME_BRAIN_CORAL);
+		LIME_BRAIN_CORAL_BLOCK = createCoralBlock(DEAD_LIME_BRAIN_CORAL_BLOCK);
+		LIME_BRAIN_CORAL_FAN = createCoralFan(DEAD_LIME_BRAIN_CORAL_FAN);
+		LIME_BRAIN_CORAL_WALL_FAN = createCoralWallFan(DEAD_LIME_BRAIN_CORAL_WALL_FAN);
+
+		DEAD_LOPHELIA_CORAL = createDeadCoral();
+		DEAD_LOPHELIA_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_LOPHELIA_CORAL_FAN = createDeadCoralFan();
+		DEAD_LOPHELIA_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		LOPHELIA_CORAL = createCoral(DEAD_LOPHELIA_CORAL);
+		LOPHELIA_CORAL_BLOCK = createCoralBlock(DEAD_LOPHELIA_CORAL_BLOCK);
+		LOPHELIA_CORAL_FAN = createCoralFan(DEAD_LOPHELIA_CORAL_FAN);
+		LOPHELIA_CORAL_WALL_FAN = createCoralWallFan(DEAD_LOPHELIA_CORAL_WALL_FAN);
+
+		DEAD_PIPE_ORGAN_CORAL = createDeadCoral();
+		DEAD_PIPE_ORGAN_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_PIPE_ORGAN_CORAL_FAN = createDeadCoralFan();
+		DEAD_PIPE_ORGAN_TENTACLES = createDeadCoral();
+		DEAD_PIPE_ORGAN_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		PIPE_ORGAN_CORAL = createCoral(DEAD_PIPE_ORGAN_CORAL);
+		PIPE_ORGAN_CORAL_BLOCK = createCoralBlock(DEAD_PIPE_ORGAN_CORAL_BLOCK);
+		PIPE_ORGAN_CORAL_FAN = createCoralFan(DEAD_PIPE_ORGAN_CORAL_FAN);
+		PIPE_ORGAN_CORAL_WALL_FAN = createCoralWallFan(DEAD_PIPE_ORGAN_CORAL_WALL_FAN);
+		PIPE_ORGAN_TENTACLES = createCoral(DEAD_PIPE_ORGAN_TENTACLES);
+
+		DEAD_RED_TREE_CORAL = createDeadCoral();
+		DEAD_RED_TREE_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_RED_TREE_CORAL_FAN = createDeadCoralFan();
+		DEAD_RED_TREE_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		RED_TREE_CORAL = createCoral(DEAD_RED_TREE_CORAL);
+		RED_TREE_CORAL_BLOCK = createCoralBlock(DEAD_RED_TREE_CORAL);
+		RED_TREE_CORAL_FAN = createCoralFan(DEAD_RED_TREE_CORAL_FAN);
+		RED_TREE_CORAL_WALL_FAN = createCoralWallFan(DEAD_RED_TREE_CORAL_WALL_FAN);
+
+		DEAD_SEAFAN_CORAL = createDeadCoral();
+		DEAD_SEAFAN_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_SEAFAN_CORAL_FAN = createDeadCoralFan();
+		DEAD_SEAFAN_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		SEAFAN_CORAL = createCoral(DEAD_SEAFAN_CORAL);
+		SEAFAN_CORAL_BLOCK = createCoralBlock(DEAD_SEAFAN_CORAL_BLOCK);
+		SEAFAN_CORAL_FAN = createCoralFan(DEAD_SEAFAN_CORAL_FAN);
+		SEAFAN_CORAL_WALL_FAN = createCoralWallFan(DEAD_SEAFAN_CORAL_WALL_FAN);
+
+		DEAD_STRAIGHT_WILLOW_CORAL = createDeadCoral();
+		DEAD_STRAIGHT_WILLOW_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_STRAIGHT_WILLOW_CORAL_FAN = createDeadCoralFan();
+		DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		STRAIGHT_WILLOW_CORAL = createCoral(DEAD_STRAIGHT_WILLOW_CORAL);
+		STRAIGHT_WILLOW_CORAL_BLOCK = createCoralBlock(DEAD_STRAIGHT_WILLOW_CORAL_BLOCK);
+		STRAIGHT_WILLOW_CORAL_FAN = createCoralFan(DEAD_STRAIGHT_WILLOW_CORAL_FAN);
+		STRAIGHT_WILLOW_CORAL_WALL_FAN = createCoralWallFan(DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN);
+
+		DEAD_SUNRISE_CORAL = createDeadCoral();
+		DEAD_SUNRISE_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_SUNRISE_CORAL_FAN = createDeadCoralFan();
+		DEAD_SUNRISE_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		SUNRISE_CORAL = createCoral(DEAD_SUNRISE_CORAL);
+		SUNRISE_CORAL_BLOCK = createCoralBlock(DEAD_SUNRISE_CORAL_BLOCK);
+		SUNRISE_CORAL_FAN = createCoralFan(DEAD_SUNRISE_CORAL_FAN);
+		SUNRISE_CORAL_WALL_FAN = createCoralWallFan(DEAD_SUNRISE_CORAL_WALL_FAN);
+
+		DEAD_TABLE_CORAL = createDeadCoral();
+		DEAD_TABLE_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_TABLE_CORAL_FAN = createDeadCoralFan();
+		DEAD_TABLE_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		TABLE_CORAL = createCoral(DEAD_TABLE_CORAL);
+		TABLE_CORAL_BLOCK = createCoralBlock(DEAD_TABLE_CORAL_BLOCK);
+		TABLE_CORAL_FAN = createCoralFan(DEAD_TABLE_CORAL_FAN);
+		TABLE_CORAL_WALL_FAN = createCoralWallFan(DEAD_TABLE_CORAL_WALL_FAN);
+
+		DEAD_THIN_BLADE_CORAL = createDeadCoral();
+		DEAD_THIN_BLADE_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_THIN_BLADE_CORAL_FAN = createDeadCoralFan();
+		DEAD_THIN_BLADE_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		THIN_BLADE_CORAL = createCoral(DEAD_THIN_BLADE_CORAL);
+		THIN_BLADE_CORAL_BLOCK = createCoralBlock(DEAD_THIN_BLADE_CORAL_BLOCK);
+		THIN_BLADE_CORAL_FAN = createCoralFan(DEAD_THIN_BLADE_CORAL_FAN);
+		THIN_BLADE_CORAL_WALL_FAN = createCoralWallFan(DEAD_THIN_BLADE_CORAL_WALL_FAN);
+
+		DEAD_TRUMPETEAR_CORAL = createDeadCoral();
+		DEAD_TRUMPETEAR_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_TRUMPETEAR_CORAL_FAN = createDeadCoralFan();
+		DEAD_TRUMPETEAR_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		TRUMPETEAR_CORAL = createCoral(DEAD_TRUMPETEAR_CORAL);
+		TRUMPETEAR_CORAL_BLOCK = createCoralBlock(DEAD_TRUMPETEAR_CORAL_BLOCK);
+		TRUMPETEAR_CORAL_FAN = createCoralFan(DEAD_TRUMPETEAR_CORAL_FAN);
+		TRUMPETEAR_CORAL_WALL_FAN = createCoralWallFan(DEAD_TRUMPETEAR_CORAL_WALL_FAN);
+
+		ALMOND_BUTTON = createOakButton();
+		ALMOND_DOOR = createOakDoor();
+		ALMOND_FENCE = createOakFence();
+		ALMOND_FENCE_GATE = createOakFenceGate();
+		ALMOND_LEAVES = createOakLeaves();
+		ALMOND_LOG = createOakLog();
+		ALMOND_PLANKS = createOakPlanks();
+		ALMOND_PRESSURE_PLATE = createOakPressurePlate();
+		ALMOND_SAPLING = createOakSapling(SaplingGenerators.ALMOND);
+		ALMOND_SIGN = createOakSign(SignTypes.ALMOND);
+		ALMOND_SLAB = createOakSlab();
+		ALMOND_STAIRS = createOakStairs(ALMOND_PLANKS);
+		ALMOND_TRAPDOOR = createOakTrapdoor();
+		ALMOND_WALL_SIGN = createOakWallSign(SignTypes.ALMOND);
+		ALMOND_WOOD = createOakWood();
+
+		ANAMEATA_BUTTON = createOakButton();
+		ANAMEATA_CAP = createCap();
+		ANAMEATA_DOOR = createOakDoor();
+		ANAMEATA_FENCE = createOakFence();
+		ANAMEATA_FENCE_GATE = createOakFenceGate();
+		ANAMEATA_LOG = createOakLog();
+		ANAMEATA_PLANKS = createOakPlanks();
+		ANAMEATA_PRESSURE_PLATE = createOakPressurePlate();
+		ANAMEATA_SAPLING = createOakSapling(SaplingGenerators.ANAMEATA);
+		ANAMEATA_SIGN = createOakSign(SignTypes.ANAMEATA);
+		ANAMEATA_SLAB = createOakSlab();
+		ANAMEATA_STAIRS = createOakStairs(ANAMEATA_PLANKS);
+		ANAMEATA_TRAPDOOR = createOakTrapdoor();
+		ANAMEATA_WALL_SIGN = createOakWallSign(SignTypes.ANAMEATA);
+		ANAMEATA_WOOD = createOakWood();
+
+		ANGELS_TRUMPET_BUTTON = createOakButton();
+		ANGELS_TRUMPET_DOOR = createOakDoor();
+		ANGELS_TRUMPET_FENCE = createOakFence();
+		ANGELS_TRUMPET_FENCE_GATE = createOakFenceGate();
+		ANGELS_TRUMPET_LEAVES = createOakLeaves();
+		ANGELS_TRUMPET_LOG = createOakLog();
+		ANGELS_TRUMPET_PLANKS = createOakPlanks();
+		ANGELS_TRUMPET_PRESSURE_PLATE = createOakPressurePlate();
+		ANGELS_TRUMPET_SAPLING = createOakSapling(SaplingGenerators.ANGELS_TRUMPET);
+		ANGELS_TRUMPET_SIGN = createOakSign(SignTypes.ANGELS_TRUMPET);
+		ANGELS_TRUMPET_SLAB = createOakSlab();
+		ANGELS_TRUMPET_STAIRS = createOakStairs(ANGELS_TRUMPET_PLANKS);
+		ANGELS_TRUMPET_TRAPDOOR = createOakTrapdoor();
+		ANGELS_TRUMPET_WALL_SIGN = createOakWallSign(SignTypes.ANGELS_TRUMPET);
+		ANGELS_TRUMPET_WOOD = createOakWood();
+
+		AQUEAN_BUTTON = createOakButton();
+		AQUEAN_DOOR = createOakDoor();
+		AQUEAN_FENCE = createOakFence();
+		AQUEAN_FENCE_GATE = createOakFenceGate();
+		AQUEAN_LEAVES = createOakLeaves();
+		AQUEAN_LOG = createOakLog();
+		AQUEAN_PLANKS = createOakPlanks();
+		AQUEAN_PRESSURE_PLATE = createOakPressurePlate();
+		AQUEAN_SAPLING = createOakSapling(SaplingGenerators.AQUEAN);
+		AQUEAN_SIGN = createOakSign(SignTypes.AQUEAN);
+		AQUEAN_SLAB = createOakSlab();
+		AQUEAN_STAIRS = createOakStairs(AQUEAN_PLANKS);
+		AQUEAN_TRAPDOOR = createOakTrapdoor();
+		AQUEAN_WALL_SIGN = createOakWallSign(SignTypes.AQUEAN);
+		AQUEAN_WOOD = createOakWood();
+
+		BARSHROOKLE_BUTTON = createOakButton();
+		BARSHROOKLE_CAP = createCap();
+		BARSHROOKLE_DOOR = createOakDoor();
+		BARSHROOKLE_FENCE = createOakFence();
+		BARSHROOKLE_FENCE_GATE = createOakFenceGate();
+		BARSHROOKLE_LOG = createOakLog();
+		BARSHROOKLE_PLANKS = createOakPlanks();
+		BARSHROOKLE_PRESSURE_PLATE = createOakPressurePlate();
+		BARSHROOKLE_SAPLING = createAcuaticFungus(SaplingGenerators.BARSHROOKLE);
+		BARSHROOKLE_SIGN = createOakSign(SignTypes.BARSHROOKLE);
+		BARSHROOKLE_SLAB = createOakSlab();
+		BARSHROOKLE_STAIRS = createOakStairs(BARSHROOKLE_PLANKS);
+		BARSHROOKLE_TRAPDOOR = createOakTrapdoor();
+		BARSHROOKLE_WALL_SIGN = createOakWallSign(SignTypes.BARSHROOKLE);
+		BARSHROOKLE_WOOD = createOakWood();
+
+		BLACK_BIRCH_BUTTON = createOakButton();
+		BLACK_BIRCH_DOOR = createOakDoor();
+		BLACK_BIRCH_FENCE = createOakFence();
+		BLACK_BIRCH_FENCE_GATE = createOakFenceGate();
+		BLACK_BIRCH_LEAVES = createOakLeaves();
+		BLACK_BIRCH_LOG = createOakLog();
+		BLACK_BIRCH_PLANKS = createOakPlanks();
+		BLACK_BIRCH_PRESSURE_PLATE = createOakPressurePlate();
+		BLACK_BIRCH_SAPLING = createOakSapling(SaplingGenerators.BLACK_BIRCH);
+		BLACK_BIRCH_SIGN = createOakSign(SignTypes.BLACK_BIRCH);
+		BLACK_BIRCH_SLAB = createOakSlab();
+		BLACK_BIRCH_STAIRS = createOakStairs(BLACK_BIRCH_PLANKS);
+		BLACK_BIRCH_TRAPDOOR = createOakTrapdoor();
+		BLACK_BIRCH_WALL_SIGN = createOakWallSign(SignTypes.BLACK_BIRCH);
+		BLACK_BIRCH_WOOD = createOakWood();
+
+		BLUE_MAHOE_BUTTON = createOakButton();
+		BLUE_MAHOE_DOOR = createOakDoor();
+		BLUE_MAHOE_FENCE = createOakFence();
+		BLUE_MAHOE_FENCE_GATE = createOakFenceGate();
+		BLUE_MAHOE_FLOWER = createBlock(BlueMahoeFlower::new, OAK_LEAVES);
+		BLUE_MAHOE_LEAVES = createOakLeaves();
+		BLUE_MAHOE_LOG = createOakLog();
+		BLUE_MAHOE_PLANKS = createOakPlanks();
+		BLUE_MAHOE_PRESSURE_PLATE = createOakPressurePlate();
+		BLUE_MAHOE_SAPLING = createOakSapling(SaplingGenerators.BLUE_MAHOE);
+		BLUE_MAHOE_SIGN = createOakSign(SignTypes.BLUE_MAHOE);
+		BLUE_MAHOE_SLAB = createOakSlab();
+		BLUE_MAHOE_STAIRS = createOakStairs(BLUE_MAHOE_PLANKS);
+		BLUE_MAHOE_TRAPDOOR = createOakTrapdoor();
+		BLUE_MAHOE_WALL_SIGN = createOakWallSign(SignTypes.BLUE_MAHOE);
+		BLUE_MAHOE_WOOD = createOakWood();
+
+		BLUE_SPRUCE_BUTTON = createOakButton();
+		BLUE_SPRUCE_DOOR = createOakDoor();
+		BLUE_SPRUCE_FENCE = createOakFence();
+		BLUE_SPRUCE_FENCE_GATE = createOakFenceGate();
+		BLUE_SPRUCE_LEAVES = createOakLeaves();
+		BLUE_SPRUCE_LOG = createOakLog();
+		BLUE_SPRUCE_PLANKS = createOakPlanks();
+		BLUE_SPRUCE_PRESSURE_PLATE = createOakPressurePlate();
+		BLUE_SPRUCE_SAPLING = createOakSapling(SaplingGenerators.BLUE_SPRUCE);
+		BLUE_SPRUCE_SIGN = createOakSign(SignTypes.BLUE_SPRUCE);
+		BLUE_SPRUCE_SLAB = createOakSlab();
+		BLUE_SPRUCE_STAIRS = createOakStairs(BLUE_SPRUCE_PLANKS);
+		BLUE_SPRUCE_TRAPDOOR = createOakTrapdoor();
+		BLUE_SPRUCE_WALL_SIGN = createOakWallSign(SignTypes.BLUE_SPRUCE);
+		BLUE_SPRUCE_WOOD = createOakWood();
+
+		BOTTLEBRUSH_BUTTON = createOakButton();
+		BOTTLEBRUSH_DOOR = createOakDoor();
+		BOTTLEBRUSH_FENCE = createOakFence();
+		BOTTLEBRUSH_FENCE_GATE = createOakFenceGate();
+		BOTTLEBRUSH_FLOWERS = createBlock(BottlebrushFlowersBlock::new, OAK_LEAVES);
+		BOTTLEBRUSH_LEAVES = createOakLeaves();
+		BOTTLEBRUSH_LOG = createOakLog();
+		BOTTLEBRUSH_PLANKS = createOakPlanks();
+		BOTTLEBRUSH_PRESSURE_PLATE = createOakPressurePlate();
+		BOTTLEBRUSH_SAPLING = createOakSapling(SaplingGenerators.BOTTLEBRUSH);
+		BOTTLEBRUSH_SIGN = createOakSign(SignTypes.BOTTLEBRUSH);
+		BOTTLEBRUSH_SLAB = createOakSlab();
+		BOTTLEBRUSH_STAIRS = createOakStairs(BOTTLEBRUSH_PLANKS);
+		BOTTLEBRUSH_TRAPDOOR = createOakTrapdoor();
+		BOTTLEBRUSH_WALL_SIGN = createOakWallSign(SignTypes.BOTTLEBRUSH);
+		BOTTLEBRUSH_WOOD = createOakWood();
+
+		BROMYA_BUTTON = createOakButton();
+		BROMYA_DOOR = createOakDoor();
+		BROMYA_FENCE = createOakFence();
+		BROMYA_FENCE_GATE = createOakFenceGate();
+		BROMYA_FLOWER = createTallFlower(ROSE_BUSH);
+		BROMYA_LEAVES = createOakLeaves();
+		BROMYA_LOG = createOakLog();
+		BROMYA_PLANKS = createOakPlanks();
+		BROMYA_PRESSURE_PLATE = createOakPressurePlate();
+		BROMYA_SAPLING = createOakSapling(SaplingGenerators.BROMYA);
+		BROMYA_SIGN = createOakSign(SignTypes.BROMYA);
+		BROMYA_SLAB = createOakSlab();
+		BROMYA_STAIRS = createOakStairs(BROMYA_PLANKS);
+		BROMYA_TRAPDOOR = createOakTrapdoor();
+		BROMYA_WALL_SIGN = createOakWallSign(SignTypes.BROMYA);
+		BROMYA_WOOD = createOakWood();
+
+		BUBBLETREE_BUBBLES = createCap();
+		BUBBLETREE_BUTTON = createOakButton();
+		BUBBLETREE_DOOR = createOakDoor();
+		BUBBLETREE_FENCE = createOakFence();
+		BUBBLETREE_FENCE_GATE = createOakFenceGate();
+		BUBBLETREE_LOG = createOakLog();
+		BUBBLETREE_PLANKS = createOakPlanks();
+		BUBBLETREE_PRESSURE_PLATE = createOakPressurePlate();
+		BUBBLETREE_SAPLING = createOakSapling(SaplingGenerators.BUBBLETREE);
+		BUBBLETREE_SIGN = createOakSign(SignTypes.BUBBLETREE);
+		BUBBLETREE_SLAB = createOakSlab();
+		BUBBLETREE_STAIRS = createOakStairs(BUBBLETREE_PLANKS);
+		BUBBLETREE_TRAPDOOR = createOakTrapdoor();
+		BUBBLETREE_WALL_SIGN = createOakWallSign(SignTypes.BUBBLETREE);
+		BUBBLETREE_WOOD = createOakWood();
+
+		CALCEARB_BUTTON = createOakButton();
+		CALCEARB_DOOR = createOakDoor();
+		CALCEARB_FENCE = createOakFence();
+		CALCEARB_FENCE_GATE = createOakFenceGate();
+		CALCEARB_LEAVES = createOakLeaves();
+		CALCEARB_LOG = createOakLog();
+		CALCEARB_PLANKS = createOakPlanks();
+		CALCEARB_PRESSURE_PLATE = createOakPressurePlate();
+		CALCEARB_SAPLING = createOakSapling(SaplingGenerators.CALCEARB);
+		CALCEARB_SIGN = createOakSign(SignTypes.CALCEARB);
+		CALCEARB_SLAB = createOakSlab();
+		CALCEARB_STAIRS = createOakStairs(CALCEARB_PLANKS);
+		CALCEARB_TRAPDOOR = createOakTrapdoor();
+		CALCEARB_WALL_SIGN = createOakWallSign(SignTypes.CALCEARB);
+		CALCEARB_WOOD = createOakWood();
+
+		CHERRY_BUTTON = createOakButton();
+		CHERRY_DOOR = createOakDoor();
+		CHERRY_FENCE = createOakFence();
+		CHERRY_FENCE_GATE = createOakFenceGate();
+		CHERRY_LEAVES = createOakLeaves();
+		CHERRY_LOG = createOakLog();
+		CHERRY_PLANKS = createOakPlanks();
+		CHERRY_PRESSURE_PLATE = createOakPressurePlate();
+		CHERRY_SAPLING = createOakSapling(SaplingGenerators.CHERRY);
+		CHERRY_SIGN = createOakSign(SignTypes.CHERRY);
+		CHERRY_SLAB = createOakSlab();
+		CHERRY_STAIRS = createOakStairs(CHERRY_PLANKS);
+		CHERRY_TRAPDOOR = createOakTrapdoor();
+		CHERRY_WALL_SIGN = createOakWallSign(SignTypes.CHERRY);
+		CHERRY_WOOD = createOakWood();
+
+		CHOTORN_SAPLING = createOakSapling(SaplingGenerators.CHOTORN);
+		CHOTORN_BUTTON = createOakButton();
+		CHOTORN_DOOR = createOakDoor();
+		CHOTORN_FENCE = createOakFence();
+		CHOTORN_FENCE_GATE = createOakFenceGate();
+		CHOTORN_LOG = createOakLog();
+		CHOTORN_PLANKS = createOakPlanks();
+		CHOTORN_PRESSURE_PLATE = createOakPressurePlate();
+		CHOTORN_SIGN = createOakSign(SignTypes.CHOTORN);
+		CHOTORN_SLAB = createOakSlab();
+		CHOTORN_STAIRS = createOakStairs(CHOTORN_PLANKS);
+		CHOTORN_TRAPDOOR = createOakTrapdoor();
+		CHOTORN_WALL_SIGN = createOakWallSign(SignTypes.CHOTORN);
+		CHOTORN_WOOD = createOakWood();
+
+		COOK_PINE_BUTTON = createOakButton();
+		COOK_PINE_DOOR = createOakDoor();
+		COOK_PINE_FENCE = createOakFence();
+		COOK_PINE_FENCE_GATE = createOakFenceGate();
+		COOK_PINE_LEAVES = createOakLeaves();
+		COOK_PINE_LOG = createOakLog();
+		COOK_PINE_PLANKS = createOakPlanks();
+		COOK_PINE_PRESSURE_PLATE = createOakPressurePlate();
+		COOK_PINE_SAPLING = createOakSapling(SaplingGenerators.COOK_PINE);
+		COOK_PINE_SIGN = createOakSign(SignTypes.COOK_PINE);
+		COOK_PINE_SLAB = createOakSlab();
+		COOK_PINE_STAIRS = createOakStairs(COOK_PINE_PLANKS);
+		COOK_PINE_TRAPDOOR = createOakTrapdoor();
+		COOK_PINE_WALL_SIGN = createOakWallSign(SignTypes.COOK_PINE);
+		COOK_PINE_WOOD = createOakWood();
+
+		CROLOOD_BUTTON = createOakButton();
+		CROLOOD_DOOR = createOakDoor();
+		CROLOOD_FENCE = createOakFence();
+		CROLOOD_FENCE_GATE = createOakFenceGate();
+		CROLOOD_LEAVES = createOakLeaves();
+		CROLOOD_LOG = createOakLog();
+		CROLOOD_PLANKS = createOakPlanks();
+		CROLOOD_PRESSURE_PLATE = createOakPressurePlate();
+		CROLOOD_SAPLING = createOakSapling(SaplingGenerators.CROLOOD);
+		CROLOOD_SIGN = createOakSign(SignTypes.CROLOOD);
+		CROLOOD_SLAB = createOakSlab();
+		CROLOOD_STAIRS = createOakStairs(CROLOOD_PLANKS);
+		CROLOOD_TRAPDOOR = createOakTrapdoor();
+		CROLOOD_WALL_SIGN = createOakWallSign(SignTypes.CROLOOD);
+		CROLOOD_WOOD = createOakWood();
+
+		DARK_CROLOOD_BUTTON = createOakButton();
+		DARK_CROLOOD_DOOR = createOakDoor();
+		DARK_CROLOOD_FENCE = createOakFence();
+		DARK_CROLOOD_FENCE_GATE = createOakFenceGate();
+		DARK_CROLOOD_LEAVES = createOakLeaves();
+		DARK_CROLOOD_LOG = createOakLog();
+		DARK_CROLOOD_PLANKS = createOakPlanks();
+		DARK_CROLOOD_PRESSURE_PLATE = createOakPressurePlate();
+		DARK_CROLOOD_SAPLING = createOakSapling(SaplingGenerators.DARK_CROLOOD);
+		DARK_CROLOOD_SIGN = createOakSign(SignTypes.DARK_CROLOOD);
+		DARK_CROLOOD_SLAB = createOakSlab();
+		DARK_CROLOOD_STAIRS = createOakStairs(DARK_CROLOOD_PLANKS);
+		DARK_CROLOOD_TRAPDOOR = createOakTrapdoor();
+		DARK_CROLOOD_WALL_SIGN = createOakWallSign(SignTypes.DARK_CROLOOD);
+		DARK_CROLOOD_WOOD = createOakWood();
+
+		DARK_FUCHSITRA_BUTTON = createOakButton();
+		DARK_FUCHSITRA_DOOR = createOakDoor();
+		DARK_FUCHSITRA_FENCE = createOakFence();
+		DARK_FUCHSITRA_FENCE_GATE = createOakFenceGate();
+		DARK_FUCHSITRA_LEAVES = createOakLeaves();
+		DARK_FUCHSITRA_LOG = createOakLog();
+		DARK_FUCHSITRA_PLANKS = createOakPlanks();
+		DARK_FUCHSITRA_PRESSURE_PLATE = createOakPressurePlate();
+		DARK_FUCHSITRA_SAPLING = createOakSapling(SaplingGenerators.DARK_FUCHSITRA);
+		DARK_FUCHSITRA_SIGN = createOakSign(SignTypes.DARK_FUCHSITRA);
+		DARK_FUCHSITRA_SLAB = createOakSlab();
+		DARK_FUCHSITRA_STAIRS = createOakStairs(DARK_FUCHSITRA_PLANKS);
+		DARK_FUCHSITRA_TRAPDOOR = createOakTrapdoor();
+		DARK_FUCHSITRA_WALL_SIGN = createOakWallSign(SignTypes.DARK_FUCHSITRA);
+		DARK_FUCHSITRA_WOOD = createOakWood();
+
+		DARK_RED_ELM_BUTTON = createOakButton();
+		DARK_RED_ELM_DOOR = createOakDoor();
+		DARK_RED_ELM_FENCE = createOakFence();
+		DARK_RED_ELM_FENCE_GATE = createOakFenceGate();
+		DARK_RED_ELM_LEAVES = createOakLeaves();
+		DARK_RED_ELM_LOG = createOakLog();
+		DARK_RED_ELM_PLANKS = createOakPlanks();
+		DARK_RED_ELM_PRESSURE_PLATE = createOakPressurePlate();
+		DARK_RED_ELM_SAPLING = createOakSapling(SaplingGenerators.DARK_RED_ELM);
+		DARK_RED_ELM_SIGN = createOakSign(SignTypes.DARK_RED_ELM);
+		DARK_RED_ELM_SLAB = createOakSlab();
+		DARK_RED_ELM_STAIRS = createOakStairs(DARK_RED_ELM_PLANKS);
+		DARK_RED_ELM_TRAPDOOR = createOakTrapdoor();
+		DARK_RED_ELM_WALL_SIGN = createOakWallSign(SignTypes.DARK_RED_ELM);
+		DARK_RED_ELM_WOOD = createOakWood();
+
+		DEAD_WART_TREE_BUTTON = createOakButton();
+		DEAD_WART_TREE_DOOR = createOakDoor();
+		DEAD_WART_TREE_FENCE = createOakFence();
+		DEAD_WART_TREE_FENCE_GATE = createOakFenceGate();
+		DEAD_WART_TREE_LOG = createOakLog();
+		DEAD_WART_TREE_PLANKS = createOakPlanks();
+		DEAD_WART_TREE_PRESSURE_PLATE = createOakPressurePlate();
+		DEAD_WART_TREE_SIGN = createOakSign(SignTypes.DEAD_WART_TREE);
+		DEAD_WART_TREE_SLAB = createOakSlab();
+		DEAD_WART_TREE_STAIRS = createOakStairs(DEAD_WART_TREE_PLANKS);
+		DEAD_WART_TREE_TRAPDOOR = createOakTrapdoor();
+		DEAD_WART_TREE_WALL_SIGN = createOakWallSign(SignTypes.DEAD_WART_TREE);
+		DEAD_WART_TREE_WOOD = createOakWood();
+
+		DRIGYUS = createCopy(DEAD_BUSH);
+		DRIGYUS_BUTTON = createOakButton();
+		DRIGYUS_DOOR = createOakDoor();
+		DRIGYUS_FENCE = createOakFence();
+		DRIGYUS_FENCE_GATE = createOakFenceGate();
+		DRIGYUS_LOG = createOakLog();
+		DRIGYUS_PLANKS = createOakPlanks();
+		DRIGYUS_PRESSURE_PLATE = createOakPressurePlate();
+		DRIGYUS_SIGN = createOakSign(SignTypes.DRIGYUS);
+		DRIGYUS_SLAB = createOakSlab();
+		DRIGYUS_STAIRS = createOakStairs(DRIGYUS_PLANKS);
+		DRIGYUS_TRAPDOOR = createOakTrapdoor();
+		DRIGYUS_WALL_SIGN = createOakWallSign(SignTypes.DRIGYUS);
+		DRIGYUS_WOOD = createOakWood();
+
+		EBONY_BUTTON = createOakButton();
+		EBONY_DOOR = createOakDoor();
+		EBONY_FENCE = createOakFence();
+		EBONY_FENCE_GATE = createOakFenceGate();
+		EBONY_LEAVES = createOakLeaves();
+		EBONY_LOG = createOakLog();
+		EBONY_PLANKS = createOakPlanks();
+		EBONY_PRESSURE_PLATE = createOakPressurePlate();
+		EBONY_SAPLING = createOakSapling(SaplingGenerators.EBONY);
+		EBONY_SIGN = createOakSign(SignTypes.EBONY);
+		EBONY_SLAB = createOakSlab();
+		EBONY_STAIRS = createOakStairs(EBONY_PLANKS);
+		EBONY_TRAPDOOR = createOakTrapdoor();
+		EBONY_WALL_SIGN = createOakWallSign(SignTypes.EBONY);
+		EBONY_WOOD = createOakWood();
+
+		ENDERHEART_BUTTON = createOakButton();
+		ENDERHEART_DOOR = createOakDoor();
+		ENDERHEART_FENCE = createOakFence();
+		ENDERHEART_FENCE_GATE = createOakFenceGate();
+		ENDERHEART_LEAVES = createOakLeaves();
+		ENDERHEART_LEAF = createCopy(OAK_LEAVES);
+		ENDERHEART_LOG = createOakLog();
+		ENDERHEART_PLANKS = createOakPlanks();
+		ENDERHEART_PRESSURE_PLATE = createOakPressurePlate();
+		ENDERHEART_SAPLING = createOakSapling(SaplingGenerators.ENDERHEART);
+		ENDERHEART_SIGN = createOakSign(SignTypes.ENDERHEART);
+		ENDERHEART_SLAB = createOakSlab();
+		ENDERHEART_STAIRS = createOakStairs(ENDERHEART_PLANKS);
+		ENDERHEART_TRAPDOOR = createOakTrapdoor();
+		ENDERHEART_WALL_SIGN = createOakWallSign(SignTypes.ENDERHEART);
+		ENDERHEART_WOOD = createOakWood();
+
+		FLALM = createTallFlower(ROSE_BUSH);
+		FLALM_BUTTON = createOakButton();
+		FLALM_DOOR = createOakDoor();
+		FLALM_FENCE = createOakFence();
+		FLALM_FENCE_GATE = createOakFenceGate();
+		FLALM_PETAL_BLOCK = createCap();
+		FLALM_PLANKS = createOakPlanks();
+		FLALM_PRESSURE_PLATE = createOakPressurePlate();
+		FLALM_SIGN = createOakSign(SignTypes.FLALM);
+		FLALM_SLAB = createOakSlab();
+		FLALM_STAIRS = createOakStairs(FLALM_PLANKS);
+		FLALM_STEM = createPillar(COCOA);
+		FLALM_THORNS = createBlock(FlalmThornsBlock::new, OAK_LEAVES);
+		FLALM_TRAPDOOR = createOakTrapdoor();
+		FLALM_WALL_SIGN = createOakWallSign(SignTypes.FLALM);
+		FLALM_WOOD = createOakWood();
+
+		FRUCE_BUTTON = createOakButton();
+		FRUCE_DOOR = createOakDoor();
+		FRUCE_FENCE = createOakFence();
+		FRUCE_FENCE_GATE = createOakFenceGate();
+		FRUCE_LEAVES = createOakLeaves();
+		FRUCE_LOG = createOakLog();
+		FRUCE_PLANKS = createOakPlanks();
+		FRUCE_PRESSURE_PLATE = createOakPressurePlate();
+		FRUCE_SAPLING = createOakSapling(SaplingGenerators.FRUCE);
+		FRUCE_SIGN = createOakSign(SignTypes.FRUCE);
+		FRUCE_SLAB = createOakSlab();
+		FRUCE_STAIRS = createOakStairs(FRUCE_PLANKS);
+		FRUCE_TRAPDOOR = createOakTrapdoor();
+		FRUCE_WALL_SIGN = createOakWallSign(SignTypes.FRUCE);
+		FRUCE_WOOD = createOakWood();
+
+		FUCHSITRA_BUTTON = createOakButton();
+		FUCHSITRA_DOOR = createOakDoor();
+		FUCHSITRA_FENCE = createOakFence();
+		FUCHSITRA_FENCE_GATE = createOakFenceGate();
+		FUCHSITRA_LEAVES = createOakLeaves();
+		FUCHSITRA_LOG = createOakLog();
+		FUCHSITRA_PLANKS = createOakPlanks();
+		FUCHSITRA_PRESSURE_PLATE = createOakPressurePlate();
+		FUCHSITRA_SAPLING = createOakSapling(SaplingGenerators.FUCHSITRA);
+		FUCHSITRA_SIGN = createOakSign(SignTypes.FUCHSITRA);
+		FUCHSITRA_SLAB = createOakSlab();
+		FUCHSITRA_STAIRS = createOakStairs(FUCHSITRA_PLANKS);
+		FUCHSITRA_TRAPDOOR = createOakTrapdoor();
+		FUCHSITRA_WALL_SIGN = createOakWallSign(SignTypes.FUCHSITRA);
+		FUCHSITRA_WOOD = createOakWood();
+
+		FUGMOS = createOakSapling(SaplingGenerators.FUGMOS);
+		FUGMOS_BUTTON = createOakButton();
+		FUGMOS_DOOR = createOakDoor();
+		FUGMOS_FENCE = createOakFence();
+		FUGMOS_FENCE_GATE = createOakFenceGate();
+		FUGMOS_STEM = createOakLog();
+		FUGMOS_MOSS = createOakLeaves();
+		FUGMOS_PLANKS = createOakPlanks();
+		FUGMOS_PRESSURE_PLATE = createOakPressurePlate();
+		FUGMOS_SIGN = createOakSign(SignTypes.FUGMOS);
+		FUGMOS_SLAB = createOakSlab();
+		FUGMOS_STAIRS = createOakStairs(FUGMOS_PLANKS);
+		FUGMOS_TRAPDOOR = createOakTrapdoor();
+		FUGMOS_WALL_SIGN = createOakWallSign(SignTypes.FUGMOS);
+		FUGMOS_WOOD = createOakWood();
+
+		FUNERANITE_BUTTON = createOakButton();
+		FUNERANITE_CAP = createCap();
+		FUNERANITE_DOOR = createOakDoor();
+		FUNERANITE_FENCE = createOakFence();
+		FUNERANITE_FENCE_GATE = createOakFenceGate();
+		FUNERANITE_LOG = createOakLog();
+		FUNERANITE_PLANKS = createOakPlanks();
+		FUNERANITE_PRESSURE_PLATE = createOakPressurePlate();
+		FUNERANITE_SAPLING = createOakSapling(SaplingGenerators.FUNERANITE);
+		FUNERANITE_SIGN = createOakSign(SignTypes.FUNERANITE);
+		FUNERANITE_SLAB = createOakSlab();
+		FUNERANITE_STAIRS = createOakStairs(FUNERANITE_PLANKS);
+		FUNERANITE_TRAPDOOR = createOakTrapdoor();
+		FUNERANITE_WALL_SIGN = createOakWallSign(SignTypes.FUNERANITE);
+		FUNERANITE_WOOD = createOakWood();
+
+		GHOSHROOM_BUTTON = createOakButton();
+		GHOSHROOM_CAP = createCap();
+		GHOSHROOM_DOOR = createOakDoor();
+		GHOSHROOM_FENCE = createOakFence();
+		GHOSHROOM_FENCE_GATE = createOakFenceGate();
+		GHOSHROOM_LOG = createOakLog();
+		GHOSHROOM_PLANKS = createOakPlanks();
+		GHOSHROOM_PRESSURE_PLATE = createOakPressurePlate();
+		GHOSHROOM_SAPLING = createOakSapling(SaplingGenerators.GHOSHROOM);
+		GHOSHROOM_SIGN = createOakSign(SignTypes.GHOSHROOM);
+		GHOSHROOM_SLAB = createOakSlab();
+		GHOSHROOM_STAIRS = createOakStairs(GHOSHROOM_PLANKS);
+		GHOSHROOM_TRAPDOOR = createOakTrapdoor();
+		GHOSHROOM_WALL_SIGN = createOakWallSign(SignTypes.GHOSHROOM);
+		GHOSHROOM_WOOD = createOakWood();
+
+		GIANT_VIOLET_BUTTON = createOakButton();
+		GIANT_VIOLET_DOOR = createOakDoor();
+		GIANT_VIOLET_FENCE = createOakFence();
+		GIANT_VIOLET_FENCE_GATE = createOakFenceGate();
+		GIANT_VIOLET_PLANKS = createOakPlanks();
+		GIANT_VIOLET_PRESSURE_PLATE = createOakPressurePlate();
+		GIANT_VIOLET_SIGN = createOakSign(SignTypes.GIANT_VIOLET);
+		GIANT_VIOLET_SLAB = createOakSlab();
+		GIANT_VIOLET_STAIRS = createOakStairs(GIANT_VIOLET_PLANKS);
+		GIANT_VIOLET_STEM = createOakLog();
+		GIANT_VIOLET_TRAPDOOR = createOakTrapdoor();
+		GIANT_VIOLET_WALL_SIGN = createOakWallSign(SignTypes.GIANT_VIOLET);
+		GIANT_VIOLET_WOOD = createOakWood();
+
+		GUAIACUM_BUTTON = createOakButton();
+		GUAIACUM_DOOR = createOakDoor();
+		GUAIACUM_FENCE = createOakFence();
+		GUAIACUM_FENCE_GATE = createOakFenceGate();
+		GUAIACUM_FLOWERS = createBlock(GuaiacumFlowersBlock::new, OAK_LEAVES);
+		GUAIACUM_LEAVES = createOakLeaves();
+		GUAIACUM_LOG = createOakLog();
+		GUAIACUM_PLANKS = createOakPlanks();
+		GUAIACUM_PRESSURE_PLATE = createOakPressurePlate();
+		GUAIACUM_SAPLING = createOakSapling(SaplingGenerators.GUAIACUM);
+		GUAIACUM_SIGN = createOakSign(SignTypes.GUAIACUM);
+		GUAIACUM_SLAB = createOakSlab();
+		GUAIACUM_STAIRS = createOakStairs(GUAIACUM_PLANKS);
+		GUAIACUM_TRAPDOOR = createOakTrapdoor();
+		GUAIACUM_WALL_SIGN = createOakWallSign(SignTypes.GUAIACUM);
+		GUAIACUM_WOOD = createOakWood();
+
+		JOSHUA_BUTTON = createOakButton();
+		JOSHUA_DOOR = createOakDoor();
+		JOSHUA_FENCE = createOakFence();
+		JOSHUA_FENCE_GATE = createOakFenceGate();
+		JOSHUA_LEAVES = createOakLeaves();
+		JOSHUA_LOG = createOakLog();
+		JOSHUA_PLANKS = createOakPlanks();
+		JOSHUA_PRESSURE_PLATE = createOakPressurePlate();
+		JOSHUA_SAPLING = createOakSapling(SaplingGenerators.JOSHUA);
+		JOSHUA_SIGN = createOakSign(SignTypes.JOSHUA);
+		JOSHUA_SLAB = createOakSlab();
+		JOSHUA_STAIRS = createOakStairs(JOSHUA_PLANKS);
+		JOSHUA_TRAPDOOR = createOakTrapdoor();
+		JOSHUA_WALL_SIGN = createOakWallSign(SignTypes.JOSHUA);
+		JOSHUA_WOOD = createOakWood();
+
+		KLINKII_PINE_BUTTON = createOakButton();
+		KLINKII_PINE_DOOR = createOakDoor();
+		KLINKII_PINE_FENCE = createOakFence();
+		KLINKII_PINE_FENCE_GATE = createOakFenceGate();
+		KLINKII_PINE_LEAVES = createOakLeaves();
+		KLINKII_PINE_LOG = createOakLog();
+		KLINKII_PINE_PLANKS = createOakPlanks();
+		KLINKII_PINE_PRESSURE_PLATE = createOakPressurePlate();
+		KLINKII_PINE_SAPLING = createOakSapling(SaplingGenerators.KLINKII_PINE);
+		KLINKII_PINE_SIGN = createOakSign(SignTypes.KLINKII_PINE);
+		KLINKII_PINE_SLAB = createOakSlab();
+		KLINKII_PINE_STAIRS = createOakStairs(KLINKII_PINE_PLANKS);
+		KLINKII_PINE_TRAPDOOR = createOakTrapdoor();
+		KLINKII_PINE_WALL_SIGN = createOakWallSign(SignTypes.KLINKII_PINE);
+		KLINKII_PINE_WOOD = createOakWood();
+
+		MELALEUCA_BUTTON = createOakButton();
+		MELALEUCA_DOOR = createOakDoor();
+		MELALEUCA_FENCE = createOakFence();
+		MELALEUCA_FENCE_GATE = createOakFenceGate();
+		MELALEUCA_FLOWERS = createBlock(MelaleucaFlowersBlock::new, OAK_LEAVES);
+		MELALEUCA_LEAVES = createOakLeaves();
+		MELALEUCA_LOG = createOakLog();
+		MELALEUCA_PLANKS = createOakPlanks();
+		MELALEUCA_PRESSURE_PLATE = createOakPressurePlate();
+		MELALEUCA_SAPLING = createOakSapling(SaplingGenerators.MELALEUCA);
+		MELALEUCA_SIGN = createOakSign(SignTypes.MELALEUCA);
+		MELALEUCA_SLAB = createOakSlab();
+		MELALEUCA_STAIRS = createOakStairs(MELALEUCA_PLANKS);
+		MELALEUCA_TRAPDOOR = createOakTrapdoor();
+		MELALEUCA_WALL_SIGN = createOakWallSign(SignTypes.MELALEUCA);
+		MELALEUCA_WOOD = createOakWood();
+
+		MOSSY_YEW_LOG = createOakLog();
+
+		MURKANTUAN_BUTTON = createOakButton();
+		MURKANTUAN_DOOR = createOakDoor();
+		MURKANTUAN_FENCE = createOakFence();
+		MURKANTUAN_FENCE_GATE = createOakFenceGate();
+		MURKANTUAN_LEAVES = createOakLeaves();
+		MURKANTUAN_FLOWER = createBlock(MurkantuanFlowerBlock::new, OAK_LEAVES);
+		MURKANTUAN_LOG = createOakLog();
+		MURKANTUAN_PLANKS = createOakPlanks();
+		MURKANTUAN_PRESSURE_PLATE = createOakPressurePlate();
+		MURKANTUAN_SAPLING = createOakSapling(SaplingGenerators.MURKANTUAN);
+		MURKANTUAN_SIGN = createOakSign(SignTypes.MURKANTUAN);
+		MURKANTUAN_SLAB = createOakSlab();
+		MURKANTUAN_STAIRS = createOakStairs(MURKANTUAN_PLANKS);
+		MURKANTUAN_TRAPDOOR = createOakTrapdoor();
+		MURKANTUAN_WALL_SIGN = createOakWallSign(SignTypes.MURKANTUAN);
+		MURKANTUAN_WOOD = createOakWood();
+
+		NORFOLK_PINE_BUTTON = createOakButton();
+		NORFOLK_PINE_DOOR = createOakDoor();
+		NORFOLK_PINE_FENCE = createOakFence();
+		NORFOLK_PINE_FENCE_GATE = createOakFenceGate();
+		NORFOLK_PINE_LEAVES = createOakLeaves();
+		NORFOLK_PINE_LOG = createOakLog();
+		NORFOLK_PINE_PLANKS = createOakPlanks();
+		NORFOLK_PINE_PRESSURE_PLATE = createOakPressurePlate();
+		NORFOLK_PINE_SAPLING = createOakSapling(SaplingGenerators.NORFOLK_PINE);
+		NORFOLK_PINE_SIGN = createOakSign(SignTypes.NORFOLK_PINE);
+		NORFOLK_PINE_SLAB = createOakSlab();
+		NORFOLK_PINE_STAIRS = createOakStairs(NORFOLK_PINE_PLANKS);
+		NORFOLK_PINE_TRAPDOOR = createOakTrapdoor();
+		NORFOLK_PINE_WALL_SIGN = createOakWallSign(SignTypes.NORFOLK_PINE);
+		NORFOLK_PINE_WOOD = createOakWood();
+
+		OBSCRUS = createBlock(ObscrusBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
+		OBSCRUS_BUTTON = createOakButton();
+		OBSCRUS_DOOR = createOakDoor();
+		OBSCRUS_FENCE = createOakFence();
+		OBSCRUS_FENCE_GATE = createOakFenceGate();
+		OBSCRUS_LEAVES = createOakLeaves();
+		OBSCRUS_LOG = createOakLog();
+		OBSCRUS_PLANKS = createOakPlanks();
+		OBSCRUS_PRESSURE_PLATE = createOakPressurePlate();
+		OBSCRUS_SIGN = createOakSign(SignTypes.OBSCRUS);
+		OBSCRUS_SLAB = createOakSlab();
+		OBSCRUS_STAIRS = createOakStairs(OBSCRUS_PLANKS);
+		OBSCRUS_TRAPDOOR = createOakTrapdoor();
+		OBSCRUS_WALL_SIGN = createOakWallSign(SignTypes.OBSCRUS);
+		OBSCRUS_WOOD = createOakWood();
+
+		ORHPRIS_BUTTON = createOakButton();
+		ORHPRIS_DOOR = createOakDoor();
+		ORHPRIS_FENCE = createOakFence();
+		ORHPRIS_FENCE_GATE = createOakFenceGate();
+		ORHPRIS_LEAVES = createOakLeaves();
+		ORHPRIS_LOG = createOakLog();
+		ORHPRIS_PLANKS = createOakPlanks();
+		ORHPRIS_PRESSURE_PLATE = createOakPressurePlate();
+		ORHPRIS_SAPLING = createOakSapling(SaplingGenerators.ORHPRIS);
+		ORHPRIS_SIGN = createOakSign(SignTypes.ORHPRIS);
+		ORHPRIS_SLAB = createOakSlab();
+		ORHPRIS_STAIRS = createOakStairs(ORHPRIS_PLANKS);
+		ORHPRIS_TRAPDOOR = createOakTrapdoor();
+		ORHPRIS_WALL_SIGN = createOakWallSign(SignTypes.ORHPRIS);
+		ORHPRIS_WOOD = createOakWood();
+
+		PELTOGYNE_BUTTON = createOakButton();
+		PELTOGYNE_DOOR = createOakDoor();
+		PELTOGYNE_FENCE = createOakFence();
+		PELTOGYNE_FENCE_GATE = createOakFenceGate();
+		PELTOGYNE_LEAVES = createOakLeaves();
+		PELTOGYNE_LOG = createOakLog();
+		PELTOGYNE_PLANKS = createOakPlanks();
+		PELTOGYNE_PRESSURE_PLATE = createOakPressurePlate();
+		PELTOGYNE_SAPLING = createOakSapling(SaplingGenerators.PELTOGYNE);
+		PELTOGYNE_SIGN = createOakSign(SignTypes.PELTOGYNE);
+		PELTOGYNE_SLAB = createOakSlab();
+		PELTOGYNE_STAIRS = createOakStairs(PELTOGYNE_PLANKS);
+		PELTOGYNE_TRAPDOOR = createOakTrapdoor();
+		PELTOGYNE_WALL_SIGN = createOakWallSign(SignTypes.PELTOGYNE);
+		PELTOGYNE_WOOD = createOakWood();
+
+		PIN_CHERRY_BUTTON = createOakButton();
+		PIN_CHERRY_DOOR = createOakDoor();
+		PIN_CHERRY_FENCE = createOakFence();
+		PIN_CHERRY_FENCE_GATE = createOakFenceGate();
+		PIN_CHERRY_LEAVES = createOakLeaves();
+		PIN_CHERRY_LOG = createOakLog();
+		PIN_CHERRY_PLANKS = createOakPlanks();
+		PIN_CHERRY_PRESSURE_PLATE = createOakPressurePlate();
+		PIN_CHERRY_SAPLING = createOakSapling(SaplingGenerators.PIN_CHERRY);
+		PIN_CHERRY_SIGN = createOakSign(SignTypes.PIN_CHERRY);
+		PIN_CHERRY_SLAB = createOakSlab();
+		PIN_CHERRY_STAIRS = createOakStairs(PIN_CHERRY_PLANKS);
+		PIN_CHERRY_TRAPDOOR = createOakTrapdoor();
+		PIN_CHERRY_WALL_SIGN = createOakWallSign(SignTypes.PIN_CHERRY);
+		PIN_CHERRY_WOOD = createOakWood();
+
+		PLUM_BUTTON = createOakButton();
+		PLUM_DOOR = createOakDoor();
+		PLUM_FENCE = createOakFence();
+		PLUM_FENCE_GATE = createOakFenceGate();
+		PLUM_LEAVES = createOakLeaves();
+		PLUM_LOG = createOakLog();
+		PLUM_PLANKS = createOakPlanks();
+		PLUM_PRESSURE_PLATE = createOakPressurePlate();
+		PLUM_SAPLING = createOakSapling(SaplingGenerators.PLUM);
+		PLUM_SIGN = createOakSign(SignTypes.PLUM);
+		PLUM_SLAB = createOakSlab();
+		PLUM_STAIRS = createOakStairs(PLUM_PLANKS);
+		PLUM_TRAPDOOR = createOakTrapdoor();
+		PLUM_WALL_SIGN = createOakWallSign(SignTypes.PLUM);
+		PLUM_WOOD = createOakWood();
+
+		PURFUNGA_BUTTON = createOakButton();
+		PURFUNGA_CAP = createCap();
+		PURFUNGA_DOOR = createOakDoor();
+		PURFUNGA_FENCE = createOakFence();
+		PURFUNGA_FENCE_GATE = createOakFenceGate();
+		PURFUNGA_LOG = createOakLog();
+		PURFUNGA_PLANKS = createOakPlanks();
+		PURFUNGA_PRESSURE_PLATE = createOakPressurePlate();
+		PURFUNGA_SAPLING = createAcuaticFungus(SaplingGenerators.PURFUNGA);
+		PURFUNGA_SIGN = createOakSign(SignTypes.PURFUNGA);
+		PURFUNGA_SLAB = createOakSlab();
+		PURFUNGA_STAIRS = createOakStairs(PURFUNGA_PLANKS);
+		PURFUNGA_TRAPDOOR = createOakTrapdoor();
+		PURFUNGA_WALL_SIGN = createOakWallSign(SignTypes.PURFUNGA);
+		PURFUNGA_WOOD = createOakWood();
+
+		RARK_BUTTON = createOakButton();
+		RARK_DOOR = createOakDoor();
+		RARK_FENCE = createOakFence();
+		RARK_FENCE_GATE = createOakFenceGate();
+		RARK_LEAVES = createOakLeaves();
+		RARK_LOG = createOakLog();
+		RARK_PLANKS = createOakPlanks();
+		RARK_PRESSURE_PLATE = createOakPressurePlate();
+		RARK_SAPLING = createOakSapling(SaplingGenerators.RARK);
+		RARK_SIGN = createOakSign(SignTypes.RARK);
+		RARK_SLAB = createOakSlab();
+		RARK_STAIRS = createOakStairs(RARK_PLANKS);
+		RARK_TRAPDOOR = createOakTrapdoor();
+		RARK_WALL_SIGN = createOakWallSign(SignTypes.RARK);
+		RARK_WOOD = createOakWood();
+
+		RED_ELM_BUTTON = createOakButton();
+		RED_ELM_DOOR = createOakDoor();
+		RED_ELM_FENCE = createOakFence();
+		RED_ELM_FENCE_GATE = createOakFenceGate();
+		RED_ELM_LEAVES = createOakLeaves();
+		RED_ELM_LOG = createOakLog();
+		RED_ELM_PLANKS = createOakPlanks();
+		RED_ELM_PRESSURE_PLATE = createOakPressurePlate();
+		RED_ELM_SAPLING = createOakSapling(SaplingGenerators.RED_ELM);
+		RED_ELM_SIGN = createOakSign(SignTypes.RED_ELM);
+		RED_ELM_SLAB = createOakSlab();
+		RED_ELM_STAIRS = createOakStairs(RED_ELM_PLANKS);
+		RED_ELM_TRAPDOOR = createOakTrapdoor();
+		RED_ELM_WALL_SIGN = createOakWallSign(SignTypes.RED_ELM);
+		RED_ELM_WOOD = createOakWood();
+
+		RHADI_BUTTON = createOakButton();
+		RHADI_DOOR = createOakDoor();
+		RHADI_FENCE = createOakFence();
+		RHADI_FENCE_GATE = createOakFenceGate();
+		RHADI_FRUIT = createBlock(RhadiFruit::new, MELON);
+		CARVED_RHADI_FRUIT = createHorizontalBlock(MELON);
+		RHADI_LEAVES = createOakLeaves();
+		RHADI_LOG = createOakLog();
+		RHADI_O_LANTERN = createHorizontalBlock(JACK_O_LANTERN);
+		RHADI_PLANKS = createOakPlanks();
+		RHADI_PRESSURE_PLATE = createOakPressurePlate();
+		RHADI_SAPLING = createOakSapling(SaplingGenerators.RHADI);
+		RHADI_SIGN = createOakSign(SignTypes.RHADI);
+		RHADI_SLAB = createOakSlab();
+		RHADI_STAIRS = createOakStairs(RHADI_PLANKS);
+		RHADI_THORNS = createBlock(RhadiVineThornsBlock::new, OAK_LEAVES);
+		RHADI_TRAPDOOR = createOakTrapdoor();
+		RHADI_WALL_SIGN = createOakWallSign(SignTypes.RHADI);
+		RHADI_WOOD = createOakWood();
+
+		SANGUART_BUTTON = createOakButton();
+		SANGUART_DOOR = createOakDoor();
+		SANGUART_FENCE = createOakFence();
+		SANGUART_FENCE_GATE = createOakFenceGate();
+		SANGUART_LEAVES = createOakLeaves();
+		SANGUART_LOG = createOakLog();
+		SANGUART_PLANKS = createOakPlanks();
+		SANGUART_PRESSURE_PLATE = createOakPressurePlate();
+		SANGUART_SAPLING = createOakSapling(SaplingGenerators.SANGUART);
+		SANGUART_SIGN = createOakSign(SignTypes.SANGUART);
+		SANGUART_SLAB = createOakSlab();
+		SANGUART_STAIRS = createOakStairs(SANGUART_PLANKS);
+		SANGUART_TRAPDOOR = createOakTrapdoor();
+		SANGUART_WALL_SIGN = createOakWallSign(SignTypes.SANGUART);
+		SANGUART_WOOD = createOakWood();
+
+		SCARLET_THIORCEN = createCopy(DEAD_BUSH);
+		SCARLET_THIORCEN_BUTTON = createOakButton();
+		SCARLET_THIORCEN_DOOR = createOakDoor();
+		SCARLET_THIORCEN_FENCE = createOakFence();
+		SCARLET_THIORCEN_FENCE_GATE = createOakFenceGate();
+		SCARLET_THIORCEN_LOG = createOakLog();
+		SCARLET_THIORCEN_PLANKS = createOakPlanks();
+		SCARLET_THIORCEN_PRESSURE_PLATE = createOakPressurePlate();
+		SCARLET_THIORCEN_SIGN = createOakSign(SignTypes.SCARLET_THIORCEN);
+		SCARLET_THIORCEN_SLAB = createOakSlab();
+		SCARLET_THIORCEN_STAIRS = createOakStairs(SCARLET_THIORCEN_PLANKS);
+		SCARLET_THIORCEN_TRAPDOOR = createOakTrapdoor();
+		SCARLET_THIORCEN_WALL_SIGN = createOakWallSign(SignTypes.SCARLET_THIORCEN);
+		SCARLET_THIORCEN_WOOD = createOakWood();
+
+		SEQUOIA_BUTTON = createOakButton();
+		SEQUOIA_DOOR = createOakDoor();
+		SEQUOIA_FENCE = createOakFence();
+		SEQUOIA_FENCE_GATE = createOakFenceGate();
+		SEQUOIA_LEAVES = createOakLeaves();
+		SEQUOIA_LOG = createOakLog();
+		SEQUOIA_PLANKS = createOakPlanks();
+		SEQUOIA_PRESSURE_PLATE = createOakPressurePlate();
+		SEQUOIA_SAPLING = createOakSapling(SaplingGenerators.SEQUOIA);
+		SEQUOIA_SIGN = createOakSign(SignTypes.SEQUOIA);
+		SEQUOIA_SLAB = createOakSlab();
+		SEQUOIA_STAIRS = createOakStairs(SEQUOIA_PLANKS);
+		SEQUOIA_TRAPDOOR = createOakTrapdoor();
+		SEQUOIA_WALL_SIGN = createOakWallSign(SignTypes.SEQUOIA);
+		SEQUOIA_WOOD = createOakWood();
+
+		SPROOM_BUTTON = createOakButton();
+		SPROOM_DOOR = createOakDoor();
+		SPROOM_FENCE = createOakFence();
+		SPROOM_FENCE_GATE = createOakFenceGate();
+		SPROOM_LEAVES = createOakLeaves();
+		SPROOM_LOG = createOakLog();
+		SPROOM_PLANKS = createOakPlanks();
+		SPROOM_PRESSURE_PLATE = createOakPressurePlate();
+		SPROOM_SAPLING = createStorceanSapling(SaplingGenerators.SPROOM);
+		SPROOM_SIGN = createOakSign(SignTypes.SPROOM);
+		SPROOM_SLAB = createOakSlab();
+		SPROOM_STAIRS = createOakStairs(SPROOM_PLANKS);
+		SPROOM_TRAPDOOR = createOakTrapdoor();
+		SPROOM_WALL_SIGN = createOakWallSign(SignTypes.SPROOM);
+		SPROOM_WOOD = createOakWood();
+
+		STORTREEAN_BUTTON = createOakButton();
+		STORTREEAN_DOOR = createOakDoor();
+		STORTREEAN_FENCE = createOakFence();
+		STORTREEAN_FENCE_GATE = createOakFenceGate();
+		STORTREEAN_LEAVES = createOakLeaves();
+		STORTREEAN_LOG = createOakLog();
+		STORTREEAN_PLANKS = createOakPlanks();
+		STORTREEAN_PRESSURE_PLATE = createOakPressurePlate();
+		STORTREEAN_SAPLING = createStorceanSapling(SaplingGenerators.STORTREEAN);
+		STORTREEAN_SIGN = createOakSign(SignTypes.STORTREEAN);
+		STORTREEAN_SLAB = createOakSlab();
+		STORTREEAN_STAIRS = createOakStairs(STORTREEAN_PLANKS);
+		STORTREEAN_TRAPDOOR = createOakTrapdoor();
+		STORTREEAN_WALL_SIGN = createOakWallSign(SignTypes.STORTREEAN);
+		STORTREEAN_WOOD = createOakWood();
+
+		STRIPPED_ALMOND_LOG = createStrippedOakLog();
+		STRIPPED_ALMOND_WOOD = createStrippedOakWood();
+		STRIPPED_ANAMEATA_LOG = createStrippedOakLog();
+		STRIPPED_ANAMEATA_WOOD = createStrippedOakWood();
+		STRIPPED_ANGELS_TRUMPET_LOG = createStrippedOakLog();
+		STRIPPED_ANGELS_TRUMPET_WOOD = createStrippedOakWood();
+		STRIPPED_AQUEAN_LOG = createStrippedOakLog();
+		STRIPPED_AQUEAN_WOOD = createStrippedOakWood();
+		STRIPPED_BARSHROOKLE_LOG = createStrippedOakLog();
+		STRIPPED_BARSHROOKLE_WOOD = createStrippedOakWood();
+		STRIPPED_BLACK_BIRCH_LOG = createStrippedOakLog();
+		STRIPPED_BLACK_BIRCH_WOOD = createStrippedOakWood();
+		STRIPPED_BLUE_MAHOE_LOG = createStrippedOakLog();
+		STRIPPED_BLUE_MAHOE_WOOD = createStrippedOakWood();
+		STRIPPED_BLUE_SPRUCE_LOG = createStrippedOakLog();
+		STRIPPED_BLUE_SPRUCE_WOOD = createStrippedOakWood();
+		STRIPPED_BOTTLEBRUSH_LOG = createStrippedOakLog();
+		STRIPPED_BOTTLEBRUSH_WOOD = createStrippedOakWood();
+		STRIPPED_BROMYA_LOG = createStrippedOakLog();
+		STRIPPED_BROMYA_WOOD = createStrippedOakWood();
+		STRIPPED_BUBBLETREE_LOG = createStrippedOakLog();
+		STRIPPED_BUBBLETREE_WOOD = createStrippedOakWood();
+		STRIPPED_CALCEARB_LOG = createStrippedOakLog();
+		STRIPPED_CALCEARB_WOOD = createStrippedOakWood();
+		STRIPPED_CHERRY_LOG = createStrippedOakLog();
+		STRIPPED_CHERRY_WOOD = createStrippedOakWood();
+		STRIPPED_CHOTORN_LOG = createStrippedOakLog();
+		STRIPPED_CHOTORN_WOOD = createStrippedOakWood();
+		STRIPPED_COOK_PINE_LOG = createStrippedOakLog();
+		STRIPPED_COOK_PINE_WOOD = createStrippedOakWood();
+		STRIPPED_CROLOOD_LOG = createStrippedOakLog();
+		STRIPPED_CROLOOD_WOOD = createStrippedOakWood();
+		STRIPPED_DARK_CROLOOD_LOG = createStrippedOakLog();
+		STRIPPED_DARK_CROLOOD_WOOD = createStrippedOakWood();
+		STRIPPED_DARK_FUCHSITRA_LOG = createStrippedOakLog();
+		STRIPPED_DARK_FUCHSITRA_WOOD = createStrippedOakWood();
+		STRIPPED_DARK_RED_ELM_LOG = createStrippedOakLog();
+		STRIPPED_DARK_RED_ELM_WOOD = createStrippedOakWood();
+		STRIPPED_DEAD_WART_TREE_LOG = createStrippedOakLog();
+		STRIPPED_DEAD_WART_TREE_WOOD = createStrippedOakWood();
+		STRIPPED_DRIGYUS_LOG = createStrippedOakLog();
+		STRIPPED_DRIGYUS_WOOD = createStrippedOakWood();
+		STRIPPED_EBONY_LOG = createStrippedOakLog();
+		STRIPPED_EBONY_WOOD = createStrippedOakWood();
+		STRIPPED_ENDERHEART_LOG = createStrippedOakLog();
+		STRIPPED_ENDERHEART_WOOD = createStrippedOakWood();
+		STRIPPED_FLALM_STEM = createStrippedOakLog();
+		STRIPPED_FLALM_WOOD = createStrippedOakWood();
+		STRIPPED_FRUCE_LOG = createStrippedOakLog();
+		STRIPPED_FRUCE_WOOD = createStrippedOakWood();
+		STRIPPED_FUCHSITRA_LOG = createStrippedOakLog();
+		STRIPPED_FUCHSITRA_WOOD = createStrippedOakWood();
+		STRIPPED_FUGMOS_STEM = createStrippedOakLog();
+		STRIPPED_FUGMOS_HYPHAE = createStrippedOakWood();
+		STRIPPED_FUNERANITE_LOG = createStrippedOakLog();
+		STRIPPED_FUNERANITE_WOOD = createStrippedOakWood();
+		STRIPPED_GHOSHROOM_LOG = createStrippedOakLog();
+		STRIPPED_GHOSHROOM_WOOD = createStrippedOakWood();
+		STRIPPED_GIANT_VIOLET_STEM = createStrippedOakLog();
+		STRIPPED_GIANT_VIOLET_WOOD = createStrippedOakWood();
+		STRIPPED_GUAIACUM_LOG = createStrippedOakLog();
+		STRIPPED_GUAIACUM_WOOD = createStrippedOakWood();
+		STRIPPED_JOSHUA_LOG = createStrippedOakLog();
+		STRIPPED_JOSHUA_WOOD = createStrippedOakWood();
+		STRIPPED_KLINKII_PINE_LOG = createStrippedOakLog();
+		STRIPPED_KLINKII_PINE_WOOD = createStrippedOakWood();
+		STRIPPED_MELALEUCA_LOG = createStrippedOakLog();
+		STRIPPED_MELALEUCA_WOOD = createStrippedOakWood();
+		STRIPPED_MURKANTUAN_LOG = createStrippedOakLog();
+		STRIPPED_MURKANTUAN_WOOD = createStrippedOakWood();
+		STRIPPED_NORFOLK_PINE_LOG = createStrippedOakLog();
+		STRIPPED_NORFOLK_PINE_WOOD = createStrippedOakWood();
+		STRIPPED_OBSCRUS_LOG = createStrippedOakLog();
+		STRIPPED_OBSCRUS_WOOD = createStrippedOakWood();
+		STRIPPED_ORHPRIS_LOG = createStrippedOakLog();
+		STRIPPED_ORHPRIS_WOOD = createStrippedOakWood();
+		STRIPPED_PELTOGYNE_LOG = createStrippedOakLog();
+		STRIPPED_PELTOGYNE_WOOD = createStrippedOakWood();
+		STRIPPED_PIN_CHERRY_LOG = createStrippedOakLog();
+		STRIPPED_PIN_CHERRY_WOOD = createStrippedOakWood();
+		STRIPPED_PLUM_LOG = createStrippedOakLog();
+		STRIPPED_PLUM_WOOD = createStrippedOakWood();
+		STRIPPED_PURFUNGA_LOG = createStrippedOakLog();
+		STRIPPED_PURFUNGA_WOOD = createStrippedOakWood();
+		STRIPPED_RARK_LOG = createStrippedOakLog();
+		STRIPPED_RARK_WOOD = createStrippedOakWood();
+		STRIPPED_RED_ELM_LOG = createStrippedOakLog();
+		STRIPPED_RED_ELM_WOOD = createStrippedOakWood();
+		STRIPPED_RHADI_LOG = createStrippedOakLog();
+		STRIPPED_RHADI_WOOD = createStrippedOakWood();
+		STRIPPED_SANGUART_LOG = createStrippedOakLog();
+		STRIPPED_SANGUART_WOOD = createStrippedOakWood();
+		STRIPPED_SCARLET_THIORCEN_LOG = createStrippedOakLog();
+		STRIPPED_SCARLET_THIORCEN_WOOD = createStrippedOakWood();
+		STRIPPED_SEQUOIA_LOG = createStrippedOakLog();
+		STRIPPED_SEQUOIA_WOOD = createStrippedOakWood();
+		STRIPPED_SPROOM_LOG = createStrippedOakLog();
+		STRIPPED_SPROOM_WOOD = createStrippedOakWood();
+		STRIPPED_STORTREEAN_LOG = createStrippedOakLog();
+		STRIPPED_STORTREEAN_WOOD = createStrippedOakWood();
+		STRIPPED_STROOMEAN_LOG = createStrippedOakLog();
+		STRIPPED_STROOMEAN_WOOD = createStrippedOakWood();
+		STRIPPED_SUNRISE_FUNGUS_LOG = createStrippedOakLog();
+		STRIPPED_SUNRISE_FUNGUS_WOOD = createStrippedOakWood();
+		STRIPPED_TARK_LOG = createStrippedOakLog();
+		STRIPPED_TARK_WOOD = createStrippedOakWood();
+		STRIPPED_TEAK_LOG = createStrippedOakLog();
+		STRIPPED_TEAK_WOOD = createStrippedOakWood();
+		STRIPPED_THUNDERCLOUD_PLUM_LOG = createStrippedOakLog();
+		STRIPPED_THUNDERCLOUD_PLUM_WOOD = createStrippedOakWood();
+		STRIPPED_VYNHERT_LOG = createStrippedOakLog();
+		STRIPPED_VYNHERT_WOOD = createStrippedOakWood();
+		STRIPPED_WART_TREE_LOG = createStrippedOakLog();
+		STRIPPED_WART_TREE_WOOD = createStrippedOakWood();
+		STRIPPED_WENGE_LOG = createStrippedOakLog();
+		STRIPPED_WENGE_WOOD = createStrippedOakWood();
+		STRIPPED_YEW_LOG = createStrippedOakLog();
+		STRIPPED_YEW_WOOD = createStrippedOakWood();
+
+		STROOMEAN_BUTTON = createOakButton();
+		STROOMEAN_CAP = createCap();
+		STROOMEAN_DOOR = createOakDoor();
+		STROOMEAN_FENCE = createOakFence();
+		STROOMEAN_FENCE_GATE = createOakFenceGate();
+		STROOMEAN_LOG = createOakLog();
+		STROOMEAN_PLANKS = createOakPlanks();
+		STROOMEAN_PRESSURE_PLATE = createOakPressurePlate();
+		STROOMEAN_SAPLING = createAcuaticFungus(SaplingGenerators.STROOMEAN);
+		STROOMEAN_SIGN = createOakSign(SignTypes.STORTREEAN);
+		STROOMEAN_SLAB = createOakSlab();
+		STROOMEAN_STAIRS = createOakStairs(STROOMEAN_PLANKS);
+		STROOMEAN_TRAPDOOR = createOakTrapdoor();
+		STROOMEAN_WALL_SIGN = createOakWallSign(SignTypes.STROOMEAN);
+		STROOMEAN_WOOD = createOakWood();
+
+		SUNRISE_FUNGUS_BUTTON = createOakButton();
+		SUNRISE_FUNGUS_CAP = createCap();
+		SUNRISE_FUNGUS_DOOR = createOakDoor();
+		SUNRISE_FUNGUS_FENCE = createOakFence();
+		SUNRISE_FUNGUS_FENCE_GATE = createOakFenceGate();
+		SUNRISE_FUNGUS_LOG = createOakLog();
+		SUNRISE_FUNGUS_PLANKS = createOakPlanks();
+		SUNRISE_FUNGUS_PRESSURE_PLATE = createOakPressurePlate();
+		SUNRISE_FUNGUS_SAPLING = createAcuaticFungus(SaplingGenerators.SUNRISE_FUNGUS);
+		SUNRISE_FUNGUS_SIGN = createOakSign(SignTypes.SUNRISE_FUNGUS);
+		SUNRISE_FUNGUS_SLAB = createOakSlab();
+		SUNRISE_FUNGUS_STAIRS = createOakStairs(SUNRISE_FUNGUS_PLANKS);
+		SUNRISE_FUNGUS_TRAPDOOR = createOakTrapdoor();
+		SUNRISE_FUNGUS_WALL_SIGN = createOakWallSign(SignTypes.SUNRISE_FUNGUS);
+		SUNRISE_FUNGUS_WOOD = createOakWood();
+
+		TARK_BUTTON = createOakButton();
+		TARK_DOOR = createOakDoor();
+		TARK_FENCE = createOakFence();
+		TARK_FENCE_GATE = createOakFenceGate();
+		TARK_LEAVES = createOakLeaves();
+		TARK_LOG = createOakLog();
+		TARK_PLANKS = createOakPlanks();
+		TARK_PRESSURE_PLATE = createOakPressurePlate();
+		TARK_SAPLING = createOakSapling(SaplingGenerators.TARK);
+		TARK_SIGN = createOakSign(SignTypes.TARK);
+		TARK_SLAB = createOakSlab();
+		TARK_STAIRS = createOakStairs(TARK_PLANKS);
+		TARK_TRAPDOOR = createOakTrapdoor();
+		TARK_WALL_SIGN = createOakWallSign(SignTypes.TARK);
+		TARK_WOOD = createOakWood();
+
+		TEAK_BUTTON = createOakButton();
+		TEAK_DOOR = createOakDoor();
+		TEAK_FENCE = createOakFence();
+		TEAK_FENCE_GATE = createOakFenceGate();
+		TEAK_LEAVES = createOakLeaves();
+		TEAK_LOG = createOakLog();
+		TEAK_PLANKS = createOakPlanks();
+		TEAK_PRESSURE_PLATE = createOakPressurePlate();
+		TEAK_SAPLING = createOakSapling(SaplingGenerators.TEAK);
+		TEAK_SIGN = createOakSign(SignTypes.TEAK);
+		TEAK_SLAB = createOakSlab();
+		TEAK_STAIRS = createOakStairs(TEAK_PLANKS);
+		TEAK_TRAPDOOR = createOakTrapdoor();
+		TEAK_WALL_SIGN = createOakWallSign(SignTypes.TEAK);
+		TEAK_WOOD = createOakWood();
+
+		THUNDERCLOUD_PLUM_BUTTON = createOakButton();
+		THUNDERCLOUD_PLUM_DOOR = createOakDoor();
+		THUNDERCLOUD_PLUM_FENCE = createOakFence();
+		THUNDERCLOUD_PLUM_FENCE_GATE = createOakFenceGate();
+		THUNDERCLOUD_PLUM_LEAVES = createOakLeaves();
+		THUNDERCLOUD_PLUM_LOG = createOakLog();
+		THUNDERCLOUD_PLUM_PLANKS = createOakPlanks();
+		THUNDERCLOUD_PLUM_SAPLING = createOakSapling(SaplingGenerators.THUNDERCLOUD_PLUM);
+		THUNDERCLOUD_PLUM_PRESSURE_PLATE = createOakPressurePlate();
+		THUNDERCLOUD_PLUM_SIGN = createOakSign(SignTypes.THUNDERCLOUD_PLUM);
+		THUNDERCLOUD_PLUM_SLAB = createOakSlab();
+		THUNDERCLOUD_PLUM_STAIRS = createOakStairs(THUNDERCLOUD_PLUM_PLANKS);
+		THUNDERCLOUD_PLUM_TRAPDOOR = createOakTrapdoor();
+		THUNDERCLOUD_PLUM_WALL_SIGN = createOakWallSign(SignTypes.THUNDERCLOUD_PLUM);
+		THUNDERCLOUD_PLUM_WOOD = createOakWood();
+
+		VYNHERT_BUTTON = createOakButton();
+		VYNHERT_DOOR = createOakDoor();
+		VYNHERT_FENCE = createOakFence();
+		VYNHERT_FENCE_GATE = createOakFenceGate();
+		VYNHERT_FRUIT = createBlock(VynhertFruit::new, MELON);
+		CARVED_VYNHERT_FRUIT = createHorizontalBlock(MELON);
+		VYNHERT_LEAF = createBlock(VynhertLeafBlock::new, ROSE_BUSH);
+		VYNHERT_LOG = createOakLog();
+		VYNHERT_O_LANTERN = createHorizontalBlock(JACK_O_LANTERN);
+		VYNHERT_PLANKS = createOakPlanks();
+		VYNHERT_PRESSURE_PLATE = createOakPressurePlate();
+		VYNHERT_SAPLING = createOakSapling(SaplingGenerators.VYNHERT);
+		VYNHERT_SIGN = createOakSign(SignTypes.VYNHERT);
+		VYNHERT_SLAB = createOakSlab();
+		VYNHERT_STAIRS = createOakStairs(VYNHERT_PLANKS);
+		VYNHERT_TENTACLES = createBlock(VynhertThornsBlock::new, OAK_LEAVES);
+		VYNHERT_THORNS = createBlock(VynhertThornsBlock::new, OAK_LEAVES);
+		VYNHERT_TRAPDOOR = createOakTrapdoor();
+		VYNHERT_WALL_SIGN = createOakWallSign(SignTypes.VYNHERT);
+		VYNHERT_WOOD = createOakWood();
+
+		WART_TREE_BUTTON = createOakButton();
+		WART_TREE_DOOR = createOakDoor();
+		WART_TREE_FENCE = createOakFence();
+		WART_TREE_FENCE_GATE = createOakFenceGate();
+		WART_TREE_LOG = createOakLog();
+		WART_TREE_PLANKS = createOakPlanks();
+		WART_TREE_PRESSURE_PLATE = createOakPressurePlate();
+		WART_TREE_SIGN = createOakSign(SignTypes.WART_TREE);
+		WART_TREE_SLAB = createOakSlab();
+		WART_TREE_STAIRS = createOakStairs(WART_TREE_PLANKS);
+		WART_TREE_TRAPDOOR = createOakTrapdoor();
+		WART_TREE_WALL_SIGN = createOakWallSign(SignTypes.WART_TREE);
+		WART_TREE_WARTS = createCopy(NETHER_WART_BLOCK);
+		WART_TREE_WOOD = createOakWood();
+
+		WENGE_BUTTON = createOakButton();
+		WENGE_DOOR = createOakDoor();
+		WENGE_FENCE = createOakFence();
+		WENGE_FENCE_GATE = createOakFenceGate();
+		WENGE_LEAVES = createOakLeaves();
+		WENGE_LOG = createOakLog();
+		WENGE_PLANKS = createOakPlanks();
+		WENGE_PRESSURE_PLATE = createOakPressurePlate();
+		WENGE_SAPLING = createOakSapling(SaplingGenerators.WENGE);
+		WENGE_SIGN = createOakSign(SignTypes.WENGE);
+		WENGE_SLAB = createOakSlab();
+		WENGE_STAIRS = createOakStairs(WENGE_PLANKS);
+		WENGE_TRAPDOOR = createOakTrapdoor();
+		WENGE_WALL_SIGN = createOakWallSign(SignTypes.WENGE);
+		WENGE_WOOD = createOakWood();
+
+		YEW_BUTTON = createOakButton();
+		YEW_DOOR = createOakDoor();
+		YEW_FENCE = createOakFence();
+		YEW_FENCE_GATE = createOakFenceGate();
+		YEW_LEAVES = createOakLeaves();
+		YEW_LOG = createOakLog();
+		YEW_PLANKS = createOakPlanks();
+		YEW_PRESSURE_PLATE = createOakPressurePlate();
+		YEW_SAPLING = createOakSapling(SaplingGenerators.YEW);
+		YEW_SIGN = createOakSign(SignTypes.YEW);
+		YEW_SLAB = createOakSlab();
+		YEW_STAIRS = createOakStairs(YEW_PLANKS);
+		YEW_TRAPDOOR = createOakTrapdoor();
+		YEW_WALL_SIGN = createOakWallSign(SignTypes.YEW);
+		YEW_WOOD = createOakWood();
+
+		POTTED_ALMOND_SAPLING = createPottedSapling(ALMOND_SAPLING);
+		POTTED_ANAMEATA_SAPLING = createPottedSapling(ANAMEATA_SAPLING);
+		POTTED_ANGELS_TRUMPET_SAPLING = createPottedSapling(ANGELS_TRUMPET_SAPLING);
+		POTTED_AQUEAN_SAPLING = createPottedSapling(AQUEAN_SAPLING);
+		POTTED_BARSHROOKLE_SAPLING = createPottedSapling(BARSHROOKLE_SAPLING);
+		POTTED_BLACK_BIRCH_SAPLING = createPottedSapling(BLACK_BIRCH_SAPLING);
+		POTTED_BLUE_MAHOE_SAPLING = createPottedSapling(BLUE_MAHOE_SAPLING);
+		POTTED_BLUE_SPRUCE_SAPLING = createPottedSapling(BLUE_SPRUCE_SAPLING);
+		POTTED_BOTTLEBRUSH_SAPLING = createPottedSapling(BOTTLEBRUSH_SAPLING);
+		POTTED_BROMYA_SAPLING = createPottedSapling(BROMYA_SAPLING);
+		POTTED_BUBBLETREE_SAPLING = createPottedSapling(BUBBLETREE_SAPLING);
+		POTTED_CALCEARB_SAPLING = createPottedSapling(CALCEARB_SAPLING);
+		POTTED_CHERRY_SAPLING = createPottedSapling(CHERRY_SAPLING);
+		POTTED_COOK_PINE_SAPLING = createPottedSapling(COOK_PINE_SAPLING);
+		POTTED_CROLOOD_SAPLING = createPottedSapling(CROLOOD_SAPLING);
+		POTTED_DARK_CROLOOD_SAPLING = createPottedSapling(DARK_CROLOOD_SAPLING);
+		POTTED_DARK_FUCHSITRA_SAPLING = createPottedSapling(DARK_FUCHSITRA_SAPLING);
+		POTTED_DARK_RED_ELM_SAPLING = createPottedSapling(DARK_RED_ELM_SAPLING);
+		POTTED_EBONY_SAPLING = createPottedSapling(EBONY_SAPLING);
+		POTTED_ENDERHEART_SAPLING = createPottedSapling(ENDERHEART_SAPLING);
+		POTTED_FRUCE_SAPLING = createPottedSapling(FRUCE_SAPLING);
+		POTTED_FUCHSITRA_SAPLING = createPottedSapling(FUCHSITRA_SAPLING);
+		POTTED_FUGMOS = createPottedSapling(FUGMOS);
+		POTTED_FUNERANITE_SAPLING = createPottedSapling(FUNERANITE_SAPLING);
+		POTTED_GHOSHROOM_SAPLING = createPottedSapling(GHOSHROOM_SAPLING);
+		POTTED_GUAIACUM_SAPLING = createPottedSapling(GUAIACUM_SAPLING);
+		POTTED_JOSHUA_SAPLING = createPottedSapling(JOSHUA_SAPLING);
+		POTTED_KLINKII_PINE_SAPLING = createPottedSapling(KLINKII_PINE_SAPLING);
+		POTTED_MELALEUCA_SAPLING = createPottedSapling(MELALEUCA_SAPLING);
+		POTTED_MURKANTUAN_SAPLING = createPottedSapling(MURKANTUAN_SAPLING);
+		POTTED_NORFOLK_PINE_SAPLING = createPottedSapling(NORFOLK_PINE_SAPLING);
+		POTTED_ORHPRIS_SAPLING = createPottedSapling(ORHPRIS_SAPLING);
+		POTTED_PELTOGYNE_SAPLING = createPottedSapling(PELTOGYNE_SAPLING);
+		POTTED_PIN_CHERRY_SAPLING = createPottedSapling(PIN_CHERRY_SAPLING);
+		POTTED_PLUM_SAPLING = createPottedSapling(PLUM_SAPLING);
+		POTTED_PURFUNGA_SAPLING = createPottedSapling(PURFUNGA_SAPLING);
+		POTTED_RARK_SAPLING = createPottedSapling(RARK_SAPLING);
+		POTTED_RED_ELM_SAPLING = createPottedSapling(RED_ELM_SAPLING);
+		POTTED_RHADI_SAPLING = createPottedSapling(RHADI_SAPLING);
+		POTTED_SANGUART_SAPLING = createPottedSapling(SANGUART_SAPLING);
+		POTTED_SEQUOIA_SAPLING = createPottedSapling(SEQUOIA_SAPLING);
+		POTTED_SPROOM_SAPLING = createPottedSapling(SPROOM_SAPLING);
+		POTTED_STORTREEAN_SAPLING = createPottedSapling(STORTREEAN_SAPLING);
+		POTTED_STROOMEAN_SAPLING = createPottedSapling(STROOMEAN_SAPLING);
+		POTTED_SUNRISE_FUNGUS_SAPLING = createPottedSapling(SUNRISE_FUNGUS_SAPLING);
+		POTTED_TARK_SAPLING = createPottedSapling(TARK_SAPLING);
+		POTTED_TEAK_SAPLING = createPottedSapling(TEAK_SAPLING);
+		POTTED_THUNDERCLOUD_PLUM_SAPLING = createPottedSapling(THUNDERCLOUD_PLUM_SAPLING);
+		POTTED_VYNHERT_SAPLING = createPottedSapling(VYNHERT_SAPLING);
+		POTTED_WENGE_SAPLING = createPottedSapling(WENGE_SAPLING);
+		POTTED_YEW_SAPLING = createPottedSapling(YEW_SAPLING);
+
+		POTTED_BLACK_PANSY = createFlowerPot(BLACK_PANSY);
+		POTTED_BLUE_PANSY = createFlowerPot(BLUE_PANSY);
+		POTTED_BLUE_POPPY = createFlowerPot(BLUE_POPPY);
+		POTTED_BLUE_VIOLET = createFlowerPot(BLUE_VIOLET);
+		POTTED_BONNET_SPURGE = createFlowerPot(BONNET_SPURGE);
+		POTTED_BROWN_PANSY = createFlowerPot(BROWN_PANSY);
+		POTTED_CACTLOW = createFlowerPot(CACTLOW);
+		POTTED_CHOCOLATE_COSMOS_FLOWER = createFlowerPot(CHOCOLATE_COSMOS_FLOWER);
+		POTTED_CYAN_BLUE_VIOLET = createFlowerPot(CYAN_BLUE_VIOLET);
+		POTTED_CYCAWLER = createFlowerPot(CYCAWLER);
+		POTTED_DRIGYUS = createFlowerPot(DRIGYUS);
+		POTTED_GARDEN_PINKS = createFlowerPot(GARDEN_PINKS);
+		POTTED_GREEN_PANSY = createFlowerPot(GREEN_PANSY);
+		POTTED_GYLDELION_FLOWER = createFlowerPot(GYLDELION_FLOWER);
+		POTTED_MARSH_VIOLET = createFlowerPot(MARSH_VIOLET);
+		POTTED_NATIVE_VIOLET = createFlowerPot(NATIVE_VIOLET);
+		POTTED_OPIUM_POPPY = createFlowerPot(OPIUM_POPPY);
+		POTTED_POPPY = createFlowerPot(POPPY);
+		POTTED_PINK_AND_ORANGE_PANSY = createFlowerPot(PINK_AND_ORANGE_PANSY);
+		POTTED_PINK_BRAITOR_FLOWER = createFlowerPot(PINK_BRAITOR_FLOWER);
+		POTTED_PINK_MARSH_VIOLET = createFlowerPot(PINK_MARSH_VIOLET);
+		POTTED_PINK_ROSE = createFlowerPot(PINK_ROSE);
+		POTTED_PINK_ROSE_BUSH = createFlowerPot(PINK_ROSE_BUSH);
+		POTTED_PURPLE_AND_ORANGE_PANSY = createFlowerPot(PURPLE_AND_ORANGE_PANSY);
+		POTTED_SPIKE_LAVENDER = createFlowerPot(SPIKE_LAVENDER);
+		POTTED_RED_BRAITOR_FLOWER = createFlowerPot(RED_BRAITOR_FLOWER);
+		POTTED_RED_CHOCOLATE_COSMOS_FLOWER = createFlowerPot(RED_CHOCOLATE_COSMOS_FLOWER);
+		POTTED_RED_PANSY = createFlowerPot(RED_PANSY);
+		POTTED_RED_ROSE = createFlowerPot(RED_ROSE);
+		POTTED_RUBRA_BLUE_VIOLET = createFlowerPot(RUBRA_BLUE_VIOLET);
+		POTTED_SCARLET_THIORCEN = createFlowerPot(SCARLET_THIORCEN);
+		POTTED_SPIDREET = createFlowerPot(SPIDREET);
+		POTTED_SPROOM_SPIKE = createFlowerPot(SPROOM_SPIKE);
+		POTTED_SQUISACLE = createFlowerPot(SQUISACLE);
+		POTTED_SWEET_VIOLET = createFlowerPot(SWEET_VIOLET);
+		POTTED_TOPPED_LAVENDER = createFlowerPot(TOPPED_LAVENDER);
+		POTTED_VASLAME = createFlowerPot(VASLAME);
+		POTTED_WEEPISTIL = createFlowerPot(WEEPISTIL);
+		POTTED_WEEPY_HOLLOWER = createFlowerPot(WEEPY_HOLLOWER);
+		POTTED_YELLOW_VIOLET = createFlowerPot(YELLOW_VIOLET);
+
+		LIGHT_OPALITE = createCopy(QUARTZ_BLOCK);
+		LUSHINE = createCopy(STONE);
+		LUSHINE_PILLAR = createPillar(QUARTZ_PILLAR);
+		LUSTRITE = createCopy(STONE);
+		MARINE_SNOW = createCopy(SOUL_SAND);
+		MOSOIL = createBlock(MosoilBlock::new, GRASS_BLOCK);
+		OPALITE = createCopy(QUARTZ_BLOCK);
+		POININE = createPillar(BASALT);
+		RHODONITE = createCopy(QUARTZ_BLOCK);
+		SPRILIUM = createBlock(SpriliumBlock::new, Settings.copy(STONE).ticksRandomly());
+		SKYSOIL = createCopy(DIRT);
+		SKYSTONE = createCopy(STONE);
+		STORCEAN_MARINE_SNOW = createCopy(SOUL_SAND);
+		STORCENDITE = createCopy(STONE);
+		STORCERACK = createCopy(STONE);
+		VERDINE = createCopy(STONE);
+
+		ABYSSOPELAGIC_WATER = createWaterFluid(ModFluids.ABYSSOPELAGIC_WATER, 0.22F);
+		ACID = createFluid(ModFluids.ACID, Settings.copy(WATER));
+		BATHYPELAGIC_WATER = createWaterFluid(ModFluids.BATHYPELAGIC_WATER, 1.25F);
+		BRINE = createFluid(ModFluids.BRINE, Settings.copy(WATER));
+		CLEAR_WATER = createWaterFluid(ModFluids.CLEAR_WATER, 1.25F);
+		HADOPELAGIC_WATER = createWaterFluid(ModFluids.HADOPELAGIC_WATER, 0.16F);
+		MESOPELAGIC_WATER = createWaterFluid(ModFluids.MESOPELAGIC_WATER, 0.5F);
+		STORCEAN_ABYSSOPELAGIC_WATER = createWaterFluid(ModFluids.STORCEAN_ABYSSOPELAGIC_WATER, 0.12F);
+		STORCEAN_BATHYPELAGIC_WATER = createWaterFluid(ModFluids.STORCEAN_BATHYPELAGIC_WATER, 0.16F);
+		STORCEAN_ENDERPELAGIC_WATER = createWaterFluid(ModFluids.STORCEAN_ENDERPELAGIC_WATER, 1.25F);
+		STORCEAN_GASOPELAGIC_WATER = createWaterFluid(ModFluids.STORCEAN_GASOPELAGIC_WATER, 1.35F);
+		STORCEAN_HADOPELAGIC_WATER = createWaterFluid(ModFluids.STORCEAN_HADOPELAGIC_WATER, 0.1F);
+		STORCEAN_INFINIPELAGIC_WATER = createWaterFluid(ModFluids.STORCEAN_INFINIPELAGIC_WATER, 0.05F);
+		STORCEAN_MESOPELAGIC_WATER = createWaterFluid(ModFluids.STORCEAN_MESOPELAGIC_WATER, 0.2F);
+		STORCEAN_VIRDIPELAGIC_WATER = createWaterFluid(ModFluids.STORCEAN_VIRDIPELAGIC_WATER, 1.25F);
+		STORCEAN_WATER = createWaterFluid(ModFluids.ABYSSOPELAGIC_WATER, 0.5F);
 	}
 
 }
