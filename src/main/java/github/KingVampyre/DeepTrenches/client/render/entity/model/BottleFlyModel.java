@@ -25,7 +25,7 @@ public class BottleFlyModel extends AnimatedGeoModel<BottleFlyEntity> {
 
     @Override
     public Identifier getModelLocation(BottleFlyEntity object) {
-        return new Identifier("deep_trenches:animations/bottle_fly.json");
+        return new Identifier("deep_trenches:animations/bottle_fly.geo.json");
     }
 
     @Override
