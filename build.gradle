@@ -61,6 +61,18 @@ tasks.withType(JavaCompile).configureEach {
 	it.options.release = 16
 }
 
+task datapack(type: Zip) {
+	from 'src/main/resources/data'
+	include '**/*'
+	archiveName "${project.archivesBaseName}-${project.mod_version}.zip"
+	destinationDir(file('/build/libs'))
+}
+
+task apiJar(type: Jar) {
+	from sourceSets.main.output
+	exclude 'data'
+}
+
 java {
 	withSourcesJar()
 }
@@ -69,6 +81,15 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}
 	}
+}
+
+runClient.configure {
+	dependsOn datapack
+}
+
+jar.configure {
+	dependsOn datapack
+	dependsOn apiJar
 }
 
 publishing {
