@@ -6,6 +6,7 @@
   "mixins": [
     "AccessorTridentEntity",
     "InvokerSpreadableBlock",
+    "InvokerTrunkPlacerType",
     "MixinAbstractBlockState",
     "MixinBrewingRecipeRegistry",
     "MixinEnchantmentHelper",

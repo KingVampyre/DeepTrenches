@@ -11,14 +11,14 @@ import java.util.Random;
 
 public class AlmondSaplingGenerator extends LargeTreeSaplingGenerator {
 
-    private static final Identifier BIG_ALMOND = new Identifier("deep_trenches:big_almond");
     private static final Identifier FANCY_ALMOND = new Identifier("deep_trenches:fancy_almond");
+    private static final Identifier GREAT_ALMOND = new Identifier("deep_trenches:great_almond");
     private static final Identifier ALMOND = new Identifier("deep_trenches:almond");
 
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> createLargeTreeFeature(Random random) {
-        return RegistryHelper.getTree(BIG_ALMOND);
+        return RegistryHelper.getTree(GREAT_ALMOND);
     }
 
     @Nullable

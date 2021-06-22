@@ -11,14 +11,14 @@ import java.util.Random;
 
 public class CherrySaplingGenerator extends LargeTreeSaplingGenerator {
 
-    private static final Identifier BIG_CHERRY = new Identifier("deep_trenches:big_cherry");
     private static final Identifier FANCY_CHERRY = new Identifier("deep_trenches:fancy_cherry");
+    private static final Identifier GREAT_CHERRY = new Identifier("deep_trenches:great_cherry");
     private static final Identifier CHERRY = new Identifier("deep_trenches:cherry");
 
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> createLargeTreeFeature(Random random) {
-        return RegistryHelper.getTree(BIG_CHERRY);
+        return RegistryHelper.getTree(GREAT_CHERRY);
     }
 
     @Nullable
