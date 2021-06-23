@@ -2,15 +2,13 @@ package github.KingVampyre.DeepTrenches.core;
 
 import github.KingVampyre.DeepTrenches.common.event.block.BlockReplacementCallback;
 import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
-import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
-import github.KingVampyre.DeepTrenches.core.init.ModEnchantments;
-import github.KingVampyre.DeepTrenches.core.init.SensorTypes;
-import github.KingVampyre.DeepTrenches.core.init.TrunkPlacerTypes;
+import github.KingVampyre.DeepTrenches.core.init.*;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.GeckoLib;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
+import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
 import static net.minecraft.util.registry.Registry.*;
 
 public class  DeepTrenches implements ModInitializer {
@@ -28,6 +26,19 @@ public class  DeepTrenches implements ModInitializer {
 
 		/* ENCHANTMENT */
 		Registry.register(ENCHANTMENT, "deep_trenches:soul_draining", ModEnchantments.SOUL_DRAINING);
+
+		/* CONFIGURED FEATURE */
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond", ConfiguredFeatures.ALMOND);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry", ConfiguredFeatures.CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry", ConfiguredFeatures.PIN_CHERRY);
+
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond", ConfiguredFeatures.FANCY_ALMOND);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry", ConfiguredFeatures.FANCY_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry", ConfiguredFeatures.FANCY_PIN_CHERRY);
+
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond", ConfiguredFeatures.GREAT_ALMOND);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry", ConfiguredFeatures.GREAT_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry", ConfiguredFeatures.GREAT_PIN_CHERRY);
 
 		/* SENSOR TYPE */
 		Registry.register(SENSOR_TYPE, "deep_trenches:cod_tempting", SensorTypes.COD_TEMPTING);
