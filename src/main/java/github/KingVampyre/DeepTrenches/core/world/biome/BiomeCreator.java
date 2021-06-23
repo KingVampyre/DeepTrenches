@@ -1,6 +1,5 @@
 package github.KingVampyre.DeepTrenches.core.world.biome;
 
-import net.minecraft.entity.EntityType;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
@@ -10,15 +9,24 @@ import net.minecraft.world.gen.feature.ConfiguredStructureFeatures;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilders;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModConfiguredFeatures.LAKE_CLEAR_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.ModConfiguredFeatures.*;
 import static net.minecraft.entity.EntityType.*;
 import static net.minecraft.entity.SpawnGroup.*;
 import static net.minecraft.world.gen.GenerationStep.Feature.LAKES;
+import static net.minecraft.world.gen.GenerationStep.Feature.VEGETAL_DECORATION;
+import static net.minecraft.world.gen.feature.ConfiguredFeatures.BROWN_MUSHROOM_NORMAL;
 import static net.minecraft.world.gen.feature.ConfiguredFeatures.LAKE_LAVA;
 
 public class BiomeCreator {
 
     public static Biome createAlmondForest(float depth, float scale) {
+        GenerationSettings.Builder builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+
+        builder.feature(VEGETAL_DECORATION, ALMOND_FOREST_FLOWER);
+        builder.feature(VEGETAL_DECORATION, ALMOND_FOREST_FLOWER_VEGETATION);
+        builder.feature(VEGETAL_DECORATION, ALMOND_FOREST_TREE);
+        builder.feature(VEGETAL_DECORATION, BROWN_MUSHROOM_NORMAL);
+
         SpawnSettings spawnSettings = new SpawnSettings.Builder()
                 .spawn(AMBIENT, new SpawnSettings.SpawnEntry(BAT, 10, 8, 8))
                 .spawn(CREATURE, new SpawnSettings.SpawnEntry(SHEEP, 8, 2, 6))
@@ -39,10 +47,17 @@ public class BiomeCreator {
                 .playerSpawnFriendly()
                 .build();
 
-        return createAlmondForest(depth, scale, spawnSettings);
+        return createAlmondForest(depth, scale, spawnSettings, builder);
     }
 
     public static Biome createAlmondPlusForest(float depth, float scale) {
+        GenerationSettings.Builder builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+
+        builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_FOREST_FLOWER);
+        builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_FOREST_FLOWER_VEGETATION);
+        builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_TREE);
+        builder.feature(VEGETAL_DECORATION, BROWN_MUSHROOM_NORMAL);
+
         SpawnSettings spawnSettings = new SpawnSettings.Builder()
                 .spawn(AMBIENT, new SpawnSettings.SpawnEntry(BAT, 10, 8, 8))
                 .spawn(CREATURE, new SpawnSettings.SpawnEntry(SHEEP, 8, 2, 6))
@@ -63,12 +78,10 @@ public class BiomeCreator {
                 .playerSpawnFriendly()
                 .build();
 
-        return createAlmondForest(depth, scale, spawnSettings);
+        return createAlmondForest(depth, scale, spawnSettings, builder);
     }
 
-    public static Biome createAlmondForest(float depth, float scale, SpawnSettings spawnSettings) {
-        GenerationSettings.Builder builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
-
+    public static Biome createAlmondForest(float depth, float scale, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
         DefaultBiomeFeatures.addDefaultUndergroundStructures(builder);
         DefaultBiomeFeatures.addLandCarvers(builder);
         DefaultBiomeFeatures.addAmethystGeodes(builder);
@@ -79,11 +92,7 @@ public class BiomeCreator {
 
         builder.structureFeature(ConfiguredStructureFeatures.RUINED_PORTAL);
 
-        DefaultBiomeFeatures.addForestTrees(builder);
-        DefaultBiomeFeatures.addForestFlowers(builder);
-        DefaultBiomeFeatures.addDefaultFlowers(builder);
         DefaultBiomeFeatures.addForestGrass(builder);
-        DefaultBiomeFeatures.addDefaultMushrooms(builder);
         DefaultBiomeFeatures.addDefaultVegetation(builder);
         DefaultBiomeFeatures.addSprings(builder);
         DefaultBiomeFeatures.addFrozenTopLayer(builder);

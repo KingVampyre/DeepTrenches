@@ -1,16 +1,19 @@
 package github.KingVampyre.DeepTrenches.core;
 
+import com.google.common.collect.ImmutableList;
 import github.KingVampyre.DeepTrenches.common.event.block.BlockReplacementCallback;
 import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
 import github.KingVampyre.DeepTrenches.core.init.*;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.gen.feature.Feature;
 import software.bernie.geckolib3.GeckoLib;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
 import static net.minecraft.util.registry.BuiltinRegistries.BIOME;
 import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
 import static net.minecraft.util.registry.Registry.*;
+import static net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.*;
 
 public class  DeepTrenches implements ModInitializer {
 
@@ -33,8 +36,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ENCHANTMENT, "deep_trenches:soul_draining", ModEnchantments.SOUL_DRAINING);
 
 		/* CONFIGURED FEATURE */
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:lake_clear_water", ModConfiguredFeatures.LAKE_CLEAR_WATER);
-
 		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond", ModConfiguredFeatures.ALMOND);
 		Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry", ModConfiguredFeatures.CHERRY);
 		Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry", ModConfiguredFeatures.PIN_CHERRY);
@@ -46,6 +47,28 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond", ModConfiguredFeatures.GREAT_ALMOND);
 		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry", ModConfiguredFeatures.GREAT_CHERRY);
 		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry", ModConfiguredFeatures.GREAT_PIN_CHERRY);
+
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower", ModConfiguredFeatures.ALMOND_FOREST_FLOWER);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower_vegetation", ModConfiguredFeatures.ALMOND_FOREST_FLOWER_VEGETATION);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_tree", ModConfiguredFeatures.ALMOND_FOREST_TREE);
+
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_very_rare_beehives", ModConfiguredFeatures.ALMOND_VERY_RARE_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_regular_beehives", ModConfiguredFeatures.ALMOND_REGULAR_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_more_beehives", ModConfiguredFeatures.ALMOND_MORE_BEEHIVES);
+
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_very_rare_beehives", ModConfiguredFeatures.FANCY_ALMOND_VERY_RARE_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_regular_beehives", ModConfiguredFeatures.FANCY_ALMOND_REGULAR_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_more_beehives", ModConfiguredFeatures.FANCY_ALMOND_MORE_BEEHIVES);
+
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_very_rare_beehives", ModConfiguredFeatures.GREAT_ALMOND_VERY_RARE_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_regular_beehives", ModConfiguredFeatures.GREAT_ALMOND_REGULAR_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_more_beehives", ModConfiguredFeatures.GREAT_ALMOND_MORE_BEEHIVES);
+
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower", ModConfiguredFeatures.ALMOND_PLUS_FOREST_FLOWER);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower_vegetation", ModConfiguredFeatures.ALMOND_PLUS_FOREST_FLOWER_VEGETATION);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_tree", ModConfiguredFeatures.ALMOND_PLUS_TREE);
+
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:lake_clear_water", ModConfiguredFeatures.LAKE_CLEAR_WATER);
 
 		/* SENSOR TYPE */
 		Registry.register(SENSOR_TYPE, "deep_trenches:cod_tempting", SensorTypes.COD_TEMPTING);
