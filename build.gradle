@@ -62,15 +62,16 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 task datapack(type: Zip) {
-	from 'src/main/resources/data'
-	include '**/*'
-	archiveName "${project.archivesBaseName}-${project.mod_version}.zip"
+	from ("src/main/resources/assets/${project.archivesBaseName}/icon.png") {
+		rename { "pack.png" }
+	}
+	from ('src/main/resources') {
+		exclude 'assets'
+		exclude "*.json"
+		exclude '*.accesswidener'
+	}
+	archiveName "Deep Trenches-${project.mod_version}.zip"
 	destinationDir(file('/build/libs'))
-}
-
-task apiJar(type: Jar) {
-	from sourceSets.main.output
-	exclude 'data'
 }
 
 java {
@@ -81,15 +82,6 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}
 	}
-}
-
-runClient.configure {
-	dependsOn datapack
-}
-
-jar.configure {
-	dependsOn datapack
-	dependsOn apiJar
 }
 
 publishing {
