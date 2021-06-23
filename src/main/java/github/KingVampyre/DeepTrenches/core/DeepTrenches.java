@@ -8,6 +8,7 @@ import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.GeckoLib;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
+import static net.minecraft.util.registry.BuiltinRegistries.BIOME;
 import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
 import static net.minecraft.util.registry.Registry.*;
 
@@ -20,6 +21,10 @@ public class  DeepTrenches implements ModInitializer {
 		/* EVENTS */
 		BlockReplacementCallback.EVENT.register(AirialMossCallback.INSTANCE);
 
+		/* BIOME */
+		Registry.register(BIOME, "deep_trenches:almond_forest", Biomes.ALMOND_FOREST);
+		Registry.register(BIOME, "deep_trenches:almond_plus_forest", Biomes.ALMOND_PLUS_FOREST);
+
 		/* BLOCK ENTITY */
 		Registry.register(BLOCK_ENTITY_TYPE, "deep_trenches:sign", BlockEntityTypes.SIGN);
 		Registry.register(BLOCK_ENTITY_TYPE, "deep_trenches:stasp_nest", BlockEntityTypes.STASP_NEST);
@@ -28,17 +33,19 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(ENCHANTMENT, "deep_trenches:soul_draining", ModEnchantments.SOUL_DRAINING);
 
 		/* CONFIGURED FEATURE */
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond", ConfiguredFeatures.ALMOND);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry", ConfiguredFeatures.CHERRY);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry", ConfiguredFeatures.PIN_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:lake_clear_water", ModConfiguredFeatures.LAKE_CLEAR_WATER);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond", ConfiguredFeatures.FANCY_ALMOND);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry", ConfiguredFeatures.FANCY_CHERRY);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry", ConfiguredFeatures.FANCY_PIN_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond", ModConfiguredFeatures.ALMOND);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry", ModConfiguredFeatures.CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry", ModConfiguredFeatures.PIN_CHERRY);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond", ConfiguredFeatures.GREAT_ALMOND);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry", ConfiguredFeatures.GREAT_CHERRY);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry", ConfiguredFeatures.GREAT_PIN_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond", ModConfiguredFeatures.FANCY_ALMOND);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry", ModConfiguredFeatures.FANCY_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry", ModConfiguredFeatures.FANCY_PIN_CHERRY);
+
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond", ModConfiguredFeatures.GREAT_ALMOND);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry", ModConfiguredFeatures.GREAT_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry", ModConfiguredFeatures.GREAT_PIN_CHERRY);
 
 		/* SENSOR TYPE */
 		Registry.register(SENSOR_TYPE, "deep_trenches:cod_tempting", SensorTypes.COD_TEMPTING);

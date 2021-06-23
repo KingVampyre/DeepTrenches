@@ -2,9 +2,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.core.world.gen.trunk.GreatTrunkPlacer;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
@@ -13,9 +11,11 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.OptionalInt;
 
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.CLEAR_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.TrunkProviders.*;
+import static net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.BOTTOM_TO_TOP;
 
-public class ConfiguredFeatures {
+public class ModConfiguredFeatures {
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> CHERRY;
@@ -29,7 +29,15 @@ public class ConfiguredFeatures {
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_CHERRY;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PIN_CHERRY;
 
+    public static final ConfiguredFeature<?, ?> LAKE_CLEAR_WATER;
+
     static {
+        LAKE_CLEAR_WATER = (Feature.LAKE
+                .configure(new SingleStateFeatureConfig(CLEAR_WATER.getDefaultState()))
+                .range(BOTTOM_TO_TOP)
+                .spreadHorizontally()
+        ).applyChance(4);
+
         ALMOND = Feature.TREE.configure(new TreeFeatureConfig.Builder(
                 ALMOND_TRUNK_PROVIDER,
                 new StraightTrunkPlacer(4, 3, 0),

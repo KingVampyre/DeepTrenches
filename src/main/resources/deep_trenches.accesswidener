@@ -4,6 +4,7 @@ accessible class net/minecraft/client/gui/hud/InGameHud$HeartType
 accessible class net/minecraft/client/render/RenderLayer$MultiPhase
 accessible class net/minecraft/entity/ai/brain/task/CompositeTask$Order
 accessible class net/minecraft/entity/ai/brain/task/CompositeTask$RunMode
+accessible class net/minecraft/world/gen/feature/ConfiguredFeatures$Decorators
 
 accessible field net/minecraft/block/SaplingBlock generator Lnet/minecraft/block/sapling/SaplingGenerator;
 accessible field net/minecraft/entity/effect/StatusEffectInstance type Lnet/minecraft/entity/effect/StatusEffect;
