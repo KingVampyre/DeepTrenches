@@ -9,8 +9,8 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(TrunkPlacerType.class)
 public interface InvokerTrunkPlacerType {
 
-    @Invoker("register")
-    static <P extends TrunkPlacer> TrunkPlacerType<P> register(String id, Codec<P> codec) {
+    @Invoker("<init>")
+    static <P extends TrunkPlacer> TrunkPlacerType<P> create(Codec<P> codec) {
         throw new AssertionError();
     }
 

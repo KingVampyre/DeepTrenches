@@ -5,6 +5,7 @@ import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
 import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.ModEnchantments;
 import github.KingVampyre.DeepTrenches.core.init.SensorTypes;
+import github.KingVampyre.DeepTrenches.core.init.TrunkPlacerTypes;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.GeckoLib;
@@ -33,6 +34,9 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(SENSOR_TYPE, "deep_trenches:nearest_adult", SensorTypes.NEAREST_ADULT);
 		Registry.register(SENSOR_TYPE, "deep_trenches:skittish_hurt_by", SensorTypes.SKITTISH_HURT_BY);
 		Registry.register(SENSOR_TYPE, "deep_trenches:tamable_hurt_by", SensorTypes.TAMABLE_HURT_BY);
+
+		/* TRUNK PLACER */
+		Registry.register(TRUNK_PLACER_TYPE, "deep_trenches:great_trunk_placer", TrunkPlacerTypes.GREAT_TRUNK_PLACER);
 
 		/* BLOCKS */
 		Registry.register(BLOCK, "deep_trenches:airial_moss", AIRIAL_MOSS);

@@ -9,7 +9,7 @@ public class TrunkPlacerTypes {
     public static final TrunkPlacerType<GreatTrunkPlacer> GREAT_TRUNK_PLACER;
 
     static {
-        GREAT_TRUNK_PLACER = InvokerTrunkPlacerType.register("deep_trenches:great_trunk_placer", GreatTrunkPlacer.CODEC);
+        GREAT_TRUNK_PLACER = InvokerTrunkPlacerType.create(GreatTrunkPlacer.CODEC);
     }
 
 }
