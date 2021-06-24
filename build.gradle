@@ -54,6 +54,9 @@ processResources {
 	filesMatching("fabric.mod.json") {
 		expand "version": project.version
 	}
+
+	exclude("data/deep_trenches/worldgen")
+	exclude('pack.mcmeta')
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -82,6 +85,10 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}
 	}
+}
+
+jar.configure {
+	dependsOn datapack
 }
 
 publishing {
