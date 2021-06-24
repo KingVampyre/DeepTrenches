@@ -20,9 +20,9 @@ public class ClearWaterProvider implements FluidColorProvider {
         if (view != null && pos != null) {
             ClientWorld client = MinecraftClient.getInstance().world;
 
+            // TODO CHECK STORCEAN
             if(client != null)
-                // TODO check storcean
-                return view.getColor(pos, (biome, x, z) -> {
+                return client.calculateColor(pos, (biome, x, z) -> {
                     double temperature = biome.getTemperature();
                     double humidity = biome.getDownfall();
 

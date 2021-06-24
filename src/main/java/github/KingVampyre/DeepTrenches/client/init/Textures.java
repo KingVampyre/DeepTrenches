@@ -57,6 +57,15 @@ public class Textures {
 
     public static final Identifier STORCEAN_FOLIAGE_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_foliage.png");
     public static final Identifier STORCEAN_MOSOIL_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_mosoil.png");
+
+    public static final Identifier CLEAR_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/clear_water.png");
+    public static final Identifier STORCEAN_ABYSSOPELAGIC_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_abyssopelagic_water.png");
+    public static final Identifier STORCEAN_CLEAR_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_clear_water.png");
+    public static final Identifier STORCEAN_ENDERPELAGIC_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_enderpelagic_water.png");
+    public static final Identifier STORCEAN_GASOPELAGIC_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_gasopelagic_water.png");
+    public static final Identifier STORCEAN_HADOPELAGIC_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_hadopelagic_water.png");
+    public static final Identifier STORCEAN_INFINIPELAGIC_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_infinipelagic_water.png");
+    public static final Identifier STORCEAN_VIRDIPELAGIC_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_virdipelagic_water.png");
     public static final Identifier STORCEAN_WATER_COLORMAP = new Identifier("deep_trenches:textures/colormap/storcean_water.png");
 
 }

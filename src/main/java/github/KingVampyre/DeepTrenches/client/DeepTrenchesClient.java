@@ -62,9 +62,17 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(STORCEAN_MARINE_SNOW_SMALL, MarineSnowParticle.Factory::new);
 
         /* ------------------------------------------ COLOR MAPS ----------------------------------------------------- */
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:clear_water_colormap", CLEAR_WATER_COLORMAP, ColorMaps.CLEAR_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_abyssopelagic_water_colormap", STORCEAN_ABYSSOPELAGIC_WATER_COLORMAP, ColorMaps.STORCEAN_ABYSSOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_enderpelagic_water_colormap", STORCEAN_ENDERPELAGIC_WATER_COLORMAP, ColorMaps.STORCEAN_ENDERPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_gasopelagic_water_colormap", STORCEAN_GASOPELAGIC_WATER_COLORMAP, ColorMaps.STORCEAN_GASOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_hadopelagic_water_colormap", STORCEAN_HADOPELAGIC_WATER_COLORMAP, ColorMaps.STORCEAN_HADOPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_infinipelagic_water_colormap", STORCEAN_INFINIPELAGIC_WATER_COLORMAP, ColorMaps.STORCEAN_INFINIPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_verdipelagic_water_colormap", STORCEAN_VIRDIPELAGIC_WATER_COLORMAP, ColorMaps.STORCEAN_VIRDIPELAGIC_WATER));
+        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_water_colormap", STORCEAN_WATER_COLORMAP, ColorMaps.STORCEAN_WATER));
+
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_foliage_colormap", STORCEAN_FOLIAGE_COLORMAP, ColorMaps.STORCEAN_FOLIAGE));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_mosoil_colormap", STORCEAN_MOSOIL_COLORMAP, ColorMaps.STORCEAN_MOSOIL));
-        ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_water_colormap", STORCEAN_WATER_COLORMAP, ColorMaps.STORCEAN_WATER));
 
         /* ------------------------------------------ FLUID SPRITES ----------------------------------------------------- */
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:abyssopelagic_water", Sprites.ABYSSOPELAGIC_WATER));
