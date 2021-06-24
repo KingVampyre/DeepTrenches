@@ -45,6 +45,7 @@ public class BiomeCreator {
                 .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(GLOW_SQUID, 10, 4, 6))
                 .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(AXOLOTL, 10, 4, 6))
                 .playerSpawnFriendly()
+                .creatureSpawnProbability(0.2F)
                 .build();
 
         return createAlmondForest(depth, scale, spawnSettings, builder);
@@ -76,6 +77,7 @@ public class BiomeCreator {
                 .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(GLOW_SQUID, 10, 4, 6))
                 .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(AXOLOTL, 10, 4, 6))
                 .playerSpawnFriendly()
+                .creatureSpawnProbability(0.4F)
                 .build();
 
         return createAlmondForest(depth, scale, spawnSettings, builder);
