@@ -19,7 +19,7 @@ public class BrownBearModel extends AnimatedGeoModel<BrownBearEntity> {
 
     @Override
     public Identifier getModelLocation(BrownBearEntity object) {
-        return new Identifier("deep_trenches:geo/entity/brown_bear.json");
+        return new Identifier("deep_trenches:geo/entity/brown_bear.geo.json");
     }
 
     @Override
