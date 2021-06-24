@@ -66,12 +66,11 @@
       "minecraft:rare_small_dripstone"
     ],
     [
-      "minecraft:forest_flower_vegetation",
-      "minecraft:birch_other",
-      "minecraft:flower_default",
+      "deep_trenches:almond_forest_flower",
+      "deep_trenches:almond_forest_flower_vegetation",
+      "deep_trenches:almond_forest_tree",
       "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin",
       "minecraft:spring_water",
