@@ -9,6 +9,10 @@ accessible class net/minecraft/world/gen/feature/ConfiguredFeatures$Decorators
 accessible field net/minecraft/block/SaplingBlock generator Lnet/minecraft/block/sapling/SaplingGenerator;
 accessible field net/minecraft/entity/effect/StatusEffectInstance type Lnet/minecraft/entity/effect/StatusEffect;
 
+accessible method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer getLogAxis              (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/Direction$Axis;
+accessible method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer getLongestSide          (Lnet/minecraft/util/math/BlockPos;)I
+accessible method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer makeOrCheckBranch       (Lnet/minecraft/world/TestableWorld;Ljava/util/function/BiConsumer;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;ZLnet/minecraft/world/gen/feature/TreeFeatureConfig;)Z
+
 accessible method net/minecraft/block/CoralBlock            <init>      (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/CoralFanBlock         <init>      (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/CoralWallFanBlock     <init>      (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
@@ -36,4 +40,6 @@ accessible method net/minecraft/util/SignType                           <init>  
 
 accessible method net/minecraft/client/gui/hud/InGameHud$HeartType      fromPlayerState     (Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/client/gui/hud/InGameHud$HeartType;
 accessible method net/minecraft/item/EntityBucketItem                   spawnEntity         (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
-extendable method net/minecraft/item/EntityBucketItem                   spawnEntity         (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
+
+extendable method net/minecraft/item/EntityBucketItem                   spawnEntity             (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
+extendable method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer     makeOrCheckBranch       (Lnet/minecraft/world/TestableWorld;Ljava/util/function/BiConsumer;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;ZLnet/minecraft/world/gen/feature/TreeFeatureConfig;)Z
