@@ -30,7 +30,7 @@
       "type": "minecraft:fancy_foliage_placer",
       "radius": {
         "type": "minecraft:constant",
-        "value": 3
+        "value": 2
       },
       "offset": {
         "type": "minecraft:constant",

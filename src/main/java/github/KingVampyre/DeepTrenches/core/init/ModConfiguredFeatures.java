@@ -11,6 +11,7 @@ import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
+import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.OptionalInt;
@@ -65,7 +66,7 @@ public class ModConfiguredFeatures {
                 ALMOND_SAPLING_PROVIDER,
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)
-        ).build());
+        ).ignoreVines().build());
 
         CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
                 CHERRY_TRUNK_PROVIDER,
@@ -74,7 +75,7 @@ public class ModConfiguredFeatures {
                 CHERRY_SAPLING_PROVIDER,
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)
-        ).build());
+        ).ignoreVines().build());
 
         PIN_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
                 PIN_CHERRY_TRUNK_PROVIDER,
@@ -83,34 +84,34 @@ public class ModConfiguredFeatures {
                 PIN_CHERRY_SAPLING_PROVIDER,
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)
-        ).build());
+        ).ignoreVines().build());
 
         FANCY_ALMOND = Feature.TREE.configure(new TreeFeatureConfig.Builder(
                 ALMOND_TRUNK_PROVIDER,
-                new StraightTrunkPlacer(5, 11, 0),
+                new LargeOakTrunkPlacer(5, 11, 0),
                 ALMOND_FOLIAGE_PROVIDER,
                 ALMOND_SAPLING_PROVIDER,
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4),
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).build());
+        ).ignoreVines().build());
 
         FANCY_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
                 CHERRY_TRUNK_PROVIDER,
-                new StraightTrunkPlacer(5, 11, 0),
+                new LargeOakTrunkPlacer(5, 11, 0),
                 CHERRY_FOLIAGE_PROVIDER,
                 CHERRY_SAPLING_PROVIDER,
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).build());
+        ).ignoreVines().build());
 
         FANCY_PIN_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
                 PIN_CHERRY_TRUNK_PROVIDER,
-                new StraightTrunkPlacer(5, 11, 0),
+                new LargeOakTrunkPlacer(5, 11, 0),
                 PIN_CHERRY_FOLIAGE_PROVIDER,
                 PIN_CHERRY_SAPLING_PROVIDER,
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4),
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).build());
+        ).ignoreVines().build());
 
         GREAT_ALMOND = Feature.TREE.configure(new TreeFeatureConfig.Builder(
                 ALMOND_TRUNK_PROVIDER,
@@ -119,7 +120,7 @@ public class ModConfiguredFeatures {
                 ALMOND_SAPLING_PROVIDER,
                 new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).build());
+        ).ignoreVines().build());
 
         GREAT_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
                 CHERRY_TRUNK_PROVIDER,
@@ -128,7 +129,7 @@ public class ModConfiguredFeatures {
                 CHERRY_SAPLING_PROVIDER,
                 new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).build());
+        ).ignoreVines().build());
 
         GREAT_PIN_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
                 PIN_CHERRY_TRUNK_PROVIDER,
@@ -137,7 +138,7 @@ public class ModConfiguredFeatures {
                 PIN_CHERRY_SAPLING_PROVIDER,
                 new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).build());
+        ).ignoreVines().build());
 
         ALMOND_VERY_RARE_BEEHIVES = Feature.TREE.configure(ALMOND.getConfig().setTreeDecorators(ImmutableList.of(VERY_RARE_BEEHIVES_TREES)));
         ALMOND_REGULAR_BEEHIVES = Feature.TREE.configure(ALMOND.getConfig().setTreeDecorators(ImmutableList.of(REGULAR_BEEHIVES_TREES)));
