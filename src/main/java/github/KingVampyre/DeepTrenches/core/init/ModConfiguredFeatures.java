@@ -7,7 +7,6 @@ import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
@@ -16,9 +15,9 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.OptionalInt;
 
+import static github.KingVampyre.DeepTrenches.core.init.BlockStateProviders.*;
 import static github.KingVampyre.DeepTrenches.core.init.FeatureConfigs.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.CLEAR_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.BlockStateProviders.*;
 import static net.minecraft.world.gen.decorator.Decorator.COUNT_EXTRA;
 import static net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.*;
 
