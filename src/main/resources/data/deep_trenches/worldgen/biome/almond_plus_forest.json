@@ -1,8 +1,8 @@
 {
-  "depth": 0.130,
-  "scale": 0.02,
+  "depth": 0.217,
+  "scale": 0.643,
   "precipitation": "rain",
-  "category": "forest",
+  "category": "jungle",
   "temperature": 1.0,
   "downfall": 0.55,
   "player_spawn_friendly": true,
@@ -66,9 +66,9 @@
       "minecraft:rare_small_dripstone"
     ],
     [
-      "deep_trenches:almond_forest_flower",
-      "deep_trenches:almond_forest_flower_vegetation",
-      "deep_trenches:almond_forest_tree",
+      "deep_trenches:almond_plus_forest_flower",
+      "deep_trenches:almond_plus_forest_flower_vegetation",
+      "deep_trenches:almond_plus_forest_tree",
       "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
       "minecraft:patch_sugar_cane",
@@ -98,13 +98,13 @@
     "creature": [
       {
         "type": "minecraft:sheep",
-        "weight": 8,
+        "weight": 6,
         "minCount": 2,
-        "maxCount": 6
+        "maxCount": 4
       },
       {
         "type": "minecraft:pig",
-        "weight": 3,
+        "weight": 4,
         "minCount": 2,
         "maxCount": 2
       },
@@ -124,33 +124,45 @@
         "type": "minecraft:fox",
         "weight": 1,
         "minCount": 2,
-        "maxCount": 3
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:ocelot",
+        "weight": 2,
+        "minCount": 1,
+        "maxCount": 2
       },
       {
         "type": "minecraft:rabbit",
-        "weight": 5,
+        "weight": 2,
         "minCount": 3,
         "maxCount": 6
       },
       {
         "type": "minecraft:wolf",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
-        "maxCount": 1
+        "maxCount": 4
       }
     ],
     "monster": [
       {
+        "type": "minecraft:cave_spider",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
         "type": "minecraft:spider",
-        "weight": 100,
-        "minCount": 4,
-        "maxCount": 4
+        "weight": 6,
+        "minCount": 3,
+        "maxCount": 10
       },
       {
         "type": "minecraft:zombie",
         "weight": 1,
         "minCount": 1,
-        "maxCount": 4
+        "maxCount": 2
       },
       {
         "type": "minecraft:zombie_villager",
@@ -160,13 +172,13 @@
       },
       {
         "type": "minecraft:skeleton",
-        "weight": 3,
+        "weight": 1,
         "minCount": 1,
-        "maxCount": 2
+        "maxCount": 4
       },
       {
         "type": "minecraft:creeper",
-        "weight": 2,
+        "weight": 3,
         "minCount": 1,
         "maxCount": 2
       },
@@ -180,7 +192,7 @@
         "type": "minecraft:enderman",
         "weight": 1,
         "minCount": 1,
-        "maxCount": 3
+        "maxCount": 2
       },
       {
         "type": "minecraft:witch",
@@ -192,15 +204,15 @@
     "underground_water_creature": [
       {
         "type": "minecraft:glow_squid",
-        "weight": 3,
+        "weight": 5,
         "minCount": 4,
         "maxCount": 6
       },
       {
         "type": "minecraft:axolotl",
-        "weight": 2,
+        "weight": 7,
         "minCount": 4,
-        "maxCount": 6
+        "maxCount": 8
       }
     ]
   },
