@@ -1,3 +1,6 @@
 {
-    "parent": "deep_trenches:block/marsh_violet"
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "deep_trenches:block/marsh_violet"
+    }
 }
