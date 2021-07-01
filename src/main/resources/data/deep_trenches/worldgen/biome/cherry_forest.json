@@ -105,7 +105,7 @@
       {
         "type": "minecraft:goat",
         "weight": 2,
-        "minCount": 0,
+        "minCount": 1,
         "maxCount": 1
       },
       {
@@ -161,13 +161,13 @@
       {
         "type": "minecraft:zombie",
         "weight": 1,
-        "minCount": 0,
+        "minCount": 1,
         "maxCount": 2
       },
       {
         "type": "minecraft:zombie_villager",
         "weight": 1,
-        "minCount": 0,
+        "minCount": 1,
         "maxCount": 3
       },
       {
@@ -177,22 +177,10 @@
         "maxCount": 4
       },
       {
-        "type": "minecraft:creeper",
-        "weight": 0,
-        "minCount": 0,
-        "maxCount": 0
-      },
-      {
         "type": "minecraft:cat",
         "weight": 4,
-        "minCount": 0,
+        "minCount": 1,
         "maxCount": 2
-      },
-      {
-        "type": "minecraft:slime",
-        "weight": 0,
-        "minCount": 0,
-        "maxCount": 0
       },
       {
         "type": "minecraft:enderman",
@@ -202,7 +190,7 @@
       },
       {
         "type": "minecraft:witch",
-        "weight": 0,
+        "weight": 1,
         "minCount": 1,
         "maxCount": 2
       }
@@ -217,7 +205,7 @@
       {
         "type": "minecraft:axolotl",
         "weight": 1,
-        "minCount": 0,
+        "minCount": 1,
         "maxCount": 2
       }
     ]
