@@ -1,19 +1,19 @@
 {
-  "depth": 0.217,
-  "scale": 0.443,
+  "depth": 0.701,
+  "scale": 0.516,
   "precipitation": "rain",
-  "category": "jungle",
-  "temperature": 1.0,
-  "downfall": 0.55,
+  "category": "forest",
+  "temperature": 0.9,
+  "downfall": 0.56,
   "player_spawn_friendly": true,
-  "creature_spawn_probability": 0.2,
+  "creature_spawn_probability": 0.6,
   "effects": {
-    "fog_color": 10878919,
-    "foliage_color": 10416724,
-    "grass_color": 5945150,
-    "sky_color": 3919039,
-    "water_color": 5218485,
-    "water_fog_color": 5095852,
+    "fog_color": 10722806,
+    "foliage_color": 4431210,
+    "grass_color": 4244559,
+    "sky_color": 6593507,
+    "water_color": 7775174,
+    "water_fog_color": 1320801,
     "mood_sound": {
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000,
@@ -66,9 +66,9 @@
       "minecraft:rare_small_dripstone"
     ],
     [
-      "deep_trenches:almond_plus_forest_flower",
-      "deep_trenches:almond_plus_forest_flower_vegetation",
-      "deep_trenches:almond_plus_forest_tree",
+      "deep_trenches:plum_forest_flower",
+      "deep_trenches:plum_forest_flower_vegetation",
+      "deep_trenches:plum_forest_tree",
       "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",
       "minecraft:patch_sugar_cane",
@@ -90,29 +90,41 @@
     "ambient": [
       {
         "type": "minecraft:bat",
-        "weight": 5,
-        "minCount": 2,
-        "maxCount": 8
+        "weight": 10,
+        "minCount": 0,
+        "maxCount": 6
       }
     ],
     "creature": [
       {
         "type": "minecraft:sheep",
+        "weight": 12,
+        "minCount": 2,
+        "maxCount": 8
+      },
+      {
+        "type": "minecraft:goat",
+        "weight": 20,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:parrot",
         "weight": 6,
         "minCount": 2,
         "maxCount": 4
       },
       {
         "type": "minecraft:pig",
-        "weight": 4,
+        "weight": 2,
         "minCount": 2,
         "maxCount": 2
       },
       {
         "type": "minecraft:chicken",
-        "weight": 1,
+        "weight": 4,
         "minCount": 1,
-        "maxCount": 1
+        "maxCount": 6
       },
       {
         "type": "minecraft:cow",
@@ -122,97 +134,91 @@
       },
       {
         "type": "minecraft:fox",
-        "weight": 1,
+        "weight": 2,
         "minCount": 2,
         "maxCount": 4
       },
       {
-        "type": "minecraft:ocelot",
-        "weight": 2,
-        "minCount": 1,
-        "maxCount": 2
-      },
-      {
         "type": "minecraft:rabbit",
-        "weight": 2,
+        "weight": 10,
         "minCount": 3,
-        "maxCount": 6
+        "maxCount": 8
       },
       {
         "type": "minecraft:wolf",
-        "weight": 2,
-        "minCount": 1,
+        "weight": 1,
+        "minCount": 2,
         "maxCount": 4
       }
     ],
     "monster": [
       {
-        "type": "minecraft:cave_spider",
-        "weight": 1,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
         "type": "minecraft:spider",
-        "weight": 6,
-        "minCount": 3,
-        "maxCount": 10
+        "weight": 2,
+        "minCount": 4,
+        "maxCount": 4
       },
       {
         "type": "minecraft:zombie",
         "weight": 1,
-        "minCount": 1,
+        "minCount": 0,
         "maxCount": 2
       },
       {
         "type": "minecraft:zombie_villager",
         "weight": 1,
-        "minCount": 1,
-        "maxCount": 1
+        "minCount": 0,
+        "maxCount": 3
       },
       {
         "type": "minecraft:skeleton",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
         "maxCount": 4
       },
       {
         "type": "minecraft:creeper",
-        "weight": 3,
-        "minCount": 1,
+        "weight": 0,
+        "minCount": 0,
+        "maxCount": 0
+      },
+      {
+        "type": "minecraft:cat",
+        "weight": 4,
+        "minCount": 0,
         "maxCount": 2
       },
       {
         "type": "minecraft:slime",
-        "weight": 1,
+        "weight": 0,
         "minCount": 0,
-        "maxCount": 1
+        "maxCount": 0
       },
       {
         "type": "minecraft:enderman",
-        "weight": 1,
+        "weight": 2,
         "minCount": 1,
-        "maxCount": 2
+        "maxCount": 4
       },
       {
         "type": "minecraft:witch",
-        "weight": 1,
+        "weight": 0,
         "minCount": 1,
-        "maxCount": 1
+        "maxCount": 2
       }
     ],
     "underground_water_creature": [
       {
         "type": "minecraft:glow_squid",
-        "weight": 5,
-        "minCount": 4,
+        "weight": 4,
+        "minCount": 2,
         "maxCount": 6
       },
       {
         "type": "minecraft:axolotl",
-        "weight": 7,
-        "minCount": 4,
-        "maxCount": 8
+        "weight": 1,
+        "minCount": 0,
+        "maxCount": 2
       }
     ]
   },
