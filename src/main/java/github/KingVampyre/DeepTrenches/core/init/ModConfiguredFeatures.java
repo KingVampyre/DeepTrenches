@@ -1,15 +1,20 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import github.KingVampyre.DeepTrenches.core.world.gen.trunk.GreatTrunkPlacer;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.math.intprovider.ClampedIntProvider;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
+import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
+import net.minecraft.world.gen.heightprovider.BiasedToBottomHeightProvider;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
@@ -56,6 +61,7 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> ALMOND_PLUS_TREE;
 
     public static final ConfiguredFeature<?, ?> LAKE_CLEAR_WATER;
+    public static final ConfiguredFeature<?, ?> SPRING_CLEAR_WATER;
 
     static {
         ALMOND = Feature.TREE.configure(new TreeFeatureConfig.Builder(
@@ -193,6 +199,12 @@ public class ModConfiguredFeatures {
                 .range(BOTTOM_TO_TOP)
                 .spreadHorizontally()
         ).applyChance(4);
+
+        SPRING_CLEAR_WATER = Feature.SPRING_FEATURE
+                .configure(new SpringFeatureConfig(ModFluids.CLEAR_WATER.getDefaultState(), true, 4, 1, ImmutableSet.of(Blocks.STONE, Blocks.GRANITE, Blocks.DIORITE, Blocks.ANDESITE)))
+                .range(new RangeDecoratorConfig(BiasedToBottomHeightProvider.create(YOffset.getBottom(), YOffset.belowTop(8), 8)))
+                .spreadHorizontally()
+                .repeat(50);
     }
 
 }

@@ -14,8 +14,7 @@ import static net.minecraft.entity.EntityType.*;
 import static net.minecraft.entity.SpawnGroup.*;
 import static net.minecraft.world.gen.GenerationStep.Feature.LAKES;
 import static net.minecraft.world.gen.GenerationStep.Feature.VEGETAL_DECORATION;
-import static net.minecraft.world.gen.feature.ConfiguredFeatures.BROWN_MUSHROOM_NORMAL;
-import static net.minecraft.world.gen.feature.ConfiguredFeatures.LAKE_LAVA;
+import static net.minecraft.world.gen.feature.ConfiguredFeatures.*;
 
 public class BiomeCreator {
 
@@ -122,8 +121,10 @@ public class BiomeCreator {
 
         DefaultBiomeFeatures.addForestGrass(builder);
         DefaultBiomeFeatures.addDefaultVegetation(builder);
-        DefaultBiomeFeatures.addSprings(builder);
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
+
+        builder.feature(VEGETAL_DECORATION, SPRING_CLEAR_WATER);
+        builder.feature(VEGETAL_DECORATION, SPRING_LAVA);
 
         builder.feature(LAKES, LAKE_CLEAR_WATER);
         builder.feature(LAKES, LAKE_LAVA);
