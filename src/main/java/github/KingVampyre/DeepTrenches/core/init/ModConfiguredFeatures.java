@@ -162,8 +162,8 @@ public class ModConfiguredFeatures {
                 .repeat(5);
 
         ALMOND_FOREST_TREE = Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(
-                FANCY_ALMOND_VERY_RARE_BEEHIVES.withChance(0.35F),
-                GREAT_ALMOND_VERY_RARE_BEEHIVES.withChance(0.3F)
+                FANCY_ALMOND_REGULAR_BEEHIVES.withChance(0.35F),
+                GREAT_ALMOND_REGULAR_BEEHIVES.withChance(0.3F)
         ), ALMOND_VERY_RARE_BEEHIVES))
                 .decorate(SQUARE_HEIGHTMAP_OCEAN_FLOOR_NO_WATER)
                 .decorate(COUNT_EXTRA.configure(new CountExtraDecoratorConfig(10, 0.1F, 1)));
@@ -179,11 +179,11 @@ public class ModConfiguredFeatures {
                 .repeat(5);
 
         ALMOND_PLUS_TREE = Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(
-                FANCY_ALMOND_VERY_RARE_BEEHIVES.withChance(0.175F),
-                GREAT_ALMOND_VERY_RARE_BEEHIVES.withChance(0.15F),
-                ConfiguredFeatures.BIRCH_BEES_0002.withChance(0.1F),
-                ConfiguredFeatures.FANCY_OAK_BEES_0002.withChance(0.32F),
-                ConfiguredFeatures.OAK_BEES_0002.withChance(0.08F)
+                FANCY_ALMOND_REGULAR_BEEHIVES.withChance(0.175F),
+                GREAT_ALMOND_REGULAR_BEEHIVES.withChance(0.15F),
+                ConfiguredFeatures.BIRCH_BEES_002.withChance(0.1F),
+                ConfiguredFeatures.FANCY_OAK_BEES_002.withChance(0.32F),
+                ConfiguredFeatures.OAK_BEES_002.withChance(0.08F)
         ), ALMOND_VERY_RARE_BEEHIVES))
                 .decorate(SQUARE_HEIGHTMAP_OCEAN_FLOOR_NO_WATER)
                 .decorate(COUNT_EXTRA.configure(new CountExtraDecoratorConfig(10, 0.1F, 1)));

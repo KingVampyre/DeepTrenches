@@ -10,7 +10,7 @@ public class Biomes {
 
     static {
         ALMOND_FOREST = BiomeCreator.createAlmondForest(0.13F, 0.02F);
-        ALMOND_PLUS_FOREST = BiomeCreator.createAlmondPlusForest(1.17F, 2.643F);
+        ALMOND_PLUS_FOREST = BiomeCreator.createAlmondPlusForest(0.217F, 0.443F);
     }
 
 }

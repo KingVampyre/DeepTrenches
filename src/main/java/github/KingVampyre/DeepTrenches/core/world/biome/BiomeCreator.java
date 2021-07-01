@@ -27,28 +27,40 @@ public class BiomeCreator {
         builder.feature(VEGETAL_DECORATION, ALMOND_FOREST_TREE);
         builder.feature(VEGETAL_DECORATION, BROWN_MUSHROOM_NORMAL);
 
+        BiomeEffects biomeEffects = new BiomeEffects.Builder()
+                .waterColor(5218485)
+                .waterFogColor(5095852)
+                .fogColor(10878919)
+                .foliageColor(10416724)
+                .skyColor(3919039)
+                .grassColor(5945150)
+                .moodSound(BiomeMoodSound.CAVE)
+                .build();
+
         SpawnSettings spawnSettings = new SpawnSettings.Builder()
-                .spawn(AMBIENT, new SpawnSettings.SpawnEntry(BAT, 10, 8, 8))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(SHEEP, 8, 2, 6))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(PIG, 3, 2, 2))
+                .spawn(AMBIENT, new SpawnSettings.SpawnEntry(BAT, 5, 2, 8))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(SHEEP, 10, 2, 6))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(PIG, 4, 2, 2))
                 .spawn(CREATURE, new SpawnSettings.SpawnEntry(CHICKEN, 1, 1, 1))
                 .spawn(CREATURE, new SpawnSettings.SpawnEntry(COW, 6, 2, 4))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(WOLF, 2, 1, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SPIDER, 100, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE, 95, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE_VILLAGER, 5, 1, 1))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SKELETON, 100, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(CREEPER, 100, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SLIME, 100, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ENDERMAN, 10, 1, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(WITCH, 5, 1, 1))
-                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(GLOW_SQUID, 10, 4, 6))
-                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(AXOLOTL, 10, 4, 6))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(FOX, 1, 2, 3))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(RABBIT, 6, 3, 6))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(WOLF, 1, 1, 2))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SPIDER, 10, 2, 3))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE, 10, 1, 4))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE_VILLAGER, 1, 1, 1))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SKELETON, 10, 1, 2))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(CREEPER, 10, 1, 2))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SLIME, 10, 1, 2))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ENDERMAN, 3, 1, 3))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(WITCH, 2, 1, 1))
+                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(GLOW_SQUID, 3, 4, 6))
+                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(AXOLOTL, 2, 4, 6))
                 .playerSpawnFriendly()
                 .creatureSpawnProbability(0.2F)
                 .build();
 
-        return createAlmondForest(depth, scale, spawnSettings, builder);
+        return createAlmondForest(depth, scale, Biome.Category.FOREST, spawnSettings, biomeEffects, builder);
     }
 
     public static Biome createAlmondPlusForest(float depth, float scale) {
@@ -59,31 +71,45 @@ public class BiomeCreator {
         builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_TREE);
         builder.feature(VEGETAL_DECORATION, BROWN_MUSHROOM_NORMAL);
 
-        SpawnSettings spawnSettings = new SpawnSettings.Builder()
-                .spawn(AMBIENT, new SpawnSettings.SpawnEntry(BAT, 10, 8, 8))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(SHEEP, 8, 2, 6))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(PIG, 3, 2, 2))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(CHICKEN, 1, 1, 1))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(COW, 6, 2, 4))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(WOLF, 2, 1, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SPIDER, 100, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE, 95, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE_VILLAGER, 5, 1, 1))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SKELETON, 100, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(CREEPER, 100, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SLIME, 100, 4, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ENDERMAN, 10, 1, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(WITCH, 5, 1, 1))
-                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(GLOW_SQUID, 10, 4, 6))
-                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(AXOLOTL, 10, 4, 6))
-                .playerSpawnFriendly()
-                .creatureSpawnProbability(0.4F)
+        BiomeEffects biomeEffects = new BiomeEffects.Builder()
+                .waterColor(5218485)
+                .waterFogColor(5095852)
+                .fogColor(10878919)
+                .foliageColor(10416724)
+                .skyColor(3919039)
+                .grassColor(5945150)
+                .moodSound(BiomeMoodSound.CAVE)
                 .build();
 
-        return createAlmondForest(depth, scale, spawnSettings, builder);
+        SpawnSettings spawnSettings = new SpawnSettings.Builder()
+                .spawn(AMBIENT, new SpawnSettings.SpawnEntry(BAT, 5, 2, 8))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(SHEEP, 6, 2, 6))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(PIG, 4, 2, 2))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(CHICKEN, 1, 1, 1))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(COW, 6, 2, 4))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(FOX, 1, 2, 4))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(OCELOT, 2, 1, 2))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(RABBIT, 2, 3, 6))
+                .spawn(CREATURE, new SpawnSettings.SpawnEntry(WOLF, 2, 1, 4))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(CAVE_SPIDER, 8, 1, 2))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SPIDER, 12, 3, 5))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE, 8, 1, 2))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE_VILLAGER, 3, 1, 1))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SKELETON, 8, 1, 4))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(CREEPER, 8, 1, 2))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SLIME, 4, 1, 1))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ENDERMAN, 4, 1, 2))
+                .spawn(MONSTER, new SpawnSettings.SpawnEntry(WITCH, 3, 1, 1))
+                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(GLOW_SQUID, 5, 4, 6))
+                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(AXOLOTL, 7, 4, 6))
+                .playerSpawnFriendly()
+                .creatureSpawnProbability(0.2F)
+                .build();
+
+        return createAlmondForest(depth, scale, Biome.Category.JUNGLE, spawnSettings, biomeEffects, builder);
     }
 
-    public static Biome createAlmondForest(float depth, float scale, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
+    public static Biome createAlmondForest(float depth, float scale, Biome.Category category, SpawnSettings spawnSettings, BiomeEffects biomeEffects, GenerationSettings.Builder builder) {
         DefaultBiomeFeatures.addDefaultUndergroundStructures(builder);
         DefaultBiomeFeatures.addLandCarvers(builder);
         DefaultBiomeFeatures.addAmethystGeodes(builder);
@@ -104,21 +130,15 @@ public class BiomeCreator {
 
         return new Biome.Builder()
                 .precipitation(Biome.Precipitation.RAIN)
-                .category(Biome.Category.FOREST)
+                .category(category)
                 .depth(depth)
                 .scale(scale)
                 .temperature(1.0F)
                 .downfall(0.55F)
-                .effects(new BiomeEffects.Builder()
-                        .waterColor(5218485)
-                        .waterFogColor(5095852)
-                        .fogColor(8191929)
-                        .foliageColor(7261768)
-                        .skyColor(3919039)
-                        .grassColor(5945150)
-                        .moodSound(BiomeMoodSound.CAVE)
-                        .build()
-                ).spawnSettings(spawnSettings).generationSettings(builder.build()).build();
+                .effects(biomeEffects)
+                .spawnSettings(spawnSettings)
+                .generationSettings(builder.build())
+                .build();
     }
 
 }
