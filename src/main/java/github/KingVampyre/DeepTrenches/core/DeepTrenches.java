@@ -1,19 +1,21 @@
 package github.KingVampyre.DeepTrenches.core;
 
-import com.google.common.collect.ImmutableList;
+import github.KingVampyre.DeepTrenches.client.init.GeneratorTypes;
 import github.KingVampyre.DeepTrenches.common.event.block.BlockReplacementCallback;
 import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
 import github.KingVampyre.DeepTrenches.core.init.*;
+import github.KingVampyre.DeepTrenches.core.mixin.AccessorGeneratorType;
+import github.KingVampyre.DeepTrenches.core.world.gen.chunk.TheDreamChunkGenerator;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
+import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
+import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.gen.feature.Feature;
 import software.bernie.geckolib3.GeckoLib;
 
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
-import static net.minecraft.util.registry.BuiltinRegistries.BIOME;
-import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
+import static net.minecraft.util.registry.BuiltinRegistries.*;
 import static net.minecraft.util.registry.Registry.*;
-import static net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.*;
 
 public class  DeepTrenches implements ModInitializer {
 
@@ -21,16 +23,29 @@ public class  DeepTrenches implements ModInitializer {
     public void onInitialize() {
 		GeckoLib.initialize();
 
-		/* EVENTS */
+		/* GENERATOR TYPE */
+		AccessorGeneratorType.getValues().add(GeneratorTypes.THE_DREAM);
+
+		/* EVENT */
 		BlockReplacementCallback.EVENT.register(AirialMossCallback.INSTANCE);
 
 		/* BIOME */
 		Registry.register(BIOME, "deep_trenches:almond_forest", Biomes.ALMOND_FOREST);
 		Registry.register(BIOME, "deep_trenches:almond_plus_forest", Biomes.ALMOND_PLUS_FOREST);
 
+		/* OVERWORLD BIOME */
+		OverworldBiomes.addContinentalBiome(Biomes.ALMOND_FOREST_KEY, OverworldClimate.TEMPERATE, 1);
+		OverworldBiomes.addContinentalBiome(Biomes.ALMOND_PLUS_FOREST_KEY, OverworldClimate.TEMPERATE, 1);
+
 		/* BLOCK ENTITY */
 		Registry.register(BLOCK_ENTITY_TYPE, "deep_trenches:sign", BlockEntityTypes.SIGN);
 		Registry.register(BLOCK_ENTITY_TYPE, "deep_trenches:stasp_nest", BlockEntityTypes.STASP_NEST);
+
+		/* CHUNK GENERATOR */
+		Registry.register(CHUNK_GENERATOR, "deep_trenches:the_dream", TheDreamChunkGenerator.CODEC);
+
+		/* CHUNK GENERATOR SETTINGS */
+		Registry.register(CHUNK_GENERATOR_SETTINGS, "deep_trenches:the_dream", ChunkGeneratorSettingsKeys.THE_DREAM);
 
 		/* ENCHANTMENT */
 		Registry.register(ENCHANTMENT, "deep_trenches:soul_draining", ModEnchantments.SOUL_DRAINING);

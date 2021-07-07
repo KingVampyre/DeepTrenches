@@ -4,6 +4,7 @@
   "package": "github.KingVampyre.DeepTrenches.core.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "AccessorGeneratorType",
     "AccessorTridentEntity",
     "InvokerSpreadableBlock",
     "InvokerTrunkPlacerType",
