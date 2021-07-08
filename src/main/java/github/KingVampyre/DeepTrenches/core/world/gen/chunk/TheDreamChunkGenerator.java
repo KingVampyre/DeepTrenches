@@ -5,10 +5,12 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import github.KingVampyre.DeepTrenches.core.world.gen.TheDreamBlockSource;
 import it.unimi.dsi.fastutil.longs.Long2ReferenceOpenHashMap;
 import net.minecraft.block.BlockState;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.dynamic.RegistryLookupCodec;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.ChunkRegion;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.source.BiomeSource;
@@ -20,13 +22,12 @@ import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.ChunkGeneratorSettings;
 import net.minecraft.world.gen.chunk.NoiseChunkGenerator;
 
+import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.DoubleFunction;
 import java.util.function.Supplier;
 
-import static github.KingVampyre.DeepTrenches.core.init.Biomes.*;
-import static net.minecraft.block.Blocks.COBBLESTONE;
-import static net.minecraft.block.Blocks.DIORITE;
+import static net.minecraft.util.registry.Registry.BIOME_KEY;
 import static net.minecraft.world.Heightmap.Type.WORLD_SURFACE_WG;
 import static net.minecraft.world.biome.source.VoronoiBiomeAccessType.INSTANCE;
 import static net.minecraft.world.gen.chunk.ChunkGeneratorSettings.REGISTRY_CODEC;
@@ -35,7 +36,12 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
 
     public static final Codec<TheDreamChunkGenerator> CODEC = RecordCodecBuilder.create(
             instance -> instance.group(
-                    RegistryLookupCodec.of(Registry.BIOME_KEY).forGetter(generator -> generator.biomeRegistry),
+                    RegistryLookupCodec.of(BIOME_KEY).forGetter(generator -> generator.biomeRegistry),
+                    Codec.unboundedMap(
+                            Identifier.CODEC.xmap(RegistryKey.createKeyFactory(BIOME_KEY), RegistryKey::getValue),
+                            BlockState.CODEC)
+                            .fieldOf("terrain_source")
+                            .forGetter(generator -> generator.terrainSources),
                     BiomeSource.CODEC.fieldOf("biome_source").forGetter(generator -> generator.populationSource),
                     Codec.LONG.fieldOf("seed").stable().forGetter(generator -> generator.seed),
                     REGISTRY_CODEC.fieldOf("settings").forGetter(generator -> generator.settings)
@@ -43,11 +49,13 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
 
     protected final Long2ReferenceOpenHashMap<Biome> cachedBiomes = new Long2ReferenceOpenHashMap<>();
     protected final Registry<Biome> biomeRegistry;
+    protected final Map<RegistryKey<Biome>, BlockState> terrainSources;
 
-    public TheDreamChunkGenerator(Registry<Biome> biomeRegistry, BiomeSource biomeSource, long seed, Supplier<ChunkGeneratorSettings> settings) {
+    public TheDreamChunkGenerator(Registry<Biome> biomeRegistry, Map<RegistryKey<Biome>, BlockState> terrainSources, BiomeSource biomeSource, long seed, Supplier<ChunkGeneratorSettings> settings) {
         super(biomeSource, seed, settings);
 
         this.biomeRegistry = biomeRegistry;
+        this.terrainSources = terrainSources;
     }
 
     public BlockSource getBlockSource(Biome biome) {
@@ -75,15 +83,7 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
     }
 
     public BlockState getTerrainBlockState(Biome biome) {
-        return this.biomeRegistry.getKey(biome).map(key -> {
-
-            if(key == ALMOND_FOREST_KEY || key == ALMOND_PLUS_FOREST_KEY)
-                return DIORITE.getDefaultState();
-            else if(key == BLACK_BIRCH_FOREST_KEY)
-                return COBBLESTONE.getDefaultState();
-
-            return null;
-        }).orElse(this.defaultBlock);
+        return this.biomeRegistry.getKey(biome).map(this.terrainSources::get).orElse(this.defaultBlock);
     }
 
     @Override
@@ -150,7 +150,7 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
 
     @Override
     public ChunkGenerator withSeed(long seed) {
-        return new TheDreamChunkGenerator(this.biomeRegistry, this.populationSource.withSeed(seed), seed, this.settings);
+        return new TheDreamChunkGenerator(this.biomeRegistry, this.terrainSources, this.populationSource.withSeed(seed), seed, this.settings);
     }
 
     @Override
