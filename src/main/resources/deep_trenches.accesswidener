@@ -6,24 +6,30 @@ accessible class net/minecraft/entity/ai/brain/task/CompositeTask$Order
 accessible class net/minecraft/entity/ai/brain/task/CompositeTask$RunMode
 accessible class net/minecraft/world/gen/chunk/AquiferSampler$Impl$FluidLevel
 accessible class net/minecraft/world/gen/feature/ConfiguredFeatures$Decorators
+accessible class net/minecraft/world/gen/chunk/NoiseChunkGenerator$OreVeinSource
 
 accessible field net/minecraft/block/SaplingBlock generator Lnet/minecraft/block/sapling/SaplingGenerator;
 accessible field net/minecraft/entity/effect/StatusEffectInstance type Lnet/minecraft/entity/effect/StatusEffect;
 
-accessible field net/minecraft/world/gen/chunk/ChunkGenerator       populationSource        Lnet/minecraft/world/biome/source/BiomeSource;
-accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator deepslateSource          Lnet/minecraft/world/gen/BlockSource;
-accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator edgeDensityNoise         Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;
-accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator fluidLevelNoise          Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;
-accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator fluidTypeNoise           Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;
-accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator noiseColumnSampler       Lnet/minecraft/world/gen/NoiseColumnSampler;
-accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator seed                     J
-accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator settings                 Ljava/util/function/Supplier;
-accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator surfaceDepthNoise        Lnet/minecraft/util/math/noise/NoiseSampler;
-accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator verticalNoiseResolution  I
+accessible field net/minecraft/world/gen/chunk/ChunkGenerator      populationSource             Lnet/minecraft/world/biome/source/BiomeSource;
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator deepslateSource              Lnet/minecraft/world/gen/BlockSource;
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator edgeDensityNoise             Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator fluidLevelNoise              Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator fluidTypeNoise               Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator noiseColumnSampler           Lnet/minecraft/world/gen/NoiseColumnSampler;
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator seed                         J
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator settings                     Ljava/util/function/Supplier;
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator surfaceDepthNoise            Lnet/minecraft/util/math/noise/NoiseSampler;
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator horizontalNoiseResolution    I
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator noiseSizeX                   I
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator noiseSizeY                   I
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator noiseSizeZ                   I
+accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator verticalNoiseResolution      I
 
 accessible field net/minecraft/world/gen/chunk/AquiferSampler$Impl fluidLevelNoise          Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;
 accessible field net/minecraft/world/gen/chunk/AquiferSampler$Impl fluidTypeNoise           Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;
 accessible field net/minecraft/world/gen/chunk/AquiferSampler$Impl settings                 Lnet/minecraft/world/gen/chunk/ChunkGeneratorSettings;
+accessible field net/minecraft/world/gen/StructureAccessor         world                    Lnet/minecraft/world/WorldAccess;
 
 accessible method net/minecraft/block/CoralBlock            <init>      (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/CoralFanBlock         <init>      (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
@@ -52,13 +58,22 @@ accessible method net/minecraft/entity/effect/StatusEffect              <init>  
 accessible method net/minecraft/util/SignType                           <init>      (Ljava/lang/String;)V
 accessible method net/minecraft/world/gen/chunk/AquiferSampler$Impl     <init>      (Lnet/minecraft/util/math/ChunkPos;Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;Lnet/minecraft/world/gen/chunk/ChunkGeneratorSettings;Lnet/minecraft/world/gen/NoiseColumnSampler;II)V
 accessible method net/minecraft/world/gen/chunk/ChunkGeneratorSettings  <init>      (Lnet/minecraft/world/gen/chunk/StructuresConfig;Lnet/minecraft/world/gen/chunk/GenerationShapeConfig;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/BlockState;IIIIZZZZZZ)V
+accessible method net/minecraft/world/gen/StructureWeightSampler        <init>      (Lnet/minecraft/world/gen/StructureAccessor;Lnet/minecraft/world/chunk/Chunk;)V
 
-accessible method net/minecraft/client/gui/hud/InGameHud$HeartType      fromPlayerState         (Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/client/gui/hud/InGameHud$HeartType;
-accessible method net/minecraft/item/EntityBucketItem                   spawnEntity             (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
-accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createBlockSampler      (IILnet/minecraft/util/math/ChunkPos;)Lnet/minecraft/world/gen/chunk/AquiferSampler;
-accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     buildBedrock            (Lnet/minecraft/world/chunk/Chunk;Ljava/util/Random;)V
-accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     hasAquifers             ()Z
+accessible method net/minecraft/client/gui/hud/InGameHud$HeartType      fromPlayerState             (Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/client/gui/hud/InGameHud$HeartType;
+accessible method net/minecraft/item/EntityBucketItem                   spawnEntity                 (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
+accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createBlockSampler          (IILnet/minecraft/util/math/ChunkPos;)Lnet/minecraft/world/gen/chunk/AquiferSampler;
+accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     buildBedrock                (Lnet/minecraft/world/chunk/Chunk;Ljava/util/Random;)V
+accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     sampleHeightmap             (II[Lnet/minecraft/block/BlockState;Ljava/util/function/Predicate;II)Ljava/util/OptionalInt;
+accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     hasAquifers                 ()Z
+accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     populateNoise               (Lnet/minecraft/world/gen/StructureAccessor;Lnet/minecraft/world/chunk/Chunk;II)Lnet/minecraft/world/chunk/Chunk;
+accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     sampleNoiseColumn           (IIII)[D
+accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     sampleNoiseColumn           ([DIIII)V
+accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createBlockSourceFactory    (ILnet/minecraft/util/math/ChunkPos;Ljava/util/function/Consumer;)Ljava/util/function/DoubleFunction;
+accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createWeightSamplerFactory  (ILnet/minecraft/util/math/ChunkPos;Ljava/util/function/Consumer;)Ljava/util/function/DoubleFunction;
+
 accessible method net/minecraft/world/gen/chunk/ChunkGeneratorSettings  hasDeepslate            ()Z
+accessible method net/minecraft/world/gen/chunk/ChunkGeneratorSettings  hasOreVeins             ()Z
 accessible method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer     getLogAxis              (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/Direction$Axis;
 accessible method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer     getLongestSide          (Lnet/minecraft/util/math/BlockPos;)I
 accessible method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer     makeOrCheckBranch       (Lnet/minecraft/world/TestableWorld;Ljava/util/function/BiConsumer;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;ZLnet/minecraft/world/gen/feature/TreeFeatureConfig;)Z
@@ -67,9 +82,12 @@ accessible method net/minecraft/world/gen/chunk/AquiferSampler$Impl     getFluid
 
 extendable class net/minecraft/world/gen/chunk/NoiseChunkGenerator
 
-extendable method net/minecraft/item/EntityBucketItem                   spawnEntity         (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
-extendable method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer     makeOrCheckBranch   (Lnet/minecraft/world/TestableWorld;Ljava/util/function/BiConsumer;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;ZLnet/minecraft/world/gen/feature/TreeFeatureConfig;)Z
-extendable method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createBlockSampler  (IILnet/minecraft/util/math/ChunkPos;)Lnet/minecraft/world/gen/chunk/AquiferSampler;
-extendable method net/minecraft/world/gen/chunk/AquiferSampler$Impl     getFluidLevel       (III)Lnet/minecraft/world/gen/chunk/AquiferSampler$Impl$FluidLevel;
+extendable method net/minecraft/item/EntityBucketItem                   spawnEntity                 (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
+extendable method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer     makeOrCheckBranch           (Lnet/minecraft/world/TestableWorld;Ljava/util/function/BiConsumer;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;ZLnet/minecraft/world/gen/feature/TreeFeatureConfig;)Z
+extendable method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createBlockSampler          (IILnet/minecraft/util/math/ChunkPos;)Lnet/minecraft/world/gen/chunk/AquiferSampler;
+extendable method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createBlockSourceFactory    (ILnet/minecraft/util/math/ChunkPos;Ljava/util/function/Consumer;)Ljava/util/function/DoubleFunction;
+extendable method net/minecraft/world/gen/chunk/NoiseChunkGenerator     populateNoise               (Lnet/minecraft/world/gen/StructureAccessor;Lnet/minecraft/world/chunk/Chunk;II)Lnet/minecraft/world/chunk/Chunk;
+extendable method net/minecraft/world/gen/chunk/NoiseChunkGenerator     sampleHeightmap             (II[Lnet/minecraft/block/BlockState;Ljava/util/function/Predicate;II)Ljava/util/OptionalInt;
+extendable method net/minecraft/world/gen/chunk/AquiferSampler$Impl     getFluidLevel               (III)Lnet/minecraft/world/gen/chunk/AquiferSampler$Impl$FluidLevel;
 
 mutable field net/minecraft/world/gen/chunk/NoiseChunkGenerator deepslateSource Lnet/minecraft/world/gen/BlockSource;

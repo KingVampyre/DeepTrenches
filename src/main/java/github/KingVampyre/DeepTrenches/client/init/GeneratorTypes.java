@@ -17,7 +17,7 @@ public class GeneratorTypes {
         protected ChunkGenerator getChunkGenerator(Registry<Biome> biomeRegistry, Registry<ChunkGeneratorSettings> registry, long seed) {
             var biomeSource = new VanillaLayeredBiomeSource(seed, false, false, biomeRegistry);
 
-            return new TheDreamChunkGenerator(biomeSource, seed, () -> registry.getOrThrow(ChunkGeneratorSettingsKeys.THE_DREAM_KEY));
+            return new TheDreamChunkGenerator(biomeRegistry, biomeSource, seed, () -> registry.getOrThrow(ChunkGeneratorSettingsKeys.THE_DREAM_KEY));
         }
 
     };
