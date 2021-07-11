@@ -36,7 +36,7 @@ public class TheDreamBlockSource implements BlockSource {
         else if (y > 0)
             return defaultBlock;
 
-        this.random.setGrimstoneSeed(this.seed, x, y, z);
+        this.random.setDeepslateSeed(this.seed, x, y, z);
 
         return (double) this.random.nextFloat() < MathHelper.lerpFromProgress(y, -8, 0, 1, 0) ? deepslateState : defaultBlock;
     }
