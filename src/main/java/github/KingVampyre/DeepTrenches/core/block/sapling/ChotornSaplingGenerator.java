@@ -11,7 +11,7 @@ public class ChotornSaplingGenerator extends SaplingGenerator {
 
     @Nullable
     @Override
-    public ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
+    protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean bees) {
         return null;
     }
 

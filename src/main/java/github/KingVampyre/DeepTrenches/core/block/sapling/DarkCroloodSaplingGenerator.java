@@ -15,13 +15,13 @@ public class DarkCroloodSaplingGenerator extends LargeTreeSaplingGenerator {
 
     @Nullable
     @Override
-    protected ConfiguredFeature<TreeFeatureConfig, ?> createLargeTreeFeature(Random random) {
+    protected ConfiguredFeature<TreeFeatureConfig, ?> getLargeTreeFeature(Random random) {
         return RegistryHelper.getTree(DARK_CROLOOD);
     }
 
     @Nullable
     @Override
-    public ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
+    public ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean bees) {
         return null;
     }
 

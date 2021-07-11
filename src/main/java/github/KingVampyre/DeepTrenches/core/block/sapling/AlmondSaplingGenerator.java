@@ -17,13 +17,13 @@ public class AlmondSaplingGenerator extends LargeTreeSaplingGenerator {
 
     @Nullable
     @Override
-    protected ConfiguredFeature<TreeFeatureConfig, ?> createLargeTreeFeature(Random random) {
+    protected ConfiguredFeature<TreeFeatureConfig, ?> getLargeTreeFeature(Random random) {
         return RegistryHelper.getTree(GREAT_ALMOND);
     }
 
     @Nullable
     @Override
-    protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
+    protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean bees) {
         return RegistryHelper.getTree(random.nextInt(5) == 0 ? FANCY_ALMOND : ALMOND);
     }
 

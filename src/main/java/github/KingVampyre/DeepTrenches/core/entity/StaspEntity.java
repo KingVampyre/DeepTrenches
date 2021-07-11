@@ -7,7 +7,6 @@ import github.KingVampyre.DeepTrenches.core.entity.ai.pathing.StaspNavigation;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
 import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.nbt.NbtCompound;
@@ -21,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class StaspEntity extends FlyingHangBugEntity {
 
-	private static final UniformIntProvider ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
+	private static final UniformIntProvider ANGER_TIME_RANGE = UniformIntProvider.create(10, 15);
 
 	private BlockPos nestPos;
 

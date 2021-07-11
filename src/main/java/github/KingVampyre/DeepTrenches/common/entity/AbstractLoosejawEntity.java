@@ -10,7 +10,6 @@ import github.KingVampyre.DeepTrenches.common.entity.ai.task.TamableFishFollowOw
 import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
 import github.KingVampyre.DeepTrenches.core.entity.ai.task.LightableUpdateAttackTargetTask;
 import net.minecraft.entity.*;
-import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.brain.Activity;
 import net.minecraft.entity.ai.brain.Brain;
 import net.minecraft.entity.ai.brain.MemoryModuleType;
@@ -26,6 +25,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
@@ -69,7 +69,7 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
     public void copyDataToStack(ItemStack stack) {
         super.copyDataToStack(stack);
 
-        stack.getOrCreateTag().putInt("Variant", this.getVariant());
+        stack.getOrCreateNbt().putInt("Variant", this.getVariant());
     }
 
     @Override
@@ -106,7 +106,7 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
                 Pair.of(2, new LoveTask<>(3.0F, 0.9F)),
                 Pair.of(3, new TemptTask(entity -> entity.isInsideWaterOrBubbleColumn() ? 0.5F : 0.15F)),
                 Pair.of(4, new TamableFishFollowOwnerTask<>(0.9F, 16.0F, 6.0F)),
-                Pair.of(4, new TimeLimitedTask<>(new FollowMobTask(8.0F), Durations.betweenSeconds(30, 60))),
+                Pair.of(4, new TimeLimitedTask<>(new FollowMobTask(8.0F), UniformIntProvider.create(30, 60))),
                 Pair.of(5, new StrollTask(0.9F, 16, 9))
         ));
 

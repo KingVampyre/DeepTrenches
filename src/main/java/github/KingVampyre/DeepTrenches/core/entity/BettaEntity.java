@@ -13,7 +13,6 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
@@ -52,7 +51,7 @@ public class BettaEntity extends AbstractBettaEntity implements Variant {
     public void copyDataToStack(ItemStack stack) {
         super.copyDataToStack(stack);
 
-        stack.getOrCreateTag().putInt("Variant", this.getVariant());
+        stack.getOrCreateNbt().putInt("Variant", this.getVariant());
     }
 
     @Override

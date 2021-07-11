@@ -6,7 +6,6 @@ import github.KingVampyre.DeepTrenches.common.entity.ai.mob.LightState;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -21,7 +20,7 @@ import static github.KingVampyre.DeepTrenches.core.init.ModItems.LIGHT_LOOSEJAW_
 
 public class LightLoosejawEntity extends AbstractLoosejawEntity {
 
-    protected static final UniformIntProvider ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
+    protected static final UniformIntProvider ANGER_TIME_RANGE = UniformIntProvider.create(10, 15);
 
     public LightLoosejawEntity(EntityType<? extends LightLoosejawEntity> type, World world) {
         super(type, world);

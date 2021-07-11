@@ -11,7 +11,7 @@ public class RedElmSaplingGenerator extends SaplingGenerator {
 
     @Nullable
     @Override
-    public ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
+    public ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean bees) {
         return null;
     }
 

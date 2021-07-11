@@ -31,7 +31,7 @@ public class TagFishBucketItem extends EntityBucketItem {
 
 		if (entity instanceof Bucketable) {
 			Bucketable bucketable = (Bucketable)entity;
-			bucketable.copyDataFromNbt(stack.getOrCreateTag());
+			bucketable.copyDataFromNbt(stack.getOrCreateNbt());
 			bucketable.setFromBucket(true);
 		}
 

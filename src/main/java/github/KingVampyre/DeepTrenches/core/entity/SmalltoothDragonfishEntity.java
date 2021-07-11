@@ -6,7 +6,6 @@ import github.KingVampyre.DeepTrenches.common.entity.ai.mob.LightState;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -22,7 +21,7 @@ import static github.KingVampyre.DeepTrenches.core.init.ModItems.SMALLTOOTH_DRAG
 
 public class SmalltoothDragonfishEntity extends AbstractLoosejawEntity {
 
-    protected static final UniformIntProvider ANGER_TIME_RANGE = Durations.betweenSeconds(35, 40);
+    protected static final UniformIntProvider ANGER_TIME_RANGE = UniformIntProvider.create(35, 40);
 
     public SmalltoothDragonfishEntity(EntityType<? extends SmalltoothDragonfishEntity> type, World world) {
         super(type, world);

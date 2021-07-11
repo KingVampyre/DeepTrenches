@@ -17,7 +17,7 @@ public class ThundercloudPlumSaplingGenerator extends SaplingGenerator {
 
     @Nullable
     @Override
-    protected ConfiguredFeature<TreeFeatureConfig, ?> createTreeFeature(Random random, boolean bees) {
+    protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean bees) {
 
         if (random.nextInt(10) == 0)
             return RegistryHelper.getTree(BIG_THUNDERCLOUD_PLUM);

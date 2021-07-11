@@ -11,7 +11,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.brain.Activity;
 import net.minecraft.entity.ai.brain.Brain;
 import net.minecraft.entity.ai.brain.task.*;
@@ -32,7 +31,7 @@ import static net.minecraft.item.Items.COD;
 
 public abstract class AbstractBettaEntity extends TamableFishEntity {
 
-    protected static final UniformIntProvider ANGER_TIME_RANGE = Durations.betweenSeconds(10, 15);
+    protected static final UniformIntProvider ANGER_TIME_RANGE = UniformIntProvider.create(10, 15);
 
     public AbstractBettaEntity(EntityType<? extends TamableFishEntity> type, World world) {
         super(type, world);
