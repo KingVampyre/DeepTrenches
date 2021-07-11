@@ -45,9 +45,6 @@
     [
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
-      "minecraft:ore_granite",
-      "minecraft:ore_diorite",
-      "minecraft:ore_andesite",
       "minecraft:ore_tuff",
       "minecraft:ore_deepslate",
       "minecraft:ore_coal",

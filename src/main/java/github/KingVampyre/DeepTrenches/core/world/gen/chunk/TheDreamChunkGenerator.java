@@ -3,11 +3,9 @@ package github.KingVampyre.DeepTrenches.core.world.gen.chunk;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import github.KingVampyre.DeepTrenches.core.world.gen.TheDreamBlockSource;
-import it.unimi.dsi.fastutil.longs.Long2ReferenceOpenHashMap;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.dynamic.RegistryLookupCodec;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
@@ -29,7 +27,6 @@ import java.util.function.Supplier;
 
 import static net.minecraft.util.registry.Registry.BIOME_KEY;
 import static net.minecraft.world.Heightmap.Type.WORLD_SURFACE_WG;
-import static net.minecraft.world.biome.source.VoronoiBiomeAccessType.INSTANCE;
 import static net.minecraft.world.gen.chunk.ChunkGeneratorSettings.REGISTRY_CODEC;
 
 public class TheDreamChunkGenerator extends NoiseChunkGenerator {
@@ -47,7 +44,6 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
                     REGISTRY_CODEC.fieldOf("settings").forGetter(generator -> generator.settings)
             ).apply(instance, instance.stable(TheDreamChunkGenerator::new)));
 
-    protected final Long2ReferenceOpenHashMap<Biome> cachedBiomes = new Long2ReferenceOpenHashMap<>();
     protected final Registry<Biome> biomeRegistry;
     protected final Map<RegistryKey<Biome>, BlockState> terrainSources;
 
@@ -64,42 +60,21 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
         return new TheDreamBlockSource(() -> this.getTerrainBlockState(biome), this.seed, settings);
     }
 
-    public Biome getCachedBiome(int x, int y, int z) {
-        var pos = new BlockPos(x, y ,z);
-
-        if(cachedBiomes.size() > 200)
-            cachedBiomes.clear();
-
-        var ref = pos.asLong();
-        var biome = cachedBiomes.get(ref);
-
-        if(biome == null) {
-            biome = INSTANCE.getBiome(this.seed, x, y, z, this.populationSource);
-
-            cachedBiomes.put(ref, biome);
-        }
-
-        return biome;
-    }
-
     public BlockState getTerrainBlockState(Biome biome) {
         return this.biomeRegistry.getKey(biome).map(this.terrainSources::get).orElse(this.defaultBlock);
     }
 
     @Override
     public void buildSurface(ChunkRegion region, Chunk chunk) {
+        var chunkRandom = new ChunkRandom();
         var chunkPos = chunk.getPos();
         var startX = chunkPos.getStartX();
         var startZ = chunkPos.getStartZ();
         var chunkPosX = chunkPos.x;
         var chunkPosZ = chunkPos.z;
-
-        var chunkRandom = new ChunkRandom();
-        var mutable = new BlockPos.Mutable();
+        var yScale = 0.0625D;
 
         chunkRandom.setTerrainSeed(chunkPosX, chunkPosZ);
-
-        var yScale = 0.0625D;
 
         for(var sectionX = 0; sectionX < 16; ++sectionX) {
             for(var sectionZ = 0; sectionZ < 16; ++sectionZ) {
@@ -109,12 +84,12 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
                 var noise = this.surfaceDepthNoise.sample(x * yScale, z * yScale, yScale, sectionX * yScale) * 15.0D;
                 var height = chunk.sampleHeightmap(WORLD_SURFACE_WG, sectionX, sectionZ) + 1;
                 var minSurfaceLevel = this.settings.get().getMinSurfaceLevel();
+                var biome = this.biomeSource.getBiomeForNoiseGen(chunkPos);
+                var source = this.getTerrainBlockState(biome);
 
-                var biome = region.getBiome(mutable.set(startX + sectionX, height, startZ + sectionZ));
-                var state = this.getTerrainBlockState(biome);
-
-                biome.buildSurface(chunkRandom, chunk, x, z, height, noise, state, this.defaultFluid, this.getSeaLevel(), minSurfaceLevel, region.getSeed());
+                biome.buildSurface(chunkRandom, chunk, x, z, height, noise, source, this.defaultFluid, this.getSeaLevel(), minSurfaceLevel, region.getSeed());
             }
+
         }
 
         this.buildBedrock(chunk, chunkRandom);
@@ -122,28 +97,24 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
 
     @Override
     public DoubleFunction<BlockSource> createBlockSourceFactory(int minY, ChunkPos pos, Consumer<NoiseInterpolator> consumer) {
+        var biome = this.biomeSource.getBiomeForNoiseGen(pos);
+        var source = this.getBlockSource(biome);
 
         if (!this.settings.get().hasOreVeins())
-            return d -> (x, y, z) -> {
-                var biome = this.getCachedBiome(x, 0, z);
-                var terrain = this.getBlockSource(biome);
-
-                return terrain.sample(x, y, z);
-            };
+            return deltaZ -> source;
 
         var oreVeinSource = new NoiseChunkGenerator.OreVeinSource(pos, minY, this.seed + 1L);
 
         oreVeinSource.feed(consumer);
 
-        return (deltaZ) -> {
+        return deltaZ -> {
             oreVeinSource.setDeltaZ(deltaZ);
 
             return (x, y, z) -> {
-                var biome = this.getCachedBiome(x, 0,z);
                 var oreVein = oreVeinSource.sample(x, y, z);
-                var terrain = this.getBlockSource(biome);
+                var state = source.sample(x, y, z);
 
-                return oreVein != this.defaultBlock ? oreVein : terrain.sample(x, y, z);
+                return oreVein != state ? oreVein : source.sample(x, y, z);
             };
         };
     }

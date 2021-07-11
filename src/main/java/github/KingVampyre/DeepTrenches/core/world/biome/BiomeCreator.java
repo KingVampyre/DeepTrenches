@@ -12,8 +12,7 @@ import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilders;
 import static github.KingVampyre.DeepTrenches.core.init.ModConfiguredFeatures.*;
 import static net.minecraft.entity.EntityType.*;
 import static net.minecraft.entity.SpawnGroup.*;
-import static net.minecraft.world.gen.GenerationStep.Feature.LAKES;
-import static net.minecraft.world.gen.GenerationStep.Feature.VEGETAL_DECORATION;
+import static net.minecraft.world.gen.GenerationStep.Feature.*;
 import static net.minecraft.world.gen.feature.ConfiguredFeatures.*;
 
 public class BiomeCreator {
@@ -113,12 +112,19 @@ public class BiomeCreator {
         DefaultBiomeFeatures.addLandCarvers(builder);
         DefaultBiomeFeatures.addAmethystGeodes(builder);
         DefaultBiomeFeatures.addDungeons(builder);
-        DefaultBiomeFeatures.addMineables(builder);
         DefaultBiomeFeatures.addDefaultOres(builder);
         DefaultBiomeFeatures.addDefaultDisks(builder);
 
         builder.structureFeature(ConfiguredStructureFeatures.RUINED_PORTAL);
 
+        builder.feature(UNDERGROUND_ORES, ORE_DIRT);
+        builder.feature(UNDERGROUND_ORES, ORE_GRAVEL);
+        builder.feature(UNDERGROUND_ORES, ORE_TUFF);
+        builder.feature(UNDERGROUND_ORES, ORE_DEEPSLATE);
+        builder.feature(UNDERGROUND_DECORATION, RARE_DRIPSTONE_CLUSTER);
+        builder.feature(UNDERGROUND_DECORATION, RARE_SMALL_DRIPSTONE);
+
+        builder.feature(VEGETAL_DECORATION, GLOW_LICHEN);
         DefaultBiomeFeatures.addForestGrass(builder);
         DefaultBiomeFeatures.addDefaultVegetation(builder);
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
