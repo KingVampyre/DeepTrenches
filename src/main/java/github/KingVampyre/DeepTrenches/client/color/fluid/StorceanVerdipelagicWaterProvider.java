@@ -1,8 +1,6 @@
 package github.KingVampyre.DeepTrenches.client.color.fluid;
 
 import github.Louwind.Reload.client.color.resolver.FluidColorProvider;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockRenderView;
@@ -16,21 +14,7 @@ public class StorceanVerdipelagicWaterProvider implements FluidColorProvider {
 
     @Override
     public int getColor(@Nullable BlockRenderView view, @Nullable BlockPos pos, FluidState state) {
-
-        if (view != null && pos != null) {
-            ClientWorld client = MinecraftClient.getInstance().world;
-
-            if(client != null)
-                return client.calculateColor(pos, (biome, x, z) -> {
-                    double temperature = biome.getTemperature();
-                    double humidity = biome.getDownfall();
-
-                    return STORCEAN_VIRDIPELAGIC_WATER.getColor(temperature, humidity);
-                });
-
-        }
-
-        return STORCEAN_VIRDIPELAGIC_WATER.getDefaultColor();
+        return view != null && pos != null ? view.getColor(pos, STORCEAN_VIRDIPELAGIC_WATER) : STORCEAN_VIRDIPELAGIC_WATER.getDefaultColor();
     }
 
 }

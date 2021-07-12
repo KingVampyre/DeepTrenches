@@ -8,8 +8,9 @@ accessible class net/minecraft/world/gen/chunk/AquiferSampler$Impl$FluidLevel
 accessible class net/minecraft/world/gen/feature/ConfiguredFeatures$Decorators
 accessible class net/minecraft/world/gen/chunk/NoiseChunkGenerator$OreVeinSource
 
-accessible field net/minecraft/block/SaplingBlock generator Lnet/minecraft/block/sapling/SaplingGenerator;
-accessible field net/minecraft/entity/effect/StatusEffectInstance type Lnet/minecraft/entity/effect/StatusEffect;
+accessible field net/minecraft/block/SaplingBlock                   generator           Lnet/minecraft/block/sapling/SaplingGenerator;
+accessible field net/minecraft/client/world/ClientWorld             colorCache          Lit/unimi/dsi/fastutil/objects/Object2ObjectArrayMap;
+accessible field net/minecraft/entity/effect/StatusEffectInstance   type                Lnet/minecraft/entity/effect/StatusEffect;
 
 accessible field net/minecraft/world/gen/chunk/ChunkGenerator      populationSource             Lnet/minecraft/world/biome/source/BiomeSource;
 accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator deepslateSource              Lnet/minecraft/world/gen/BlockSource;

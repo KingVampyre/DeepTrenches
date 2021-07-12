@@ -25,7 +25,9 @@ import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.world.BiomeColorCache;
 
 import static github.KingVampyre.DeepTrenches.client.init.ColorMaps.STORCEAN_FOLIAGE;
 import static github.KingVampyre.DeepTrenches.client.init.Textures.*;
@@ -70,7 +72,6 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_infinipelagic_water_colormap", STORCEAN_INFINIPELAGIC_WATER_COLORMAP, ColorMaps.STORCEAN_INFINIPELAGIC_WATER));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_verdipelagic_water_colormap", STORCEAN_VIRDIPELAGIC_WATER_COLORMAP, ColorMaps.STORCEAN_VIRDIPELAGIC_WATER));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_water_colormap", STORCEAN_WATER_COLORMAP, ColorMaps.STORCEAN_WATER));
-
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_foliage_colormap", STORCEAN_FOLIAGE_COLORMAP, ColorMaps.STORCEAN_FOLIAGE));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_mosoil_colormap", STORCEAN_MOSOIL_COLORMAP, ColorMaps.STORCEAN_MOSOIL));
 

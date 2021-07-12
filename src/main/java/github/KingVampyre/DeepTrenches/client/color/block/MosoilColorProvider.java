@@ -1,34 +1,20 @@
 package github.KingVampyre.DeepTrenches.client.color.block;
 
-import github.KingVampyre.DeepTrenches.client.init.ColorMaps;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.block.BlockColorProvider;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.BlockRenderView;
+import org.jetbrains.annotations.Nullable;
+
+import static github.KingVampyre.DeepTrenches.client.init.ColorMaps.STORCEAN_MOSOIL;
 
 public class MosoilColorProvider implements BlockColorProvider {
 
     public static final BlockColorProvider INSTANCE = new MosoilColorProvider();
 
     @Override
-    public int getColor(BlockState state, BlockRenderView world, BlockPos pos, int tintIndex) {
-
-        if (world != null && pos != null) {
-            ClientWorld client = MinecraftClient.getInstance().world;
-
-            if(client != null)
-                return client.calculateColor(pos, (biome, x, z) -> {
-                    double temperature = MathHelper.clamp(biome.getTemperature(), 0.0F, 1.0F);
-                    double humidity = MathHelper.clamp(biome.getDownfall(), 0.0F, 1.0F);
-
-                    return ColorMaps.STORCEAN_MOSOIL.getColor(temperature, humidity);
-                });
-        }
-
-        return ColorMaps.STORCEAN_MOSOIL.getDefaultColor();
+    public int getColor(BlockState state, @Nullable BlockRenderView world, @Nullable BlockPos pos, int tintIndex) {
+        return world != null && pos != null ? world.getColor(pos, STORCEAN_MOSOIL) : STORCEAN_MOSOIL.getDefaultColor();
     }
 
 }
