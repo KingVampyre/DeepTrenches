@@ -23,8 +23,10 @@ import java.util.OptionalInt;
 import static github.KingVampyre.DeepTrenches.core.init.BlockStateProviders.*;
 import static github.KingVampyre.DeepTrenches.core.init.FeatureConfigs.*;
 import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.CLEAR_WATER;
+import static net.minecraft.block.Blocks.CALCITE;
 import static net.minecraft.world.gen.decorator.Decorator.COUNT_EXTRA;
 import static net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.*;
+import static net.minecraft.world.gen.feature.OreFeatureConfig.Rules.BASE_STONE_OVERWORLD;
 
 public class ModConfiguredFeatures {
 
@@ -62,6 +64,8 @@ public class ModConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> LAKE_CLEAR_WATER;
     public static final ConfiguredFeature<?, ?> SPRING_CLEAR_WATER;
+
+    public static final ConfiguredFeature<?, ?> ORE_CALCITE;
 
     static {
         ALMOND = Feature.TREE.configure(new TreeFeatureConfig.Builder(
@@ -205,6 +209,11 @@ public class ModConfiguredFeatures {
                 .range(new RangeDecoratorConfig(BiasedToBottomHeightProvider.create(YOffset.getBottom(), YOffset.belowTop(8), 8)))
                 .spreadHorizontally()
                 .repeat(50);
+
+        ORE_CALCITE = (Feature.ORE.configure(new OreFeatureConfig(BASE_STONE_OVERWORLD, CALCITE.getDefaultState(), 33))
+                .uniformRange(YOffset.fixed(0), YOffset.fixed(79))
+                .spreadHorizontally()
+                .repeat(10));
     }
 
 }

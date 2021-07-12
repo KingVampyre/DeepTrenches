@@ -117,6 +117,7 @@ public class BiomeCreator {
 
         builder.structureFeature(ConfiguredStructureFeatures.RUINED_PORTAL);
 
+        builder.feature(UNDERGROUND_ORES, ORE_CALCITE);
         builder.feature(UNDERGROUND_ORES, ORE_DIRT);
         builder.feature(UNDERGROUND_ORES, ORE_GRAVEL);
         builder.feature(UNDERGROUND_ORES, ORE_TUFF);

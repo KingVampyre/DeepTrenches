@@ -43,6 +43,7 @@
     [],
     [],
     [
+      "deep_trenches:ore_calcite",
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_tuff",

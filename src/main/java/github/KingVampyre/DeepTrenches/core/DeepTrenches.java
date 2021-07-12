@@ -86,6 +86,8 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(CONFIGURED_FEATURE, "deep_trenches:lake_clear_water", ModConfiguredFeatures.LAKE_CLEAR_WATER);
 		Registry.register(CONFIGURED_FEATURE, "deep_trenches:spring_clear_water", ModConfiguredFeatures.SPRING_CLEAR_WATER);
 
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:ore_calcite", ModConfiguredFeatures.ORE_CALCITE);
+
 		/* SENSOR TYPE */
 		Registry.register(SENSOR_TYPE, "deep_trenches:cod_tempting", SensorTypes.COD_TEMPTING);
 		Registry.register(SENSOR_TYPE, "deep_trenches:nearest_adult", SensorTypes.NEAREST_ADULT);
