@@ -3,6 +3,7 @@ package github.KingVampyre.DeepTrenches.core.world.gen.chunk;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import github.KingVampyre.DeepTrenches.core.world.gen.TheDreamBlockSource;
+import github.KingVampyre.DeepTrenches.core.world.gen.chunk.aquifier.TheDreamAquiferSampler;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.dynamic.RegistryLookupCodec;
@@ -16,6 +17,7 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.BlockSource;
 import net.minecraft.world.gen.ChunkRandom;
 import net.minecraft.world.gen.NoiseInterpolator;
+import net.minecraft.world.gen.chunk.AquiferSampler;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.ChunkGeneratorSettings;
 import net.minecraft.world.gen.chunk.NoiseChunkGenerator;
@@ -37,21 +39,28 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
                     Codec.unboundedMap(
                             Identifier.CODEC.xmap(RegistryKey.createKeyFactory(BIOME_KEY), RegistryKey::getValue),
                             BlockState.CODEC)
-                            .fieldOf("terrain_source")
-                            .forGetter(generator -> generator.terrainSources),
+                            .fieldOf("terrain")
+                            .forGetter(generator -> generator.terrain),
+                    Codec.unboundedMap(
+                            Identifier.CODEC.xmap(RegistryKey.createKeyFactory(BIOME_KEY), RegistryKey::getValue),
+                            BlockState.CODEC)
+                            .fieldOf("fluids")
+                            .forGetter(generator -> generator.fluids),
                     BiomeSource.CODEC.fieldOf("biome_source").forGetter(generator -> generator.populationSource),
                     Codec.LONG.fieldOf("seed").stable().forGetter(generator -> generator.seed),
                     REGISTRY_CODEC.fieldOf("settings").forGetter(generator -> generator.settings)
             ).apply(instance, instance.stable(TheDreamChunkGenerator::new)));
 
     protected final Registry<Biome> biomeRegistry;
-    protected final Map<RegistryKey<Biome>, BlockState> terrainSources;
+    protected final Map<RegistryKey<Biome>, BlockState> fluids;
+    protected final Map<RegistryKey<Biome>, BlockState> terrain;
 
-    public TheDreamChunkGenerator(Registry<Biome> biomeRegistry, Map<RegistryKey<Biome>, BlockState> terrainSources, BiomeSource biomeSource, long seed, Supplier<ChunkGeneratorSettings> settings) {
+    public TheDreamChunkGenerator(Registry<Biome> biomeRegistry, Map<RegistryKey<Biome>, BlockState> terrain, Map<RegistryKey<Biome>, BlockState> fluids, BiomeSource biomeSource, long seed, Supplier<ChunkGeneratorSettings> settings) {
         super(biomeSource, seed, settings);
 
         this.biomeRegistry = biomeRegistry;
-        this.terrainSources = terrainSources;
+        this.fluids = fluids;
+        this.terrain = terrain;
     }
 
     public BlockSource getBlockSource(Biome biome) {
@@ -60,8 +69,12 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
         return new TheDreamBlockSource(() -> this.getTerrainBlockState(biome), this.seed, settings);
     }
 
+    public BlockState getFluidBlockState(Biome biome) {
+        return this.biomeRegistry.getKey(biome).map(this.fluids::get).orElse(this.defaultFluid);
+    }
+
     public BlockState getTerrainBlockState(Biome biome) {
-        return this.biomeRegistry.getKey(biome).map(this.terrainSources::get).orElse(this.defaultBlock);
+        return this.biomeRegistry.getKey(biome).map(this.terrain::get).orElse(this.defaultBlock);
     }
 
     @Override
@@ -84,10 +97,11 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
                 var noise = this.surfaceDepthNoise.sample(x * yScale, z * yScale, yScale, sectionX * yScale) * 15.0D;
                 var height = chunk.sampleHeightmap(WORLD_SURFACE_WG, sectionX, sectionZ) + 1;
                 var minSurfaceLevel = this.settings.get().getMinSurfaceLevel();
-                var biome = this.biomeSource.getBiomeForNoiseGen(chunkPos);
-                var source = this.getTerrainBlockState(biome);
+                var biome = this.populationSource.getBiomeForNoiseGen(chunkPos);
+                var defaultState = this.getTerrainBlockState(biome);
+                var defaultFluid = this.getFluidBlockState(biome);
 
-                biome.buildSurface(chunkRandom, chunk, x, z, height, noise, source, this.defaultFluid, this.getSeaLevel(), minSurfaceLevel, region.getSeed());
+                biome.buildSurface(chunkRandom, chunk, x, z, height, noise, defaultState, defaultFluid, this.getSeaLevel(), minSurfaceLevel, region.getSeed());
             }
 
         }
@@ -96,8 +110,19 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
     }
 
     @Override
+    public AquiferSampler createBlockSampler(int startY, int deltaY, ChunkPos pos) {
+        var biome = this.populationSource.getBiomeForNoiseGen(pos);
+        var fluid = this.getFluidBlockState(biome);
+
+        if(!this.hasAquifers())
+            return AquiferSampler.seaLevel(this.getSeaLevel(), fluid);
+
+        return TheDreamAquiferSampler.aquifer(this, this.settings.get(), fluid, pos, startY * this.verticalNoiseResolution, deltaY * this.verticalNoiseResolution);
+    }
+
+    @Override
     public DoubleFunction<BlockSource> createBlockSourceFactory(int minY, ChunkPos pos, Consumer<NoiseInterpolator> consumer) {
-        var biome = this.biomeSource.getBiomeForNoiseGen(pos);
+        var biome = this.populationSource.getBiomeForNoiseGen(pos);
         var source = this.getBlockSource(biome);
 
         if (!this.settings.get().hasOreVeins())
@@ -121,7 +146,7 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
 
     @Override
     public ChunkGenerator withSeed(long seed) {
-        return new TheDreamChunkGenerator(this.biomeRegistry, this.terrainSources, this.populationSource.withSeed(seed), seed, this.settings);
+        return new TheDreamChunkGenerator(this.biomeRegistry, this.terrain, this.fluids, this.populationSource.withSeed(seed), seed, this.settings);
     }
 
     @Override

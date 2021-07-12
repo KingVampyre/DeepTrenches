@@ -11,6 +11,7 @@ import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.ChunkGeneratorSettings;
 
 import static github.KingVampyre.DeepTrenches.core.init.Biomes.*;
+import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.CLEAR_WATER;
 import static net.minecraft.block.Blocks.COBBLESTONE;
 import static net.minecraft.block.Blocks.DIORITE;
 
@@ -27,7 +28,12 @@ public class GeneratorTypes {
                     BLACK_BIRCH_FOREST_KEY, COBBLESTONE.getDefaultState()
             );
 
-            return new TheDreamChunkGenerator(biomeRegistry, terrainSources, biomeSource, seed, () -> registry.getOrThrow(ChunkGeneratorSettingsKeys.THE_DREAM_KEY));
+            var fluids = ImmutableMap.of(
+                    ALMOND_FOREST_KEY, CLEAR_WATER.getDefaultState(),
+                    ALMOND_PLUS_FOREST_KEY, CLEAR_WATER.getDefaultState()
+            );
+
+            return new TheDreamChunkGenerator(biomeRegistry, terrainSources, fluids, biomeSource, seed, () -> registry.getOrThrow(ChunkGeneratorSettingsKeys.THE_DREAM_KEY));
         }
 
     };

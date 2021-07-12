@@ -17,6 +17,7 @@ public class ClearWaterProvider implements FluidColorProvider {
     @Override
     public int getColor(@Nullable BlockRenderView view, @Nullable BlockPos pos, FluidState state) {
 
+/*
         if (view != null && pos != null) {
             ClientWorld client = MinecraftClient.getInstance().world;
 
@@ -30,6 +31,7 @@ public class ClearWaterProvider implements FluidColorProvider {
                 });
 
         }
+*/
 
         return CLEAR_WATER.getDefaultColor();
     }
