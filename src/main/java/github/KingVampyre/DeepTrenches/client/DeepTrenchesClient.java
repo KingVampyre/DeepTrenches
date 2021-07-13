@@ -3,6 +3,9 @@ package github.KingVampyre.DeepTrenches.client;
 import github.KingVampyre.DeepTrenches.client.color.block.FoliageColorProvider;
 import github.KingVampyre.DeepTrenches.client.color.block.MosoilColorProvider;
 import github.KingVampyre.DeepTrenches.client.color.block.StorceanFoliageColorProvider;
+import github.KingVampyre.DeepTrenches.client.event.client.DeepTrenchesColorCacheLoad;
+import github.KingVampyre.DeepTrenches.client.event.client.DeepTrenchesSpriteRegistry;
+import github.KingVampyre.DeepTrenches.client.event.client.callback.ColorCacheLoad;
 import github.KingVampyre.DeepTrenches.client.init.ColorMaps;
 import github.KingVampyre.DeepTrenches.client.init.FluidRenderHandlers;
 import github.KingVampyre.DeepTrenches.client.init.Sprites;
@@ -25,9 +28,7 @@ import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.world.BiomeColorCache;
 
 import static github.KingVampyre.DeepTrenches.client.init.ColorMaps.STORCEAN_FOLIAGE;
 import static github.KingVampyre.DeepTrenches.client.init.Textures.*;
@@ -40,6 +41,9 @@ public class DeepTrenchesClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        ClientSpriteRegistryCallback.event(BLOCK_ATLAS_TEXTURE).register(DeepTrenchesSpriteRegistry.INSTANCE);
+        ColorCacheLoad.EVENT.register(DeepTrenchesColorCacheLoad.INSTANCE);
+
         ParticleFactoryRegistry.getInstance().register(ACID_DRIPLET, LeakParticle.AcidDripletFactory::new);
         ParticleFactoryRegistry.getInstance().register(ACID_DRIPPING, LeakParticle.AcidDrippingFactory::new);
         ParticleFactoryRegistry.getInstance().register(ACID_FALLING, LeakParticle.AcidFallingFactory::new);
@@ -127,42 +131,6 @@ public class DeepTrenchesClient implements ClientModInitializer {
         FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_MESOPELAGIC_WATER, FluidRenderHandlers.STORCEAN_MESOPELAGIC_WATER);
         FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_VIRDIPELAGIC_WATER, FluidRenderHandlers.STORCEAN_VIRDIPELAGIC_WATER);
         FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_WATER, FluidRenderHandlers.STORCEAN_WATER);
-
-        /* ------------------------------------------ TEXTURE ATLAS ----------------------------------------------------- */
-        ClientSpriteRegistryCallback.event(BLOCK_ATLAS_TEXTURE).register((atlas, registry) -> {
-            registry.register(ABYSSOPELAGIC_WATER_FLOW);
-            registry.register(ABYSSOPELAGIC_WATER_STILL);
-            registry.register(ACID_FLOW);
-            registry.register(ACID_STILL);
-            registry.register(BATHYPELAGIC_WATER_FLOW);
-            registry.register(BATHYPELAGIC_WATER_STILL);
-            registry.register(BRINE_FLOW);
-            registry.register(BRINE_STILL);
-            registry.register(CLEAR_WATER_FLOW);
-            registry.register(CLEAR_WATER_STILL);
-            registry.register(HADOPELAGIC_WATER_FLOW);
-            registry.register(HADOPELAGIC_WATER_STILL);
-            registry.register(MESOPELAGIC_WATER_FLOW);
-            registry.register(MESOPELAGIC_WATER_STILL);
-            registry.register(STORCEAN_ABYSSOPELAGIC_WATER_FLOW);
-            registry.register(STORCEAN_ABYSSOPELAGIC_WATER_STILL);
-            registry.register(STORCEAN_BATHYPELAGIC_WATER_FLOW);
-            registry.register(STORCEAN_BATHYPELAGIC_WATER_STILL);
-            registry.register(STORCEAN_ENDERPELAGIC_WATER_FLOW);
-            registry.register(STORCEAN_ENDERPELAGIC_WATER_STILL);
-            registry.register(STORCEAN_GASOPELAGIC_WATER_FLOW);
-            registry.register(STORCEAN_GASOPELAGIC_WATER_STILL);
-            registry.register(STORCEAN_HADOPELAGIC_WATER_FLOW);
-            registry.register(STORCEAN_HADOPELAGIC_WATER_STILL);
-            registry.register(STORCEAN_INFINIPELAGIC_WATER_FLOW);
-            registry.register(STORCEAN_INFINIPELAGIC_WATER_STILL);
-            registry.register(STORCEAN_MESOPELAGIC_WATER_FLOW);
-            registry.register(STORCEAN_MESOPELAGIC_WATER_STILL);
-            registry.register(STORCEAN_VIRDIPELAGIC_WATER_FLOW);
-            registry.register(STORCEAN_VIRDIPELAGIC_WATER_STILL);
-            registry.register(STORCEAN_WATER_FLOW);
-            registry.register(STORCEAN_WATER_STILL);
-        });
 
         /* ------------------------------------------ BLOCK COLORS ----------------------------------------------------- */
         ColorProviderRegistry.BLOCK.register(MosoilColorProvider.INSTANCE, ModBlocks.MOSOIL, ModBlocks.REEBLOON);

@@ -9,7 +9,6 @@ import github.KingVampyre.DeepTrenches.core.world.gen.chunk.TheDreamChunkGenerat
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
 import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
-import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.GeckoLib;
 

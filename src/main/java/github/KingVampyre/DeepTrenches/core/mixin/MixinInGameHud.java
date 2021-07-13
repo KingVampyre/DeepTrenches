@@ -23,9 +23,12 @@ import static net.minecraft.entity.effect.StatusEffects.REGENERATION;
 @Mixin(InGameHud.class)
 public abstract class MixinInGameHud extends DrawableHelper {
 
-    @Shadow @Final private MinecraftClient client;
+    @Shadow
+    @Final
+    private MinecraftClient client;
 
-    @Shadow protected abstract PlayerEntity getCameraPlayer();
+    @Shadow
+    protected abstract PlayerEntity getCameraPlayer();
 
     @Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/hud/InGameHud;renderStatusBars(Lnet/minecraft/client/util/math/MatrixStack;)V"))
     private void renderIcons(MatrixStack matrices, float tickDelta, CallbackInfo ci) {
