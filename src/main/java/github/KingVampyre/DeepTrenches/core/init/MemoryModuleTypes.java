@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
 import com.mojang.serialization.Codec;
-import github.Louwind.entityutils.core.mixin.MemoryModuleTypeInvoker;
+import github.Louwind.entityutils.core.mixin.InvokerMemoryModuleType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.util.registry.Registry;
@@ -28,11 +28,11 @@ public class MemoryModuleTypes {
     public static final MemoryModuleType<Boolean> TAMED;
 
     private static <U> MemoryModuleType<U> createMemoryModule(String id, Codec<U> codec) {
-        return Registry.register(MEMORY_MODULE_TYPE, id, MemoryModuleTypeInvoker.create(Optional.of(codec)));
+        return Registry.register(MEMORY_MODULE_TYPE, id, InvokerMemoryModuleType.create(Optional.of(codec)));
     }
 
     private static <U> MemoryModuleType<U> createMemoryModule(String id) {
-        return Registry.register(MEMORY_MODULE_TYPE, id, MemoryModuleTypeInvoker.create(Optional.empty()));
+        return Registry.register(MEMORY_MODULE_TYPE, id, InvokerMemoryModuleType.create(Optional.empty()));
     }
 
     static {

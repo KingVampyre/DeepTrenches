@@ -19,6 +19,7 @@ import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
 import github.Louwind.Reload.client.resource.ColorMapReloadListener;
 import github.Louwind.Reload.client.resource.sprite.BlockSpritesReloadListener;
 import github.Louwind.entityutils.core.block.entity.render.FabricSignBlockEntityRenderer;
+import github.Louwind.entityutils.core.entity.render.FabricBoatEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
@@ -522,6 +523,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(EntityTypes.ADAIGGER, AdaiggerRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BEARDED_SEADEVIL, BeardedSeadevilRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BARBELED_LOOSEJAW, BarbeledLoosejawRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(EntityTypes.BOAT, FabricBoatEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BETTA, BettaRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_DRAGONFISH, BlackDragonfishRenderer::new);
         EntityRendererRegistry.INSTANCE.register(EntityTypes.BLACK_SCABBARD, BlackScabbardRenderer::new);

@@ -2,6 +2,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.core.entity.*;
 import github.KingVampyre.DeepTrenches.core.util.DefaultAttributeHelper;
+import github.Louwind.entityutils.core.entity.FabricBoatEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.Entity;
@@ -18,6 +19,7 @@ public class EntityTypes {
 	public static final EntityType<BarbeledLoosejawEntity> BARBELED_LOOSEJAW;
 	public static final EntityType<BeardedSeadevilEntity> BEARDED_SEADEVIL;
 	public static final EntityType<BettaEntity> BETTA;
+	public static final EntityType<FabricBoatEntity> BOAT;
 	public static final EntityType<BlackDragonfishEntity> BLACK_DRAGONFISH;
 	public static final EntityType<BlackLoosejawEntity> BLACK_LOOSEJAW;
 	public static final EntityType<BlackScabbardEntity> BLACK_SCABBARD;
@@ -71,6 +73,11 @@ public class EntityTypes {
 		BETTA = createEntityType("deep_trenches:betta", FabricEntityTypeBuilder
 				.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
 				.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
+				.build());
+
+		BOAT = createEntityType("deep_trenches:boat", FabricEntityTypeBuilder
+				.<FabricBoatEntity>create(SpawnGroup.MISC, FabricBoatEntity::new)
+				.dimensions(EntityDimensions.fixed(1.375F, 0.5625F))
 				.build());
 
 		BLACK_DRAGONFISH = createEntityType("deep_trenches:black_dragonfish", FabricEntityTypeBuilder
