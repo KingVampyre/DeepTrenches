@@ -38,7 +38,7 @@
                                     ]
                                 }
                             ],
-                            "name": "deep_trenches:aquean_leaves"
+                            "name": "deep_trenches:bubbletree_cap"
                         },
                         {
                             "type": "minecraft:item",
@@ -57,7 +57,7 @@
                                     ]
                                 }
                             ],
-                            "name": "deep_trenches:aquean_sapling"
+                            "name": "deep_trenches:bubbletree_sapling"
                         }
                     ]
                 }
@@ -96,7 +96,7 @@
                             "function": "minecraft:explosion_decay"
                         }
                     ],
-                    "name": "deep_trenches:aquean_stick"
+                    "name": "deep_trenches:bubbletree_stick"
                 }
             ],
             "conditions": [
