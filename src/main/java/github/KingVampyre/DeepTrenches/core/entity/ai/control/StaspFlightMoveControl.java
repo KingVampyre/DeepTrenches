@@ -23,7 +23,8 @@ public class StaspFlightMoveControl extends FlightMoveControl {
 
     @Override
     public void tick() {
-        StaspEntity stasp = (StaspEntity) this.entity;
+        super.tick();
+        /*StaspEntity stasp = (StaspEntity) this.entity;
 
         if (this.state == MoveControl.State.MOVE_TO) {
             this.state = MoveControl.State.WAIT;
@@ -82,7 +83,7 @@ public class StaspFlightMoveControl extends FlightMoveControl {
             stasp.setNoGravity(false);
             stasp.setUpwardSpeed(0.0F);
             stasp.setForwardSpeed(0.0F);
-        }
-
+        }*/
     }
+
 }

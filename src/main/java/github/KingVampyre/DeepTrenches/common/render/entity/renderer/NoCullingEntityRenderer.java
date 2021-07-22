@@ -19,7 +19,9 @@ public class NoCullingEntityRenderer<T extends LivingEntity & IAnimatable> exten
 
     @Override
     public RenderLayer getRenderType(T animatable, float partialTicks, MatrixStack stack, VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, Identifier textureLocation) {
-        return RenderLayer.getEntityCutoutNoCull(textureLocation);
+        var texture = this.getTextureLocation(animatable);
+
+        return RenderLayer.getEntityTranslucent(texture);
     }
 
 }

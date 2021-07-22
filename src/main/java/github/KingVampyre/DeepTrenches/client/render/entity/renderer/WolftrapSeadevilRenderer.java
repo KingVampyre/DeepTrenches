@@ -7,14 +7,15 @@ import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEn
 import github.KingVampyre.DeepTrenches.core.entity.WolftrapSeadevilEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
+import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.WolftrapSeadevilModel.MODEL;
 
 public class WolftrapSeadevilRenderer extends NoCullingEntityRenderer<WolftrapSeadevilEntity> {
 
     private static final RenderLayer[] LAYERS = {
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/wolftrap_seadevil/all_lit_layer.png"),
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/wolftrap_seadevil/all_unlit_layer.png")
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/wolftrap_seadevil/all_lit_layer.png")),
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/wolftrap_seadevil/all_unlit_layer.png"))
     };
 
     public WolftrapSeadevilRenderer(EntityRendererFactory.Context ctx) {

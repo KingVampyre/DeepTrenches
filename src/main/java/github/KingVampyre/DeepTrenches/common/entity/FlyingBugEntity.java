@@ -2,7 +2,6 @@ package github.KingVampyre.DeepTrenches.common.entity;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
@@ -12,9 +11,11 @@ import software.bernie.geckolib3.core.builder.AnimationBuilder;
 import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
-public class FlyingBugEntity extends AngryBugEntity {
+import static software.bernie.geckolib3.core.PlayState.CONTINUE;
 
-    public FlyingBugEntity(EntityType<? extends AngryBugEntity> entityType, World world) {
+public class FlyingBugEntity extends AggressiveBugEntity {
+
+    public FlyingBugEntity(EntityType<? extends AggressiveBugEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -27,27 +28,20 @@ public class FlyingBugEntity extends AngryBugEntity {
     protected <E extends IAnimatable> PlayState getMovementAnimation(AnimationEvent<E> event) {
         AnimationController<?> controller = event.getController();
 
-        if(this.isInAir())
+        if(this.isFlying())
             controller.setAnimation(new AnimationBuilder().addAnimation("flying"));
         else if(this.getMoveControl().isMoving())
             controller.setAnimation(new AnimationBuilder().addAnimation("walking"));
 
-        return PlayState.CONTINUE;
+        return CONTINUE;
     }
 
     @Override
     public float getPathfindingFavor(BlockPos pos, WorldView world) {
-        BlockState state = world.getBlockState(pos);
-
-        return state.isAir() ? 10.0F : 0.0F;
+        return world.isAir(pos) ? 10.0F : 0.0F;
     }
 
-    @Override
-    public boolean handleFallDamage(float fallDistance, float damageMultiplier, DamageSource damageSource) {
-        return super.handleFallDamage(fallDistance, damageMultiplier, damageSource);
-    }
-
-    public boolean isInAir() {
+    public boolean isFlying() {
         return !this.onGround;
     }
 

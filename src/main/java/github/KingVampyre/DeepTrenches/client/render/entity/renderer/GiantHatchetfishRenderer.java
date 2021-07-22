@@ -8,14 +8,15 @@ import github.KingVampyre.DeepTrenches.core.entity.GiantHatchetfishEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.GiantHatchetfishModel.MODEL;
 
 public class GiantHatchetfishRenderer extends NoCullingEntityRenderer<GiantHatchetfishEntity> {
 
 	private static final RenderLayer[] LAYERS = {
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/giant_hatchetfish/all_lit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/giant_hatchetfish/all_unlit_layer.png")
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/giant_hatchetfish/all_lit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/giant_hatchetfish/all_unlit_layer.png"))
 	};
 
 	public GiantHatchetfishRenderer(EntityRendererFactory.Context ctx) {

@@ -7,14 +7,15 @@ import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEn
 import github.KingVampyre.DeepTrenches.core.entity.PrinceAxelsWonderfishEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
+import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.PrinceAxelsWonderfishModel.MODEL;
 
 public class PrinceAxelsWonderfishRenderer extends NoCullingEntityRenderer<PrinceAxelsWonderfishEntity> {
 
     private static final RenderLayer[] LAYERS = {
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/prince_axels_wonderfish/all_lit_layer.png"),
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/prince_axels_wonderfish/all_unlit_layer.png")
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/prince_axels_wonderfish/all_lit_layer.png")),
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/prince_axels_wonderfish/all_unlit_layer.png"))
     };
 
     public PrinceAxelsWonderfishRenderer(EntityRendererFactory.Context ctx) {

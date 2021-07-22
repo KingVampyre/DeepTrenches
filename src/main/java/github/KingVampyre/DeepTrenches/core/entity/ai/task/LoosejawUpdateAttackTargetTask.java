@@ -15,7 +15,7 @@ import static github.KingVampyre.DeepTrenches.core.init.LightStates.ALL_LIT;
 import static github.KingVampyre.DeepTrenches.core.init.LightStates.ALL_UNLIT;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.HURT_BY_ENTITY;
 
-public class LightableUpdateAttackTargetTask extends UpdateAttackTargetTask<AbstractLoosejawEntity> {
+public class LoosejawUpdateAttackTargetTask extends UpdateAttackTargetTask<AbstractLoosejawEntity> {
 
     public static final Function<MobEntity, Optional<LivingEntity>> HURT_BY_GETTER = mobEntity -> mobEntity.getBrain().getOptionalMemory(HURT_BY_ENTITY);
 
@@ -23,7 +23,7 @@ public class LightableUpdateAttackTargetTask extends UpdateAttackTargetTask<Abst
 
     public static final Function<AbstractLoosejawEntity, Optional<? extends LivingEntity>> HURT_BY_EXCEPT_OWNER_GETTER = mobEntity -> HURT_BY_EXCLUDE_CREATIVE_PLAYER_GETTER.apply(mobEntity).filter(Predicate.not(mobEntity::isOwner));
 
-    public LightableUpdateAttackTargetTask(Function<AbstractLoosejawEntity, Optional<? extends LivingEntity>> targetGetter) {
+    public LoosejawUpdateAttackTargetTask(Function<AbstractLoosejawEntity, Optional<? extends LivingEntity>> targetGetter) {
         super(targetGetter);
     }
 

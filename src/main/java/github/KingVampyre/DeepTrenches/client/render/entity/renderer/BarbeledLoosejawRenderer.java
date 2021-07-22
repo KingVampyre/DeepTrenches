@@ -9,75 +9,76 @@ import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.BarbeledLoosejawModel.MODEL;
 
 public class BarbeledLoosejawRenderer extends NoCullingEntityRenderer<BarbeledLoosejawEntity> {
 
 	private static final RenderLayer[] ATLANTIC_BARBELED_LOOSEJAW = {
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/all_lit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/all_unlit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_and_lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_and_suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/suborbital_and_lure_layer.png")
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/all_lit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/all_unlit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_and_lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_and_suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/suborbital_and_lure_layer.png"))
 	};
 
 	private static final RenderLayer[] GLOWING_BARBELED_LOOSEJAW = {
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/glowing/all_lit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/glowing/all_unlit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_and_lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_and_suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/glowing/lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/glowing/suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/glowing/suborbital_and_lure_layer.png")
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/all_lit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/all_unlit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_and_lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_and_suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/suborbital_and_lure_layer.png"))
 	};
 
 	private static final RenderLayer[] GRIMALDIS_BARBELED_LOOSEJAW = {
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/all_lit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/all_unlit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_and_lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_and_suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/suborbital_and_lure_layer.png")
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/all_lit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/all_unlit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_and_lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_and_suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/suborbital_and_lure_layer.png"))
 	};
 
 	private static final RenderLayer[] MANY_RAYED_BARBELED_LOOSEJAW = {
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/all_lit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/all_unlit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_and_lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_and_suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/suborbital_and_lure_layer.png")
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/all_lit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/all_unlit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_and_lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_and_suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/suborbital_and_lure_layer.png"))
 	};
 
 	private static final RenderLayer[] SHINY_BARBELED_LOOSEJAW = {
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/shiny/all_lit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/shiny/all_unlit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_and_lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_and_suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/shiny/lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/shiny/suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/shiny/suborbital_and_lure_layer.png")
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/all_lit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/all_unlit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_and_lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_and_suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/suborbital_and_lure_layer.png"))
 	};
 
 	private static final RenderLayer[] TITTMANNS_BARBELED_LOOSEJAW = {
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/all_lit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/all_unlit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_and_lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_and_suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/suborbital_and_lure_layer.png")
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/all_lit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/all_unlit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_and_lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_and_suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/suborbital_and_lure_layer.png"))
 	};
 
 	private static final RenderLayer[][] LAYERS = {

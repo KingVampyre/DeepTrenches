@@ -9,7 +9,7 @@ import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 public class SmalltoothDragonfishFinsFeature extends SingleRenderLayerFeature<SmalltoothDragonfishEntity> {
 
-    private static final RenderLayer LAYER = CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/smalltooth_dragonfish/translucent_layer.png");
+    private static final RenderLayer LAYER = CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/translucent_layer.png"));
 
     public SmalltoothDragonfishFinsFeature(IGeoRenderer<SmalltoothDragonfishEntity> renderer, Identifier model) {
         super(renderer, model);

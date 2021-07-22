@@ -12,14 +12,14 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
-public abstract class AngryBugEntity extends BugEntity implements Angerable, Chargable {
+public abstract class AggressiveBugEntity extends BugEntity implements Angerable, Chargable {
+
+    private static final TrackedData<Integer> ANGER = DataTracker.registerData(AggressiveBugEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    private static final TrackedData<Boolean> CHARGING = DataTracker.registerData(AggressiveBugEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     private UUID targetUuid;
 
-    private static final TrackedData<Integer> ANGER = DataTracker.registerData(AngryBugEntity.class, TrackedDataHandlerRegistry.INTEGER);
-    private static final TrackedData<Boolean> CHARGING = DataTracker.registerData(AngryBugEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
-
-    public AngryBugEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+    public AggressiveBugEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 

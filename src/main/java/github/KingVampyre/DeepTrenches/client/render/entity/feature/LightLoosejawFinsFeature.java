@@ -10,12 +10,12 @@ import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 public class LightLoosejawFinsFeature extends SingleRenderLayerFeature<LightLoosejawEntity> {
 
     private static final RenderLayer[] RENDER_LAYERS = {
-            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/biglamp/translucent_layer.png"),
-            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/goodyears/translucent_layer.png"),
-            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/guernes/translucent_layer.png"),
-            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/liems/translucent_layer.png"),
-            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/remarkable_light/translucent_layer.png"),
-            CustomRenderLayer.getFinsLayer("deep_trenches:textures/entity/light_loosejaw/small_light/translucent_layer.png")
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/goodyears/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/guernes/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/liems/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/remarkable_light/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/light_loosejaw/small_light/translucent_layer.png"))
     };
 
     public LightLoosejawFinsFeature(IGeoRenderer<LightLoosejawEntity> renderer, Identifier model) {

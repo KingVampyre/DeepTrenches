@@ -8,7 +8,7 @@ import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Variant;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTask;
 import github.KingVampyre.DeepTrenches.common.entity.ai.task.TamableFishFollowOwnerTask;
 import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
-import github.KingVampyre.DeepTrenches.core.entity.ai.task.LightableUpdateAttackTargetTask;
+import github.KingVampyre.DeepTrenches.core.entity.ai.task.LoosejawUpdateAttackTargetTask;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.brain.Activity;
 import net.minecraft.entity.ai.brain.Brain;
@@ -31,7 +31,7 @@ import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import static github.KingVampyre.DeepTrenches.core.entity.ai.task.LightableUpdateAttackTargetTask.HURT_BY_EXCEPT_OWNER_GETTER;
+import static github.KingVampyre.DeepTrenches.core.entity.ai.task.LoosejawUpdateAttackTargetTask.HURT_BY_EXCEPT_OWNER_GETTER;
 import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.COD_TEMPTING;
 import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.TAMABLE_HURT_BY;
@@ -101,7 +101,7 @@ public abstract class AbstractLoosejawEntity extends TamableFishEntity implement
 
         brain.setTaskList(Activity.IDLE, ImmutableList.of(
                 Pair.of(0, new GoTowardsLookTarget(3.5F, 0)),
-                Pair.of(0, new LightableUpdateAttackTargetTask(HURT_BY_EXCEPT_OWNER_GETTER)),
+                Pair.of(0, new LoosejawUpdateAttackTargetTask(HURT_BY_EXCEPT_OWNER_GETTER)),
                 Pair.of(1, new WaitTask(30, 60)),
                 Pair.of(2, new LoveTask<>(3.0F, 0.9F)),
                 Pair.of(3, new TemptTask(entity -> entity.isInsideWaterOrBubbleColumn() ? 0.5F : 0.15F)),

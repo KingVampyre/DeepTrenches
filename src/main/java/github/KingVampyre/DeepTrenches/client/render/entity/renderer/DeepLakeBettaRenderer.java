@@ -8,16 +8,17 @@ import github.KingVampyre.DeepTrenches.core.entity.DeepLakeBettaEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.DeepLakeBettaModel.MODEL;
 
 public class DeepLakeBettaRenderer extends NoCullingEntityRenderer<DeepLakeBettaEntity> {
 
     private static final RenderLayer[] LAYERS = {
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/deep_lake_betta/all_lit_layer.png"),
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/deep_lake_betta/all_unlit_layer.png"),
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/deep_lake_betta/body_layer.png"),
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/deep_lake_betta/lure_layer.png")
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_lit_layer.png")),
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_unlit_layer.png")),
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/deep_lake_betta/body_layer.png")),
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/deep_lake_betta/lure_layer.png"))
     };
 
     public DeepLakeBettaRenderer(EntityRendererFactory.Context ctx) {

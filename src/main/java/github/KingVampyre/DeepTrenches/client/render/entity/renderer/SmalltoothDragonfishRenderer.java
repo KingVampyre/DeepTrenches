@@ -9,20 +9,21 @@ import github.KingVampyre.DeepTrenches.core.entity.SmalltoothDragonfishEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.SmalltoothDragonfishModel.MODEL;
 
 public class SmalltoothDragonfishRenderer extends NoCullingEntityRenderer<SmalltoothDragonfishEntity> {
 
 	private static final RenderLayer[] LAYERS = {
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/smalltooth_dragonfish/all_lit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/smalltooth_dragonfish/all_unlit_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/smalltooth_dragonfish/flank_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/smalltooth_dragonfish/flank_and_lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/smalltooth_dragonfish/flank_and_suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/smalltooth_dragonfish/lure_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/smalltooth_dragonfish/suborbital_layer.png"),
-			CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/smalltooth_dragonfish/suborbital_and_lure_layer.png")
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/all_lit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/all_unlit_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/flank_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/flank_and_lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/flank_and_suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/lure_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/suborbital_layer.png")),
+			CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/suborbital_and_lure_layer.png"))
 	};
 
 	public SmalltoothDragonfishRenderer(EntityRendererFactory.Context ctx) {

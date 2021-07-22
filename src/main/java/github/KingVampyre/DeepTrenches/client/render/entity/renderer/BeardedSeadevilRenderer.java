@@ -7,16 +7,17 @@ import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEn
 import github.KingVampyre.DeepTrenches.core.entity.BeardedSeadevilEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
+import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.BeardedSeadevilModel.MODEL;
 
 public class BeardedSeadevilRenderer extends NoCullingEntityRenderer<BeardedSeadevilEntity> {
 
     private static final RenderLayer[] LAYERS = {
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/bearded_seadevil/all_lit_layer.png"),
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/bearded_seadevil/all_unlit_layer.png"),
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/bearded_seadevil/beard_layer.png"),
-            CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/bearded_seadevil/lure_layer.png")
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/bearded_seadevil/all_lit_layer.png")),
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/bearded_seadevil/all_unlit_layer.png")),
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/bearded_seadevil/beard_layer.png")),
+            CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/bearded_seadevil/lure_layer.png"))
     };
 
     public BeardedSeadevilRenderer(EntityRendererFactory.Context ctx) {

@@ -1,31 +1,44 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.feature;
 
 import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
-import github.KingVampyre.DeepTrenches.common.render.entity.feature.SingleRenderLayerFeature;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
+import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
 import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
-public class StaspAntennasLayerFeature extends SingleRenderLayerFeature<StaspEntity> {
+import static github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel.MODEL;
 
-    private static final RenderLayer BRIGHT_BLACK_STASP_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/stasp/black_stasp/antennas.png");
-    private static final RenderLayer BRIGHT_STASP_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture("deep_trenches:textures/entity/stasp/antennas.png");
+public class StaspAntennasLayerFeature extends GeoLayerRenderer<StaspEntity> {
 
-    private static final RenderLayer BLACK_STASP_ANTENNAS = RenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/stasp/black_stasp/antennas.png"));
-    private static final RenderLayer STASP_ANTENNAS = RenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/stasp/antennas.png"));
+    private static final RenderLayer BRIGHT_BLACK_STASP_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/stasp/black_stasp/antennas.png"));
+    private static final RenderLayer BRIGHT_STASP_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/stasp/antennas.png"));
 
-    public StaspAntennasLayerFeature(IGeoRenderer<StaspEntity> renderer, Identifier model) {
-        super(renderer, model);
+    private static final RenderLayer BLACK_STASP_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/stasp/black_stasp/antennas.png"));
+    private static final RenderLayer STASP_ANTENNAS = CustomRenderLayer.getEyes(new Identifier("deep_trenches:textures/entity/stasp/antennas.png"));
+
+    private final IGeoRenderer<StaspEntity> renderer;
+
+    public StaspAntennasLayerFeature(IGeoRenderer<StaspEntity> renderer) {
+        super(renderer);
+
+        this.renderer = renderer;
     }
 
     @Override
-    protected RenderLayer getRenderLayer(StaspEntity living) {
+    public void render(MatrixStack matrixStackIn, VertexConsumerProvider bufferIn, int packedLightIn, StaspEntity living, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+        this.renderer.render(this.getEntityModel().getModel(MODEL), living, partialTicks, STASP_ANTENNAS, matrixStackIn, bufferIn, bufferIn.getBuffer(STASP_ANTENNAS), 15728880, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+    }
+
+    /*protected RenderLayer getRenderLayer(StaspEntity living) {
 
         if(living.getVariant() != 0)
             return living.isInvisible() ? STASP_ANTENNAS : BRIGHT_STASP_ANTENNAS;
 
         return living.isInvisible() ? BLACK_STASP_ANTENNAS : BRIGHT_BLACK_STASP_ANTENNAS;
-    }
+    }*/
 
 }

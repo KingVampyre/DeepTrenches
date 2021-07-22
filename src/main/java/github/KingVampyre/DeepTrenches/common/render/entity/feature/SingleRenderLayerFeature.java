@@ -25,17 +25,21 @@ public abstract class SingleRenderLayerFeature<T extends LivingEntity & IAnimata
 
     protected abstract RenderLayer getRenderLayer(T living);
 
-    protected GeoModel getModel(T living) {
+    protected GeoModel getModel() {
         return this.getEntityModel().getModel(this.model);
     }
 
     @Override
     public void render(MatrixStack matrixStackIn, VertexConsumerProvider bufferIn, int packedLightIn, T living, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         RenderLayer layer = this.getRenderLayer(living);
-        GeoModel model = this.getModel(living);
+        GeoModel model = this.getModel();
 
-        if(layer != null)
-            this.renderer.render(model, living, partialTicks, layer, matrixStackIn, bufferIn, bufferIn.getBuffer(layer), packedLightIn, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+        if(layer != null) {
+            matrixStackIn.push();
+            this.renderer.render(model, living, partialTicks, layer, matrixStackIn, bufferIn, bufferIn.getBuffer(layer), 15728880, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+            matrixStackIn.pop();
+        }
+
     }
 
 }
