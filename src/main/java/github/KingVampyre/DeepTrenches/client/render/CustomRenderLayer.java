@@ -18,24 +18,14 @@ public class CustomRenderLayer extends RenderLayer {
 
         return new RenderLayer.MultiPhase("deep_trenches:bright_overlay", POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, QUADS, 256, false, false,
                 RenderLayer.MultiPhaseParameters.builder()
-                        .shader(ENERGY_SWIRL_SHADER)
-                        .texture(renderPhase)
-                        .transparency(TRANSLUCENT_TRANSPARENCY)
-                        .lightmap(ENABLE_LIGHTMAP)
-                        .overlay(DISABLE_OVERLAY_COLOR)
-                        .cull(DISABLE_CULLING)
-                        .layering(VIEW_OFFSET_Z_LAYERING)
-                        .build(true)
-        );
-        /*var renderPhase = new RenderPhase.Texture(texture, false, false);
-
-        return new RenderLayer.MultiPhase("deep_trenches:bright_overlay", POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, QUADS, 256, false, true,
-                RenderLayer.MultiPhaseParameters.builder()
-                        .shader(EYES_SHADER)
+                        .shader(ENTITY_SMOOTH_CUTOUT_SHADER)
                         .texture(renderPhase)
                         .transparency(ADDITIVE_TRANSPARENCY)
-                        .writeMaskState(COLOR_MASK)
-                        .build(false));*/
+                        .overlay(ENABLE_OVERLAY_COLOR)
+                        .lightmap(ENABLE_LIGHTMAP)
+                        .cull(DISABLE_CULLING)
+                        .build(true)
+        );
     });
 
     protected static final Function<Identifier, RenderLayer> LOOSEJAW_FINS = Util.memoize(texture -> {

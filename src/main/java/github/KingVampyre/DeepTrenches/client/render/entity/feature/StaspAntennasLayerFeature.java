@@ -17,8 +17,8 @@ public class StaspAntennasLayerFeature extends GeoLayerRenderer<StaspEntity> {
     private static final RenderLayer BRIGHT_BLACK_STASP_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/stasp/black_stasp/antennas.png"));
     private static final RenderLayer BRIGHT_STASP_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/stasp/antennas.png"));
 
-    private static final RenderLayer BLACK_STASP_ANTENNAS = CustomRenderLayer.getBrightOverlayTexture(new Identifier("deep_trenches:textures/entity/stasp/black_stasp/antennas.png"));
-    private static final RenderLayer STASP_ANTENNAS = CustomRenderLayer.getEyes(new Identifier("deep_trenches:textures/entity/stasp/antennas.png"));
+    private static final RenderLayer BLACK_STASP_ANTENNAS = CustomRenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/stasp/black_stasp/antennas.png"));
+    private static final RenderLayer STASP_ANTENNAS = CustomRenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/stasp/antennas.png"));
 
     private final IGeoRenderer<StaspEntity> renderer;
 
@@ -30,15 +30,17 @@ public class StaspAntennasLayerFeature extends GeoLayerRenderer<StaspEntity> {
 
     @Override
     public void render(MatrixStack matrixStackIn, VertexConsumerProvider bufferIn, int packedLightIn, StaspEntity living, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.renderer.render(this.getEntityModel().getModel(MODEL), living, partialTicks, STASP_ANTENNAS, matrixStackIn, bufferIn, bufferIn.getBuffer(STASP_ANTENNAS), 15728880, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+        var layer = this.getRenderLayer(living);
+
+        this.renderer.render(this.getEntityModel().getModel(MODEL), living, partialTicks, layer, matrixStackIn, bufferIn, bufferIn.getBuffer(layer), 15728880, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
     }
 
-    /*protected RenderLayer getRenderLayer(StaspEntity living) {
+    protected RenderLayer getRenderLayer(StaspEntity living) {
 
         if(living.getVariant() != 0)
             return living.isInvisible() ? STASP_ANTENNAS : BRIGHT_STASP_ANTENNAS;
 
         return living.isInvisible() ? BLACK_STASP_ANTENNAS : BRIGHT_BLACK_STASP_ANTENNAS;
-    }*/
+    }
 
 }
