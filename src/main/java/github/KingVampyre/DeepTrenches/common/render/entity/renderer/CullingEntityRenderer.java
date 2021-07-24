@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.common.render.entity.renderer;
 
+import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -11,17 +12,18 @@ import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
-public class NoCullingEntityRenderer<T extends LivingEntity & IAnimatable> extends GeoEntityRenderer<T> {
+public class CullingEntityRenderer<T extends LivingEntity & IAnimatable> extends GeoEntityRenderer<T> {
 
-    public NoCullingEntityRenderer(EntityRendererFactory.Context ctx, AnimatedGeoModel<T> modelProvider) {
+    public CullingEntityRenderer(EntityRendererFactory.Context ctx, AnimatedGeoModel<T> modelProvider) {
         super(ctx, modelProvider);
     }
 
     @Override
     public RenderLayer getRenderType(T animatable, float partialTicks, MatrixStack stack, VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, Identifier textureLocation) {
         var texture = this.getTextureLocation(animatable);
+        var isInvisible = animatable.isInvisible();
 
-        return RenderLayer.getEntityTranslucent(texture);
+        return CustomRenderLayer.getInvisible(texture, isInvisible);
     }
 
 }

@@ -1,17 +1,17 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.feature;
 
 import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
-import github.KingVampyre.DeepTrenches.common.render.entity.feature.SingleRenderLayerFeature;
+import github.KingVampyre.DeepTrenches.common.render.entity.feature.LoosejawFinsLayerRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BlackLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
-public class BlackLoosejawFinsFeature extends SingleRenderLayerFeature<BlackLoosejawEntity> {
+public class BlackLoosejawFinsFeature extends LoosejawFinsLayerRenderer<BlackLoosejawEntity> {
 
     private static final RenderLayer[] RENDER_LAYERS = {
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/translucent_layer.png")),
-            CustomRenderLayer.getLoosejawFinsLayer(new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/translucent_layer.png"))
+            CustomRenderLayer.getLoosejawFins(new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/translucent_layer.png")),
+            CustomRenderLayer.getLoosejawFins(new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/translucent_layer.png"))
     };
 
     public BlackLoosejawFinsFeature(IGeoRenderer<BlackLoosejawEntity> renderer, Identifier model) {

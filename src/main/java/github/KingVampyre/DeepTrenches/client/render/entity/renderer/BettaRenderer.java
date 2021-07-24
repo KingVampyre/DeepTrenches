@@ -1,12 +1,12 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import github.KingVampyre.DeepTrenches.client.render.entity.model.BettaModel;
-import github.KingVampyre.DeepTrenches.common.render.entity.renderer.NoCullingEntityRenderer;
+import github.KingVampyre.DeepTrenches.common.render.entity.renderer.CullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BettaEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 
-public class BettaRenderer extends NoCullingEntityRenderer<BettaEntity> {
+public class BettaRenderer extends CullingEntityRenderer<BettaEntity> {
 
     public BettaRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new BettaModel());
