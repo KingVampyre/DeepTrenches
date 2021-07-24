@@ -33,7 +33,7 @@ public class CustomRenderLayer extends RenderLayer {
     protected static final BiFunction<Identifier, Boolean, RenderLayer> INVISIBLE = Util.memoize((texture, isInvisible) -> {
         var renderPhase = new RenderPhase.Texture(texture, false, false);
 
-        return new RenderLayer.MultiPhase("deep_trenches:stasp", POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, QUADS, 256, true, true,
+        return new RenderLayer.MultiPhase("deep_trenches:invisible", POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL, QUADS, 256, true, true,
                 RenderLayer.MultiPhaseParameters.builder()
                         .cull(DISABLE_CULLING)
                         .lightmap(ENABLE_LIGHTMAP)
@@ -72,7 +72,7 @@ public class CustomRenderLayer extends RenderLayer {
         return LOOSEJAW_FINS.apply(texture);
     }
 
-    public static RenderLayer getStaspAntennas(Identifier texture) {
+    public static RenderLayer getBrightOverlay(Identifier texture) {
         return STASP_ANTENNAS.apply(texture);
     }
 

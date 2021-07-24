@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
 import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
-import github.KingVampyre.DeepTrenches.client.render.entity.feature.StaspAntennasLayerRenderer;
+import github.KingVampyre.DeepTrenches.client.render.entity.feature.StaspAntennasLayer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.StaspModel;
 import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
 import net.minecraft.client.render.RenderLayer;
@@ -18,7 +18,7 @@ public class StaspRenderer extends GeoEntityRenderer<StaspEntity> {
 		super(ctx, new StaspModel());
 
 		this.shadowRadius = 0.375F;
-		this.addLayer(new StaspAntennasLayerRenderer(this));
+		this.addLayer(new StaspAntennasLayer(this));
 	}
 
 	@Override

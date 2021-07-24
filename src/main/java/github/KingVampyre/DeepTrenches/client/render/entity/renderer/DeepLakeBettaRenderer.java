@@ -1,31 +1,25 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.renderer;
 
-import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
 import github.KingVampyre.DeepTrenches.client.render.entity.model.DeepLakeBettaModel;
-import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminousLayerFeature;
 import github.KingVampyre.DeepTrenches.common.render.entity.renderer.CullingEntityRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.DeepLakeBettaEntity;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
-import static github.KingVampyre.DeepTrenches.client.render.entity.model.DeepLakeBettaModel.MODEL;
-
 public class DeepLakeBettaRenderer extends CullingEntityRenderer<DeepLakeBettaEntity> {
 
-    private static final RenderLayer[] LAYERS = {
-            CustomRenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_lit_layer.png")),
-            CustomRenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_unlit_layer.png")),
-            CustomRenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/deep_lake_betta/body_layer.png")),
-            CustomRenderLayer.getEntityCutout(new Identifier("deep_trenches:textures/entity/deep_lake_betta/lure_layer.png"))
+    private static final Identifier[] TEXTURES = {
+            new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_lit_layer.png"),
+            new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_unlit_layer.png"),
+            new Identifier("deep_trenches:textures/entity/deep_lake_betta/body_layer.png"),
+            new Identifier("deep_trenches:textures/entity/deep_lake_betta/lure_layer.png")
     };
 
     public DeepLakeBettaRenderer(EntityRendererFactory.Context ctx) {
 	    super(ctx, new DeepLakeBettaModel());
 
 	    this.shadowRadius = 0.35F;
-        this.addLayer(new LuminousLayerFeature<>(this, MODEL, LAYERS));
     }
 
     @Override
