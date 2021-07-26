@@ -16,7 +16,7 @@ import static net.minecraft.util.registry.Registry.MEMORY_MODULE_TYPE;
 
 public class MemoryModuleTypes {
 
-    public static final MemoryModuleType<Integer> ANGER;
+    public static final MemoryModuleType<Integer> ANGRY_TICKS;
     public static final MemoryModuleType<Integer> BREEDING_AGE;
     public static final MemoryModuleType<LivingEntity> BREEDING_TARGET;
     public static final MemoryModuleType<Integer> FORCED_AGE;
@@ -37,7 +37,7 @@ public class MemoryModuleTypes {
     }
 
     static {
-        ANGER = createMemoryModule("deep_trenches:anger", INT);
+        ANGRY_TICKS = createMemoryModule("deep_trenches:angry_ticks", INT);
         BREEDING_AGE = createMemoryModule("deep_trenches:breeding_age", INT);
         BREEDING_TARGET = createMemoryModule("breeding_target");
         FORCED_AGE = createMemoryModule("deep_trenches:forced_age", INT);

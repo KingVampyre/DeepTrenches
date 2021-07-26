@@ -22,8 +22,6 @@ public class StaspNavigation extends BirdNavigation {
 
     @Override
     public void tick() {
-        StaspEntity stasp = (StaspEntity) this.entity;
-
         // TODO if is not pollinating
         super.tick();
     }

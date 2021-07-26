@@ -12,6 +12,8 @@ accessible field net/minecraft/block/SaplingBlock                   generator   
 accessible field net/minecraft/client/world/ClientWorld             colorCache          Lit/unimi/dsi/fastutil/objects/Object2ObjectArrayMap;
 accessible field net/minecraft/entity/effect/StatusEffectInstance   type                Lnet/minecraft/entity/effect/StatusEffect;
 
+accessible field net/minecraft/entity/ai/brain/task/UpdateAttackTargetTask targetGetter    Ljava/util/function/Function;
+
 accessible field net/minecraft/world/gen/chunk/ChunkGenerator      populationSource             Lnet/minecraft/world/biome/source/BiomeSource;
 accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator deepslateSource              Lnet/minecraft/world/gen/BlockSource;
 accessible field net/minecraft/world/gen/chunk/NoiseChunkGenerator edgeDensityNoise             Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler;

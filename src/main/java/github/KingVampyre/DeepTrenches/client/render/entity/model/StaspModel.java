@@ -10,7 +10,7 @@ public class StaspModel extends AnimatedGeoModel<StaspEntity> {
             new Identifier("deep_trenches:textures/entity/stasp/black_stasp/angry/black_stasp.png"),
             new Identifier("deep_trenches:textures/entity/stasp/blue_winged_stasp/angry/blue_winged_stasp.png"),
             new Identifier("deep_trenches:textures/entity/stasp/fuchsitra_stasp/angry/fuchsitra_stasp.png"),
-            new Identifier("deep_trenches:textures/entity/stasp/orange_winged_stasp/orange_winged_stasp.png")
+            new Identifier("deep_trenches:textures/entity/stasp/orange_winged_stasp/angry/orange_winged_stasp.png")
     };
 
     private static final Identifier[] ANGRY_WITH_AQUEAN_SAP = {
@@ -62,18 +62,10 @@ public class StaspModel extends AnimatedGeoModel<StaspEntity> {
 
     @Override
     public Identifier getTextureLocation(StaspEntity object) {
-        /*
-        TODO
-        StaspPollenComponent pollen = (StaspPollenComponent) POLLEN.get(object);
-
-        if(object.hasAngerTime())
-            return pollen.hasAqueanSap() ? ANGRY_WITH_AQUEAN_SAP[type] : pollen.hasPollen() ? ANGRY_WITH_POLLEN[type] : ANGRY_TEXTURES[type];
-
-        return pollen.hasAqueanSap() ? WITH_AQUEAN_SAP[type] : pollen.hasPollen() ? WITH_POLLEN[type] : TEXTURES[type];
-        */
+        // TODO POLLEN & SAP TEXTURES
         int type = object.getVariant();
 
-        return TEXTURES[type];
+        return object.hasAngerTime() ? ANGRY_TEXTURES[type] : TEXTURES[type];
     }
 
 }

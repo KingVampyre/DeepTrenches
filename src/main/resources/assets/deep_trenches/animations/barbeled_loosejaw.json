@@ -270,7 +270,7 @@
 				}
 			}
 		},
-		"swimming_speedboost": {
+		"swimming_speed_boost": {
 			"loop": true,
 			"animation_length": 0.08,
 			"bones": {

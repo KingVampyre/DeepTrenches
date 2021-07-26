@@ -132,11 +132,10 @@ public class DefaultAttributeHelper {
 
     public static DefaultAttributeContainer.Builder createStaspAttributes() {
         return MobEntity.createMobAttributes()
-                .add(GENERIC_ARMOR, 5F)
                 .add(GENERIC_FOLLOW_RANGE, 48F)
                 .add(GENERIC_MAX_HEALTH, 10F)
                 .add(GENERIC_ATTACK_DAMAGE, 3F)
-                .add(GENERIC_FLYING_SPEED, 0.175F)
+                .add(GENERIC_FLYING_SPEED, 1.85F)
                 .add(GENERIC_MOVEMENT_SPEED, 0.2F);
     }
 

@@ -1,7 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.entity;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Dynamic;
@@ -9,7 +8,8 @@ import github.KingVampyre.DeepTrenches.common.entity.FlyingHangBugEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.control.AngerLookControl;
 import github.KingVampyre.DeepTrenches.core.entity.ai.control.StaspFlightMoveControl;
 import github.KingVampyre.DeepTrenches.core.entity.ai.pathing.StaspNavigation;
-import github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes;
+import github.KingVampyre.DeepTrenches.core.entity.ai.task.ForgetAngryAtTask;
+import github.KingVampyre.DeepTrenches.core.entity.ai.task.UpdateAngryAtTask;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.brain.Brain;
 import net.minecraft.entity.ai.brain.MemoryModuleType;
@@ -28,28 +28,24 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.ANGER;
+import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.ANGRY_TICKS;
 import static net.minecraft.entity.ai.brain.Activity.*;
-import static net.minecraft.entity.ai.brain.MemoryModuleState.VALUE_ABSENT;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
-import static net.minecraft.entity.ai.brain.sensor.SensorType.HURT_BY;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
-import static net.minecraft.entity.ai.brain.task.CompositeTask.Order.ORDERED;
-import static net.minecraft.entity.ai.brain.task.CompositeTask.RunMode.TRY_ALL;
 
 public class StaspEntity extends FlyingHangBugEntity {
 
-	private static final UniformIntProvider ANGER_TIME_RANGE = UniformIntProvider.create(10, 15);
+	private static final UniformIntProvider ANGER_TIME_RANGE = UniformIntProvider.create(200, 300);
 
 	private static final ImmutableList<? extends SensorType<? extends Sensor<? super StaspEntity>>> SENSORS = ImmutableList.of(
-			NEAREST_LIVING_ENTITIES, HURT_BY
+			SensorType.HURT_BY, NEAREST_LIVING_ENTITIES
 	);
 
 	private static final ImmutableList<? extends MemoryModuleType<?>> MEMORY_MODULES = ImmutableList.of(
-			MemoryModuleTypes.ANGER, ANGRY_AT, UNIVERSAL_ANGER,
+			ANGRY_TICKS, ANGRY_AT, UNIVERSAL_ANGER,
 			MOBS, VISIBLE_MOBS, NEAREST_VISIBLE_PLAYER, NEAREST_VISIBLE_TARGETABLE_PLAYER,
 			LOOK_TARGET, WALK_TARGET, CANT_REACH_WALK_TARGET_SINCE, PATH, ATTACK_TARGET,
-			ATTACK_COOLING_DOWN, NEAREST_VISIBLE_ADULT, HURT_BY_ENTITY, NEAREST_ATTACKABLE
+			ATTACK_COOLING_DOWN, NEAREST_VISIBLE_ADULT, HURT_BY, HURT_BY_ENTITY, NEAREST_ATTACKABLE
 	);
 
 	public StaspEntity(EntityType<? extends FlyingHangBugEntity> entityType, World world) {
@@ -90,25 +86,23 @@ public class StaspEntity extends FlyingHangBugEntity {
 	protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
 		var brain = this.createBrainProfile().deserialize(dynamic);
 
+		// TODO ADD PANIC TO WATER AND RAIN
 		brain.setTaskList(FIGHT, 0, ImmutableList.of(
-				new ForgetAttackTargetTask<>(),
-				new RangedApproachTask(0.15F),
+				new ForgetAngryAtTask<>(),
+				new RangedApproachTask(2.25F),
 				new MeleeAttackTask(20)),
 				ATTACK_TARGET);
 
 		brain.setTaskList(CORE, 0, ImmutableList.of(
-				new ForgetAngryAtTargetTask<>(),
 				new LookAroundTask(45, 90),
-				new WanderAroundTask()
+				new WanderAroundTask(100, 250)
 		));
 
 		brain.setTaskList(IDLE, ImmutableList.of(
-				Pair.of(3, new UpdateAttackTargetTask<>(stasp -> true, this::getPreferredTarget)),
-				Pair.of(4, new CompositeTask<>(ImmutableMap.of(WALK_TARGET, VALUE_ABSENT), ImmutableSet.of(), ORDERED, TRY_ALL, ImmutableList.of(
-						Pair.of(new StrollTask(0.15F, false), 2),
-						Pair.of(new GoTowardsLookTarget(0.15F, 3), 3),
-						Pair.of(new ConditionalTask<>(Entity::isOnGround, new WaitTask(200, 400)), 5)))
-				)
+				Pair.of(0, new UpdateAngryAtTask<>(this::getPreferredTarget)),
+				Pair.of(2, new StrollTask(2.25F, false)),
+				Pair.of(2, new GoTowardsLookTarget(2.25F, 3)),
+				Pair.of(3, new ConditionalTask<>(Entity::isOnGround, new WaitTask(200, 400)))
 		));
 
 		brain.setCoreActivities(ImmutableSet.of(CORE));
@@ -118,9 +112,9 @@ public class StaspEntity extends FlyingHangBugEntity {
 		return brain;
 	}
 
-	private Optional<? extends LivingEntity> getPreferredTarget(StaspEntity stasp) {
-		var angryAt = LookTargetUtil.getEntity(stasp, ANGRY_AT);
+	protected Optional<? extends LivingEntity> getPreferredTarget(StaspEntity stasp) {
 		var brain = stasp.getBrain();
+		var angryAt = brain.getOptionalMemory(HURT_BY_ENTITY);
 
 		if (angryAt.isPresent()) {
 			var living = angryAt.get();
@@ -162,7 +156,7 @@ public class StaspEntity extends FlyingHangBugEntity {
 		server.getProfiler().pop();
 
 		if (!this.isAiDisabled()) {
-			var anger = brain.getOptionalMemory(ANGER).orElse(0);
+			var anger = brain.getOptionalMemory(ANGRY_TICKS).orElse(0);
 			var uuid = brain.getOptionalMemory(ANGRY_AT).orElse(null);
 
 			this.setAngerTime(anger);
