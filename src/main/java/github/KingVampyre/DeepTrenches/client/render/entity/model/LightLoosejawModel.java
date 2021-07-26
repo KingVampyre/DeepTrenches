@@ -12,53 +12,56 @@ public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
 
     private static final Identifier[] BIGLAMP_LIGHT_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/flank.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/lure.png"),
     };
 
     private static final Identifier[] GOODYEARS_LIGHT_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/light_loosejaw/goodyears/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/light_loosejaw/goodyears/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/goodyears/flank.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/goodyears/lure.png"),
     };
 
     private static final Identifier[] GUERNES_LIGHT_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/light_loosejaw/guernes/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/light_loosejaw/guernes/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/guernes/flank.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/guernes/lure.png"),
     };
 
     private static final Identifier[] LIEMS_LIGHT_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/light_loosejaw/liems/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/light_loosejaw/liems/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/liems/flank.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/liems/lure.png"),
     };
 
     private static final Identifier[] REMARKABLE_LIGHT_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/light_loosejaw/remarkable_light/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/light_loosejaw/remarkable_light/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/remarkable_light/flank.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/remarkable_light/lure.png"),
     };
 
     private static final Identifier[] SMALL_LIGHT_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/light_loosejaw/small_light/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/light_loosejaw/small_light/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/small_light/flank.png"),
             new Identifier("deep_trenches:textures/entity/light_loosejaw/small_light/lure.png"),
     };
 
-    private static final Identifier[][] TEXTURES = {
+    private static final Identifier[][] LIT_TEXTURES = {
             BIGLAMP_LIGHT_LOOSEJAW,
             GOODYEARS_LIGHT_LOOSEJAW,
             GUERNES_LIGHT_LOOSEJAW,
             LIEMS_LIGHT_LOOSEJAW,
             REMARKABLE_LIGHT_LOOSEJAW,
             SMALL_LIGHT_LOOSEJAW
+    };
+
+    private static final Identifier[] UNLIT_TEXTURES = {
+            new Identifier("deep_trenches:textures/entity/light_loosejaw/biglamp/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/light_loosejaw/goodyears/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/light_loosejaw/guernes/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/light_loosejaw/liems/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/light_loosejaw/remarkable_light/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/light_loosejaw/small_light/all_unlit.png"),
     };
 
     @Override
@@ -74,9 +77,9 @@ public class LightLoosejawModel extends AnimatedGeoModel<LightLoosejawEntity> {
     @Override
     public Identifier getTextureLocation(LightLoosejawEntity object) {
         int index = object.getLightStateIndex();
-        int type = object.getVariant();
+        int variant = object.getVariant();
 
-        return TEXTURES[type][index];
+        return object.isLit() ? LIT_TEXTURES[variant][index] : UNLIT_TEXTURES[variant];
     }
 
     @Override

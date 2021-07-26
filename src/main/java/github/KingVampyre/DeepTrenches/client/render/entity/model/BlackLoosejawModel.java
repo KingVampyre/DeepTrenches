@@ -12,7 +12,6 @@ public class BlackLoosejawModel extends AnimatedGeoModel<BlackLoosejawEntity> {
 
     private static final Identifier[] NORTHERN_BLACK_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/flank.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/flank_and_lure.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/flank_and_suborbital.png"),
@@ -23,7 +22,6 @@ public class BlackLoosejawModel extends AnimatedGeoModel<BlackLoosejawEntity> {
 
     private static final Identifier[] SOUTHERN_BLACK_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank_and_lure.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank_and_suborbital.png"),
@@ -32,9 +30,14 @@ public class BlackLoosejawModel extends AnimatedGeoModel<BlackLoosejawEntity> {
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/suborbital_and_lure.png")
     };
 
-    private static final Identifier[][] TEXTURES = {
+    private static final Identifier[][] LIT_TEXTURES = {
             NORTHERN_BLACK_LOOSEJAW,
             SOUTHERN_BLACK_LOOSEJAW
+    };
+
+    private static final Identifier[] UNLIT_TEXTURES = {
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/all_unlit.png")
     };
 
     @Override
@@ -49,7 +52,9 @@ public class BlackLoosejawModel extends AnimatedGeoModel<BlackLoosejawEntity> {
 
     @Override
     public Identifier getTextureLocation(BlackLoosejawEntity object) {
-        return TEXTURES[object.getVariant()][object.getLightStateIndex()];
+        var variant = object.getVariant();
+
+        return object.isLit() ? LIT_TEXTURES[variant][object.getLightStateIndex()] : UNLIT_TEXTURES[variant];
     }
 
     @Override

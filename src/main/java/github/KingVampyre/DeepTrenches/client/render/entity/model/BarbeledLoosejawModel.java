@@ -12,7 +12,6 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
 
     private static final Identifier[] ATLANTIC_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_and_lure.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_and_suborbital.png"),
@@ -23,7 +22,6 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
 
     private static final Identifier[] GLOWING_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_and_lure.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_and_suborbital.png"),
@@ -34,7 +32,6 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
 
     private static final Identifier[] GRIMALDIS_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_and_lure.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_and_suborbital.png"),
@@ -45,7 +42,6 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
 
     private static final Identifier[] MANY_RAYED_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_and_lure.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_and_suborbital.png"),
@@ -56,7 +52,6 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
 
     private static final Identifier[] SHINY_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_and_lure.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_and_suborbital.png"),
@@ -67,7 +62,6 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
 
     private static final Identifier[] TITTMANNS_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_and_lure.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_and_suborbital.png"),
@@ -76,13 +70,22 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/suborbital_and_lure.png")
     };
 
-    private static final Identifier[][] TEXTURES = {
+    private static final Identifier[][] LIT_TEXTURES = {
             ATLANTIC_BARBELED_LOOSEJAW,
             GLOWING_BARBELED_LOOSEJAW,
             GRIMALDIS_BARBELED_LOOSEJAW,
             MANY_RAYED_BARBELED_LOOSEJAW,
             SHINY_BARBELED_LOOSEJAW,
             TITTMANNS_BARBELED_LOOSEJAW
+    };
+
+    private static final Identifier[] UNLIT_TEXTURES = {
+            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/all_unlit.png"),
+            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/all_unlit.png"),
     };
 
     @Override
@@ -98,9 +101,9 @@ public class BarbeledLoosejawModel extends AnimatedGeoModel<BarbeledLoosejawEnti
     @Override
     public Identifier getTextureLocation(BarbeledLoosejawEntity object) {
         int index = object.getLightStateIndex();
-        int type = object.getVariant();
+        int variant = object.getVariant();
 
-        return TEXTURES[type][index];
+        return object.isLit() ? LIT_TEXTURES[variant][index] : UNLIT_TEXTURES[variant];
     }
 
     @Override

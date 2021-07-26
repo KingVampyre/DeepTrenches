@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.feature;
 
 import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
-import github.KingVampyre.DeepTrenches.common.render.entity.feature.DoubleLayerRenderer;
+import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminusLayerRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BarbeledLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
@@ -10,11 +10,10 @@ import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.BarbeledLoosejawModel.MODEL;
 
-public class BarbeledLoosejawLayer extends DoubleLayerRenderer<BarbeledLoosejawEntity> {
+public class BarbeledLoosejawLayer extends LuminusLayerRenderer<BarbeledLoosejawEntity> {
 
     private static final Identifier[] ATLANTIC_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/all_lit_layer.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/all_unlit_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_and_lure_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/atlantic/flank_and_suborbital_layer.png"),
@@ -25,7 +24,6 @@ public class BarbeledLoosejawLayer extends DoubleLayerRenderer<BarbeledLoosejawE
 
     private static final Identifier[] GLOWING_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/all_lit_layer.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/all_unlit_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_and_lure_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/glowing/flank_and_suborbital_layer.png"),
@@ -36,7 +34,6 @@ public class BarbeledLoosejawLayer extends DoubleLayerRenderer<BarbeledLoosejawE
 
     private static final Identifier[] GRIMALDIS_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/all_lit_layer.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/all_unlit_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_and_lure_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/grimaldis/flank_and_suborbital_layer.png"),
@@ -47,7 +44,6 @@ public class BarbeledLoosejawLayer extends DoubleLayerRenderer<BarbeledLoosejawE
 
     private static final Identifier[] MANY_RAYED_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/all_lit_layer.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/all_unlit_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_and_lure_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/many_rayed/flank_and_suborbital_layer.png"),
@@ -58,7 +54,6 @@ public class BarbeledLoosejawLayer extends DoubleLayerRenderer<BarbeledLoosejawE
 
     private static final Identifier[] SHINY_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/all_lit_layer.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/all_unlit_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_and_lure_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/shiny/flank_and_suborbital_layer.png"),
@@ -69,7 +64,6 @@ public class BarbeledLoosejawLayer extends DoubleLayerRenderer<BarbeledLoosejawE
 
     private static final Identifier[] TITTMANNS_BARBELED_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/all_lit_layer.png"),
-            new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/all_unlit_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_and_lure_layer.png"),
             new Identifier("deep_trenches:textures/entity/barbeled_loosejaw/tittmanns/flank_and_suborbital_layer.png"),
@@ -111,7 +105,7 @@ public class BarbeledLoosejawLayer extends DoubleLayerRenderer<BarbeledLoosejawE
     }
 
     @Override
-    protected RenderLayer getSecondaryRenderLayer(BarbeledLoosejawEntity living) {
+    protected RenderLayer getLuminusRenderLayer(BarbeledLoosejawEntity living) {
         var index = living.getLightStateIndex();
         var variant = living.getVariant();
 

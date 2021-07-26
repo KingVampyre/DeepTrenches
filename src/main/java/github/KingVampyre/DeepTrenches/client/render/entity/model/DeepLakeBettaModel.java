@@ -8,12 +8,13 @@ public class DeepLakeBettaModel extends AnimatedGeoModel<DeepLakeBettaEntity> {
 
     public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/deep_lake_betta.geo.json");
 
-    private static final Identifier[] TEXTURES = {
+    private static final Identifier[] LIT_TEXTURES = {
             new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/deep_lake_betta/body.png"),
             new Identifier("deep_trenches:textures/entity/deep_lake_betta/lure.png")
     };
+
+    private static final Identifier UNLIT_TEXTURE = new Identifier("deep_trenches:textures/entity/deep_lake_betta/all_unlit.png");
 
     @Override
     public Identifier getAnimationFileLocation(DeepLakeBettaEntity animatable) {
@@ -27,7 +28,7 @@ public class DeepLakeBettaModel extends AnimatedGeoModel<DeepLakeBettaEntity> {
 
     @Override
     public Identifier getTextureLocation(DeepLakeBettaEntity object) {
-        return TEXTURES[object.getLightStateIndex()];
+        return object.isLit() ? LIT_TEXTURES[object.getLightStateIndex()] : UNLIT_TEXTURE;
     }
 
 }

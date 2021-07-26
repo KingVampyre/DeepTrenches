@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.client.render.entity.feature;
 
 import github.KingVampyre.DeepTrenches.client.render.CustomRenderLayer;
-import github.KingVampyre.DeepTrenches.common.render.entity.feature.DoubleLayerRenderer;
+import github.KingVampyre.DeepTrenches.common.render.entity.feature.LuminusLayerRenderer;
 import github.KingVampyre.DeepTrenches.core.entity.BlackLoosejawEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
@@ -10,11 +10,10 @@ import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 import static github.KingVampyre.DeepTrenches.client.render.entity.model.BlackLoosejawModel.MODEL;
 
-public class BlackLoosejawLayer extends DoubleLayerRenderer<BlackLoosejawEntity> {
+public class BlackLoosejawLayer extends LuminusLayerRenderer<BlackLoosejawEntity> {
 
     private static final Identifier[] NORTHERN_BLACK_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/all_lit_layer.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/all_unlit_layer.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/flank_layer.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/flank_and_lure_layer.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/northern/flank_and_suborbital_layer.png"),
@@ -25,7 +24,6 @@ public class BlackLoosejawLayer extends DoubleLayerRenderer<BlackLoosejawEntity>
 
     private static final Identifier[] SOUTHERN_BLACK_LOOSEJAW = {
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/all_lit_layer.png"),
-            new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/all_unlit_layer.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank_layer.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank_and_lure_layer.png"),
             new Identifier("deep_trenches:textures/entity/black_loosejaw/southern/flank_and_suborbital_layer.png"),
@@ -59,7 +57,7 @@ public class BlackLoosejawLayer extends DoubleLayerRenderer<BlackLoosejawEntity>
     }
 
     @Override
-    protected RenderLayer getSecondaryRenderLayer(BlackLoosejawEntity living) {
+    protected RenderLayer getLuminusRenderLayer(BlackLoosejawEntity living) {
         var index = living.getLightStateIndex();
         var variant = living.getVariant();
 

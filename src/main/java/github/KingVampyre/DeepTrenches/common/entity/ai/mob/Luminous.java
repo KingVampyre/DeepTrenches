@@ -3,30 +3,35 @@ package github.KingVampyre.DeepTrenches.common.entity.ai.mob;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.nbt.NbtCompound;
 
+import static github.KingVampyre.DeepTrenches.core.init.LightStates.ALL_UNLIT;
+
 public interface Luminous {
 
-    ImmutableList<LightState> getLightContainer();
+    ImmutableList<LightState> getLightStates();
 
-    default LightState getLightState() {
-        ImmutableList<LightState> container = this.getLightContainer();
-        int state = this.getLightStateIndex();
-
-        return container.get(state);
-    }
-
-    int getLightStateIndex();
+    LightState getLightState();
 
     void setLightState(LightState state);
 
-    default void luminousToNbt(NbtCompound nbt) {
-        int index = this.getLightStateIndex();
+    default int getLightStateIndex() {
+        var container = this.getLightStates();
+        var state = this.getLightState();
 
-        nbt.putInt("LightState", index);
+        return container.indexOf(state);
+    }
+
+    default boolean isLit() {
+        return this.getLightState() != ALL_UNLIT;
+    }
+
+    default void luminousToNbt(NbtCompound nbt) {
+        var state = this.getLightState();
+
+        nbt.putString("LightState", state.toString());
     }
 
     default void luminousFromNbt(NbtCompound nbt) {
-        ImmutableList<LightState> container = this.getLightContainer();
-        LightState state = container.get(nbt.getInt("LightState"));
+        var state = LightState.from(nbt.getString("LightState"));
 
         this.setLightState(state);
     }

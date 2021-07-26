@@ -23,6 +23,8 @@ public class SmalltoothDragonfishEntity extends AbstractLoosejawEntity {
 
     protected static final UniformIntProvider ANGER_TIME_RANGE = UniformIntProvider.create(35, 40);
 
+    private static final ImmutableList<LightState> CONTAINER = ImmutableList.of(ALL_LIT, FLANK, FLANK_AND_LURE, FLANK_AND_SUBORBITAL, LURE, SUBORBITAL, SUBORBITAL_AND_LURE);
+
     public SmalltoothDragonfishEntity(EntityType<? extends SmalltoothDragonfishEntity> type, World world) {
         super(type, world);
     }
@@ -56,8 +58,8 @@ public class SmalltoothDragonfishEntity extends AbstractLoosejawEntity {
     }
 
     @Override
-    public ImmutableList<LightState> getLightContainer() {
-        return ImmutableList.of(ALL_LIT, ALL_UNLIT, FLANK, FLANK_AND_LURE, FLANK_AND_SUBORBITAL, LURE, SUBORBITAL, SUBORBITAL_AND_LURE);
+    public ImmutableList<LightState> getLightStates() {
+        return CONTAINER;
     }
 
     @Override

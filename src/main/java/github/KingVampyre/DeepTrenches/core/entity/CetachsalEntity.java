@@ -17,13 +17,13 @@ public class CetachsalEntity extends WaterCreatureEntity implements IAnimatable,
     }
 
     @Override
-    public ImmutableList<LightState> getLightContainer() {
+    public ImmutableList<LightState> getLightStates() {
         return null;
     }
 
     @Override
-    public int getLightStateIndex() {
-        return 0;
+    public LightState getLightState() {
+        return null;
     }
 
     @Override

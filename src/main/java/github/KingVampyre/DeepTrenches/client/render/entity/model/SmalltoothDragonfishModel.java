@@ -10,9 +10,8 @@ public class SmalltoothDragonfishModel extends AnimatedGeoModel<SmalltoothDragon
 
     public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/smalltooth_dragonfish.geo.json");
 
-    private static final Identifier[] TEXTURES = {
+    private static final Identifier[] LIT_TEXTURES = {
             new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/all_unlit.png"),
             new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/flank.png"),
             new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/flank_and_lure.png"),
             new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/flank_and_suborbital.png"),
@@ -20,6 +19,8 @@ public class SmalltoothDragonfishModel extends AnimatedGeoModel<SmalltoothDragon
             new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/suborbital.png"),
             new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/suborbital_and_lure.png")
     };
+
+    private static final Identifier UNLIT_TEXTURE = new Identifier("deep_trenches:textures/entity/smalltooth_dragonfish/all_unlit.png");
 
     @Override
     public Identifier getAnimationFileLocation(SmalltoothDragonfishEntity animatable) {
@@ -33,7 +34,7 @@ public class SmalltoothDragonfishModel extends AnimatedGeoModel<SmalltoothDragon
 
     @Override
     public Identifier getTextureLocation(SmalltoothDragonfishEntity object) {
-        return TEXTURES[object.getLightStateIndex()];
+        return object.isLit() ? LIT_TEXTURES[object.getLightStateIndex()] : UNLIT_TEXTURE;
     }
 
     @Override

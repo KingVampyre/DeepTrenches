@@ -16,6 +16,8 @@ import static github.KingVampyre.DeepTrenches.core.init.LightStates.*;
 
 public class GiantHatchetfishEntity extends HatchetfishEntity {
 
+	private static final ImmutableList<LightState> CONTAINER = ImmutableList.of(ALL_LIT);
+
 	public GiantHatchetfishEntity(EntityType<? extends GiantHatchetfishEntity> type, World world) {
 		super(type, world);
 	}
@@ -26,8 +28,8 @@ public class GiantHatchetfishEntity extends HatchetfishEntity {
 	}
 
 	@Override
-	public ImmutableList<LightState> getLightContainer() {
-		return ImmutableList.of(ALL_LIT, ALL_UNLIT);
+	public ImmutableList<LightState> getLightStates() {
+		return CONTAINER;
 	}
 
 	@Override

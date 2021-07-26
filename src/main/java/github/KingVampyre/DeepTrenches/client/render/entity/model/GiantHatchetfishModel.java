@@ -8,10 +8,8 @@ public class GiantHatchetfishModel extends AnimatedGeoModel<GiantHatchetfishEnti
 
     public static final Identifier MODEL = new Identifier("deep_trenches:geo/entity/giant_hatchetfish.geo.json");
 
-    private static final Identifier[] TEXTURES = {
-            new Identifier("deep_trenches:textures/entity/giant_hatchetfish/all_lit.png"),
-            new Identifier("deep_trenches:textures/entity/giant_hatchetfish/all_unlit.png")
-    };
+    private static final Identifier LIT_TEXTURE = new Identifier("deep_trenches:textures/entity/giant_hatchetfish/all_lit.png");
+    private static final Identifier UNLIT_TEXTURE = new Identifier("deep_trenches:textures/entity/giant_hatchetfish/all_unlit.png");
 
     @Override
     public Identifier getAnimationFileLocation(GiantHatchetfishEntity animatable) {
@@ -25,7 +23,7 @@ public class GiantHatchetfishModel extends AnimatedGeoModel<GiantHatchetfishEnti
 
     @Override
     public Identifier getTextureLocation(GiantHatchetfishEntity object) {
-        return TEXTURES[object.getLightStateIndex()];
+        return object.isLit() ? LIT_TEXTURE : UNLIT_TEXTURE;
     }
 
 }

@@ -22,6 +22,8 @@ public class LightLoosejawEntity extends AbstractLoosejawEntity {
 
     protected static final UniformIntProvider ANGER_TIME_RANGE = UniformIntProvider.create(10, 15);
 
+    private static final ImmutableList<LightState> CONTAINER = ImmutableList.of(ALL_LIT, FLANK, LURE);
+
     public LightLoosejawEntity(EntityType<? extends LightLoosejawEntity> type, World world) {
         super(type, world);
     }
@@ -55,8 +57,8 @@ public class LightLoosejawEntity extends AbstractLoosejawEntity {
     }
 
     @Override
-    public ImmutableList<LightState> getLightContainer() {
-        return ImmutableList.of(ALL_LIT, ALL_UNLIT, FLANK, LURE);
+    public ImmutableList<LightState> getLightStates() {
+        return CONTAINER;
     }
 
     @Override
