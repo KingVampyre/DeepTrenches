@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.client.event.client;
 
-import github.KingVampyre.DeepTrenches.client.event.client.callback.ColorCacheLoad;
+import github.Louwind.Reload.client.event.client.callback.ColorCacheLoad;
 import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
 import net.minecraft.client.world.BiomeColorCache;
 import net.minecraft.world.level.ColorResolver;

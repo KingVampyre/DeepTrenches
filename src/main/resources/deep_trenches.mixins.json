@@ -21,7 +21,6 @@
     "MixinVineBlock"
   ],
   "client": [
-    "MixinClientPlayNetworkHandler",
     "MixinInGameHud"
   ],
   "injectors": {
