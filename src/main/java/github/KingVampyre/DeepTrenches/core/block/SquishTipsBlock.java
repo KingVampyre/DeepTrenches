@@ -8,8 +8,8 @@ import net.minecraft.world.BlockView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.SQUISH_TIPS;
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.SPRILIUM;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.SQUISH_TIPS;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.SPRILIUM;
 
 public class SquishTipsBlock extends FernBlock {
 

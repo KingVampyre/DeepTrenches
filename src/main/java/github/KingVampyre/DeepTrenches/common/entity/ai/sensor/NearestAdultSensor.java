@@ -11,7 +11,7 @@ import net.minecraft.server.world.ServerWorld;
 import java.util.Set;
 import java.util.function.Predicate;
 
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.NEAREST_ADULT;
+import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.NEAREST_ADULT;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.VISIBLE_MOBS;
 
 public class NearestAdultSensor extends Sensor<NourishFishEntity> {

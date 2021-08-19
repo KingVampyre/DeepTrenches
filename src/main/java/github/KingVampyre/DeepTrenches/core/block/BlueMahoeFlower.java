@@ -5,7 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.BLUE_MAHOE_FLOWER_PLANTABLE;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.BLUE_MAHOE_FLOWER_PLANTABLE;
 
 public class BlueMahoeFlower extends LeavesFlowerBlock {
 

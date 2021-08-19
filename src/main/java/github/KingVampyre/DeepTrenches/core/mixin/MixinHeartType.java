@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SOUL_DRAINING;
+import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.SOUL_DRAINING;
 
 @Mixin(InGameHud.HeartType.class)
 public class MixinHeartType {

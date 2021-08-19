@@ -1,8 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
-import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
-import github.KingVampyre.DeepTrenches.core.init.ModItems;
+import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.DTItems;
 import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
@@ -17,9 +17,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_STORCEAN_GASOPELAGIC_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.STORCEAN_GASOPELAGIC_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_STORCEAN_GASOPELAGIC_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.STORCEAN_GASOPELAGIC_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
 import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class StorceanGasopelagicWaterFluid extends AbstractOxygenatedWaterFluid {
@@ -31,7 +31,7 @@ public abstract class StorceanGasopelagicWaterFluid extends AbstractOxygenatedWa
 
     @Override
     public Item getBucketItem() {
-        return ModItems.STORCEAN_GASOPELAGIC_WATER_BUCKET;
+        return DTItems.STORCEAN_GASOPELAGIC_WATER_BUCKET;
     }
 
     @Override
@@ -68,7 +68,7 @@ public abstract class StorceanGasopelagicWaterFluid extends AbstractOxygenatedWa
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModBlocks.STORCEAN_GASOPELAGIC_WATER.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
+        return DTBlocks.STORCEAN_GASOPELAGIC_WATER.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
     }
 
     public static class Flowing extends StorceanGasopelagicWaterFluid {

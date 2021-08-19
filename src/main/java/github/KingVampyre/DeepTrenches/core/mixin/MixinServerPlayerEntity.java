@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
-import github.KingVampyre.DeepTrenches.core.init.StatusEffects;
+import github.KingVampyre.DeepTrenches.core.init.DTStatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
@@ -15,7 +15,7 @@ public class MixinServerPlayerEntity {
     private boolean trySleep(World world) {
         PlayerEntity player = (PlayerEntity) (Object) this;
 
-        return !player.hasStatusEffect(StatusEffects.SLEEPY) && world.isDay();
+        return !player.hasStatusEffect(DTStatusEffects.SLEEPY) && world.isDay();
     }
 
 }

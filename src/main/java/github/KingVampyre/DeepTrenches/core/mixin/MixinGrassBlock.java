@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.*;
 import static net.minecraft.block.Blocks.GRASS;
 
 @Mixin(GrassBlock.class)

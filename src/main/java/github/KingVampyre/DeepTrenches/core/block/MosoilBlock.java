@@ -12,7 +12,7 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.DRITEAN;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.DRITEAN;
 
 public class MosoilBlock extends GrassBlock {
 

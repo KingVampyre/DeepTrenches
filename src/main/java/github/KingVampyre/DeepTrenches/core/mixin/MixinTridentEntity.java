@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
 import github.KingVampyre.DeepTrenches.core.entity.AdaiggerEntity;
-import github.KingVampyre.DeepTrenches.core.init.DamageSources;
+import github.KingVampyre.DeepTrenches.core.init.DTDamageSources;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.projectile.TridentEntity;
@@ -16,7 +16,7 @@ public class MixinTridentEntity {
     private DamageSource onEntityHit(Entity trident, Entity attacker) {
 
         if(trident instanceof AdaiggerEntity)
-            return DamageSources.adaigger(trident, attacker);
+            return DTDamageSources.adaigger(trident, attacker);
 
         return DamageSource.trident(trident, attacker);
     }

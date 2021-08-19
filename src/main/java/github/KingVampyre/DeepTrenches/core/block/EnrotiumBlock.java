@@ -10,7 +10,7 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.POININE;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.POININE;
 import static net.minecraft.block.Blocks.SNOW;
 import static net.minecraft.block.Blocks.SNOW_BLOCK;
 

@@ -6,7 +6,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockRenderView;
 import org.jetbrains.annotations.Nullable;
 
-import static github.KingVampyre.DeepTrenches.client.init.ColorMaps.STORCEAN_INFINIPELAGIC_WATER;
+import static github.KingVampyre.DeepTrenches.client.init.DTColorMaps.STORCEAN_INFINIPELAGIC_WATER;
 
 public class StorceanInfinipelagicWaterProvider implements FluidColorProvider {
 

@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.block.enums;
 
-import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
+import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.StringIdentifiable;
@@ -45,7 +45,7 @@ public enum AirialMossType implements StringIdentifiable {
             return COARSE_DIRT;
         else if(Blocks.DIORITE == block)
             return DIORITE;
-        else if(ModBlocks.DRITEAN == block)
+        else if(DTBlocks.DRITEAN == block)
             return DRITEAN;
         else if(Blocks.DIRT == block)
             return DIRT;
@@ -53,19 +53,19 @@ public enum AirialMossType implements StringIdentifiable {
             return GRANITE;
         else if(Blocks.NETHERRACK == block)
             return NETHERRACK;
-        else if(ModBlocks.POININE == block)
+        else if(DTBlocks.POININE == block)
             return POININE;
         else if(Blocks.SAND == block)
             return SAND;
-        else if(ModBlocks.SKYSOIL == block)
+        else if(DTBlocks.SKYSOIL == block)
             return SKYSOIL;
-        else if(ModBlocks.SKYSTONE == block)
+        else if(DTBlocks.SKYSTONE == block)
             return SKYSTONE;
         else if(Blocks.STONE == block)
             return STONE;
-        else if(ModBlocks.STORCERACK == block)
+        else if(DTBlocks.STORCERACK == block)
             return STORCERACK;
-        else if(ModBlocks.STORCENDITE == block)
+        else if(DTBlocks.STORCENDITE == block)
             return STORCENDITE;
 
         return null;
@@ -87,27 +87,27 @@ public enum AirialMossType implements StringIdentifiable {
             case DIRT:
                 return Blocks.DIRT;
             case DRITEAN:
-                return ModBlocks.DRITEAN;
+                return DTBlocks.DRITEAN;
             case GRANITE:
                 return Blocks.GRANITE;
             case NETHERRACK:
                 return Blocks.NETHERRACK;
             case POININE:
-                return ModBlocks.POININE;
+                return DTBlocks.POININE;
             case RHODONITE:
-                return ModBlocks.RHODONITE;
+                return DTBlocks.RHODONITE;
             case SAND:
                 return Blocks.SAND;
             case SKYSOIL:
-                return ModBlocks.SKYSOIL;
+                return DTBlocks.SKYSOIL;
             case SKYSTONE:
-                return ModBlocks.SKYSTONE;
+                return DTBlocks.SKYSTONE;
             case STONE:
                 return Blocks.STONE;
             case STORCERACK:
-                return ModBlocks.STORCERACK;
+                return DTBlocks.STORCERACK;
             case STORCENDITE:
-                return ModBlocks.STORCENDITE;
+                return DTBlocks.STORCENDITE;
             default:
                 return null;
         }

@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.block.entity;
 
-import github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes;
+import github.KingVampyre.DeepTrenches.core.init.DTBlockEntityTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.SignBlockEntity;
@@ -14,7 +14,7 @@ public class CustomSignBlockEntity extends SignBlockEntity {
 
     @Override
     public BlockEntityType<?> getType() {
-        return BlockEntityTypes.SIGN;
+        return DTBlockEntityTypes.SIGN;
     }
 
 }

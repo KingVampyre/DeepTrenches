@@ -1,8 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
-import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
-import github.KingVampyre.DeepTrenches.core.init.ModItems;
+import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.DTItems;
 import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
@@ -18,9 +18,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_MESOPELAGIC_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.MESOPELAGIC_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_MESOPELAGIC_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.MESOPELAGIC_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
 import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class MesopelagicWaterFluid extends AbstractOxygenatedWaterFluid {
@@ -34,7 +34,7 @@ public abstract class MesopelagicWaterFluid extends AbstractOxygenatedWaterFluid
 
     @Override
     public Item getBucketItem() {
-        return ModItems.MESOPELAGIC_WATER_BUCKET;
+        return DTItems.MESOPELAGIC_WATER_BUCKET;
     }
 
     @Override
@@ -71,7 +71,7 @@ public abstract class MesopelagicWaterFluid extends AbstractOxygenatedWaterFluid
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModBlocks.MESOPELAGIC_WATER.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
+        return DTBlocks.MESOPELAGIC_WATER.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
     }
 
     public static class Flowing extends MesopelagicWaterFluid {

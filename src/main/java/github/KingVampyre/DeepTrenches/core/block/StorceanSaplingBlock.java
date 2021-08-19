@@ -9,7 +9,7 @@ import net.minecraft.world.BlockView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.*;
 
 public class StorceanSaplingBlock extends SaplingBlock {
 

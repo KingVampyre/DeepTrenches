@@ -10,7 +10,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.LightStates.ALL_UNLIT;
+import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.ALL_UNLIT;
 
 public abstract class LuminousFishEntity extends SkittishFishEntity implements Luminous {
 

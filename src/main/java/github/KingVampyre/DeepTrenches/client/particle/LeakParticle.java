@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.client.particle;
 
-import github.KingVampyre.DeepTrenches.core.init.ParticleTypes;
+import github.KingVampyre.DeepTrenches.core.init.DTParticleTypes;
 import github.KingVampyre.DeepTrenches.core.particle.ColoredWaterFluidParticleEffect;
 import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
 import net.fabricmc.api.EnvType;
@@ -11,7 +11,7 @@ import net.minecraft.fluid.Fluid;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleEffect;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.ACID;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.ACID;
 
 public class LeakParticle extends BlockLeakParticle {
 
@@ -104,7 +104,7 @@ public class LeakParticle extends BlockLeakParticle {
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            LeakParticle particle = new LeakParticle.Dripping(world, x, y, z, ACID, ParticleTypes.ACID_FALLING);
+            LeakParticle particle = new LeakParticle.Dripping(world, x, y, z, ACID, DTParticleTypes.ACID_FALLING);
             particle.setSprite(this.spriteProvider);
 
             return particle;
@@ -123,7 +123,7 @@ public class LeakParticle extends BlockLeakParticle {
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            LeakParticle particle = new LeakParticle.Dripping(world, x, y, z, ACID, ParticleTypes.ACID_FALLING);
+            LeakParticle particle = new LeakParticle.Dripping(world, x, y, z, ACID, DTParticleTypes.ACID_FALLING);
             particle.setSprite(this.spriteProvider);
 
             return particle;
@@ -142,7 +142,7 @@ public class LeakParticle extends BlockLeakParticle {
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            LeakParticle particle = new LeakParticle.ContinuousFalling(world, x, y, z, ACID, ParticleTypes.ACID_LANDING);
+            LeakParticle particle = new LeakParticle.ContinuousFalling(world, x, y, z, ACID, DTParticleTypes.ACID_LANDING);
             particle.setSprite(this.spriteProvider);
 
             return particle;

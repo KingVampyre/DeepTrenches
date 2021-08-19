@@ -32,9 +32,9 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import static github.KingVampyre.DeepTrenches.core.entity.ai.task.LoosejawUpdateAttackTargetTask.HURT_BY_EXCEPT_OWNER_GETTER;
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
-import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.COD_TEMPTING;
-import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.TAMABLE_HURT_BY;
+import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTSensorTypes.COD_TEMPTING;
+import static github.KingVampyre.DeepTrenches.core.init.DTSensorTypes.TAMABLE_HURT_BY;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
 import static net.minecraft.item.Items.COD;

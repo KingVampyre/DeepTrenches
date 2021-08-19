@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.TrunkPlacerTypes.GREAT_TRUNK_PLACER;
+import static github.KingVampyre.DeepTrenches.core.init.DTTrunkPlacerTypes.GREAT_TRUNK_PLACER;
 
 public class GreatTrunkPlacer extends LargeOakTrunkPlacer {
 

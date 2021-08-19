@@ -6,8 +6,8 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.util.math.MathHelper;
 
-import static github.KingVampyre.DeepTrenches.core.init.DamageSources.PRESSURE;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SOFTBONES;
+import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.PRESSURE;
+import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.SOFTBONES;
 import static net.minecraft.tag.FluidTags.WATER;
 
 public class PressureStatusEffect extends StatusEffect {

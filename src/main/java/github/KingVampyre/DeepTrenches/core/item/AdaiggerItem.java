@@ -11,7 +11,7 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModToolMaterials.GYLDELION;
+import static github.KingVampyre.DeepTrenches.core.init.DTToolMaterials.GYLDELION;
 
 public class AdaiggerItem extends SwordItem {
 

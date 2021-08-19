@@ -3,7 +3,7 @@ package github.KingVampyre.DeepTrenches.core.fluid;
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
-import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
+import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
 import github.KingVampyre.DeepTrenches.core.util.StatusEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
@@ -23,11 +23,11 @@ import org.apache.commons.lang3.RandomUtils;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.ACID;
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_ACID;
-import static github.KingVampyre.DeepTrenches.core.init.ModItems.ACID_BUCKET;
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.ACID_CORROSION;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.ACID;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_ACID;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.ACID_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.ACID_CORROSION;
 
 public abstract class AcidFluid extends AbstractWaterFluid implements StatusEffectFluid, OxygenatedFluid {
 
@@ -96,7 +96,7 @@ public abstract class AcidFluid extends AbstractWaterFluid implements StatusEffe
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModBlocks.ACID.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
+        return DTBlocks.ACID.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
     }
 
     public static class Flowing extends AcidFluid {

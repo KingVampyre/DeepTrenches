@@ -2,8 +2,8 @@ package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
-import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
-import github.KingVampyre.DeepTrenches.core.init.ModItems;
+import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.DTItems;
 import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
@@ -17,9 +17,9 @@ import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.state.StateManager;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.BRINE;
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_BRINE;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SINKING;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.BRINE;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_BRINE;
+import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.SINKING;
 import static net.minecraft.entity.effect.StatusEffects.POISON;
 
 public abstract class BrineFluid extends AbstractWaterFluid implements StatusEffectFluid {
@@ -37,7 +37,7 @@ public abstract class BrineFluid extends AbstractWaterFluid implements StatusEff
 
     @Override
     public Item getBucketItem() {
-        return ModItems.BRINE_BUCKET;
+        return DTItems.BRINE_BUCKET;
     }
 
     @Override
@@ -62,7 +62,7 @@ public abstract class BrineFluid extends AbstractWaterFluid implements StatusEff
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModBlocks.BRINE.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
+        return DTBlocks.BRINE.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
     }
 
     public static class Flowing extends BrineFluid {

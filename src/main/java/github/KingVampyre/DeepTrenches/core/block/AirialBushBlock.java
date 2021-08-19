@@ -8,8 +8,8 @@ import net.minecraft.world.BlockView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.AIRIAL_MOSS;
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.AIRIAL_BUSH;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.AIRIAL_MOSS;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.AIRIAL_BUSH;
 
 public class AirialBushBlock extends FernBlock {
 

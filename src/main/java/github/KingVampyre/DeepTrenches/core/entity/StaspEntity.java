@@ -28,7 +28,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.ANGRY_TICKS;
+import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.ANGRY_TICKS;
 import static net.minecraft.entity.ai.brain.Activity.*;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;

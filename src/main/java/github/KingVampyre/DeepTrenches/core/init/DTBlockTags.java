@@ -1,0 +1,42 @@
+package github.KingVampyre.DeepTrenches.core.init;
+
+import net.fabricmc.fabric.api.tag.TagRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.tag.Tag;
+import net.minecraft.util.Identifier;
+
+public class DTBlockTags {
+
+    public static final Tag<Block> AIRIAL_MOSS_SPREADABLE = TagRegistry.block(new Identifier("deep_trenches:airial_moss_spreadable"));
+
+    public static final Tag<Block> AQUEAN_LOGS = TagRegistry.block(new Identifier("deep_trenches:aquean_logs"));
+
+    public static final Tag<Block> BLUE_MAHOE_FLOWER_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:blue_mahoe_flower_plantable"));
+
+    public static final Tag<Block> BOTTLEBRUSH_FLOWERS_SPREADABLE = TagRegistry.block(new Identifier("deep_trenches:bottlebrush_flowers_spreadable"));
+
+    public static final Tag<Block> DRITEAN = TagRegistry.block(new Identifier("deep_trenches:dritean"));
+
+    public static final Tag<Block> HYBRID_STORCEAN_SAPLING_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:hybrid_storcean_sapling_plantable"));
+
+    public static final Tag<Block> HYBRID_STORCEAN_SAPLING = TagRegistry.block(new Identifier("deep_trenches:hybrid_storcean_sapling"));
+
+    public static final Tag<Block> FLALM_LOGS = TagRegistry.block(new Identifier("deep_trenches:flalm_logs"));
+
+    public static final Tag<Block> FUCHSITRA_LOGS = TagRegistry.block(new Identifier("deep_trenches:fuchsitra_logs"));
+
+    public static final Tag<Block> GUAIACUM_FLOWERS_SPREADABLE = TagRegistry.block(new Identifier("deep_trenches:guaiacum_flowers_spreadable"));
+
+    public static final Tag<Block> MELALEUCA_FLOWERS_SPREADABLE = TagRegistry.block(new Identifier("deep_trenches:melaleuca_flowers_spreadable"));
+
+    public static final Tag<Block> MURKANTUAN_FLOWER_PLANTABLE = TagRegistry.block(new Identifier("deep_trenches:murkantuan_flower_plantable"));
+
+    public static final Tag<Block> RHADI_LOGS = TagRegistry.block(new Identifier("deep_trenches:rhadi_logs"));
+
+    public static final Tag<Block> STASP_POLLEN_SOURCE = TagRegistry.block(new Identifier("deep_trenches:stasp_pollen_source"));
+
+    public static final Tag<Block> STASP_POLLEN_TARGET = TagRegistry.block(new Identifier("deep_trenches:stasp_pollen_target"));
+
+    public static final Tag<Block> VYNHERT_LOGS = TagRegistry.block(new Identifier("deep_trenches:vynhert_logs"));
+
+}

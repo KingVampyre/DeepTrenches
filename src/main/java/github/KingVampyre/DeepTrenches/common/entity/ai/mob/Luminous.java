@@ -3,7 +3,7 @@ package github.KingVampyre.DeepTrenches.common.entity.ai.mob;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.nbt.NbtCompound;
 
-import static github.KingVampyre.DeepTrenches.core.init.LightStates.ALL_UNLIT;
+import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.ALL_UNLIT;
 
 public interface Luminous {
 

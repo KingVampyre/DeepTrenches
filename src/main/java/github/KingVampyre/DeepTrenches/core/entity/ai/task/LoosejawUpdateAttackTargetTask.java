@@ -11,8 +11,8 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-import static github.KingVampyre.DeepTrenches.core.init.LightStates.ALL_LIT;
-import static github.KingVampyre.DeepTrenches.core.init.LightStates.ALL_UNLIT;
+import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.ALL_LIT;
+import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.ALL_UNLIT;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.HURT_BY_ENTITY;
 
 public class LoosejawUpdateAttackTargetTask extends UpdateAttackTargetTask<AbstractLoosejawEntity> {

@@ -13,11 +13,11 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_260;
-import static github.KingVampyre.DeepTrenches.core.init.EntityTypes.BLACK_LOOSEJAW;
-import static github.KingVampyre.DeepTrenches.core.init.LightStates.*;
-import static github.KingVampyre.DeepTrenches.core.init.LightStates.SUBORBITAL_AND_LURE;
-import static github.KingVampyre.DeepTrenches.core.init.ModItems.BLACK_LOOSEJAW_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_260;
+import static github.KingVampyre.DeepTrenches.core.init.DTEntityTypes.BLACK_LOOSEJAW;
+import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.SUBORBITAL_AND_LURE;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.BLACK_LOOSEJAW_BUCKET;
 
 public class BlackLoosejawEntity extends AbstractLoosejawEntity {
 

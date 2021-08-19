@@ -13,9 +13,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
-import static github.KingVampyre.DeepTrenches.core.init.DamageSources.ACID;
-import static github.KingVampyre.DeepTrenches.core.init.DamageSources.GAS;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.ACID_CORROSION;
+import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.ACID;
+import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.GAS;
+import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.ACID_CORROSION;
 import static net.minecraft.entity.attribute.EntityAttributes.GENERIC_MAX_HEALTH;
 
 public class CorrosionStatusEffect extends ArmorDamageStatusEffect {

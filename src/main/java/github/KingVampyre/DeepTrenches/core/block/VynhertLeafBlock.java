@@ -18,10 +18,10 @@ import net.minecraft.world.WorldView;
 import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.block.enums.BlockThird.*;
-import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.VYNHERT_LOGS;
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.VYNHERT_FRUIT;
-import static github.KingVampyre.DeepTrenches.core.init.ModProperties.BLOCK_THIRD;
-import static github.KingVampyre.DeepTrenches.core.init.ModProperties.FRUIT;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.VYNHERT_LOGS;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.VYNHERT_FRUIT;
+import static github.KingVampyre.DeepTrenches.core.init.DTProperties.BLOCK_THIRD;
+import static github.KingVampyre.DeepTrenches.core.init.DTProperties.FRUIT;
 import static net.minecraft.block.Blocks.AIR;
 import static net.minecraft.state.property.Properties.AGE_25;
 import static net.minecraft.util.math.Direction.UP;

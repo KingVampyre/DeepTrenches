@@ -9,7 +9,7 @@ import net.minecraft.world.gen.feature.ConfiguredStructureFeatures;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilders;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModConfiguredFeatures.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.*;
 import static net.minecraft.entity.EntityType.*;
 import static net.minecraft.entity.SpawnGroup.*;
 import static net.minecraft.world.gen.GenerationStep.Feature.*;

@@ -14,7 +14,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.ANGRY_TICKS;
+import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.ANGRY_TICKS;
 import static net.minecraft.entity.ai.brain.MemoryModuleState.REGISTERED;
 import static net.minecraft.entity.ai.brain.MemoryModuleState.VALUE_ABSENT;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;

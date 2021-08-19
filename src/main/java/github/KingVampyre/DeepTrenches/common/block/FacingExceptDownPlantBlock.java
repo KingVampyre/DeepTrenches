@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModProperties.FACING_EXCEPT_DOWN;
+import static github.KingVampyre.DeepTrenches.core.init.DTProperties.FACING_EXCEPT_DOWN;
 import static net.minecraft.util.math.Direction.UP;
 
 public abstract class FacingExceptDownPlantBlock extends PlantBlock {

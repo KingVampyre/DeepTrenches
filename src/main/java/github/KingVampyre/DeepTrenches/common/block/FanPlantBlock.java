@@ -12,7 +12,7 @@ import net.minecraft.world.BlockView;
 
 import java.util.Map;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModProperties.FACING_EXCEPT_DOWN;
+import static github.KingVampyre.DeepTrenches.core.init.DTProperties.FACING_EXCEPT_DOWN;
 import static net.minecraft.util.math.Direction.*;
 
 public abstract class FanPlantBlock extends FacingExceptDownPlantBlock {

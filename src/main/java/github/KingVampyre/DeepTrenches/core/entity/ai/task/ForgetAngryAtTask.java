@@ -7,7 +7,7 @@ import net.minecraft.entity.ai.brain.task.Task;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.server.world.ServerWorld;
 
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.ANGRY_TICKS;
+import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.ANGRY_TICKS;
 import static net.minecraft.entity.ai.brain.MemoryModuleState.REGISTERED;
 import static net.minecraft.entity.ai.brain.MemoryModuleState.VALUE_PRESENT;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;

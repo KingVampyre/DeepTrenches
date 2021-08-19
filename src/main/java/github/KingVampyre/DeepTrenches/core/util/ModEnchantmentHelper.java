@@ -1,13 +1,13 @@
 package github.KingVampyre.DeepTrenches.core.util;
 
-import github.KingVampyre.DeepTrenches.core.init.StatusEffects;
+import github.KingVampyre.DeepTrenches.core.init.DTStatusEffects;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModEnchantments.SOUL_DRAINING;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.SOUL_RAVENING;
+import static github.KingVampyre.DeepTrenches.core.init.DTEnchantments.SOUL_DRAINING;
+import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.SOUL_RAVENING;
 
 public class ModEnchantmentHelper {
 
@@ -20,7 +20,7 @@ public class ModEnchantmentHelper {
                 int amplifier = modifier - 1;
 
                 attacker.addStatusEffect(new StatusEffectInstance(SOUL_RAVENING, 200, amplifier));
-                StatusEffectHelper.addSoulDrainingEffect(entity, attacker, StatusEffects.SOUL_DRAINING, 200, amplifier);
+                StatusEffectHelper.addSoulDrainingEffect(entity, attacker, DTStatusEffects.SOUL_DRAINING, 200, amplifier);
             }
 
         }

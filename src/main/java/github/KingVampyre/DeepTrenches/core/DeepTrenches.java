@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core;
 
-import github.KingVampyre.DeepTrenches.client.init.GeneratorTypes;
+import github.KingVampyre.DeepTrenches.client.init.DTGeneratorTypes;
 import github.KingVampyre.DeepTrenches.common.event.block.BlockReplacementCallback;
 import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
 import github.KingVampyre.DeepTrenches.core.init.*;
@@ -12,7 +12,7 @@ import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.GeckoLib;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.*;
 import static net.minecraft.util.registry.BuiltinRegistries.*;
 import static net.minecraft.util.registry.Registry.*;
 
@@ -23,77 +23,77 @@ public class  DeepTrenches implements ModInitializer {
 		GeckoLib.initialize();
 
 		/* GENERATOR TYPE */
-		AccessorGeneratorType.getValues().add(GeneratorTypes.THE_DREAM);
+		AccessorGeneratorType.getValues().add(DTGeneratorTypes.THE_DREAM);
 
 		/* EVENT */
 		BlockReplacementCallback.EVENT.register(AirialMossCallback.INSTANCE);
 
 		/* BIOME */
-		Registry.register(BIOME, "deep_trenches:almond_forest", Biomes.ALMOND_FOREST);
-		Registry.register(BIOME, "deep_trenches:almond_plus_forest", Biomes.ALMOND_PLUS_FOREST);
+		Registry.register(BIOME, "deep_trenches:almond_forest", DTBiomes.ALMOND_FOREST);
+		Registry.register(BIOME, "deep_trenches:almond_plus_forest", DTBiomes.ALMOND_PLUS_FOREST);
 
 		/* OVERWORLD BIOME */
-		OverworldBiomes.addContinentalBiome(Biomes.ALMOND_FOREST_KEY, OverworldClimate.TEMPERATE, 1);
-		OverworldBiomes.addContinentalBiome(Biomes.ALMOND_PLUS_FOREST_KEY, OverworldClimate.TEMPERATE, 1);
+		OverworldBiomes.addContinentalBiome(DTBiomes.ALMOND_FOREST_KEY, OverworldClimate.TEMPERATE, 1);
+		OverworldBiomes.addContinentalBiome(DTBiomes.ALMOND_PLUS_FOREST_KEY, OverworldClimate.TEMPERATE, 1);
 
 		/* BLOCK ENTITY */
-		Registry.register(BLOCK_ENTITY_TYPE, "deep_trenches:sign", BlockEntityTypes.SIGN);
-		Registry.register(BLOCK_ENTITY_TYPE, "deep_trenches:stasp_nest", BlockEntityTypes.STASP_NEST);
+		Registry.register(BLOCK_ENTITY_TYPE, "deep_trenches:sign", DTBlockEntityTypes.SIGN);
+		Registry.register(BLOCK_ENTITY_TYPE, "deep_trenches:stasp_nest", DTBlockEntityTypes.STASP_NEST);
 
 		/* CHUNK GENERATOR */
 		Registry.register(CHUNK_GENERATOR, "deep_trenches:the_dream", TheDreamChunkGenerator.CODEC);
 
 		/* CHUNK GENERATOR SETTINGS */
-		Registry.register(CHUNK_GENERATOR_SETTINGS, "deep_trenches:the_dream", ChunkGeneratorSettingsKeys.THE_DREAM);
+		Registry.register(CHUNK_GENERATOR_SETTINGS, "deep_trenches:the_dream", DTChunkGeneratorSettings.THE_DREAM);
 
 		/* ENCHANTMENT */
-		Registry.register(ENCHANTMENT, "deep_trenches:soul_draining", ModEnchantments.SOUL_DRAINING);
+		Registry.register(ENCHANTMENT, "deep_trenches:soul_draining", DTEnchantments.SOUL_DRAINING);
 
 		/* CONFIGURED FEATURE */
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond", ModConfiguredFeatures.ALMOND);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry", ModConfiguredFeatures.CHERRY);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry", ModConfiguredFeatures.PIN_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond", DTConfiguredFeatures.ALMOND);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry", DTConfiguredFeatures.CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry", DTConfiguredFeatures.PIN_CHERRY);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond", ModConfiguredFeatures.FANCY_ALMOND);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry", ModConfiguredFeatures.FANCY_CHERRY);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry", ModConfiguredFeatures.FANCY_PIN_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond", DTConfiguredFeatures.FANCY_ALMOND);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry", DTConfiguredFeatures.FANCY_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry", DTConfiguredFeatures.FANCY_PIN_CHERRY);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond", ModConfiguredFeatures.GREAT_ALMOND);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry", ModConfiguredFeatures.GREAT_CHERRY);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry", ModConfiguredFeatures.GREAT_PIN_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond", DTConfiguredFeatures.GREAT_ALMOND);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry", DTConfiguredFeatures.GREAT_CHERRY);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry", DTConfiguredFeatures.GREAT_PIN_CHERRY);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower", ModConfiguredFeatures.ALMOND_FOREST_FLOWER);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower_vegetation", ModConfiguredFeatures.ALMOND_FOREST_FLOWER_VEGETATION);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_tree", ModConfiguredFeatures.ALMOND_FOREST_TREE);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower", DTConfiguredFeatures.ALMOND_FOREST_FLOWER);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower_vegetation", DTConfiguredFeatures.ALMOND_FOREST_FLOWER_VEGETATION);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_tree", DTConfiguredFeatures.ALMOND_FOREST_TREE);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_very_rare_beehives", ModConfiguredFeatures.ALMOND_VERY_RARE_BEEHIVES);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_regular_beehives", ModConfiguredFeatures.ALMOND_REGULAR_BEEHIVES);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_more_beehives", ModConfiguredFeatures.ALMOND_MORE_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_very_rare_beehives", DTConfiguredFeatures.ALMOND_VERY_RARE_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_regular_beehives", DTConfiguredFeatures.ALMOND_REGULAR_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_more_beehives", DTConfiguredFeatures.ALMOND_MORE_BEEHIVES);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_very_rare_beehives", ModConfiguredFeatures.FANCY_ALMOND_VERY_RARE_BEEHIVES);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_regular_beehives", ModConfiguredFeatures.FANCY_ALMOND_REGULAR_BEEHIVES);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_more_beehives", ModConfiguredFeatures.FANCY_ALMOND_MORE_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_very_rare_beehives", DTConfiguredFeatures.FANCY_ALMOND_VERY_RARE_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_regular_beehives", DTConfiguredFeatures.FANCY_ALMOND_REGULAR_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_more_beehives", DTConfiguredFeatures.FANCY_ALMOND_MORE_BEEHIVES);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_very_rare_beehives", ModConfiguredFeatures.GREAT_ALMOND_VERY_RARE_BEEHIVES);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_regular_beehives", ModConfiguredFeatures.GREAT_ALMOND_REGULAR_BEEHIVES);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_more_beehives", ModConfiguredFeatures.GREAT_ALMOND_MORE_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_very_rare_beehives", DTConfiguredFeatures.GREAT_ALMOND_VERY_RARE_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_regular_beehives", DTConfiguredFeatures.GREAT_ALMOND_REGULAR_BEEHIVES);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_more_beehives", DTConfiguredFeatures.GREAT_ALMOND_MORE_BEEHIVES);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower", ModConfiguredFeatures.ALMOND_PLUS_FOREST_FLOWER);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower_vegetation", ModConfiguredFeatures.ALMOND_PLUS_FOREST_FLOWER_VEGETATION);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_tree", ModConfiguredFeatures.ALMOND_PLUS_TREE);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower", DTConfiguredFeatures.ALMOND_PLUS_FOREST_FLOWER);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower_vegetation", DTConfiguredFeatures.ALMOND_PLUS_FOREST_FLOWER_VEGETATION);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_tree", DTConfiguredFeatures.ALMOND_PLUS_TREE);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:lake_clear_water", ModConfiguredFeatures.LAKE_CLEAR_WATER);
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:spring_clear_water", ModConfiguredFeatures.SPRING_CLEAR_WATER);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:lake_clear_water", DTConfiguredFeatures.LAKE_CLEAR_WATER);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:spring_clear_water", DTConfiguredFeatures.SPRING_CLEAR_WATER);
 
-		Registry.register(CONFIGURED_FEATURE, "deep_trenches:ore_calcite", ModConfiguredFeatures.ORE_CALCITE);
+		Registry.register(CONFIGURED_FEATURE, "deep_trenches:ore_calcite", DTConfiguredFeatures.ORE_CALCITE);
 
 		/* SENSOR TYPE */
-		Registry.register(SENSOR_TYPE, "deep_trenches:cod_tempting", SensorTypes.COD_TEMPTING);
-		Registry.register(SENSOR_TYPE, "deep_trenches:skittish_hurt_by", SensorTypes.SKITTISH_HURT_BY);
-		Registry.register(SENSOR_TYPE, "deep_trenches:tamable_hurt_by", SensorTypes.TAMABLE_HURT_BY);
+		Registry.register(SENSOR_TYPE, "deep_trenches:cod_tempting", DTSensorTypes.COD_TEMPTING);
+		Registry.register(SENSOR_TYPE, "deep_trenches:skittish_hurt_by", DTSensorTypes.SKITTISH_HURT_BY);
+		Registry.register(SENSOR_TYPE, "deep_trenches:tamable_hurt_by", DTSensorTypes.TAMABLE_HURT_BY);
 
 		/* TRUNK PLACER */
-		Registry.register(TRUNK_PLACER_TYPE, "deep_trenches:great_trunk_placer", TrunkPlacerTypes.GREAT_TRUNK_PLACER);
+		Registry.register(TRUNK_PLACER_TYPE, "deep_trenches:great_trunk_placer", DTTrunkPlacerTypes.GREAT_TRUNK_PLACER);
 
 		/* BLOCKS */
 		Registry.register(BLOCK, "deep_trenches:airial_moss", AIRIAL_MOSS);

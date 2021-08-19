@@ -6,7 +6,7 @@ import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.EntityTypes.ADAIGGER;
+import static github.KingVampyre.DeepTrenches.core.init.DTEntityTypes.ADAIGGER;
 
 public class AdaiggerEntity extends TridentEntity {
 

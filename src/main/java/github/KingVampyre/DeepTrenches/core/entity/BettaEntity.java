@@ -21,11 +21,11 @@ import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_235;
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
-import static github.KingVampyre.DeepTrenches.core.init.ModItems.BETTA_BUCKET;
-import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.COD_TEMPTING;
-import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.SKITTISH_HURT_BY;
+import static github.KingVampyre.DeepTrenches.core.init.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_235;
+import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.BETTA_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.DTSensorTypes.COD_TEMPTING;
+import static github.KingVampyre.DeepTrenches.core.init.DTSensorTypes.SKITTISH_HURT_BY;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
 

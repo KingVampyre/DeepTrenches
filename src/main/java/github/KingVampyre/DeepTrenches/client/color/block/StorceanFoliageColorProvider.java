@@ -5,7 +5,7 @@ import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockRenderView;
 
-import static github.KingVampyre.DeepTrenches.client.init.ColorMaps.STORCEAN_FOLIAGE;
+import static github.KingVampyre.DeepTrenches.client.init.DTColorMaps.STORCEAN_FOLIAGE;
 
 public class StorceanFoliageColorProvider implements BlockColorProvider {
 

@@ -18,7 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.OWNER;
+import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.OWNER;
 import static net.minecraft.entity.ai.brain.MemoryModuleState.*;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.LOOK_TARGET;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.WALK_TARGET;

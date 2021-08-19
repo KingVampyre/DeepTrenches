@@ -16,8 +16,8 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.AIRIAL_MOSS_SPREADABLE;
-import static github.KingVampyre.DeepTrenches.core.init.ModProperties.AIRIAL_MOSS_TYPE;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.AIRIAL_MOSS_SPREADABLE;
+import static github.KingVampyre.DeepTrenches.core.init.DTProperties.AIRIAL_MOSS_TYPE;
 import static net.minecraft.block.Blocks.SNOW;
 
 public class AirialMossBlock extends GrassBlock {

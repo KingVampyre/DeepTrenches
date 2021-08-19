@@ -11,7 +11,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModItems.AIRIAL_MOSS;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.AIRIAL_MOSS;
 
 public class AirialMossCallback implements BlockReplacementCallback {
 

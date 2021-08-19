@@ -4,7 +4,7 @@ import github.KingVampyre.DeepTrenches.core.particle.ColoredWaterFluidParticleEf
 import net.minecraft.fluid.Fluid;
 import net.minecraft.particle.ParticleEffect;
 
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
 
 public class ParticleEffectHelper {
 

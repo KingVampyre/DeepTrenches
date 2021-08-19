@@ -13,11 +13,11 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_260;
-import static github.KingVampyre.DeepTrenches.core.init.EntityTypes.BARBELED_LOOSEJAW;
-import static github.KingVampyre.DeepTrenches.core.init.ModItems.BARBELED_LOOSEJAW_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_260;
+import static github.KingVampyre.DeepTrenches.core.init.DTEntityTypes.BARBELED_LOOSEJAW;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.BARBELED_LOOSEJAW_BUCKET;
 
-import static github.KingVampyre.DeepTrenches.core.init.LightStates.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.*;
 
 public class BarbeledLoosejawEntity extends AbstractLoosejawEntity {
 

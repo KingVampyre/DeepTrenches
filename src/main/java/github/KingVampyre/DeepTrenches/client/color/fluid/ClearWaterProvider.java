@@ -6,7 +6,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockRenderView;
 import org.jetbrains.annotations.Nullable;
 
-import static github.KingVampyre.DeepTrenches.client.init.ColorMaps.CLEAR_WATER;
+import static github.KingVampyre.DeepTrenches.client.init.DTColorMaps.CLEAR_WATER;
 
 public class ClearWaterProvider implements FluidColorProvider {
 

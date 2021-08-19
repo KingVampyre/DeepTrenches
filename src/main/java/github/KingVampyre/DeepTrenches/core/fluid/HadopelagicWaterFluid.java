@@ -2,8 +2,8 @@ package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
-import github.KingVampyre.DeepTrenches.core.init.DamageSources;
-import github.KingVampyre.DeepTrenches.core.init.ModBlocks;
+import github.KingVampyre.DeepTrenches.core.init.DTDamageSources;
+import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
 import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
@@ -20,11 +20,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.FLOWING_HADOPELAGIC_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.ModFluids.HADOPELAGIC_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.ModItems.HADOPELAGIC_WATER_BUCKET;
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.PRESSURE;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_HADOPELAGIC_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluids.HADOPELAGIC_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.HADOPELAGIC_WATER_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.PRESSURE;
 import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class HadopelagicWaterFluid extends AbstractOxygenatedWaterFluid implements StatusEffectFluid {
@@ -36,7 +36,7 @@ public abstract class HadopelagicWaterFluid extends AbstractOxygenatedWaterFluid
 
     @Override
     public boolean canApplyStatusEffects(LivingEntity living) {
-        return !living.isInvulnerableTo(DamageSources.PRESSURE);
+        return !living.isInvulnerableTo(DTDamageSources.PRESSURE);
     }
 
     @Override
@@ -85,7 +85,7 @@ public abstract class HadopelagicWaterFluid extends AbstractOxygenatedWaterFluid
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModBlocks.HADOPELAGIC_WATER.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
+        return DTBlocks.HADOPELAGIC_WATER.getDefaultState().with(FluidBlock.LEVEL, FlowableFluid.getBlockStateLevel(state));
     }
 
     public static class Flowing extends HadopelagicWaterFluid {

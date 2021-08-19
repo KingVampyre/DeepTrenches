@@ -2,7 +2,7 @@ package github.KingVampyre.DeepTrenches.core.mixin;
 
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
-import github.KingVampyre.DeepTrenches.core.init.StatusEffects;
+import github.KingVampyre.DeepTrenches.core.init.DTStatusEffects;
 import github.KingVampyre.DeepTrenches.core.util.ModEnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -31,9 +31,9 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModFluidTags.SINKING_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.ParticleTypes.*;
-import static github.KingVampyre.DeepTrenches.core.init.StatusEffects.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTFluidTags.SINKING_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.*;
 import static net.minecraft.entity.EquipmentSlot.MAINHAND;
 import static net.minecraft.entity.damage.DamageSource.*;
 
@@ -186,8 +186,8 @@ public abstract class MixinLivingEntity extends MixinEntity {
             if(source.getName().equals("soul_draining")) {
                 LivingEntity attacker = (LivingEntity) source.getAttacker();
 
-                if(attacker != null && attacker.hasStatusEffect(StatusEffects.SOUL_RAVENING)) {
-                    StatusEffectInstance instance = attacker.getActiveStatusEffects().get(StatusEffects.SOUL_RAVENING);
+                if(attacker != null && attacker.hasStatusEffect(DTStatusEffects.SOUL_RAVENING)) {
+                    StatusEffectInstance instance = attacker.getActiveStatusEffects().get(DTStatusEffects.SOUL_RAVENING);
 
                     instance.applyUpdateEffect(attacker);
                 }

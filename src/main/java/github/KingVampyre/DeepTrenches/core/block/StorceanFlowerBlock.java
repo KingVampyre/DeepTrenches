@@ -6,7 +6,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.DRITEAN;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.DRITEAN;
 
 public class StorceanFlowerBlock extends FlowerBlock {
 

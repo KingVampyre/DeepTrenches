@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModItems.LOOSEJAW_TOOTH;
-import static github.KingVampyre.DeepTrenches.core.init.ModPotions.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.LOOSEJAW_TOOTH;
+import static github.KingVampyre.DeepTrenches.core.init.DTPotions.*;
 import static net.minecraft.item.Items.GLOWSTONE_DUST;
 import static net.minecraft.item.Items.GUNPOWDER;
 import static net.minecraft.item.Items.REDSTONE;

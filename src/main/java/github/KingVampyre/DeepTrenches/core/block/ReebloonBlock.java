@@ -9,8 +9,8 @@ import net.minecraft.world.BlockView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlockTags.DRITEAN;
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.REEBLOON;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.DRITEAN;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.REEBLOON;
 
 public class ReebloonBlock extends FernBlock {
 

@@ -8,7 +8,7 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.ModBlocks.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.*;
 import static net.minecraft.block.Blocks.SNOW;
 
 public class SpriliumBlock extends GrassBlock {

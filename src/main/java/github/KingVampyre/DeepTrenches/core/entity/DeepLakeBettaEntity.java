@@ -12,11 +12,11 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.AttributeModifiers.MOVEMENT_SPEED_BOOST_250;
-import static github.KingVampyre.DeepTrenches.core.init.LightStates.*;
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.*;
-import static github.KingVampyre.DeepTrenches.core.init.ModItems.DEEP_LAKE_BETTA_BUCKET;
-import static github.KingVampyre.DeepTrenches.core.init.SensorTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_250;
+import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.DEEP_LAKE_BETTA_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.DTSensorTypes.*;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 import static net.minecraft.entity.ai.brain.sensor.SensorType.NEAREST_LIVING_ENTITIES;
 

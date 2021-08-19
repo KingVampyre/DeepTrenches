@@ -4,7 +4,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 
-import static github.KingVampyre.DeepTrenches.core.init.BlockEntityTypes.STASP_NEST;
+import static github.KingVampyre.DeepTrenches.core.init.DTBlockEntityTypes.STASP_NEST;
 
 public class StaspNestBlockEntity extends BlockEntity {
 

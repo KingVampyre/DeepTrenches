@@ -12,7 +12,7 @@ import net.minecraft.server.world.ServerWorld;
 import java.util.List;
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.MemoryModuleTypes.BREEDING_TARGET;
+import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.BREEDING_TARGET;
 import static net.minecraft.entity.ai.brain.MemoryModuleState.*;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
 
