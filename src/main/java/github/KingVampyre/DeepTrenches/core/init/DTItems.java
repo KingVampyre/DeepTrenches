@@ -222,10 +222,38 @@ public class DTItems {
 	public static final Item GREEN_BIOLUMINESCENT_GOO;
 	public static final Item LIGHT_BLUE_BIOLUMINESCENT_GOO;
 
-	/* ------------ GYNDELION ------------- */
-	public static final Item GYLDELION_DYE;
+	/* ------------- ORES --------------------- */
+	public static final Item BLACK_OPAL;
+	public static final Item BLACK_PEARL;
+	public static final Item CHALCEDONY;
+	public static final Item ENSTATITE;
+	public static final Item KRALCTIUM;
+	public static final Item MORGANITE;
+	public static final Item OPAL;
+	public static final Item RAW_STROXITE;
+	public static final Item RAW_URANOLUMEN;
+	public static final Item RUBY;
+	public static final Item SAPPHIRE;
+	public static final Item SPHENE;
+	public static final Item SPINEL;
+	public static final Item TANZANITE;
+	public static final Item TOPAZ;
+
+	/* ------------ INGOTS ------------- */
 	public static final Item GYLDELION_INGOT;
+	public static final Item STROXITE_INGOT;
+	public static final Item URANOLUMEN_INGOT;
+
+	/* ------------ NUGGETS ------------- */
 	public static final Item GYLDELION_NUGGET;
+	public static final Item STROXITE_NUGGET;
+	public static final Item URANOLUMEN_NUGGET;
+
+	/* ------------ POWDERS ------------- */
+	public static final Item URANOLUMEN_POWDER;
+
+	/* --------------- DYES --------------- */
+	public static final Item GYLDELION_DYE;
 
 	/* ------------ MOB DROPS -------------- */
 	public static final Item LOOSEJAW_TOOTH;
@@ -1687,10 +1715,37 @@ public class DTItems {
 		GREEN_BIOLUMINESCENT_GOO = createItem("deep_trenches:green_bioluminescent_goo", MISC);
 		LIGHT_BLUE_BIOLUMINESCENT_GOO = createItem("deep_trenches:light_blue_bioluminescent_goo", MISC);
 
+		BLACK_OPAL = createItem("deep_trenches:black_opal", MISC);
+		BLACK_PEARL = createItem("deep_trenches:black_pearl", MISC);
+		CHALCEDONY = createItem("deep_trenches:chalcedony", MISC);
+		ENSTATITE = createItem("deep_trenches:enstatite", MISC);
+		KRALCTIUM = createItem("deep_trenches:kralctium", MISC);
+		MORGANITE = createItem("deep_trenches:morganite", MISC);
+		OPAL = createItem("deep_trenches:opal", MISC);
+		RAW_STROXITE = createItem("deep_trenches:raw_stroxite", MISC);
+		RAW_URANOLUMEN = createItem("deep_trenches:raw_uranolumen", MISC);
+		RUBY = createItem("deep_trenches:ruby", MISC);
+		SAPPHIRE = createItem("deep_trenches:sapphire", MISC);
+		SPHENE = createItem("deep_trenches:sphene", MISC);
+		SPINEL = createItem("deep_trenches:spinel", MISC);
+		TANZANITE = createItem("deep_trenches:tanzanite", MISC);
+		TOPAZ = createItem("deep_trenches:topaz", MISC);
+
+		/* ------------ INGOTS ------------- */
+		GYLDELION_INGOT = createItem("deep_trenches:gyndelion_ingot", MISC);
+		STROXITE_INGOT = createItem("deep_trenches:stroxite_ingot", MISC);
+		URANOLUMEN_INGOT = createItem("deep_trenches:uranolumen_ingot", MISC);
+
+		/* ------------ NUGGETS ------------- */
+		GYLDELION_NUGGET = createItem("deep_trenches:gyndelion_nugget", MISC);
+		STROXITE_NUGGET = createItem("deep_trenches:stroxite_nugget", MISC);
+		URANOLUMEN_NUGGET = createItem("deep_trenches:uranolumen_nugget", MISC);
+
+		/* ------------ POWDERS ------------- */
+		URANOLUMEN_POWDER = createItem("deep_trenches:cyan_bioluminescent_goo", MISC);
+
 		/* -------------------------------- GYNDELION ------------------------------------------- */
 		GYLDELION_DYE = createItem("deep_trenches:gyldelion_dye", MISC);
-		GYLDELION_INGOT = createItem("deep_trenches:gyldelion_ingot", MISC);
-		GYLDELION_NUGGET = createItem("deep_trenches:gyldelion_nugget", MISC);
 		createBlockItem("deep_trenches:gyldelion_block", GYLDELION_BLOCK, MISC);
 
 		/* -------------------------------- MOB DROPS ------------------------------------------- */
