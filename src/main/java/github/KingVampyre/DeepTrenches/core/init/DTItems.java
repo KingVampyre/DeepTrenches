@@ -7,6 +7,7 @@ import github.Louwind.entityutils.core.item.FabricBoatItem;
 import github.Louwind.entityutils.core.util.FabricBoatType;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.*;
@@ -214,13 +215,63 @@ public class DTItems {
 	/* ------------- COOKED FOOD ---------------- */
 	public static final Item COOKED_GIANT_HATCHETFISH;
 
-	/* ------------- WEAPONS ----------- */
-	public static final Item ADAIGGER;
-
 	/* ------------- GOO's --------------------- */
 	public static final Item CYAN_BIOLUMINESCENT_GOO;
 	public static final Item GREEN_BIOLUMINESCENT_GOO;
 	public static final Item LIGHT_BLUE_BIOLUMINESCENT_GOO;
+
+	/* ------------- WEAPONS ----------- */
+	public static final Item ADAIGGER;
+
+	/* ------------- ARMOR --------------------- */
+	public static final Item CHALCEDONY_HELMET;
+	public static final Item CHALCEDONY_CHESTPLATE;
+	public static final Item CHALCEDONY_LEGGINGS;
+	public static final Item CHALCEDONY_BOOTS;
+
+	public static final Item ENSTATITE_HELMET;
+	public static final Item ENSTATITE_CHESTPLATE;
+	public static final Item ENSTATITE_LEGGINGS;
+	public static final Item ENSTATITE_BOOTS;
+
+	public static final Item MORGANITE_HELMET;
+	public static final Item MORGANITE_CHESTPLATE;
+	public static final Item MORGANITE_LEGGINGS;
+	public static final Item MORGANITE_BOOTS;
+
+	public static final Item RUBY_HELMET;
+	public static final Item RUBY_CHESTPLATE;
+	public static final Item RUBY_LEGGINGS;
+	public static final Item RUBY_BOOTS;
+
+	public static final Item SAPPHIRE_HELMET;
+	public static final Item SAPPHIRE_CHESTPLATE;
+	public static final Item SAPPHIRE_LEGGINGS;
+	public static final Item SAPPHIRE_BOOTS;
+
+	public static final Item SPHENE_HELMET;
+	public static final Item SPHENE_CHESTPLATE;
+	public static final Item SPHENE_LEGGINGS;
+	public static final Item SPHENE_BOOTS;
+
+	public static final Item SPINEL_HELMET;
+	public static final Item SPINEL_CHESTPLATE;
+	public static final Item SPINEL_LEGGINGS;
+	public static final Item SPINEL_BOOTS;
+
+	public static final Item TANZANITE_HELMET;
+	public static final Item TANZANITE_CHESTPLATE;
+	public static final Item TANZANITE_LEGGINGS;
+	public static final Item TANZANITE_BOOTS;
+
+	public static final Item TOPAZ_HELMET;
+	public static final Item TOPAZ_CHESTPLATE;
+	public static final Item TOPAZ_LEGGINGS;
+	public static final Item TOPAZ_BOOTS;
+
+	/* ------------- TALISMANS --------------------- */
+	public static final Item SPHENE_TALISMAN;
+	public static final Item TANZANITE_TALISMAN;
 
 	/* ------------- ORES --------------------- */
 	public static final Item BLACK_OPAL;
@@ -261,6 +312,26 @@ public class DTItems {
 	/* ------------ BLOCK ITEMS -------------- */
 	public static final Item AIRIAL_MOSS;
 
+	protected static Item createArmorItem(String id, ArmorMaterial material, EquipmentSlot slot) {
+		return register(id, new ArmorItem(material, slot, new Settings().group(COMBAT)));
+	}
+
+	protected static Item createHelmet(String id, ArmorMaterial material) {
+		return createArmorItem(id, material, EquipmentSlot.HEAD);
+	}
+
+	protected static Item createChestplate(String id, ArmorMaterial material) {
+		return createArmorItem(id, material, EquipmentSlot.CHEST);
+	}
+
+	protected static Item createLeggings(String id, ArmorMaterial material) {
+		return createArmorItem(id, material, EquipmentSlot.LEGS);
+	}
+
+	protected static Item createBoots(String id, ArmorMaterial material) {
+		return createArmorItem(id, material, EquipmentSlot.FEET);
+	}
+
 	protected static Item createBlockItem(String id, Block block, ItemGroup itemGroup) {
 		return createBlockItem(id, block, new Settings().group(itemGroup));
 	}
@@ -273,12 +344,12 @@ public class DTItems {
 		return register(id, new FabricBoatItem(DTEntityTypes.BOAT, type, new Item.Settings().maxCount(1).group(WOODS)));
 	}
 
-	protected static void createCoralFan(String id, Block standingBlock, Block block) {
-		register(id, new WallStandingBlockItem(standingBlock, block, new Settings().maxCount(1).group(SEA_BLOCKS)));
-	}
-
 	protected static Item createBucket(String id, FlowableFluid fluid) {
 		return register(id, new BucketItem(fluid,  new Item.Settings().recipeRemainder(BUCKET).maxCount(1).group(MISC)));
+	}
+
+	protected static void createCoralFan(String id, Block standingBlock, Block block) {
+		register(id, new WallStandingBlockItem(standingBlock, block, new Settings().maxCount(1).group(SEA_BLOCKS)));
 	}
 
 	protected static Item createFishBucket(String id, EntityType<?> type) {
@@ -319,11 +390,8 @@ public class DTItems {
 
 	protected static Item register(String id, Item item) {
 
-		if(item instanceof BlockItem) {
-			BlockItem blockItem = (BlockItem) item;
-
+		if(item instanceof BlockItem blockItem)
 			blockItem.appendBlocks(BLOCK_ITEMS, blockItem);
-		}
 
 		return Registry.register(ITEM, id, item);
 	}
@@ -1707,14 +1775,65 @@ public class DTItems {
 		/* -------------------------------- COOKED FOOD ------------------------------------------- */
 		COOKED_GIANT_HATCHETFISH = createFood("deep_trenches:cooked_giant_hatchetfish", DTFoodComponents.COOKED_GIANT_HATCHETFISH);
 
-		/* -------------------------------- WEAPONS ------------------------------------------- */
-		ADAIGGER = register("deep_trenches:adaigger", new AdaiggerItem(new Settings().group(MISC)));
-
 		/* -------------------------------- GOO's ------------------------------------------- */
 		CYAN_BIOLUMINESCENT_GOO = createItem("deep_trenches:cyan_bioluminescent_goo", MISC);
 		GREEN_BIOLUMINESCENT_GOO = createItem("deep_trenches:green_bioluminescent_goo", MISC);
 		LIGHT_BLUE_BIOLUMINESCENT_GOO = createItem("deep_trenches:light_blue_bioluminescent_goo", MISC);
 
+		/* -------------------------------- WEAPONS ------------------------------------------- */
+		ADAIGGER = register("deep_trenches:adaigger", new AdaiggerItem(new Settings().group(COMBAT)));
+
+		/* ------------------------------------- ARMOR ----------------------------------------------- */
+		CHALCEDONY_HELMET = createHelmet("deep_trenches:chalcedony_helmet", DTArmorMaterials.CHALCEDONY);
+		CHALCEDONY_CHESTPLATE = createChestplate("deep_trenches:chalcedony_chestplate", DTArmorMaterials.CHALCEDONY);
+		CHALCEDONY_LEGGINGS = createLeggings("deep_trenches:chalcedony_leggings", DTArmorMaterials.CHALCEDONY);
+		CHALCEDONY_BOOTS = createBoots("deep_trenches:chalcedony_boots", DTArmorMaterials.CHALCEDONY);
+
+		ENSTATITE_HELMET = createHelmet("deep_trenches:enstatite_helmet", DTArmorMaterials.ENSTATITE);
+		ENSTATITE_CHESTPLATE = createChestplate("deep_trenches:enstatite_chestplate", DTArmorMaterials.ENSTATITE);
+		ENSTATITE_LEGGINGS = createLeggings("deep_trenches:enstatite_leggings", DTArmorMaterials.ENSTATITE);
+		ENSTATITE_BOOTS = createBoots("deep_trenches:enstatite_boots", DTArmorMaterials.ENSTATITE);
+
+		MORGANITE_HELMET = createHelmet("deep_trenches:morganite_helmet", DTArmorMaterials.MORGANITE);
+		MORGANITE_CHESTPLATE = createChestplate("deep_trenches:morganite_chestplate", DTArmorMaterials.MORGANITE);
+		MORGANITE_LEGGINGS = createLeggings("deep_trenches:morganite_leggings", DTArmorMaterials.MORGANITE);
+		MORGANITE_BOOTS = createBoots("deep_trenches:morganite_boots", DTArmorMaterials.MORGANITE);
+
+		RUBY_HELMET = createHelmet("deep_trenches:ruby_helmet", DTArmorMaterials.RUBY);
+		RUBY_CHESTPLATE = createChestplate("deep_trenches:ruby_chestplate", DTArmorMaterials.RUBY);
+		RUBY_LEGGINGS = createLeggings("deep_trenches:ruby_leggings", DTArmorMaterials.RUBY);
+		RUBY_BOOTS = createBoots("deep_trenches:ruby_boots", DTArmorMaterials.RUBY);
+
+		SAPPHIRE_HELMET = createHelmet("deep_trenches:sapphire_helmet", DTArmorMaterials.SAPPHIRE);
+		SAPPHIRE_CHESTPLATE = createChestplate("deep_trenches:sapphire_chestplate", DTArmorMaterials.SAPPHIRE);
+		SAPPHIRE_LEGGINGS = createLeggings("deep_trenches:sapphire_leggings", DTArmorMaterials.SAPPHIRE);
+		SAPPHIRE_BOOTS = createBoots("deep_trenches:sapphire_boots", DTArmorMaterials.SAPPHIRE);
+
+		SPHENE_HELMET = createHelmet("deep_trenches:sphene_helmet", DTArmorMaterials.SPHENE);
+		SPHENE_CHESTPLATE = createChestplate("deep_trenches:sphene_chestplate", DTArmorMaterials.SPHENE);
+		SPHENE_LEGGINGS = createLeggings("deep_trenches:sphene_leggings", DTArmorMaterials.SPHENE);
+		SPHENE_BOOTS = createBoots("deep_trenches:sphene_boots", DTArmorMaterials.SPHENE);
+
+		SPINEL_HELMET = createHelmet("deep_trenches:spinel_helmet", DTArmorMaterials.SPINEL);
+		SPINEL_CHESTPLATE = createChestplate("deep_trenches:spinel_chestplate", DTArmorMaterials.SPINEL);
+		SPINEL_LEGGINGS = createLeggings("deep_trenches:spinel_leggings", DTArmorMaterials.SPINEL);
+		SPINEL_BOOTS = createBoots("deep_trenches:spinel_boots", DTArmorMaterials.SPINEL);
+
+		TANZANITE_HELMET = createHelmet("deep_trenches:tanzanite_helmet", DTArmorMaterials.TANZANITE);
+		TANZANITE_CHESTPLATE = createChestplate("deep_trenches:tanzanite_chestplate", DTArmorMaterials.TANZANITE);
+		TANZANITE_LEGGINGS = createLeggings("deep_trenches:tanzanite_leggings", DTArmorMaterials.TANZANITE);
+		TANZANITE_BOOTS = createBoots("deep_trenches:tanzanite_boots", DTArmorMaterials.TANZANITE);
+
+		TOPAZ_HELMET = createHelmet("deep_trenches:topaz_helmet", DTArmorMaterials.TOPAZ);
+		TOPAZ_CHESTPLATE = createChestplate("deep_trenches:topaz_chestplate", DTArmorMaterials.TOPAZ);
+		TOPAZ_LEGGINGS = createLeggings("deep_trenches:topaz_leggings", DTArmorMaterials.TOPAZ);
+		TOPAZ_BOOTS = createBoots("deep_trenches:topaz_boots", DTArmorMaterials.TOPAZ);
+
+		/* -------------------- TALISMANS -------------------------------- */
+		SPHENE_TALISMAN = createItem("deep_trenches:sphene_talisman", COMBAT);
+		TANZANITE_TALISMAN = createItem("deep_trenches:tanzanite_talisman", COMBAT);
+
+		/* -------------------- ORES -------------------------------- */
 		BLACK_OPAL = createItem("deep_trenches:black_opal", MISC);
 		BLACK_PEARL = createItem("deep_trenches:black_pearl", MISC);
 		CHALCEDONY = createItem("deep_trenches:chalcedony", MISC);
@@ -1742,7 +1861,7 @@ public class DTItems {
 		URANOLUMEN_NUGGET = createItem("deep_trenches:uranolumen_nugget", MISC);
 
 		/* ------------ POWDERS ------------- */
-		URANOLUMEN_POWDER = createItem("deep_trenches:cyan_bioluminescent_goo", MISC);
+		URANOLUMEN_POWDER = createItem("deep_trenches:uranolumen_powder", MISC);
 
 		/* -------------------------------- GYNDELION ------------------------------------------- */
 		GYLDELION_DYE = createItem("deep_trenches:gyldelion_dye", MISC);

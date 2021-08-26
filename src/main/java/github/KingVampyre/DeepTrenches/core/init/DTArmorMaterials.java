@@ -21,12 +21,13 @@ public enum DTArmorMaterials implements ArmorMaterial {
     TOPAZ(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.TOPAZ))
     ;
 
-    private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
+    private static final int[] BASE_DURABILITY = new int[] {13, 15, 16, 11};
+
+    private final SoundEvent equipSound;
+    private final Supplier<Ingredient> ingredient;
 
     private final int durabilityMultiplier;
     private final int enchantability;
-    private final SoundEvent equipSound;
-    private final Supplier<Ingredient> ingredient;
     private final float knockbackResistance;
     private final int[] protectionAmounts;
     private final float toughness;
@@ -47,11 +48,6 @@ public enum DTArmorMaterials implements ArmorMaterial {
     }
 
     @Override
-    public int getProtectionAmount(EquipmentSlot slot) {
-        return this.protectionAmounts[slot.getEntitySlotId()];
-    }
-
-    @Override
     public int getEnchantability() {
         return this.enchantability;
     }
@@ -62,8 +58,8 @@ public enum DTArmorMaterials implements ArmorMaterial {
     }
 
     @Override
-    public Ingredient getRepairIngredient() {
-        return this.ingredient.get();
+    public float getKnockbackResistance() {
+        return this.knockbackResistance;
     }
 
     @Override
@@ -72,13 +68,18 @@ public enum DTArmorMaterials implements ArmorMaterial {
     }
 
     @Override
-    public float getToughness() {
-        return this.toughness;
+    public int getProtectionAmount(EquipmentSlot slot) {
+        return this.protectionAmounts[slot.getEntitySlotId()];
     }
 
     @Override
-    public float getKnockbackResistance() {
-        return this.knockbackResistance;
+    public Ingredient getRepairIngredient() {
+        return this.ingredient.get();
+    }
+
+    @Override
+    public float getToughness() {
+        return this.toughness;
     }
 
 }
