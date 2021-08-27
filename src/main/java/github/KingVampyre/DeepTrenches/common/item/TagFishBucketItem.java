@@ -29,8 +29,7 @@ public class TagFishBucketItem extends EntityBucketItem {
 		EntityType<?> type = this.tag != null ? this.tag.getRandom(world.random) : this.type;
 		Entity entity = type.spawnFromItemStack(world, stack, null, pos, SpawnReason.BUCKET, true, false);
 
-		if (entity instanceof Bucketable) {
-			Bucketable bucketable = (Bucketable)entity;
+		if (entity instanceof Bucketable bucketable) {
 			bucketable.copyDataFromNbt(stack.getOrCreateNbt());
 			bucketable.setFromBucket(true);
 		}

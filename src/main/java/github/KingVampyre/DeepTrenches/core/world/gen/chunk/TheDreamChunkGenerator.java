@@ -197,8 +197,8 @@ public class TheDreamChunkGenerator extends NoiseChunkGenerator {
 
                                 if (state != Blocks.AIR.getDefaultState()) {
 
-                                    if (state.getLuminance() != 0 && chunk instanceof ProtoChunk)
-                                        ((ProtoChunk)chunk).addLightSource(mutable);
+                                    if (state.getLuminance() != 0 && chunk instanceof ProtoChunk proto)
+                                        proto.addLightSource(mutable);
 
                                     chunkSection.setBlockState(x, y, z, state, false);
                                     oceanFloor.trackUpdate(x, posY, z, state);

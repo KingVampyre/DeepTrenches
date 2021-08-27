@@ -94,13 +94,8 @@ public class LeakParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class AcidDripletFactory implements ParticleFactory<DefaultParticleType> {
-
-        protected final SpriteProvider spriteProvider;
-
-        public AcidDripletFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public record AcidDripletFactory(
+            SpriteProvider spriteProvider) implements ParticleFactory<DefaultParticleType> {
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
@@ -113,13 +108,8 @@ public class LeakParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class AcidDrippingFactory implements ParticleFactory<DefaultParticleType> {
-
-        protected final SpriteProvider spriteProvider;
-
-        public AcidDrippingFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public record AcidDrippingFactory(
+            SpriteProvider spriteProvider) implements ParticleFactory<DefaultParticleType> {
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
@@ -132,13 +122,8 @@ public class LeakParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class AcidFallingFactory implements ParticleFactory<DefaultParticleType> {
-
-        protected final SpriteProvider spriteProvider;
-
-        public AcidFallingFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public record AcidFallingFactory(
+            SpriteProvider spriteProvider) implements ParticleFactory<DefaultParticleType> {
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
@@ -151,13 +136,8 @@ public class LeakParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class AcidLandingFactory implements ParticleFactory<DefaultParticleType> {
-
-        protected final SpriteProvider spriteProvider;
-
-        public AcidLandingFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public record AcidLandingFactory(
+            SpriteProvider spriteProvider) implements ParticleFactory<DefaultParticleType> {
 
         @Override
         public Particle createParticle(DefaultParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
@@ -170,13 +150,8 @@ public class LeakParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class ColoredWaterDrippingFactory implements ParticleFactory<ColoredWaterFluidParticleEffect> {
-
-        protected final SpriteProvider spriteProvider;
-
-        public ColoredWaterDrippingFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public record ColoredWaterDrippingFactory(
+            SpriteProvider spriteProvider) implements ParticleFactory<ColoredWaterFluidParticleEffect> {
 
         @Override
         public Particle createParticle(ColoredWaterFluidParticleEffect parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
@@ -192,13 +167,8 @@ public class LeakParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class ColoredWaterFallingFactory implements ParticleFactory<ColoredWaterFluidParticleEffect> {
-
-        protected final SpriteProvider spriteProvider;
-
-        public ColoredWaterFallingFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public record ColoredWaterFallingFactory(
+            SpriteProvider spriteProvider) implements ParticleFactory<ColoredWaterFluidParticleEffect> {
 
         @Override
         public Particle createParticle(ColoredWaterFluidParticleEffect parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
@@ -214,13 +184,8 @@ public class LeakParticle extends BlockLeakParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class ColoredWaterSplashingFactory implements ParticleFactory<ColoredWaterFluidParticleEffect> {
-
-        protected final SpriteProvider spriteProvider;
-
-        public ColoredWaterSplashingFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public record ColoredWaterSplashingFactory(
+            SpriteProvider spriteProvider) implements ParticleFactory<ColoredWaterFluidParticleEffect> {
 
         @Override
         public Particle createParticle(ColoredWaterFluidParticleEffect parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {

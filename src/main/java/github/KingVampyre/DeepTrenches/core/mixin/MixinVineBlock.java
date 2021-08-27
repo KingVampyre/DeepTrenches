@@ -20,11 +20,8 @@ public class MixinVineBlock {
         BlockState state = world.getBlockState(pos);
         Block block = state.getBlock();
 
-        if(block instanceof SpreadingVineBlock) {
-            SpreadingVineBlock vineFlowers = (SpreadingVineBlock) block;
-
+        if(block instanceof SpreadingVineBlock vineFlowers)
             cir.setReturnValue(vineFlowers.canPlantOnTop(state, world, pos));
-        }
 
     }
 

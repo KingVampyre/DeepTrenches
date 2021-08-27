@@ -13,13 +13,8 @@ public class StatusEffectParticle extends SpellParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class EntityAmbientFactory implements ParticleFactory<DefaultParticleType> {
-
-        protected final SpriteProvider spriteProvider;
-
-        public EntityAmbientFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public record EntityAmbientFactory(
+            SpriteProvider spriteProvider) implements ParticleFactory<DefaultParticleType> {
 
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
             StatusEffectParticle particle = new StatusEffectParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider);
@@ -31,13 +26,8 @@ public class StatusEffectParticle extends SpellParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class EntityFactory implements ParticleFactory<DefaultParticleType> {
-
-        protected final SpriteProvider spriteProvider;
-
-        public EntityFactory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public record EntityFactory(
+            SpriteProvider spriteProvider) implements ParticleFactory<DefaultParticleType> {
 
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
             return new StatusEffectParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider);

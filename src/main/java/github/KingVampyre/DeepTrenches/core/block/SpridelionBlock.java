@@ -34,13 +34,8 @@ public class SpridelionBlock extends FlowerBlock {
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
 
-        if (!world.isClient && world.getDifficulty() != PEACEFUL && entity instanceof LivingEntity) {
-            LivingEntity living = (LivingEntity) entity;
-
-            if (!living.isInvulnerableTo(ACID))
-                StatusEffectHelper.addCorrosionEffect(living, GAS_CORROSION, 1, 600);
-
-        }
+        if (!world.isClient && world.getDifficulty() != PEACEFUL && entity instanceof LivingEntity living && !living.isInvulnerableTo(ACID))
+            StatusEffectHelper.addCorrosionEffect(living, GAS_CORROSION, 1, 600);
 
     }
 

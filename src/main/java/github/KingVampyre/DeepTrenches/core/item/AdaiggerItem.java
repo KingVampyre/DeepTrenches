@@ -32,8 +32,7 @@ public class AdaiggerItem extends SwordItem {
 	@Override
 	public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
 
-		if (user instanceof PlayerEntity) {
-			PlayerEntity player = (PlayerEntity) user;
+		if (user instanceof PlayerEntity player) {
 			int duration = this.getMaxUseTime(stack) - remainingUseTicks;
 
 			if (duration >= 10 && !world.isClient) {

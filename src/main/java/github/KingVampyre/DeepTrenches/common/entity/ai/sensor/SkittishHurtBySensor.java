@@ -32,8 +32,7 @@ public class SkittishHurtBySensor extends HurtBySensor {
     protected void sense(ServerWorld world, LivingEntity entity) {
         super.sense(world, entity);
 
-        if(entity instanceof Skittish) {
-            Skittish skittish = (Skittish) entity;
+        if(entity instanceof Skittish skittish) {
 
             EntityAttributeInstance instance = entity.getAttributeInstance(GENERIC_MOVEMENT_SPEED);
 

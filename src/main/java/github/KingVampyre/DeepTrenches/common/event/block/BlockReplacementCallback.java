@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.event.EventFactory;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.ActionResult;
 
+import static net.minecraft.util.ActionResult.PASS;
+
 @FunctionalInterface
 public interface BlockReplacementCallback {
 
@@ -13,12 +15,11 @@ public interface BlockReplacementCallback {
                 for (BlockReplacementCallback event : listeners) {
                     ActionResult result = event.interact(context);
 
-                    if (result != ActionResult.PASS) {
+                    if (result != PASS)
                         return result;
-                    }
                 }
 
-                return ActionResult.PASS;
+                return PASS;
             }
     );
 

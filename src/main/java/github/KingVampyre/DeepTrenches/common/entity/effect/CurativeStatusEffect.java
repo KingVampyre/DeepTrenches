@@ -23,9 +23,8 @@ public class CurativeStatusEffect extends StatusEffect {
 
 		if (ticks > 0)
 			return duration % ticks == 0;
-		else
-			return true;
 
+		return true;
 	}
 
 	@Override
