@@ -2,14 +2,14 @@ package github.KingVampyre.DeepTrenches.core.entity.effect;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectType;
+import net.minecraft.entity.effect.StatusEffectCategory;
 
-import static net.minecraft.entity.effect.StatusEffectType.BENEFICIAL;
+import static net.minecraft.entity.effect.StatusEffectCategory.BENEFICIAL;
 
 public class DrainingStatusEffect extends StatusEffect {
 
-    public DrainingStatusEffect(StatusEffectType statusEffectType, int i) {
-        super(statusEffectType, i);
+    public DrainingStatusEffect(StatusEffectCategory category, int i) {
+        super(category, i);
     }
 
     @Override
@@ -17,7 +17,7 @@ public class DrainingStatusEffect extends StatusEffect {
         float hearts = 1 << amplifier;
         float amount = 2 + hearts;
 
-        StatusEffectType statusEffectType = this.getType();
+        StatusEffectCategory statusEffectType = this.getCategory();
 
         if (statusEffectType == BENEFICIAL && entity.getHealth() < entity.getMaxHealth())
             entity.heal(amount);

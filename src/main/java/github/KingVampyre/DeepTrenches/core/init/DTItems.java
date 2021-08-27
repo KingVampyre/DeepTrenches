@@ -1851,12 +1851,12 @@ public class DTItems {
 		TOPAZ = createItem("deep_trenches:topaz", MISC);
 
 		/* ------------ INGOTS ------------- */
-		GYLDELION_INGOT = createItem("deep_trenches:gyndelion_ingot", MISC);
+		GYLDELION_INGOT = createItem("deep_trenches:gyldelion_ingot", MISC);
 		STROXITE_INGOT = createItem("deep_trenches:stroxite_ingot", MISC);
 		URANOLUMEN_INGOT = createItem("deep_trenches:uranolumen_ingot", MISC);
 
 		/* ------------ NUGGETS ------------- */
-		GYLDELION_NUGGET = createItem("deep_trenches:gyndelion_nugget", MISC);
+		GYLDELION_NUGGET = createItem("deep_trenches:gyldelion_nugget", MISC);
 		STROXITE_NUGGET = createItem("deep_trenches:stroxite_nugget", MISC);
 		URANOLUMEN_NUGGET = createItem("deep_trenches:uranolumen_nugget", MISC);
 

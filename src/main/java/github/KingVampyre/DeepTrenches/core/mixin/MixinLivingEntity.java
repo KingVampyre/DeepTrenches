@@ -110,8 +110,7 @@ public abstract class MixinLivingEntity extends MixinEntity {
                 FluidState state = this.world.getFluidState(pos);
                 Fluid fluid  = state.getFluid();
 
-                if(fluid instanceof StatusEffectFluid) {
-                    StatusEffectFluid effect = (StatusEffectFluid) fluid;
+                if(fluid instanceof StatusEffectFluid effect) {
                     LivingEntity living = (LivingEntity) (Object) this;
 
                     if(effect.canApplyStatusEffects(living))
@@ -127,8 +126,7 @@ public abstract class MixinLivingEntity extends MixinEntity {
     @Inject(method = "damage", at = @At("RETURN"))
     private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
 
-        if(source instanceof ProjectileDamageSource) {
-            ProjectileDamageSource projectile = (ProjectileDamageSource) source;
+        if(source instanceof ProjectileDamageSource projectile) {
             Entity sourceEntity = projectile.getSource();
 
             if(sourceEntity instanceof ArrowEntity || sourceEntity instanceof TridentEntity) {
@@ -141,8 +139,7 @@ public abstract class MixinLivingEntity extends MixinEntity {
                     ModEnchantmentHelper.applySoulDraining(attacker, living, stack);
                 }
 
-                if(sourceEntity instanceof TridentEntity) {
-                    TridentEntity trident = (TridentEntity) sourceEntity;
+                if(sourceEntity instanceof TridentEntity trident) {
                     AccessorTridentEntity accessor = (AccessorTridentEntity) trident;
                     ItemStack stack = accessor.getTridentStack();
 
@@ -163,10 +160,8 @@ public abstract class MixinLivingEntity extends MixinEntity {
             FluidState state = this.world.getFluidState(pos);
             Fluid fluid  = state.getFluid();
 
-            if(fluid instanceof OxygenatedFluid) {
-                OxygenatedFluid oxygenatedFluid = (OxygenatedFluid) fluid;
+            if(fluid instanceof OxygenatedFluid oxygenatedFluid) {
                 LivingEntity living = (LivingEntity) (Object) this;
-
                 int nextAir = oxygenatedFluid.getNextAirUnderwater(living, this.world.random, air);
 
                 cir.setReturnValue(nextAir);

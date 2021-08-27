@@ -1,12 +1,12 @@
 package github.KingVampyre.DeepTrenches.core.entity.effect;
 
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectType;
+import net.minecraft.entity.effect.StatusEffectCategory;
 
 public class SoftBonesStatusEffect extends StatusEffect {
 
-	public SoftBonesStatusEffect(StatusEffectType statusEffectType, int i) {
-		super(statusEffectType, i);
+	public SoftBonesStatusEffect(StatusEffectCategory category, int i) {
+		super(category, i);
 	}
 
 }

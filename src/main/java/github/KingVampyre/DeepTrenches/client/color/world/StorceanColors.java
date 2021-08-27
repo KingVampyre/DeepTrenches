@@ -22,7 +22,7 @@ public class StorceanColors implements ColorMap, ColorResolver {
         var temperature = MathHelper.clamp(biome.getTemperature(), 0, 1);
         var humidity = MathHelper.clamp(biome.getDownfall(), 0, 1);
 
-        var factor = humidity *= temperature;
+        var factor = humidity * temperature;
         var temperatureByte = (int) ((1 - temperature) * 255);
         var humidityByte = (int) ((1 - factor) * 255);
         var index = humidityByte << 8 | temperatureByte;

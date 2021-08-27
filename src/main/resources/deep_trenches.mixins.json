@@ -15,8 +15,6 @@
     "MixinGrassBlock",
     "MixinHeartType",
     "MixinLivingEntity",
-    "MixinPlayerEntity",
-    "MixinServerPlayerEntity",
     "MixinTridentEntity",
     "MixinVineBlock"
   ],

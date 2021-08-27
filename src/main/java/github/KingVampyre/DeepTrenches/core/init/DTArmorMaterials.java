@@ -64,7 +64,7 @@ public enum DTArmorMaterials implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return this.name().toUpperCase();
+        return this.name().toLowerCase();
     }
 
     @Override

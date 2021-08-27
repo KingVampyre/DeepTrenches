@@ -2,8 +2,8 @@ package github.KingVampyre.DeepTrenches.core.entity.effect;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.util.math.MathHelper;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.PRESSURE;
@@ -12,8 +12,8 @@ import static net.minecraft.tag.FluidTags.WATER;
 
 public class PressureStatusEffect extends StatusEffect {
 
-    public PressureStatusEffect(StatusEffectType type, int color) {
-        super(type, color);
+    public PressureStatusEffect(StatusEffectCategory category, int color) {
+        super(category, color);
     }
 
     @Override

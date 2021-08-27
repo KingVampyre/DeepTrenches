@@ -6,7 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.effect.StatusEffectType;
+import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
@@ -20,8 +20,8 @@ import static net.minecraft.entity.attribute.EntityAttributes.GENERIC_MAX_HEALTH
 
 public class CorrosionStatusEffect extends ArmorDamageStatusEffect {
 
-    public CorrosionStatusEffect(StatusEffectType type, int color) {
-        super(type, color);
+    public CorrosionStatusEffect(StatusEffectCategory category, int color) {
+        super(category, color);
     }
 
     @Override

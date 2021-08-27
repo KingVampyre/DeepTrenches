@@ -3,7 +3,7 @@ package github.KingVampyre.DeepTrenches.common.entity.effect;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectType;
+import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
@@ -11,8 +11,8 @@ import java.util.Random;
 
 public abstract class ArmorDamageStatusEffect extends StatusEffect {
 
-    public ArmorDamageStatusEffect(StatusEffectType type, int color) {
-        super(type, color);
+    public ArmorDamageStatusEffect(StatusEffectCategory category, int color) {
+        super(category, color);
     }
 
     @Override

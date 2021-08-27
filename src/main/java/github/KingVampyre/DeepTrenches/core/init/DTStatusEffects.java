@@ -5,7 +5,7 @@ import github.KingVampyre.DeepTrenches.core.entity.effect.*;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.registry.Registry;
 
-import static net.minecraft.entity.effect.StatusEffectType.*;
+import static net.minecraft.entity.effect.StatusEffectCategory.*;
 import static net.minecraft.entity.effect.StatusEffects.NAUSEA;
 import static net.minecraft.entity.effect.StatusEffects.POISON;
 import static net.minecraft.util.registry.Registry.STATUS_EFFECT;

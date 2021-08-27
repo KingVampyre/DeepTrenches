@@ -11,7 +11,6 @@ import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.ANGR
 import static net.minecraft.entity.ai.brain.MemoryModuleState.REGISTERED;
 import static net.minecraft.entity.ai.brain.MemoryModuleState.VALUE_PRESENT;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.*;
-import static net.minecraft.entity.ai.brain.MemoryModuleType.ANGRY_AT;
 import static net.minecraft.world.GameRules.FORGIVE_DEAD_PLAYERS;
 
 public class ForgetAngryAtTask<E extends MobEntity> extends Task<E> {

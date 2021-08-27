@@ -2,6 +2,7 @@
 
 .gradle/
 build/
+remappedSrc/
 out/
 classes/
 

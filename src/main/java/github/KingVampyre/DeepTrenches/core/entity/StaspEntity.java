@@ -27,6 +27,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.ANGRY_TICKS;
 import static net.minecraft.entity.ai.brain.Activity.*;

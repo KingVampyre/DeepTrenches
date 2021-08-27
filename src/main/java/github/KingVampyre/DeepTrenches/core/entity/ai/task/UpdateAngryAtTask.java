@@ -2,6 +2,7 @@ package github.KingVampyre.DeepTrenches.core.entity.ai.task;
 
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.brain.Brain;
 import net.minecraft.entity.ai.brain.task.Task;
 import net.minecraft.entity.mob.Angerable;
 import net.minecraft.entity.mob.MobEntity;
@@ -10,6 +11,7 @@ import net.minecraft.util.math.Box;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;

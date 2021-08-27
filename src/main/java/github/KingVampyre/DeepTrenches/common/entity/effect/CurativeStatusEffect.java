@@ -2,7 +2,7 @@ package github.KingVampyre.DeepTrenches.common.entity.effect;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectType;
+import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.world.World;
 
 public class CurativeStatusEffect extends StatusEffect {
@@ -10,8 +10,8 @@ public class CurativeStatusEffect extends StatusEffect {
 	protected StatusEffect effect;
 	protected float healing;
 
-	public CurativeStatusEffect(StatusEffectType effectType, StatusEffect effect, float healing, int i) {
-		super(effectType, i);
+	public CurativeStatusEffect(StatusEffectCategory category, StatusEffect effect, float healing, int i) {
+		super(category, i);
 
 		this.effect = effect;
 		this.healing = healing;

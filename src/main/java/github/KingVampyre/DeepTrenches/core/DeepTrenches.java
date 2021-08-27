@@ -3,12 +3,14 @@ package github.KingVampyre.DeepTrenches.core;
 import github.KingVampyre.DeepTrenches.client.init.DTGeneratorTypes;
 import github.KingVampyre.DeepTrenches.common.event.block.BlockReplacementCallback;
 import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
+import github.KingVampyre.DeepTrenches.core.event.entity.AllowSleepyStatusEffect;
 import github.KingVampyre.DeepTrenches.core.init.*;
 import github.KingVampyre.DeepTrenches.core.mixin.AccessorGeneratorType;
 import github.KingVampyre.DeepTrenches.core.world.gen.chunk.TheDreamChunkGenerator;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
 import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
+import net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.GeckoLib;
 
@@ -27,6 +29,7 @@ public class  DeepTrenches implements ModInitializer {
 
 		/* EVENT */
 		BlockReplacementCallback.EVENT.register(AirialMossCallback.INSTANCE);
+		EntitySleepEvents.ALLOW_SLEEPING.register(AllowSleepyStatusEffect.INSTANCE);
 
 		/* BIOME */
 		Registry.register(BIOME, "deep_trenches:almond_forest", DTBiomes.ALMOND_FOREST);
