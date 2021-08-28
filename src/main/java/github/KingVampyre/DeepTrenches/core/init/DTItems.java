@@ -224,15 +224,40 @@ public class DTItems {
 	public static final Item ADAIGGER;
 
 	/* ------------- ARMOR --------------------- */
+	public static final Item AQUAMARINE_HELMET;
+	public static final Item AQUAMARINE_CHESTPLATE;
+	public static final Item AQUAMARINE_LEGGINGS;
+	public static final Item AQUAMARINE_BOOTS;
+
+	public static final Item BORON_HELMET;
+	public static final Item BORON_CHESTPLATE;
+	public static final Item BORON_LEGGINGS;
+	public static final Item BORON_BOOTS;
+
 	public static final Item CHALCEDONY_HELMET;
 	public static final Item CHALCEDONY_CHESTPLATE;
 	public static final Item CHALCEDONY_LEGGINGS;
 	public static final Item CHALCEDONY_BOOTS;
 
+	public static final Item CLINOHUMITE_HELMET;
+	public static final Item CLINOHUMITE_CHESTPLATE;
+	public static final Item CLINOHUMITE_LEGGINGS;
+	public static final Item CLINOHUMITE_BOOTS;
+
+	public static final Item DIOPSIDE_HELMET;
+	public static final Item DIOPSIDE_CHESTPLATE;
+	public static final Item DIOPSIDE_LEGGINGS;
+	public static final Item DIOPSIDE_BOOTS;
+
 	public static final Item ENSTATITE_HELMET;
 	public static final Item ENSTATITE_CHESTPLATE;
 	public static final Item ENSTATITE_LEGGINGS;
 	public static final Item ENSTATITE_BOOTS;
+
+	public static final Item KRALCTIUM_HELMET;
+	public static final Item KRALCTIUM_CHESTPLATE;
+	public static final Item KRALCTIUM_LEGGINGS;
+	public static final Item KRALCTIUM_BOOTS;
 
 	public static final Item MORGANITE_HELMET;
 	public static final Item MORGANITE_CHESTPLATE;
@@ -248,6 +273,11 @@ public class DTItems {
 	public static final Item SAPPHIRE_CHESTPLATE;
 	public static final Item SAPPHIRE_LEGGINGS;
 	public static final Item SAPPHIRE_BOOTS;
+
+	public static final Item SILVER_HELMET;
+	public static final Item SILVER_CHESTPLATE;
+	public static final Item SILVER_LEGGINGS;
+	public static final Item SILVER_BOOTS;
 
 	public static final Item SPHENE_HELMET;
 	public static final Item SPHENE_CHESTPLATE;
@@ -269,14 +299,23 @@ public class DTItems {
 	public static final Item TOPAZ_LEGGINGS;
 	public static final Item TOPAZ_BOOTS;
 
+	public static final Item VOID_CRITTERED_DIOPSIDE_HELMET;
+	public static final Item VOID_CRITTERED_DIOPSIDE_CHESTPLATE;
+	public static final Item VOID_CRITTERED_DIOPSIDE_LEGGINGS;
+	public static final Item VOID_CRITTERED_DIOPSIDE_BOOTS;
+
 	/* ------------- TALISMANS --------------------- */
 	public static final Item SPHENE_TALISMAN;
 	public static final Item TANZANITE_TALISMAN;
 
 	/* ------------- ORES --------------------- */
+	public static final Item AQUAMARINE;
 	public static final Item BLACK_OPAL;
 	public static final Item BLACK_PEARL;
+	public static final Item BORON;
 	public static final Item CHALCEDONY;
+	public static final Item CLINOHUMITE;
+	public static final Item DIOPSIDE;
 	public static final Item ENSTATITE;
 	public static final Item KRALCTIUM;
 	public static final Item MORGANITE;
@@ -285,10 +324,12 @@ public class DTItems {
 	public static final Item RAW_URANOLUMEN;
 	public static final Item RUBY;
 	public static final Item SAPPHIRE;
+	public static final Item SILVER;
 	public static final Item SPHENE;
 	public static final Item SPINEL;
 	public static final Item TANZANITE;
 	public static final Item TOPAZ;
+	public static final Item VOID_CRITTERED_DIOPSIDE;
 
 	/* ------------ INGOTS ------------- */
 	public static final Item GYLDELION_INGOT;
@@ -1917,15 +1958,40 @@ public class DTItems {
 		ADAIGGER = register("deep_trenches:adaigger", new AdaiggerItem(new Settings().group(COMBAT)));
 
 		/* ------------------------------------- ARMOR ----------------------------------------------- */
+		AQUAMARINE_HELMET = createHelmet("deep_trenches:aquamarine_helmet", DTArmorMaterials.AQUAMARINE);
+		AQUAMARINE_CHESTPLATE = createChestplate("deep_trenches:aquamarine_chestplate", DTArmorMaterials.AQUAMARINE);
+		AQUAMARINE_LEGGINGS = createLeggings("deep_trenches:aquamarine_leggings", DTArmorMaterials.AQUAMARINE);
+		AQUAMARINE_BOOTS = createBoots("deep_trenches:aquamarine_boots", DTArmorMaterials.AQUAMARINE);
+
+		BORON_HELMET = createHelmet("deep_trenches:boron_helmet", DTArmorMaterials.BORON);
+		BORON_CHESTPLATE = createChestplate("deep_trenches:boron_chestplate", DTArmorMaterials.BORON);
+		BORON_LEGGINGS = createLeggings("deep_trenches:boron_leggings", DTArmorMaterials.BORON);
+		BORON_BOOTS = createBoots("deep_trenches:boron_boots", DTArmorMaterials.BORON);
+
 		CHALCEDONY_HELMET = createHelmet("deep_trenches:chalcedony_helmet", DTArmorMaterials.CHALCEDONY);
 		CHALCEDONY_CHESTPLATE = createChestplate("deep_trenches:chalcedony_chestplate", DTArmorMaterials.CHALCEDONY);
 		CHALCEDONY_LEGGINGS = createLeggings("deep_trenches:chalcedony_leggings", DTArmorMaterials.CHALCEDONY);
 		CHALCEDONY_BOOTS = createBoots("deep_trenches:chalcedony_boots", DTArmorMaterials.CHALCEDONY);
 
+		CLINOHUMITE_HELMET = createHelmet("deep_trenches:clinohumite_helmet", DTArmorMaterials.CLINOHUMITE);
+		CLINOHUMITE_CHESTPLATE = createChestplate("deep_trenches:clinohumite_chestplate", DTArmorMaterials.CLINOHUMITE);
+		CLINOHUMITE_LEGGINGS = createLeggings("deep_trenches:clinohumite_leggings", DTArmorMaterials.CLINOHUMITE);
+		CLINOHUMITE_BOOTS = createBoots("deep_trenches:clinohumite_boots", DTArmorMaterials.CLINOHUMITE);
+
+		DIOPSIDE_HELMET = createHelmet("deep_trenches:diopside_helmet", DTArmorMaterials.DIOPSIDE);
+		DIOPSIDE_CHESTPLATE = createChestplate("deep_trenches:diopside_chestplate", DTArmorMaterials.DIOPSIDE);
+		DIOPSIDE_LEGGINGS = createLeggings("deep_trenches:diopside_leggings", DTArmorMaterials.DIOPSIDE);
+		DIOPSIDE_BOOTS = createBoots("deep_trenches:diopside_boots", DTArmorMaterials.DIOPSIDE);
+
 		ENSTATITE_HELMET = createHelmet("deep_trenches:enstatite_helmet", DTArmorMaterials.ENSTATITE);
 		ENSTATITE_CHESTPLATE = createChestplate("deep_trenches:enstatite_chestplate", DTArmorMaterials.ENSTATITE);
 		ENSTATITE_LEGGINGS = createLeggings("deep_trenches:enstatite_leggings", DTArmorMaterials.ENSTATITE);
 		ENSTATITE_BOOTS = createBoots("deep_trenches:enstatite_boots", DTArmorMaterials.ENSTATITE);
+
+		KRALCTIUM_HELMET = createHelmet("deep_trenches:kralctium_helmet", DTArmorMaterials.KRALCTIUM);
+		KRALCTIUM_CHESTPLATE = createChestplate("deep_trenches:kralctium_chestplate", DTArmorMaterials.KRALCTIUM);
+		KRALCTIUM_LEGGINGS = createLeggings("deep_trenches:kralctium_leggings", DTArmorMaterials.KRALCTIUM);
+		KRALCTIUM_BOOTS = createBoots("deep_trenches:kralctium_boots", DTArmorMaterials.KRALCTIUM);
 
 		MORGANITE_HELMET = createHelmet("deep_trenches:morganite_helmet", DTArmorMaterials.MORGANITE);
 		MORGANITE_CHESTPLATE = createChestplate("deep_trenches:morganite_chestplate", DTArmorMaterials.MORGANITE);
@@ -1941,6 +2007,11 @@ public class DTItems {
 		SAPPHIRE_CHESTPLATE = createChestplate("deep_trenches:sapphire_chestplate", DTArmorMaterials.SAPPHIRE);
 		SAPPHIRE_LEGGINGS = createLeggings("deep_trenches:sapphire_leggings", DTArmorMaterials.SAPPHIRE);
 		SAPPHIRE_BOOTS = createBoots("deep_trenches:sapphire_boots", DTArmorMaterials.SAPPHIRE);
+
+		SILVER_HELMET = createHelmet("deep_trenches:silver_helmet", DTArmorMaterials.SILVER);
+		SILVER_CHESTPLATE = createChestplate("deep_trenches:silver_chestplate", DTArmorMaterials.SILVER);
+		SILVER_LEGGINGS = createLeggings("deep_trenches:silver_leggings", DTArmorMaterials.SILVER);
+		SILVER_BOOTS = createBoots("deep_trenches:silver_boots", DTArmorMaterials.SILVER);
 
 		SPHENE_HELMET = createHelmet("deep_trenches:sphene_helmet", DTArmorMaterials.SPHENE);
 		SPHENE_CHESTPLATE = createChestplate("deep_trenches:sphene_chestplate", DTArmorMaterials.SPHENE);
@@ -1962,14 +2033,23 @@ public class DTItems {
 		TOPAZ_LEGGINGS = createLeggings("deep_trenches:topaz_leggings", DTArmorMaterials.TOPAZ);
 		TOPAZ_BOOTS = createBoots("deep_trenches:topaz_boots", DTArmorMaterials.TOPAZ);
 
+		VOID_CRITTERED_DIOPSIDE_HELMET = createHelmet("deep_trenches:void_crittered_diopside_helmet", DTArmorMaterials.VOID_CRITTERED_DIOPSIDE);
+		VOID_CRITTERED_DIOPSIDE_CHESTPLATE = createChestplate("deep_trenches:void_crittered_diopside_chestplate", DTArmorMaterials.VOID_CRITTERED_DIOPSIDE);
+		VOID_CRITTERED_DIOPSIDE_LEGGINGS = createLeggings("deep_trenches:void_crittered_diopside_leggings", DTArmorMaterials.VOID_CRITTERED_DIOPSIDE);
+		VOID_CRITTERED_DIOPSIDE_BOOTS = createBoots("deep_trenches:void_crittered_diopside_boots", DTArmorMaterials.VOID_CRITTERED_DIOPSIDE);
+
 		/* -------------------- TALISMANS -------------------------------- */
 		SPHENE_TALISMAN = createItem("deep_trenches:sphene_talisman", COMBAT);
 		TANZANITE_TALISMAN = createItem("deep_trenches:tanzanite_talisman", COMBAT);
 
 		/* -------------------- ORES -------------------------------- */
+		AQUAMARINE = createItem("deep_trenches:aquamarine", MISC);
 		BLACK_OPAL = createItem("deep_trenches:black_opal", MISC);
 		BLACK_PEARL = createItem("deep_trenches:black_pearl", MISC);
+		BORON = createItem("deep_trenches:boron", MISC);
 		CHALCEDONY = createItem("deep_trenches:chalcedony", MISC);
+		CLINOHUMITE = createItem("deep_trenches:clinohumite", MISC);
+		DIOPSIDE = createItem("deep_trenches:diopside", MISC);
 		ENSTATITE = createItem("deep_trenches:enstatite", MISC);
 		KRALCTIUM = createItem("deep_trenches:kralctium", MISC);
 		MORGANITE = createItem("deep_trenches:morganite", MISC);
@@ -1978,10 +2058,12 @@ public class DTItems {
 		RAW_URANOLUMEN = createItem("deep_trenches:raw_uranolumen", MISC);
 		RUBY = createItem("deep_trenches:ruby", MISC);
 		SAPPHIRE = createItem("deep_trenches:sapphire", MISC);
+		SILVER = createItem("deep_trenches:silver", MISC);
 		SPHENE = createItem("deep_trenches:sphene", MISC);
 		SPINEL = createItem("deep_trenches:spinel", MISC);
 		TANZANITE = createItem("deep_trenches:tanzanite", MISC);
 		TOPAZ = createItem("deep_trenches:topaz", MISC);
+		VOID_CRITTERED_DIOPSIDE = createItem("deep_trenches:void_crittered_diopside", MISC);
 
 		/* ------------ INGOTS ------------- */
 		GYLDELION_INGOT = createItem("deep_trenches:gyldelion_ingot", MISC);

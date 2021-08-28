@@ -10,15 +10,22 @@ import java.util.function.Supplier;
 import static net.minecraft.sound.SoundEvents.ITEM_ARMOR_EQUIP_IRON;
 
 public enum DTArmorMaterials implements ArmorMaterial {
+    AQUAMARINE(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.AQUAMARINE)),
+    BORON(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.BORON)),
     CHALCEDONY(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.CHALCEDONY)),
+    CLINOHUMITE(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.CLINOHUMITE)),
+    DIOPSIDE(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.DIOPSIDE)),
     ENSTATITE(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.ENSTATITE)),
+    KRALCTIUM(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.KRALCTIUM)),
     MORGANITE(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.MORGANITE)),
     RUBY(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.RUBY)),
     SAPPHIRE(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.SAPPHIRE)),
+    SILVER(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.SILVER)),
     SPHENE(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.SPHENE)),
     SPINEL(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.SPINEL)),
     TANZANITE(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.TANZANITE)),
-    TOPAZ(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.TOPAZ))
+    TOPAZ(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.TOPAZ)),
+    VOID_CRITTERED_DIOPSIDE(15, new int[] {2, 5, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.VOID_CRITTERED_DIOPSIDE))
     ;
 
     private static final int[] BASE_DURABILITY = new int[] {13, 15, 16, 11};
