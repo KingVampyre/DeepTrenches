@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/black_basalt_black_opal_ore"
+    }
+}
