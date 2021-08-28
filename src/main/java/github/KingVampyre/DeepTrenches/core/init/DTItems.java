@@ -2,7 +2,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.common.item.TagFishBucketItem;
 import github.KingVampyre.DeepTrenches.common.item.TagSpawnEggItem;
-import github.KingVampyre.DeepTrenches.core.item.AdaiggerItem;
+import github.KingVampyre.DeepTrenches.core.item.*;
 import github.Louwind.entityutils.core.item.FabricBoatItem;
 import github.Louwind.entityutils.core.util.FabricBoatType;
 import net.minecraft.block.Block;
@@ -222,6 +222,76 @@ public class DTItems {
 
 	/* ------------- WEAPONS ----------- */
 	public static final Item ADAIGGER;
+	public static final Item CHALCEDONY_SWORD;
+	public static final Item ENSTATITE_SWORD;
+	public static final Item KRALCTIUM_SWORD;
+	public static final Item RUBY_DISTABBER;
+	public static final Item SAPPHIRE_PRISMACE;
+	public static final Item SPHENE_SWORD;
+	public static final Item SPINEL_SWORD;
+	public static final Item STROXITE_SWORD;
+	public static final Item TANZANITE_SWORD;
+	public static final Item TOPAZ_SWORD;
+
+	public static final Item SPINEL_STAFF;
+	public static final Item TANZANITE_STAFF;
+	public static final Item TOPAZ_STAFF;
+
+	/* ------------- TOOLS ----------- */
+	public static final Item CHALCEDONY_AXE;
+	public static final Item CHALCEDONY_HOE;
+	public static final Item CHALCEDONY_PICKAXE;
+	public static final Item CHALCEDONY_SHOVEL;
+
+	public static final Item ENSTATITE_AXE;
+	public static final Item ENSTATITE_HOE;
+	public static final Item ENSTATITE_PICKAXE;
+	public static final Item ENSTATITE_SHOVEL;
+
+	public static final Item GYLDELION_AXE;
+	public static final Item GYLDELION_HOE;
+	public static final Item GYLDELION_PICKAXE;
+	public static final Item GYLDELION_SHOVEL;
+
+	public static final Item KRALCTIUM_AXE;
+	public static final Item KRALCTIUM_HOE;
+	public static final Item KRALCTIUM_PICKAXE;
+	public static final Item KRALCTIUM_SHOVEL;
+
+	public static final Item MORGANITE_AXE;
+	public static final Item MORGANITE_HOE;
+	public static final Item MORGANITE_PICKAXE;
+	public static final Item MORGANITE_SHOVEL;
+
+	public static final Item RUBY_DISCARVER;
+	public static final Item RUBY_DISDIGGER;
+	public static final Item RUBY_DISLOGGER;
+	public static final Item RUBY_DISTARVEST;
+
+	public static final Item SPHENE_AXE;
+	public static final Item SPHENE_HOE;
+	public static final Item SPHENE_PICKAXE;
+	public static final Item SPHENE_SHOVEL;
+
+	public static final Item SPINEL_AXE;
+	public static final Item SPINEL_HOE;
+	public static final Item SPINEL_PICKAXE;
+	public static final Item SPINEL_SHOVEL;
+
+	public static final Item STROXITE_AXE;
+	public static final Item STROXITE_HOE;
+	public static final Item STROXITE_PICKAXE;
+	public static final Item STROXITE_SHOVEL;
+
+	public static final Item TANZANITE_AXE;
+	public static final Item TANZANITE_HOE;
+	public static final Item TANZANITE_PICKAXE;
+	public static final Item TANZANITE_SHOVEL;
+
+	public static final Item TOPAZ_AXE;
+	public static final Item TOPAZ_HOE;
+	public static final Item TOPAZ_PICKAXE;
+	public static final Item TOPAZ_SHOVEL;
 
 	/* ------------- ARMOR --------------------- */
 	public static final Item AQUAMARINE_HELMET;
@@ -355,6 +425,30 @@ public class DTItems {
 
 	protected static Item createArmorItem(String id, ArmorMaterial material, EquipmentSlot slot) {
 		return register(id, new ArmorItem(material, slot, new Settings().group(COMBAT)));
+	}
+
+	protected static Item createAxe(String id, ToolMaterial material, float attackDamage, float attackSpeed) {
+		return register(id, new AxeItem(material, attackDamage, attackSpeed, new Settings().group(TOOLS)));
+	}
+
+	protected static Item createHoe(String id, ToolMaterial material, int attackDamage, float attackSpeed) {
+		return register(id, new HoeItem(material, attackDamage, attackSpeed, new Settings().group(TOOLS)));
+	}
+
+	protected static Item createPickaxe(String id, ToolMaterial material, int attackDamage, float attackSpeed) {
+		return register(id, new PickaxeItem(material, attackDamage, attackSpeed, new Settings().group(TOOLS)));
+	}
+
+	protected static Item createShovel(String id, ToolMaterial material, float attackDamage, float attackSpeed) {
+		return register(id, new ShovelItem(material, attackDamage, attackSpeed, new Settings().group(TOOLS)));
+	}
+
+	protected static Item createStaff(String id) {
+		return register(id, new StaffItem(new Settings().group(COMBAT)));
+	}
+
+	protected static Item createSword(String id, ToolMaterial material, int attackDamage, float attackSpeed) {
+		return register(id, new SwordItem(material, attackDamage, attackSpeed, new Settings().group(COMBAT)));
 	}
 
 	protected static Item createHelmet(String id, ArmorMaterial material) {
@@ -1955,7 +2049,77 @@ public class DTItems {
 		LIGHT_BLUE_BIOLUMINESCENT_GOO = createItem("deep_trenches:light_blue_bioluminescent_goo", MISC);
 
 		/* -------------------------------- WEAPONS ------------------------------------------- */
-		ADAIGGER = register("deep_trenches:adaigger", new AdaiggerItem(new Settings().group(COMBAT)));
+		ADAIGGER = register("deep_trenches:adaigger", new AdaiggerItem(DTToolMaterials.GYLDELION, 4, 4F, new Settings().group(COMBAT)));
+		CHALCEDONY_SWORD = createSword("deep_trenches:chalcedony_sword", DTToolMaterials.CHALCEDONY, 4, -2.2F);
+		ENSTATITE_SWORD = createSword("deep_trenches:enstatite_sword", DTToolMaterials.ENSTATITE, 3, -2.4F);
+		KRALCTIUM_SWORD = createSword("deep_trenches:kralctium_sword", DTToolMaterials.KRALCTIUM, 3, -2.4F);
+		RUBY_DISTABBER = createSword("deep_trenches:ruby_distabber", DTToolMaterials.RUBY, 3, -2.4F);
+		SAPPHIRE_PRISMACE = register("deep_trenches:sapphire_prismace", new PrismaceItem(new Settings().group(COMBAT)));
+		SPHENE_SWORD = createSword("deep_trenches:sphene_sword", DTToolMaterials.SPHENE, 3, -2.4F);
+		SPINEL_SWORD = createSword("deep_trenches:spinel_sword", DTToolMaterials.SPINEL, 3, -2.4F);
+		STROXITE_SWORD = createSword("deep_trenches:stroxite_sword", DTToolMaterials.STROXITE, 3, -2.4F);
+		TANZANITE_SWORD = createSword("deep_trenches:tanzanite_sword", DTToolMaterials.TANZANITE, 3, -2.4F);
+		TOPAZ_SWORD = createSword("deep_trenches:topaz_sword", DTToolMaterials.TOPAZ, 3, -2.4F);
+
+		SPINEL_STAFF = createStaff("deep_trenches:spinel_staff");
+		TANZANITE_STAFF = createStaff("deep_trenches:tanzanite_staff");
+		TOPAZ_STAFF = createStaff("deep_trenches:topaz_staff");
+
+		/* --------------------------------- TOOLS -------------------------------------------- */
+		CHALCEDONY_AXE = createAxe("deep_trenches:chalcedony_axe", DTToolMaterials.CHALCEDONY, 6F, -3.1F);
+		CHALCEDONY_HOE = createHoe("deep_trenches:chalcedony_hoe", DTToolMaterials.CHALCEDONY, -2, -1F);
+		CHALCEDONY_PICKAXE = createPickaxe("deep_trenches:chalcedony_pickaxe", DTToolMaterials.CHALCEDONY, 1, -2.8F);
+		CHALCEDONY_SHOVEL = createShovel("deep_trenches:chalcedony_shovel", DTToolMaterials.CHALCEDONY, 1.5F, -3F);
+
+		ENSTATITE_AXE = createAxe("deep_trenches:enstatite_axe", DTToolMaterials.ENSTATITE, 6F, -3.1F);
+		ENSTATITE_HOE = createHoe("deep_trenches:enstatite_hoe", DTToolMaterials.ENSTATITE, -2, -1F);
+		ENSTATITE_PICKAXE = createPickaxe("deep_trenches:enstatite_pickaxe", DTToolMaterials.ENSTATITE, 1, -2.8F);
+		ENSTATITE_SHOVEL = createShovel("deep_trenches:enstatite_shovel", DTToolMaterials.ENSTATITE, 1.5F, -3F);
+
+		GYLDELION_AXE = createAxe("deep_trenches:gyldelion_axe", DTToolMaterials.GYLDELION, 2F, 3.1F);
+		GYLDELION_HOE = createHoe("deep_trenches:gyldelion_hoe", DTToolMaterials.GYLDELION, -1, 1F);
+		GYLDELION_PICKAXE = createPickaxe("deep_trenches:gyldelion_pickaxe", DTToolMaterials.GYLDELION, 0, 2.8F);
+		GYLDELION_SHOVEL = createShovel("deep_trenches:gyldelion_shovel", DTToolMaterials.GYLDELION, 0.5F, 3F);
+
+		KRALCTIUM_AXE = createAxe("deep_trenches:kralctium_axe", DTToolMaterials.KRALCTIUM, 6F, -3.1F);
+		KRALCTIUM_HOE = createHoe("deep_trenches:kralctium_hoe", DTToolMaterials.KRALCTIUM, -2, -1F);
+		KRALCTIUM_PICKAXE = createPickaxe("deep_trenches:kralctium_pickaxe", DTToolMaterials.KRALCTIUM, 1, -2.8F);
+		KRALCTIUM_SHOVEL = createShovel("deep_trenches:kralctium_shovel", DTToolMaterials.KRALCTIUM, 1.5F, -3F);
+
+		MORGANITE_AXE = createAxe("deep_trenches:morganite_axe", DTToolMaterials.MORGANITE, 6F, -3.1F);
+		MORGANITE_HOE = createHoe("deep_trenches:morganite_hoe", DTToolMaterials.MORGANITE, -2, -1F);
+		MORGANITE_PICKAXE = createPickaxe("deep_trenches:morganite_pickaxe", DTToolMaterials.MORGANITE, 1, -2.8F);
+		MORGANITE_SHOVEL = createShovel("deep_trenches:morganite_shovel", DTToolMaterials.MORGANITE, 1.5F, -3F);
+
+		RUBY_DISCARVER = register("deep_trenches:ruby_discarver", new DiscarverItem(DTToolMaterials.RUBY, 1, -2.8F, new Settings().group(TOOLS)));
+		RUBY_DISDIGGER = register("deep_trenches:ruby_disdigger", new DisdiggerItem(DTToolMaterials.RUBY, 1.5F, -3F, new Settings().group(TOOLS)));
+		RUBY_DISLOGGER = register("deep_trenches:ruby_dislogger", new DisloggerItem(DTToolMaterials.RUBY, 6F, -3.1F, new Settings().group(TOOLS)));
+		RUBY_DISTARVEST = register("deep_trenches:ruby_distarvest", new Distarvest(DTToolMaterials.RUBY, -2, -1F, new Settings().group(TOOLS)));
+
+		SPHENE_AXE = createAxe("deep_trenches:sphene_axe", DTToolMaterials.SPHENE, 6F, -3.1F);
+		SPHENE_HOE = createHoe("deep_trenches:sphene_hoe", DTToolMaterials.SPHENE, -2, -1F);
+		SPHENE_PICKAXE = createPickaxe("deep_trenches:sphene_pickaxe", DTToolMaterials.SPHENE, 1, -2.8F);
+		SPHENE_SHOVEL = createShovel("deep_trenches:sphene_shovel", DTToolMaterials.SPHENE, 1.5F, -3F);
+
+		SPINEL_AXE = createAxe("deep_trenches:spinel_axe", DTToolMaterials.SPINEL, 6F, -3.1F);
+		SPINEL_HOE = createHoe("deep_trenches:spinel_hoe", DTToolMaterials.SPINEL, -2, -1F);
+		SPINEL_PICKAXE = createPickaxe("deep_trenches:spinel_pickaxe", DTToolMaterials.SPINEL, 1, -2.8F);
+		SPINEL_SHOVEL = createShovel("deep_trenches:spinel_shovel", DTToolMaterials.SPINEL, 1.5F, -3F);
+
+		STROXITE_AXE = createAxe("deep_trenches:stroxite_axe", DTToolMaterials.STROXITE, 6F, -3.1F);
+		STROXITE_HOE = createHoe("deep_trenches:stroxite_hoe", DTToolMaterials.STROXITE, -2, -1F);
+		STROXITE_PICKAXE = createPickaxe("deep_trenches:stroxite_pickaxe", DTToolMaterials.STROXITE, 1, -2.8F);
+		STROXITE_SHOVEL = createShovel("deep_trenches:stroxite_shovel", DTToolMaterials.STROXITE, 1.5F, -3F);
+
+		TANZANITE_AXE = createAxe("deep_trenches:tanzanite_axe", DTToolMaterials.TANZANITE, 6F, -3.1F);
+		TANZANITE_HOE = createHoe("deep_trenches:tanzanite_hoe", DTToolMaterials.TANZANITE, -2, -1F);
+		TANZANITE_PICKAXE = createPickaxe("deep_trenches:tanzanite_pickaxe", DTToolMaterials.TANZANITE, 1, -2.8F);
+		TANZANITE_SHOVEL = createShovel("deep_trenches:tanzanite_shovel", DTToolMaterials.TANZANITE, 1.5F, -3F);
+
+		TOPAZ_AXE = createAxe("deep_trenches:topaz_axe", DTToolMaterials.TOPAZ, 6F, -3.1F);
+		TOPAZ_HOE = createHoe("deep_trenches:topaz_hoe", DTToolMaterials.TOPAZ, -2, -1F);
+		TOPAZ_PICKAXE = createPickaxe("deep_trenches:topaz_pickaxe", DTToolMaterials.TOPAZ, 1, -2.8F);
+		TOPAZ_SHOVEL = createShovel("deep_trenches:topaz_shovel", DTToolMaterials.TOPAZ, 1.5F, -3F);
 
 		/* ------------------------------------- ARMOR ----------------------------------------------- */
 		AQUAMARINE_HELMET = createHelmet("deep_trenches:aquamarine_helmet", DTArmorMaterials.AQUAMARINE);

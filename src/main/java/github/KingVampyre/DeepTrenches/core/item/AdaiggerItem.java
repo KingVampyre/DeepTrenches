@@ -7,16 +7,15 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTToolMaterials.GYLDELION;
-
 public class AdaiggerItem extends SwordItem {
 
-	public AdaiggerItem(Settings settings) {
-		super(GYLDELION, 4, 4, settings);
+	public AdaiggerItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+		super(toolMaterial, attackDamage, attackSpeed, settings);
 	}
 
 	@Override
@@ -33,12 +32,12 @@ public class AdaiggerItem extends SwordItem {
 	public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
 
 		if (user instanceof PlayerEntity player) {
-			int duration = this.getMaxUseTime(stack) - remainingUseTicks;
+			var duration = this.getMaxUseTime(stack) - remainingUseTicks;
 
 			if (duration >= 10 && !world.isClient) {
 				stack.damage(1, player, playerIn -> playerIn.sendToolBreakStatus(user.getActiveHand()));
 
-				AdaiggerEntity adaigger = new AdaiggerEntity(world, player, stack);
+				var adaigger = new AdaiggerEntity(world, player, stack);
 
 				adaigger.setProperties(player, player.getPitch(), player.getYaw(), 0, 3, 1);
 

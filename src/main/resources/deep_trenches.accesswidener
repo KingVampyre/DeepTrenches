@@ -34,6 +34,10 @@ accessible field net/minecraft/world/gen/chunk/AquiferSampler$Impl fluidTypeNois
 accessible field net/minecraft/world/gen/chunk/AquiferSampler$Impl settings                 Lnet/minecraft/world/gen/chunk/ChunkGeneratorSettings;
 accessible field net/minecraft/world/gen/StructureAccessor         world                    Lnet/minecraft/world/WorldAccess;
 
+accessible method net/minecraft/item/AxeItem        <init>      (Lnet/minecraft/item/ToolMaterial;FFLnet/minecraft/item/Item$Settings;)V
+accessible method net/minecraft/item/HoeItem        <init>      (Lnet/minecraft/item/ToolMaterial;IFLnet/minecraft/item/Item$Settings;)V
+accessible method net/minecraft/item/PickaxeItem    <init>      (Lnet/minecraft/item/ToolMaterial;IFLnet/minecraft/item/Item$Settings;)V
+
 accessible method net/minecraft/block/CoralBlock            <init>      (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/CoralFanBlock         <init>      (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/CoralWallFanBlock     <init>      (Lnet/minecraft/block/Block;Lnet/minecraft/block/AbstractBlock$Settings;)V

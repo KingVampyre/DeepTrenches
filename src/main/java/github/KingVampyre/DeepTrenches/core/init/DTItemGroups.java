@@ -7,8 +7,7 @@ import net.minecraft.util.Identifier;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.FUCHSITRA_LOG;
 import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.PIPE_ORGAN_CORAL;
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.ADAIGGER;
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.BARBELED_LOOSEJAW;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.*;
 
 public class DTItemGroups {
 
@@ -23,6 +22,10 @@ public class DTItemGroups {
     public static final ItemGroup SEA_BLOCKS = FabricItemGroupBuilder.build(
             new Identifier("deep_trenches:sea_blocks"),
             () -> new ItemStack(PIPE_ORGAN_CORAL));
+
+    public static final ItemGroup TOOLS = FabricItemGroupBuilder.build(
+            new Identifier("deep_trenches:tools"),
+            () -> new ItemStack(CHALCEDONY_AXE));
 
     public static final ItemGroup WOODS = FabricItemGroupBuilder.build(
             new Identifier("deep_trenches:woods"),
