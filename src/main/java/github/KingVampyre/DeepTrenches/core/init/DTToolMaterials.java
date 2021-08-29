@@ -7,7 +7,10 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum DTToolMaterials implements ToolMaterial {
+	AQUAMARINE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.AQUAMARINE)),
 	CHALCEDONY(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.CHALCEDONY)),
+	CLINOHUMITE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.CLINOHUMITE)),
+	DIOPSIDE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.DIOPSIDE)),
 	ENSTATITE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.ENSTATITE)),
 	GYLDELION(MiningLevels.WOOD, 32, 12F, 0, 22, () -> Ingredient.ofItems(DTItems.GYLDELION_INGOT)),
 	KRALCTIUM(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.KRALCTIUM)),
@@ -17,7 +20,8 @@ public enum DTToolMaterials implements ToolMaterial {
 	SPINEL(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.SPINEL)),
 	STROXITE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.STROXITE_INGOT)),
 	TANZANITE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.TANZANITE)),
-	TOPAZ(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.TOPAZ));
+	TOPAZ(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.TOPAZ)),
+	VOID_CRITTERED_DIOPSIDE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.VOID_CRITTERED_DIOPSIDE));
 
     private final int miningLevel;
 	private final int itemDurability;

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "deep_trenches:item/void_crittered_diopside_pickaxe"
+    }
+}

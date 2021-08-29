@@ -233,15 +233,37 @@ public class DTItems {
 	public static final Item TANZANITE_SWORD;
 	public static final Item TOPAZ_SWORD;
 
+	public static final Item AQUAMARINE_SCYTHE;
+	public static final Item DIOPSIDE_SCYTHE;
+	public static final Item VOID_CRITTERED_DIOPSIDE_SCYTHE;
+
+	public static final Item AQUAMARINE_STAFF;
+	public static final Item DIOPSIDE_STAFF;
 	public static final Item SPINEL_STAFF;
 	public static final Item TANZANITE_STAFF;
 	public static final Item TOPAZ_STAFF;
+	public static final Item VOID_CRITTERED_DIOPSIDE_STAFF;
 
 	/* ------------- TOOLS ----------- */
+	public static final Item AQUAMARINE_AXE;
+	public static final Item AQUAMARINE_HOE;
+	public static final Item AQUAMARINE_PICKAXE;
+	public static final Item AQUAMARINE_SHOVEL;
+
 	public static final Item CHALCEDONY_AXE;
 	public static final Item CHALCEDONY_HOE;
 	public static final Item CHALCEDONY_PICKAXE;
 	public static final Item CHALCEDONY_SHOVEL;
+
+	public static final Item CLINOHUMITE_AXE;
+	public static final Item CLINOHUMITE_HOE;
+	public static final Item CLINOHUMITE_PICKAXE;
+	public static final Item CLINOHUMITE_SHOVEL;
+
+	public static final Item DIOPSIDE_AXE;
+	public static final Item DIOPSIDE_HOE;
+	public static final Item DIOPSIDE_PICKAXE;
+	public static final Item DIOPSIDE_SHOVEL;
 
 	public static final Item ENSTATITE_AXE;
 	public static final Item ENSTATITE_HOE;
@@ -292,6 +314,11 @@ public class DTItems {
 	public static final Item TOPAZ_HOE;
 	public static final Item TOPAZ_PICKAXE;
 	public static final Item TOPAZ_SHOVEL;
+
+	public static final Item VOID_CRITTERED_DIOPSIDE_AXE;
+	public static final Item VOID_CRITTERED_DIOPSIDE_HOE;
+	public static final Item VOID_CRITTERED_DIOPSIDE_PICKAXE;
+	public static final Item VOID_CRITTERED_DIOPSIDE_SHOVEL;
 
 	/* ------------- ARMOR --------------------- */
 	public static final Item AQUAMARINE_HELMET;
@@ -441,6 +468,10 @@ public class DTItems {
 
 	protected static Item createShovel(String id, ToolMaterial material, float attackDamage, float attackSpeed) {
 		return register(id, new ShovelItem(material, attackDamage, attackSpeed, new Settings().group(TOOLS)));
+	}
+
+	protected static Item createScythe(String id, ToolMaterial material, int attackDamage, float attackSpeed) {
+		return register(id, new ScytheItem(material, attackDamage, attackSpeed, new Settings().group(COMBAT)));
 	}
 
 	protected static Item createStaff(String id) {
@@ -2061,15 +2092,37 @@ public class DTItems {
 		TANZANITE_SWORD = createSword("deep_trenches:tanzanite_sword", DTToolMaterials.TANZANITE, 3, -2.4F);
 		TOPAZ_SWORD = createSword("deep_trenches:topaz_sword", DTToolMaterials.TOPAZ, 3, -2.4F);
 
+		AQUAMARINE_SCYTHE = createScythe("deep_trenches:aquamarine_scythe", DTToolMaterials.AQUAMARINE, 7, -2.1F);
+		DIOPSIDE_SCYTHE = createScythe("deep_trenches:diopside_scythe", DTToolMaterials.DIOPSIDE, 6, -3.1F);
+		VOID_CRITTERED_DIOPSIDE_SCYTHE = createScythe("deep_trenches:void_crittered_diopside_scythe", DTToolMaterials.VOID_CRITTERED_DIOPSIDE, 6, -3.1F);
+
+		AQUAMARINE_STAFF = createStaff("deep_trenches:aquamarine_staff");
+		DIOPSIDE_STAFF = createStaff("deep_trenches:diopside_staff");
 		SPINEL_STAFF = createStaff("deep_trenches:spinel_staff");
 		TANZANITE_STAFF = createStaff("deep_trenches:tanzanite_staff");
 		TOPAZ_STAFF = createStaff("deep_trenches:topaz_staff");
+		VOID_CRITTERED_DIOPSIDE_STAFF = createStaff("deep_trenches:void_crittered_diopside_staff");
 
 		/* --------------------------------- TOOLS -------------------------------------------- */
+		AQUAMARINE_AXE = createAxe("deep_trenches:aquamarine_axe", DTToolMaterials.AQUAMARINE, 6F, -3.1F);
+		AQUAMARINE_HOE = createHoe("deep_trenches:aquamarine_hoe", DTToolMaterials.AQUAMARINE, -2, -1F);
+		AQUAMARINE_PICKAXE = createPickaxe("deep_trenches:aquamarine_pickaxe", DTToolMaterials.AQUAMARINE, 1, -2.8F);
+		AQUAMARINE_SHOVEL = createShovel("deep_trenches:aquamarine_shovel", DTToolMaterials.AQUAMARINE, 1.5F, -3F);
+
 		CHALCEDONY_AXE = createAxe("deep_trenches:chalcedony_axe", DTToolMaterials.CHALCEDONY, 6F, -3.1F);
 		CHALCEDONY_HOE = createHoe("deep_trenches:chalcedony_hoe", DTToolMaterials.CHALCEDONY, -2, -1F);
 		CHALCEDONY_PICKAXE = createPickaxe("deep_trenches:chalcedony_pickaxe", DTToolMaterials.CHALCEDONY, 1, -2.8F);
 		CHALCEDONY_SHOVEL = createShovel("deep_trenches:chalcedony_shovel", DTToolMaterials.CHALCEDONY, 1.5F, -3F);
+
+		CLINOHUMITE_AXE = createAxe("deep_trenches:clinohumite_axe", DTToolMaterials.CLINOHUMITE, 6F, -3.1F);
+		CLINOHUMITE_HOE = createHoe("deep_trenches:clinohumite_hoe", DTToolMaterials.CLINOHUMITE, -2, -1F);
+		CLINOHUMITE_PICKAXE = createPickaxe("deep_trenches:clinohumite_pickaxe", DTToolMaterials.CLINOHUMITE, 1, -2.8F);
+		CLINOHUMITE_SHOVEL = createShovel("deep_trenches:clinohumite_shovel", DTToolMaterials.CLINOHUMITE, 1.5F, -3F);
+
+		DIOPSIDE_AXE = createAxe("deep_trenches:diopside_axe", DTToolMaterials.DIOPSIDE, 6F, -3.1F);
+		DIOPSIDE_HOE = createHoe("deep_trenches:diopside_hoe", DTToolMaterials.DIOPSIDE, -2, -1F);
+		DIOPSIDE_PICKAXE = createPickaxe("deep_trenches:diopside_pickaxe", DTToolMaterials.DIOPSIDE, 1, -2.8F);
+		DIOPSIDE_SHOVEL = createShovel("deep_trenches:diopside_shovel", DTToolMaterials.DIOPSIDE, 1.5F, -3F);
 
 		ENSTATITE_AXE = createAxe("deep_trenches:enstatite_axe", DTToolMaterials.ENSTATITE, 6F, -3.1F);
 		ENSTATITE_HOE = createHoe("deep_trenches:enstatite_hoe", DTToolMaterials.ENSTATITE, -2, -1F);
@@ -2120,6 +2173,11 @@ public class DTItems {
 		TOPAZ_HOE = createHoe("deep_trenches:topaz_hoe", DTToolMaterials.TOPAZ, -2, -1F);
 		TOPAZ_PICKAXE = createPickaxe("deep_trenches:topaz_pickaxe", DTToolMaterials.TOPAZ, 1, -2.8F);
 		TOPAZ_SHOVEL = createShovel("deep_trenches:topaz_shovel", DTToolMaterials.TOPAZ, 1.5F, -3F);
+
+		VOID_CRITTERED_DIOPSIDE_AXE = createAxe("deep_trenches:void_crittered_diopside_axe", DTToolMaterials.VOID_CRITTERED_DIOPSIDE, 6F, -3.1F);
+		VOID_CRITTERED_DIOPSIDE_HOE = createHoe("deep_trenches:void_crittered_diopside_hoe", DTToolMaterials.VOID_CRITTERED_DIOPSIDE, -2, -1F);
+		VOID_CRITTERED_DIOPSIDE_PICKAXE = createPickaxe("deep_trenches:void_crittered_diopside_pickaxe", DTToolMaterials.VOID_CRITTERED_DIOPSIDE, 1, -2.8F);
+		VOID_CRITTERED_DIOPSIDE_SHOVEL = createShovel("deep_trenches:void_crittered_diopside_shovel", DTToolMaterials.VOID_CRITTERED_DIOPSIDE, 1.5F, -3F);
 
 		/* ------------------------------------- ARMOR ----------------------------------------------- */
 		AQUAMARINE_HELMET = createHelmet("deep_trenches:aquamarine_helmet", DTArmorMaterials.AQUAMARINE);
