@@ -18,9 +18,9 @@ import net.minecraft.util.registry.Registry;
 
 import java.util.function.Function;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItemGroups.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTFoodComponents.STORCEAN_FISH;
+import static github.KingVampyre.DeepTrenches.core.init.DTItemGroups.*;
 import static net.minecraft.fluid.Fluids.WATER;
 import static net.minecraft.item.FoodComponents.APPLE;
 import static net.minecraft.item.FoodComponents.SWEET_BERRIES;
@@ -755,6 +755,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:andesite_copper_ore", ANDESITE_COPPER_ORE, MISC);
 		createBlockItem("deep_trenches:andesite_diamond_ore", ANDESITE_DIAMOND_ORE, MISC);
 		createBlockItem("deep_trenches:andesite_emerald_ore", ANDESITE_EMERALD_ORE, MISC);
+		createBlockItem("deep_trenches:andesite_garnet_ore", ANDESITE_GARNET_ORE, MISC);
 		createBlockItem("deep_trenches:andesite_gold_ore", ANDESITE_GOLD_ORE, MISC);
 		createBlockItem("deep_trenches:andesite_iron_ore", ANDESITE_IRON_ORE, MISC);
 		createBlockItem("deep_trenches:andesite_lapis_ore", ANDESITE_LAPIS_ORE, MISC);
@@ -774,6 +775,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:black_basalt_copper_ore", BLACK_BASALT_COPPER_ORE, MISC);
 		createBlockItem("deep_trenches:black_basalt_diamond_ore", BLACK_BASALT_DIAMOND_ORE, MISC);
 		createBlockItem("deep_trenches:black_basalt_emerald_ore", BLACK_BASALT_EMERALD_ORE, MISC);
+		createBlockItem("deep_trenches:black_basalt_garnet_ore", BLACK_BASALT_GARNET_ORE, MISC);
 		createBlockItem("deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE, MISC);
 		createBlockItem("deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE, MISC);
 		createBlockItem("deep_trenches:black_basalt_lapis_ore", BLACK_BASALT_LAPIS_ORE, MISC);
@@ -811,6 +813,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:diorite_copper_ore", DIORITE_COPPER_ORE, MISC);
 		createBlockItem("deep_trenches:diorite_diamond_ore", DIORITE_DIAMOND_ORE, MISC);
 		createBlockItem("deep_trenches:diorite_emerald_ore", DIORITE_EMERALD_ORE, MISC);
+		createBlockItem("deep_trenches:diorite_garnet_ore", DIORITE_GARNET_ORE, MISC);
 		createBlockItem("deep_trenches:diorite_gold_ore", DIORITE_GOLD_ORE, MISC);
 		createBlockItem("deep_trenches:diorite_iron_ore", DIORITE_IRON_ORE, MISC);
 		createBlockItem("deep_trenches:diorite_lapis_ore", DIORITE_LAPIS_ORE, MISC);
@@ -830,6 +833,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:granite_copper_ore", GRANITE_COPPER_ORE, MISC);
 		createBlockItem("deep_trenches:granite_diamond_ore", GRANITE_DIAMOND_ORE, MISC);
 		createBlockItem("deep_trenches:granite_emerald_ore", GRANITE_EMERALD_ORE, MISC);
+		createBlockItem("deep_trenches:granite_garnet_ore", GRANITE_GARNET_ORE, MISC);
 		createBlockItem("deep_trenches:granite_gold_ore", GRANITE_GOLD_ORE, MISC);
 		createBlockItem("deep_trenches:granite_iron_ore", GRANITE_IRON_ORE, MISC);
 		createBlockItem("deep_trenches:granite_lapis_ore", GRANITE_LAPIS_ORE, MISC);
@@ -876,6 +880,47 @@ public class DTItems {
 		createBlockItem("deep_trenches:pinkine_sphene_ore", PINKINE_SPHENE_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_spinel_ore", PINKINE_SPINEL_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_tanzanite_ore", PINKINE_TANZANITE_ORE, MISC);
+
+		createBlockItem("deep_trenches:aquamarine_block", AQUAMARINE_BLOCK, MISC);
+		createBlockItem("deep_trenches:black_opal_block", BLACK_OPAL_BLOCK, MISC);
+		createBlockItem("deep_trenches:chalcedony_block", CHALCEDONY_BLOCK, MISC);
+		createBlockItem("deep_trenches:dipside_block", DIOPSIDE_BLOCK, MISC);
+		createBlockItem("deep_trenches:enron_block", ENRON_BLOCK, MISC);
+		createBlockItem("deep_trenches:enstatite_block", ENSTATITE_BLOCK, MISC);
+		createBlockItem("deep_trenches:gyldelion_block", GYLDELION_BLOCK, MISC);
+		createBlockItem("deep_trenches:morganite_block", MORGANITE_BLOCK, MISC);
+		createBlockItem("deep_trenches:opal_block", OPAL_BLOCK, MISC);
+		createBlockItem("deep_trenches:ruby_block", RUBY_BLOCK, MISC);
+		createBlockItem("deep_trenches:sapphire_block", SAPPHIRE_BLOCK, MISC);
+		createBlockItem("deep_trenches:sugilite_block", SUGILITE_BLOCK, MISC);
+		createBlockItem("deep_trenches:sphene_block", SPHENE_BLOCK, MISC);
+		createBlockItem("deep_trenches:spinel_block", SPINEL_BLOCK, MISC);
+		createBlockItem("deep_trenches:tanzanite_block", TANZANITE_BLOCK, MISC);
+		createBlockItem("deep_trenches:topaz_block", TOPAZ_BLOCK, MISC);
+		createBlockItem("deep_trenches:void_crittered_diopside_block", VOID_CRITTERED_DIOPSIDE_BLOCK, MISC);
+
+		createBlockItem("deep_trenches:clinohumite_block", CLINOHUMITE_BLOCK, MISC);
+		createBlockItem("deep_trenches:budding_clinohumite", BUDDING_CLINOHUMITE, MISC);
+		createBlockItem("deep_trenches:clinohumite_cluster", CLINOHUMITE_CLUSTER, MISC);
+		createBlockItem("deep_trenches:large_clinohumite_hud", LARGE_CLINOHUMITE_BUD, MISC);
+		createBlockItem("deep_trenches:medium_clinohumite_bud", MEDIUM_CLINOHUMITE_BUD, MISC);
+		createBlockItem("deep_trenches:small_clinohumite_bud", SMALL_CLINOHUMITE_BUD, MISC);
+
+		createBlockItem("deep_trenches:garnet_block", GARNET_BLOCK, MISC);
+		createBlockItem("deep_trenches:budding_garnet", BUDDING_GARNET, MISC);
+		createBlockItem("deep_trenches:garnet_cluster", GARNET_CLUSTER, MISC);
+		createBlockItem("deep_trenches:large_garnet_hud", LARGE_GARNET_BUD, MISC);
+		createBlockItem("deep_trenches:medium_garnet_bud", MEDIUM_GARNET_BUD, MISC);
+		createBlockItem("deep_trenches:small_garnet_bud", SMALL_GARNET_BUD, MISC);
+
+		createBlockItem("deep_trenches:raw_actinium_block", RAW_ACTINIUM_BLOCK, MISC);
+		createBlockItem("deep_trenches:raw_boron_block", RAW_BORON_BLOCK, MISC);
+		createBlockItem("deep_trenches:raw_enron_block", RAW_ENRON_BLOCK, MISC);
+		createBlockItem("deep_trenches:raw_silicon_block", RAW_SILICON_BLOCK, MISC);
+		createBlockItem("deep_trenches:raw_silver_block", RAW_SILVER_BLOCK, MISC);
+		createBlockItem("deep_trenches:raw_stroxite_block", RAW_STROXITE_BLOCK, MISC);
+		createBlockItem("deep_trenches:raw_tungsten_block", RAW_TUNGSTEN_BLOCK, MISC);
+		createBlockItem("deep_trenches:raw_uranolumen_block", RAW_URANOLUMEN_BLOCK, MISC);
 
 		createBlockItem("deep_trenches:almond_button", ALMOND_BUTTON, WOODS);
 		createBlockItem("deep_trenches:anameata_button", ANAMEATA_BUTTON, WOODS);
@@ -2161,7 +2206,7 @@ public class DTItems {
 		DIOPSIDE_SCYTHE = createScythe("deep_trenches:diopside_scythe", DTToolMaterials.DIOPSIDE, 7, -2.1F);
 		GYLDELION_SCYTHE = createScythe("deep_trenches:gyldelion_scythe", DTToolMaterials.GYLDELION, 8, 2.1F);
 		NETHERITE_SCYTHE = createScythe("deep_trenches:netherite_scythe", ToolMaterials.NETHERITE, 7, -2.1F);
-		RUBY_DISRAPPER = register("deep_trenches:ruby_disrapper", new DisrapperItem(DTToolMaterials.RUBY, 4, 4F, new Settings().group(COMBAT)));
+		RUBY_DISRAPPER = register("deep_trenches:ruby_disripper", new DisripperItem(DTToolMaterials.RUBY, 4, 4F, new Settings().group(COMBAT)));
 		SAPPHIRE_SCYTHE = createScythe("deep_trenches:sapphire_scythe", DTToolMaterials.SAPPHIRE, 7, -2.1F);
 		SPINEL_SCYTHE = createScythe("deep_trenches:spinel_scythe", DTToolMaterials.SPINEL, 7, -2.1F);
 		TANZANITE_SCYTHE = createScythe("deep_trenches:tanzanite_scythe", DTToolMaterials.TANZANITE, 7, -2.1F);
@@ -2423,7 +2468,6 @@ public class DTItems {
 
 		/* -------------------------------- GYNDELION ------------------------------------------- */
 		GYLDELION_DYE = createItem("deep_trenches:gyldelion_dye", MISC);
-		createBlockItem("deep_trenches:gyldelion_block", GYLDELION_BLOCK, MISC);
 
 		/* -------------------------------- MOB DROPS ------------------------------------------- */
 		LOOSEJAW_TOOTH = createItem("deep_trenches:loosejaw_tooth", MISC);
