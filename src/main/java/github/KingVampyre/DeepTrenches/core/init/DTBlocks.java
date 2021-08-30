@@ -3928,7 +3928,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:aquamarine_block", AQUAMARINE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:black_opal_block", BLACK_OPAL_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:chalcedony_block", CHALCEDONY_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:dipside_block", DIOPSIDE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:diopside_block", DIOPSIDE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:enron_block", ENRON_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:enstatite_block", ENSTATITE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:gyldelion_block", GYLDELION_BLOCK);
@@ -3946,14 +3946,14 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:clinohumite_block", CLINOHUMITE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:budding_clinohumite", BUDDING_CLINOHUMITE);
 		Registry.register(BLOCK, "deep_trenches:clinohumite_cluster", CLINOHUMITE_CLUSTER);
-		Registry.register(BLOCK, "deep_trenches:large_clinohumite_hud", LARGE_CLINOHUMITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:large_clinohumite_bud", LARGE_CLINOHUMITE_BUD);
 		Registry.register(BLOCK, "deep_trenches:medium_clinohumite_bud", MEDIUM_CLINOHUMITE_BUD);
 		Registry.register(BLOCK, "deep_trenches:small_clinohumite_bud", SMALL_CLINOHUMITE_BUD);
 
 		Registry.register(BLOCK, "deep_trenches:garnet_block", GARNET_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:budding_garnet", BUDDING_GARNET);
 		Registry.register(BLOCK, "deep_trenches:garnet_cluster", GARNET_CLUSTER);
-		Registry.register(BLOCK, "deep_trenches:large_garnet_hud", LARGE_GARNET_BUD);
+		Registry.register(BLOCK, "deep_trenches:large_garnet_bud", LARGE_GARNET_BUD);
 		Registry.register(BLOCK, "deep_trenches:medium_garnet_bud", MEDIUM_GARNET_BUD);
 		Registry.register(BLOCK, "deep_trenches:small_garnet_bud", SMALL_GARNET_BUD);
 

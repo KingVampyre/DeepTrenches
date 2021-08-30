@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "deep_trenches:block/gyldelion_block"
+        "all": "deep_trenches:block/sugilite_block"
     }
 }

@@ -884,7 +884,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:aquamarine_block", AQUAMARINE_BLOCK, MISC);
 		createBlockItem("deep_trenches:black_opal_block", BLACK_OPAL_BLOCK, MISC);
 		createBlockItem("deep_trenches:chalcedony_block", CHALCEDONY_BLOCK, MISC);
-		createBlockItem("deep_trenches:dipside_block", DIOPSIDE_BLOCK, MISC);
+		createBlockItem("deep_trenches:diopside_block", DIOPSIDE_BLOCK, MISC);
 		createBlockItem("deep_trenches:enron_block", ENRON_BLOCK, MISC);
 		createBlockItem("deep_trenches:enstatite_block", ENSTATITE_BLOCK, MISC);
 		createBlockItem("deep_trenches:gyldelion_block", GYLDELION_BLOCK, MISC);
@@ -902,7 +902,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:clinohumite_block", CLINOHUMITE_BLOCK, MISC);
 		createBlockItem("deep_trenches:budding_clinohumite", BUDDING_CLINOHUMITE, MISC);
 		createBlockItem("deep_trenches:clinohumite_cluster", CLINOHUMITE_CLUSTER, MISC);
-		createBlockItem("deep_trenches:large_clinohumite_hud", LARGE_CLINOHUMITE_BUD, MISC);
+		createBlockItem("deep_trenches:large_clinohumite_bud", LARGE_CLINOHUMITE_BUD, MISC);
 		createBlockItem("deep_trenches:medium_clinohumite_bud", MEDIUM_CLINOHUMITE_BUD, MISC);
 		createBlockItem("deep_trenches:small_clinohumite_bud", SMALL_CLINOHUMITE_BUD, MISC);
 
