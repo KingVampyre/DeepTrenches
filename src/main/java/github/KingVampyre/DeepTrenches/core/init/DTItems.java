@@ -222,11 +222,16 @@ public class DTItems {
 
 	/* ------------- WEAPONS ----------- */
 	public static final Item ADAIGGER;
+	public static final Item BORON_TROOKENT;
+	public static final Item RUBY_DISTABBER;
+	public static final Item MORGANITE_SABER;
+	public static final Item SAPPHIRE_PRISMACE;
+
+	public static final Item BORON_SWORD;
 	public static final Item CHALCEDONY_SWORD;
 	public static final Item ENSTATITE_SWORD;
 	public static final Item KRALCTIUM_SWORD;
-	public static final Item RUBY_DISTABBER;
-	public static final Item SAPPHIRE_PRISMACE;
+	public static final Item SAPPHIRE_SWORD;
 	public static final Item SPHENE_SWORD;
 	public static final Item SPINEL_SWORD;
 	public static final Item STROXITE_SWORD;
@@ -234,7 +239,15 @@ public class DTItems {
 	public static final Item TOPAZ_SWORD;
 
 	public static final Item AQUAMARINE_SCYTHE;
+	public static final Item BORON_SCYTHE;
 	public static final Item DIOPSIDE_SCYTHE;
+	public static final Item GYLDELION_SCYTHE;
+	public static final Item NETHERITE_SCYTHE;
+	public static final Item RUBY_DISRAPPER;
+	public static final Item SAPPHIRE_SCYTHE;
+	public static final Item SPINEL_SCYTHE;
+	public static final Item TANZANITE_SCYTHE;
+	public static final Item TOPAZ_SCYTHE;
 	public static final Item VOID_CRITTERED_DIOPSIDE_SCYTHE;
 
 	public static final Item AQUAMARINE_STAFF;
@@ -250,6 +263,11 @@ public class DTItems {
 	public static final Item AQUAMARINE_PICKAXE;
 	public static final Item AQUAMARINE_SHOVEL;
 
+	public static final Item BORON_AXE;
+	public static final Item BORON_HOE;
+	public static final Item BORON_PICKAXE;
+	public static final Item BORON_SHOVEL;
+
 	public static final Item CHALCEDONY_AXE;
 	public static final Item CHALCEDONY_HOE;
 	public static final Item CHALCEDONY_PICKAXE;
@@ -264,6 +282,11 @@ public class DTItems {
 	public static final Item DIOPSIDE_HOE;
 	public static final Item DIOPSIDE_PICKAXE;
 	public static final Item DIOPSIDE_SHOVEL;
+
+	public static final Item ENRON_AXE;
+	public static final Item ENRON_HOE;
+	public static final Item ENRON_PICKAXE;
+	public static final Item ENRON_SHOVEL;
 
 	public static final Item ENSTATITE_AXE;
 	public static final Item ENSTATITE_HOE;
@@ -289,6 +312,16 @@ public class DTItems {
 	public static final Item RUBY_DISDIGGER;
 	public static final Item RUBY_DISLOGGER;
 	public static final Item RUBY_DISTARVEST;
+
+	public static final Item SAPPHIRE_AXE;
+	public static final Item SAPPHIRE_HOE;
+	public static final Item SAPPHIRE_PICKAXE;
+	public static final Item SAPPHIRE_SHOVEL;
+
+	public static final Item SILVER_AXE;
+	public static final Item SILVER_HOE;
+	public static final Item SILVER_PICKAXE;
+	public static final Item SILVER_SHOVEL;
 
 	public static final Item SPHENE_AXE;
 	public static final Item SPHENE_HOE;
@@ -346,6 +379,11 @@ public class DTItems {
 	public static final Item DIOPSIDE_LEGGINGS;
 	public static final Item DIOPSIDE_BOOTS;
 
+	public static final Item ENRON_HELMET;
+	public static final Item ENRON_CHESTPLATE;
+	public static final Item ENRON_LEGGINGS;
+	public static final Item ENRON_BOOTS;
+
 	public static final Item ENSTATITE_HELMET;
 	public static final Item ENSTATITE_CHESTPLATE;
 	public static final Item ENSTATITE_LEGGINGS;
@@ -402,43 +440,67 @@ public class DTItems {
 	public static final Item VOID_CRITTERED_DIOPSIDE_BOOTS;
 
 	/* ------------- TALISMANS --------------------- */
+	public static final Item AQUAMARINE_TALISMAN;
 	public static final Item SPHENE_TALISMAN;
 	public static final Item TANZANITE_TALISMAN;
+
+	/* ------------- JEWELRY --------------------- */
+	public static final Item BLACK_PEARL;
 
 	/* ------------- ORES --------------------- */
 	public static final Item AQUAMARINE;
 	public static final Item BLACK_OPAL;
-	public static final Item BLACK_PEARL;
-	public static final Item BORON;
 	public static final Item CHALCEDONY;
 	public static final Item CLINOHUMITE;
 	public static final Item DIOPSIDE;
 	public static final Item ENSTATITE;
-	public static final Item KRALCTIUM;
+	public static final Item GARNET;
 	public static final Item MORGANITE;
 	public static final Item OPAL;
+	public static final Item RAW_ACTINIUM;
+	public static final Item RAW_BORON;
+	public static final Item RAW_ENRON;
+	public static final Item RAW_SILICON;
+	public static final Item RAW_SILVER;
 	public static final Item RAW_STROXITE;
+	public static final Item RAW_TUNGSTEN;
 	public static final Item RAW_URANOLUMEN;
 	public static final Item RUBY;
 	public static final Item SAPPHIRE;
-	public static final Item SILVER;
 	public static final Item SPHENE;
 	public static final Item SPINEL;
+	public static final Item SUGILITE;
 	public static final Item TANZANITE;
 	public static final Item TOPAZ;
 	public static final Item VOID_CRITTERED_DIOPSIDE;
 
 	/* ------------ INGOTS ------------- */
+	public static final Item ACTINIUM_INGOT;
+	public static final Item BORON_INGOT;
+	public static final Item ENRON_INGOT;
 	public static final Item GYLDELION_INGOT;
+	public static final Item KRALCTIUM_INGOT;
+	public static final Item SILICON_INGOT;
+	public static final Item SILVER_INGOT;
 	public static final Item STROXITE_INGOT;
+	public static final Item TUNGSTEN_INGOT;
+	public static final Item URANIUM_INGOT;
 	public static final Item URANOLUMEN_INGOT;
 
 	/* ------------ NUGGETS ------------- */
+	public static final Item ACTINIUM_NUGGET;
+	public static final Item BORON_NUGGET;
+	public static final Item ENRON_NUGGET;
 	public static final Item GYLDELION_NUGGET;
+	public static final Item SILICON_NUGGET;
+	public static final Item SILVER_NUGGET;
 	public static final Item STROXITE_NUGGET;
+	public static final Item TUNGSTEN_NUGGET;
+	public static final Item URANIUM_NUGGET;
 	public static final Item URANOLUMEN_NUGGET;
 
 	/* ------------ POWDERS ------------- */
+	public static final Item URANIUM_POWDER;
 	public static final Item URANOLUMEN_POWDER;
 
 	/* --------------- DYES --------------- */
@@ -726,7 +788,6 @@ public class DTItems {
 		createBlockItem("deep_trenches:blue_storcerack_aquamarine_ore", BLUE_STORCERACK_AQUAMARINE_ORE, MISC);
 		createBlockItem("deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE, MISC);
 		createBlockItem("deep_trenches:blue_storcerack_chalcedony_ore", BLUE_STORCERACK_CHALCEDONY_ORE, MISC);
-		createBlockItem("deep_trenches:blue_storcerack_clinohumite_ore", BLUE_STORCERACK_CLINOHUMITE_ORE, MISC);
 		createBlockItem("deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE, MISC);
 		createBlockItem("deep_trenches:blue_storcerack_copper_ore", BLUE_STORCERACK_COPPER_ORE, MISC);
 		createBlockItem("deep_trenches:blue_storcerack_diamond_ore", BLUE_STORCERACK_DIAMOND_ORE, MISC);
@@ -783,7 +844,6 @@ public class DTItems {
 		createBlockItem("deep_trenches:limestone_aquamarine_ore", LIMESTONE_AQUAMARINE_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_black_opal_ore", LIMESTONE_BLACK_OPAL_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_chalcedony_ore", LIMESTONE_CHALCEDONY_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_clinohumite_ore", LIMESTONE_CLINOHUMITE_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_coal_ore", LIMESTONE_COAL_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_copper_ore", LIMESTONE_COPPER_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_diamond_ore", LIMESTONE_DIAMOND_ORE, MISC);
@@ -802,7 +862,6 @@ public class DTItems {
 		createBlockItem("deep_trenches:pinkine_aquamarine_ore", PINKINE_AQUAMARINE_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_black_opal_ore", PINKINE_BLACK_OPAL_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_chalcedony_ore", PINKINE_CHALCEDONY_ORE, MISC);
-		createBlockItem("deep_trenches:pinkine_clinohumite_ore", PINKINE_CLINOHUMITE_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_coal_ore", PINKINE_COAL_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_copper_ore", PINKINE_COPPER_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_diamond_ore", PINKINE_DIAMOND_ORE, MISC);
@@ -2081,11 +2140,16 @@ public class DTItems {
 
 		/* -------------------------------- WEAPONS ------------------------------------------- */
 		ADAIGGER = register("deep_trenches:adaigger", new AdaiggerItem(DTToolMaterials.GYLDELION, 4, 4F, new Settings().group(COMBAT)));
+		BORON_TROOKENT = register("deep_trenches:boron_trookent", new TrookentItem(DTToolMaterials.BORON, 4, 4F, new Settings().group(COMBAT)));
+		MORGANITE_SABER = register("deep_trenches:morganite_saber", new TrookentItem(DTToolMaterials.MORGANITE, 4, 4F, new Settings().group(COMBAT)));
+		SAPPHIRE_PRISMACE = register("deep_trenches:sapphire_prismace", new PrismaceItem(new Settings().group(COMBAT)));
+
+		BORON_SWORD = createSword("deep_trenches:boron_sword", DTToolMaterials.BORON, 4, -2.2F);
 		CHALCEDONY_SWORD = createSword("deep_trenches:chalcedony_sword", DTToolMaterials.CHALCEDONY, 4, -2.2F);
 		ENSTATITE_SWORD = createSword("deep_trenches:enstatite_sword", DTToolMaterials.ENSTATITE, 3, -2.4F);
 		KRALCTIUM_SWORD = createSword("deep_trenches:kralctium_sword", DTToolMaterials.KRALCTIUM, 3, -2.4F);
+		SAPPHIRE_SWORD = createSword("deep_trenches:sapphire_sword", DTToolMaterials.SAPPHIRE, 4, -2.2F);
 		RUBY_DISTABBER = createSword("deep_trenches:ruby_distabber", DTToolMaterials.RUBY, 3, -2.4F);
-		SAPPHIRE_PRISMACE = register("deep_trenches:sapphire_prismace", new PrismaceItem(new Settings().group(COMBAT)));
 		SPHENE_SWORD = createSword("deep_trenches:sphene_sword", DTToolMaterials.SPHENE, 3, -2.4F);
 		SPINEL_SWORD = createSword("deep_trenches:spinel_sword", DTToolMaterials.SPINEL, 3, -2.4F);
 		STROXITE_SWORD = createSword("deep_trenches:stroxite_sword", DTToolMaterials.STROXITE, 3, -2.4F);
@@ -2093,8 +2157,16 @@ public class DTItems {
 		TOPAZ_SWORD = createSword("deep_trenches:topaz_sword", DTToolMaterials.TOPAZ, 3, -2.4F);
 
 		AQUAMARINE_SCYTHE = createScythe("deep_trenches:aquamarine_scythe", DTToolMaterials.AQUAMARINE, 7, -2.1F);
-		DIOPSIDE_SCYTHE = createScythe("deep_trenches:diopside_scythe", DTToolMaterials.DIOPSIDE, 6, -3.1F);
-		VOID_CRITTERED_DIOPSIDE_SCYTHE = createScythe("deep_trenches:void_crittered_diopside_scythe", DTToolMaterials.VOID_CRITTERED_DIOPSIDE, 6, -3.1F);
+		BORON_SCYTHE = createScythe("deep_trenches:boron_scythe", DTToolMaterials.BORON, 7, -2.1F);
+		DIOPSIDE_SCYTHE = createScythe("deep_trenches:diopside_scythe", DTToolMaterials.DIOPSIDE, 7, -2.1F);
+		GYLDELION_SCYTHE = createScythe("deep_trenches:gyldelion_scythe", DTToolMaterials.GYLDELION, 8, 2.1F);
+		NETHERITE_SCYTHE = createScythe("deep_trenches:netherite_scythe", ToolMaterials.NETHERITE, 7, -2.1F);
+		RUBY_DISRAPPER = register("deep_trenches:ruby_disrapper", new DisrapperItem(DTToolMaterials.RUBY, 4, 4F, new Settings().group(COMBAT)));
+		SAPPHIRE_SCYTHE = createScythe("deep_trenches:sapphire_scythe", DTToolMaterials.SAPPHIRE, 7, -2.1F);
+		SPINEL_SCYTHE = createScythe("deep_trenches:spinel_scythe", DTToolMaterials.SPINEL, 7, -2.1F);
+		TANZANITE_SCYTHE = createScythe("deep_trenches:tanzanite_scythe", DTToolMaterials.TANZANITE, 7, -2.1F);
+		TOPAZ_SCYTHE = createScythe("deep_trenches:topaz_scythe", DTToolMaterials.TOPAZ, 7, -2.1F);
+		VOID_CRITTERED_DIOPSIDE_SCYTHE = createScythe("deep_trenches:void_crittered_diopside_scythe", DTToolMaterials.VOID_CRITTERED_DIOPSIDE, 7, -2.1F);
 
 		AQUAMARINE_STAFF = createStaff("deep_trenches:aquamarine_staff");
 		DIOPSIDE_STAFF = createStaff("deep_trenches:diopside_staff");
@@ -2108,6 +2180,11 @@ public class DTItems {
 		AQUAMARINE_HOE = createHoe("deep_trenches:aquamarine_hoe", DTToolMaterials.AQUAMARINE, -2, -1F);
 		AQUAMARINE_PICKAXE = createPickaxe("deep_trenches:aquamarine_pickaxe", DTToolMaterials.AQUAMARINE, 1, -2.8F);
 		AQUAMARINE_SHOVEL = createShovel("deep_trenches:aquamarine_shovel", DTToolMaterials.AQUAMARINE, 1.5F, -3F);
+
+		BORON_AXE = createAxe("deep_trenches:boron_axe", DTToolMaterials.BORON, 6F, -3.1F);
+		BORON_HOE = createHoe("deep_trenches:boron_hoe", DTToolMaterials.BORON, -2, -1F);
+		BORON_PICKAXE = createPickaxe("deep_trenches:boron_pickaxe", DTToolMaterials.BORON, 1, -2.8F);
+		BORON_SHOVEL = createShovel("deep_trenches:boron_shovel", DTToolMaterials.BORON, 1.5F, -3F);
 
 		CHALCEDONY_AXE = createAxe("deep_trenches:chalcedony_axe", DTToolMaterials.CHALCEDONY, 6F, -3.1F);
 		CHALCEDONY_HOE = createHoe("deep_trenches:chalcedony_hoe", DTToolMaterials.CHALCEDONY, -2, -1F);
@@ -2123,6 +2200,11 @@ public class DTItems {
 		DIOPSIDE_HOE = createHoe("deep_trenches:diopside_hoe", DTToolMaterials.DIOPSIDE, -2, -1F);
 		DIOPSIDE_PICKAXE = createPickaxe("deep_trenches:diopside_pickaxe", DTToolMaterials.DIOPSIDE, 1, -2.8F);
 		DIOPSIDE_SHOVEL = createShovel("deep_trenches:diopside_shovel", DTToolMaterials.DIOPSIDE, 1.5F, -3F);
+
+		ENRON_AXE = createAxe("deep_trenches:enron_axe", DTToolMaterials.ENRON, 6F, -3.1F);
+		ENRON_HOE = createHoe("deep_trenches:enron_hoe", DTToolMaterials.ENRON, -2, -1F);
+		ENRON_PICKAXE = createPickaxe("deep_trenches:enron_pickaxe", DTToolMaterials.ENRON, 1, -2.8F);
+		ENRON_SHOVEL = createShovel("deep_trenches:enron_shovel", DTToolMaterials.ENRON, 1.5F, -3F);
 
 		ENSTATITE_AXE = createAxe("deep_trenches:enstatite_axe", DTToolMaterials.ENSTATITE, 6F, -3.1F);
 		ENSTATITE_HOE = createHoe("deep_trenches:enstatite_hoe", DTToolMaterials.ENSTATITE, -2, -1F);
@@ -2147,7 +2229,17 @@ public class DTItems {
 		RUBY_DISCARVER = register("deep_trenches:ruby_discarver", new DiscarverItem(DTToolMaterials.RUBY, 1, -2.8F, new Settings().group(TOOLS)));
 		RUBY_DISDIGGER = register("deep_trenches:ruby_disdigger", new DisdiggerItem(DTToolMaterials.RUBY, 1.5F, -3F, new Settings().group(TOOLS)));
 		RUBY_DISLOGGER = register("deep_trenches:ruby_dislogger", new DisloggerItem(DTToolMaterials.RUBY, 6F, -3.1F, new Settings().group(TOOLS)));
-		RUBY_DISTARVEST = register("deep_trenches:ruby_distarvest", new Distarvest(DTToolMaterials.RUBY, -2, -1F, new Settings().group(TOOLS)));
+		RUBY_DISTARVEST = register("deep_trenches:ruby_distarvest", new DistarvestItem(DTToolMaterials.RUBY, -2, -1F, new Settings().group(TOOLS)));
+
+		SAPPHIRE_AXE = createAxe("deep_trenches:sapphire_axe", DTToolMaterials.SAPPHIRE, 6F, -3.1F);
+		SAPPHIRE_HOE = createHoe("deep_trenches:sapphire_hoe", DTToolMaterials.SAPPHIRE, -2, -1F);
+		SAPPHIRE_PICKAXE = createPickaxe("deep_trenches:sapphire_pickaxe", DTToolMaterials.SAPPHIRE, 1, -2.8F);
+		SAPPHIRE_SHOVEL = createShovel("deep_trenches:sapphire_shovel", DTToolMaterials.SAPPHIRE, 1.5F, -3F);
+
+		SILVER_AXE = createAxe("deep_trenches:silver_axe", DTToolMaterials.SILVER, 6F, -3.1F);
+		SILVER_HOE = createHoe("deep_trenches:silver_hoe", DTToolMaterials.SILVER, -2, -1F);
+		SILVER_PICKAXE = createPickaxe("deep_trenches:silver_pickaxe", DTToolMaterials.SILVER, 1, -2.8F);
+		SILVER_SHOVEL = createShovel("deep_trenches:silver_shovel", DTToolMaterials.SILVER, 1.5F, -3F);
 
 		SPHENE_AXE = createAxe("deep_trenches:sphene_axe", DTToolMaterials.SPHENE, 6F, -3.1F);
 		SPHENE_HOE = createHoe("deep_trenches:sphene_hoe", DTToolMaterials.SPHENE, -2, -1F);
@@ -2205,6 +2297,11 @@ public class DTItems {
 		DIOPSIDE_LEGGINGS = createLeggings("deep_trenches:diopside_leggings", DTArmorMaterials.DIOPSIDE);
 		DIOPSIDE_BOOTS = createBoots("deep_trenches:diopside_boots", DTArmorMaterials.DIOPSIDE);
 
+		ENRON_HELMET = createHelmet("deep_trenches:enron_helmet", DTArmorMaterials.ENRON);
+		ENRON_CHESTPLATE = createChestplate("deep_trenches:enron_chestplate", DTArmorMaterials.ENRON);
+		ENRON_LEGGINGS = createLeggings("deep_trenches:enron_leggings", DTArmorMaterials.ENRON);
+		ENRON_BOOTS = createBoots("deep_trenches:enron_boots", DTArmorMaterials.ENRON);
+
 		ENSTATITE_HELMET = createHelmet("deep_trenches:enstatite_helmet", DTArmorMaterials.ENSTATITE);
 		ENSTATITE_CHESTPLATE = createChestplate("deep_trenches:enstatite_chestplate", DTArmorMaterials.ENSTATITE);
 		ENSTATITE_LEGGINGS = createLeggings("deep_trenches:enstatite_leggings", DTArmorMaterials.ENSTATITE);
@@ -2261,43 +2358,67 @@ public class DTItems {
 		VOID_CRITTERED_DIOPSIDE_BOOTS = createBoots("deep_trenches:void_crittered_diopside_boots", DTArmorMaterials.VOID_CRITTERED_DIOPSIDE);
 
 		/* -------------------- TALISMANS -------------------------------- */
+		AQUAMARINE_TALISMAN = createItem("deep_trenches:aquamarine_talisman", COMBAT);
 		SPHENE_TALISMAN = createItem("deep_trenches:sphene_talisman", COMBAT);
 		TANZANITE_TALISMAN = createItem("deep_trenches:tanzanite_talisman", COMBAT);
+
+		/* -------------------- JEWELRY -------------------------------- */
+		BLACK_PEARL = createItem("deep_trenches:black_pearl", MISC);
 
 		/* -------------------- ORES -------------------------------- */
 		AQUAMARINE = createItem("deep_trenches:aquamarine", MISC);
 		BLACK_OPAL = createItem("deep_trenches:black_opal", MISC);
-		BLACK_PEARL = createItem("deep_trenches:black_pearl", MISC);
-		BORON = createItem("deep_trenches:boron", MISC);
 		CHALCEDONY = createItem("deep_trenches:chalcedony", MISC);
 		CLINOHUMITE = createItem("deep_trenches:clinohumite", MISC);
 		DIOPSIDE = createItem("deep_trenches:diopside", MISC);
 		ENSTATITE = createItem("deep_trenches:enstatite", MISC);
-		KRALCTIUM = createItem("deep_trenches:kralctium", MISC);
+		GARNET = createItem("deep_trenches:garnet", MISC);
 		MORGANITE = createItem("deep_trenches:morganite", MISC);
 		OPAL = createItem("deep_trenches:opal", MISC);
+		RAW_ACTINIUM = createItem("deep_trenches:raw_actinium", MISC);
+		RAW_BORON = createItem("deep_trenches:raw_boron", MISC);
+		RAW_ENRON = createItem("deep_trenches:raw_enron", MISC);
+		RAW_SILICON = createItem("deep_trenches:raw_silicon", MISC);
+		RAW_SILVER = createItem("deep_trenches:raw_silver", MISC);
 		RAW_STROXITE = createItem("deep_trenches:raw_stroxite", MISC);
+		RAW_TUNGSTEN = createItem("deep_trenches:raw_tungsten", MISC);
 		RAW_URANOLUMEN = createItem("deep_trenches:raw_uranolumen", MISC);
 		RUBY = createItem("deep_trenches:ruby", MISC);
 		SAPPHIRE = createItem("deep_trenches:sapphire", MISC);
-		SILVER = createItem("deep_trenches:silver", MISC);
 		SPHENE = createItem("deep_trenches:sphene", MISC);
 		SPINEL = createItem("deep_trenches:spinel", MISC);
+		SUGILITE = createItem("deep_trenches:sugilite", MISC);
 		TANZANITE = createItem("deep_trenches:tanzanite", MISC);
 		TOPAZ = createItem("deep_trenches:topaz", MISC);
 		VOID_CRITTERED_DIOPSIDE = createItem("deep_trenches:void_crittered_diopside", MISC);
 
 		/* ------------ INGOTS ------------- */
+		ACTINIUM_INGOT = createItem("deep_trenches:actinium_ingot", MISC);
+		BORON_INGOT = createItem("deep_trenches:boron_ingot", MISC);
+		ENRON_INGOT = createItem("deep_trenches:enron_ingot", MISC);
 		GYLDELION_INGOT = createItem("deep_trenches:gyldelion_ingot", MISC);
+		KRALCTIUM_INGOT = createItem("deep_trenches:kralctium_ingot", MISC);
+		SILICON_INGOT = createItem("deep_trenches:silicon_ingot", MISC);
+		SILVER_INGOT = createItem("deep_trenches:silver_ingot", MISC);
 		STROXITE_INGOT = createItem("deep_trenches:stroxite_ingot", MISC);
+		TUNGSTEN_INGOT = createItem("deep_trenches:tungsten_ingot", MISC);
+		URANIUM_INGOT = createItem("deep_trenches:uranium_ingot", MISC);
 		URANOLUMEN_INGOT = createItem("deep_trenches:uranolumen_ingot", MISC);
 
 		/* ------------ NUGGETS ------------- */
+		ACTINIUM_NUGGET = createItem("deep_trenches:actinium_nugget", MISC);
+		BORON_NUGGET = createItem("deep_trenches:boron_nugget", MISC);
+		ENRON_NUGGET = createItem("deep_trenches:enron_nugget", MISC);
 		GYLDELION_NUGGET = createItem("deep_trenches:gyldelion_nugget", MISC);
+		SILICON_NUGGET = createItem("deep_trenches:silicon_nugget", MISC);
+		SILVER_NUGGET = createItem("deep_trenches:silver_nugget", MISC);
 		STROXITE_NUGGET = createItem("deep_trenches:stroxite_nugget", MISC);
+		TUNGSTEN_NUGGET = createItem("deep_trenches:tungsten_nugget", MISC);
+		URANIUM_NUGGET = createItem("deep_trenches:uranium_nugget", MISC);
 		URANOLUMEN_NUGGET = createItem("deep_trenches:uranolumen_nugget", MISC);
 
 		/* ------------ POWDERS ------------- */
+		URANIUM_POWDER = createItem("deep_trenches:uranium_powder", MISC);
 		URANOLUMEN_POWDER = createItem("deep_trenches:uranolumen_powder", MISC);
 
 		/* -------------------------------- GYNDELION ------------------------------------------- */

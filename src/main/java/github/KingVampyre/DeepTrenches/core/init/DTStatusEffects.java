@@ -19,6 +19,7 @@ public class DTStatusEffects {
 	public static final StatusEffect FLOWER_BEAUTY = register("deep_trenches:flower_beauty", new FlowerBeautyStatusEffect(NEUTRAL, 12001933));
 	public static final StatusEffect GAS_CORROSION = register("deep_trenches:gas_corrosion", new CorrosionStatusEffect(HARMFUL, 735782));
 	public static final StatusEffect PRESSURE = register("deep_trenches:pressure", new PressureStatusEffect(HARMFUL, 728094));
+	public static final StatusEffect RADIATION = register("deep_trenches:radiation", new StatusEffect(NEUTRAL, 3858175));
 	public static final StatusEffect SINKING = register("deep_trenches:sinking", new StatusEffect(NEUTRAL, 728094));
 	public static final StatusEffect SLEEPY = register("deep_trenches:sleepy", new SleepyStatusEffect(NEUTRAL, 3549040));
 	public static final StatusEffect SOFTBONES = register("deep_trenches:softbones", new SoftBonesStatusEffect(NEUTRAL, 10592434));

@@ -104,7 +104,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack", BLUE_STORCERACK);
 		Registry.register(BLOCK, "deep_trenches:dritean", DRITEAN);
 		Registry.register(BLOCK, "deep_trenches:enrotium", ENROTIUM);
-		Registry.register(BLOCK, "deep_trenches:gyldelion_block", GYLDELION_BLOCK);
 
 		Registry.register(BLOCK, "deep_trenches:stasp_nest", STASP_NEST);
 
@@ -391,6 +390,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, "deep_trenches:andesite_copper_ore", ANDESITE_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:andesite_diamond_ore", ANDESITE_DIAMOND_ORE);
 		Registry.register(BLOCK, "deep_trenches:andesite_emerald_ore", ANDESITE_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_garnet_ore", ANDESITE_GARNET_ORE);
 		Registry.register(BLOCK, "deep_trenches:andesite_gold_ore", ANDESITE_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:andesite_iron_ore", ANDESITE_IRON_ORE);
 		Registry.register(BLOCK, "deep_trenches:andesite_lapis_ore", ANDESITE_LAPIS_ORE);
@@ -410,6 +410,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, "deep_trenches:black_basalt_copper_ore", BLACK_BASALT_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_diamond_ore", BLACK_BASALT_DIAMOND_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_emerald_ore", BLACK_BASALT_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_garnet_ore", BLACK_BASALT_GARNET_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_lapis_ore", BLACK_BASALT_LAPIS_ORE);
@@ -424,7 +425,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_aquamarine_ore", BLUE_STORCERACK_AQUAMARINE_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_chalcedony_ore", BLUE_STORCERACK_CHALCEDONY_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_clinohumite_ore", BLUE_STORCERACK_CLINOHUMITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_copper_ore", BLUE_STORCERACK_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_diamond_ore", BLUE_STORCERACK_DIAMOND_ORE);
@@ -448,6 +448,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, "deep_trenches:diorite_copper_ore", DIORITE_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:diorite_diamond_ore", DIORITE_DIAMOND_ORE);
 		Registry.register(BLOCK, "deep_trenches:diorite_emerald_ore", DIORITE_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_garnet_ore", DIORITE_GARNET_ORE);
 		Registry.register(BLOCK, "deep_trenches:diorite_gold_ore", DIORITE_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:diorite_iron_ore", DIORITE_IRON_ORE);
 		Registry.register(BLOCK, "deep_trenches:diorite_lapis_ore", DIORITE_LAPIS_ORE);
@@ -467,6 +468,7 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, "deep_trenches:granite_copper_ore", GRANITE_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:granite_diamond_ore", GRANITE_DIAMOND_ORE);
 		Registry.register(BLOCK, "deep_trenches:granite_emerald_ore", GRANITE_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_garnet_ore", GRANITE_GARNET_ORE);
 		Registry.register(BLOCK, "deep_trenches:granite_gold_ore", GRANITE_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:granite_iron_ore", GRANITE_IRON_ORE);
 		Registry.register(BLOCK, "deep_trenches:granite_lapis_ore", GRANITE_LAPIS_ORE);
@@ -481,7 +483,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, "deep_trenches:limestone_aquamarine_ore", LIMESTONE_AQUAMARINE_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_black_opal_ore", LIMESTONE_BLACK_OPAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_chalcedony_ore", LIMESTONE_CHALCEDONY_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_clinohumite_ore", LIMESTONE_CLINOHUMITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_coal_ore", LIMESTONE_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_copper_ore", LIMESTONE_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_diamond_ore", LIMESTONE_DIAMOND_ORE);
@@ -500,7 +501,6 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, "deep_trenches:pinkine_aquamarine_ore", PINKINE_AQUAMARINE_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_black_opal_ore", PINKINE_BLACK_OPAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_chalcedony_ore", PINKINE_CHALCEDONY_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_clinohumite_ore", PINKINE_CLINOHUMITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_coal_ore", PINKINE_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_copper_ore", PINKINE_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_diamond_ore", PINKINE_DIAMOND_ORE);
@@ -515,6 +515,47 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(BLOCK, "deep_trenches:pinkine_sphene_ore", PINKINE_SPHENE_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_spinel_ore", PINKINE_SPINEL_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_tanzanite_ore", PINKINE_TANZANITE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:aquamarine_block", AQUAMARINE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:black_opal_block", BLACK_OPAL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:chalcedony_block", CHALCEDONY_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:dipside_block", DIOPSIDE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:enron_block", ENRON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:enstatite_block", ENSTATITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:gyldelion_block", GYLDELION_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:morganite_block", MORGANITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:opal_block", OPAL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:ruby_block", RUBY_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:sapphire_block", SAPPHIRE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:sugilite_block", SUGILITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:sphene_block", SPHENE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:spinel_block", SPINEL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:tanzanite_block", TANZANITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:topaz_block", TOPAZ_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:void_crittered_diopside_block", VOID_CRITTERED_DIOPSIDE_BLOCK);
+
+		Registry.register(BLOCK, "deep_trenches:clinohumite_block", CLINOHUMITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_clinohumite", BUDDING_CLINOHUMITE);
+		Registry.register(BLOCK, "deep_trenches:clinohumite_cluster", CLINOHUMITE_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_clinohumite_hud", LARGE_CLINOHUMITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_clinohumite_bud", MEDIUM_CLINOHUMITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_clinohumite_bud", SMALL_CLINOHUMITE_BUD);
+
+		Registry.register(BLOCK, "deep_trenches:garnet_block", GARNET_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_garnet", BUDDING_GARNET);
+		Registry.register(BLOCK, "deep_trenches:garnet_cluster", GARNET_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_garnet_hud", LARGE_GARNET_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_garnet_bud", MEDIUM_GARNET_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_garnet_bud", SMALL_GARNET_BUD);
+
+		Registry.register(BLOCK, "deep_trenches:raw_actinium_block", RAW_ACTINIUM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_boron_block", RAW_BORON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_enron_block", RAW_ENRON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_silicon_block", RAW_SILICON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_silver_block", RAW_SILVER_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_stroxite_block", RAW_STROXITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_tungsten_block", RAW_TUNGSTEN_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_uranolumen_block", RAW_URANOLUMEN_BLOCK);
 
 		Registry.register(BLOCK, "deep_trenches:almond_button", ALMOND_BUTTON);
 		Registry.register(BLOCK, "deep_trenches:almond_door", ALMOND_DOOR);

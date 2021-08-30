@@ -28,7 +28,6 @@ public class DTBlocks {
 	public static final Block BLUE_STORCERACK;
 	public static final Block DRITEAN;
 	public static final Block ENROTIUM;
-	public static final Block GYLDELION_BLOCK;
 
 	public static final Block ANDESITE_AQUAMARINE_ORE;
 	public static final Block ANDESITE_BLACK_OPAL_ORE;
@@ -38,6 +37,7 @@ public class DTBlocks {
 	public static final Block ANDESITE_COPPER_ORE;
 	public static final Block ANDESITE_DIAMOND_ORE;
 	public static final Block ANDESITE_EMERALD_ORE;
+	public static final Block ANDESITE_GARNET_ORE;
 	public static final Block ANDESITE_GOLD_ORE;
 	public static final Block ANDESITE_IRON_ORE;
 	public static final Block ANDESITE_LAPIS_ORE;
@@ -57,6 +57,7 @@ public class DTBlocks {
 	public static final Block BLACK_BASALT_COPPER_ORE;
 	public static final Block BLACK_BASALT_DIAMOND_ORE;
 	public static final Block BLACK_BASALT_EMERALD_ORE;
+	public static final Block BLACK_BASALT_GARNET_ORE;
 	public static final Block BLACK_BASALT_GOLD_ORE;
 	public static final Block BLACK_BASALT_IRON_ORE;
 	public static final Block BLACK_BASALT_LAPIS_ORE;
@@ -71,7 +72,6 @@ public class DTBlocks {
 	public static final Block BLUE_STORCERACK_AQUAMARINE_ORE;
 	public static final Block BLUE_STORCERACK_BLACK_OPAL_ORE;
 	public static final Block BLUE_STORCERACK_CHALCEDONY_ORE;
-	public static final Block BLUE_STORCERACK_CLINOHUMITE_ORE;
 	public static final Block BLUE_STORCERACK_COAL_ORE;
 	public static final Block BLUE_STORCERACK_COPPER_ORE;
 	public static final Block BLUE_STORCERACK_DIAMOND_ORE;
@@ -95,6 +95,7 @@ public class DTBlocks {
 	public static final Block DIORITE_COPPER_ORE;
 	public static final Block DIORITE_DIAMOND_ORE;
 	public static final Block DIORITE_EMERALD_ORE;
+	public static final Block DIORITE_GARNET_ORE;
 	public static final Block DIORITE_GOLD_ORE;
 	public static final Block DIORITE_IRON_ORE;
 	public static final Block DIORITE_LAPIS_ORE;
@@ -114,6 +115,7 @@ public class DTBlocks {
 	public static final Block GRANITE_COPPER_ORE;
 	public static final Block GRANITE_DIAMOND_ORE;
 	public static final Block GRANITE_EMERALD_ORE;
+	public static final Block GRANITE_GARNET_ORE;
 	public static final Block GRANITE_GOLD_ORE;
 	public static final Block GRANITE_IRON_ORE;
 	public static final Block GRANITE_LAPIS_ORE;
@@ -128,7 +130,6 @@ public class DTBlocks {
 	public static final Block LIMESTONE_AQUAMARINE_ORE;
 	public static final Block LIMESTONE_BLACK_OPAL_ORE;
 	public static final Block LIMESTONE_CHALCEDONY_ORE;
-	public static final Block LIMESTONE_CLINOHUMITE_ORE;
 	public static final Block LIMESTONE_COAL_ORE;
 	public static final Block LIMESTONE_COPPER_ORE;
 	public static final Block LIMESTONE_DIAMOND_ORE;
@@ -147,7 +148,6 @@ public class DTBlocks {
 	public static final Block PINKINE_AQUAMARINE_ORE;
 	public static final Block PINKINE_BLACK_OPAL_ORE;
 	public static final Block PINKINE_CHALCEDONY_ORE;
-	public static final Block PINKINE_CLINOHUMITE_ORE;
 	public static final Block PINKINE_COAL_ORE;
 	public static final Block PINKINE_COPPER_ORE;
 	public static final Block PINKINE_DIAMOND_ORE;
@@ -162,6 +162,47 @@ public class DTBlocks {
 	public static final Block PINKINE_SPHENE_ORE;
 	public static final Block PINKINE_SPINEL_ORE;
 	public static final Block PINKINE_TANZANITE_ORE;
+
+	public static final Block AQUAMARINE_BLOCK;
+	public static final Block BLACK_OPAL_BLOCK;
+	public static final Block CHALCEDONY_BLOCK;
+	public static final Block DIOPSIDE_BLOCK;
+	public static final Block ENRON_BLOCK;
+	public static final Block ENSTATITE_BLOCK;
+	public static final Block GYLDELION_BLOCK;
+	public static final Block MORGANITE_BLOCK;
+	public static final Block OPAL_BLOCK;
+	public static final Block RUBY_BLOCK;
+	public static final Block SAPPHIRE_BLOCK;
+	public static final Block SUGILITE_BLOCK;
+	public static final Block SPHENE_BLOCK;
+	public static final Block SPINEL_BLOCK;
+	public static final Block TANZANITE_BLOCK;
+	public static final Block TOPAZ_BLOCK;
+	public static final Block VOID_CRITTERED_DIOPSIDE_BLOCK;
+
+	public static final Block CLINOHUMITE_BLOCK;
+	public static final Block BUDDING_CLINOHUMITE;
+	public static final Block CLINOHUMITE_CLUSTER;
+	public static final Block LARGE_CLINOHUMITE_BUD;
+	public static final Block MEDIUM_CLINOHUMITE_BUD;
+	public static final Block SMALL_CLINOHUMITE_BUD;
+
+	public static final Block GARNET_BLOCK;
+	public static final Block BUDDING_GARNET;
+	public static final Block GARNET_CLUSTER;
+	public static final Block LARGE_GARNET_BUD;
+	public static final Block MEDIUM_GARNET_BUD;
+	public static final Block SMALL_GARNET_BUD;
+
+	public static final Block RAW_ACTINIUM_BLOCK;
+	public static final Block RAW_BORON_BLOCK;
+	public static final Block RAW_ENRON_BLOCK;
+	public static final Block RAW_SILICON_BLOCK;
+	public static final Block RAW_SILVER_BLOCK;
+	public static final Block RAW_STROXITE_BLOCK;
+	public static final Block RAW_TUNGSTEN_BLOCK;
+	public static final Block RAW_URANOLUMEN_BLOCK;
 
 	public static final Block LIGHT_OPALITE;
 	public static final Block LUSHINE;
@@ -1629,6 +1670,26 @@ public class DTBlocks {
 		return new AcuaticFungusBlock(saplingGenerator, Settings.of(Material.LEAVES).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque());
 	}
 
+	protected static Block createClusterAmethyst(int height, int xzOffset, Settings settings) {
+		return new AmethystClusterBlock(height, xzOffset, settings);
+	}
+
+	protected static Block createClusterAmethyst(Settings settings) {
+		return new AmethystClusterBlock(7, 3, settings);
+	}
+
+	protected static Block createLargeAmethystBud(Settings settings) {
+		return createClusterAmethyst(5, 3, settings);
+	}
+
+	protected static Block createMediumAmethystBud(Settings settings) {
+		return createClusterAmethyst(4, 3, settings);
+	}
+
+	protected static Block createSmallAmethystBud(Settings settings) {
+		return createClusterAmethyst(3, 4, settings);
+	}
+
 	protected static Block createBioluminescentBlock() {
 		return new Block(Settings.copy(SEA_LANTERN).luminance(state -> 15).strength(1.5F, 6F));
 	}
@@ -1800,7 +1861,6 @@ public class DTBlocks {
 		BLUE_STORCERACK = createCopy(STONE);
 		DRITEAN = createCopy(DIRT);
 		ENROTIUM = createBlock(EnrotiumBlock::new, CRIMSON_NYLIUM);
-		GYLDELION_BLOCK = createCopy(IRON_BLOCK);
 
 		STASP_NEST = createBlock(StaspNestBlock::new, OAK_WOOD);
 
@@ -3243,6 +3303,7 @@ public class DTBlocks {
 		ANDESITE_COPPER_ORE = createCopy(COAL_ORE);
 		ANDESITE_DIAMOND_ORE = createCopy(COAL_ORE);
 		ANDESITE_EMERALD_ORE = createCopy(COAL_ORE);
+		ANDESITE_GARNET_ORE = createCopy(COAL_ORE);
 		ANDESITE_GOLD_ORE = createCopy(COAL_ORE);
 		ANDESITE_IRON_ORE = createCopy(COAL_ORE);
 		ANDESITE_LAPIS_ORE = createCopy(COAL_ORE);
@@ -3262,6 +3323,7 @@ public class DTBlocks {
 		BLACK_BASALT_COPPER_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_DIAMOND_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_EMERALD_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_GARNET_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_GOLD_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_IRON_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_LAPIS_ORE = createCopy(COAL_ORE);
@@ -3276,7 +3338,6 @@ public class DTBlocks {
 		BLUE_STORCERACK_AQUAMARINE_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_BLACK_OPAL_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_CLINOHUMITE_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_COAL_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_COPPER_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_DIAMOND_ORE = createCopy(COAL_ORE);
@@ -3300,6 +3361,7 @@ public class DTBlocks {
 		DIORITE_COPPER_ORE = createCopy(COAL_ORE);
 		DIORITE_DIAMOND_ORE = createCopy(COAL_ORE);
 		DIORITE_EMERALD_ORE = createCopy(COAL_ORE);
+		DIORITE_GARNET_ORE = createCopy(COAL_ORE);
 		DIORITE_GOLD_ORE = createCopy(COAL_ORE);
 		DIORITE_IRON_ORE = createCopy(COAL_ORE);
 		DIORITE_LAPIS_ORE = createCopy(COAL_ORE);
@@ -3319,6 +3381,7 @@ public class DTBlocks {
 		GRANITE_COPPER_ORE = createCopy(COAL_ORE);
 		GRANITE_DIAMOND_ORE = createCopy(COAL_ORE);
 		GRANITE_EMERALD_ORE = createCopy(COAL_ORE);
+		GRANITE_GARNET_ORE = createCopy(COAL_ORE);
 		GRANITE_GOLD_ORE = createCopy(COAL_ORE);
 		GRANITE_IRON_ORE = createCopy(COAL_ORE);
 		GRANITE_LAPIS_ORE = createCopy(COAL_ORE);
@@ -3333,7 +3396,6 @@ public class DTBlocks {
 		LIMESTONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
 		LIMESTONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
 		LIMESTONE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		LIMESTONE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
 		LIMESTONE_COAL_ORE = createCopy(COAL_ORE);
 		LIMESTONE_COPPER_ORE = createCopy(COAL_ORE);
 		LIMESTONE_DIAMOND_ORE = createCopy(COAL_ORE);
@@ -3352,7 +3414,6 @@ public class DTBlocks {
 		PINKINE_AQUAMARINE_ORE = createCopy(COAL_ORE);
 		PINKINE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
 		PINKINE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		PINKINE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
 		PINKINE_COAL_ORE = createCopy(COAL_ORE);
 		PINKINE_COPPER_ORE = createCopy(COAL_ORE);
 		PINKINE_DIAMOND_ORE = createCopy(COAL_ORE);
@@ -3367,6 +3428,47 @@ public class DTBlocks {
 		PINKINE_SPHENE_ORE = createCopy(COAL_ORE);
 		PINKINE_SPINEL_ORE = createCopy(COAL_ORE);
 		PINKINE_TANZANITE_ORE = createCopy(COAL_ORE);
+
+		AQUAMARINE_BLOCK = createCopy(IRON_BLOCK);
+		BLACK_OPAL_BLOCK = createCopy(IRON_BLOCK);
+		CHALCEDONY_BLOCK = createCopy(IRON_BLOCK);
+		DIOPSIDE_BLOCK = createCopy(IRON_BLOCK);
+		ENRON_BLOCK = createCopy(IRON_BLOCK);
+		ENSTATITE_BLOCK = createCopy(IRON_BLOCK);
+		GYLDELION_BLOCK = createCopy(IRON_BLOCK);
+		MORGANITE_BLOCK = createCopy(IRON_BLOCK);
+		OPAL_BLOCK = createCopy(IRON_BLOCK);
+		RUBY_BLOCK = createCopy(IRON_BLOCK);
+		SAPPHIRE_BLOCK = createCopy(IRON_BLOCK);
+		SUGILITE_BLOCK = createCopy(IRON_BLOCK);
+		SPHENE_BLOCK = createCopy(IRON_BLOCK);
+		SPINEL_BLOCK = createCopy(IRON_BLOCK);
+		TANZANITE_BLOCK = createCopy(IRON_BLOCK);
+		TOPAZ_BLOCK = createCopy(IRON_BLOCK);
+		VOID_CRITTERED_DIOPSIDE_BLOCK = createCopy(IRON_BLOCK);
+
+		CLINOHUMITE_BLOCK = createBlock(AmethystBlock::new, Settings.of(Material.AMETHYST, MapColor.PURPLE).strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
+		BUDDING_CLINOHUMITE = createBlock(BuddingAmethystBlock::new, Settings.of(Material.AMETHYST).ticksRandomly().strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
+		CLINOHUMITE_CLUSTER = createClusterAmethyst(Settings.of(Material.AMETHYST).nonOpaque().ticksRandomly().sounds(BlockSoundGroup.AMETHYST_CLUSTER).strength(1.5F).luminance(state -> 5));
+		LARGE_CLINOHUMITE_BUD = createLargeAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.MEDIUM_AMETHYST_BUD).luminance(state -> 4));
+		MEDIUM_CLINOHUMITE_BUD = createMediumAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.LARGE_AMETHYST_BUD).luminance(state -> 2));
+		SMALL_CLINOHUMITE_BUD = createSmallAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.SMALL_AMETHYST_BUD).luminance(state -> 1));
+
+		GARNET_BLOCK = createBlock(AmethystBlock::new, Settings.of(Material.AMETHYST, MapColor.PURPLE).strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
+		BUDDING_GARNET = createBlock(BuddingAmethystBlock::new, Settings.of(Material.AMETHYST).ticksRandomly().strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
+		GARNET_CLUSTER = createClusterAmethyst(Settings.of(Material.AMETHYST).nonOpaque().ticksRandomly().sounds(BlockSoundGroup.AMETHYST_CLUSTER).strength(1.5F).luminance(state -> 5));
+		LARGE_GARNET_BUD = createLargeAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.MEDIUM_AMETHYST_BUD).luminance(state -> 4));
+		MEDIUM_GARNET_BUD = createMediumAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.LARGE_AMETHYST_BUD).luminance(state -> 2));
+		SMALL_GARNET_BUD = createSmallAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.SMALL_AMETHYST_BUD).luminance(state -> 1));
+
+		RAW_ACTINIUM_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_BORON_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_ENRON_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_SILICON_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_SILVER_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_STROXITE_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_TUNGSTEN_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_URANOLUMEN_BLOCK = createCopy(RAW_IRON_BLOCK);
 
 		LIGHT_OPALITE = createCopy(QUARTZ_BLOCK);
 		LUSHINE = createCopy(STONE);
