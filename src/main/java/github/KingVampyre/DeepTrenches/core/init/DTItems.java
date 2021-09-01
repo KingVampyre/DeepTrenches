@@ -847,39 +847,22 @@ public class DTItems {
 
 		createBlockItem("deep_trenches:limestone_aquamarine_ore", LIMESTONE_AQUAMARINE_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_black_opal_ore", LIMESTONE_BLACK_OPAL_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_chalcedony_ore", LIMESTONE_CHALCEDONY_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_coal_ore", LIMESTONE_COAL_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_copper_ore", LIMESTONE_COPPER_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_diamond_ore", LIMESTONE_DIAMOND_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_emerald_ore", LIMESTONE_EMERALD_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_gold_ore", LIMESTONE_GOLD_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_iron_ore", LIMESTONE_IRON_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_lapis_ore", LIMESTONE_LAPIS_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_morganite_ore", LIMESTONE_MORGANITE_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_redstone_ore", LIMESTONE_REDSTONE_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_ruby_ore", LIMESTONE_RUBY_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_silver_ore", LIMESTONE_SILVER_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_sphene_ore", LIMESTONE_SPHENE_ORE, MISC);
 		createBlockItem("deep_trenches:limestone_spinel_ore", LIMESTONE_SPINEL_ORE, MISC);
-		createBlockItem("deep_trenches:limestone_tanzanite_ore", LIMESTONE_TANZANITE_ORE, MISC);
 
 		createBlockItem("deep_trenches:pinkine_aquamarine_ore", PINKINE_AQUAMARINE_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_black_opal_ore", PINKINE_BLACK_OPAL_ORE, MISC);
-		createBlockItem("deep_trenches:pinkine_chalcedony_ore", PINKINE_CHALCEDONY_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_coal_ore", PINKINE_COAL_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_copper_ore", PINKINE_COPPER_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_diamond_ore", PINKINE_DIAMOND_ORE, MISC);
-		createBlockItem("deep_trenches:pinkine_emerald_ore", PINKINE_EMERALD_ORE, MISC);
-		createBlockItem("deep_trenches:pinkine_gold_ore", PINKINE_GOLD_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_iron_ore", PINKINE_IRON_ORE, MISC);
-		createBlockItem("deep_trenches:pinkine_lapis_ore", PINKINE_LAPIS_ORE, MISC);
-		createBlockItem("deep_trenches:pinkine_morganite_ore", PINKINE_MORGANITE_ORE, MISC);
-		createBlockItem("deep_trenches:pinkine_redstone_ore", PINKINE_REDSTONE_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_ruby_ore", PINKINE_RUBY_ORE, MISC);
-		createBlockItem("deep_trenches:pinkine_silver_ore", PINKINE_SILVER_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_sphene_ore", PINKINE_SPHENE_ORE, MISC);
 		createBlockItem("deep_trenches:pinkine_spinel_ore", PINKINE_SPINEL_ORE, MISC);
-		createBlockItem("deep_trenches:pinkine_tanzanite_ore", PINKINE_TANZANITE_ORE, MISC);
 
 		createBlockItem("deep_trenches:aquamarine_block", AQUAMARINE_BLOCK, MISC);
 		createBlockItem("deep_trenches:black_opal_block", BLACK_OPAL_BLOCK, MISC);

@@ -21,9 +21,19 @@ import static net.minecraft.util.registry.Registry.BLOCK;
 
 public class DTBlocks {
 
+	/* ------------ BIOLUMINESCENT BLOCKS ------------ */
+	public static final Block BLACK_BIOLUMINESCENT_BLOCK;
+	public static final Block BROWN_BIOLUMINESCENT_BLOCK;
 	public static final Block CYAN_BIOLUMINESCENT_BLOCK;
 	public static final Block GREEN_BIOLUMINESCENT_BLOCK;
 	public static final Block LIGHT_BLUE_BIOLUMINESCENT_BLOCK;
+	public static final Block LIME_BIOLUMINESCENT_BLOCK;
+	public static final Block MAGENTA_BIOLUMINESCENT_BLOCK;
+	public static final Block ORANGE_BIOLUMINESCENT_BLOCK;
+	public static final Block PURPLE_BIOLUMINESCENT_BLOCK;
+	public static final Block RED_BIOLUMINESCENT_BLOCK;
+	public static final Block WHITE_BIOLUMINESCENT_BLOCK;
+	public static final Block YELLOW_BIOLUMINESCENT_BLOCK;
 
 	public static final Block NUCLEAR_BOMB;
 	public static final Block NUCLEAR_WASTE;
@@ -36,115 +46,104 @@ public class DTBlocks {
 	public static final Block MOSOIL;
 	public static final Block OPALITE;
 	public static final Block POININE;
-	public static final Block RHODONITE;
 	public static final Block SPRILIUM;
 	public static final Block SKYSOIL;
 	public static final Block SKYSTONE;
 	public static final Block STORCEAN_MARINE_SNOW;
-	public static final Block STORCENDITE;
-	public static final Block STORCERACK;
 	public static final Block VERDINE;
 
 	public static final Block AIRIAL_MOSS;
 	public static final Block BLACK_MARBLE;
-	public static final Block BLACK_BASALT;
-	public static final Block BLUE_STORCERACK;
 	public static final Block DRITEAN;
 	public static final Block ENROTIUM;
-	public static final Block INFINITAL_STONE;
-	public static final Block PINKINE;
 
-	public static final Block CHISELED_BLUE_STORCERACK;
-	public static final Block CHISELED_HADAL_STONE;
-	public static final Block CHISELED_INFINITAL_STONE;
-	public static final Block CHISELED_PINKINE;
+	public static final Block CHISELED_SILICON_BLOCK;
+	public static final Block CHISELED_SUGILITE_BLOCK;
+
+	public static final Block SULFUR_STONE;
+	public static final Block SULFUR_STONE_BRICKS;
+	public static final Block CHISELED_SULFUR_STONE_BRICKS;
+
+	public static final Block CRYOGENIC_ICE;
+	public static final Block CUT_KRALIUM;
+	public static final Block CUT_STROXITE;
+	public static final Block DIAMITE;
+	public static final Block FLINT_SHARDS;
+	public static final Block FLINT_STONE;
+	public static final Block POLISHED_FLINT_STONE;
+	public static final Block FOUR_LEAFED_CLOVER;
+	public static final Block FUR_PLATEAU;
+	public static final Block GRAY_MARBLE;
+	public static final Block GRAY_SHAG_MUSHROOM;
+
+	public static final Block POLISHED_SULFUR_STONE;
+	public static final Block POMEGRANATE_BUSH;
+	public static final Block PUFFBALL_MUSHROOM;
+
+	public static final Block ACTINIUM_BLOCK;
+	public static final Block ACTINIUM_CORE_KRALCTIUM_BLOCK;
+	public static final Block ACTINIUM_ORE;
+	public static final Block BLACK_ICE;
+	public static final Block BLACK_OPAL_CRYSTALS;
+	public static final Block BLACK_OPALITE;
+	public static final Block BLACK_PEARL_BLOCK;
+	public static final Block GREEN_ICE;
+	public static final Block ILMIUM;
+	public static final Block ILYINE;
+	public static final Block INKY_CAP_MUSHROOM;
+	public static final Block JUNGLE_UMBRELLA;
+	public static final Block KRALIUM_BLOCK;
+	public static final Block KRALIUM_DEBRIS;
+
 	public static final Block CHISELED_SILVER_BLOCK;
-	public static final Block CHISELED_STORCENDITE;
-	public static final Block CHISELED_STORCERACK;
-	public static final Block CHISELED_VIRDAL_STONE;
-	public static final Block CHISELED_WAVEITE;
+	public static final Block CUT_BORON_BLOCK;
 
-	public static final Block CRACKED_BLUE_STORCERACK_BRICKS;
-	public static final Block CRACKED_BLUE_STORCERACK_TILES;
-	public static final Block CRACKED_HADAL_STONE_BRICKS;
-	public static final Block CRACKED_HADAL_STONE_TILES;
-	public static final Block CRACKED_INFINITAL_STONE_BRICKS;
-	public static final Block CRACKED_INFINITAL_STONE_TILES;
-	public static final Block CRACKED_LIMESTONE_BRICKS;
-	public static final Block CRACKED_LIMESTONE_TILES;
-	public static final Block CRACKED_PINKINE_BRICKS;
-	public static final Block CRACKED_PINKINE_TILES;
-	public static final Block CRACKED_STORCENDITE_BRICKS;
-	public static final Block CRACKED_STORCENDITE_TILES;
-	public static final Block CRACKED_STORCERACK_BRICKS;
-	public static final Block CRACKED_STORCERACK_TILES;
-	public static final Block CRACKED_VIRDAL_STONE_BRICKS;
-	public static final Block CRACKED_VIRDAL_STONE_TILES;
-	public static final Block CRACKED_WAVEITE_BRICKS;
-	public static final Block CRACKED_WAVEITE_TILES;
-
-	public static final Block POLISHED_BLUE_STORCERACK;
-	public static final Block POLISHED_HADAL_STONE;
-	public static final Block POLISHED_INFINITAL_STONE;
-	public static final Block POLISHED_STORCENDITE;
-	public static final Block POLISHED_STORCERACK;
-	public static final Block POLISHED_VIDAL_STONE;
-	public static final Block POLISHED_WAVEITE;
-	public static final Block POLISHED_PINKINE;
-
-	public static final Block SMOOTH_BASALT_CHALCEDONY_ORE;
-	public static final Block SMOOTH_BASALT_CLINOHUMITE_ORE;
-	public static final Block SMOOTH_BASALT_DIAMOND_ORE;
-	public static final Block SMOOTH_BASALT_GOLD_ORE;
-
+	public static final Block BEDROCK_BRICKS;
 	public static final Block BEDROCK_PILLAR;
+	public static final Block CHISELED_BEDROCK;
 	public static final Block WAVED_BEDROCK;
 
-	public static final Block CUT_BORON_BLOCK;
-	public static final Block END_STONE_DIOPSIDE_ORE;
-	public static final Block END_STONE_SPINEL_ORE;
-	public static final Block END_STONE_VOID_CRITTERED_DIOPSIDE_ORE;
+	public static final Block GARNET_BLOCK;
+	public static final Block GARNET_BRICKS;
+	public static final Block GARNET_PILLAR;
+	public static final Block CHISELED_GARNET_BLOCK;
+	public static final Block TOTEM_CHISELED_GARNET;
 
-	public static final Block FLINT_STONE_SILICON_ORE;
-	public static final Block FLINT_STONE_URANOLUMEN_ORE;
+	public static final Block LEKRAL_CORAL;
+	public static final Block LEKRALITE_BLOCK;
+	public static final Block LEKRALITE_CRYSTALS;
+	public static final Block LEKRALITE_ORE;
+	public static final Block LICHEN;
+	public static final Block LIGHTNING_DISPENSER;
+	public static final Block LIMEFORK;
+	public static final Block MOSS;
+	public static final Block MOSSES;
+	public static final Block RINGWOODITE;
+	public static final Block RINGWOODITE_SAPPHIRE_ORE;
+	public static final Block RUBY_EMBED_RHODONITE;
+	public static final Block SAPPHRITE;
+	public static final Block SEA_BUCKTHORN;
+	public static final Block SHELF_MUSHROOM;
+	public static final Block SKACUR_CORAL_BLOCK;
+	public static final Block SNS;
+	public static final Block STATIC_LIGHTNING_ROD;
+	public static final Block STORCEAN_SAPPHIRE;
+	public static final Block STORCEAN_SILICON;
+	public static final Block STORCEAN_SNOW;
+	public static final Block STORCEAN_TUNGSTEN;
+	public static final Block SULFUR;
+	public static final Block SUS;
+	public static final Block TALL_BUCKTHORN;
+	public static final Block THREE_LEAFED_CLOVER;
+	public static final Block TWISTED_BLUE_STORCERACK_BALL;
+	public static final Block TWISTTRAP;
+	public static final Block WHITE_MUSHROOM;
 
-	public static final Block GRAY_MARBLE_DIAMOND_ORE;
-	public static final Block MARBLE_DIAMOND_ORE;
-	public static final Block NETHERRACK_BORON_ORE;
-	public static final Block LUSTRED_WAVEITE_TANZANITE_ORE;
+	public static final Block POINTED_LIGHT_OPALITE;
+	public static final Block POINTED_SKYSTONE;
 
-	public static final Block INFINITAL_STONE_BRICKS;
-	public static final Block INFINITAL_STONE_PILLAR;
-	public static final Block INFINITAL_STONE_TILES;
-
-	public static final Block HADAL_STONE_BRICKS;
-	public static final Block HADAL_STONE_PILLAR;
-	public static final Block HADAL_STONE_TILES;
-
-	public static final Block LIMESTONE_BRICKS;
-	public static final Block LIMESTONE_PILLAR;
-	public static final Block LIMESTONE_TILES;
-
-	public static final Block PINKINE_BRICKS;
-	public static final Block PINKINE_PILLAR;
-	public static final Block PINKINE_TILES;
-
-	public static final Block STORCENDITE_BRICKS;
-	public static final Block STORCENDITE_PILLAR;
-	public static final Block STORCENDITE_TILES;
-
-	public static final Block STORCERACK_BRICKS;
-	public static final Block STORCERACK_PILLAR;
-	public static final Block STORCERACK_TILES;
-
-	public static final Block VIRDAL_BRICKS;
-	public static final Block VIRDAL_PILLAR;
-	public static final Block VIRDAL_TILES;
-
-	public static final Block WAVEITE_BRICKS;
-	public static final Block WAVEITE_PILLAR;
-	public static final Block WAVEITE_TILES;
-
+	/* ------------------- BLOCKS ------------------- */
+	public static final Block BLACK_BASALT;
 	public static final Block BLACK_BASALT_BRICKS;
 	public static final Block BLACK_BASALT_PILLAR;
 	public static final Block BLACK_BASALT_TILES;
@@ -153,10 +152,93 @@ public class DTBlocks {
 	public static final Block CRACKED_BLACK_BASALT_TILES;
 	public static final Block POLISHED_BLACK_BASALT_PILLAR;
 
-	public static final Block GARNET_BRICKS;
-	public static final Block GARNET_PILLAR;
-	public static final Block TOTEM_CHISELED_GARNET;
+	public static final Block BLUE_STORCERACK;
+	public static final Block CHISELED_BLUE_STORCERACK;
+	public static final Block CRACKED_BLUE_STORCERACK_BRICKS;
+	public static final Block CRACKED_BLUE_STORCERACK_TILES;
+	public static final Block POLISHED_BLUE_STORCERACK;
 
+	public static final Block HADAL_STONE;
+	public static final Block HADAL_STONE_BRICKS;
+	public static final Block HADAL_STONE_PILLAR;
+	public static final Block HADAL_STONE_TILES;
+	public static final Block CHISELED_HADAL_STONE;
+	public static final Block CRACKED_HADAL_STONE_BRICKS;
+	public static final Block CRACKED_HADAL_STONE_TILES;
+	public static final Block POLISHED_HADAL_STONE;
+
+	public static final Block INFINITAL_STONE;
+	public static final Block INFINITAL_STONE_BRICKS;
+	public static final Block INFINITAL_STONE_PILLAR;
+	public static final Block INFINITAL_STONE_TILES;
+	public static final Block CHISELED_INFINITAL_STONE;
+	public static final Block CRACKED_INFINITAL_STONE_BRICKS;
+	public static final Block CRACKED_INFINITAL_STONE_TILES;
+	public static final Block POLISHED_INFINITAL_STONE;
+
+	public static final Block PINKINE;
+	public static final Block PINKINE_BRICKS;
+	public static final Block PINKINE_PILLAR;
+	public static final Block PINKINE_TILES;
+	public static final Block CHISELED_PINKINE;
+	public static final Block CRACKED_PINKINE_BRICKS;
+	public static final Block CRACKED_PINKINE_TILES;
+	public static final Block POLISHED_PINKINE;
+
+	public static final Block LIMESTONE;
+	public static final Block LIMESTONE_BRICKS;
+	public static final Block LIMESTONE_PILLAR;
+	public static final Block LIMESTONE_TILES;
+	public static final Block CHISELED_LIMESTON;
+	public static final Block CRACKED_LIMESTONE_BRICKS;
+	public static final Block CRACKED_LIMESTONE_TILES;
+	public static final Block POLISHED_LIMESTONE;
+
+	public static final Block RHODONITE;
+	public static final Block RHODONITE_BRICKS;
+	public static final Block RHODONITE_PILLAR;
+	public static final Block CHISELED_RHODONITE_BLOCK;
+	public static final Block CHISELED_RHODONITE_BRICKS;
+	public static final Block EMBED_RHODONITE;
+	public static final Block POLISHED_RHODONITE;
+
+	public static final Block STORCENDITE;
+	public static final Block STORCENDITE_BRICKS;
+	public static final Block STORCENDITE_PILLAR;
+	public static final Block STORCENDITE_TILES;
+	public static final Block CHISELED_STORCENDITE;
+	public static final Block CRACKED_STORCENDITE_BRICKS;
+	public static final Block CRACKED_STORCENDITE_TILES;
+	public static final Block POLISHED_STORCENDITE;
+
+	public static final Block STORCERACK;
+	public static final Block STORCERACK_BRICKS;
+	public static final Block STORCERACK_PILLAR;
+	public static final Block STORCERACK_TILES;
+	public static final Block CHISELED_STORCERACK;
+	public static final Block CRACKED_STORCERACK_BRICKS;
+	public static final Block CRACKED_STORCERACK_TILES;
+	public static final Block POLISHED_STORCERACK;
+
+	public static final Block VIRDAL_STONE;
+	public static final Block VIRDAL_BRICKS;
+	public static final Block VIRDAL_PILLAR;
+	public static final Block VIRDAL_TILES;
+	public static final Block CHISELED_VIRDAL_STONE;
+	public static final Block CRACKED_VIRDAL_STONE_BRICKS;
+	public static final Block CRACKED_VIRDAL_STONE_TILES;
+	public static final Block POLISHED_VIDAL_STONE;
+
+	public static final Block WAVEITE;
+	public static final Block WAVEITE_BRICKS;
+	public static final Block WAVEITE_PILLAR;
+	public static final Block WAVEITE_TILES;
+	public static final Block CHISELED_WAVEITE;
+	public static final Block CRACKED_WAVEITE_BRICKS;
+	public static final Block CRACKED_WAVEITE_TILES;
+	public static final Block POLISHED_WAVEITE;
+
+	/* ------------------- ORES ------------------- */
 	public static final Block ANDESITE_AQUAMARINE_ORE;
 	public static final Block ANDESITE_BLACK_OPAL_ORE;
 	public static final Block ANDESITE_CHALCEDONY_ORE;
@@ -222,7 +304,9 @@ public class DTBlocks {
 	public static final Block BLUE_STORCERACK_SILVER_ORE;
 	public static final Block BLUE_STORCERACK_SPHENE_ORE;
 	public static final Block BLUE_STORCERACK_SPINEL_ORE;
+	public static final Block BLUE_STORCERACK_STROXITE_ORE;
 	public static final Block BLUE_STORCERACK_TANZANITE_ORE;
+	public static final Block BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE;
 
 	public static final Block CALCITE_CHALCEDONY_ORE;
 	public static final Block CALCITE_CLINOHUMITE_ORE;
@@ -238,6 +322,7 @@ public class DTBlocks {
 	public static final Block DEEPSLATE_MORGANITE_ORE;
 	public static final Block DEEPSLATE_OPAL_ORE;
 	public static final Block DEEPSLATE_RUBY_ORE;
+	public static final Block DEEPSLATE_SAPPHIRE_ORE;
 	public static final Block DEEPSLATE_SILVER_ORE;
 	public static final Block DEEPSLATE_SPHENE_ORE;
 	public static final Block DEEPSLATE_SPINEL_ORE;
@@ -265,6 +350,15 @@ public class DTBlocks {
 	public static final Block DIORITE_SPINEL_ORE;
 	public static final Block DIORITE_TANZANITE_ORE;
 	public static final Block DIORITE_TOPAZ_ORE;
+
+	public static final Block END_STONE_DIOPSIDE_ORE;
+	public static final Block END_STONE_SPINEL_ORE;
+	public static final Block END_STONE_VOID_CRITTERED_DIOPSIDE_ORE;
+
+	public static final Block FLINT_STONE_SILICON_ORE;
+	public static final Block FLINT_STONE_URANOLUMEN_ORE;
+
+	public static final Block GRAY_MARBLE_DIAMOND_ORE;
 
 	public static final Block GRANITE_AQUAMARINE_ORE;
 	public static final Block GRANITE_BLACK_OPAL_ORE;
@@ -301,6 +395,7 @@ public class DTBlocks {
 	public static final Block HADAL_STONE_MORGANITE_ORE;
 	public static final Block HADAL_STONE_REDSTONE_ORE;
 	public static final Block HADAL_STONE_RUBY_ORE;
+	public static final Block HADAL_STONE_SAPPHIRE_ORE;
 	public static final Block HADAL_STONE_SILVER_ORE;
 	public static final Block HADAL_STONE_SPHENE_ORE;
 	public static final Block HADAL_STONE_SPINEL_ORE;
@@ -336,6 +431,15 @@ public class DTBlocks {
 	public static final Block LIMESTONE_SPINEL_ORE;
 	public static final Block LIMESTONE_SUGILITE_ORE;
 
+	public static final Block LUSTRED_WAVEITE;
+	public static final Block LUSTRED_WAVEITE_SAPPHIRE_ORE;
+	public static final Block LUSTRED_WAVEITE_TANZANITE_ORE;
+
+	public static final Block MARBLE_DIAMOND_ORE;
+
+	public static final Block NETHERRACK_BORON_ORE;
+	public static final Block NETHERRACK_CLINOHUMITE_ORE;
+
 	public static final Block PINKINE_AQUAMARINE_ORE;
 	public static final Block PINKINE_BLACK_OPAL_ORE;
 	public static final Block PINKINE_COAL_ORE;
@@ -354,6 +458,13 @@ public class DTBlocks {
 	public static final Block PINKINE_URANIUM_ORE;
 	public static final Block PINKINE_URANOLUMEN_ORE;
 	public static final Block PINKINE_VOID_CRITTERED_DIOPSIDE_ORE;
+
+	public static final Block SKYSTONE_OPAL_ORE;
+
+	public static final Block SMOOTH_BASALT_CHALCEDONY_ORE;
+	public static final Block SMOOTH_BASALT_CLINOHUMITE_ORE;
+	public static final Block SMOOTH_BASALT_DIAMOND_ORE;
+	public static final Block SMOOTH_BASALT_GOLD_ORE;
 
 	public static final Block STORCENDITE_AQUAMARINE_ORE;
 	public static final Block STORCENDITE_BLACK_OPAL_ORE;
@@ -388,6 +499,7 @@ public class DTBlocks {
 	public static final Block STORCERACK_SPINEL_ORE;
 	public static final Block STORCERACK_SUGILITE_ORE;
 	public static final Block STORCERACK_TUNGSTEN_ORE;
+	public static final Block STORCERACK_URANOLUMEN_ORE;
 
 	public static final Block SULFUR_STONE_CHALCEDONY_ORE;
 	public static final Block SULFUR_STONE_CLINOHUMITE_ORE;
@@ -442,16 +554,12 @@ public class DTBlocks {
 	public static final Block WAVEITE_TANZANITE_ORE;
 	public static final Block WAVEITE_TOPAZ_ORE;
 
-	public static final Block CLINOHUMITE_ORE;
-	public static final Block STONE_CLINOHUMITE_ORE;
-
 	public static final Block AQUAMARINE_ORE;
 	public static final Block BLACK_OPAL_ORE;
-	public static final Block CHALCEDONY_ORE;
+	public static final Block CLINOHUMITE_ORE;
 	public static final Block ENSTATITE_ORE;
 	public static final Block MORGANITE_ORE;
 	public static final Block OPAL_ORE;
-	public static final Block OPAL_SKYSTONE_ORE;
 	public static final Block RUBY_ORE;
 	public static final Block SAPPHIRE_ORE;
 	public static final Block SUGILITE_ORE;
@@ -460,6 +568,18 @@ public class DTBlocks {
 	public static final Block TANZANITE_ORE;
 	public static final Block TOPAZ_ORE;
 
+	/* -------------- RAW BLOCKS -------------- */
+	public static final Block RAW_ACTINIUM_BLOCK;
+	public static final Block RAW_BORON_BLOCK;
+	public static final Block RAW_ENRON_BLOCK;
+	public static final Block RAW_SILICON_BLOCK;
+	public static final Block RAW_SILVER_BLOCK;
+	public static final Block RAW_STROXITE_BLOCK;
+	public static final Block CHARGED_RAW_TUNGSTEN_BLOCK;
+	public static final Block RAW_TUNGSTEN_BLOCK;
+	public static final Block RAW_URANOLUMEN_BLOCK;
+
+	/* ------------- ORE BLOCKS ------------- */
 	public static final Block AQUAMARINE_BLOCK;
 	public static final Block BLACK_OPAL_BLOCK;
 	public static final Block CHALCEDONY_BLOCK;
@@ -474,12 +594,16 @@ public class DTBlocks {
 	public static final Block SUGILITE_BLOCK;
 	public static final Block SPHENE_BLOCK;
 	public static final Block SPINEL_BLOCK;
+	public static final Block STROXITE_BLOCK;
 	public static final Block TANZANITE_BLOCK;
 	public static final Block TOPAZ_BLOCK;
+	public static final Block CHARGED_TUNGSTEN_BLOCK;
+	public static final Block TUNGSTEN_BLOCK;
 	public static final Block URANIUM_BLOCK;
 	public static final Block URANIUM_POWDER_BLOCK;
 	public static final Block VOID_CRITTERED_DIOPSIDE_BLOCK;
 
+	/* -------------- CRYSTALS -------------- */
 	public static final Block CLINOHUMITE_BLOCK;
 	public static final Block BUDDING_CLINOHUMITE;
 	public static final Block CLINOHUMITE_CLUSTER;
@@ -494,16 +618,7 @@ public class DTBlocks {
 	public static final Block MEDIUM_GARNET_BUD;
 	public static final Block SMALL_GARNET_BUD;
 
-	public static final Block RAW_ACTINIUM_BLOCK;
-	public static final Block RAW_BORON_BLOCK;
-	public static final Block RAW_ENRON_BLOCK;
-	public static final Block RAW_SILICON_BLOCK;
-	public static final Block RAW_SILVER_BLOCK;
-	public static final Block RAW_STROXITE_BLOCK;
-	public static final Block CHARGED_RAW_TUNGSTEN_BLOCK;
-	public static final Block RAW_TUNGSTEN_BLOCK;
-	public static final Block RAW_URANOLUMEN_BLOCK;
-
+	/* -------------- FLOWERS -------------- */
 	public static final Block BLACK_PANSY;
 	public static final Block BLUE_PANSY;
 	public static final Block BLUE_POPPY;
@@ -517,7 +632,6 @@ public class DTBlocks {
 	public static final Block GREEN_PANSY;
 	public static final Block GYLDELION_FLOWER;
 	public static final Block MARSH_VIOLET;
-	public static final Block MURKSTEM;
 	public static final Block NATIVE_VIOLET;
 	public static final Block OPIUM_POPPY;
 	public static final Block PINK_AND_ORANGE_PANSY;
@@ -551,6 +665,7 @@ public class DTBlocks {
 	public static final Block BULLTHORN;
 	public static final Block CACTLOW;
 	public static final Block CLAWBULB;
+	public static final Block MURKSTEM;
 	public static final Block LIME_SPURGE;
 	public static final Block LUPIN_FLOWER;
 	public static final Block ORANGE_LILY;
@@ -560,6 +675,7 @@ public class DTBlocks {
 	public static final Block VELVET_LILY;
 
 	public static final Block AIRIAL_BUSH;
+	public static final Block BUCKTHORN;
 	public static final Block HARSHLES;
 	public static final Block REEBLOON;
 	public static final Block SQUISH_TIPS;
@@ -571,6 +687,7 @@ public class DTBlocks {
 	public static final Block GIANT_VIOLET_PETAL;
 	public static final Block GIANT_VIOLET_PISTIL;
 
+	/* ----------------- FLUIDS ----------------- */
 	public static final Block ABYSSOPELAGIC_WATER;
 	public static final Block ACID;
 	public static final Block BATHYPELAGIC_WATER;
@@ -588,6 +705,7 @@ public class DTBlocks {
 	public static final Block STORCEAN_VIRDIPELAGIC_WATER;
 	public static final Block STORCEAN_WATER;
 
+	/* ---------------------- CORALS ---------------------- */
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL;
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL_BLOCK;
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL_FAN;
@@ -3678,39 +3796,22 @@ public class DTBlocks {
 
 		LIMESTONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
 		LIMESTONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		LIMESTONE_CHALCEDONY_ORE = createCopy(COAL_ORE);
 		LIMESTONE_COAL_ORE = createCopy(COAL_ORE);
 		LIMESTONE_COPPER_ORE = createCopy(COAL_ORE);
 		LIMESTONE_DIAMOND_ORE = createCopy(COAL_ORE);
-		LIMESTONE_EMERALD_ORE = createCopy(COAL_ORE);
-		LIMESTONE_GOLD_ORE = createCopy(COAL_ORE);
 		LIMESTONE_IRON_ORE = createCopy(COAL_ORE);
-		LIMESTONE_LAPIS_ORE = createCopy(COAL_ORE);
-		LIMESTONE_MORGANITE_ORE = createCopy(COAL_ORE);
-		LIMESTONE_REDSTONE_ORE = createCopy(COAL_ORE);
-		LIMESTONE_RUBY_ORE = createCopy(COAL_ORE);
-		LIMESTONE_SILVER_ORE = createCopy(COAL_ORE);
 		LIMESTONE_SPHENE_ORE = createCopy(COAL_ORE);
 		LIMESTONE_SPINEL_ORE = createCopy(COAL_ORE);
-		LIMESTONE_TANZANITE_ORE = createCopy(COAL_ORE);
 
 		PINKINE_AQUAMARINE_ORE = createCopy(COAL_ORE);
 		PINKINE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		PINKINE_CHALCEDONY_ORE = createCopy(COAL_ORE);
 		PINKINE_COAL_ORE = createCopy(COAL_ORE);
 		PINKINE_COPPER_ORE = createCopy(COAL_ORE);
 		PINKINE_DIAMOND_ORE = createCopy(COAL_ORE);
-		PINKINE_EMERALD_ORE = createCopy(COAL_ORE);
-		PINKINE_GOLD_ORE = createCopy(COAL_ORE);
 		PINKINE_IRON_ORE = createCopy(COAL_ORE);
-		PINKINE_LAPIS_ORE = createCopy(COAL_ORE);
-		PINKINE_MORGANITE_ORE = createCopy(COAL_ORE);
-		PINKINE_REDSTONE_ORE = createCopy(COAL_ORE);
 		PINKINE_RUBY_ORE = createCopy(COAL_ORE);
-		PINKINE_SILVER_ORE = createCopy(COAL_ORE);
 		PINKINE_SPHENE_ORE = createCopy(COAL_ORE);
 		PINKINE_SPINEL_ORE = createCopy(COAL_ORE);
-		PINKINE_TANZANITE_ORE = createCopy(COAL_ORE);
 
 		AQUAMARINE_BLOCK = createCopy(IRON_BLOCK);
 		BLACK_OPAL_BLOCK = createCopy(IRON_BLOCK);
@@ -4172,39 +4273,22 @@ public class DTBlocks {
 
 		Registry.register(BLOCK, "deep_trenches:limestone_aquamarine_ore", LIMESTONE_AQUAMARINE_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_black_opal_ore", LIMESTONE_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_chalcedony_ore", LIMESTONE_CHALCEDONY_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_coal_ore", LIMESTONE_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_copper_ore", LIMESTONE_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_diamond_ore", LIMESTONE_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_emerald_ore", LIMESTONE_EMERALD_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_gold_ore", LIMESTONE_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_iron_ore", LIMESTONE_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_lapis_ore", LIMESTONE_LAPIS_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_morganite_ore", LIMESTONE_MORGANITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_redstone_ore", LIMESTONE_REDSTONE_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_ruby_ore", LIMESTONE_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_silver_ore", LIMESTONE_SILVER_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_sphene_ore", LIMESTONE_SPHENE_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_spinel_ore", LIMESTONE_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_tanzanite_ore", LIMESTONE_TANZANITE_ORE);
 
 		Registry.register(BLOCK, "deep_trenches:pinkine_aquamarine_ore", PINKINE_AQUAMARINE_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_black_opal_ore", PINKINE_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_chalcedony_ore", PINKINE_CHALCEDONY_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_coal_ore", PINKINE_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_copper_ore", PINKINE_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_diamond_ore", PINKINE_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_emerald_ore", PINKINE_EMERALD_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_gold_ore", PINKINE_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_iron_ore", PINKINE_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_lapis_ore", PINKINE_LAPIS_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_morganite_ore", PINKINE_MORGANITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_redstone_ore", PINKINE_REDSTONE_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_ruby_ore", PINKINE_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_silver_ore", PINKINE_SILVER_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_sphene_ore", PINKINE_SPHENE_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_spinel_ore", PINKINE_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_tanzanite_ore", PINKINE_TANZANITE_ORE);
 
 		Registry.register(BLOCK, "deep_trenches:aquamarine_block", AQUAMARINE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:black_opal_block", BLACK_OPAL_BLOCK);
