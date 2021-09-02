@@ -1,16 +1,7 @@
 {
-	"variants": {
-		"axis=y": {
-			"model": "deep_trenches:block/lushine_pillar"
-		},
-		"axis=z": {
-			"model": "deep_trenches:block/lushine_pillar",
-			"x": 90
-		},
-		"axis=x": {
-			"model": "deep_trenches:block/lushine_pillar",
-			"x": 90,
-			"y": 90
-		}
-	}
+    "variants": {
+        "": {
+            "model": "deep_trenches:block/lushine_pillar"
+        }
+    }
 }

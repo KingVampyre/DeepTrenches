@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/waveite_gold_ore"
+    }
+}

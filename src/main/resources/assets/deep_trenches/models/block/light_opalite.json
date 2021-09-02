@@ -1,6 +1,6 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "deep_trenches:block/light_opalite"
-	}
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/light_opalite"
+    }
 }

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "deep_trenches:block/infinital_stone_spinel_ore"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "deep_trenches:block/charged_tungsten_block"
+        }
+    }
+}

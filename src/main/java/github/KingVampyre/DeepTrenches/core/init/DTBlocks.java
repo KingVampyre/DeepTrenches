@@ -21,7 +21,7 @@ import static net.minecraft.util.registry.Registry.BLOCK;
 
 public class DTBlocks {
 
-	/* ------------ BIOLUMINESCENT BLOCKS ------------ */
+	/* BIOLUMINESCENT BLOCKS */
 	public static final Block BLACK_BIOLUMINESCENT_BLOCK;
 	public static final Block BROWN_BIOLUMINESCENT_BLOCK;
 	public static final Block CYAN_BIOLUMINESCENT_BLOCK;
@@ -35,28 +35,28 @@ public class DTBlocks {
 	public static final Block WHITE_BIOLUMINESCENT_BLOCK;
 	public static final Block YELLOW_BIOLUMINESCENT_BLOCK;
 
-	/* --------------- REDSTONE --------------- */
+	/* REDSTONE */
 	public static final Block KRALCTIUM_MICROFLARE;
 	public static final Block LIGHTNING_DISPENSER;
 	public static final Block STATIC_LIGHTNING_ROD;
 
-	/* -------- EXPLOSIVE BLOCKS -------- */
+	/* EXPLOSIVE BLOCKS */
 	public static final Block NUCLEAR_BOMB;
 	public static final Block NUCLEAR_WASTE;
 	public static final Block SNS;
 	public static final Block SUS;
 
-	/* ------------ ICE BLOCKS ------------ */
+	/* ICE BLOCKS */
 	public static final Block CRYOGENIC_ICE;
 	public static final Block BLACK_ICE;
 	public static final Block GREEN_ICE;
 	public static final Block MARINE_SNOW;
 	public static final Block STORCEAN_MARINE_SNOW;
 
-	/* ------- BLOCK ENTITIES ------- */
+	/* BLOCK ENTITIES */
 	public static final Block STASP_NEST;
 
-	/* --------- OTHER STONES --------- */
+	/* OTHER STONES */
 	public static final Block BLACK_MARBLE;
 	public static final Block BLACK_OPALITE;
 	public static final Block GRAY_MARBLE;
@@ -72,7 +72,7 @@ public class DTBlocks {
 	public static final Block VERDINE;
 	public static final Block WAVED_BEDROCK;
 
-	/* -------------- STONES -------------- */
+	/* STONES */
 	public static final Block BLACK_BASALT;
 	public static final Block BLACK_BASALT_BRICKS;
 	public static final Block BLACK_BASALT_PILLAR;
@@ -186,7 +186,7 @@ public class DTBlocks {
 	public static final Block CRACKED_WAVEITE_TILES;
 	public static final Block POLISHED_WAVEITE;
 
-	/* ------------------- ORES ------------------- */
+	/* ORES */
 	public static final Block ANDESITE_AQUAMARINE_ORE;
 	public static final Block ANDESITE_BLACK_OPAL_ORE;
 	public static final Block ANDESITE_CHALCEDONY_ORE;
@@ -524,7 +524,7 @@ public class DTBlocks {
 	public static final Block TANZANITE_ORE;
 	public static final Block TOPAZ_ORE;
 
-	/* -------------- RAW BLOCKS -------------- */
+	/* RAW BLOCKS */
 	public static final Block RAW_ACTINIUM_BLOCK;
 	public static final Block RAW_BORON_BLOCK;
 	public static final Block RAW_ENRON_BLOCK;
@@ -536,7 +536,7 @@ public class DTBlocks {
 	public static final Block RAW_TUNGSTEN_BLOCK;
 	public static final Block RAW_URANOLUMEN_BLOCK;
 
-	/* ----------- MINERAL BLOCKS ----------- */
+	/* MINERAL BLOCKS */
 	public static final Block ACTINIUM_BLOCK;
 	public static final Block AQUAMARINE_BLOCK;
 	public static final Block BLACK_PEARL_BLOCK;
@@ -566,12 +566,12 @@ public class DTBlocks {
 	public static final Block URANIUM_POWDER_BLOCK;
 	public static final Block VOID_CRITTERED_DIOPSIDE_BLOCK;
 
-	/* --------- CHISELED MINERAL BLOCKS --------- */
+	/* CHISELED MINERAL BLOCKS */
 	public static final Block CHISELED_SILICON_BLOCK;
 	public static final Block CHISELED_SILVER_BLOCK;
 	public static final Block CHISELED_SUGILITE_BLOCK;
 
-	/* -------------- CRYSTALS -------------- */
+	/* CRYSTALS */
 	public static final Block LEKRALITE_CRYSTALS;
 
 	public static final Block BLACK_OPAL_BLOCK;
@@ -621,21 +621,21 @@ public class DTBlocks {
 	public static final Block SUGILITE_CLUSTER;
 	public static final Block LARGE_SUGILITE_BUD;
 	public static final Block MEDIUM_SUGILITE_BUD;
-	public static final Block SUGILITE_GARNET_BUD;
+	public static final Block SMALL_SUGILITE_BUD;
 
-	/* ------------- POINTED STONES ------------- */
+	/* POINTED STONES */
 	public static final Block POINTED_LIGHT_OPALITE;
 	public static final Block POINTED_SKYSTONE;
 	public static final Block TWISTED_BLUE_STORCERACK;
 
-	/* --------- SURFACE BLOCKS --------- */
+	/* SURFACE BLOCKS */
 	public static final Block DRITEAN;
 	public static final Block ENROTIUM;
 	public static final Block SPRILIUM;
 	public static final Block SKYSOIL;
 	public static final Block MOSOIL;
 
-	/* -------------- FLOWERS -------------- */
+	/* FLOWERS */
 	public static final Block BLACK_PANSY;
 	public static final Block BLUE_PANSY;
 	public static final Block BLUE_POPPY;
@@ -664,7 +664,6 @@ public class DTBlocks {
 	public static final Block RED_PANSY;
 	public static final Block RED_ROSE;
 	public static final Block RUBRA_BLUE_VIOLET;
-	public static final Block SKALK;
 	public static final Block SPIDREET;
 	public static final Block SPIKE_LAVENDER;
 	public static final Block SPRIDELION;
@@ -680,12 +679,11 @@ public class DTBlocks {
 	public static final Block WILD_PANSY;
 	public static final Block YELLOW_VIOLET;
 
-	/* ---------- TALL FLOWERS ---------- */
+	/* TALL FLOWERS */
 	public static final Block BLACK_LILY;
 	public static final Block BULLTHORN;
 	public static final Block CACTLOW;
 	public static final Block CLAWBULB;
-	public static final Block MURKSTEM;
 	public static final Block LIME_SPURGE;
 	public static final Block LUPIN_FLOWER;
 	public static final Block ORANGE_LILY;
@@ -695,12 +693,12 @@ public class DTBlocks {
 	public static final Block TALL_BUCKTHORN;
 	public static final Block VELVET_LILY;
 
-	/* ---------- MOSSES ---------- */
+	/* MOSSES */
 	public static final Block AIRIAL_MOSS;
 	public static final Block ILMIUM;
 	public static final Block MOSS;
 
-	/* ---------- PLANTS ---------- */
+	/* PLANTS */
 	public static final Block AIRIAL_BUSH;
 	public static final Block BUCKTHORN;
 	public static final Block FOUR_LEAFED_CLOVER;
@@ -710,25 +708,28 @@ public class DTBlocks {
 	public static final Block JUNGLE_UMBRELLA;
 	public static final Block LICHEN;
 	public static final Block MOSSES;
+	public static final Block MURKSTEM;
 	public static final Block POMEGRANATE_BUSH;
 	public static final Block REEBLOON;
 	public static final Block SEA_BUCKTHORN;
+	public static final Block SKALK;
 	public static final Block SQUISH_TIPS;
 	public static final Block THREE_LEAFED_CLOVER;
 
-	/* ------------ MUSHROOMS ------------ */
+	/* MUSHROOMS */
 	public static final Block GRAY_SHAG_MUSHROOM;
 	public static final Block INKY_CAP_MUSHROOM;
 	public static final Block PUFFBALL_MUSHROOM;
 	public static final Block SHELF_MUSHROOM;
 	public static final Block WHITE_MUSHROOM;
 
+	/* GIANT VIOLET */
 	public static final Block GIANT_VIOLET;
 	public static final Block GIANT_VIOLET_LEAF;
 	public static final Block GIANT_VIOLET_PETAL;
 	public static final Block GIANT_VIOLET_PISTIL;
 
-	/* ----------------- FLUIDS ----------------- */
+	/* FLUIDS */
 	public static final Block ABYSSOPELAGIC_WATER;
 	public static final Block ACID;
 	public static final Block BATHYPELAGIC_WATER;
@@ -746,7 +747,7 @@ public class DTBlocks {
 	public static final Block STORCEAN_VIRDIPELAGIC_WATER;
 	public static final Block STORCEAN_WATER;
 
-	/* ---------------------- CORALS ---------------------- */
+	/* CORALS */
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL;
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL_BLOCK;
 	public static final Block DEAD_BLACKGREEN_TREE_CORAL_FAN;
@@ -848,22 +849,27 @@ public class DTBlocks {
 	public static final Block LIME_BRAIN_CORAL_BLOCK;
 	public static final Block LIME_BRAIN_CORAL_FAN;
 	public static final Block LIME_BRAIN_CORAL_WALL_FAN;
-	
-	public static final Block DEAD_LOPHELIA_CORAL;
-	public static final Block DEAD_LOPHELIA_CORAL_BLOCK;
-	public static final Block DEAD_LOPHELIA_CORAL_FAN;
-	public static final Block DEAD_LOPHELIA_CORAL_WALL_FAN;
+
+	public static final Block DEAD_LEKRAL_CORAL;
+	public static final Block DEAD_LEKRAL_CORAL_BLOCK;
+	public static final Block DEAD_LEKRAL_CORAL_FAN;
+	public static final Block DEAD_LEKRAL_CORAL_WALL_FAN;
 
 	public static final Block LEKRAL_CORAL;
 	public static final Block LEKRAL_CORAL_BLOCK;
 	public static final Block LEKRAL_CORAL_FAN;
 	public static final Block LEKRAL_CORAL_WALL_FAN;
 
+	public static final Block DEAD_LOPHELIA_CORAL;
+	public static final Block DEAD_LOPHELIA_CORAL_BLOCK;
+	public static final Block DEAD_LOPHELIA_CORAL_FAN;
+	public static final Block DEAD_LOPHELIA_CORAL_WALL_FAN;
+
 	public static final Block LOPHELIA_CORAL;
 	public static final Block LOPHELIA_CORAL_BLOCK;
 	public static final Block LOPHELIA_CORAL_FAN;
 	public static final Block LOPHELIA_CORAL_WALL_FAN;
-		
+
 	public static final Block DEAD_PIPE_ORGAN_CORAL;
 	public static final Block DEAD_PIPE_ORGAN_CORAL_BLOCK;
 	public static final Block DEAD_PIPE_ORGAN_CORAL_FAN;
@@ -895,16 +901,21 @@ public class DTBlocks {
 	public static final Block SEAFAN_CORAL_BLOCK;
 	public static final Block SEAFAN_CORAL_FAN;
 	public static final Block SEAFAN_CORAL_WALL_FAN;
-	
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL;
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_BLOCK;
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_FAN;
-	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN;
+
+	public static final Block DEAD_SKACUR_CORAL;
+	public static final Block DEAD_SKACUR_CORAL_BLOCK;
+	public static final Block DEAD_SKACUR_CORAL_FAN;
+	public static final Block DEAD_SKACUR_CORAL_WALL_FAN;
 
 	public static final Block SKACUR_CORAL;
 	public static final Block SKACUR_CORAL_BLOCK;
 	public static final Block SKACUR_CORAL_FAN;
 	public static final Block SKACUR_CORAL_WALL_FAN;
+
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL;
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_BLOCK;
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_FAN;
+	public static final Block DEAD_STRAIGHT_WILLOW_CORAL_WALL_FAN;
 
 	public static final Block STRAIGHT_WILLOW_CORAL;
 	public static final Block STRAIGHT_WILLOW_CORAL_BLOCK;
@@ -951,6 +962,7 @@ public class DTBlocks {
 	public static final Block TRUMPETEAR_CORAL_FAN;
 	public static final Block TRUMPETEAR_CORAL_WALL_FAN;
 
+	/* WOOD */
 	public static final Block ALMOND_BUTTON;
 	public static final Block ALMOND_DOOR;
 	public static final Block ALMOND_FENCE;
@@ -1500,8 +1512,8 @@ public class DTBlocks {
 	public static final Block MURKANTUAN_DOOR;
 	public static final Block MURKANTUAN_FENCE;
 	public static final Block MURKANTUAN_FENCE_GATE;
-	public static final Block MURKANTUAN_LEAVES;
 	public static final Block MURKANTUAN_FLOWER;
+	public static final Block MURKANTUAN_LEAVES;
 	public static final Block MURKANTUAN_LOG;
 	public static final Block MURKANTUAN_PLANKS;
 	public static final Block MURKANTUAN_PRESSURE_PLATE;
@@ -2090,6 +2102,7 @@ public class DTBlocks {
 	public static final Block POTTED_GARDEN_PINKS;
 	public static final Block POTTED_GREEN_PANSY;
 	public static final Block POTTED_GYLDELION_FLOWER;
+	public static final Block POTTED_LIMEFORK;
 	public static final Block POTTED_MARSH_VIOLET;
 	public static final Block POTTED_NATIVE_VIOLET;
 	public static final Block POTTED_OPIUM_POPPY;
@@ -2112,6 +2125,7 @@ public class DTBlocks {
 	public static final Block POTTED_SQUISACLE;
 	public static final Block POTTED_SWEET_VIOLET;
 	public static final Block POTTED_TOPPED_LAVENDER;
+	public static final Block POTTED_TWISTTRAP;
 	public static final Block POTTED_VASLAME;
 	public static final Block POTTED_WEEPISTIL;
 	public static final Block POTTED_WEEPY_HOLLOWER;
@@ -2122,24 +2136,32 @@ public class DTBlocks {
 		return new AcuaticFungusBlock(saplingGenerator, Settings.of(Material.LEAVES).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque());
 	}
 
-	protected static Block createClusterAmethyst(int height, int xzOffset, Settings settings) {
-		return new AmethystClusterBlock(height, xzOffset, settings);
+	protected static Block createAmethystBlock() {
+		return createBlock(AmethystBlock::new, Settings.of(Material.AMETHYST, MapColor.PURPLE).strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
 	}
 
-	protected static Block createClusterAmethyst(Settings settings) {
-		return new AmethystClusterBlock(7, 3, settings);
+	protected static Block createBuddingAmethyst() {
+		return createBlock(BuddingAmethystBlock::new, Settings.of(Material.AMETHYST, MapColor.PURPLE).strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
 	}
 
-	protected static Block createLargeAmethystBud(Settings settings) {
-		return createClusterAmethyst(5, 3, settings);
+	protected static Block createClusterAmethyst(int height, int xzOffset, int luminance) {
+		return new AmethystClusterBlock(height, xzOffset, Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.AMETHYST_BLOCK).luminance(state -> luminance));
 	}
 
-	protected static Block createMediumAmethystBud(Settings settings) {
-		return createClusterAmethyst(4, 3, settings);
+	protected static Block createClusterAmethyst() {
+		return createClusterAmethyst(7, 3, 5);
 	}
 
-	protected static Block createSmallAmethystBud(Settings settings) {
-		return createClusterAmethyst(3, 4, settings);
+	protected static Block createLargeAmethystBud() {
+		return createClusterAmethyst(5, 3, 4);
+	}
+
+	protected static Block createMediumAmethystBud() {
+		return createClusterAmethyst(4, 3, 2);
+	}
+
+	protected static Block createSmallAmethystBud() {
+		return createClusterAmethyst(3, 4, 1);
 	}
 
 	protected static Block createBioluminescentBlock() {
@@ -2308,23 +2330,621 @@ public class DTBlocks {
 	}
 
 	static {
-		AIRIAL_MOSS = createBlock(AirialMossBlock::new, GRASS_BLOCK);
-		BLACK_MARBLE = createCopy(STONE);
-		BLUE_STORCERACK = createCopy(STONE);
-		DRITEAN = createCopy(DIRT);
-		ENROTIUM = createBlock(EnrotiumBlock::new, CRIMSON_NYLIUM);
-
-		STASP_NEST = createBlock(StaspNestBlock::new, OAK_WOOD);
-
-		GIANT_VIOLET = createTallFlower(RED_TULIP);
-		GIANT_VIOLET_LEAF = createCopy(COCOA);
-		GIANT_VIOLET_PETAL = createCopy(COCOA);
-		GIANT_VIOLET_PISTIL = createCopy(COCOA);
-
+		/* BIOLUMINESCENT BLOCKS */
+		BLACK_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		BROWN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		CYAN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		GREEN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		LIGHT_BLUE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		LIME_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		MAGENTA_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		ORANGE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		PURPLE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		RED_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		WHITE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		YELLOW_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 
+		/* REDSTONE */
+		KRALCTIUM_MICROFLARE = createCopy(STONE);
+		LIGHTNING_DISPENSER = createCopy(STONE);
+		STATIC_LIGHTNING_ROD = createCopy(STONE);
+
+		/* EXPLOSIVE BLOCKS */
+		NUCLEAR_BOMB = createCopy(STONE);
+		NUCLEAR_WASTE = createCopy(STONE);
+		SNS = createCopy(STONE);
+		SUS = createCopy(STONE);
+
+		/* ICE BLOCKS */
+		CRYOGENIC_ICE = createCopy(STONE);
+		BLACK_ICE = createCopy(STONE);
+		GREEN_ICE = createCopy(STONE);
+		MARINE_SNOW = createCopy(STONE);
+		STORCEAN_MARINE_SNOW = createCopy(STONE);
+
+		/* BLOCK ENTITIES */
+		STASP_NEST = createBlock(StaspNestBlock::new, OAK_WOOD);
+
+		/* OTHER STONES */
+		BLACK_MARBLE = createCopy(STONE);
+		BLACK_OPALITE = createCopy(STONE);
+		GRAY_MARBLE = createCopy(STONE);
+		LIGHT_OPALITE = createCopy(STONE);
+		LUSHINE = createCopy(STONE);
+		LUSHINE_PILLAR = createCopy(STONE);
+		LUSTRITE = createCopy(STONE);
+		OPALITE = createCopy(STONE);
+		POININE = createCopy(STONE);
+		RINGWOODITE = createCopy(STONE);
+		SKYSTONE = createCopy(STONE);
+		SULFUR = createCopy(STONE);
+		VERDINE = createCopy(STONE);
+		WAVED_BEDROCK = createCopy(STONE);
+
+		/* STONES */
+		BLACK_BASALT = createCopy(STONE);
+		BLACK_BASALT_BRICKS = createCopy(STONE);
+		BLACK_BASALT_PILLAR = createPillar(STONE);
+		BLACK_BASALT_TILES = createCopy(STONE);
+		CHISELED_BLACK_BASALT = createCopy(STONE);
+		CRACKED_BLACK_BASALT_BRICKS = createCopy(STONE);
+		CRACKED_BLACK_BASALT_TILES = createCopy(STONE);
+		POLISHED_BLACK_BASALT_PILLAR = createCopy(STONE);
+
+		BEDROCK_BRICKS = createCopy(STONE);
+		BEDROCK_PILLAR = createPillar(STONE);
+		CHISELED_BEDROCK = createCopy(STONE);
+
+		BLUE_STORCERACK = createCopy(STONE);
+		CHISELED_BLUE_STORCERACK = createCopy(STONE);
+		CRACKED_BLUE_STORCERACK_BRICKS = createCopy(STONE);
+		CRACKED_BLUE_STORCERACK_TILES = createCopy(STONE);
+		POLISHED_BLUE_STORCERACK = createCopy(STONE);
+
+		HADAL_STONE = createCopy(STONE);
+		HADAL_STONE_BRICKS = createCopy(STONE);
+		HADAL_STONE_PILLAR = createPillar(STONE);
+		HADAL_STONE_TILES = createCopy(STONE);
+		CHISELED_HADAL_STONE = createCopy(STONE);
+		CRACKED_HADAL_STONE_BRICKS = createCopy(STONE);
+		CRACKED_HADAL_STONE_TILES = createCopy(STONE);
+		POLISHED_HADAL_STONE = createCopy(STONE);
+
+		FLINT_SHARDS = createCopy(STONE);
+		FLINT_STONE = createCopy(STONE);
+		POLISHED_FLINT_STONE = createCopy(STONE);
+
+		GARNET_BRICKS = createCopy(STONE);
+		GARNET_PILLAR = createPillar(STONE);
+		CHISELED_GARNET_BLOCK = createCopy(STONE);
+		TOTEM_CHISELED_GARNET = createCopy(STONE);
+
+		INFINITAL_STONE = createCopy(STONE);
+		INFINITAL_STONE_BRICKS = createCopy(STONE);
+		INFINITAL_STONE_PILLAR = createPillar(STONE);
+		INFINITAL_STONE_TILES = createCopy(STONE);
+		CHISELED_INFINITAL_STONE = createCopy(STONE);
+		CRACKED_INFINITAL_STONE_BRICKS = createCopy(STONE);
+		CRACKED_INFINITAL_STONE_TILES = createCopy(STONE);
+		POLISHED_INFINITAL_STONE = createCopy(STONE);
+
+		PINKINE = createCopy(STONE);
+		PINKINE_BRICKS = createCopy(STONE);
+		PINKINE_PILLAR = createPillar(STONE);
+		PINKINE_TILES = createCopy(STONE);
+		CHISELED_PINKINE = createCopy(STONE);
+		CRACKED_PINKINE_BRICKS = createCopy(STONE);
+		CRACKED_PINKINE_TILES = createCopy(STONE);
+		POLISHED_PINKINE = createCopy(STONE);
+
+		LIMESTONE = createCopy(STONE);
+		LIMESTONE_BRICKS = createCopy(STONE);
+		LIMESTONE_PILLAR = createPillar(STONE);
+		LIMESTONE_TILES = createCopy(STONE);
+		CHISELED_LIMESTON = createCopy(STONE);
+		CRACKED_LIMESTONE_BRICKS = createCopy(STONE);
+		CRACKED_LIMESTONE_TILES = createCopy(STONE);
+		POLISHED_LIMESTONE = createCopy(STONE);
+
+		RHODONITE = createCopy(STONE);
+		RHODONITE_BRICKS = createCopy(STONE);
+		RHODONITE_PILLAR = createPillar(STONE);
+		CHISELED_RHODONITE_BLOCK = createCopy(STONE);
+		CHISELED_RHODONITE_BRICKS = createCopy(STONE);
+		EMBED_RHODONITE = createCopy(STONE);
+		POLISHED_RHODONITE = createCopy(STONE);
+
+		STORCENDITE = createCopy(STONE);
+		STORCENDITE_BRICKS = createCopy(STONE);
+		STORCENDITE_PILLAR = createPillar(STONE);
+		STORCENDITE_TILES = createCopy(STONE);
+		CHISELED_STORCENDITE = createCopy(STONE);
+		CRACKED_STORCENDITE_BRICKS = createCopy(STONE);
+		CRACKED_STORCENDITE_TILES = createCopy(STONE);
+		POLISHED_STORCENDITE = createCopy(STONE);
+
+		STORCERACK = createCopy(STONE);
+		STORCERACK_BRICKS = createCopy(STONE);
+		STORCERACK_PILLAR = createPillar(STONE);
+		STORCERACK_TILES = createCopy(STONE);
+		CHISELED_STORCERACK = createCopy(STONE);
+		CRACKED_STORCERACK_BRICKS = createCopy(STONE);
+		CRACKED_STORCERACK_TILES = createCopy(STONE);
+		POLISHED_STORCERACK = createCopy(STONE);
+
+		SULFUR_STONE = createCopy(STONE);
+		SULFUR_STONE_BRICKS = createCopy(STONE);
+		CHISELED_SULFUR_STONE_BRICKS = createCopy(STONE);
+		POLISHED_SULFUR_STONE = createCopy(STONE);
+
+		VIRDAL_STONE = createCopy(STONE);
+		VIRDAL_BRICKS = createCopy(STONE);
+		VIRDAL_PILLAR = createPillar(STONE);
+		VIRDAL_TILES = createCopy(STONE);
+		CHISELED_VIRDAL_STONE = createCopy(STONE);
+		CRACKED_VIRDAL_STONE_BRICKS = createCopy(STONE);
+		CRACKED_VIRDAL_STONE_TILES = createCopy(STONE);
+		POLISHED_VIDAL_STONE = createCopy(STONE);
+
+		WAVEITE = createCopy(STONE);
+		WAVEITE_BRICKS = createCopy(STONE);
+		WAVEITE_PILLAR = createPillar(STONE);
+		WAVEITE_TILES = createCopy(STONE);
+		CHISELED_WAVEITE = createCopy(STONE);
+		CRACKED_WAVEITE_BRICKS = createCopy(STONE);
+		CRACKED_WAVEITE_TILES = createCopy(STONE);
+		POLISHED_WAVEITE = createCopy(STONE);
+
+		/* ORES */
+		ANDESITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		ANDESITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		ANDESITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		ANDESITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		ANDESITE_COAL_ORE = createCopy(COAL_ORE);
+		ANDESITE_COPPER_ORE = createCopy(COAL_ORE);
+		ANDESITE_DIAMOND_ORE = createCopy(COAL_ORE);
+		ANDESITE_EMERALD_ORE = createCopy(COAL_ORE);
+		ANDESITE_GARNET_ORE = createCopy(COAL_ORE);
+		ANDESITE_GOLD_ORE = createCopy(COAL_ORE);
+		ANDESITE_IRON_ORE = createCopy(COAL_ORE);
+		ANDESITE_LAPIS_ORE = createCopy(COAL_ORE);
+		ANDESITE_MORGANITE_ORE = createCopy(COAL_ORE);
+		ANDESITE_REDSTONE_ORE = createCopy(COAL_ORE);
+		ANDESITE_RUBY_ORE = createCopy(COAL_ORE);
+		ANDESITE_SILVER_ORE = createCopy(COAL_ORE);
+		ANDESITE_SPHENE_ORE = createCopy(COAL_ORE);
+		ANDESITE_SPINEL_ORE = createCopy(COAL_ORE);
+		ANDESITE_TANZANITE_ORE = createCopy(COAL_ORE);
+		ANDESITE_TOPAZ_ORE = createCopy(COAL_ORE);
+
+		BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		BASALT_COAL_ORE = createCopy(COAL_ORE);
+
+		BEDROCK_DIAMOND_ORE = createCopy(COAL_ORE);
+		BEDROCK_DIOPSIDE_ORE = createCopy(COAL_ORE);
+		BEDROCK_MORGANITE_ORE = createCopy(COAL_ORE);
+		BEDROCK_VOID_CRITTERED_DIOPSIDE_ORE = createCopy(COAL_ORE);
+
+		BLACK_BASALT_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_COAL_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_COPPER_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_DIAMOND_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_EMERALD_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_GARNET_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_GOLD_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_IRON_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_LAPIS_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_MORGANITE_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_REDSTONE_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_RUBY_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_SILVER_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_SPHENE_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_SPINEL_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_TANZANITE_ORE = createCopy(COAL_ORE);
+
+		BLUE_STORCERACK_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_COAL_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_COPPER_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_DIAMOND_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_EMERALD_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_GOLD_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_IRON_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_LAPIS_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_MORGANITE_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_REDSTONE_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_RUBY_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_SILVER_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_SPHENE_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_SPINEL_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_STROXITE_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_TANZANITE_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE = createCopy(COAL_ORE);
+
+		CALCITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		CALCITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		CALCITE_COAL_ORE = createCopy(COAL_ORE);
+		CALCITE_DIAMOND_ORE = createCopy(COAL_ORE);
+		CALCITE_GOAL_ORE = createCopy(COAL_ORE);
+
+		DEEPSLATE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_GARNET_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_MORGANITE_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_OPAL_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_RUBY_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_SILVER_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_SPHENE_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_SPINEL_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_SUGILITE_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_TANZANITE_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_TOPAZ_ORE = createCopy(COAL_ORE);
+
+		DIORITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		DIORITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		DIORITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		DIORITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		DIORITE_COAL_ORE = createCopy(COAL_ORE);
+		DIORITE_COPPER_ORE = createCopy(COAL_ORE);
+		DIORITE_DIAMOND_ORE = createCopy(COAL_ORE);
+		DIORITE_EMERALD_ORE = createCopy(COAL_ORE);
+		DIORITE_GARNET_ORE = createCopy(COAL_ORE);
+		DIORITE_GOLD_ORE = createCopy(COAL_ORE);
+		DIORITE_IRON_ORE = createCopy(COAL_ORE);
+		DIORITE_LAPIS_ORE = createCopy(COAL_ORE);
+		DIORITE_MORGANITE_ORE = createCopy(COAL_ORE);
+		DIORITE_REDSTONE_ORE = createCopy(COAL_ORE);
+		DIORITE_RUBY_ORE = createCopy(COAL_ORE);
+		DIORITE_SILVER_ORE = createCopy(COAL_ORE);
+		DIORITE_SPHENE_ORE = createCopy(COAL_ORE);
+		DIORITE_SPINEL_ORE = createCopy(COAL_ORE);
+		DIORITE_TANZANITE_ORE = createCopy(COAL_ORE);
+		DIORITE_TOPAZ_ORE = createCopy(COAL_ORE);
+
+		END_STONE_DIOPSIDE_ORE = createCopy(COAL_ORE);
+		END_STONE_SPINEL_ORE = createCopy(COAL_ORE);
+		END_STONE_VOID_CRITTERED_DIOPSIDE_ORE = createCopy(COAL_ORE);
+
+		FLINT_STONE_SILICON_ORE = createCopy(COAL_ORE);
+		FLINT_STONE_URANOLUMEN_ORE = createCopy(COAL_ORE);
+
+		GRAY_MARBLE_DIAMOND_ORE = createCopy(COAL_ORE);
+
+		GRANITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		GRANITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		GRANITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		GRANITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		GRANITE_COAL_ORE = createCopy(COAL_ORE);
+		GRANITE_COPPER_ORE = createCopy(COAL_ORE);
+		GRANITE_DIAMOND_ORE = createCopy(COAL_ORE);
+		GRANITE_EMERALD_ORE = createCopy(COAL_ORE);
+		GRANITE_GARNET_ORE = createCopy(COAL_ORE);
+		GRANITE_GOLD_ORE = createCopy(COAL_ORE);
+		GRANITE_IRON_ORE = createCopy(COAL_ORE);
+		GRANITE_LAPIS_ORE = createCopy(COAL_ORE);
+		GRANITE_MORGANITE_ORE = createCopy(COAL_ORE);
+		GRANITE_REDSTONE_ORE = createCopy(COAL_ORE);
+		GRANITE_RUBY_ORE = createCopy(COAL_ORE);
+		GRANITE_SILVER_ORE = createCopy(COAL_ORE);
+		GRANITE_SPHENE_ORE = createCopy(COAL_ORE);
+		GRANITE_SPINEL_ORE = createCopy(COAL_ORE);
+		GRANITE_TANZANITE_ORE = createCopy(COAL_ORE);
+		GRANITE_TOPAZ_ORE = createCopy(COAL_ORE);
+
+		HADAL_STONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_COAL_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_COPPER_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_DIAMOND_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_EMERALD_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_GARNET_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_GOLD_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_IRON_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_LAPIS_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_MORGANITE_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_REDSTONE_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_RUBY_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_SILVER_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_SPHENE_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_SPINEL_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_SUGLITE_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_TANZANITE_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_TOPAZ_ORE = createCopy(COAL_ORE);
+
+		INFINITAL_STONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_COAL_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_COPPER_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_DIAMOND_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_ENSTATITE_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_OPAL_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_IRON_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_RUBY_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_SPHENE_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_SPINEL_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_SUGILITE_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_URANOLUMEN_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_SILICON_ORE = createCopy(COAL_ORE);
+
+		LIMESTONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		LIMESTONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		LIMESTONE_COAL_ORE = createCopy(COAL_ORE);
+		LIMESTONE_COPPER_ORE = createCopy(COAL_ORE);
+		LIMESTONE_DIAMOND_ORE = createCopy(COAL_ORE);
+		LIMESTONE_OPAL_ORE = createCopy(COAL_ORE);
+		LIMESTONE_IRON_ORE = createCopy(COAL_ORE);
+		LIMESTONE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		LIMESTONE_SPHENE_ORE = createCopy(COAL_ORE);
+		LIMESTONE_SPINEL_ORE = createCopy(COAL_ORE);
+		LIMESTONE_SUGILITE_ORE = createCopy(COAL_ORE);
+
+		LUSTRED_WAVEITE = createCopy(COAL_ORE);
+		LUSTRED_WAVEITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		LUSTRED_WAVEITE_TANZANITE_ORE = createCopy(COAL_ORE);
+
+		MARBLE_DIAMOND_ORE = createCopy(COAL_ORE);
+
+		NETHERRACK_BORON_ORE = createCopy(COAL_ORE);
+		NETHERRACK_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+
+		PINKINE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		PINKINE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		PINKINE_COAL_ORE = createCopy(COAL_ORE);
+		PINKINE_COPPER_ORE = createCopy(COAL_ORE);
+		PINKINE_DIAMOND_ORE = createCopy(COAL_ORE);
+		PINKINE_DIOPSIDE_ORE = createCopy(COAL_ORE);
+		PINKINE_ENSTATITE_ORE = createCopy(COAL_ORE);
+		PINKINE_OPAL_ORE = createCopy(COAL_ORE);
+		PINKINE_IRON_ORE = createCopy(COAL_ORE);
+		PINKINE_RUBY_ORE = createCopy(COAL_ORE);
+		PINKINE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		PINKINE_SILICON_ORE = createCopy(COAL_ORE);
+		PINKINE_SPHENE_ORE = createCopy(COAL_ORE);
+		PINKINE_SPINEL_ORE = createCopy(COAL_ORE);
+		PINKINE_SUGILITE_ORE = createCopy(COAL_ORE);
+		PINKINE_URANIUM_ORE = createCopy(COAL_ORE);
+		PINKINE_URANOLUMEN_ORE = createCopy(COAL_ORE);
+		PINKINE_VOID_CRITTERED_DIOPSIDE_ORE = createCopy(COAL_ORE);
+
+		RINGWOODITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+
+		SKYSTONE_OPAL_ORE = createCopy(COAL_ORE);
+
+		SMOOTH_BASALT_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		SMOOTH_BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		SMOOTH_BASALT_DIAMOND_ORE = createCopy(COAL_ORE);
+		SMOOTH_BASALT_GOLD_ORE = createCopy(COAL_ORE);
+
+		STORCEAN_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		STORCEAN_SILICON_ORE = createCopy(COAL_ORE);
+		STORCEAN_SNOW = createCopy(COAL_ORE);
+		STORCEAN_TUNGSTEN_ORE = createCopy(COAL_ORE);
+
+		STORCENDITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		STORCENDITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		STORCENDITE_COAL_ORE = createCopy(COAL_ORE);
+		STORCENDITE_COPPER_ORE = createCopy(COAL_ORE);
+		STORCENDITE_DIAMOND_ORE = createCopy(COAL_ORE);
+		STORCENDITE_ENSTATITE_ORE = createCopy(COAL_ORE);
+		STORCENDITE_IRON_ORE = createCopy(COAL_ORE);
+		STORCENDITE_OPAL_ORE = createCopy(COAL_ORE);
+		STORCENDITE_RUBY_ORE = createCopy(COAL_ORE);
+		STORCENDITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		STORCENDITE_SILICON_ORE = createCopy(COAL_ORE);
+		STORCENDITE_SPHENE_ORE = createCopy(COAL_ORE);
+		STORCENDITE_SPINEL_ORE = createCopy(COAL_ORE);
+		STORCENDITE_SUGILITE_ORE = createCopy(COAL_ORE);
+		STORCENDITE_URANIUM_ORE = createCopy(COAL_ORE);
+		STORCENDITE_URANOLUMEN_ORE = createCopy(COAL_ORE);
+
+		STORCERACK_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		STORCERACK_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		STORCERACK_COAL_ORE = createCopy(COAL_ORE);
+		STORCERACK_COPPER_ORE = createCopy(COAL_ORE);
+		STORCERACK_DIAMOND_ORE = createCopy(COAL_ORE);
+		STORCERACK_GOLD_ORE = createCopy(COAL_ORE);
+		STORCERACK_IRON_ORE = createCopy(COAL_ORE);
+		STORCERACK_OPAL_ORE = createCopy(COAL_ORE);
+		STORCERACK_REDSTONE_ORE = createCopy(COAL_ORE);
+		STORCERACK_RUBY_ORE = createCopy(COAL_ORE);
+		STORCERACK_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		STORCERACK_SILICON_ORE = createCopy(COAL_ORE);
+		STORCERACK_SPHENE_ORE = createCopy(COAL_ORE);
+		STORCERACK_SPINEL_ORE = createCopy(COAL_ORE);
+		STORCERACK_SUGILITE_ORE = createCopy(COAL_ORE);
+		STORCERACK_TUNGSTEN_ORE = createCopy(COAL_ORE);
+		STORCERACK_URANOLUMEN_ORE = createCopy(COAL_ORE);
+
+		SULFUR_STONE_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		SULFUR_STONE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		SULFUR_STONE_COAL_ORE = createCopy(COAL_ORE);
+
+		TUFF_CHALCEDONY_ORE = createCopy(COAL_ORE);
+		TUFF_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		TUFF_COAL_ORE = createCopy(COAL_ORE);
+		TUFF_DIAMOND_ORE = createCopy(COAL_ORE);
+		TUFF_GOLD_ORE = createCopy(COAL_ORE);
+
+		VERDINE_COAL_ORE = createCopy(COAL_ORE);
+
+		VIRDAL_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		VIRDAL_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		VIRDAL_COAL_ORE = createCopy(COAL_ORE);
+		VIRDAL_COPPER_ORE = createCopy(COAL_ORE);
+		VIRDAL_DIAMOND_ORE = createCopy(COAL_ORE);
+		VIRDAL_IRON_ORE = createCopy(COAL_ORE);
+		VIRDAL_OPAL_ORE = createCopy(COAL_ORE);
+		VIRDAL_RUBY_ORE = createCopy(COAL_ORE);
+		VIRDAL_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		VIRDAL_SILICON_ORE = createCopy(COAL_ORE);
+		VIRDAL_SPHENE_ORE = createCopy(COAL_ORE);
+		VIRDAL_SPINEL_ORE = createCopy(COAL_ORE);
+		VIRDAL_SUGILITE_ORE = createCopy(COAL_ORE);
+		VIRDAL_URANOLUMEN_ORE = createCopy(COAL_ORE);
+
+		WAVED_BEDROCK_DIAMOND_ORE = createCopy(COAL_ORE);
+		WAVED_BEDROCK_DIOPSIDE_ORE = createCopy(COAL_ORE);
+		WAVED_BEDROCK_MORGANITE_ORE = createCopy(COAL_ORE);
+		WAVED_BEDROCK_TANZANITE_ORE = createCopy(COAL_ORE);
+
+		WAVEITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		WAVEITE_COAL_ORE = createCopy(COAL_ORE);
+		WAVEITE_COPPER_ORE = createCopy(COAL_ORE);
+		WAVEITE_DIAMOND_ORE = createCopy(COAL_ORE);
+		WAVEITE_EMERALD_ORE = createCopy(COAL_ORE);
+		WAVEITE_IRON_ORE = createCopy(COAL_ORE);
+		WAVEITE_GARNET_ORE = createCopy(COAL_ORE);
+		WAVEITE_GOLD_ORE = createCopy(COAL_ORE);
+		WAVEITE_LAPIS_ORE = createCopy(COAL_ORE);
+		WAVEITE_MORGANITE_ORE = createCopy(COAL_ORE);
+		WAVEITE_REDSTONE_ORE = createCopy(COAL_ORE);
+		WAVEITE_RUBY_ORE = createCopy(COAL_ORE);
+		WAVEITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		WAVEITE_SILICON_ORE = createCopy(COAL_ORE);
+		WAVEITE_SILVER_ORE = createCopy(COAL_ORE);
+		WAVEITE_SPHENE_ORE = createCopy(COAL_ORE);
+		WAVEITE_SPINEL_ORE = createCopy(COAL_ORE);
+		WAVEITE_SUGILITE_ORE = createCopy(COAL_ORE);
+		WAVEITE_TANZANITE_ORE = createCopy(COAL_ORE);
+		WAVEITE_TOPAZ_ORE = createCopy(COAL_ORE);
+
+		ACTINIUM_ORE = createCopy(COAL_ORE);
+		AQUAMARINE_ORE = createCopy(COAL_ORE);
+		BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		ENSTATITE_ORE = createCopy(COAL_ORE);
+		MORGANITE_ORE = createCopy(COAL_ORE);
+		OPAL_ORE = createCopy(COAL_ORE);
+		RUBY_ORE = createCopy(COAL_ORE);
+		SAPPHIRE_ORE = createCopy(COAL_ORE);
+		SUGILITE_ORE = createCopy(COAL_ORE);
+		SPHENE_ORE = createCopy(COAL_ORE);
+		SPINEL_ORE = createCopy(COAL_ORE);
+		TANZANITE_ORE = createCopy(COAL_ORE);
+		TOPAZ_ORE = createCopy(COAL_ORE);
+
+		/* RAW BLOCKS */
+		RAW_ACTINIUM_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_BORON_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_ENRON_BLOCK = createCopy(RAW_IRON_BLOCK);
+		KRALIUM_DEBRIS = createCopy(RAW_IRON_BLOCK);
+		RAW_SILICON_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_SILVER_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_STROXITE_BLOCK = createCopy(RAW_IRON_BLOCK);
+		CHARGED_RAW_TUNGSTEN_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_TUNGSTEN_BLOCK = createCopy(RAW_IRON_BLOCK);
+		RAW_URANOLUMEN_BLOCK = createCopy(RAW_IRON_BLOCK);
+
+		/* MINERAL BLOCKS */
+		ACTINIUM_BLOCK = createCopy(IRON_BLOCK);
+		AQUAMARINE_BLOCK = createCopy(IRON_BLOCK);
+		BLACK_PEARL_BLOCK = createCopy(IRON_BLOCK);
+		BORON_BLOCK = createCopy(IRON_BLOCK);
+		CUT_BORON_BLOCK = createCopy(IRON_BLOCK);
+		CHALCEDONY_BLOCK = createCopy(IRON_BLOCK);
+		DIOPSIDE_BLOCK = createCopy(IRON_BLOCK);
+		ENRON_BLOCK = createCopy(IRON_BLOCK);
+		ENSTATITE_BLOCK = createCopy(IRON_BLOCK);
+		GYLDELION_BLOCK = createCopy(IRON_BLOCK);
+		KRALCTIUM_BLOCK = createCopy(IRON_BLOCK);
+		KRALIUM_BLOCK = createCopy(IRON_BLOCK);
+		CUT_KRALIUM_BLOCK = createCopy(IRON_BLOCK);
+		LEKRALITE_BLOCK = createCopy(IRON_BLOCK);
+		MORGANITE_BLOCK = createCopy(IRON_BLOCK);
+		RUBY_BLOCK = createCopy(IRON_BLOCK);
+		SAPPHIRE_BLOCK = createCopy(IRON_BLOCK);
+		SPHENE_BLOCK = createCopy(IRON_BLOCK);
+		SPINEL_BLOCK = createCopy(IRON_BLOCK);
+		STROXITE_BLOCK = createCopy(IRON_BLOCK);
+		CUT_STROXITE_BLOCK = createCopy(IRON_BLOCK);
+		TANZANITE_BLOCK = createCopy(IRON_BLOCK);
+		TOPAZ_BLOCK = createCopy(IRON_BLOCK);
+		CHARGED_TUNGSTEN_BLOCK = createCopy(IRON_BLOCK);
+		TUNGSTEN_BLOCK = createCopy(IRON_BLOCK);
+		URANIUM_BLOCK = createCopy(IRON_BLOCK);
+		URANIUM_POWDER_BLOCK = createCopy(IRON_BLOCK);
+		VOID_CRITTERED_DIOPSIDE_BLOCK = createCopy(IRON_BLOCK);
+
+		/* CHISELED MINERAL BLOCKS */
+		CHISELED_SILICON_BLOCK = createCopy(IRON_BLOCK);
+		CHISELED_SILVER_BLOCK = createCopy(IRON_BLOCK);
+		CHISELED_SUGILITE_BLOCK = createCopy(IRON_BLOCK);
+
+		/* CRYSTALS */
+		LEKRALITE_CRYSTALS = createAmethystBlock();
+
+		BLACK_OPAL_BLOCK = createAmethystBlock();
+		BUDDING_BLACK_OPAL = createBuddingAmethyst();
+		BLACK_OPAL_CLUSTER = createClusterAmethyst();
+		LARGE_BLACK_OPAL_BUD = createLargeAmethystBud();
+		MEDIUM_BLACK_OPAL_BUD = createMediumAmethystBud();
+		SMALL_BLACK_OPAL_BUD = createSmallAmethystBud();
+
+		CLINOHUMITE_BLOCK = createAmethystBlock();
+		BUDDING_CLINOHUMITE = createBuddingAmethyst();
+		CLINOHUMITE_CLUSTER = createClusterAmethyst();
+		LARGE_CLINOHUMITE_BUD = createLargeAmethystBud();
+		MEDIUM_CLINOHUMITE_BUD = createMediumAmethystBud();
+		SMALL_CLINOHUMITE_BUD = createSmallAmethystBud();
+
+		DIAMITE_BLOCK = createAmethystBlock();
+		BUDDING_DIAMITE = createBuddingAmethyst();
+		DIAMITE_CLUSTER = createClusterAmethyst();
+		LARGE_DIAMITE_BUD = createLargeAmethystBud();
+		MEDIUM_DIAMITE_BUD = createMediumAmethystBud();
+		SMALL_DIAMITE_BUD = createSmallAmethystBud();
+
+		GARNET_BLOCK = createAmethystBlock();
+		BUDDING_GARNET = createBuddingAmethyst();
+		GARNET_CLUSTER = createClusterAmethyst();
+		LARGE_GARNET_BUD = createLargeAmethystBud();
+		MEDIUM_GARNET_BUD = createMediumAmethystBud();
+		SMALL_GARNET_BUD = createSmallAmethystBud();
+
+		OPAL_BLOCK = createAmethystBlock();
+		BUDDING_OPAL = createBuddingAmethyst();
+		OPAL_CLUSTER = createClusterAmethyst();
+		LARGE_OPAL_BUD = createLargeAmethystBud();
+		MEDIUM_OPAL_BUD = createMediumAmethystBud();
+		SMALL_OPAL_BUD = createSmallAmethystBud();
+
+		SAPPHRITE_BLOCK = createAmethystBlock();
+		BUDDING_SAPPHRITE = createBuddingAmethyst();
+		SAPPHRITE_CLUSTER = createClusterAmethyst();
+		LARGE_SAPPHRITE_BUD = createLargeAmethystBud();
+		MEDIUM_SAPPHRITE_BUD = createMediumAmethystBud();
+		SMALL_SAPPHRITE_BUD = createSmallAmethystBud();
+
+		SUGILITE_BLOCK = createAmethystBlock();
+		BUDDING_SUGILITE = createBuddingAmethyst();
+		SUGILITE_CLUSTER = createClusterAmethyst();
+		LARGE_SUGILITE_BUD = createLargeAmethystBud();
+		MEDIUM_SUGILITE_BUD = createMediumAmethystBud();
+		SMALL_SUGILITE_BUD = createSmallAmethystBud();
+
+		/* POINTED STONES */
+		POINTED_LIGHT_OPALITE = createCopy(POINTED_DRIPSTONE);
+		POINTED_SKYSTONE = createCopy(POINTED_DRIPSTONE);
+		TWISTED_BLUE_STORCERACK = createCopy(POINTED_DRIPSTONE);
+
+		/* SURFACE BLOCKS */
+		DRITEAN = createCopy(DIRT);
+		ENROTIUM = createBlock(EnrotiumBlock::new, CRIMSON_NYLIUM);
+		SPRILIUM = createBlock(SpriliumBlock::new, Settings.copy(STONE).ticksRandomly());
+		SKYSOIL = createCopy(DIRT);
+		MOSOIL = createBlock(MosoilBlock::new, GRASS_BLOCK);
+
+		/* FLOWERS */
 		BLACK_PANSY = createFlowerBlock(RESISTANCE, 9);
 		BLUE_PANSY = createFlowerBlock(RESISTANCE, 9);
 		BLUE_POPPY = createFlowerBlock(NIGHT_VISION, 8);
@@ -2337,6 +2957,7 @@ public class DTBlocks {
 		GARDEN_PINKS = createFlowerBlock(FIRE_RESISTANCE, 6);
 		GREEN_PANSY = createFlowerBlock(RESISTANCE, 9);
 		GYLDELION_FLOWER = createFlowerBlock(GLOWING, 12);
+		LIMEFORK = createFlowerBlock(GLOWING, 12);
 		MARSH_VIOLET = createFlowerBlock(RESISTANCE, 9);
 		NATIVE_VIOLET = createFlowerBlock(RESISTANCE, 9);
 		OPIUM_POPPY = createFlowerBlock(WEAKNESS, 11);
@@ -2355,9 +2976,11 @@ public class DTBlocks {
 		SPIDREET = createStorceanFlower(REGENERATION, 6);
 		SPIKE_LAVENDER = createFlowerBlock(FLOWER_BEAUTY, 6);
 		SPRIDELION = new SpridelionBlock(900, Settings.copy(RED_TULIP));
+		SPROOM_SPIKE = createBlock(SproomSpikeBlock::new, SUNFLOWER);
 		SQUISACLE = createStorceanFlower(LEVITATION, 4);
 		SWEET_VIOLET = createFlowerBlock(RESISTANCE, 9);
 		TOPPED_LAVENDER = createFlowerBlock(FLOWER_BEAUTY, 6);
+		TWISTTRAP = createFlowerBlock(FLOWER_BEAUTY, 6);
 		VASLAME = createStorceanFlower(FIRE_RESISTANCE, 6);
 		WEEPISTIL = createStorceanFlower(NAUSEA, 4);
 		WEEPY_HOLLOWER = createStorceanFlower(GLOWING, 6);
@@ -2365,12 +2988,7 @@ public class DTBlocks {
 		WILD_PANSY = createFlowerBlock(RESISTANCE, 9);
 		YELLOW_VIOLET = createFlowerBlock(RESISTANCE, 9);
 
-		AIRIAL_BUSH = createBlock(AirialBushBlock::new, GRASS);
-		HARSHLES = createBlock(HarshlesBlock::new, GRASS);
-		REEBLOON = createBlock(ReebloonBlock::new, GRASS);
-		SQUISH_TIPS = createBlock(SquishTipsBlock::new, GRASS);
-		SPROOM_SPIKE = createBlock(SproomSpikeBlock::new, SUNFLOWER);
-
+		/* TALL FLOWERS */
 		BLACK_LILY = createTallFlower(SUNFLOWER);
 		BULLTHORN = createTallFlower(SUNFLOWER);
 		CACTLOW = createTallFlower(SUNFLOWER);
@@ -2381,11 +2999,46 @@ public class DTBlocks {
 		PIGAL = createTallFlower(SUNFLOWER);
 		PURPROUND = createTallFlower(SUNFLOWER);
 		SPRINLY = createTallFlower(SUNFLOWER);
+		TALL_BUCKTHORN = createTallFlower(SUNFLOWER);
 		VELVET_LILY = createTallFlower(SUNFLOWER);
 
-		MURKSTEM = createBlock(MurkstemBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
-		SKALK = createBlock(SkalkBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
+		/* MOSSES */
+		AIRIAL_MOSS = createCopy(IRON_BLOCK);
+		ILMIUM = createCopy(IRON_BLOCK);
+		MOSS = createCopy(IRON_BLOCK);
 
+		/* PLANTS */
+		AIRIAL_BUSH = createCopy(IRON_BLOCK);
+		BUCKTHORN = createCopy(IRON_BLOCK);
+		FOUR_LEAFED_CLOVER = createCopy(IRON_BLOCK);
+		FUR_PLATEAU = createCopy(IRON_BLOCK);
+		HARSHLES = createCopy(IRON_BLOCK);
+		ILYINE = createCopy(IRON_BLOCK);
+		JUNGLE_UMBRELLA = createCopy(IRON_BLOCK);
+		LICHEN = createCopy(IRON_BLOCK);
+		MOSSES = createCopy(IRON_BLOCK);
+		MURKSTEM = createBlock(MurkstemBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
+		POMEGRANATE_BUSH = createCopy(IRON_BLOCK);
+		REEBLOON = createCopy(IRON_BLOCK);
+		SEA_BUCKTHORN = createCopy(IRON_BLOCK);
+		SKALK = createBlock(SkalkBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
+		SQUISH_TIPS = createCopy(IRON_BLOCK);
+		THREE_LEAFED_CLOVER = createCopy(IRON_BLOCK);
+
+		/* MUSHROOMS */
+		GRAY_SHAG_MUSHROOM = createCopy(IRON_BLOCK);
+		INKY_CAP_MUSHROOM = createCopy(IRON_BLOCK);
+		PUFFBALL_MUSHROOM = createCopy(IRON_BLOCK);
+		SHELF_MUSHROOM = createCopy(IRON_BLOCK);
+		WHITE_MUSHROOM = createCopy(IRON_BLOCK);
+
+		/* GIANT VIOLET */
+		GIANT_VIOLET = createCopy(IRON_BLOCK);
+		GIANT_VIOLET_LEAF = createCopy(IRON_BLOCK);
+		GIANT_VIOLET_PETAL = createCopy(IRON_BLOCK);
+		GIANT_VIOLET_PISTIL = createCopy(IRON_BLOCK);
+
+		/* CORALS */
 		DEAD_BLACKGREEN_TREE_CORAL = createDeadCoral();
 		DEAD_BLACKGREEN_TREE_CORAL_BLOCK = createDeadCoralBlock();
 		DEAD_BLACKGREEN_TREE_CORAL_FAN = createDeadCoralFan();
@@ -2488,6 +3141,16 @@ public class DTBlocks {
 		LIME_BRAIN_CORAL_FAN = createCoralFan(DEAD_LIME_BRAIN_CORAL_FAN);
 		LIME_BRAIN_CORAL_WALL_FAN = createCoralWallFan(DEAD_LIME_BRAIN_CORAL_WALL_FAN);
 
+		DEAD_LEKRAL_CORAL = createDeadCoral();
+		DEAD_LEKRAL_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_LEKRAL_CORAL_FAN = createDeadCoralFan();
+		DEAD_LEKRAL_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		LEKRAL_CORAL = createCoral(DEAD_LEKRAL_CORAL);
+		LEKRAL_CORAL_BLOCK = createCoralBlock(DEAD_LEKRAL_CORAL_BLOCK);
+		LEKRAL_CORAL_FAN = createCoralFan(DEAD_LEKRAL_CORAL_FAN);
+		LEKRAL_CORAL_WALL_FAN = createCoralWallFan(DEAD_LEKRAL_CORAL_WALL_FAN);
+
 		DEAD_LOPHELIA_CORAL = createDeadCoral();
 		DEAD_LOPHELIA_CORAL_BLOCK = createDeadCoralBlock();
 		DEAD_LOPHELIA_CORAL_FAN = createDeadCoralFan();
@@ -2529,6 +3192,16 @@ public class DTBlocks {
 		SEAFAN_CORAL_BLOCK = createCoralBlock(DEAD_SEAFAN_CORAL_BLOCK);
 		SEAFAN_CORAL_FAN = createCoralFan(DEAD_SEAFAN_CORAL_FAN);
 		SEAFAN_CORAL_WALL_FAN = createCoralWallFan(DEAD_SEAFAN_CORAL_WALL_FAN);
+
+		DEAD_SKACUR_CORAL = createDeadCoral();
+		DEAD_SKACUR_CORAL_BLOCK = createDeadCoralBlock();
+		DEAD_SKACUR_CORAL_FAN = createDeadCoralFan();
+		DEAD_SKACUR_CORAL_WALL_FAN = createDeadCoralWallFan();
+
+		SKACUR_CORAL = createCoral(DEAD_SKACUR_CORAL);
+		SKACUR_CORAL_BLOCK = createCoralBlock(DEAD_SKACUR_CORAL_BLOCK);
+		SKACUR_CORAL_FAN = createCoralFan(DEAD_SKACUR_CORAL_FAN);
+		SKACUR_CORAL_WALL_FAN = createCoralWallFan(DEAD_SKACUR_CORAL_WALL_FAN);
 
 		DEAD_STRAIGHT_WILLOW_CORAL = createDeadCoral();
 		DEAD_STRAIGHT_WILLOW_CORAL_BLOCK = createDeadCoralBlock();
@@ -3720,6 +4393,7 @@ public class DTBlocks {
 		POTTED_GARDEN_PINKS = createFlowerPot(GARDEN_PINKS);
 		POTTED_GREEN_PANSY = createFlowerPot(GREEN_PANSY);
 		POTTED_GYLDELION_FLOWER = createFlowerPot(GYLDELION_FLOWER);
+		POTTED_LIMEFORK = createFlowerPot(LIMEFORK);
 		POTTED_MARSH_VIOLET = createFlowerPot(MARSH_VIOLET);
 		POTTED_NATIVE_VIOLET = createFlowerPot(NATIVE_VIOLET);
 		POTTED_OPIUM_POPPY = createFlowerPot(OPIUM_POPPY);
@@ -3742,185 +4416,11 @@ public class DTBlocks {
 		POTTED_SQUISACLE = createFlowerPot(SQUISACLE);
 		POTTED_SWEET_VIOLET = createFlowerPot(SWEET_VIOLET);
 		POTTED_TOPPED_LAVENDER = createFlowerPot(TOPPED_LAVENDER);
+		POTTED_TWISTTRAP = createFlowerPot(TWISTTRAP);
 		POTTED_VASLAME = createFlowerPot(VASLAME);
 		POTTED_WEEPISTIL = createFlowerPot(WEEPISTIL);
 		POTTED_WEEPY_HOLLOWER = createFlowerPot(WEEPY_HOLLOWER);
 		POTTED_YELLOW_VIOLET = createFlowerPot(YELLOW_VIOLET);
-
-		ANDESITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		ANDESITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		ANDESITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		ANDESITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		ANDESITE_COAL_ORE = createCopy(COAL_ORE);
-		ANDESITE_COPPER_ORE = createCopy(COAL_ORE);
-		ANDESITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		ANDESITE_EMERALD_ORE = createCopy(COAL_ORE);
-		ANDESITE_GARNET_ORE = createCopy(COAL_ORE);
-		ANDESITE_GOLD_ORE = createCopy(COAL_ORE);
-		ANDESITE_IRON_ORE = createCopy(COAL_ORE);
-		ANDESITE_LAPIS_ORE = createCopy(COAL_ORE);
-		ANDESITE_MORGANITE_ORE = createCopy(COAL_ORE);
-		ANDESITE_REDSTONE_ORE = createCopy(COAL_ORE);
-		ANDESITE_RUBY_ORE = createCopy(COAL_ORE);
-		ANDESITE_SILVER_ORE = createCopy(COAL_ORE);
-		ANDESITE_SPHENE_ORE = createCopy(COAL_ORE);
-		ANDESITE_SPINEL_ORE = createCopy(COAL_ORE);
-		ANDESITE_TANZANITE_ORE = createCopy(COAL_ORE);
-
-		BLACK_BASALT_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_COAL_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_COPPER_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_DIAMOND_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_EMERALD_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_GARNET_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_GOLD_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_IRON_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_LAPIS_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_MORGANITE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_REDSTONE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_RUBY_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_SILVER_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_SPHENE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_SPINEL_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_TANZANITE_ORE = createCopy(COAL_ORE);
-
-		BLUE_STORCERACK_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_COAL_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_COPPER_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_DIAMOND_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_EMERALD_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_GOLD_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_IRON_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_LAPIS_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_MORGANITE_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_REDSTONE_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_RUBY_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_SILVER_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_SPHENE_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_SPINEL_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_TANZANITE_ORE = createCopy(COAL_ORE);
-
-		DIORITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		DIORITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		DIORITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		DIORITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		DIORITE_COAL_ORE = createCopy(COAL_ORE);
-		DIORITE_COPPER_ORE = createCopy(COAL_ORE);
-		DIORITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		DIORITE_EMERALD_ORE = createCopy(COAL_ORE);
-		DIORITE_GARNET_ORE = createCopy(COAL_ORE);
-		DIORITE_GOLD_ORE = createCopy(COAL_ORE);
-		DIORITE_IRON_ORE = createCopy(COAL_ORE);
-		DIORITE_LAPIS_ORE = createCopy(COAL_ORE);
-		DIORITE_MORGANITE_ORE = createCopy(COAL_ORE);
-		DIORITE_REDSTONE_ORE = createCopy(COAL_ORE);
-		DIORITE_RUBY_ORE = createCopy(COAL_ORE);
-		DIORITE_SILVER_ORE = createCopy(COAL_ORE);
-		DIORITE_SPHENE_ORE = createCopy(COAL_ORE);
-		DIORITE_SPINEL_ORE = createCopy(COAL_ORE);
-		DIORITE_TANZANITE_ORE = createCopy(COAL_ORE);
-
-		GRANITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		GRANITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		GRANITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		GRANITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		GRANITE_COAL_ORE = createCopy(COAL_ORE);
-		GRANITE_COPPER_ORE = createCopy(COAL_ORE);
-		GRANITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		GRANITE_EMERALD_ORE = createCopy(COAL_ORE);
-		GRANITE_GARNET_ORE = createCopy(COAL_ORE);
-		GRANITE_GOLD_ORE = createCopy(COAL_ORE);
-		GRANITE_IRON_ORE = createCopy(COAL_ORE);
-		GRANITE_LAPIS_ORE = createCopy(COAL_ORE);
-		GRANITE_MORGANITE_ORE = createCopy(COAL_ORE);
-		GRANITE_REDSTONE_ORE = createCopy(COAL_ORE);
-		GRANITE_RUBY_ORE = createCopy(COAL_ORE);
-		GRANITE_SILVER_ORE = createCopy(COAL_ORE);
-		GRANITE_SPHENE_ORE = createCopy(COAL_ORE);
-		GRANITE_SPINEL_ORE = createCopy(COAL_ORE);
-		GRANITE_TANZANITE_ORE = createCopy(COAL_ORE);
-
-		LIMESTONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		LIMESTONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		LIMESTONE_COAL_ORE = createCopy(COAL_ORE);
-		LIMESTONE_COPPER_ORE = createCopy(COAL_ORE);
-		LIMESTONE_DIAMOND_ORE = createCopy(COAL_ORE);
-		LIMESTONE_IRON_ORE = createCopy(COAL_ORE);
-		LIMESTONE_SPHENE_ORE = createCopy(COAL_ORE);
-		LIMESTONE_SPINEL_ORE = createCopy(COAL_ORE);
-
-		PINKINE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		PINKINE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		PINKINE_COAL_ORE = createCopy(COAL_ORE);
-		PINKINE_COPPER_ORE = createCopy(COAL_ORE);
-		PINKINE_DIAMOND_ORE = createCopy(COAL_ORE);
-		PINKINE_IRON_ORE = createCopy(COAL_ORE);
-		PINKINE_RUBY_ORE = createCopy(COAL_ORE);
-		PINKINE_SPHENE_ORE = createCopy(COAL_ORE);
-		PINKINE_SPINEL_ORE = createCopy(COAL_ORE);
-
-		AQUAMARINE_BLOCK = createCopy(IRON_BLOCK);
-		BLACK_OPAL_BLOCK = createCopy(IRON_BLOCK);
-		CHALCEDONY_BLOCK = createCopy(IRON_BLOCK);
-		DIOPSIDE_BLOCK = createCopy(IRON_BLOCK);
-		ENRON_BLOCK = createCopy(IRON_BLOCK);
-		ENSTATITE_BLOCK = createCopy(IRON_BLOCK);
-		GYLDELION_BLOCK = createCopy(IRON_BLOCK);
-		MORGANITE_BLOCK = createCopy(IRON_BLOCK);
-		OPAL_BLOCK = createCopy(IRON_BLOCK);
-		RUBY_BLOCK = createCopy(IRON_BLOCK);
-		SAPPHIRE_BLOCK = createCopy(IRON_BLOCK);
-		SUGILITE_BLOCK = createCopy(IRON_BLOCK);
-		SPHENE_BLOCK = createCopy(IRON_BLOCK);
-		SPINEL_BLOCK = createCopy(IRON_BLOCK);
-		TANZANITE_BLOCK = createCopy(IRON_BLOCK);
-		TOPAZ_BLOCK = createCopy(IRON_BLOCK);
-		VOID_CRITTERED_DIOPSIDE_BLOCK = createCopy(IRON_BLOCK);
-
-		CLINOHUMITE_BLOCK = createBlock(AmethystBlock::new, Settings.of(Material.AMETHYST, MapColor.PURPLE).strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
-		BUDDING_CLINOHUMITE = createBlock(BuddingAmethystBlock::new, Settings.of(Material.AMETHYST).ticksRandomly().strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
-		CLINOHUMITE_CLUSTER = createClusterAmethyst(Settings.of(Material.AMETHYST).nonOpaque().ticksRandomly().sounds(BlockSoundGroup.AMETHYST_CLUSTER).strength(1.5F).luminance(state -> 5));
-		LARGE_CLINOHUMITE_BUD = createLargeAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.MEDIUM_AMETHYST_BUD).luminance(state -> 4));
-		MEDIUM_CLINOHUMITE_BUD = createMediumAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.LARGE_AMETHYST_BUD).luminance(state -> 2));
-		SMALL_CLINOHUMITE_BUD = createSmallAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.SMALL_AMETHYST_BUD).luminance(state -> 1));
-
-		GARNET_BLOCK = createBlock(AmethystBlock::new, Settings.of(Material.AMETHYST, MapColor.PURPLE).strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
-		BUDDING_GARNET = createBlock(BuddingAmethystBlock::new, Settings.of(Material.AMETHYST).ticksRandomly().strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
-		GARNET_CLUSTER = createClusterAmethyst(Settings.of(Material.AMETHYST).nonOpaque().ticksRandomly().sounds(BlockSoundGroup.AMETHYST_CLUSTER).strength(1.5F).luminance(state -> 5));
-		LARGE_GARNET_BUD = createLargeAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.MEDIUM_AMETHYST_BUD).luminance(state -> 4));
-		MEDIUM_GARNET_BUD = createMediumAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.LARGE_AMETHYST_BUD).luminance(state -> 2));
-		SMALL_GARNET_BUD = createSmallAmethystBud(Settings.copy(AMETHYST_CLUSTER).sounds(BlockSoundGroup.SMALL_AMETHYST_BUD).luminance(state -> 1));
-
-		RAW_ACTINIUM_BLOCK = createCopy(RAW_IRON_BLOCK);
-		RAW_BORON_BLOCK = createCopy(RAW_IRON_BLOCK);
-		RAW_ENRON_BLOCK = createCopy(RAW_IRON_BLOCK);
-		RAW_SILICON_BLOCK = createCopy(RAW_IRON_BLOCK);
-		RAW_SILVER_BLOCK = createCopy(RAW_IRON_BLOCK);
-		RAW_STROXITE_BLOCK = createCopy(RAW_IRON_BLOCK);
-		RAW_TUNGSTEN_BLOCK = createCopy(RAW_IRON_BLOCK);
-		RAW_URANOLUMEN_BLOCK = createCopy(RAW_IRON_BLOCK);
-
-		LIGHT_OPALITE = createCopy(QUARTZ_BLOCK);
-		LUSHINE = createCopy(STONE);
-		LUSHINE_PILLAR = createPillar(QUARTZ_PILLAR);
-		LUSTRITE = createCopy(STONE);
-		MARINE_SNOW = createCopy(SOUL_SAND);
-		MOSOIL = createBlock(MosoilBlock::new, GRASS_BLOCK);
-		OPALITE = createCopy(QUARTZ_BLOCK);
-		POININE = createPillar(BASALT);
-		RHODONITE = createCopy(QUARTZ_BLOCK);
-		SPRILIUM = createBlock(SpriliumBlock::new, Settings.copy(STONE).ticksRandomly());
-		SKYSOIL = createCopy(DIRT);
-		SKYSTONE = createCopy(STONE);
-		STORCEAN_MARINE_SNOW = createCopy(SOUL_SAND);
-		STORCENDITE = createCopy(STONE);
-		STORCERACK = createCopy(STONE);
-		VERDINE = createCopy(STONE);
 
 		ABYSSOPELAGIC_WATER = createWaterFluid(DTFluids.ABYSSOPELAGIC_WATER, 0.22F);
 		ACID = createFluid(DTFluids.ACID, Settings.copy(WATER));
@@ -3941,22 +4441,607 @@ public class DTBlocks {
 	}
 
 	public static void initialize() {
-		Registry.register(BLOCK, "deep_trenches:airial_moss", AIRIAL_MOSS);
-		Registry.register(BLOCK, "deep_trenches:black_marble", BLACK_MARBLE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack", BLUE_STORCERACK);
-		Registry.register(BLOCK, "deep_trenches:dritean", DRITEAN);
-		Registry.register(BLOCK, "deep_trenches:enrotium", ENROTIUM);
-
-		Registry.register(BLOCK, "deep_trenches:stasp_nest", STASP_NEST);
-
-		Registry.register(BLOCK, "deep_trenches:giant_violet", GIANT_VIOLET);
-		Registry.register(BLOCK, "deep_trenches:giant_violet_petal", GIANT_VIOLET_PETAL);
-		Registry.register(BLOCK, "deep_trenches:giant_violet_pistil", GIANT_VIOLET_PISTIL);
-
+		/* BIOLUMINESCENT BLOCKS */
+		Registry.register(BLOCK, "deep_trenches:black_bioluminescent_block", BLACK_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:brown_bioluminescent_block", BROWN_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:cyan_bioluminescent_block", CYAN_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:green_bioluminescent_block", GREEN_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:light_blue_bioluminescent_block", LIGHT_BLUE_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:lime_bioluminescent_block", LIME_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:magenta_bioluminescent_block", MAGENTA_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:orange_bioluminescent_block", ORANGE_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:purple_bioluminescent_block", PURPLE_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:red_bioluminescent_block", RED_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:white_bioluminescent_block", WHITE_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:yellow_bioluminescent_block", YELLOW_BIOLUMINESCENT_BLOCK);
 
+		/* REDSTONE */
+		Registry.register(BLOCK, "deep_trenches:kralctium_microflare", KRALCTIUM_MICROFLARE);
+		Registry.register(BLOCK, "deep_trenches:lightning_dispenser", LIGHTNING_DISPENSER);
+		Registry.register(BLOCK, "deep_trenches:static_lightning_rod", STATIC_LIGHTNING_ROD);
+
+		/* EXPLOSIVE BLOCKS */
+		Registry.register(BLOCK, "deep_trenches:nuclear_bomb", NUCLEAR_BOMB);
+		Registry.register(BLOCK, "deep_trenches:nuclear_waste", NUCLEAR_WASTE);
+		Registry.register(BLOCK, "deep_trenches:sns", SNS);
+		Registry.register(BLOCK, "deep_trenches:sus", SUS);
+
+		/* ICE BLOCKS */
+		Registry.register(BLOCK, "deep_trenches:cryogenic_ice", CRYOGENIC_ICE);
+		Registry.register(BLOCK, "deep_trenches:black_ice", BLACK_ICE);
+		Registry.register(BLOCK, "deep_trenches:green_ice", GREEN_ICE);
+		Registry.register(BLOCK, "deep_trenches:marine_snow", MARINE_SNOW);
+		Registry.register(BLOCK, "deep_trenches:storcean_marine_snow", STORCEAN_MARINE_SNOW);
+
+		/* BLOCK ENTITIES */
+		Registry.register(BLOCK, "deep_trenches:stasp_nest", STASP_NEST);
+
+		/* OTHER STONES */
+		Registry.register(BLOCK, "deep_trenches:black_marble", BLACK_MARBLE);
+		Registry.register(BLOCK, "deep_trenches:black_opalite", BLACK_OPALITE);
+		Registry.register(BLOCK, "deep_trenches:gray_marble", GRAY_MARBLE);
+		Registry.register(BLOCK, "deep_trenches:light_opalite", LIGHT_OPALITE);
+		Registry.register(BLOCK, "deep_trenches:lushine", LUSHINE);
+		Registry.register(BLOCK, "deep_trenches:lushine_pillar", LUSHINE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:lustrite", LUSTRITE);
+		Registry.register(BLOCK, "deep_trenches:opalite", OPALITE);
+		Registry.register(BLOCK, "deep_trenches:poinine", POININE);
+		Registry.register(BLOCK, "deep_trenches:ringwoodite", RINGWOODITE);
+		Registry.register(BLOCK, "deep_trenches:skystone", SKYSTONE);
+		Registry.register(BLOCK, "deep_trenches:sulfur", SULFUR);
+		Registry.register(BLOCK, "deep_trenches:verdine", VERDINE);
+		Registry.register(BLOCK, "deep_trenches:waved_bedrock", WAVED_BEDROCK);
+
+		/* STONES */
+		Registry.register(BLOCK, "deep_trenches:black_basalt", BLACK_BASALT);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_bricks", BLACK_BASALT_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_pillar", BLACK_BASALT_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_tiles", BLACK_BASALT_TILES);
+		Registry.register(BLOCK, "deep_trenches:chiseled_black_basalt", CHISELED_BLACK_BASALT);
+		Registry.register(BLOCK, "deep_trenches:cracked_black_basalt_bricks", CRACKED_BLACK_BASALT_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_black_basalt_tiles", CRACKED_BLACK_BASALT_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_black_basalt_pillar", POLISHED_BLACK_BASALT_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:bedrock_bricks", BEDROCK_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:bedrock_pillar", BEDROCK_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:chiseled_bedrock", CHISELED_BEDROCK);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack", BLUE_STORCERACK);
+		Registry.register(BLOCK, "deep_trenches:chiseled_blue_storcerack", CHISELED_BLUE_STORCERACK);
+		Registry.register(BLOCK, "deep_trenches:cracked_blue_storcerack_bricks", CRACKED_BLUE_STORCERACK_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_blue_storcerack_tiles", CRACKED_BLUE_STORCERACK_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_blue_storcerack", POLISHED_BLUE_STORCERACK);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone", HADAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_bricks", HADAL_STONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_pillar", HADAL_STONE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_tiles", HADAL_STONE_TILES);
+		Registry.register(BLOCK, "deep_trenches:chiseled_hadal_stone", CHISELED_HADAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:cracked_hadal_stone_bricks", CRACKED_HADAL_STONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_hadal_stone_tiles", CRACKED_HADAL_STONE_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_hadal_stone", POLISHED_HADAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:flint_shards", FLINT_SHARDS);
+		Registry.register(BLOCK, "deep_trenches:flint_stone", FLINT_STONE);
+		Registry.register(BLOCK, "deep_trenches:polished_flint_stone", POLISHED_FLINT_STONE);
+		Registry.register(BLOCK, "deep_trenches:garnet_bricks", GARNET_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:garnet_pillar", GARNET_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:chiseled_garnet_block", CHISELED_GARNET_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:totem_chiseled_garnet", TOTEM_CHISELED_GARNET);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone", INFINITAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_bricks", INFINITAL_STONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_pillar", INFINITAL_STONE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_tiles", INFINITAL_STONE_TILES);
+		Registry.register(BLOCK, "deep_trenches:chiseled_infinital_stone", CHISELED_INFINITAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:cracked_infinital_stone_bricks", CRACKED_INFINITAL_STONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_infinital_stone_tiles", CRACKED_INFINITAL_STONE_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_infinital_stone", POLISHED_INFINITAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:pinkine", PINKINE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_bricks", PINKINE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:pinkine_pillar", PINKINE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:pinkine_tiles", PINKINE_TILES);
+		Registry.register(BLOCK, "deep_trenches:chiseled_pinkine", CHISELED_PINKINE);
+		Registry.register(BLOCK, "deep_trenches:cracked_pinkine_bricks", CRACKED_PINKINE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_pinkine_tiles", CRACKED_PINKINE_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_pinkine", POLISHED_PINKINE);
+		Registry.register(BLOCK, "deep_trenches:limestone", LIMESTONE);
+		Registry.register(BLOCK, "deep_trenches:limestone_bricks", LIMESTONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:limestone_pillar", LIMESTONE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:limestone_tiles", LIMESTONE_TILES);
+		Registry.register(BLOCK, "deep_trenches:chiseled_limeston", CHISELED_LIMESTON);
+		Registry.register(BLOCK, "deep_trenches:cracked_limestone_bricks", CRACKED_LIMESTONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_limestone_tiles", CRACKED_LIMESTONE_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_limestone", POLISHED_LIMESTONE);
+		Registry.register(BLOCK, "deep_trenches:rhodonite", RHODONITE);
+		Registry.register(BLOCK, "deep_trenches:rhodonite_bricks", RHODONITE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:rhodonite_pillar", RHODONITE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:chiseled_rhodonite_block", CHISELED_RHODONITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:chiseled_rhodonite_bricks", CHISELED_RHODONITE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:embed_rhodonite", EMBED_RHODONITE);
+		Registry.register(BLOCK, "deep_trenches:polished_rhodonite", POLISHED_RHODONITE);
+		Registry.register(BLOCK, "deep_trenches:storcendite", STORCENDITE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_bricks", STORCENDITE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:storcendite_pillar", STORCENDITE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:storcendite_tiles", STORCENDITE_TILES);
+		Registry.register(BLOCK, "deep_trenches:chiseled_storcendite", CHISELED_STORCENDITE);
+		Registry.register(BLOCK, "deep_trenches:cracked_storcendite_bricks", CRACKED_STORCENDITE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_storcendite_tiles", CRACKED_STORCENDITE_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_storcendite", POLISHED_STORCENDITE);
+		Registry.register(BLOCK, "deep_trenches:storcerack", STORCERACK);
+		Registry.register(BLOCK, "deep_trenches:storcerack_bricks", STORCERACK_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:storcerack_pillar", STORCERACK_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:storcerack_tiles", STORCERACK_TILES);
+		Registry.register(BLOCK, "deep_trenches:chiseled_storcerack", CHISELED_STORCERACK);
+		Registry.register(BLOCK, "deep_trenches:cracked_storcerack_bricks", CRACKED_STORCERACK_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_storcerack_tiles", CRACKED_STORCERACK_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_storcerack", POLISHED_STORCERACK);
+		Registry.register(BLOCK, "deep_trenches:sulfur_stone", SULFUR_STONE);
+		Registry.register(BLOCK, "deep_trenches:sulfur_stone_bricks", SULFUR_STONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:chiseled_sulfur_stone_bricks", CHISELED_SULFUR_STONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:polished_sulfur_stone", POLISHED_SULFUR_STONE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone", VIRDAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:virdal_bricks", VIRDAL_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:virdal_pillar", VIRDAL_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:virdal_tiles", VIRDAL_TILES);
+		Registry.register(BLOCK, "deep_trenches:chiseled_virdal_stone", CHISELED_VIRDAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:cracked_virdal_stone_bricks", CRACKED_VIRDAL_STONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_virdal_stone_tiles", CRACKED_VIRDAL_STONE_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_vidal_stone", POLISHED_VIDAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:waveite", WAVEITE);
+		Registry.register(BLOCK, "deep_trenches:waveite_bricks", WAVEITE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:waveite_pillar", WAVEITE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:waveite_tiles", WAVEITE_TILES);
+		Registry.register(BLOCK, "deep_trenches:chiseled_waveite", CHISELED_WAVEITE);
+		Registry.register(BLOCK, "deep_trenches:cracked_waveite_bricks", CRACKED_WAVEITE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:cracked_waveite_tiles", CRACKED_WAVEITE_TILES);
+		Registry.register(BLOCK, "deep_trenches:polished_waveite", POLISHED_WAVEITE);
+
+		/* ORES */
+		Registry.register(BLOCK, "deep_trenches:andesite_aquamarine_ore", ANDESITE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_black_opal_ore", ANDESITE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_chalcedony_ore", ANDESITE_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_clinohumite_ore", ANDESITE_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_coal_ore", ANDESITE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_copper_ore", ANDESITE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_diamond_ore", ANDESITE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_emerald_ore", ANDESITE_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_garnet_ore", ANDESITE_GARNET_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_gold_ore", ANDESITE_GOLD_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_iron_ore", ANDESITE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_lapis_ore", ANDESITE_LAPIS_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_morganite_ore", ANDESITE_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_redstone_ore", ANDESITE_REDSTONE_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_ruby_ore", ANDESITE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_silver_ore", ANDESITE_SILVER_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_sphene_ore", ANDESITE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_spinel_ore", ANDESITE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_tanzanite_ore", ANDESITE_TANZANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:andesite_topaz_ore", ANDESITE_TOPAZ_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:basalt_clinohumite_ore", BASALT_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:basalt_coal_ore", BASALT_COAL_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:bedrock_diamond_ore", BEDROCK_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:bedrock_diopside_ore", BEDROCK_DIOPSIDE_ORE);
+		Registry.register(BLOCK, "deep_trenches:bedrock_morganite_ore", BEDROCK_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:bedrock_void_crittered_diopside_ore", BEDROCK_VOID_CRITTERED_DIOPSIDE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:black_basalt_aquamarine_ore", BLACK_BASALT_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_black_opal_ore", BLACK_BASALT_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_chalcedony_ore", BLACK_BASALT_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_clinohumite_ore", BLACK_BASALT_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_coal_ore", BLACK_BASALT_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_copper_ore", BLACK_BASALT_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_diamond_ore", BLACK_BASALT_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_emerald_ore", BLACK_BASALT_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_garnet_ore", BLACK_BASALT_GARNET_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_lapis_ore", BLACK_BASALT_LAPIS_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_morganite_ore", BLACK_BASALT_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_redstone_ore", BLACK_BASALT_REDSTONE_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_ruby_ore", BLACK_BASALT_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_silver_ore", BLACK_BASALT_SILVER_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_sphene_ore", BLACK_BASALT_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_spinel_ore", BLACK_BASALT_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_tanzanite_ore", BLACK_BASALT_TANZANITE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_aquamarine_ore", BLUE_STORCERACK_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_chalcedony_ore", BLUE_STORCERACK_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_copper_ore", BLUE_STORCERACK_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_diamond_ore", BLUE_STORCERACK_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_emerald_ore", BLUE_STORCERACK_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_gold_ore", BLUE_STORCERACK_GOLD_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_iron_ore", BLUE_STORCERACK_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_lapis_ore", BLUE_STORCERACK_LAPIS_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_morganite_ore", BLUE_STORCERACK_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_redstone_ore", BLUE_STORCERACK_REDSTONE_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_ruby_ore", BLUE_STORCERACK_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_silver_ore", BLUE_STORCERACK_SILVER_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_sphene_ore", BLUE_STORCERACK_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_spinel_ore", BLUE_STORCERACK_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_stroxite_ore", BLUE_STORCERACK_STROXITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_tanzanite_ore", BLUE_STORCERACK_TANZANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_charged_tungsten_ore", BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:calcite_chalcedony_ore", CALCITE_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:calcite_clinohumite_ore", CALCITE_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:calcite_coal_ore", CALCITE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:calcite_diamond_ore", CALCITE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:calcite_goal_ore", CALCITE_GOAL_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:deepslate_aquamarine_ore", DEEPSLATE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_black_opal_ore", DEEPSLATE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_chalcedony_ore", DEEPSLATE_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_clinohumite_ore", DEEPSLATE_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_garnet_ore", DEEPSLATE_GARNET_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_morganite_ore", DEEPSLATE_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_opal_ore", DEEPSLATE_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_ruby_ore", DEEPSLATE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_sapphire_ore", DEEPSLATE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_silver_ore", DEEPSLATE_SILVER_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_sphene_ore", DEEPSLATE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_spinel_ore", DEEPSLATE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_sugilite_ore", DEEPSLATE_SUGILITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_tanzanite_ore", DEEPSLATE_TANZANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:deepslate_topaz_ore", DEEPSLATE_TOPAZ_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:diorite_aquamarine_ore", DIORITE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_black_opal_ore", DIORITE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_chalcedony_ore", DIORITE_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_clinohumite_ore", DIORITE_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_coal_ore", DIORITE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_copper_ore", DIORITE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_diamond_ore", DIORITE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_emerald_ore", DIORITE_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_garnet_ore", DIORITE_GARNET_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_gold_ore", DIORITE_GOLD_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_iron_ore", DIORITE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_lapis_ore", DIORITE_LAPIS_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_morganite_ore", DIORITE_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_redstone_ore", DIORITE_REDSTONE_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_ruby_ore", DIORITE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_silver_ore", DIORITE_SILVER_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_sphene_ore", DIORITE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_spinel_ore", DIORITE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_tanzanite_ore", DIORITE_TANZANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:diorite_topaz_ore", DIORITE_TOPAZ_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:end_stone_diopside_ore", END_STONE_DIOPSIDE_ORE);
+		Registry.register(BLOCK, "deep_trenches:end_stone_spinel_ore", END_STONE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:end_stone_void_crittered_diopside_ore", END_STONE_VOID_CRITTERED_DIOPSIDE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:flint_stone_silicon_ore", FLINT_STONE_SILICON_ORE);
+		Registry.register(BLOCK, "deep_trenches:flint_stone_uranolumen_ore", FLINT_STONE_URANOLUMEN_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:gray_marble_diamond_ore", GRAY_MARBLE_DIAMOND_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:granite_aquamarine_ore", GRANITE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_black_opal_ore", GRANITE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_chalcedony_ore", GRANITE_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_clinohumite_ore", GRANITE_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_coal_ore", GRANITE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_copper_ore", GRANITE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_diamond_ore", GRANITE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_emerald_ore", GRANITE_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_garnet_ore", GRANITE_GARNET_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_gold_ore", GRANITE_GOLD_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_iron_ore", GRANITE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_lapis_ore", GRANITE_LAPIS_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_morganite_ore", GRANITE_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_redstone_ore", GRANITE_REDSTONE_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_ruby_ore", GRANITE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_silver_ore", GRANITE_SILVER_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_sphene_ore", GRANITE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_spinel_ore", GRANITE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_tanzanite_ore", GRANITE_TANZANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:granite_topaz_ore", GRANITE_TOPAZ_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_aquamarine_ore", HADAL_STONE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_black_opal_ore", HADAL_STONE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_clinohumite_ore", HADAL_STONE_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_coal_ore", HADAL_STONE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_copper_ore", HADAL_STONE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_diamond_ore", HADAL_STONE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_emerald_ore", HADAL_STONE_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_garnet_ore", HADAL_STONE_GARNET_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_gold_ore", HADAL_STONE_GOLD_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_iron_ore", HADAL_STONE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_lapis_ore", HADAL_STONE_LAPIS_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_morganite_ore", HADAL_STONE_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_redstone_ore", HADAL_STONE_REDSTONE_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_ruby_ore", HADAL_STONE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_sapphire_ore", HADAL_STONE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_silver_ore", HADAL_STONE_SILVER_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_sphene_ore", HADAL_STONE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_spinel_ore", HADAL_STONE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_suglite_ore", HADAL_STONE_SUGLITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_tanzanite_ore", HADAL_STONE_TANZANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_topaz_ore", HADAL_STONE_TOPAZ_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_aquamarine_ore", INFINITAL_STONE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_black_opal_ore", INFINITAL_STONE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_coal_ore", INFINITAL_STONE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_copper_ore", INFINITAL_STONE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_diamond_ore", INFINITAL_STONE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_enstatite_ore", INFINITAL_STONE_ENSTATITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_opal_ore", INFINITAL_STONE_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_iron_ore", INFINITAL_STONE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_ruby_ore", INFINITAL_STONE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_sapphire_ore", INFINITAL_STONE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_sphene_ore", INFINITAL_STONE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_spinel_ore", INFINITAL_STONE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_sugilite_ore", INFINITAL_STONE_SUGILITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_uranolumen_ore", INFINITAL_STONE_URANOLUMEN_ORE);
+		Registry.register(BLOCK, "deep_trenches:infinital_stone_silicon_ore", INFINITAL_STONE_SILICON_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:limestone_aquamarine_ore", LIMESTONE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_black_opal_ore", LIMESTONE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_coal_ore", LIMESTONE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_copper_ore", LIMESTONE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_diamond_ore", LIMESTONE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_opal_ore", LIMESTONE_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_iron_ore", LIMESTONE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_sapphire_ore", LIMESTONE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_sphene_ore", LIMESTONE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_spinel_ore", LIMESTONE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:limestone_sugilite_ore", LIMESTONE_SUGILITE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:lustred_waveite", LUSTRED_WAVEITE);
+		Registry.register(BLOCK, "deep_trenches:lustred_waveite_sapphire_ore", LUSTRED_WAVEITE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:lustred_waveite_tanzanite_ore", LUSTRED_WAVEITE_TANZANITE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:marble_diamond_ore", MARBLE_DIAMOND_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:netherrack_boron_ore", NETHERRACK_BORON_ORE);
+		Registry.register(BLOCK, "deep_trenches:netherrack_clinohumite_ore", NETHERRACK_CLINOHUMITE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:pinkine_aquamarine_ore", PINKINE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_black_opal_ore", PINKINE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_coal_ore", PINKINE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_copper_ore", PINKINE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_diamond_ore", PINKINE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_diopside_ore", PINKINE_DIOPSIDE_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_enstatite_ore", PINKINE_ENSTATITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_opal_ore", PINKINE_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_iron_ore", PINKINE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_ruby_ore", PINKINE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_sapphire_ore", PINKINE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_silicon_ore", PINKINE_SILICON_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_sphene_ore", PINKINE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_spinel_ore", PINKINE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_sugilite_ore", PINKINE_SUGILITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_uranium_ore", PINKINE_URANIUM_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_uranolumen_ore", PINKINE_URANOLUMEN_ORE);
+		Registry.register(BLOCK, "deep_trenches:pinkine_void_crittered_diopside_ore", PINKINE_VOID_CRITTERED_DIOPSIDE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:ringwoodite_sapphire_ore", RINGWOODITE_SAPPHIRE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:skystone_opal_ore", SKYSTONE_OPAL_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:smooth_basalt_chalcedony_ore", SMOOTH_BASALT_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:smooth_basalt_clinohumite_ore", SMOOTH_BASALT_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:smooth_basalt_diamond_ore", SMOOTH_BASALT_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:smooth_basalt_gold_ore", SMOOTH_BASALT_GOLD_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:storcean_sapphire_ore", STORCEAN_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcean_silicon_ore", STORCEAN_SILICON_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcean_snow", STORCEAN_SNOW);
+		Registry.register(BLOCK, "deep_trenches:storcean_tungsten_ore", STORCEAN_TUNGSTEN_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:storcendite_aquamarine_ore", STORCENDITE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_black_opal_ore", STORCENDITE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_coal_ore", STORCENDITE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_copper_ore", STORCENDITE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_diamond_ore", STORCENDITE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_enstatite_ore", STORCENDITE_ENSTATITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_iron_ore", STORCENDITE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_opal_ore", STORCENDITE_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_ruby_ore", STORCENDITE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_sapphire_ore", STORCENDITE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_silicon_ore", STORCENDITE_SILICON_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_sphene_ore", STORCENDITE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_spinel_ore", STORCENDITE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_sugilite_ore", STORCENDITE_SUGILITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_uranium_ore", STORCENDITE_URANIUM_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcendite_uranolumen_ore", STORCENDITE_URANOLUMEN_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:storcerack_aquamarine_ore", STORCERACK_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_black_opal_ore", STORCERACK_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_coal_ore", STORCERACK_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_copper_ore", STORCERACK_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_diamond_ore", STORCERACK_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_gold_ore", STORCERACK_GOLD_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_iron_ore", STORCERACK_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_opal_ore", STORCERACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_redstone_ore", STORCERACK_REDSTONE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_ruby_ore", STORCERACK_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_sapphire_ore", STORCERACK_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_silicon_ore", STORCERACK_SILICON_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_sphene_ore", STORCERACK_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_spinel_ore", STORCERACK_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_sugilite_ore", STORCERACK_SUGILITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_tungsten_ore", STORCERACK_TUNGSTEN_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_uranolumen_ore", STORCERACK_URANOLUMEN_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:sulfur_stone_chalcedony_ore", SULFUR_STONE_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:sulfur_stone_clinohumite_ore", SULFUR_STONE_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:sulfur_stone_coal_ore", SULFUR_STONE_COAL_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:tuff_chalcedony_ore", TUFF_CHALCEDONY_ORE);
+		Registry.register(BLOCK, "deep_trenches:tuff_clinohumite_ore", TUFF_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:tuff_coal_ore", TUFF_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:tuff_diamond_ore", TUFF_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:tuff_gold_ore", TUFF_GOLD_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:verdine_coal_ore", VERDINE_COAL_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:virdal_aquamarine_ore", VIRDAL_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_black_opal_ore", VIRDAL_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_coal_ore", VIRDAL_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_copper_ore", VIRDAL_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_diamond_ore", VIRDAL_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_iron_ore", VIRDAL_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_opal_ore", VIRDAL_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_ruby_ore", VIRDAL_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_sapphire_ore", VIRDAL_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_silicon_ore", VIRDAL_SILICON_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_sphene_ore", VIRDAL_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_spinel_ore", VIRDAL_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_sugilite_ore", VIRDAL_SUGILITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_uranolumen_ore", VIRDAL_URANOLUMEN_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:waved_bedrock_diamond_ore", WAVED_BEDROCK_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:waved_bedrock_diopside_ore", WAVED_BEDROCK_DIOPSIDE_ORE);
+		Registry.register(BLOCK, "deep_trenches:waved_bedrock_morganite_ore", WAVED_BEDROCK_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:waved_bedrock_tanzanite_ore", WAVED_BEDROCK_TANZANITE_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:waveite_clinohumite_ore", WAVEITE_CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_coal_ore", WAVEITE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_copper_ore", WAVEITE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_diamond_ore", WAVEITE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_emerald_ore", WAVEITE_EMERALD_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_iron_ore", WAVEITE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_garnet_ore", WAVEITE_GARNET_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_gold_ore", WAVEITE_GOLD_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_lapis_ore", WAVEITE_LAPIS_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_morganite_ore", WAVEITE_MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_redstone_ore", WAVEITE_REDSTONE_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_ruby_ore", WAVEITE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_sapphire_ore", WAVEITE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_silicon_ore", WAVEITE_SILICON_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_silver_ore", WAVEITE_SILVER_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_sphene_ore", WAVEITE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_spinel_ore", WAVEITE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_sugilite_ore", WAVEITE_SUGILITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_tanzanite_ore", WAVEITE_TANZANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:waveite_topaz_ore", WAVEITE_TOPAZ_ORE);
+
+		Registry.register(BLOCK, "deep_trenches:actinium_ore", ACTINIUM_ORE);
+		Registry.register(BLOCK, "deep_trenches:aquamarine_ore", AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_opal_ore", BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:clinohumite_ore", CLINOHUMITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:enstatite_ore", ENSTATITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:morganite_ore", MORGANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:opal_ore", OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:ruby_ore", RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:sapphire_ore", SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:sugilite_ore", SUGILITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:sphene_ore", SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:spinel_ore", SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:tanzanite_ore", TANZANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:topaz_ore", TOPAZ_ORE);
+
+		/* RAW BLOCKS */
+		Registry.register(BLOCK, "deep_trenches:raw_actinium_block", RAW_ACTINIUM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_boron_block", RAW_BORON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_enron_block", RAW_ENRON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:kralium_debris", KRALIUM_DEBRIS);
+		Registry.register(BLOCK, "deep_trenches:raw_silicon_block", RAW_SILICON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_silver_block", RAW_SILVER_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_stroxite_block", RAW_STROXITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:charged_raw_tungsten_block", CHARGED_RAW_TUNGSTEN_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_tungsten_block", RAW_TUNGSTEN_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:raw_uranolumen_block", RAW_URANOLUMEN_BLOCK);
+
+		/* MINERAL BLOCKS */
+		Registry.register(BLOCK, "deep_trenches:actinium_block", ACTINIUM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:aquamarine_block", AQUAMARINE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:black_pearl_block", BLACK_PEARL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:boron_block", BORON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:cut_boron_block", CUT_BORON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:chalcedony_block", CHALCEDONY_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:diopside_block", DIOPSIDE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:enron_block", ENRON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:enstatite_block", ENSTATITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:gyldelion_block", GYLDELION_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:kralctium_block", KRALCTIUM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:kralium_block", KRALIUM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:cut_kralium_block", CUT_KRALIUM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:lekralite_block", LEKRALITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:morganite_block", MORGANITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:ruby_block", RUBY_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:sapphire_block", SAPPHIRE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:sphene_block", SPHENE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:spinel_block", SPINEL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:stroxite_block", STROXITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:cut_stroxite_block", CUT_STROXITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:tanzanite_block", TANZANITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:topaz_block", TOPAZ_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:charged_tungsten_block", CHARGED_TUNGSTEN_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:tungsten_block", TUNGSTEN_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:uranium_block", URANIUM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:uranium_powder_block", URANIUM_POWDER_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:void_crittered_diopside_block", VOID_CRITTERED_DIOPSIDE_BLOCK);
+
+		/* CHISELED MINERAL BLOCKS */
+		Registry.register(BLOCK, "deep_trenches:chiseled_silicon_block", CHISELED_SILICON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:chiseled_silver_block", CHISELED_SILVER_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:chiseled_sugilite_block", CHISELED_SUGILITE_BLOCK);
+
+		/* CRYSTALS */
+		Registry.register(BLOCK, "deep_trenches:lekralite_crystals", LEKRALITE_CRYSTALS);
+
+		Registry.register(BLOCK, "deep_trenches:black_opal_block", BLACK_OPAL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_black_opal", BUDDING_BLACK_OPAL);
+		Registry.register(BLOCK, "deep_trenches:black_opal_cluster", BLACK_OPAL_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_black_opal_bud", LARGE_BLACK_OPAL_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_black_opal_bud", MEDIUM_BLACK_OPAL_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_black_opal_bud", SMALL_BLACK_OPAL_BUD);
+
+		Registry.register(BLOCK, "deep_trenches:clinohumite_block", CLINOHUMITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_clinohumite", BUDDING_CLINOHUMITE);
+		Registry.register(BLOCK, "deep_trenches:clinohumite_cluster", CLINOHUMITE_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_clinohumite_bud", LARGE_CLINOHUMITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_clinohumite_bud", MEDIUM_CLINOHUMITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_clinohumite_bud", SMALL_CLINOHUMITE_BUD);
+
+		Registry.register(BLOCK, "deep_trenches:diamite_block", DIAMITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_diamite", BUDDING_DIAMITE);
+		Registry.register(BLOCK, "deep_trenches:diamite_cluster", DIAMITE_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_diamite_bud", LARGE_DIAMITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_diamite_bud", MEDIUM_DIAMITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_diamite_bud", SMALL_DIAMITE_BUD);
+
+		Registry.register(BLOCK, "deep_trenches:garnet_block", GARNET_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_garnet", BUDDING_GARNET);
+		Registry.register(BLOCK, "deep_trenches:garnet_cluster", GARNET_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_garnet_bud", LARGE_GARNET_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_garnet_bud", MEDIUM_GARNET_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_garnet_bud", SMALL_GARNET_BUD);
+
+		Registry.register(BLOCK, "deep_trenches:opal_block", OPAL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_opal", BUDDING_OPAL);
+		Registry.register(BLOCK, "deep_trenches:opal_cluster", OPAL_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_opal_bud", LARGE_OPAL_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_opal_bud", MEDIUM_OPAL_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_opal_bud", SMALL_OPAL_BUD);
+
+		Registry.register(BLOCK, "deep_trenches:sapphrite_block", SAPPHRITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_sapphrite", BUDDING_SAPPHRITE);
+		Registry.register(BLOCK, "deep_trenches:sapphrite_cluster", SAPPHRITE_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_sapphrite_bud", LARGE_SAPPHRITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_sapphrite_bud", MEDIUM_SAPPHRITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_sapphrite_bud", SMALL_SAPPHRITE_BUD);
+
+		Registry.register(BLOCK, "deep_trenches:sugilite_block", SUGILITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_sugilite", BUDDING_SUGILITE);
+		Registry.register(BLOCK, "deep_trenches:sugilite_cluster", SUGILITE_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_sugilite_bud", LARGE_SUGILITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_sugilite_bud", MEDIUM_SUGILITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_sugilite_bud", SMALL_SUGILITE_BUD);
+
+		/* POINTED STONES */
+		Registry.register(BLOCK, "deep_trenches:pointed_light_opalite", POINTED_LIGHT_OPALITE);
+		Registry.register(BLOCK, "deep_trenches:pointed_skystone", POINTED_SKYSTONE);
+		Registry.register(BLOCK, "deep_trenches:twisted_blue_storcerack", TWISTED_BLUE_STORCERACK);
+
+		/* SURFACE BLOCKS */
+		Registry.register(BLOCK, "deep_trenches:dritean", DRITEAN);
+		Registry.register(BLOCK, "deep_trenches:enrotium", ENROTIUM);
+		Registry.register(BLOCK, "deep_trenches:sprilium", SPRILIUM);
+		Registry.register(BLOCK, "deep_trenches:skysoil", SKYSOIL);
+		Registry.register(BLOCK, "deep_trenches:mosoil", MOSOIL);
+
+		/* FLOWERS */
 		Registry.register(BLOCK, "deep_trenches:black_pansy", BLACK_PANSY);
 		Registry.register(BLOCK, "deep_trenches:blue_pansy", BLUE_PANSY);
 		Registry.register(BLOCK, "deep_trenches:blue_poppy", BLUE_POPPY);
@@ -3969,6 +5054,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:garden_pinks", GARDEN_PINKS);
 		Registry.register(BLOCK, "deep_trenches:green_pansy", GREEN_PANSY);
 		Registry.register(BLOCK, "deep_trenches:gyldelion_flower", GYLDELION_FLOWER);
+		Registry.register(BLOCK, "deep_trenches:limefork", LIMEFORK);
 		Registry.register(BLOCK, "deep_trenches:marsh_violet", MARSH_VIOLET);
 		Registry.register(BLOCK, "deep_trenches:native_violet", NATIVE_VIOLET);
 		Registry.register(BLOCK, "deep_trenches:opium_poppy", OPIUM_POPPY);
@@ -3987,9 +5073,11 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:spidreet", SPIDREET);
 		Registry.register(BLOCK, "deep_trenches:spike_lavender", SPIKE_LAVENDER);
 		Registry.register(BLOCK, "deep_trenches:spridelion", SPRIDELION);
+		Registry.register(BLOCK, "deep_trenches:sproom_spike", SPROOM_SPIKE);
 		Registry.register(BLOCK, "deep_trenches:squisacle", SQUISACLE);
 		Registry.register(BLOCK, "deep_trenches:sweet_violet", SWEET_VIOLET);
 		Registry.register(BLOCK, "deep_trenches:topped_lavender", TOPPED_LAVENDER);
+		Registry.register(BLOCK, "deep_trenches:twisttrap_lavender", TWISTTRAP);
 		Registry.register(BLOCK, "deep_trenches:vaslame", VASLAME);
 		Registry.register(BLOCK, "deep_trenches:weepistil", WEEPISTIL);
 		Registry.register(BLOCK, "deep_trenches:weepy_hollower", WEEPY_HOLLOWER);
@@ -3997,12 +5085,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:wild_pansy", WILD_PANSY);
 		Registry.register(BLOCK, "deep_trenches:yellow_violet", YELLOW_VIOLET);
 
-		Registry.register(BLOCK, "deep_trenches:airial_bush", AIRIAL_BUSH);
-		Registry.register(BLOCK, "deep_trenches:harshles", HARSHLES);
-		Registry.register(BLOCK, "deep_trenches:reebloon", REEBLOON);
-		Registry.register(BLOCK, "deep_trenches:squish_tips", SQUISH_TIPS);
-		Registry.register(BLOCK, "deep_trenches:sproom_spike", SPROOM_SPIKE);
-
+		/* TALL FLOWERS */
 		Registry.register(BLOCK, "deep_trenches:black_lily", BLACK_LILY);
 		Registry.register(BLOCK, "deep_trenches:bullthorn", BULLTHORN);
 		Registry.register(BLOCK, "deep_trenches:cactlow", CACTLOW);
@@ -4013,23 +5096,63 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:pigal", PIGAL);
 		Registry.register(BLOCK, "deep_trenches:purpround", PURPROUND);
 		Registry.register(BLOCK, "deep_trenches:sprinly", SPRINLY);
+		Registry.register(BLOCK, "deep_trenches:tall_buckthorn", TALL_BUCKTHORN);
 		Registry.register(BLOCK, "deep_trenches:velvet_lily", VELVET_LILY);
 
-		Registry.register(BLOCK, "deep_trenches:bromya_flower", BROMYA_FLOWER);
-		Registry.register(BLOCK, "deep_trenches:blue_mahoe_flower", BLUE_MAHOE_FLOWER);
-		Registry.register(BLOCK, "deep_trenches:murkantuan_flower", MURKANTUAN_FLOWER);
+		/* MOSSES */
+		Registry.register(BLOCK, "deep_trenches:airial_moss", AIRIAL_MOSS);
+		Registry.register(BLOCK, "deep_trenches:ilmium", ILMIUM);
+		Registry.register(BLOCK, "deep_trenches:moss", MOSS);
 
-		Registry.register(BLOCK, "deep_trenches:enderheart_leaf", ENDERHEART_LEAF);
-		Registry.register(BLOCK, "deep_trenches:giant_violet_leaf", GIANT_VIOLET_LEAF);
-		Registry.register(BLOCK, "deep_trenches:vynhert_leaf", VYNHERT_LEAF);
-
-		Registry.register(BLOCK, "deep_trenches:flalm_thorns", FLALM_THORNS);
-		Registry.register(BLOCK, "deep_trenches:rhadi_thorns", RHADI_THORNS);
-		Registry.register(BLOCK, "deep_trenches:vynhert_thorns", VYNHERT_THORNS);
-
-		Registry.register(BLOCK, "deep_trenches:murkstem", MURKSTEM);
+		/* PLANTS */
+		Registry.register(BLOCK, "deep_trenches:airial_bush", AIRIAL_BUSH);
+		Registry.register(BLOCK, "deep_trenches:buckthorn", BUCKTHORN);
+		Registry.register(BLOCK, "deep_trenches:four_leafed_clover", FOUR_LEAFED_CLOVER);
+		Registry.register(BLOCK, "deep_trenches:fur_plateau", FUR_PLATEAU);
+		Registry.register(BLOCK, "deep_trenches:harshles", HARSHLES);
+		Registry.register(BLOCK, "deep_trenches:ilyine", ILYINE);
+		Registry.register(BLOCK, "deep_trenches:jungle_umbrella", JUNGLE_UMBRELLA);
+		Registry.register(BLOCK, "deep_trenches:lichen", LICHEN);
+		Registry.register(BLOCK, "deep_trenches:mosses", MOSSES);
+		Registry.register(BLOCK, "deep_trenches:pomegranate_bush", POMEGRANATE_BUSH);
+		Registry.register(BLOCK, "deep_trenches:reebloon", REEBLOON);
+		Registry.register(BLOCK, "deep_trenches:sea_buckthorn", SEA_BUCKTHORN);
 		Registry.register(BLOCK, "deep_trenches:skalk", SKALK);
+		Registry.register(BLOCK, "deep_trenches:squish_tips", SQUISH_TIPS);
+		Registry.register(BLOCK, "deep_trenches:three_leafed_clover", THREE_LEAFED_CLOVER);
 
+		/* MUSHROOMS */
+		Registry.register(BLOCK, "deep_trenches:gray_shag_mushroom", GRAY_SHAG_MUSHROOM);
+		Registry.register(BLOCK, "deep_trenches:inky_cap_mushroom", INKY_CAP_MUSHROOM);
+		Registry.register(BLOCK, "deep_trenches:puffball_mushroom", PUFFBALL_MUSHROOM);
+		Registry.register(BLOCK, "deep_trenches:shelf_mushroom", SHELF_MUSHROOM);
+		Registry.register(BLOCK, "deep_trenches:white_mushroom", WHITE_MUSHROOM);
+
+		/* GIANT VIOLET */
+		Registry.register(BLOCK, "deep_trenches:giant_violet", GIANT_VIOLET);
+		Registry.register(BLOCK, "deep_trenches:giant_violet_leaf", GIANT_VIOLET_LEAF);
+		Registry.register(BLOCK, "deep_trenches:giant_violet_petal", GIANT_VIOLET_PETAL);
+		Registry.register(BLOCK, "deep_trenches:giant_violet_pistil", GIANT_VIOLET_PISTIL);
+
+		/* FLUIDS */
+		Registry.register(BLOCK, "deep_trenches:abyssopelagic_water", ABYSSOPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:acid", ACID);
+		Registry.register(BLOCK, "deep_trenches:bathypelagic_water", BATHYPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:brine", BRINE);
+		Registry.register(BLOCK, "deep_trenches:clear_water", CLEAR_WATER);
+		Registry.register(BLOCK, "deep_trenches:hadopelagic_water", HADOPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:mesopelagic_water", MESOPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:storcean_abyssopelagic_water", STORCEAN_ABYSSOPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:storcean_bathypelagic_water", STORCEAN_BATHYPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:storcean_enderpelagic_water", STORCEAN_ENDERPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:storcean_gasopelagic_water", STORCEAN_GASOPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:storcean_hadopelagic_water", STORCEAN_HADOPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:storcean_infinipelagic_water", STORCEAN_INFINIPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:storcean_mesopelagic_water", STORCEAN_MESOPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:storcean_virdipelagic_water", STORCEAN_VIRDIPELAGIC_WATER);
+		Registry.register(BLOCK, "deep_trenches:storcean_water", STORCEAN_WATER);
+
+		/* CORALS */
 		Registry.register(BLOCK, "deep_trenches:dead_blackgreen_tree_coral", DEAD_BLACKGREEN_TREE_CORAL);
 		Registry.register(BLOCK, "deep_trenches:dead_blackgreen_tree_coral_block", DEAD_BLACKGREEN_TREE_CORAL_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:dead_blackgreen_tree_coral_fan", DEAD_BLACKGREEN_TREE_CORAL_FAN);
@@ -4132,6 +5255,16 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:lime_brain_coral_fan", LIME_BRAIN_CORAL_FAN);
 		Registry.register(BLOCK, "deep_trenches:lime_brain_coral_wall_fan", LIME_BRAIN_CORAL_WALL_FAN);
 
+		Registry.register(BLOCK, "deep_trenches:dead_lekral_coral", DEAD_LEKRAL_CORAL);
+		Registry.register(BLOCK, "deep_trenches:dead_lekral_coral_block", DEAD_LEKRAL_CORAL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:dead_lekral_coral_fan", DEAD_LEKRAL_CORAL_FAN);
+		Registry.register(BLOCK, "deep_trenches:dead_lekral_coral_wall_fan", DEAD_LEKRAL_CORAL_WALL_FAN);
+
+		Registry.register(BLOCK, "deep_trenches:lekral_coral", LEKRAL_CORAL);
+		Registry.register(BLOCK, "deep_trenches:lekral_coral_block", LEKRAL_CORAL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:lekral_coral_fan", LEKRAL_CORAL_FAN);
+		Registry.register(BLOCK, "deep_trenches:lekral_coral_wall_fan", LEKRAL_CORAL_WALL_FAN);
+
 		Registry.register(BLOCK, "deep_trenches:dead_lophelia_coral", DEAD_LOPHELIA_CORAL);
 		Registry.register(BLOCK, "deep_trenches:dead_lophelia_coral_block", DEAD_LOPHELIA_CORAL_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:dead_lophelia_coral_fan", DEAD_LOPHELIA_CORAL_FAN);
@@ -4173,6 +5306,16 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:seafan_coral_block", SEAFAN_CORAL_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:seafan_coral_fan", SEAFAN_CORAL_FAN);
 		Registry.register(BLOCK, "deep_trenches:seafan_coral_wall_fan", SEAFAN_CORAL_WALL_FAN);
+
+		Registry.register(BLOCK, "deep_trenches:dead_skacur_coral", DEAD_SKACUR_CORAL);
+		Registry.register(BLOCK, "deep_trenches:dead_skacur_coral_block", DEAD_SKACUR_CORAL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:dead_skacur_coral_fan", DEAD_SKACUR_CORAL_FAN);
+		Registry.register(BLOCK, "deep_trenches:dead_skacur_coral_wall_fan", DEAD_SKACUR_CORAL_WALL_FAN);
+
+		Registry.register(BLOCK, "deep_trenches:skacur_coral", SKACUR_CORAL);
+		Registry.register(BLOCK, "deep_trenches:skacur_coral_block", SKACUR_CORAL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:skacur_coral_fan", SKACUR_CORAL_FAN);
+		Registry.register(BLOCK, "deep_trenches:skacur_coral_wall_fan", SKACUR_CORAL_WALL_FAN);
 
 		Registry.register(BLOCK, "deep_trenches:dead_straight_willow_coral", DEAD_STRAIGHT_WILLOW_CORAL);
 		Registry.register(BLOCK, "deep_trenches:dead_straight_willow_coral_block", DEAD_STRAIGHT_WILLOW_CORAL_BLOCK);
@@ -4224,164 +5367,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:trumpetear_coral_fan", TRUMPETEAR_CORAL_FAN);
 		Registry.register(BLOCK, "deep_trenches:trumpetear_coral_wall_fan", TRUMPETEAR_CORAL_WALL_FAN);
 
-		Registry.register(BLOCK, "deep_trenches:andesite_aquamarine_ore", ANDESITE_AQUAMARINE_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_black_opal_ore", ANDESITE_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_chalcedony_ore", ANDESITE_CHALCEDONY_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_clinohumite_ore", ANDESITE_CLINOHUMITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_coal_ore", ANDESITE_COAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_copper_ore", ANDESITE_COPPER_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_diamond_ore", ANDESITE_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_emerald_ore", ANDESITE_EMERALD_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_garnet_ore", ANDESITE_GARNET_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_gold_ore", ANDESITE_GOLD_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_iron_ore", ANDESITE_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_lapis_ore", ANDESITE_LAPIS_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_morganite_ore", ANDESITE_MORGANITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_redstone_ore", ANDESITE_REDSTONE_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_ruby_ore", ANDESITE_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_silver_ore", ANDESITE_SILVER_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_sphene_ore", ANDESITE_SPHENE_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_spinel_ore", ANDESITE_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:andesite_tanzanite_ore", ANDESITE_TANZANITE_ORE);
-
-		Registry.register(BLOCK, "deep_trenches:black_basalt_aquamarine_ore", BLACK_BASALT_AQUAMARINE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_black_opal_ore", BLACK_BASALT_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_chalcedony_ore", BLACK_BASALT_CHALCEDONY_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_clinohumite_ore", BLACK_BASALT_CLINOHUMITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_coal_ore", BLACK_BASALT_COAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_copper_ore", BLACK_BASALT_COPPER_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_diamond_ore", BLACK_BASALT_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_emerald_ore", BLACK_BASALT_EMERALD_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_garnet_ore", BLACK_BASALT_GARNET_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_lapis_ore", BLACK_BASALT_LAPIS_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_morganite_ore", BLACK_BASALT_MORGANITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_redstone_ore", BLACK_BASALT_REDSTONE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_ruby_ore", BLACK_BASALT_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_silver_ore", BLACK_BASALT_SILVER_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_sphene_ore", BLACK_BASALT_SPHENE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_spinel_ore", BLACK_BASALT_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_tanzanite_ore", BLACK_BASALT_TANZANITE_ORE);
-
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_aquamarine_ore", BLUE_STORCERACK_AQUAMARINE_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_chalcedony_ore", BLUE_STORCERACK_CHALCEDONY_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_copper_ore", BLUE_STORCERACK_COPPER_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_diamond_ore", BLUE_STORCERACK_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_emerald_ore", BLUE_STORCERACK_EMERALD_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_gold_ore", BLUE_STORCERACK_GOLD_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_iron_ore", BLUE_STORCERACK_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_lapis_ore", BLUE_STORCERACK_LAPIS_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_morganite_ore", BLUE_STORCERACK_MORGANITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_redstone_ore", BLUE_STORCERACK_REDSTONE_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_ruby_ore", BLUE_STORCERACK_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_silver_ore", BLUE_STORCERACK_SILVER_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_sphene_ore", BLUE_STORCERACK_SPHENE_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_spinel_ore", BLUE_STORCERACK_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_tanzanite_ore", BLUE_STORCERACK_TANZANITE_ORE);
-
-		Registry.register(BLOCK, "deep_trenches:diorite_aquamarine_ore", DIORITE_AQUAMARINE_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_black_opal_ore", DIORITE_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_chalcedony_ore", DIORITE_CHALCEDONY_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_clinohumite_ore", DIORITE_CLINOHUMITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_coal_ore", DIORITE_COAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_copper_ore", DIORITE_COPPER_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_diamond_ore", DIORITE_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_emerald_ore", DIORITE_EMERALD_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_garnet_ore", DIORITE_GARNET_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_gold_ore", DIORITE_GOLD_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_iron_ore", DIORITE_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_lapis_ore", DIORITE_LAPIS_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_morganite_ore", DIORITE_MORGANITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_redstone_ore", DIORITE_REDSTONE_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_ruby_ore", DIORITE_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_silver_ore", DIORITE_SILVER_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_sphene_ore", DIORITE_SPHENE_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_spinel_ore", DIORITE_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:diorite_tanzanite_ore", DIORITE_TANZANITE_ORE);
-
-		Registry.register(BLOCK, "deep_trenches:granite_aquamarine_ore", GRANITE_AQUAMARINE_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_black_opal_ore", GRANITE_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_chalcedony_ore", GRANITE_CHALCEDONY_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_clinohumite_ore", GRANITE_CLINOHUMITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_coal_ore", GRANITE_COAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_copper_ore", GRANITE_COPPER_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_diamond_ore", GRANITE_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_emerald_ore", GRANITE_EMERALD_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_garnet_ore", GRANITE_GARNET_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_gold_ore", GRANITE_GOLD_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_iron_ore", GRANITE_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_lapis_ore", GRANITE_LAPIS_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_morganite_ore", GRANITE_MORGANITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_redstone_ore", GRANITE_REDSTONE_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_ruby_ore", GRANITE_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_silver_ore", GRANITE_SILVER_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_sphene_ore", GRANITE_SPHENE_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_spinel_ore", GRANITE_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:granite_tanzanite_ore", GRANITE_TANZANITE_ORE);
-
-		Registry.register(BLOCK, "deep_trenches:limestone_aquamarine_ore", LIMESTONE_AQUAMARINE_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_black_opal_ore", LIMESTONE_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_coal_ore", LIMESTONE_COAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_copper_ore", LIMESTONE_COPPER_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_diamond_ore", LIMESTONE_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_iron_ore", LIMESTONE_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_sphene_ore", LIMESTONE_SPHENE_ORE);
-		Registry.register(BLOCK, "deep_trenches:limestone_spinel_ore", LIMESTONE_SPINEL_ORE);
-
-		Registry.register(BLOCK, "deep_trenches:pinkine_aquamarine_ore", PINKINE_AQUAMARINE_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_black_opal_ore", PINKINE_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_coal_ore", PINKINE_COAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_copper_ore", PINKINE_COPPER_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_diamond_ore", PINKINE_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_iron_ore", PINKINE_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_ruby_ore", PINKINE_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_sphene_ore", PINKINE_SPHENE_ORE);
-		Registry.register(BLOCK, "deep_trenches:pinkine_spinel_ore", PINKINE_SPINEL_ORE);
-
-		Registry.register(BLOCK, "deep_trenches:aquamarine_block", AQUAMARINE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:black_opal_block", BLACK_OPAL_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:chalcedony_block", CHALCEDONY_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:diopside_block", DIOPSIDE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:enron_block", ENRON_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:enstatite_block", ENSTATITE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:gyldelion_block", GYLDELION_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:morganite_block", MORGANITE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:opal_block", OPAL_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:ruby_block", RUBY_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:sapphire_block", SAPPHIRE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:sugilite_block", SUGILITE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:sphene_block", SPHENE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:spinel_block", SPINEL_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:tanzanite_block", TANZANITE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:topaz_block", TOPAZ_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:void_crittered_diopside_block", VOID_CRITTERED_DIOPSIDE_BLOCK);
-
-		Registry.register(BLOCK, "deep_trenches:clinohumite_block", CLINOHUMITE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:budding_clinohumite", BUDDING_CLINOHUMITE);
-		Registry.register(BLOCK, "deep_trenches:clinohumite_cluster", CLINOHUMITE_CLUSTER);
-		Registry.register(BLOCK, "deep_trenches:large_clinohumite_bud", LARGE_CLINOHUMITE_BUD);
-		Registry.register(BLOCK, "deep_trenches:medium_clinohumite_bud", MEDIUM_CLINOHUMITE_BUD);
-		Registry.register(BLOCK, "deep_trenches:small_clinohumite_bud", SMALL_CLINOHUMITE_BUD);
-
-		Registry.register(BLOCK, "deep_trenches:garnet_block", GARNET_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:budding_garnet", BUDDING_GARNET);
-		Registry.register(BLOCK, "deep_trenches:garnet_cluster", GARNET_CLUSTER);
-		Registry.register(BLOCK, "deep_trenches:large_garnet_bud", LARGE_GARNET_BUD);
-		Registry.register(BLOCK, "deep_trenches:medium_garnet_bud", MEDIUM_GARNET_BUD);
-		Registry.register(BLOCK, "deep_trenches:small_garnet_bud", SMALL_GARNET_BUD);
-
-		Registry.register(BLOCK, "deep_trenches:raw_actinium_block", RAW_ACTINIUM_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:raw_boron_block", RAW_BORON_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:raw_enron_block", RAW_ENRON_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:raw_silicon_block", RAW_SILICON_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:raw_silver_block", RAW_SILVER_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:raw_stroxite_block", RAW_STROXITE_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:raw_tungsten_block", RAW_TUNGSTEN_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:raw_uranolumen_block", RAW_URANOLUMEN_BLOCK);
-
+		/* WOOD */
 		Registry.register(BLOCK, "deep_trenches:almond_button", ALMOND_BUTTON);
 		Registry.register(BLOCK, "deep_trenches:almond_door", ALMOND_DOOR);
 		Registry.register(BLOCK, "deep_trenches:almond_fence", ALMOND_FENCE);
@@ -4482,6 +5468,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:blue_mahoe_door", BLUE_MAHOE_DOOR);
 		Registry.register(BLOCK, "deep_trenches:blue_mahoe_fence", BLUE_MAHOE_FENCE);
 		Registry.register(BLOCK, "deep_trenches:blue_mahoe_fence_gate", BLUE_MAHOE_FENCE_GATE);
+		Registry.register(BLOCK, "deep_trenches:blue_mahoe_flower", BLUE_MAHOE_FLOWER);
 		Registry.register(BLOCK, "deep_trenches:blue_mahoe_leaves", BLUE_MAHOE_LEAVES);
 		Registry.register(BLOCK, "deep_trenches:blue_mahoe_log", BLUE_MAHOE_LOG);
 		Registry.register(BLOCK, "deep_trenches:blue_mahoe_planks", BLUE_MAHOE_PLANKS);
@@ -4531,6 +5518,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:bromya_door", BROMYA_DOOR);
 		Registry.register(BLOCK, "deep_trenches:bromya_fence", BROMYA_FENCE);
 		Registry.register(BLOCK, "deep_trenches:bromya_fence_gate", BROMYA_FENCE_GATE);
+		Registry.register(BLOCK, "deep_trenches:bromya_flower", BROMYA_FLOWER);
 		Registry.register(BLOCK, "deep_trenches:bromya_leaves", BROMYA_LEAVES);
 		Registry.register(BLOCK, "deep_trenches:bromya_log", BROMYA_LOG);
 		Registry.register(BLOCK, "deep_trenches:bromya_planks", BROMYA_PLANKS);
@@ -4927,6 +5915,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:murkantuan_door", MURKANTUAN_DOOR);
 		Registry.register(BLOCK, "deep_trenches:murkantuan_fence", MURKANTUAN_FENCE);
 		Registry.register(BLOCK, "deep_trenches:murkantuan_fence_gate", MURKANTUAN_FENCE_GATE);
+		Registry.register(BLOCK, "deep_trenches:murkantuan_flower", MURKANTUAN_FLOWER);
 		Registry.register(BLOCK, "deep_trenches:murkantuan_leaves", MURKANTUAN_LEAVES);
 		Registry.register(BLOCK, "deep_trenches:murkantuan_log", MURKANTUAN_LOG);
 		Registry.register(BLOCK, "deep_trenches:murkantuan_planks", MURKANTUAN_PLANKS);
@@ -5098,6 +6087,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:rhadi_sign", RHADI_SIGN);
 		Registry.register(BLOCK, "deep_trenches:rhadi_slab", RHADI_SLAB);
 		Registry.register(BLOCK, "deep_trenches:rhadi_stairs", RHADI_STAIRS);
+		Registry.register(BLOCK, "deep_trenches:rhadi_thorns", RHADI_THORNS);
 		Registry.register(BLOCK, "deep_trenches:rhadi_trapdoor", RHADI_TRAPDOOR);
 		Registry.register(BLOCK, "deep_trenches:rhadi_wall_sign", RHADI_WALL_SIGN);
 		Registry.register(BLOCK, "deep_trenches:rhadi_wood", RHADI_WOOD);
@@ -5513,6 +6503,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:potted_garden_pinks", POTTED_GARDEN_PINKS);
 		Registry.register(BLOCK, "deep_trenches:potted_green_pansy", POTTED_GREEN_PANSY);
 		Registry.register(BLOCK, "deep_trenches:potted_gyldelion_flower", POTTED_GYLDELION_FLOWER);
+		Registry.register(BLOCK, "deep_trenches:potted_limefork", POTTED_LIMEFORK);
 		Registry.register(BLOCK, "deep_trenches:potted_marsh_violet", POTTED_MARSH_VIOLET);
 		Registry.register(BLOCK, "deep_trenches:potted_native_violet", POTTED_NATIVE_VIOLET);
 		Registry.register(BLOCK, "deep_trenches:potted_opium_poppy", POTTED_OPIUM_POPPY);
@@ -5535,44 +6526,11 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:potted_squisacle", POTTED_SQUISACLE);
 		Registry.register(BLOCK, "deep_trenches:potted_sweet_violet", POTTED_SWEET_VIOLET);
 		Registry.register(BLOCK, "deep_trenches:potted_topped_lavender", POTTED_TOPPED_LAVENDER);
+		Registry.register(BLOCK, "deep_trenches:potted_twisttrap", POTTED_TWISTTRAP);
 		Registry.register(BLOCK, "deep_trenches:potted_vaslame", POTTED_VASLAME);
 		Registry.register(BLOCK, "deep_trenches:potted_weepistil", POTTED_WEEPISTIL);
 		Registry.register(BLOCK, "deep_trenches:potted_weepy_hollower", POTTED_WEEPY_HOLLOWER);
 		Registry.register(BLOCK, "deep_trenches:potted_yellow_violet", POTTED_YELLOW_VIOLET);
-
-		Registry.register(BLOCK, "deep_trenches:light_opalite", LIGHT_OPALITE);
-		Registry.register(BLOCK, "deep_trenches:lushine", LUSHINE);
-		Registry.register(BLOCK, "deep_trenches:lushine_pillar", LUSHINE_PILLAR);
-		Registry.register(BLOCK, "deep_trenches:lustrite", LUSTRITE);
-		Registry.register(BLOCK, "deep_trenches:marine_snow", MARINE_SNOW);
-		Registry.register(BLOCK, "deep_trenches:mosoil", MOSOIL);
-		Registry.register(BLOCK, "deep_trenches:opalite", OPALITE);
-		Registry.register(BLOCK, "deep_trenches:poinine", POININE);
-		Registry.register(BLOCK, "deep_trenches:rhodonite", RHODONITE);
-		Registry.register(BLOCK, "deep_trenches:sprilium", SPRILIUM);
-		Registry.register(BLOCK, "deep_trenches:skysoil", SKYSOIL);
-		Registry.register(BLOCK, "deep_trenches:skystone", SKYSTONE);
-		Registry.register(BLOCK, "deep_trenches:storcean_marine_snow", STORCEAN_MARINE_SNOW);
-		Registry.register(BLOCK, "deep_trenches:storcendite", STORCENDITE);
-		Registry.register(BLOCK, "deep_trenches:storcerack", STORCERACK);
-		Registry.register(BLOCK, "deep_trenches:verdine", VERDINE);
-
-		Registry.register(BLOCK, "deep_trenches:abyssopelagic_water", ABYSSOPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:acid", ACID);
-		Registry.register(BLOCK, "deep_trenches:bathypelagic_water", BATHYPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:brine", BRINE);
-		Registry.register(BLOCK, "deep_trenches:clear_water", CLEAR_WATER);
-		Registry.register(BLOCK, "deep_trenches:hadopelagic_water", HADOPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:mesopelagic_water", MESOPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:storcean_abyssopelagic_water", STORCEAN_ABYSSOPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:storcean_bathypelagic_water", STORCEAN_BATHYPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:storcean_enderpelagic_water", STORCEAN_ENDERPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:storcean_gasopelagic_water", STORCEAN_GASOPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:storcean_hadopelagic_water", STORCEAN_HADOPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:storcean_infinipelagic_water", STORCEAN_INFINIPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:storcean_mesopelagic_water", STORCEAN_MESOPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:storcean_virdipelagic_water", STORCEAN_VIRDIPELAGIC_WATER);
-		Registry.register(BLOCK, "deep_trenches:storcean_water", STORCEAN_WATER);
 	}
 
 }

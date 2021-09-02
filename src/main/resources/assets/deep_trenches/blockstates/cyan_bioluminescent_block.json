@@ -1,7 +1,7 @@
 {
-	"variants": {
-		"": {
-			"model": "deep_trenches:block/cyan_bioluminescent_block"
-		}
-	}
+    "variants": {
+        "": {
+            "model": "deep_trenches:block/cyan_bioluminescent_block"
+        }
+    }
 }

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "deep_trenches:block/medium_sapphrite_bud"
+    }
+}
