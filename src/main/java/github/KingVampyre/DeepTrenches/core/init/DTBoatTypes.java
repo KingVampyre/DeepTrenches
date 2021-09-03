@@ -21,7 +21,7 @@ public class DTBoatTypes {
     public static final FabricBoatType COOK_PINE = FabricBoatType.create("deep_trenches:cook_pine");
     public static final FabricBoatType CROLOOD = FabricBoatType.create("deep_trenches:crolood");
     public static final FabricBoatType DARK_CROLOOD = FabricBoatType.create("deep_trenches:dark_crolood");
-    public static final FabricBoatType DARK_FUSHSITRA = FabricBoatType.create("deep_trenches:dark_fuchsitra");
+    public static final FabricBoatType DARK_FUCHSITRA = FabricBoatType.create("deep_trenches:dark_fuchsitra");
     public static final FabricBoatType DARK_RED_ELM = FabricBoatType.create("deep_trenches:dark_red_elm");
     public static final FabricBoatType DEAD_WART_TREE = FabricBoatType.create("deep_trenches:dead_wart_tree");
     public static final FabricBoatType DRIGYUS = FabricBoatType.create("deep_trenches:drigyus");

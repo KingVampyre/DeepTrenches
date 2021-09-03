@@ -30,7 +30,7 @@ import static net.minecraft.util.registry.Registry.ITEM;
 
 public class DTItems {
 
-	/* --------------- FISH BUCKETS ----------------- */
+	/* FISH BUCKETS */
 	public static final Item BARBELED_LOOSEJAW_BUCKET;
 	public static final Item BETTA_BUCKET;
 	public static final Item BLACK_LOOSEJAW_BUCKET;
@@ -39,7 +39,7 @@ public class DTItems {
 	public static final Item LIGHT_LOOSEJAW_BUCKET;
 	public static final Item SMALLTOOTH_DRAGONFISH_BUCKET;
 
-	/* --------------- FLUID BUCKETS ----------------- */
+	/* FLUID BUCKETS */
 	public static final Item ABYSSOPELAGIC_WATER_BUCKET;
 	public static final Item ACID_BUCKET;
 	public static final Item BATHYPELAGIC_WATER_BUCKET;
@@ -57,7 +57,7 @@ public class DTItems {
 	public static final Item STORCEAN_VIRDIPELAGIC_WATER_BUCKET;
 	public static final Item STORCEAN_WATER_BUCKET;
 
-	/* ----------------- SPAWN EGGS ------------------- */
+	/* SPAWN EGGS */
 	public static final Item BARBELED_LOOSEJAW_SPAWN_EGG;
 	public static final Item BETTA_SPAWN_EGG;
 	public static final Item BLACK_LOOSEJAW_SPAWN_EGG;
@@ -67,7 +67,7 @@ public class DTItems {
 	public static final Item SMALLTOOTH_DRAGONFISH_SPAWN_EGG;
 	public static final Item STASP_SPAWN_EGG;
 
-	/* ------------- FRUITS -------------- */
+	/* FRUITS */
 	public static final Item ALMOND;
 	public static final Item ALMOND_DRUPE;
 	public static final Item AQUEAN_SAP;
@@ -80,7 +80,7 @@ public class DTItems {
 	public static final Item PLUM;
 	public static final Item THUNDERCLOUD_PLUM;
 
-	/* --------------- BOAT -------------- */
+	/* BOAT */
 	public static final Item ALMOND_BOAT;
 	public static final Item ANAMEATA_BOAT;
 	public static final Item ANGELS_TRUMPET_BOAT;
@@ -98,7 +98,7 @@ public class DTItems {
 	public static final Item COOK_PINE_BOAT;
 	public static final Item CROLOOD_BOAT;
 	public static final Item DARK_CROLOOD_BOAT;
-	public static final Item DARK_FUSHSITRA_BOAT;
+	public static final Item DARK_FUCHSITRA_BOAT;
 	public static final Item DARK_RED_ELM_BOAT;
 	public static final Item DEAD_WART_TREE_BOAT;
 	public static final Item DRIGYUS_BOAT;
@@ -141,7 +141,7 @@ public class DTItems {
 	public static final Item WENGE_BOAT;
 	public static final Item YEW_BOAT;
 
-	/* --------------- STICK -------------- */
+	/* STICK */
 	public static final Item ALMOND_STICK;
 	public static final Item ANAMEATA_STICK;
 	public static final Item ANGELS_TRUMPET_STICK;
@@ -159,7 +159,7 @@ public class DTItems {
 	public static final Item COOK_PINE_STICK;
 	public static final Item CROLOOD_STICK;
 	public static final Item DARK_CROLOOD_STICK;
-	public static final Item DARK_FUSHSITRA_STICK;
+	public static final Item DARK_FUCHSITRA_STICK;
 	public static final Item DARK_RED_ELM_STICK;
 	public static final Item DEAD_WART_TREE_STICK;
 	public static final Item DRIGYUS_STICK;
@@ -203,7 +203,7 @@ public class DTItems {
 	public static final Item WENGE_STICK;
 	public static final Item YEW_STICK;
 
-	/* --------------- FOOD ----------------- */
+	/* FOOD */
 	public static final Item BARBELED_LOOSEJAW;
 	public static final Item BETTA;
 	public static final Item BLACK_LOOSEJAW;
@@ -212,15 +212,15 @@ public class DTItems {
 	public static final Item LIGHT_LOOSEJAW;
 	public static final Item SMALLTOOTH_DRAGONFISH;
 
-	/* ------------- COOKED FOOD ---------------- */
+	/* COOKED FOOD */
 	public static final Item COOKED_GIANT_HATCHETFISH;
 
-	/* ------------- GOO's --------------------- */
+	/* GOO's */
 	public static final Item CYAN_BIOLUMINESCENT_GOO;
 	public static final Item GREEN_BIOLUMINESCENT_GOO;
 	public static final Item LIGHT_BLUE_BIOLUMINESCENT_GOO;
 
-	/* ------------- WEAPONS ----------- */
+	/* WEAPONS */
 	public static final Item ADAIGGER;
 	public static final Item BORON_TROOKENT;
 	public static final Item RUBY_DISTABBER;
@@ -238,6 +238,66 @@ public class DTItems {
 	public static final Item STROXITE_SWORD;
 	public static final Item TANZANITE_SWORD;
 	public static final Item TOPAZ_SWORD;
+
+	public static final Item ALMOND_SWORD;
+	public static final Item ANAMEATA_SWORD;
+	public static final Item ANGELS_TRUMPET_SWORD;
+	public static final Item AQUEAN_SWORD;
+	public static final Item BARSHROOKLE_SWORD;
+	public static final Item BLACK_BIRCH_SWORD;
+	public static final Item BLUE_MAHOE_SWORD;
+	public static final Item BLUE_SPRUCE_SWORD;
+	public static final Item BOTTLEBRUSH_SWORD;
+	public static final Item BROMYA_SWORD;
+	public static final Item BUBBLETREE_SWORD;
+	public static final Item CALCEARB_SWORD;
+	public static final Item CHERRY_SWORD;
+	public static final Item CHOTORN_SWORD;
+	public static final Item COOK_PINE_SWORD;
+	public static final Item CROLOOD_SWORD;
+	public static final Item DARK_CROLOOD_SWORD;
+	public static final Item DARK_FUCHSITRA_SWORD;
+	public static final Item DARK_RED_ELM_SWORD;
+	public static final Item DEAD_WART_TREE_SWORD;
+	public static final Item DRIGYUS_SWORD;
+	public static final Item EBONY_SWORD;
+	public static final Item ENDERHEART_SWORD;
+	public static final Item FLALM_SWORD;
+	public static final Item FRUCE_SWORD;
+	public static final Item FUCHSITRA_SWORD;
+	public static final Item FUGMOS_SWORD;
+	public static final Item FUNERANITE_SWORD;
+	public static final Item GHOSHROOM_SWORD;
+	public static final Item GIANT_VIOLET_SWORD;
+	public static final Item GUAIACUM_SWORD;
+	public static final Item JOSHUA_SWORD;
+	public static final Item KLINKII_PINE_SWORD;
+	public static final Item MELALEUCA_SWORD;
+	public static final Item MURKANTUAN_SWORD;
+	public static final Item NORFOLK_PINE_SWORD;
+	public static final Item OBSCRUS_SWORD;
+	public static final Item ORHPRIS_SWORD;
+	public static final Item PELTOGYNE_SWORD;
+	public static final Item PIN_CHERRY_SWORD;
+	public static final Item PLUM_SWORD;
+	public static final Item PURFUNGA_SWORD;
+	public static final Item RARK_SWORD;
+	public static final Item RED_ELM_SWORD;
+	public static final Item RHADI_SWORD;
+	public static final Item SANGUART_SWORD;
+	public static final Item SCARLET_THIORCEN_SWORD;
+	public static final Item SEQUOIA_SWORD;
+	public static final Item SPROOM_SWORD;
+	public static final Item STORTREEAN_SWORD;
+	public static final Item STROOMEAN_SWORD;
+	public static final Item SUNRISE_FUNGUS_SWORD;
+	public static final Item TARK_SWORD;
+	public static final Item TEAK_SWORD;
+	public static final Item THUNDERCLOUD_PLUM_SWORD;
+	public static final Item VYNHERT_SWORD;
+	public static final Item WART_TREE_SWORD;
+	public static final Item WENGE_SWORD;
+	public static final Item YEW_SWORD;
 
 	public static final Item AQUAMARINE_SCYTHE;
 	public static final Item BORON_SCYTHE;
@@ -258,7 +318,7 @@ public class DTItems {
 	public static final Item TOPAZ_STAFF;
 	public static final Item VOID_CRITTERED_DIOPSIDE_STAFF;
 
-	/* ------------- TOOLS ----------- */
+	/* METALLIC TOOLS */
 	public static final Item AQUAMARINE_AXE;
 	public static final Item AQUAMARINE_HOE;
 	public static final Item AQUAMARINE_PICKAXE;
@@ -354,7 +414,303 @@ public class DTItems {
 	public static final Item VOID_CRITTERED_DIOPSIDE_PICKAXE;
 	public static final Item VOID_CRITTERED_DIOPSIDE_SHOVEL;
 
-	/* ------------- ARMOR --------------------- */
+	/* WOODEN TOOLS */
+	public static final Item ALMOND_AXE;
+	public static final Item ALMOND_HOE;
+	public static final Item ALMOND_PICKAXE;
+	public static final Item ALMOND_SHOVEL;
+
+	public static final Item ANAMEATA_AXE;
+	public static final Item ANAMEATA_HOE;
+	public static final Item ANAMEATA_PICKAXE;
+	public static final Item ANAMEATA_SHOVEL;
+
+	public static final Item ANGELS_TRUMPET_AXE;
+	public static final Item ANGELS_TRUMPET_HOE;
+	public static final Item ANGELS_TRUMPET_PICKAXE;
+	public static final Item ANGELS_TRUMPET_SHOVEL;
+
+	public static final Item AQUEAN_AXE;
+	public static final Item AQUEAN_HOE;
+	public static final Item AQUEAN_PICKAXE;
+	public static final Item AQUEAN_SHOVEL;
+
+	public static final Item BARSHROOKLE_AXE;
+	public static final Item BARSHROOKLE_HOE;
+	public static final Item BARSHROOKLE_PICKAXE;
+	public static final Item BARSHROOKLE_SHOVEL;
+
+	public static final Item BLACK_BIRCH_AXE;
+	public static final Item BLACK_BIRCH_HOE;
+	public static final Item BLACK_BIRCH_PICKAXE;
+	public static final Item BLACK_BIRCH_SHOVEL;
+
+	public static final Item BLUE_MAHOE_AXE;
+	public static final Item BLUE_MAHOE_HOE;
+	public static final Item BLUE_MAHOE_PICKAXE;
+	public static final Item BLUE_MAHOE_SHOVEL;
+
+	public static final Item BLUE_SPRUCE_AXE;
+	public static final Item BLUE_SPRUCE_HOE;
+	public static final Item BLUE_SPRUCE_PICKAXE;
+	public static final Item BLUE_SPRUCE_SHOVEL;
+
+	public static final Item BOTTLEBRUSH_AXE;
+	public static final Item BOTTLEBRUSH_HOE;
+	public static final Item BOTTLEBRUSH_PICKAXE;
+	public static final Item BOTTLEBRUSH_SHOVEL;
+
+	public static final Item BROMYA_AXE;
+	public static final Item BROMYA_HOE;
+	public static final Item BROMYA_PICKAXE;
+	public static final Item BROMYA_SHOVEL;
+
+	public static final Item BUBBLETREE_AXE;
+	public static final Item BUBBLETREE_HOE;
+	public static final Item BUBBLETREE_PICKAXE;
+	public static final Item BUBBLETREE_SHOVEL;
+
+	public static final Item CALCEARB_AXE;
+	public static final Item CALCEARB_HOE;
+	public static final Item CALCEARB_PICKAXE;
+	public static final Item CALCEARB_SHOVEL;
+
+	public static final Item CHERRY_AXE;
+	public static final Item CHERRY_HOE;
+	public static final Item CHERRY_PICKAXE;
+	public static final Item CHERRY_SHOVEL;
+
+	public static final Item CHOTORN_AXE;
+	public static final Item CHOTORN_HOE;
+	public static final Item CHOTORN_PICKAXE;
+	public static final Item CHOTORN_SHOVEL;
+
+	public static final Item COOK_PINE_AXE;
+	public static final Item COOK_PINE_HOE;
+	public static final Item COOK_PINE_PICKAXE;
+	public static final Item COOK_PINE_SHOVEL;
+
+	public static final Item CROLOOD_AXE;
+	public static final Item CROLOOD_HOE;
+	public static final Item CROLOOD_PICKAXE;
+	public static final Item CROLOOD_SHOVEL;
+
+	public static final Item DARK_CROLOOD_AXE;
+	public static final Item DARK_CROLOOD_HOE;
+	public static final Item DARK_CROLOOD_PICKAXE;
+	public static final Item DARK_CROLOOD_SHOVEL;
+
+	public static final Item DARK_FUCHSITRA_AXE;
+	public static final Item DARK_FUCHSITRA_HOE;
+	public static final Item DARK_FUCHSITRA_PICKAXE;
+	public static final Item DARK_FUCHSITRA_SHOVEL;
+
+	public static final Item DARK_RED_ELM_AXE;
+	public static final Item DARK_RED_ELM_HOE;
+	public static final Item DARK_RED_ELM_PICKAXE;
+	public static final Item DARK_RED_ELM_SHOVEL;
+
+	public static final Item DEAD_WART_TREE_AXE;
+	public static final Item DEAD_WART_TREE_HOE;
+	public static final Item DEAD_WART_TREE_PICKAXE;
+	public static final Item DEAD_WART_TREE_SHOVEL;
+
+	public static final Item DRIGYUS_AXE;
+	public static final Item DRIGYUS_HOE;
+	public static final Item DRIGYUS_PICKAXE;
+	public static final Item DRIGYUS_SHOVEL;
+
+	public static final Item EBONY_AXE;
+	public static final Item EBONY_HOE;
+	public static final Item EBONY_PICKAXE;
+	public static final Item EBONY_SHOVEL;
+
+	public static final Item ENDERHEART_AXE;
+	public static final Item ENDERHEART_HOE;
+	public static final Item ENDERHEART_PICKAXE;
+	public static final Item ENDERHEART_SHOVEL;
+
+	public static final Item FLALM_AXE;
+	public static final Item FLALM_HOE;
+	public static final Item FLALM_PICKAXE;
+	public static final Item FLALM_SHOVEL;
+
+	public static final Item FRUCE_AXE;
+	public static final Item FRUCE_HOE;
+	public static final Item FRUCE_PICKAXE;
+	public static final Item FRUCE_SHOVEL;
+
+	public static final Item FUCHSITRA_AXE;
+	public static final Item FUCHSITRA_HOE;
+	public static final Item FUCHSITRA_PICKAXE;
+	public static final Item FUCHSITRA_SHOVEL;
+
+	public static final Item FUGMOS_AXE;
+	public static final Item FUGMOS_HOE;
+	public static final Item FUGMOS_PICKAXE;
+	public static final Item FUGMOS_SHOVEL;
+
+	public static final Item FUNERANITE_AXE;
+	public static final Item FUNERANITE_HOE;
+	public static final Item FUNERANITE_PICKAXE;
+	public static final Item FUNERANITE_SHOVEL;
+
+	public static final Item GHOSHROOM_AXE;
+	public static final Item GHOSHROOM_HOE;
+	public static final Item GHOSHROOM_PICKAXE;
+	public static final Item GHOSHROOM_SHOVEL;
+
+	public static final Item GIANT_VIOLET_AXE;
+	public static final Item GIANT_VIOLET_HOE;
+	public static final Item GIANT_VIOLET_PICKAXE;
+	public static final Item GIANT_VIOLET_SHOVEL;
+
+	public static final Item GUAIACUM_AXE;
+	public static final Item GUAIACUM_HOE;
+	public static final Item GUAIACUM_PICKAXE;
+	public static final Item GUAIACUM_SHOVEL;
+
+	public static final Item JOSHUA_AXE;
+	public static final Item JOSHUA_HOE;
+	public static final Item JOSHUA_PICKAXE;
+	public static final Item JOSHUA_SHOVEL;
+
+	public static final Item KLINKII_PINE_AXE;
+	public static final Item KLINKII_PINE_HOE;
+	public static final Item KLINKII_PINE_PICKAXE;
+	public static final Item KLINKII_PINE_SHOVEL;
+
+	public static final Item MELALEUCA_AXE;
+	public static final Item MELALEUCA_HOE;
+	public static final Item MELALEUCA_PICKAXE;
+	public static final Item MELALEUCA_SHOVEL;
+
+	public static final Item MURKANTUAN_AXE;
+	public static final Item MURKANTUAN_HOE;
+	public static final Item MURKANTUAN_PICKAXE;
+	public static final Item MURKANTUAN_SHOVEL;
+
+	public static final Item NORFOLK_PINE_AXE;
+	public static final Item NORFOLK_PINE_HOE;
+	public static final Item NORFOLK_PINE_PICKAXE;
+	public static final Item NORFOLK_PINE_SHOVEL;
+
+	public static final Item OBSCRUS_AXE;
+	public static final Item OBSCRUS_HOE;
+	public static final Item OBSCRUS_PICKAXE;
+	public static final Item OBSCRUS_SHOVEL;
+
+	public static final Item ORHPRIS_AXE;
+	public static final Item ORHPRIS_HOE;
+	public static final Item ORHPRIS_PICKAXE;
+	public static final Item ORHPRIS_SHOVEL;
+
+	public static final Item PELTOGYNE_AXE;
+	public static final Item PELTOGYNE_HOE;
+	public static final Item PELTOGYNE_PICKAXE;
+	public static final Item PELTOGYNE_SHOVEL;
+
+	public static final Item PIN_CHERRY_AXE;
+	public static final Item PIN_CHERRY_HOE;
+	public static final Item PIN_CHERRY_PICKAXE;
+	public static final Item PIN_CHERRY_SHOVEL;
+
+	public static final Item PLUM_AXE;
+	public static final Item PLUM_HOE;
+	public static final Item PLUM_PICKAXE;
+	public static final Item PLUM_SHOVEL;
+
+	public static final Item PURFUNGA_AXE;
+	public static final Item PURFUNGA_HOE;
+	public static final Item PURFUNGA_PICKAXE;
+	public static final Item PURFUNGA_SHOVEL;
+
+	public static final Item RARK_AXE;
+	public static final Item RARK_HOE;
+	public static final Item RARK_PICKAXE;
+	public static final Item RARK_SHOVEL;
+
+	public static final Item RED_ELM_AXE;
+	public static final Item RED_ELM_HOE;
+	public static final Item RED_ELM_PICKAXE;
+	public static final Item RED_ELM_SHOVEL;
+
+	public static final Item RHADI_AXE;
+	public static final Item RHADI_HOE;
+	public static final Item RHADI_PICKAXE;
+	public static final Item RHADI_SHOVEL;
+
+	public static final Item SANGUART_AXE;
+	public static final Item SANGUART_HOE;
+	public static final Item SANGUART_PICKAXE;
+	public static final Item SANGUART_SHOVEL;
+
+	public static final Item SCARLET_THIORCEN_AXE;
+	public static final Item SCARLET_THIORCEN_HOE;
+	public static final Item SCARLET_THIORCEN_PICKAXE;
+	public static final Item SCARLET_THIORCEN_SHOVEL;
+
+	public static final Item SEQUOIA_AXE;
+	public static final Item SEQUOIA_HOE;
+	public static final Item SEQUOIA_PICKAXE;
+	public static final Item SEQUOIA_SHOVEL;
+
+	public static final Item SPROOM_AXE;
+	public static final Item SPROOM_HOE;
+	public static final Item SPROOM_PICKAXE;
+	public static final Item SPROOM_SHOVEL;
+
+	public static final Item STORTREEAN_AXE;
+	public static final Item STORTREEAN_HOE;
+	public static final Item STORTREEAN_PICKAXE;
+	public static final Item STORTREEAN_SHOVEL;
+
+	public static final Item STROOMEAN_AXE;
+	public static final Item STROOMEAN_HOE;
+	public static final Item STROOMEAN_PICKAXE;
+	public static final Item STROOMEAN_SHOVEL;
+
+	public static final Item SUNRISE_FUNGUS_AXE;
+	public static final Item SUNRISE_FUNGUS_HOE;
+	public static final Item SUNRISE_FUNGUS_PICKAXE;
+	public static final Item SUNRISE_FUNGUS_SHOVEL;
+
+	public static final Item TARK_AXE;
+	public static final Item TARK_HOE;
+	public static final Item TARK_PICKAXE;
+	public static final Item TARK_SHOVEL;
+
+	public static final Item TEAK_AXE;
+	public static final Item TEAK_HOE;
+	public static final Item TEAK_PICKAXE;
+	public static final Item TEAK_SHOVEL;
+
+	public static final Item THUNDERCLOUD_PLUM_AXE;
+	public static final Item THUNDERCLOUD_PLUM_HOE;
+	public static final Item THUNDERCLOUD_PLUM_PICKAXE;
+	public static final Item THUNDERCLOUD_PLUM_SHOVEL;
+
+	public static final Item VYNHERT_AXE;
+	public static final Item VYNHERT_HOE;
+	public static final Item VYNHERT_PICKAXE;
+	public static final Item VYNHERT_SHOVEL;
+
+	public static final Item WART_TREE_AXE;
+	public static final Item WART_TREE_HOE;
+	public static final Item WART_TREE_PICKAXE;
+	public static final Item WART_TREE_SHOVEL;
+
+	public static final Item WENGE_AXE;
+	public static final Item WENGE_HOE;
+	public static final Item WENGE_PICKAXE;
+	public static final Item WENGE_SHOVEL;
+
+	public static final Item YEW_AXE;
+	public static final Item YEW_HOE;
+	public static final Item YEW_PICKAXE;
+	public static final Item YEW_SHOVEL;
+
+	/* ARMOR */
 	public static final Item AQUAMARINE_HELMET;
 	public static final Item AQUAMARINE_CHESTPLATE;
 	public static final Item AQUAMARINE_LEGGINGS;
@@ -440,15 +796,15 @@ public class DTItems {
 	public static final Item VOID_CRITTERED_DIOPSIDE_LEGGINGS;
 	public static final Item VOID_CRITTERED_DIOPSIDE_BOOTS;
 
-	/* ------------- TALISMANS --------------------- */
+	/* TALISMANS */
 	public static final Item AQUAMARINE_TALISMAN;
 	public static final Item SPHENE_TALISMAN;
 	public static final Item TANZANITE_TALISMAN;
 
-	/* ------------- JEWELRY --------------------- */
+	/* JEWELRY */
 	public static final Item BLACK_PEARL;
 
-	/* ------------- ORES --------------------- */
+	/* ORES */
 	public static final Item AQUAMARINE;
 	public static final Item BLACK_OPAL;
 	public static final Item CHALCEDONY;
@@ -475,7 +831,7 @@ public class DTItems {
 	public static final Item TOPAZ;
 	public static final Item VOID_CRITTERED_DIOPSIDE;
 
-	/* ------------ INGOTS ------------- */
+	/* INGOTS */
 	public static final Item ACTINIUM_INGOT;
 	public static final Item BORON_INGOT;
 	public static final Item ENRON_INGOT;
@@ -488,7 +844,7 @@ public class DTItems {
 	public static final Item URANIUM_INGOT;
 	public static final Item URANOLUMEN_INGOT;
 
-	/* ------------ NUGGETS ------------- */
+	/* NUGGETS */
 	public static final Item ACTINIUM_NUGGET;
 	public static final Item BORON_NUGGET;
 	public static final Item ENRON_NUGGET;
@@ -500,17 +856,17 @@ public class DTItems {
 	public static final Item URANIUM_NUGGET;
 	public static final Item URANOLUMEN_NUGGET;
 
-	/* ------------ POWDERS ------------- */
+	/* POWDERS */
 	public static final Item URANIUM_POWDER;
 	public static final Item URANOLUMEN_POWDER;
 
-	/* --------------- DYES --------------- */
+	/* DYES */
 	public static final Item GYLDELION_DYE;
 
-	/* ------------ MOB DROPS -------------- */
+	/* MOB DROPS */
 	public static final Item LOOSEJAW_TOOTH;
 
-	/* ------------ BLOCK ITEMS -------------- */
+	/* BLOCK ITEMS */
 	public static final Item AIRIAL_MOSS;
 
 	protected static Item createArmorItem(String id, ArmorMaterial material, EquipmentSlot slot) {
@@ -2444,7 +2800,7 @@ public class DTItems {
 		GIANT_HATCHETFISH_BUCKET = createFishBucket("deep_trenches:giant_hatchetfish_bucket", DTEntityTypes.GIANT_HATCHETFISH,  DTEntityTypeTags.ARGYROPELECUS_GIGAS);
 		SMALLTOOTH_DRAGONFISH_BUCKET = createFishBucket("deep_trenches:smalltooth_dragonfish_bucket", DTEntityTypes.SMALLTOOTH_DRAGONFISH, DTEntityTypeTags.PACHYSTOMIAS_MICRODON);
 
-		/* -------------------------------- SPAWN EGGS ------------------------------------------- */
+		/* SPAWN EGGS */
 		BARBELED_LOOSEJAW_SPAWN_EGG = createSpawnEgg("deep_trenches:barbeled_loosejaw_spawn_egg", DTEntityTypes.BARBELED_LOOSEJAW, 921113, 15859744);
 		BETTA_SPAWN_EGG = createSpawnEgg("deep_trenches:betta_spawn_egg", DTEntityTypes.BETTA,7347502, 9183521);
 		BLACK_LOOSEJAW_SPAWN_EGG = createSpawnEgg("deep_trenches:black_loosejaw_spawn_egg", DTEntityTypes.BLACK_LOOSEJAW,2102566, 11010053);
@@ -2455,7 +2811,7 @@ public class DTItems {
 		GIANT_HATCHETFISH_SPAWN_EGG = createSpawnEgg("deep_trenches:giant_hatchetfish_spawn_egg", DTEntityTypes.GIANT_HATCHETFISH, DTEntityTypeTags.ARGYROPELECUS_GIGAS, 9870757, 12311039);
 		SMALLTOOTH_DRAGONFISH_SPAWN_EGG = createSpawnEgg("deep_trenches:smalltooth_dragonfish_spawn_egg", DTEntityTypes.SMALLTOOTH_DRAGONFISH, DTEntityTypeTags.PACHYSTOMIAS_MICRODON, 1250598, 16728832);
 
-		/* -------------------------------- FRUITS ------------------------------------------- */
+		/* FRUITS */
 		ALMOND = createFood("deep_trenches:almond", SWEET_BERRIES);
 		ALMOND_DRUPE = createFood("deep_trenches:almond_drupe", SWEET_BERRIES);
 		AQUEAN_SAP = createItem("deep_trenches:aquean_sap", MISC);
@@ -2468,7 +2824,7 @@ public class DTItems {
 		PLUM = createFood("deep_trenches:plum", APPLE);
 		THUNDERCLOUD_PLUM = createFood("deep_trenches:thundercloud_plum", APPLE);
 
-		/* -------------------------------- BOAT ------------------------------------------- */
+		/* BOAT */
 		ALMOND_BOAT = createBoat("deep_trenches:almond_boat", DTBoatTypes.ALMOND);
 		ANAMEATA_BOAT = createBoat("deep_trenches:anameata_boat", DTBoatTypes.ANAMEATA);
 		ANGELS_TRUMPET_BOAT = createBoat("deep_trenches:angels_trumpet_boat", DTBoatTypes.ANGELS_TRUMPET);
@@ -2486,7 +2842,7 @@ public class DTItems {
 		COOK_PINE_BOAT = createBoat("deep_trenches:cook_pine_boat", DTBoatTypes.COOK_PINE);
 		CROLOOD_BOAT = createBoat("deep_trenches:crolood_boat", DTBoatTypes.CROLOOD);
 		DARK_CROLOOD_BOAT = createBoat("deep_trenches:dark_crolood_boat", DTBoatTypes.DARK_CROLOOD);
-		DARK_FUSHSITRA_BOAT = createBoat("deep_trenches:dark_fuchsitra_boat", DTBoatTypes.DARK_FUSHSITRA);
+		DARK_FUCHSITRA_BOAT = createBoat("deep_trenches:dark_fuchsitra_boat", DTBoatTypes.DARK_FUCHSITRA);
 		DARK_RED_ELM_BOAT = createBoat("deep_trenches:dark_red_elm_boat", DTBoatTypes.DARK_RED_ELM);
 		DEAD_WART_TREE_BOAT = createBoat("deep_trenches:dead_wart_tree_boat", DTBoatTypes.DEAD_WART_TREE);
 		DRIGYUS_BOAT = createBoat("deep_trenches:drigyus_boat", DTBoatTypes.DRIGYUS);
@@ -2529,7 +2885,7 @@ public class DTItems {
 		WENGE_BOAT = createBoat("deep_trenches:wenge_boat", DTBoatTypes.WENGE);
 		YEW_BOAT = createBoat("deep_trenches:yew_boat", DTBoatTypes.YEW);
 
-		/* -------------------------------- STICK ------------------------------------------- */
+		/* STICK */
 		ALMOND_STICK = createItem("deep_trenches:almond_stick", ARBOROLOGY);
 		ANAMEATA_STICK = createItem("deep_trenches:anameata_stick", ARBOROLOGY);
 		ANGELS_TRUMPET_STICK = createItem("deep_trenches:angels_trumpet_stick", ARBOROLOGY);
@@ -2547,7 +2903,7 @@ public class DTItems {
 		COOK_PINE_STICK = createItem("deep_trenches:cook_pine_stick", ARBOROLOGY);
 		CROLOOD_STICK = createItem("deep_trenches:crolood_stick", ARBOROLOGY);
 		DARK_CROLOOD_STICK = createItem("deep_trenches:dark_crolood_stick", ARBOROLOGY);
-		DARK_FUSHSITRA_STICK = createItem("deep_trenches:dark_fuchsitra_stick", ARBOROLOGY);
+		DARK_FUCHSITRA_STICK = createItem("deep_trenches:dark_fuchsitra_stick", ARBOROLOGY);
 		DARK_RED_ELM_STICK = createItem("deep_trenches:dark_red_elm_stick", ARBOROLOGY);
 		DEAD_WART_TREE_STICK = createItem("deep_trenches:dead_wart_tree_stick", ARBOROLOGY);
 		DRIGYUS_STICK = createItem("deep_trenches:drigyus_stick", ARBOROLOGY);
@@ -2591,7 +2947,7 @@ public class DTItems {
 		WENGE_STICK = createItem("deep_trenches:wenge_stick", ARBOROLOGY);
 		YEW_STICK = createItem("deep_trenches:yew_stick", ARBOROLOGY);
 
-		/* -------------------------------- FOOD ------------------------------------------- */
+		/* FOOD */
 		BARBELED_LOOSEJAW = createFood("deep_trenches:barbeled_loosejaw", STORCEAN_FISH);
 		BETTA = createFood("deep_trenches:betta", STORCEAN_FISH);
 		BLACK_LOOSEJAW = createFood("deep_trenches:black_loosejaw", STORCEAN_FISH);
@@ -2600,15 +2956,15 @@ public class DTItems {
 		LIGHT_LOOSEJAW = createFood("deep_trenches:light_loosejaw", STORCEAN_FISH);
 		SMALLTOOTH_DRAGONFISH =  createFood("deep_trenches:smalltooth_dragonfish", STORCEAN_FISH);
 
-		/* -------------------------------- COOKED FOOD ------------------------------------------- */
+		/* COOKED FOOD */
 		COOKED_GIANT_HATCHETFISH = createFood("deep_trenches:cooked_giant_hatchetfish", DTFoodComponents.COOKED_GIANT_HATCHETFISH);
 
-		/* -------------------------------- GOO's ------------------------------------------- */
+		/* GOO's */
 		CYAN_BIOLUMINESCENT_GOO = createItem("deep_trenches:cyan_bioluminescent_goo", MISC);
 		GREEN_BIOLUMINESCENT_GOO = createItem("deep_trenches:green_bioluminescent_goo", MISC);
 		LIGHT_BLUE_BIOLUMINESCENT_GOO = createItem("deep_trenches:light_blue_bioluminescent_goo", MISC);
 
-		/* -------------------------------- WEAPONS ------------------------------------------- */
+		/* WEAPONS */
 		ADAIGGER = register("deep_trenches:adaigger", new AdaiggerItem(DTToolMaterials.GYLDELION, 4, 4F, new Settings().group(COMBAT)));
 		BORON_TROOKENT = register("deep_trenches:boron_trookent", new TrookentItem(DTToolMaterials.BORON, 4, 4F, new Settings().group(COMBAT)));
 		MORGANITE_SABER = register("deep_trenches:morganite_saber", new TrookentItem(DTToolMaterials.MORGANITE, 4, 4F, new Settings().group(COMBAT)));
@@ -2626,6 +2982,66 @@ public class DTItems {
 		STROXITE_SWORD = createSword("deep_trenches:stroxite_sword", DTToolMaterials.STROXITE, 3, -2.4F);
 		TANZANITE_SWORD = createSword("deep_trenches:tanzanite_sword", DTToolMaterials.TANZANITE, 3, -2.4F);
 		TOPAZ_SWORD = createSword("deep_trenches:topaz_sword", DTToolMaterials.TOPAZ, 3, -2.4F);
+
+		ALMOND_SWORD = createSword("deep_trenches:almond_sword", DTToolMaterials.ALMOND, 3, -2.4F);
+		ANAMEATA_SWORD = createSword("deep_trenches:anameata_sword", DTToolMaterials.ANAMEATA, 3, -2.4F);
+		ANGELS_TRUMPET_SWORD = createSword("deep_trenches:angels_trumpet_sword", DTToolMaterials.ANGELS_TRUMPET, 3, -2.4F);
+		AQUEAN_SWORD = createSword("deep_trenches:aquean_sword", DTToolMaterials.AQUEAN, 3, -2.4F);
+		BARSHROOKLE_SWORD = createSword("deep_trenches:barshrookle_sword", DTToolMaterials.BARSHROOKLE, 3, -2.4F);
+		BLACK_BIRCH_SWORD = createSword("deep_trenches:black_birch_sword", DTToolMaterials.BLACK_BIRCH, 3, -2.4F);
+		BLUE_MAHOE_SWORD = createSword("deep_trenches:blue_mahoe_sword", DTToolMaterials.BLUE_MAHOE, 3, -2.4F);
+		BLUE_SPRUCE_SWORD = createSword("deep_trenches:blue_spruce_sword", DTToolMaterials.BLUE_SPRUCE, 3, -2.4F);
+		BOTTLEBRUSH_SWORD = createSword("deep_trenches:bottlebrush_sword", DTToolMaterials.BOTTLEBRUSH, 3, -2.4F);
+		BROMYA_SWORD = createSword("deep_trenches:bromya_sword", DTToolMaterials.BROMYA, 3, -2.4F);
+		BUBBLETREE_SWORD = createSword("deep_trenches:bubbletree_sword", DTToolMaterials.BUBBLETREE, 3, -2.4F);
+		CALCEARB_SWORD = createSword("deep_trenches:calcearb_sword", DTToolMaterials.CALCEARB, 3, -2.4F);
+		CHERRY_SWORD = createSword("deep_trenches:cherry_sword", DTToolMaterials.CHERRY, 3, -2.4F);
+		CHOTORN_SWORD = createSword("deep_trenches:chotorn_sword", DTToolMaterials.CHOTORN, 3, -2.4F);
+		COOK_PINE_SWORD = createSword("deep_trenches:cook_pine_sword", DTToolMaterials.COOK_PINE, 3, -2.4F);
+		CROLOOD_SWORD = createSword("deep_trenches:crolood_sword", DTToolMaterials.CROLOOD, 3, -2.4F);
+		DARK_CROLOOD_SWORD = createSword("deep_trenches:dark_crolood_sword", DTToolMaterials.DARK_CROLOOD, 3, -2.4F);
+		DARK_FUCHSITRA_SWORD = createSword("deep_trenches:dark_fuchsitra_sword", DTToolMaterials.DARK_FUCHSITRA, 3, -2.4F);
+		DARK_RED_ELM_SWORD = createSword("deep_trenches:dark_red_elm_sword", DTToolMaterials.DARK_RED_ELM, 3, -2.4F);
+		DEAD_WART_TREE_SWORD = createSword("deep_trenches:dead_wart_tree_sword", DTToolMaterials.DEAD_WART_TREE, 3, -2.4F);
+		DRIGYUS_SWORD = createSword("deep_trenches:drigyus_sword", DTToolMaterials.DRIGYUS, 3, -2.4F);
+		EBONY_SWORD = createSword("deep_trenches:ebony_sword", DTToolMaterials.EBONY, 3, -2.4F);
+		ENDERHEART_SWORD = createSword("deep_trenches:enderheart_sword", DTToolMaterials.ENDERHEART, 3, -2.4F);
+		FLALM_SWORD = createSword("deep_trenches:flalm_sword", DTToolMaterials.FLALM, 3, -2.4F);
+		FRUCE_SWORD = createSword("deep_trenches:fruce_sword", DTToolMaterials.FRUCE, 3, -2.4F);
+		FUCHSITRA_SWORD = createSword("deep_trenches:fuchsitra_sword", DTToolMaterials.FUCHSITRA, 3, -2.4F);
+		FUGMOS_SWORD = createSword("deep_trenches:fugmos_sword", DTToolMaterials.FUGMOS, 3, -2.4F);
+		FUNERANITE_SWORD = createSword("deep_trenches:funeranite_sword", DTToolMaterials.FUNERANITE, 3, -2.4F);
+		GHOSHROOM_SWORD = createSword("deep_trenches:ghoshroom_sword", DTToolMaterials.GHOSHROOM, 3, -2.4F);
+		GIANT_VIOLET_SWORD = createSword("deep_trenches:giant_violet_sword", DTToolMaterials.GIANT_VIOLET, 3, -2.4F);
+		GUAIACUM_SWORD = createSword("deep_trenches:guaiacum_sword", DTToolMaterials.GUAIACUM, 3, -2.4F);
+		JOSHUA_SWORD = createSword("deep_trenches:joshua_sword", DTToolMaterials.JOSHUA, 3, -2.4F);
+		KLINKII_PINE_SWORD = createSword("deep_trenches:klinkii_pine_sword", DTToolMaterials.KLINKII_PINE, 3, -2.4F);
+		MELALEUCA_SWORD = createSword("deep_trenches:melaleuca_sword", DTToolMaterials.MELALEUCA, 3, -2.4F);
+		MURKANTUAN_SWORD = createSword("deep_trenches:murkantuan_sword", DTToolMaterials.MURKANTUAN, 3, -2.4F);
+		NORFOLK_PINE_SWORD = createSword("deep_trenches:norfolk_pine_sword", DTToolMaterials.NORFOLK_PINE, 3, -2.4F);
+		OBSCRUS_SWORD = createSword("deep_trenches:obscrus_sword", DTToolMaterials.OBSCRUS, 3, -2.4F);
+		ORHPRIS_SWORD = createSword("deep_trenches:orhpris_sword", DTToolMaterials.ORHPRIS, 3, -2.4F);
+		PELTOGYNE_SWORD = createSword("deep_trenches:peltogyne_sword", DTToolMaterials.PELTOGYNE, 3, -2.4F);
+		PIN_CHERRY_SWORD = createSword("deep_trenches:pin_cherry_sword", DTToolMaterials.PIN_CHERRY, 3, -2.4F);
+		PLUM_SWORD = createSword("deep_trenches:plum_sword", DTToolMaterials.PLUM, 3, -2.4F);
+		PURFUNGA_SWORD = createSword("deep_trenches:purfunga_sword", DTToolMaterials.PURFUNGA, 3, -2.4F);
+		RARK_SWORD = createSword("deep_trenches:rark_sword", DTToolMaterials.RARK, 3, -2.4F);
+		RED_ELM_SWORD = createSword("deep_trenches:red_elm_sword", DTToolMaterials.RED_ELM, 3, -2.4F);
+		RHADI_SWORD = createSword("deep_trenches:rhadi_sword", DTToolMaterials.RHADI, 3, -2.4F);
+		SANGUART_SWORD = createSword("deep_trenches:sanguart_sword", DTToolMaterials.SANGUART, 3, -2.4F);
+		SCARLET_THIORCEN_SWORD = createSword("deep_trenches:scarlet_thiorcen_sword", DTToolMaterials.SCARLET_THIORCEN, 3, -2.4F);
+		SEQUOIA_SWORD = createSword("deep_trenches:sequoia_sword", DTToolMaterials.SEQUOIA, 3, -2.4F);
+		SPROOM_SWORD = createSword("deep_trenches:sproom_sword", DTToolMaterials.SPROOM, 3, -2.4F);
+		STORTREEAN_SWORD = createSword("deep_trenches:stortreean_sword", DTToolMaterials.STORTREEAN, 3, -2.4F);
+		STROOMEAN_SWORD = createSword("deep_trenches:stroomean_sword", DTToolMaterials.STROOMEAN, 3, -2.4F);
+		SUNRISE_FUNGUS_SWORD = createSword("deep_trenches:sunrise_fungus_sword", DTToolMaterials.SUNRISE_FUNGUS, 3, -2.4F);
+		TARK_SWORD = createSword("deep_trenches:tark_sword", DTToolMaterials.TARK, 3, -2.4F);
+		TEAK_SWORD = createSword("deep_trenches:teak_sword", DTToolMaterials.TEAK, 3, -2.4F);
+		THUNDERCLOUD_PLUM_SWORD = createSword("deep_trenches:thundercloud_plum_sword", DTToolMaterials.THUNDERCLOUD_PLUM, 3, -2.4F);
+		VYNHERT_SWORD = createSword("deep_trenches:vynhert_sword", DTToolMaterials.VYNHERT, 3, -2.4F);
+		WART_TREE_SWORD = createSword("deep_trenches:wart_tree_sword", DTToolMaterials.WART_TREE, 3, -2.4F);
+		WENGE_SWORD = createSword("deep_trenches:wenge_sword", DTToolMaterials.WENGE, 3, -2.4F);
+		YEW_SWORD = createSword("deep_trenches:yew_sword", DTToolMaterials.YEW, 3, -2.4F);
 
 		AQUAMARINE_SCYTHE = createScythe("deep_trenches:aquamarine_scythe", DTToolMaterials.AQUAMARINE, 7, -2.1F);
 		BORON_SCYTHE = createScythe("deep_trenches:boron_scythe", DTToolMaterials.BORON, 7, -2.1F);
@@ -2646,7 +3062,7 @@ public class DTItems {
 		TOPAZ_STAFF = createStaff("deep_trenches:topaz_staff");
 		VOID_CRITTERED_DIOPSIDE_STAFF = createStaff("deep_trenches:void_crittered_diopside_staff");
 
-		/* --------------------------------- TOOLS -------------------------------------------- */
+		/* METALLIC TOOLS */
 		AQUAMARINE_AXE = createAxe("deep_trenches:aquamarine_axe", DTToolMaterials.AQUAMARINE, 6F, -3.1F);
 		AQUAMARINE_HOE = createHoe("deep_trenches:aquamarine_hoe", DTToolMaterials.AQUAMARINE, -2, -1F);
 		AQUAMARINE_PICKAXE = createPickaxe("deep_trenches:aquamarine_pickaxe", DTToolMaterials.AQUAMARINE, 1, -2.8F);
@@ -2742,7 +3158,303 @@ public class DTItems {
 		VOID_CRITTERED_DIOPSIDE_PICKAXE = createPickaxe("deep_trenches:void_crittered_diopside_pickaxe", DTToolMaterials.VOID_CRITTERED_DIOPSIDE, 1, -2.8F);
 		VOID_CRITTERED_DIOPSIDE_SHOVEL = createShovel("deep_trenches:void_crittered_diopside_shovel", DTToolMaterials.VOID_CRITTERED_DIOPSIDE, 1.5F, -3F);
 
-		/* ------------------------------------- ARMOR ----------------------------------------------- */
+		/* WOODEN TOOLS */
+		ALMOND_AXE = createAxe("deep_trenches:almond_axe", DTToolMaterials.ALMOND, 6F, -3.2F);
+		ALMOND_HOE = createHoe("deep_trenches:almond_hoe", DTToolMaterials.ALMOND, 0, -3F);
+		ALMOND_PICKAXE = createPickaxe("deep_trenches:almond_pickaxe", DTToolMaterials.ALMOND, 1, -2.8F);
+		ALMOND_SHOVEL = createShovel("deep_trenches:almond_shovel", DTToolMaterials.ALMOND, 1.5F, -3F);
+
+		ANAMEATA_AXE = createAxe("deep_trenches:anameata_axe", DTToolMaterials.ANAMEATA, 6F, -3.2F);
+		ANAMEATA_HOE = createHoe("deep_trenches:anameata_hoe", DTToolMaterials.ANAMEATA, 0, -3F);
+		ANAMEATA_PICKAXE = createPickaxe("deep_trenches:anameata_pickaxe", DTToolMaterials.ANAMEATA, 1, -2.8F);
+		ANAMEATA_SHOVEL = createShovel("deep_trenches:anameata_shovel", DTToolMaterials.ANAMEATA, 1.5F, -3F);
+
+		ANGELS_TRUMPET_AXE = createAxe("deep_trenches:angels_trumpet_axe", DTToolMaterials.ANGELS_TRUMPET, 6F, -3.2F);
+		ANGELS_TRUMPET_HOE = createHoe("deep_trenches:angels_trumpet_hoe", DTToolMaterials.ANGELS_TRUMPET, 0, -3F);
+		ANGELS_TRUMPET_PICKAXE = createPickaxe("deep_trenches:angels_trumpet_pickaxe", DTToolMaterials.ANGELS_TRUMPET, 1, -2.8F);
+		ANGELS_TRUMPET_SHOVEL = createShovel("deep_trenches:angels_trumpet_shovel", DTToolMaterials.ANGELS_TRUMPET, 1.5F, -3F);
+
+		AQUEAN_AXE = createAxe("deep_trenches:aquean_axe", DTToolMaterials.AQUEAN, 6F, -3.2F);
+		AQUEAN_HOE = createHoe("deep_trenches:aquean_hoe", DTToolMaterials.AQUEAN, 0, -3F);
+		AQUEAN_PICKAXE = createPickaxe("deep_trenches:aquean_pickaxe", DTToolMaterials.AQUEAN, 1, -2.8F);
+		AQUEAN_SHOVEL = createShovel("deep_trenches:aquean_shovel", DTToolMaterials.AQUEAN, 1.5F, -3F);
+
+		BARSHROOKLE_AXE = createAxe("deep_trenches:barshrookle_axe", DTToolMaterials.BARSHROOKLE, 6F, -3.2F);
+		BARSHROOKLE_HOE = createHoe("deep_trenches:barshrookle_hoe", DTToolMaterials.BARSHROOKLE, 0, -3F);
+		BARSHROOKLE_PICKAXE = createPickaxe("deep_trenches:barshrookle_pickaxe", DTToolMaterials.BARSHROOKLE, 1, -2.8F);
+		BARSHROOKLE_SHOVEL = createShovel("deep_trenches:barshrookle_shovel", DTToolMaterials.BARSHROOKLE, 1.5F, -3F);
+
+		BLACK_BIRCH_AXE = createAxe("deep_trenches:black_birch_axe", DTToolMaterials.BLACK_BIRCH, 6F, -3.2F);
+		BLACK_BIRCH_HOE = createHoe("deep_trenches:black_birch_hoe", DTToolMaterials.BLACK_BIRCH, 0, -3F);
+		BLACK_BIRCH_PICKAXE = createPickaxe("deep_trenches:black_birch_pickaxe", DTToolMaterials.BLACK_BIRCH, 1, -2.8F);
+		BLACK_BIRCH_SHOVEL = createShovel("deep_trenches:black_birch_shovel", DTToolMaterials.BLACK_BIRCH, 1.5F, -3F);
+
+		BLUE_MAHOE_AXE = createAxe("deep_trenches:blue_mahoe_axe", DTToolMaterials.BLUE_MAHOE, 6F, -3.2F);
+		BLUE_MAHOE_HOE = createHoe("deep_trenches:blue_mahoe_hoe", DTToolMaterials.BLUE_MAHOE, 0, -3F);
+		BLUE_MAHOE_PICKAXE = createPickaxe("deep_trenches:blue_mahoe_pickaxe", DTToolMaterials.BLUE_MAHOE, 1, -2.8F);
+		BLUE_MAHOE_SHOVEL = createShovel("deep_trenches:blue_mahoe_shovel", DTToolMaterials.BLUE_MAHOE, 1.5F, -3F);
+
+		BLUE_SPRUCE_AXE = createAxe("deep_trenches:blue_spruce_axe", DTToolMaterials.BLUE_SPRUCE, 6F, -3.2F);
+		BLUE_SPRUCE_HOE = createHoe("deep_trenches:blue_spruce_hoe", DTToolMaterials.BLUE_SPRUCE, 0, -3F);
+		BLUE_SPRUCE_PICKAXE = createPickaxe("deep_trenches:blue_spruce_pickaxe", DTToolMaterials.BLUE_SPRUCE, 1, -2.8F);
+		BLUE_SPRUCE_SHOVEL = createShovel("deep_trenches:blue_spruce_shovel", DTToolMaterials.BLUE_SPRUCE, 1.5F, -3F);
+
+		BOTTLEBRUSH_AXE = createAxe("deep_trenches:bottlebrush_axe", DTToolMaterials.BOTTLEBRUSH, 6F, -3.2F);
+		BOTTLEBRUSH_HOE = createHoe("deep_trenches:bottlebrush_hoe", DTToolMaterials.BOTTLEBRUSH, 0, -3F);
+		BOTTLEBRUSH_PICKAXE = createPickaxe("deep_trenches:bottlebrush_pickaxe", DTToolMaterials.BOTTLEBRUSH, 1, -2.8F);
+		BOTTLEBRUSH_SHOVEL = createShovel("deep_trenches:bottlebrush_shovel", DTToolMaterials.BOTTLEBRUSH, 1.5F, -3F);
+
+		BROMYA_AXE = createAxe("deep_trenches:bromya_axe", DTToolMaterials.BROMYA, 6F, -3.2F);
+		BROMYA_HOE = createHoe("deep_trenches:bromya_hoe", DTToolMaterials.BROMYA, 0, -3F);
+		BROMYA_PICKAXE = createPickaxe("deep_trenches:bromya_pickaxe", DTToolMaterials.BROMYA, 1, -2.8F);
+		BROMYA_SHOVEL = createShovel("deep_trenches:bromya_shovel", DTToolMaterials.BROMYA, 1.5F, -3F);
+
+		BUBBLETREE_AXE = createAxe("deep_trenches:bubbletree_axe", DTToolMaterials.BUBBLETREE, 6F, -3.2F);
+		BUBBLETREE_HOE = createHoe("deep_trenches:bubbletree_hoe", DTToolMaterials.BUBBLETREE, 0, -3F);
+		BUBBLETREE_PICKAXE = createPickaxe("deep_trenches:bubbletree_pickaxe", DTToolMaterials.BUBBLETREE, 1, -2.8F);
+		BUBBLETREE_SHOVEL = createShovel("deep_trenches:bubbletree_shovel", DTToolMaterials.BUBBLETREE, 1.5F, -3F);
+
+		CALCEARB_AXE = createAxe("deep_trenches:calcearb_axe", DTToolMaterials.CALCEARB, 6F, -3.2F);
+		CALCEARB_HOE = createHoe("deep_trenches:calcearb_hoe", DTToolMaterials.CALCEARB, 0, -3F);
+		CALCEARB_PICKAXE = createPickaxe("deep_trenches:calcearb_pickaxe", DTToolMaterials.CALCEARB, 1, -2.8F);
+		CALCEARB_SHOVEL = createShovel("deep_trenches:calcearb_shovel", DTToolMaterials.CALCEARB, 1.5F, -3F);
+
+		CHERRY_AXE = createAxe("deep_trenches:cherry_axe", DTToolMaterials.CHERRY, 6F, -3.2F);
+		CHERRY_HOE = createHoe("deep_trenches:cherry_hoe", DTToolMaterials.CHERRY, 0, -3F);
+		CHERRY_PICKAXE = createPickaxe("deep_trenches:cherry_pickaxe", DTToolMaterials.CHERRY, 1, -2.8F);
+		CHERRY_SHOVEL = createShovel("deep_trenches:cherry_shovel", DTToolMaterials.CHERRY, 1.5F, -3F);
+
+		CHOTORN_AXE = createAxe("deep_trenches:chotorn_axe", DTToolMaterials.CHOTORN, 6F, -3.2F);
+		CHOTORN_HOE = createHoe("deep_trenches:chotorn_hoe", DTToolMaterials.CHOTORN, 0, -3F);
+		CHOTORN_PICKAXE = createPickaxe("deep_trenches:chotorn_pickaxe", DTToolMaterials.CHOTORN, 1, -2.8F);
+		CHOTORN_SHOVEL = createShovel("deep_trenches:chotorn_shovel", DTToolMaterials.CHOTORN, 1.5F, -3F);
+
+		COOK_PINE_AXE = createAxe("deep_trenches:cook_pine_axe", DTToolMaterials.COOK_PINE, 6F, -3.2F);
+		COOK_PINE_HOE = createHoe("deep_trenches:cook_pine_hoe", DTToolMaterials.COOK_PINE, 0, -3F);
+		COOK_PINE_PICKAXE = createPickaxe("deep_trenches:cook_pine_pickaxe", DTToolMaterials.COOK_PINE, 1, -2.8F);
+		COOK_PINE_SHOVEL = createShovel("deep_trenches:cook_pine_shovel", DTToolMaterials.COOK_PINE, 1.5F, -3F);
+
+		CROLOOD_AXE = createAxe("deep_trenches:crolood_axe", DTToolMaterials.CROLOOD, 6F, -3.2F);
+		CROLOOD_HOE = createHoe("deep_trenches:crolood_hoe", DTToolMaterials.CROLOOD, 0, -3F);
+		CROLOOD_PICKAXE = createPickaxe("deep_trenches:crolood_pickaxe", DTToolMaterials.CROLOOD, 1, -2.8F);
+		CROLOOD_SHOVEL = createShovel("deep_trenches:crolood_shovel", DTToolMaterials.CROLOOD, 1.5F, -3F);
+
+		DARK_CROLOOD_AXE = createAxe("deep_trenches:dark_crolood_axe", DTToolMaterials.DARK_CROLOOD, 6F, -3.2F);
+		DARK_CROLOOD_HOE = createHoe("deep_trenches:dark_crolood_hoe", DTToolMaterials.DARK_CROLOOD, 0, -3F);
+		DARK_CROLOOD_PICKAXE = createPickaxe("deep_trenches:dark_crolood_pickaxe", DTToolMaterials.DARK_CROLOOD, 1, -2.8F);
+		DARK_CROLOOD_SHOVEL = createShovel("deep_trenches:dark_crolood_shovel", DTToolMaterials.DARK_CROLOOD, 1.5F, -3F);
+
+		DARK_FUCHSITRA_AXE = createAxe("deep_trenches:dark_fushsitra_axe", DTToolMaterials.DARK_FUCHSITRA, 6F, -3.2F);
+		DARK_FUCHSITRA_HOE = createHoe("deep_trenches:dark_fushsitra_hoe", DTToolMaterials.DARK_FUCHSITRA, 0, -3F);
+		DARK_FUCHSITRA_PICKAXE = createPickaxe("deep_trenches:dark_fushsitra_pickaxe", DTToolMaterials.DARK_FUCHSITRA, 1, -2.8F);
+		DARK_FUCHSITRA_SHOVEL = createShovel("deep_trenches:dark_fushsitra_shovel", DTToolMaterials.DARK_FUCHSITRA, 1.5F, -3F);
+
+		DARK_RED_ELM_AXE = createAxe("deep_trenches:dark_red_elm_axe", DTToolMaterials.DARK_RED_ELM, 6F, -3.2F);
+		DARK_RED_ELM_HOE = createHoe("deep_trenches:dark_red_elm_hoe", DTToolMaterials.DARK_RED_ELM, 0, -3F);
+		DARK_RED_ELM_PICKAXE = createPickaxe("deep_trenches:dark_red_elm_pickaxe", DTToolMaterials.DARK_RED_ELM, 1, -2.8F);
+		DARK_RED_ELM_SHOVEL = createShovel("deep_trenches:dark_red_elm_shovel", DTToolMaterials.DARK_RED_ELM, 1.5F, -3F);
+
+		DEAD_WART_TREE_AXE = createAxe("deep_trenches:dead_wart_tree_axe", DTToolMaterials.DEAD_WART_TREE, 6F, -3.2F);
+		DEAD_WART_TREE_HOE = createHoe("deep_trenches:dead_wart_tree_hoe", DTToolMaterials.DEAD_WART_TREE, 0, -3F);
+		DEAD_WART_TREE_PICKAXE = createPickaxe("deep_trenches:dead_wart_tree_pickaxe", DTToolMaterials.DEAD_WART_TREE, 1, -2.8F);
+		DEAD_WART_TREE_SHOVEL = createShovel("deep_trenches:dead_wart_tree_shovel", DTToolMaterials.DEAD_WART_TREE, 1.5F, -3F);
+
+		DRIGYUS_AXE = createAxe("deep_trenches:drigyus_axe", DTToolMaterials.DRIGYUS, 6F, -3.2F);
+		DRIGYUS_HOE = createHoe("deep_trenches:drigyus_hoe", DTToolMaterials.DRIGYUS, 0, -3F);
+		DRIGYUS_PICKAXE = createPickaxe("deep_trenches:drigyus_pickaxe", DTToolMaterials.DRIGYUS, 1, -2.8F);
+		DRIGYUS_SHOVEL = createShovel("deep_trenches:drigyus_shovel", DTToolMaterials.DRIGYUS, 1.5F, -3F);
+
+		EBONY_AXE = createAxe("deep_trenches:ebony_axe", DTToolMaterials.EBONY, 6F, -3.2F);
+		EBONY_HOE = createHoe("deep_trenches:ebony_hoe", DTToolMaterials.EBONY, 0, -3F);
+		EBONY_PICKAXE = createPickaxe("deep_trenches:ebony_pickaxe", DTToolMaterials.EBONY, 1, -2.8F);
+		EBONY_SHOVEL = createShovel("deep_trenches:ebony_shovel", DTToolMaterials.EBONY, 1.5F, -3F);
+
+		ENDERHEART_AXE = createAxe("deep_trenches:enderheart_axe", DTToolMaterials.ENDERHEART, 6F, -3.2F);
+		ENDERHEART_HOE = createHoe("deep_trenches:enderheart_hoe", DTToolMaterials.ENDERHEART, 0, -3F);
+		ENDERHEART_PICKAXE = createPickaxe("deep_trenches:enderheart_pickaxe", DTToolMaterials.ENDERHEART, 1, -2.8F);
+		ENDERHEART_SHOVEL = createShovel("deep_trenches:enderheart_shovel", DTToolMaterials.ENDERHEART, 1.5F, -3F);
+
+		FLALM_AXE = createAxe("deep_trenches:flalm_axe", DTToolMaterials.FLALM, 6F, -3.2F);
+		FLALM_HOE = createHoe("deep_trenches:flalm_hoe", DTToolMaterials.FLALM, 0, -3F);
+		FLALM_PICKAXE = createPickaxe("deep_trenches:flalm_pickaxe", DTToolMaterials.FLALM, 1, -2.8F);
+		FLALM_SHOVEL = createShovel("deep_trenches:flalm_shovel", DTToolMaterials.FLALM, 1.5F, -3F);
+
+		FRUCE_AXE = createAxe("deep_trenches:fruce_axe", DTToolMaterials.FRUCE, 6F, -3.2F);
+		FRUCE_HOE = createHoe("deep_trenches:fruce_hoe", DTToolMaterials.FRUCE, 0, -3F);
+		FRUCE_PICKAXE = createPickaxe("deep_trenches:fruce_pickaxe", DTToolMaterials.FRUCE, 1, -2.8F);
+		FRUCE_SHOVEL = createShovel("deep_trenches:fruce_shovel", DTToolMaterials.FRUCE, 1.5F, -3F);
+
+		FUCHSITRA_AXE = createAxe("deep_trenches:fuchsitra_axe", DTToolMaterials.FUCHSITRA, 6F, -3.2F);
+		FUCHSITRA_HOE = createHoe("deep_trenches:fuchsitra_hoe", DTToolMaterials.FUCHSITRA, 0, -3F);
+		FUCHSITRA_PICKAXE = createPickaxe("deep_trenches:fuchsitra_pickaxe", DTToolMaterials.FUCHSITRA, 1, -2.8F);
+		FUCHSITRA_SHOVEL = createShovel("deep_trenches:fuchsitra_shovel", DTToolMaterials.FUCHSITRA, 1.5F, -3F);
+
+		FUGMOS_AXE = createAxe("deep_trenches:fugmos_axe", DTToolMaterials.FUGMOS, 6F, -3.2F);
+		FUGMOS_HOE = createHoe("deep_trenches:fugmos_hoe", DTToolMaterials.FUGMOS, 0, -3F);
+		FUGMOS_PICKAXE = createPickaxe("deep_trenches:fugmos_pickaxe", DTToolMaterials.FUGMOS, 1, -2.8F);
+		FUGMOS_SHOVEL = createShovel("deep_trenches:fugmos_shovel", DTToolMaterials.FUGMOS, 1.5F, -3F);
+
+		FUNERANITE_AXE = createAxe("deep_trenches:funeranite_axe", DTToolMaterials.FUNERANITE, 6F, -3.2F);
+		FUNERANITE_HOE = createHoe("deep_trenches:funeranite_hoe", DTToolMaterials.FUNERANITE, 0, -3F);
+		FUNERANITE_PICKAXE = createPickaxe("deep_trenches:funeranite_pickaxe", DTToolMaterials.FUNERANITE, 1, -2.8F);
+		FUNERANITE_SHOVEL = createShovel("deep_trenches:funeranite_shovel", DTToolMaterials.FUNERANITE, 1.5F, -3F);
+
+		GHOSHROOM_AXE = createAxe("deep_trenches:ghoshroom_axe", DTToolMaterials.GHOSHROOM, 6F, -3.2F);
+		GHOSHROOM_HOE = createHoe("deep_trenches:ghoshroom_hoe", DTToolMaterials.GHOSHROOM, 0, -3F);
+		GHOSHROOM_PICKAXE = createPickaxe("deep_trenches:ghoshroom_pickaxe", DTToolMaterials.GHOSHROOM, 1, -2.8F);
+		GHOSHROOM_SHOVEL = createShovel("deep_trenches:ghoshroom_shovel", DTToolMaterials.GHOSHROOM, 1.5F, -3F);
+
+		GIANT_VIOLET_AXE = createAxe("deep_trenches:giant_violet_axe", DTToolMaterials.GIANT_VIOLET, 6F, -3.2F);
+		GIANT_VIOLET_HOE = createHoe("deep_trenches:giant_violet_hoe", DTToolMaterials.GIANT_VIOLET, 0, -3F);
+		GIANT_VIOLET_PICKAXE = createPickaxe("deep_trenches:giant_violet_pickaxe", DTToolMaterials.GIANT_VIOLET, 1, -2.8F);
+		GIANT_VIOLET_SHOVEL = createShovel("deep_trenches:giant_violet_shovel", DTToolMaterials.GIANT_VIOLET, 1.5F, -3F);
+
+		GUAIACUM_AXE = createAxe("deep_trenches:guaiacum_axe", DTToolMaterials.GUAIACUM, 6F, -3.2F);
+		GUAIACUM_HOE = createHoe("deep_trenches:guaiacum_hoe", DTToolMaterials.GUAIACUM, 0, -3F);
+		GUAIACUM_PICKAXE = createPickaxe("deep_trenches:guaiacum_pickaxe", DTToolMaterials.GUAIACUM, 1, -2.8F);
+		GUAIACUM_SHOVEL = createShovel("deep_trenches:guaiacum_shovel", DTToolMaterials.GUAIACUM, 1.5F, -3F);
+
+		JOSHUA_AXE = createAxe("deep_trenches:joshua_axe", DTToolMaterials.JOSHUA, 6F, -3.2F);
+		JOSHUA_HOE = createHoe("deep_trenches:joshua_hoe", DTToolMaterials.JOSHUA, 0, -3F);
+		JOSHUA_PICKAXE = createPickaxe("deep_trenches:joshua_pickaxe", DTToolMaterials.JOSHUA, 1, -2.8F);
+		JOSHUA_SHOVEL = createShovel("deep_trenches:joshua_shovel", DTToolMaterials.JOSHUA, 1.5F, -3F);
+
+		KLINKII_PINE_AXE = createAxe("deep_trenches:klinkii_pine_axe", DTToolMaterials.KLINKII_PINE, 6F, -3.2F);
+		KLINKII_PINE_HOE = createHoe("deep_trenches:klinkii_pine_hoe", DTToolMaterials.KLINKII_PINE, 0, -3F);
+		KLINKII_PINE_PICKAXE = createPickaxe("deep_trenches:klinkii_pine_pickaxe", DTToolMaterials.KLINKII_PINE, 1, -2.8F);
+		KLINKII_PINE_SHOVEL = createShovel("deep_trenches:klinkii_pine_shovel", DTToolMaterials.KLINKII_PINE, 1.5F, -3F);
+
+		MELALEUCA_AXE = createAxe("deep_trenches:melaleuca_axe", DTToolMaterials.MELALEUCA, 6F, -3.2F);
+		MELALEUCA_HOE = createHoe("deep_trenches:melaleuca_hoe", DTToolMaterials.MELALEUCA, 0, -3F);
+		MELALEUCA_PICKAXE = createPickaxe("deep_trenches:melaleuca_pickaxe", DTToolMaterials.MELALEUCA, 1, -2.8F);
+		MELALEUCA_SHOVEL = createShovel("deep_trenches:melaleuca_shovel", DTToolMaterials.MELALEUCA, 1.5F, -3F);
+
+		MURKANTUAN_AXE = createAxe("deep_trenches:murkantuan_axe", DTToolMaterials.MURKANTUAN, 6F, -3.2F);
+		MURKANTUAN_HOE = createHoe("deep_trenches:murkantuan_hoe", DTToolMaterials.MURKANTUAN, 0, -3F);
+		MURKANTUAN_PICKAXE = createPickaxe("deep_trenches:murkantuan_pickaxe", DTToolMaterials.MURKANTUAN, 1, -2.8F);
+		MURKANTUAN_SHOVEL = createShovel("deep_trenches:murkantuan_shovel", DTToolMaterials.MURKANTUAN, 1.5F, -3F);
+
+		NORFOLK_PINE_AXE = createAxe("deep_trenches:norfolk_pine_axe", DTToolMaterials.NORFOLK_PINE, 6F, -3.2F);
+		NORFOLK_PINE_HOE = createHoe("deep_trenches:norfolk_pine_hoe", DTToolMaterials.NORFOLK_PINE, 0, -3F);
+		NORFOLK_PINE_PICKAXE = createPickaxe("deep_trenches:norfolk_pine_pickaxe", DTToolMaterials.NORFOLK_PINE, 1, -2.8F);
+		NORFOLK_PINE_SHOVEL = createShovel("deep_trenches:norfolk_pine_shovel", DTToolMaterials.NORFOLK_PINE, 1.5F, -3F);
+
+		OBSCRUS_AXE = createAxe("deep_trenches:obscrus_axe", DTToolMaterials.OBSCRUS, 6F, -3.2F);
+		OBSCRUS_HOE = createHoe("deep_trenches:obscrus_hoe", DTToolMaterials.OBSCRUS, 0, -3F);
+		OBSCRUS_PICKAXE = createPickaxe("deep_trenches:obscrus_pickaxe", DTToolMaterials.OBSCRUS, 1, -2.8F);
+		OBSCRUS_SHOVEL = createShovel("deep_trenches:obscrus_shovel", DTToolMaterials.OBSCRUS, 1.5F, -3F);
+
+		ORHPRIS_AXE = createAxe("deep_trenches:orhpris_axe", DTToolMaterials.ORHPRIS, 6F, -3.2F);
+		ORHPRIS_HOE = createHoe("deep_trenches:orhpris_hoe", DTToolMaterials.ORHPRIS, 0, -3F);
+		ORHPRIS_PICKAXE = createPickaxe("deep_trenches:orhpris_pickaxe", DTToolMaterials.ORHPRIS, 1, -2.8F);
+		ORHPRIS_SHOVEL = createShovel("deep_trenches:orhpris_shovel", DTToolMaterials.ORHPRIS, 1.5F, -3F);
+
+		PELTOGYNE_AXE = createAxe("deep_trenches:peltogyne_axe", DTToolMaterials.PELTOGYNE, 6F, -3.2F);
+		PELTOGYNE_HOE = createHoe("deep_trenches:peltogyne_hoe", DTToolMaterials.PELTOGYNE, 0, -3F);
+		PELTOGYNE_PICKAXE = createPickaxe("deep_trenches:peltogyne_pickaxe", DTToolMaterials.PELTOGYNE, 1, -2.8F);
+		PELTOGYNE_SHOVEL = createShovel("deep_trenches:peltogyne_shovel", DTToolMaterials.PELTOGYNE, 1.5F, -3F);
+
+		PIN_CHERRY_AXE = createAxe("deep_trenches:pin_cherry_axe", DTToolMaterials.PIN_CHERRY, 6F, -3.2F);
+		PIN_CHERRY_HOE = createHoe("deep_trenches:pin_cherry_hoe", DTToolMaterials.PIN_CHERRY, 0, -3F);
+		PIN_CHERRY_PICKAXE = createPickaxe("deep_trenches:pin_cherry_pickaxe", DTToolMaterials.PIN_CHERRY, 1, -2.8F);
+		PIN_CHERRY_SHOVEL = createShovel("deep_trenches:pin_cherry_shovel", DTToolMaterials.PIN_CHERRY, 1.5F, -3F);
+
+		PLUM_AXE = createAxe("deep_trenches:plum_axe", DTToolMaterials.PLUM, 6F, -3.2F);
+		PLUM_HOE = createHoe("deep_trenches:plum_hoe", DTToolMaterials.PLUM, 0, -3F);
+		PLUM_PICKAXE = createPickaxe("deep_trenches:plum_pickaxe", DTToolMaterials.PLUM, 1, -2.8F);
+		PLUM_SHOVEL = createShovel("deep_trenches:plum_shovel", DTToolMaterials.PLUM, 1.5F, -3F);
+
+		PURFUNGA_AXE = createAxe("deep_trenches:purfunga_axe", DTToolMaterials.PURFUNGA, 6F, -3.2F);
+		PURFUNGA_HOE = createHoe("deep_trenches:purfunga_hoe", DTToolMaterials.PURFUNGA, 0, -3F);
+		PURFUNGA_PICKAXE = createPickaxe("deep_trenches:purfunga_pickaxe", DTToolMaterials.PURFUNGA, 1, -2.8F);
+		PURFUNGA_SHOVEL = createShovel("deep_trenches:purfunga_shovel", DTToolMaterials.PURFUNGA, 1.5F, -3F);
+
+		RARK_AXE = createAxe("deep_trenches:rark_axe", DTToolMaterials.RARK, 6F, -3.2F);
+		RARK_HOE = createHoe("deep_trenches:rark_hoe", DTToolMaterials.RARK, 0, -3F);
+		RARK_PICKAXE = createPickaxe("deep_trenches:rark_pickaxe", DTToolMaterials.RARK, 1, -2.8F);
+		RARK_SHOVEL = createShovel("deep_trenches:rark_shovel", DTToolMaterials.RARK, 1.5F, -3F);
+
+		RED_ELM_AXE = createAxe("deep_trenches:red_elm_axe", DTToolMaterials.RED_ELM, 6F, -3.2F);
+		RED_ELM_HOE = createHoe("deep_trenches:red_elm_hoe", DTToolMaterials.RED_ELM, 0, -3F);
+		RED_ELM_PICKAXE = createPickaxe("deep_trenches:red_elm_pickaxe", DTToolMaterials.RED_ELM, 1, -2.8F);
+		RED_ELM_SHOVEL = createShovel("deep_trenches:red_elm_shovel", DTToolMaterials.RED_ELM, 1.5F, -3F);
+
+		RHADI_AXE = createAxe("deep_trenches:rhadi_axe", DTToolMaterials.RHADI, 6F, -3.2F);
+		RHADI_HOE = createHoe("deep_trenches:rhadi_hoe", DTToolMaterials.RHADI, 0, -3F);
+		RHADI_PICKAXE = createPickaxe("deep_trenches:rhadi_pickaxe", DTToolMaterials.RHADI, 1, -2.8F);
+		RHADI_SHOVEL = createShovel("deep_trenches:rhadi_shovel", DTToolMaterials.RHADI, 1.5F, -3F);
+
+		SANGUART_AXE = createAxe("deep_trenches:sanguart_axe", DTToolMaterials.SANGUART, 6F, -3.2F);
+		SANGUART_HOE = createHoe("deep_trenches:sanguart_hoe", DTToolMaterials.SANGUART, 0, -3F);
+		SANGUART_PICKAXE = createPickaxe("deep_trenches:sanguart_pickaxe", DTToolMaterials.SANGUART, 1, -2.8F);
+		SANGUART_SHOVEL = createShovel("deep_trenches:sanguart_shovel", DTToolMaterials.SANGUART, 1.5F, -3F);
+
+		SCARLET_THIORCEN_AXE = createAxe("deep_trenches:scarlet_thiorcen_axe", DTToolMaterials.SCARLET_THIORCEN, 6F, -3.2F);
+		SCARLET_THIORCEN_HOE = createHoe("deep_trenches:scarlet_thiorcen_hoe", DTToolMaterials.SCARLET_THIORCEN, 0, -3F);
+		SCARLET_THIORCEN_PICKAXE = createPickaxe("deep_trenches:scarlet_thiorcen_pickaxe", DTToolMaterials.SCARLET_THIORCEN, 1, -2.8F);
+		SCARLET_THIORCEN_SHOVEL = createShovel("deep_trenches:scarlet_thiorcen_shovel", DTToolMaterials.SCARLET_THIORCEN, 1.5F, -3F);
+
+		SEQUOIA_AXE = createAxe("deep_trenches:sequoia_axe", DTToolMaterials.SEQUOIA, 6F, -3.2F);
+		SEQUOIA_HOE = createHoe("deep_trenches:sequoia_hoe", DTToolMaterials.SEQUOIA, 0, -3F);
+		SEQUOIA_PICKAXE = createPickaxe("deep_trenches:sequoia_pickaxe", DTToolMaterials.SEQUOIA, 1, -2.8F);
+		SEQUOIA_SHOVEL = createShovel("deep_trenches:sequoia_shovel", DTToolMaterials.SEQUOIA, 1.5F, -3F);
+
+		SPROOM_AXE = createAxe("deep_trenches:sproom_axe", DTToolMaterials.SPROOM, 6F, -3.2F);
+		SPROOM_HOE = createHoe("deep_trenches:sproom_hoe", DTToolMaterials.SPROOM, 0, -3F);
+		SPROOM_PICKAXE = createPickaxe("deep_trenches:sproom_pickaxe", DTToolMaterials.SPROOM, 1, -2.8F);
+		SPROOM_SHOVEL = createShovel("deep_trenches:sproom_shovel", DTToolMaterials.SPROOM, 1.5F, -3F);
+
+		STORTREEAN_AXE = createAxe("deep_trenches:stortreean_axe", DTToolMaterials.STORTREEAN, 6F, -3.2F);
+		STORTREEAN_HOE = createHoe("deep_trenches:stortreean_hoe", DTToolMaterials.STORTREEAN, 0, -3F);
+		STORTREEAN_PICKAXE = createPickaxe("deep_trenches:stortreean_pickaxe", DTToolMaterials.STORTREEAN, 1, -2.8F);
+		STORTREEAN_SHOVEL = createShovel("deep_trenches:stortreean_shovel", DTToolMaterials.STORTREEAN, 1.5F, -3F);
+
+		STROOMEAN_AXE = createAxe("deep_trenches:stroomean_axe", DTToolMaterials.STROOMEAN, 6F, -3.2F);
+		STROOMEAN_HOE = createHoe("deep_trenches:stroomean_hoe", DTToolMaterials.STROOMEAN, 0, -3F);
+		STROOMEAN_PICKAXE = createPickaxe("deep_trenches:stroomean_pickaxe", DTToolMaterials.STROOMEAN, 1, -2.8F);
+		STROOMEAN_SHOVEL = createShovel("deep_trenches:stroomean_shovel", DTToolMaterials.STROOMEAN, 1.5F, -3F);
+
+		SUNRISE_FUNGUS_AXE = createAxe("deep_trenches:sunrise_fungus_axe", DTToolMaterials.SUNRISE_FUNGUS, 6F, -3.2F);
+		SUNRISE_FUNGUS_HOE = createHoe("deep_trenches:sunrise_fungus_hoe", DTToolMaterials.SUNRISE_FUNGUS, 0, -3F);
+		SUNRISE_FUNGUS_PICKAXE = createPickaxe("deep_trenches:sunrise_fungus_pickaxe", DTToolMaterials.SUNRISE_FUNGUS, 1, -2.8F);
+		SUNRISE_FUNGUS_SHOVEL = createShovel("deep_trenches:sunrise_fungus_shovel", DTToolMaterials.SUNRISE_FUNGUS, 1.5F, -3F);
+
+		TARK_AXE = createAxe("deep_trenches:tark_axe", DTToolMaterials.TARK, 6F, -3.2F);
+		TARK_HOE = createHoe("deep_trenches:tark_hoe", DTToolMaterials.TARK, 0, -3F);
+		TARK_PICKAXE = createPickaxe("deep_trenches:tark_pickaxe", DTToolMaterials.TARK, 1, -2.8F);
+		TARK_SHOVEL = createShovel("deep_trenches:tark_shovel", DTToolMaterials.TARK, 1.5F, -3F);
+
+		TEAK_AXE = createAxe("deep_trenches:teak_axe", DTToolMaterials.TEAK, 6F, -3.2F);
+		TEAK_HOE = createHoe("deep_trenches:teak_hoe", DTToolMaterials.TEAK, 0, -3F);
+		TEAK_PICKAXE = createPickaxe("deep_trenches:teak_pickaxe", DTToolMaterials.TEAK, 1, -2.8F);
+		TEAK_SHOVEL = createShovel("deep_trenches:teak_shovel", DTToolMaterials.TEAK, 1.5F, -3F);
+
+		THUNDERCLOUD_PLUM_AXE = createAxe("deep_trenches:thundercloud_plum_axe", DTToolMaterials.THUNDERCLOUD_PLUM, 6F, -3.2F);
+		THUNDERCLOUD_PLUM_HOE = createHoe("deep_trenches:thundercloud_plum_hoe", DTToolMaterials.THUNDERCLOUD_PLUM, 0, -3F);
+		THUNDERCLOUD_PLUM_PICKAXE = createPickaxe("deep_trenches:thundercloud_plum_pickaxe", DTToolMaterials.THUNDERCLOUD_PLUM, 1, -2.8F);
+		THUNDERCLOUD_PLUM_SHOVEL = createShovel("deep_trenches:thundercloud_plum_shovel", DTToolMaterials.THUNDERCLOUD_PLUM, 1.5F, -3F);
+
+		VYNHERT_AXE = createAxe("deep_trenches:vynhert_axe", DTToolMaterials.VYNHERT, 6F, -3.2F);
+		VYNHERT_HOE = createHoe("deep_trenches:vynhert_hoe", DTToolMaterials.VYNHERT, 0, -3F);
+		VYNHERT_PICKAXE = createPickaxe("deep_trenches:vynhert_pickaxe", DTToolMaterials.VYNHERT, 1, -2.8F);
+		VYNHERT_SHOVEL = createShovel("deep_trenches:vynhert_shovel", DTToolMaterials.VYNHERT, 1.5F, -3F);
+
+		WART_TREE_AXE = createAxe("deep_trenches:wart_tree_axe", DTToolMaterials.WART_TREE, 6F, -3.2F);
+		WART_TREE_HOE = createHoe("deep_trenches:wart_tree_hoe", DTToolMaterials.WART_TREE, 0, -3F);
+		WART_TREE_PICKAXE = createPickaxe("deep_trenches:wart_tree_pickaxe", DTToolMaterials.WART_TREE, 1, -2.8F);
+		WART_TREE_SHOVEL = createShovel("deep_trenches:wart_tree_shovel", DTToolMaterials.WART_TREE, 1.5F, -3F);
+
+		WENGE_AXE = createAxe("deep_trenches:wenge_axe", DTToolMaterials.WENGE, 6F, -3.2F);
+		WENGE_HOE = createHoe("deep_trenches:wenge_hoe", DTToolMaterials.WENGE, 0, -3F);
+		WENGE_PICKAXE = createPickaxe("deep_trenches:wenge_pickaxe", DTToolMaterials.WENGE, 1, -2.8F);
+		WENGE_SHOVEL = createShovel("deep_trenches:wenge_shovel", DTToolMaterials.WENGE, 1.5F, -3F);
+
+		YEW_AXE = createAxe("deep_trenches:yew_axe", DTToolMaterials.YEW, 6F, -3.2F);
+		YEW_HOE = createHoe("deep_trenches:yew_hoe", DTToolMaterials.YEW, 0, -3F);
+		YEW_PICKAXE = createPickaxe("deep_trenches:yew_pickaxe", DTToolMaterials.YEW, 1, -2.8F);
+		YEW_SHOVEL = createShovel("deep_trenches:yew_shovel", DTToolMaterials.YEW, 1.5F, -3F);
+
+		/* ARMOR */
 		AQUAMARINE_HELMET = createHelmet("deep_trenches:aquamarine_helmet", DTArmorMaterials.AQUAMARINE);
 		AQUAMARINE_CHESTPLATE = createChestplate("deep_trenches:aquamarine_chestplate", DTArmorMaterials.AQUAMARINE);
 		AQUAMARINE_LEGGINGS = createLeggings("deep_trenches:aquamarine_leggings", DTArmorMaterials.AQUAMARINE);
@@ -2828,15 +3540,15 @@ public class DTItems {
 		VOID_CRITTERED_DIOPSIDE_LEGGINGS = createLeggings("deep_trenches:void_crittered_diopside_leggings", DTArmorMaterials.VOID_CRITTERED_DIOPSIDE);
 		VOID_CRITTERED_DIOPSIDE_BOOTS = createBoots("deep_trenches:void_crittered_diopside_boots", DTArmorMaterials.VOID_CRITTERED_DIOPSIDE);
 
-		/* -------------------- TALISMANS -------------------------------- */
+		/* TALISMANS */
 		AQUAMARINE_TALISMAN = createItem("deep_trenches:aquamarine_talisman", COMBAT);
 		SPHENE_TALISMAN = createItem("deep_trenches:sphene_talisman", COMBAT);
 		TANZANITE_TALISMAN = createItem("deep_trenches:tanzanite_talisman", COMBAT);
 
-		/* -------------------- JEWELRY -------------------------------- */
+		/* JEWELRY */
 		BLACK_PEARL = createItem("deep_trenches:black_pearl", MISC);
 
-		/* -------------------- ORES -------------------------------- */
+		/* ORES */
 		AQUAMARINE = createItem("deep_trenches:aquamarine", MISC);
 		BLACK_OPAL = createItem("deep_trenches:black_opal", MISC);
 		CHALCEDONY = createItem("deep_trenches:chalcedony", MISC);
@@ -2863,7 +3575,7 @@ public class DTItems {
 		TOPAZ = createItem("deep_trenches:topaz", MISC);
 		VOID_CRITTERED_DIOPSIDE = createItem("deep_trenches:void_crittered_diopside", MISC);
 
-		/* ------------ INGOTS ------------- */
+		/* INGOTS */
 		ACTINIUM_INGOT = createItem("deep_trenches:actinium_ingot", MISC);
 		BORON_INGOT = createItem("deep_trenches:boron_ingot", MISC);
 		ENRON_INGOT = createItem("deep_trenches:enron_ingot", MISC);
@@ -2876,7 +3588,7 @@ public class DTItems {
 		URANIUM_INGOT = createItem("deep_trenches:uranium_ingot", MISC);
 		URANOLUMEN_INGOT = createItem("deep_trenches:uranolumen_ingot", MISC);
 
-		/* ------------ NUGGETS ------------- */
+		/* NUGGETS */
 		ACTINIUM_NUGGET = createItem("deep_trenches:actinium_nugget", MISC);
 		BORON_NUGGET = createItem("deep_trenches:boron_nugget", MISC);
 		ENRON_NUGGET = createItem("deep_trenches:enron_nugget", MISC);
@@ -2888,14 +3600,14 @@ public class DTItems {
 		URANIUM_NUGGET = createItem("deep_trenches:uranium_nugget", MISC);
 		URANOLUMEN_NUGGET = createItem("deep_trenches:uranolumen_nugget", MISC);
 
-		/* ------------ POWDERS ------------- */
+		/* POWDERS */
 		URANIUM_POWDER = createItem("deep_trenches:uranium_powder", MISC);
 		URANOLUMEN_POWDER = createItem("deep_trenches:uranolumen_powder", MISC);
 
-		/* -------------------------------- GYNDELION ------------------------------------------- */
+		/* GYNDELION */
 		GYLDELION_DYE = createItem("deep_trenches:gyldelion_dye", MISC);
 
-		/* -------------------------------- MOB DROPS ------------------------------------------- */
+		/* MOB DROPS */
 		LOOSEJAW_TOOTH = createItem("deep_trenches:loosejaw_tooth", MISC);
 	}
 
