@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        " #",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:guaiacum_stick"
+        },
+        "X": {
+            "item": "deep_trenches:guaiacum_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:guaiacum_hoe"
+    }
+}

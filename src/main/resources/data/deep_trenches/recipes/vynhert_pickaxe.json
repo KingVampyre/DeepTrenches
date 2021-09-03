@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XXX",
+        " # ",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:vynhert_stick"
+        },
+        "X": {
+            "item": "deep_trenches:vynhert_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:vynhert_pickaxe"
+    }
+}

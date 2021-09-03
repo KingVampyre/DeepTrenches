@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        " #",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:dark_crolood_stick"
+        },
+        "X": {
+            "item": "deep_trenches:dark_crolood_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:dark_crolood_hoe"
+    }
+}

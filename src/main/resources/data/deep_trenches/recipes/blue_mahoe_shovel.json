@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:blue_mahoe_stick"
+        },
+        "X": {
+            "item": "deep_trenches:blue_mahoe_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:blue_mahoe_shovel"
+    }
+}

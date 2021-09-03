@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        " #",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:ebony_stick"
+        },
+        "X": {
+            "item": "deep_trenches:ebony_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:ebony_hoe"
+    }
+}

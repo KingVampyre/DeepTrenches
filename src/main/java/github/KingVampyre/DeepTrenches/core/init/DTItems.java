@@ -3244,10 +3244,10 @@ public class DTItems {
 		DARK_CROLOOD_PICKAXE = createPickaxe("deep_trenches:dark_crolood_pickaxe", DTToolMaterials.DARK_CROLOOD, 1, -2.8F);
 		DARK_CROLOOD_SHOVEL = createShovel("deep_trenches:dark_crolood_shovel", DTToolMaterials.DARK_CROLOOD, 1.5F, -3F);
 
-		DARK_FUCHSITRA_AXE = createAxe("deep_trenches:dark_fushsitra_axe", DTToolMaterials.DARK_FUCHSITRA, 6F, -3.2F);
-		DARK_FUCHSITRA_HOE = createHoe("deep_trenches:dark_fushsitra_hoe", DTToolMaterials.DARK_FUCHSITRA, 0, -3F);
-		DARK_FUCHSITRA_PICKAXE = createPickaxe("deep_trenches:dark_fushsitra_pickaxe", DTToolMaterials.DARK_FUCHSITRA, 1, -2.8F);
-		DARK_FUCHSITRA_SHOVEL = createShovel("deep_trenches:dark_fushsitra_shovel", DTToolMaterials.DARK_FUCHSITRA, 1.5F, -3F);
+		DARK_FUCHSITRA_AXE = createAxe("deep_trenches:dark_fuchsitra_axe", DTToolMaterials.DARK_FUCHSITRA, 6F, -3.2F);
+		DARK_FUCHSITRA_HOE = createHoe("deep_trenches:dark_fuchsitra_hoe", DTToolMaterials.DARK_FUCHSITRA, 0, -3F);
+		DARK_FUCHSITRA_PICKAXE = createPickaxe("deep_trenches:dark_fuchsitra_pickaxe", DTToolMaterials.DARK_FUCHSITRA, 1, -2.8F);
+		DARK_FUCHSITRA_SHOVEL = createShovel("deep_trenches:dark_fuchsitra_shovel", DTToolMaterials.DARK_FUCHSITRA, 1.5F, -3F);
 
 		DARK_RED_ELM_AXE = createAxe("deep_trenches:dark_red_elm_axe", DTToolMaterials.DARK_RED_ELM, 6F, -3.2F);
 		DARK_RED_ELM_HOE = createHoe("deep_trenches:dark_red_elm_hoe", DTToolMaterials.DARK_RED_ELM, 0, -3F);

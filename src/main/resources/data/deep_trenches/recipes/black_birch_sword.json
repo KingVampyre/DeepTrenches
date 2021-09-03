@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X",
+        "X",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:black_birch_stick"
+        },
+        "X": {
+            "item": "deep_trenches:black_birch_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:black_birch_sword"
+    }
+}

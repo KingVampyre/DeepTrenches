@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XXX",
+        " # ",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:blue_spruce_stick"
+        },
+        "X": {
+            "item": "deep_trenches:blue_spruce_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:blue_spruce_pickaxe"
+    }
+}

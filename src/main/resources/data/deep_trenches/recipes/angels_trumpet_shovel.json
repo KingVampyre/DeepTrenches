@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:angels_trumpet_stick"
+        },
+        "X": {
+            "item": "deep_trenches:angels_trumpet_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:angels_trumpet_shovel"
+    }
+}

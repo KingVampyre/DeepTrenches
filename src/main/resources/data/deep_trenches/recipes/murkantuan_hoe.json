@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        " #",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:murkantuan_stick"
+        },
+        "X": {
+            "item": "deep_trenches:murkantuan_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:murkantuan_hoe"
+    }
+}

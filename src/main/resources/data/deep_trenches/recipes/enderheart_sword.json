@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X",
+        "X",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:enderheart_stick"
+        },
+        "X": {
+            "item": "deep_trenches:enderheart_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:enderheart_sword"
+    }
+}

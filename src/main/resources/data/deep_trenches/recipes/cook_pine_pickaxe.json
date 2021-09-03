@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XXX",
+        " # ",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:cook_pine_stick"
+        },
+        "X": {
+            "item": "deep_trenches:cook_pine_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:cook_pine_pickaxe"
+    }
+}

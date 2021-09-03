@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        " #",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:giant_violet_stick"
+        },
+        "X": {
+            "item": "deep_trenches:giant_violet_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:giant_violet_hoe"
+    }
+}

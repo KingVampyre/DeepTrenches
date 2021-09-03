@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:funeranite_stick"
+        },
+        "X": {
+            "item": "deep_trenches:funeranite_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:funeranite_shovel"
+    }
+}

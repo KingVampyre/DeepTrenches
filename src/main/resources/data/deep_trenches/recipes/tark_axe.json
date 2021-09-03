@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        "X#",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:tark_stick"
+        },
+        "X": {
+            "item": "deep_trenches:tark_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:tark_axe"
+    }
+}

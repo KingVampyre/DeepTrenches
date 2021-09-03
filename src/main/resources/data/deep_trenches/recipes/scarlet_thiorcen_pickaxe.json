@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XXX",
+        " # ",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:scarlet_thiorcen_stick"
+        },
+        "X": {
+            "item": "deep_trenches:scarlet_thiorcen_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:scarlet_thiorcen_pickaxe"
+    }
+}

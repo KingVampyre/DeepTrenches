@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X",
+        "X",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:melaleuca_stick"
+        },
+        "X": {
+            "item": "deep_trenches:melaleuca_planks"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:melaleuca_sword"
+    }
+}
