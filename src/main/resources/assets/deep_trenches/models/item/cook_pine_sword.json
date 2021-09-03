@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "deep_trenches:item/cook_pine_sword"
+    }
+}
