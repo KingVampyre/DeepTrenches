@@ -80,7 +80,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_foliage_colormap", STORCEAN_FOLIAGE_COLORMAP, DTColorMaps.STORCEAN_FOLIAGE));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_mosoil_colormap", STORCEAN_MOSOIL_COLORMAP, DTColorMaps.STORCEAN_MOSOIL));
 
-        /* ------------------------------------------ FLUID SPRITES ----------------------------------------------------- */
+        /* FLUID SPRITES */
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:abyssopelagic_water", DTSprites.ABYSSOPELAGIC_WATER));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:acid", DTSprites.ACID));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:bathypelagic_water", DTSprites.BATHYPELAGIC_WATER));
@@ -98,7 +98,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_verdipelagic_water", DTSprites.STORCEAN_VIRDIPELAGIC_WATER));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new BlockSpritesReloadListener("deep_trenches:storcean_water", DTSprites.STORCEAN_WATER));
 
-        /* ------------------------------------------ FLUID SPRITES ----------------------------------------------------- */
+        /* FLUID SPRITES */
         FluidRenderHandlerRegistry.INSTANCE.register(ABYSSOPELAGIC_WATER, DTFluidRenderHandlers.ABYSSOPELAGIC_WATER);
         FluidRenderHandlerRegistry.INSTANCE.register(ACID, DTFluidRenderHandlers.ACID);
         FluidRenderHandlerRegistry.INSTANCE.register(BATHYPELAGIC_WATER, DTFluidRenderHandlers.BATHYPELAGIC_WATER);
@@ -133,21 +133,21 @@ public class DeepTrenchesClient implements ClientModInitializer {
         FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_VIRDIPELAGIC_WATER, DTFluidRenderHandlers.STORCEAN_VIRDIPELAGIC_WATER);
         FluidRenderHandlerRegistry.INSTANCE.register(FLOWING_STORCEAN_WATER, DTFluidRenderHandlers.STORCEAN_WATER);
 
-        /* ------------------------------------------ BLOCK COLORS ----------------------------------------------------- */
+        /* BLOCK COLORS */
         ColorProviderRegistry.BLOCK.register(MosoilColorProvider.INSTANCE, DTBlocks.MOSOIL, DTBlocks.REEBLOON);
         ColorProviderRegistry.BLOCK.register(StorceanFoliageColorProvider.INSTANCE, DTBlocks.AQUEAN_LEAVES, DTBlocks.FRUCE_LEAVES, DTBlocks.SANGUART_LEAVES);
         ColorProviderRegistry.BLOCK.register(FoliageColorProvider.INSTANCE, DTBlocks.ALMOND_LEAVES, DTBlocks.ANGELS_TRUMPET_LEAVES, DTBlocks.BLACK_BIRCH_LEAVES, DTBlocks.BLUE_MAHOE_LEAVES, DTBlocks.BOTTLEBRUSH_LEAVES, DTBlocks.COOK_PINE_LEAVES, DTBlocks.DARK_RED_ELM_LEAVES, DTBlocks.EBONY_LEAVES, DTBlocks.GUAIACUM_LEAVES, DTBlocks.KLINKII_PINE_LEAVES, DTBlocks.MELALEUCA_LEAVES, DTBlocks.NORFOLK_PINE_LEAVES, DTBlocks.PELTOGYNE_LEAVES, DTBlocks.PLUM_LEAVES, DTBlocks.SEQUOIA_LEAVES, DTBlocks.WENGE_LEAVES);
 
-        /* ------------------------------------------ ITEM COLORS ----------------------------------------------------- */
+        /* ITEM COLORS */
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> DTColorMaps.STORCEAN_MOSOIL.getDefaultColor(), DTBlocks.REEBLOON);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> DTColorMaps.STORCEAN_MOSOIL.getDefaultColor(), DTBlocks.MOSOIL);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> STORCEAN_FOLIAGE.getDefaultColor(), DTBlocks.AQUEAN_LEAVES);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, DTBlocks.ALMOND_LEAVES, DTBlocks.BLACK_BIRCH_LEAVES, DTBlocks.COOK_PINE_LEAVES, DTBlocks.EBONY_LEAVES, DTBlocks.PELTOGYNE_LEAVES, DTBlocks.PLUM_LEAVES, DTBlocks.TEAK_LEAVES);
 
-        /* ------------------------------------------ BLOCK ENTITY RENDERERS ----------------------------------------------------- */
+        /* BLOCK ENTITY RENDERERS */
         BlockEntityRendererRegistry.INSTANCE.register(DTBlockEntityTypes.SIGN, FabricSignBlockEntityRenderer::new);
 
-        /* ------------------------------------------ BLOCK RENDER LAYERS ----------------------------------------------------- */
+        /* BLOCK RENDER LAYERS */
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_BLACKGREEN_TREE_CORAL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_BLACKGREEN_TREE_CORAL_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_BLACKGREEN_TREE_CORAL_WALL_FAN, RenderLayer.getCutout());
@@ -211,6 +211,13 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.IVORY_CORAL_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.IVORY_CORAL_WALL_FAN, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_LEKRAL_CORAL, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_LEKRAL_CORAL_FAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_LEKRAL_CORAL_WALL_FAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LEKRAL_CORAL, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LEKRAL_CORAL_FAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LEKRAL_CORAL_WALL_FAN, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_LIME_BRAIN_CORAL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_LIME_BRAIN_CORAL_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_LIME_BRAIN_CORAL_WALL_FAN, RenderLayer.getCutout());
@@ -247,6 +254,13 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SEAFAN_CORAL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SEAFAN_CORAL_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SEAFAN_CORAL_WALL_FAN, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_SKACUR_CORAL, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_SKACUR_CORAL_FAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_SKACUR_CORAL_WALL_FAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SKACUR_CORAL, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SKACUR_CORAL_FAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SKACUR_CORAL_WALL_FAN, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_STRAIGHT_WILLOW_CORAL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_STRAIGHT_WILLOW_CORAL_FAN, RenderLayer.getCutout());
@@ -481,6 +495,8 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_VASLAME, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_WEEPY_HOLLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_YELLOW_VIOLET, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.FLINT_SHARDS, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.AIRIAL_MOSS, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MOSOIL, RenderLayer.getCutoutMipped());

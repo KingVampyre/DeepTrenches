@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "deep_trenches:block/flint_shards"
+        "layer0": "deep_trenches:block/ilmium"
     }
 }

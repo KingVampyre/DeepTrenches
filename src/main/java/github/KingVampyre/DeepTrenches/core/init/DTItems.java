@@ -1468,7 +1468,7 @@ public class DTItems {
 		createCoralFan("deep_trenches:pipe_organ_coral_fan", PIPE_ORGAN_CORAL_FAN, PIPE_ORGAN_CORAL_WALL_FAN);
 		createCoralFan("deep_trenches:red_tree_coral_fan", RED_TREE_CORAL_FAN, RED_TREE_CORAL_WALL_FAN);
 		createCoralFan("deep_trenches:seafan_coral_fan", SEAFAN_CORAL_FAN, SEAFAN_CORAL_WALL_FAN);
-		createCoralFan("deep_trenches:skakur_coral_fan", SKACUR_CORAL_FAN, SEAFAN_CORAL_WALL_FAN);
+		createCoralFan("deep_trenches:skacur_coral_fan", SKACUR_CORAL_FAN, SEAFAN_CORAL_WALL_FAN);
 		createCoralFan("deep_trenches:straight_willow_coral_fan", STRAIGHT_WILLOW_CORAL_FAN, STRAIGHT_WILLOW_CORAL_WALL_FAN);
 		createCoralFan("deep_trenches:sunrise_coral_fan", SUNRISE_CORAL_FAN, SUNRISE_CORAL_WALL_FAN);
 		createCoralFan("deep_trenches:table_coral_fan", TABLE_CORAL_FAN, TABLE_CORAL_WALL_FAN);

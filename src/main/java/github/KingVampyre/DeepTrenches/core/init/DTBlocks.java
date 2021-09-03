@@ -2347,7 +2347,7 @@ public class DTBlocks {
 		/* REDSTONE */
 		KRALCTIUM_MICROFLARE = createCopy(STONE);
 		LIGHTNING_DISPENSER = createCopy(STONE);
-		STATIC_LIGHTNING_ROD = createCopy(STONE);
+		STATIC_LIGHTNING_ROD = createBlock(LightningRodBlock::new, LIGHTNING_ROD);
 
 		/* EXPLOSIVE BLOCKS */
 		NUCLEAR_BOMB = createCopy(STONE);
@@ -3003,9 +3003,9 @@ public class DTBlocks {
 		VELVET_LILY = createTallFlower(SUNFLOWER);
 
 		/* MOSSES */
-		AIRIAL_MOSS = createCopy(IRON_BLOCK);
-		ILMIUM = createCopy(IRON_BLOCK);
-		MOSS = createCopy(IRON_BLOCK);
+		AIRIAL_MOSS = createBlock(AirialMossBlock::new, GRASS_BLOCK);
+		ILMIUM = createCopy(GRASS_BLOCK);
+		MOSS = createCopy(GRASS_BLOCK);
 
 		/* PLANTS */
 		AIRIAL_BUSH = createCopy(IRON_BLOCK);
