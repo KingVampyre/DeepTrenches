@@ -169,13 +169,13 @@ public class DTBlocks {
 	public static final Block POLISHED_SULFUR_STONE;
 
 	public static final Block VIRDAL_STONE;
-	public static final Block VIRDAL_BRICKS;
-	public static final Block VIRDAL_PILLAR;
-	public static final Block VIRDAL_TILES;
+	public static final Block VIRDAL_STONE_BRICKS;
+	public static final Block VIRDAL_STONE_PILLAR;
+	public static final Block VIRDAL_STONE_TILES;
 	public static final Block CHISELED_VIRDAL_STONE;
 	public static final Block CRACKED_VIRDAL_STONE_BRICKS;
 	public static final Block CRACKED_VIRDAL_STONE_TILES;
-	public static final Block POLISHED_VIDAL_STONE;
+	public static final Block POLISHED_VIRDAL_STONE;
 
 	public static final Block WAVEITE;
 	public static final Block WAVEITE_BRICKS;
@@ -468,20 +468,20 @@ public class DTBlocks {
 
 	public static final Block VERDINE_COAL_ORE;
 
-	public static final Block VIRDAL_AQUAMARINE_ORE;
-	public static final Block VIRDAL_BLACK_OPAL_ORE;
-	public static final Block VIRDAL_COAL_ORE;
-	public static final Block VIRDAL_COPPER_ORE;
-	public static final Block VIRDAL_DIAMOND_ORE;
-	public static final Block VIRDAL_IRON_ORE;
-	public static final Block VIRDAL_OPAL_ORE;
-	public static final Block VIRDAL_RUBY_ORE;
-	public static final Block VIRDAL_SAPPHIRE_ORE;
-	public static final Block VIRDAL_SILICON_ORE;
-	public static final Block VIRDAL_SPHENE_ORE;
-	public static final Block VIRDAL_SPINEL_ORE;
-	public static final Block VIRDAL_SUGILITE_ORE;
-	public static final Block VIRDAL_URANOLUMEN_ORE;
+	public static final Block VIRDAL_STONE_AQUAMARINE_ORE;
+	public static final Block VIRDAL_STONE_BLACK_OPAL_ORE;
+	public static final Block VIRDAL_STONE_COAL_ORE;
+	public static final Block VIRDAL_STONE_COPPER_ORE;
+	public static final Block VIRDAL_STONE_DIAMOND_ORE;
+	public static final Block VIRDAL_STONE_IRON_ORE;
+	public static final Block VIRDAL_STONE_OPAL_ORE;
+	public static final Block VIRDAL_STONE_RUBY_ORE;
+	public static final Block VIRDAL_STONE_SAPPHIRE_ORE;
+	public static final Block VIRDAL_STONE_SILICON_ORE;
+	public static final Block VIRDAL_STONE_SPHENE_ORE;
+	public static final Block VIRDAL_STONE_SPINEL_ORE;
+	public static final Block VIRDAL_STONE_SUGILITE_ORE;
+	public static final Block VIRDAL_STONE_URANOLUMEN_ORE;
 
 	public static final Block WAVED_BEDROCK_DIAMOND_ORE;
 	public static final Block WAVED_BEDROCK_DIOPSIDE_ORE;
@@ -2478,13 +2478,13 @@ public class DTBlocks {
 		POLISHED_SULFUR_STONE = createCopy(STONE);
 
 		VIRDAL_STONE = createCopy(STONE);
-		VIRDAL_BRICKS = createCopy(STONE);
-		VIRDAL_PILLAR = createPillar(STONE);
-		VIRDAL_TILES = createCopy(STONE);
+		VIRDAL_STONE_BRICKS = createCopy(STONE);
+		VIRDAL_STONE_PILLAR = createPillar(STONE);
+		VIRDAL_STONE_TILES = createCopy(STONE);
 		CHISELED_VIRDAL_STONE = createCopy(STONE);
 		CRACKED_VIRDAL_STONE_BRICKS = createCopy(STONE);
 		CRACKED_VIRDAL_STONE_TILES = createCopy(STONE);
-		POLISHED_VIDAL_STONE = createCopy(STONE);
+		POLISHED_VIRDAL_STONE = createCopy(STONE);
 
 		WAVEITE = createCopy(STONE);
 		WAVEITE_BRICKS = createCopy(STONE);
@@ -2777,20 +2777,20 @@ public class DTBlocks {
 
 		VERDINE_COAL_ORE = createCopy(COAL_ORE);
 
-		VIRDAL_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		VIRDAL_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		VIRDAL_COAL_ORE = createCopy(COAL_ORE);
-		VIRDAL_COPPER_ORE = createCopy(COAL_ORE);
-		VIRDAL_DIAMOND_ORE = createCopy(COAL_ORE);
-		VIRDAL_IRON_ORE = createCopy(COAL_ORE);
-		VIRDAL_OPAL_ORE = createCopy(COAL_ORE);
-		VIRDAL_RUBY_ORE = createCopy(COAL_ORE);
-		VIRDAL_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		VIRDAL_SILICON_ORE = createCopy(COAL_ORE);
-		VIRDAL_SPHENE_ORE = createCopy(COAL_ORE);
-		VIRDAL_SPINEL_ORE = createCopy(COAL_ORE);
-		VIRDAL_SUGILITE_ORE = createCopy(COAL_ORE);
-		VIRDAL_URANOLUMEN_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_COAL_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_COPPER_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_DIAMOND_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_IRON_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_OPAL_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_RUBY_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_SILICON_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_SPHENE_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_SPINEL_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_SUGILITE_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_URANOLUMEN_ORE = createCopy(COAL_ORE);
 
 		WAVED_BEDROCK_DIAMOND_ORE = createCopy(COAL_ORE);
 		WAVED_BEDROCK_DIOPSIDE_ORE = createCopy(COAL_ORE);
@@ -4576,13 +4576,13 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:chiseled_sulfur_stone_bricks", CHISELED_SULFUR_STONE_BRICKS);
 		Registry.register(BLOCK, "deep_trenches:polished_sulfur_stone", POLISHED_SULFUR_STONE);
 		Registry.register(BLOCK, "deep_trenches:virdal_stone", VIRDAL_STONE);
-		Registry.register(BLOCK, "deep_trenches:virdal_bricks", VIRDAL_BRICKS);
-		Registry.register(BLOCK, "deep_trenches:virdal_pillar", VIRDAL_PILLAR);
-		Registry.register(BLOCK, "deep_trenches:virdal_tiles", VIRDAL_TILES);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_bricks", VIRDAL_STONE_BRICKS);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_pillar", VIRDAL_STONE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_tiles", VIRDAL_STONE_TILES);
 		Registry.register(BLOCK, "deep_trenches:chiseled_virdal_stone", CHISELED_VIRDAL_STONE);
 		Registry.register(BLOCK, "deep_trenches:cracked_virdal_stone_bricks", CRACKED_VIRDAL_STONE_BRICKS);
 		Registry.register(BLOCK, "deep_trenches:cracked_virdal_stone_tiles", CRACKED_VIRDAL_STONE_TILES);
-		Registry.register(BLOCK, "deep_trenches:polished_vidal_stone", POLISHED_VIDAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:polished_vidal_stone", POLISHED_VIRDAL_STONE);
 		Registry.register(BLOCK, "deep_trenches:waveite", WAVEITE);
 		Registry.register(BLOCK, "deep_trenches:waveite_bricks", WAVEITE_BRICKS);
 		Registry.register(BLOCK, "deep_trenches:waveite_pillar", WAVEITE_PILLAR);
@@ -4874,20 +4874,20 @@ public class DTBlocks {
 
 		Registry.register(BLOCK, "deep_trenches:verdine_coal_ore", VERDINE_COAL_ORE);
 
-		Registry.register(BLOCK, "deep_trenches:virdal_aquamarine_ore", VIRDAL_AQUAMARINE_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_black_opal_ore", VIRDAL_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_coal_ore", VIRDAL_COAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_copper_ore", VIRDAL_COPPER_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_diamond_ore", VIRDAL_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_iron_ore", VIRDAL_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_opal_ore", VIRDAL_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_ruby_ore", VIRDAL_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_sapphire_ore", VIRDAL_SAPPHIRE_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_silicon_ore", VIRDAL_SILICON_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_sphene_ore", VIRDAL_SPHENE_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_spinel_ore", VIRDAL_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_sugilite_ore", VIRDAL_SUGILITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:virdal_uranolumen_ore", VIRDAL_URANOLUMEN_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_aquamarine_ore", VIRDAL_STONE_AQUAMARINE_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_black_opal_ore", VIRDAL_STONE_BLACK_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_coal_ore", VIRDAL_STONE_COAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_copper_ore", VIRDAL_STONE_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_diamond_ore", VIRDAL_STONE_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_iron_ore", VIRDAL_STONE_IRON_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_opal_ore", VIRDAL_STONE_OPAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_ruby_ore", VIRDAL_STONE_RUBY_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_sapphire_ore", VIRDAL_STONE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_silicon_ore", VIRDAL_STONE_SILICON_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_sphene_ore", VIRDAL_STONE_SPHENE_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_spinel_ore", VIRDAL_STONE_SPINEL_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_sugilite_ore", VIRDAL_STONE_SUGILITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:virdal_stone_uranolumen_ore", VIRDAL_STONE_URANOLUMEN_ORE);
 
 		Registry.register(BLOCK, "deep_trenches:waved_bedrock_diamond_ore", WAVED_BEDROCK_DIAMOND_ORE);
 		Registry.register(BLOCK, "deep_trenches:waved_bedrock_diopside_ore", WAVED_BEDROCK_DIOPSIDE_ORE);

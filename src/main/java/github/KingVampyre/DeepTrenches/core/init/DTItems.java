@@ -1130,13 +1130,13 @@ public class DTItems {
 		createBlockItem("deep_trenches:polished_sulfur_stone", POLISHED_SULFUR_STONE, MINERALOGY);
 
 		createBlockItem("deep_trenches:virdal_stone", VIRDAL_STONE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_bricks", VIRDAL_BRICKS, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_pillar", VIRDAL_PILLAR, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_tiles", VIRDAL_TILES, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_bricks", VIRDAL_STONE_BRICKS, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_pillar", VIRDAL_STONE_PILLAR, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_tiles", VIRDAL_STONE_TILES, MINERALOGY);
 		createBlockItem("deep_trenches:chiseled_virdal_stone", CHISELED_VIRDAL_STONE, MINERALOGY);
 		createBlockItem("deep_trenches:cracked_virdal_stone_bricks", CRACKED_VIRDAL_STONE_BRICKS, MINERALOGY);
 		createBlockItem("deep_trenches:cracked_virdal_stone_tiles", CRACKED_VIRDAL_STONE_TILES, MINERALOGY);
-		createBlockItem("deep_trenches:polished_vidal_stone", POLISHED_VIDAL_STONE, MINERALOGY);
+		createBlockItem("deep_trenches:polished_vidal_stone", POLISHED_VIRDAL_STONE, MINERALOGY);
 
 		createBlockItem("deep_trenches:waveite", WAVEITE, MINERALOGY);
 		createBlockItem("deep_trenches:waveite_bricks", WAVEITE_BRICKS, MINERALOGY);
@@ -1428,20 +1428,20 @@ public class DTItems {
 		createBlockItem("deep_trenches:tuff_gold_ore", TUFF_GOLD_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:verdine_coal_ore", VERDINE_COAL_ORE, MINERALOGY);
 
-		createBlockItem("deep_trenches:virdal_aquamarine_ore", VIRDAL_AQUAMARINE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_black_opal_ore", VIRDAL_BLACK_OPAL_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_coal_ore", VIRDAL_COAL_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_copper_ore", VIRDAL_COPPER_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_diamond_ore", VIRDAL_DIAMOND_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_iron_ore", VIRDAL_IRON_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_opal_ore", VIRDAL_OPAL_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_ruby_ore", VIRDAL_RUBY_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_sapphire_ore", VIRDAL_SAPPHIRE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_silicon_ore", VIRDAL_SILICON_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_sphene_ore", VIRDAL_SPHENE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_spinel_ore", VIRDAL_SPINEL_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_sugilite_ore", VIRDAL_SUGILITE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:virdal_uranolumen_ore", VIRDAL_URANOLUMEN_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_aquamarine_ore", VIRDAL_STONE_AQUAMARINE_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_black_opal_ore", VIRDAL_STONE_BLACK_OPAL_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_coal_ore", VIRDAL_STONE_COAL_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_copper_ore", VIRDAL_STONE_COPPER_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_diamond_ore", VIRDAL_STONE_DIAMOND_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_iron_ore", VIRDAL_STONE_IRON_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_opal_ore", VIRDAL_STONE_OPAL_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_ruby_ore", VIRDAL_STONE_RUBY_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_sapphire_ore", VIRDAL_STONE_SAPPHIRE_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_silicon_ore", VIRDAL_STONE_SILICON_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_sphene_ore", VIRDAL_STONE_SPHENE_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_spinel_ore", VIRDAL_STONE_SPINEL_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_sugilite_ore", VIRDAL_STONE_SUGILITE_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:virdal_stone_uranolumen_ore", VIRDAL_STONE_URANOLUMEN_ORE, MINERALOGY);
 
 		createBlockItem("deep_trenches:waved_bedrock_diamond_ore", WAVED_BEDROCK_DIAMOND_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:waved_bedrock_diopside_ore", WAVED_BEDROCK_DIOPSIDE_ORE, MINERALOGY);
