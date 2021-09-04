@@ -6,19 +6,19 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
 
 public class DTFluidRenderHandlers {
 
-    public static final FluidRenderHandler ABYSSOPELAGIC_WATER = new SpritesFluidRenderHandler(DTSprites.ABYSSOPELAGIC_WATER);
+    public static final FluidRenderHandler ABYSSOPELAGIC_WATER = new SpritesFluidRenderHandler(OverworldWaterProvider.INSTANCE, DTSprites.ABYSSOPELAGIC_WATER);
 
     public static final FluidRenderHandler ACID = new SpritesFluidRenderHandler(AcidProvider.INSTANCE, DTSprites.ACID);
 
-    public static final FluidRenderHandler BATHYPELAGIC_WATER = new SpritesFluidRenderHandler(DTSprites.BATHYPELAGIC_WATER);
+    public static final FluidRenderHandler BATHYPELAGIC_WATER = new SpritesFluidRenderHandler(OverworldWaterProvider.INSTANCE, DTSprites.BATHYPELAGIC_WATER);
 
     public static final FluidRenderHandler BRINE = new SpritesFluidRenderHandler(BrineProvider.INSTANCE, DTSprites.BRINE);
 
     public static final FluidRenderHandler CLEAR_WATER = new SpritesFluidRenderHandler(ClearWaterProvider.INSTANCE, DTSprites.CLEAR_WATER);
 
-    public static final FluidRenderHandler HADOPELAGIC_WATER = new SpritesFluidRenderHandler(DTSprites.HADOPELAGIC_WATER);
+    public static final FluidRenderHandler HADOPELAGIC_WATER = new SpritesFluidRenderHandler(OverworldWaterProvider.INSTANCE, DTSprites.HADOPELAGIC_WATER);
 
-    public static final FluidRenderHandler MESOPELAGIC_WATER = new SpritesFluidRenderHandler(DTSprites.MESOPELAGIC_WATER);
+    public static final FluidRenderHandler MESOPELAGIC_WATER = new SpritesFluidRenderHandler(OverworldWaterProvider.INSTANCE, DTSprites.MESOPELAGIC_WATER);
 
     public static final FluidRenderHandler STORCEAN_ABYSSOPELAGIC_WATER = new SpritesFluidRenderHandler(StorceanAbyssopelagicWaterProvider.INSTANCE, DTSprites.STORCEAN_ABYSSOPELAGIC_WATER);
 

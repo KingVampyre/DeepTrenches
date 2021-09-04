@@ -68,7 +68,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(STORCEAN_MARINE_SNOW_CHUNK, MarineSnowParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(STORCEAN_MARINE_SNOW_SMALL, MarineSnowParticle.Factory::new);
 
-        /* ------------------------------------------ COLOR MAPS ----------------------------------------------------- */
+        /* COLOR MAPS */
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:clear_water_colormap", CLEAR_WATER_COLORMAP, DTColorMaps.CLEAR_WATER));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_abyssopelagic_water_colormap", STORCEAN_ABYSSOPELAGIC_WATER_COLORMAP, DTColorMaps.STORCEAN_ABYSSOPELAGIC_WATER));
         ResourceManagerHelper.get(CLIENT_RESOURCES).registerReloadListener(new ColorMapReloadListener("deep_trenches:storcean_enderpelagic_water_colormap", STORCEAN_ENDERPELAGIC_WATER_COLORMAP, DTColorMaps.STORCEAN_ENDERPELAGIC_WATER));
