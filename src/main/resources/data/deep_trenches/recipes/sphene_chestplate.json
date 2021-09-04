@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X X",
+        "XXX",
+        "XXX"
+    ],
+    "key": {
+        "X": {
+            "item": "deep_trenches:sphene"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:sphene_chestplate"
+    }
+}

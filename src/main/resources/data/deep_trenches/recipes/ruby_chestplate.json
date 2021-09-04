@@ -1,19 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "X",
-        "#",
-        "#"
+        "X X",
+        "XXX",
+        "XXX"
     ],
     "key": {
-        "#": {
-            "tag": "deep_trenches:wooden_sticks"
-        },
         "X": {
             "item": "deep_trenches:ruby"
         }
     },
     "result": {
-        "item": "deep_trenches:ruby_shovel"
+        "item": "deep_trenches:ruby_chestplate"
     }
 }

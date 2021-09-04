@@ -1,19 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "XX",
-        " #",
-        " #"
+        "X X",
+        "XXX",
+        "XXX"
     ],
     "key": {
-        "#": {
-            "tag": "deep_trenches:wooden_sticks"
-        },
         "X": {
             "item": "deep_trenches:tanzanite"
         }
     },
     "result": {
-        "item": "deep_trenches:tanzanite_hoe"
+        "item": "deep_trenches:tanzanite_chestplate"
     }
 }
