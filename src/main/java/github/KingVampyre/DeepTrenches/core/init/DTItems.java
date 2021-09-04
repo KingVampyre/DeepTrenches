@@ -1021,6 +1021,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:black_marble", BLACK_MARBLE, MINERALOGY);
 		createBlockItem("deep_trenches:black_opalite", BLACK_OPALITE, MINERALOGY);
 		createBlockItem("deep_trenches:gray_marble", GRAY_MARBLE, MINERALOGY);
+		createBlockItem("deep_trenches:marble", MARBLE, MINERALOGY);
 		createBlockItem("deep_trenches:light_opalite", LIGHT_OPALITE, MINERALOGY);
 		createBlockItem("deep_trenches:lushine", LUSHINE, MINERALOGY);
 		createBlockItem("deep_trenches:lushine_pillar", LUSHINE_PILLAR, MINERALOGY);

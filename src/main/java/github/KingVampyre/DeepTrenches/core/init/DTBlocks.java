@@ -60,6 +60,7 @@ public class DTBlocks {
 	public static final Block BLACK_MARBLE;
 	public static final Block BLACK_OPALITE;
 	public static final Block GRAY_MARBLE;
+	public static final Block MARBLE;
 	public static final Block LIGHT_OPALITE;
 	public static final Block LUSHINE;
 	public static final Block LUSHINE_PILLAR;
@@ -2369,6 +2370,7 @@ public class DTBlocks {
 		BLACK_MARBLE = createCopy(STONE);
 		BLACK_OPALITE = createCopy(STONE);
 		GRAY_MARBLE = createCopy(STONE);
+		MARBLE = createCopy(STONE);
 		LIGHT_OPALITE = createCopy(STONE);
 		LUSHINE = createCopy(STONE);
 		LUSHINE_PILLAR = createCopy(STONE);
@@ -4480,6 +4482,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:black_marble", BLACK_MARBLE);
 		Registry.register(BLOCK, "deep_trenches:black_opalite", BLACK_OPALITE);
 		Registry.register(BLOCK, "deep_trenches:gray_marble", GRAY_MARBLE);
+		Registry.register(BLOCK, "deep_trenches:marble", MARBLE);
 		Registry.register(BLOCK, "deep_trenches:light_opalite", LIGHT_OPALITE);
 		Registry.register(BLOCK, "deep_trenches:lushine", LUSHINE);
 		Registry.register(BLOCK, "deep_trenches:lushine_pillar", LUSHINE_PILLAR);
