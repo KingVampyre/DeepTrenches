@@ -21,7 +21,6 @@ import java.util.Random;
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.BATHYPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_BATHYPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
-import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class BathypelagicWaterFluid extends AbstractOxygenatedWaterFluid {
 
@@ -56,9 +55,6 @@ public abstract class BathypelagicWaterFluid extends AbstractOxygenatedWaterFlui
     @Override
     @Nullable
     protected ParticleEffect getUnderwaterParticle(Random random) {
-
-        if(random.nextInt(4) == 0)
-            return BUBBLE;
 
         if(random.nextInt(4) == 0) {
             if(random.nextBoolean())

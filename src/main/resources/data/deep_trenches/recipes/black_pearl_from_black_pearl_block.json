@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "deep_trenches:black_pearl",
+    "ingredients": [
+        {
+            "item": "deep_trenches:black_pearl_block"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:black_pearl",
+        "count": 9
+    }
+}

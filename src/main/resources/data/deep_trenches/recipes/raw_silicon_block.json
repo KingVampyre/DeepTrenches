@@ -7,10 +7,10 @@
     ],
     "key": {
         "#": {
-            "item": "deep_trenches:gyldelion_ingot"
+            "item": "deep_trenches:raw_silicon"
         }
     },
     "result": {
-        "item": "deep_trenches:gyldelion_block"
+        "item": "deep_trenches:raw_silicon_block"
     }
 }

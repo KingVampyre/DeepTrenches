@@ -1,12 +1,13 @@
 {
     "type": "minecraft:crafting_shapeless",
+    "group": "deep_trenches:enstatite",
     "ingredients": [
         {
-            "item": "deep_trenches:gyldelion_ingot"
+            "item": "deep_trenches:enstatite_block"
         }
     ],
     "result": {
-        "item": "deep_trenches:gyldelion_nugget",
+        "item": "deep_trenches:enstatite",
         "count": 9
     }
 }

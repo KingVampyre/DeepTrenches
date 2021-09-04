@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "deep_trenches:void_crittered_diopside",
+    "ingredients": [
+        {
+            "item": "deep_trenches:void_crittered_diopside_block"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:void_crittered_diopside",
+        "count": 9
+    }
+}

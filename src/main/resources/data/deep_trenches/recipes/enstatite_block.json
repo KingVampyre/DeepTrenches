@@ -7,10 +7,10 @@
     ],
     "key": {
         "#": {
-            "item": "deep_trenches:gyldelion_ingot"
+            "item": "deep_trenches:enstatite"
         }
     },
     "result": {
-        "item": "deep_trenches:gyldelion_block"
+        "item": "deep_trenches:enstatite_block"
     }
 }

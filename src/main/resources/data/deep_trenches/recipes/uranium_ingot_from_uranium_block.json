@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "deep_trenches:uranium_ingot",
+    "ingredients": [
+        {
+            "item": "deep_trenches:uranium_block"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:uranium_ingot",
+        "count": 9
+    }
+}

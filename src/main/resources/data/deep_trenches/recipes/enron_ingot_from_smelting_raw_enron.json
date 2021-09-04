@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "deep_trenches:enron_ingot",
+    "ingredient": {
+        "item": "deep_trenches:raw_enron"
+    },
+    "result": "deep_trenches:enron_ingot",
+    "experience": 0.7,
+    "cookingtime": 100
+}

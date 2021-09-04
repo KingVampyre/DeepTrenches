@@ -1,12 +1,13 @@
 {
     "type": "minecraft:crafting_shapeless",
+    "group": "deep_trenches:enron_ingot",
     "ingredients": [
         {
-            "item": "deep_trenches:gyldelion_ingot"
+            "item": "deep_trenches:enron_block"
         }
     ],
     "result": {
-        "item": "deep_trenches:gyldelion_nugget",
+        "item": "deep_trenches:enron_ingot",
         "count": 9
     }
 }

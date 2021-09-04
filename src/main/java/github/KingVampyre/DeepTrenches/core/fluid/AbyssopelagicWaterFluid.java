@@ -25,7 +25,6 @@ import static github.KingVampyre.DeepTrenches.core.init.DTFluids.ABYSSOPELAGIC_W
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_ABYSSOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.PRESSURE;
-import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class AbyssopelagicWaterFluid extends AbstractOxygenatedWaterFluid implements StatusEffectFluid {
 
@@ -70,9 +69,6 @@ public abstract class AbyssopelagicWaterFluid extends AbstractOxygenatedWaterFlu
     @Override
     @Nullable
     protected ParticleEffect getUnderwaterParticle(Random random) {
-
-        if(random.nextInt(5) == 0)
-            return BUBBLE;
 
         if(random.nextInt(5) == 0) {
             if(random.nextBoolean())

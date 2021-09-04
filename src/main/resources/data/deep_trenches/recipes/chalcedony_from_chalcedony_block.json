@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "deep_trenches:chalcedony",
+    "ingredients": [
+        {
+            "item": "deep_trenches:chalcedony_block"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:chalcedony",
+        "count": 9
+    }
+}

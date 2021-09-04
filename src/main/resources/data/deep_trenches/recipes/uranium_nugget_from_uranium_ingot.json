@@ -1,5 +1,6 @@
 {
     "type": "minecraft:crafting_shaped",
+    "group": "deep_trenches:uranium_ingot",
     "pattern": [
         "###",
         "###",
@@ -7,10 +8,10 @@
     ],
     "key": {
         "#": {
-            "item": "deep_trenches:gyldelion_ingot"
+            "item": "deep_trenches:uranium_nugget"
         }
     },
     "result": {
-        "item": "deep_trenches:gyldelion_block"
+        "item": "deep_trenches:uranium_ingot"
     }
 }

@@ -25,7 +25,6 @@ import static github.KingVampyre.DeepTrenches.core.init.DTFluids.HADOPELAGIC_WAT
 import static github.KingVampyre.DeepTrenches.core.init.DTItems.HADOPELAGIC_WATER_BUCKET;
 import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.PRESSURE;
-import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class HadopelagicWaterFluid extends AbstractOxygenatedWaterFluid implements StatusEffectFluid {
 
@@ -69,9 +68,6 @@ public abstract class HadopelagicWaterFluid extends AbstractOxygenatedWaterFluid
     @Override
     @Nullable
     protected ParticleEffect getUnderwaterParticle(Random random) {
-
-        if(random.nextInt(7) == 0)
-            return BUBBLE;
 
         if(random.nextInt(7) == 0) {
             if(random.nextBoolean())

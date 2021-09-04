@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "deep_trenches:tungsten_ingot",
+    "ingredient": {
+        "item": "deep_trenches:raw_tungsten"
+    },
+    "result": "deep_trenches:tungsten_ingot",
+    "experience": 0.7,
+    "cookingtime": 100
+}

@@ -2,11 +2,11 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "deep_trenches:gyldelion_ingot"
+            "item": "deep_trenches:raw_boron_block"
         }
     ],
     "result": {
-        "item": "deep_trenches:gyldelion_nugget",
+        "item": "deep_trenches:raw_boron",
         "count": 9
     }
 }

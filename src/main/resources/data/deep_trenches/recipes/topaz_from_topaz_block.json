@@ -1,12 +1,13 @@
 {
     "type": "minecraft:crafting_shapeless",
+    "group": "deep_trenches:topaz",
     "ingredients": [
         {
-            "item": "deep_trenches:gyldelion_ingot"
+            "item": "deep_trenches:topaz_block"
         }
     ],
     "result": {
-        "item": "deep_trenches:gyldelion_nugget",
+        "item": "deep_trenches:topaz",
         "count": 9
     }
 }

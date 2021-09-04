@@ -2,11 +2,11 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "deep_trenches:gyldelion_ingot"
+            "item": "deep_trenches:uranolumen_ingot"
         }
     ],
     "result": {
-        "item": "deep_trenches:gyldelion_nugget",
+        "item": "deep_trenches:uranolumen_nugget",
         "count": 9
     }
 }

@@ -536,6 +536,8 @@ public class DTBlocks {
 	public static final Block MORGANITE_BLOCK;
 	public static final Block RUBY_BLOCK;
 	public static final Block SAPPHIRE_BLOCK;
+	public static final Block SILICON_BLOCK;
+	public static final Block SILVER_BLOCK;
 	public static final Block SPHENE_BLOCK;
 	public static final Block SPINEL_BLOCK;
 	public static final Block STROXITE_BLOCK;
@@ -546,6 +548,7 @@ public class DTBlocks {
 	public static final Block TUNGSTEN_BLOCK;
 	public static final Block URANIUM_BLOCK;
 	public static final Block URANIUM_POWDER_BLOCK;
+	public static final Block URANOLUMEN_BLOCK;
 	public static final Block VOID_CRITTERED_DIOPSIDE_BLOCK;
 
 	/* CHISELED MINERAL BLOCKS */
@@ -2827,6 +2830,8 @@ public class DTBlocks {
 		MORGANITE_BLOCK = createCopy(IRON_BLOCK);
 		RUBY_BLOCK = createCopy(IRON_BLOCK);
 		SAPPHIRE_BLOCK = createCopy(IRON_BLOCK);
+		SILICON_BLOCK = createCopy(IRON_BLOCK);
+		SILVER_BLOCK = createCopy(IRON_BLOCK);
 		SPHENE_BLOCK = createCopy(IRON_BLOCK);
 		SPINEL_BLOCK = createCopy(IRON_BLOCK);
 		STROXITE_BLOCK = createCopy(IRON_BLOCK);
@@ -2837,6 +2842,7 @@ public class DTBlocks {
 		TUNGSTEN_BLOCK = createCopy(IRON_BLOCK);
 		URANIUM_BLOCK = createCopy(IRON_BLOCK);
 		URANIUM_POWDER_BLOCK = createCopy(IRON_BLOCK);
+		URANOLUMEN_BLOCK = createCopy(IRON_BLOCK);
 		VOID_CRITTERED_DIOPSIDE_BLOCK = createCopy(IRON_BLOCK);
 
 		/* CHISELED MINERAL BLOCKS */
@@ -4906,6 +4912,8 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:morganite_block", MORGANITE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:ruby_block", RUBY_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:sapphire_block", SAPPHIRE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:silicon_block", SILICON_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:silver_block", SILVER_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:sphene_block", SPHENE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:spinel_block", SPINEL_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:stroxite_block", STROXITE_BLOCK);
@@ -4916,6 +4924,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:tungsten_block", TUNGSTEN_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:uranium_block", URANIUM_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:uranium_powder_block", URANIUM_POWDER_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:uranolumen_block", URANOLUMEN_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:void_crittered_diopside_block", VOID_CRITTERED_DIOPSIDE_BLOCK);
 
 		/* CHISELED MINERAL BLOCKS */

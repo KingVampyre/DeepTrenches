@@ -21,7 +21,6 @@ import java.util.Random;
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_MESOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.MESOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
-import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class MesopelagicWaterFluid extends AbstractOxygenatedWaterFluid {
 
@@ -55,9 +54,6 @@ public abstract class MesopelagicWaterFluid extends AbstractOxygenatedWaterFluid
     @Override
     @Nullable
     protected ParticleEffect getUnderwaterParticle(Random random) {
-
-        if(random.nextInt(5) == 0)
-            return BUBBLE;
 
         if(random.nextInt(5) == 0) {
             if(random.nextBoolean())

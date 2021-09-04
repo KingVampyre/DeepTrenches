@@ -858,6 +858,7 @@ public class DTItems {
 	public static final Item BORON_NUGGET;
 	public static final Item ENRON_NUGGET;
 	public static final Item GYLDELION_NUGGET;
+	public static final Item KRALCTIUM_NUGGET;
 	public static final Item SILICON_NUGGET;
 	public static final Item SILVER_NUGGET;
 	public static final Item STROXITE_NUGGET;
@@ -1505,6 +1506,8 @@ public class DTItems {
 		createBlockItem("deep_trenches:morganite_block", MORGANITE_BLOCK, MINERALOGY);
 		createBlockItem("deep_trenches:ruby_block", RUBY_BLOCK, MINERALOGY);
 		createBlockItem("deep_trenches:sapphire_block", SAPPHIRE_BLOCK, MINERALOGY);
+		createBlockItem("deep_trenches:silicon_block", SILICON_BLOCK, MINERALOGY);
+		createBlockItem("deep_trenches:silver_block", SILVER_BLOCK, MINERALOGY);
 		createBlockItem("deep_trenches:sphene_block", SPHENE_BLOCK, MINERALOGY);
 		createBlockItem("deep_trenches:spinel_block", SPINEL_BLOCK, MINERALOGY);
 		createBlockItem("deep_trenches:stroxite_block", STROXITE_BLOCK, MINERALOGY);
@@ -1515,6 +1518,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:tungsten_block", TUNGSTEN_BLOCK, MINERALOGY);
 		createBlockItem("deep_trenches:uranium_block", URANIUM_BLOCK, MINERALOGY);
 		createBlockItem("deep_trenches:uranium_powder_block", URANIUM_POWDER_BLOCK, MINERALOGY);
+		createBlockItem("deep_trenches:uranolumen_block", URANOLUMEN_BLOCK, MINERALOGY);
 		createBlockItem("deep_trenches:void_crittered_diopside_block", VOID_CRITTERED_DIOPSIDE_BLOCK, MINERALOGY);
 
 		/* CHISELED MINERAL BLOCKS */
@@ -3593,6 +3597,7 @@ public class DTItems {
 		BORON_NUGGET = createItem("deep_trenches:boron_nugget", MINERALOGY);
 		ENRON_NUGGET = createItem("deep_trenches:enron_nugget", MINERALOGY);
 		GYLDELION_NUGGET = createItem("deep_trenches:gyldelion_nugget", MINERALOGY);
+		KRALCTIUM_NUGGET = createItem("deep_trenches:kralctium_nugget", MINERALOGY);
 		SILICON_NUGGET = createItem("deep_trenches:silicon_nugget", MINERALOGY);
 		SILVER_NUGGET = createItem("deep_trenches:silver_nugget", MINERALOGY);
 		STROXITE_NUGGET = createItem("deep_trenches:stroxite_nugget", MINERALOGY);
