@@ -81,7 +81,6 @@ public class DTBlocks {
 	public static final Block CHISELED_BLACK_BASALT;
 	public static final Block CRACKED_BLACK_BASALT_BRICKS;
 	public static final Block CRACKED_BLACK_BASALT_TILES;
-	public static final Block POLISHED_BLACK_BASALT_PILLAR;
 
 	public static final Block BEDROCK_BRICKS;
 	public static final Block BEDROCK_PILLAR;
@@ -217,44 +216,26 @@ public class DTBlocks {
 	public static final Block BEDROCK_MORGANITE_ORE;
 	public static final Block BEDROCK_VOID_CRITTERED_DIOPSIDE_ORE;
 
-	public static final Block BLACK_BASALT_AQUAMARINE_ORE;
-	public static final Block BLACK_BASALT_BLACK_OPAL_ORE;
 	public static final Block BLACK_BASALT_CHALCEDONY_ORE;
 	public static final Block BLACK_BASALT_CLINOHUMITE_ORE;
-	public static final Block BLACK_BASALT_COAL_ORE;
 	public static final Block BLACK_BASALT_COPPER_ORE;
+	public static final Block BLACK_BASALT_COAL_ORE;
 	public static final Block BLACK_BASALT_DIAMOND_ORE;
-	public static final Block BLACK_BASALT_EMERALD_ORE;
-	public static final Block BLACK_BASALT_GARNET_ORE;
 	public static final Block BLACK_BASALT_GOLD_ORE;
 	public static final Block BLACK_BASALT_IRON_ORE;
-	public static final Block BLACK_BASALT_LAPIS_ORE;
-	public static final Block BLACK_BASALT_MORGANITE_ORE;
 	public static final Block BLACK_BASALT_REDSTONE_ORE;
-	public static final Block BLACK_BASALT_RUBY_ORE;
-	public static final Block BLACK_BASALT_SILVER_ORE;
-	public static final Block BLACK_BASALT_SPHENE_ORE;
-	public static final Block BLACK_BASALT_SPINEL_ORE;
-	public static final Block BLACK_BASALT_TANZANITE_ORE;
 
-	public static final Block BLUE_STORCERACK_AQUAMARINE_ORE;
 	public static final Block BLUE_STORCERACK_BLACK_OPAL_ORE;
-	public static final Block BLUE_STORCERACK_CHALCEDONY_ORE;
 	public static final Block BLUE_STORCERACK_COAL_ORE;
 	public static final Block BLUE_STORCERACK_COPPER_ORE;
 	public static final Block BLUE_STORCERACK_DIAMOND_ORE;
-	public static final Block BLUE_STORCERACK_EMERALD_ORE;
 	public static final Block BLUE_STORCERACK_GOLD_ORE;
 	public static final Block BLUE_STORCERACK_IRON_ORE;
-	public static final Block BLUE_STORCERACK_LAPIS_ORE;
-	public static final Block BLUE_STORCERACK_MORGANITE_ORE;
 	public static final Block BLUE_STORCERACK_REDSTONE_ORE;
 	public static final Block BLUE_STORCERACK_RUBY_ORE;
-	public static final Block BLUE_STORCERACK_SILVER_ORE;
 	public static final Block BLUE_STORCERACK_SPHENE_ORE;
 	public static final Block BLUE_STORCERACK_SPINEL_ORE;
 	public static final Block BLUE_STORCERACK_STROXITE_ORE;
-	public static final Block BLUE_STORCERACK_TANZANITE_ORE;
 	public static final Block BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE;
 
 	public static final Block CALCITE_CHALCEDONY_ORE;
@@ -2391,7 +2372,6 @@ public class DTBlocks {
 		CHISELED_BLACK_BASALT = createCopy(STONE);
 		CRACKED_BLACK_BASALT_BRICKS = createCopy(STONE);
 		CRACKED_BLACK_BASALT_TILES = createCopy(STONE);
-		POLISHED_BLACK_BASALT_PILLAR = createCopy(STONE);
 
 		BEDROCK_BRICKS = createCopy(STONE);
 		BEDROCK_PILLAR = createPillar(STONE);
@@ -2527,44 +2507,26 @@ public class DTBlocks {
 		BEDROCK_MORGANITE_ORE = createCopy(COAL_ORE);
 		BEDROCK_VOID_CRITTERED_DIOPSIDE_ORE = createCopy(COAL_ORE);
 
-		BLACK_BASALT_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_BLACK_OPAL_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_CHALCEDONY_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_COAL_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_COPPER_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_COAL_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_DIAMOND_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_EMERALD_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_GARNET_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_GOLD_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_IRON_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_LAPIS_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_MORGANITE_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_REDSTONE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_RUBY_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_SILVER_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_SPHENE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_SPINEL_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_TANZANITE_ORE = createCopy(COAL_ORE);
 
-		BLUE_STORCERACK_AQUAMARINE_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_CHALCEDONY_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_COAL_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_COPPER_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_DIAMOND_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_EMERALD_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_GOLD_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_IRON_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_LAPIS_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_MORGANITE_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_REDSTONE_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_RUBY_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_SILVER_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_SPHENE_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_SPINEL_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_STROXITE_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_TANZANITE_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE = createCopy(COAL_ORE);
 
 		CALCITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
@@ -4503,7 +4465,6 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:chiseled_black_basalt", CHISELED_BLACK_BASALT);
 		Registry.register(BLOCK, "deep_trenches:cracked_black_basalt_bricks", CRACKED_BLACK_BASALT_BRICKS);
 		Registry.register(BLOCK, "deep_trenches:cracked_black_basalt_tiles", CRACKED_BLACK_BASALT_TILES);
-		Registry.register(BLOCK, "deep_trenches:polished_black_basalt_pillar", POLISHED_BLACK_BASALT_PILLAR);
 		Registry.register(BLOCK, "deep_trenches:bedrock_bricks", BEDROCK_BRICKS);
 		Registry.register(BLOCK, "deep_trenches:bedrock_pillar", BEDROCK_PILLAR);
 		Registry.register(BLOCK, "deep_trenches:chiseled_bedrock", CHISELED_BEDROCK);
@@ -4625,44 +4586,26 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:bedrock_morganite_ore", BEDROCK_MORGANITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:bedrock_void_crittered_diopside_ore", BEDROCK_VOID_CRITTERED_DIOPSIDE_ORE);
 
-		Registry.register(BLOCK, "deep_trenches:black_basalt_aquamarine_ore", BLACK_BASALT_AQUAMARINE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_black_opal_ore", BLACK_BASALT_BLACK_OPAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_chalcedony_ore", BLACK_BASALT_CHALCEDONY_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_clinohumite_ore", BLACK_BASALT_CLINOHUMITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_coal_ore", BLACK_BASALT_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_copper_ore", BLACK_BASALT_COPPER_ORE);
+		Registry.register(BLOCK, "deep_trenches:black_basalt_coal_ore", BLACK_BASALT_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_diamond_ore", BLACK_BASALT_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_emerald_ore", BLACK_BASALT_EMERALD_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_garnet_ore", BLACK_BASALT_GARNET_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_lapis_ore", BLACK_BASALT_LAPIS_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_morganite_ore", BLACK_BASALT_MORGANITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_redstone_ore", BLACK_BASALT_REDSTONE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_ruby_ore", BLACK_BASALT_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_silver_ore", BLACK_BASALT_SILVER_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_sphene_ore", BLACK_BASALT_SPHENE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_spinel_ore", BLACK_BASALT_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_tanzanite_ore", BLACK_BASALT_TANZANITE_ORE);
 
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_aquamarine_ore", BLUE_STORCERACK_AQUAMARINE_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_chalcedony_ore", BLUE_STORCERACK_CHALCEDONY_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_copper_ore", BLUE_STORCERACK_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_diamond_ore", BLUE_STORCERACK_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_emerald_ore", BLUE_STORCERACK_EMERALD_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_gold_ore", BLUE_STORCERACK_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_iron_ore", BLUE_STORCERACK_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_lapis_ore", BLUE_STORCERACK_LAPIS_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_morganite_ore", BLUE_STORCERACK_MORGANITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_redstone_ore", BLUE_STORCERACK_REDSTONE_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_ruby_ore", BLUE_STORCERACK_RUBY_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_silver_ore", BLUE_STORCERACK_SILVER_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_sphene_ore", BLUE_STORCERACK_SPHENE_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_spinel_ore", BLUE_STORCERACK_SPINEL_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_stroxite_ore", BLUE_STORCERACK_STROXITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:blue_storcerack_tanzanite_ore", BLUE_STORCERACK_TANZANITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_charged_tungsten_ore", BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE);
 
 		Registry.register(BLOCK, "deep_trenches:calcite_chalcedony_ore", CALCITE_CHALCEDONY_ORE);

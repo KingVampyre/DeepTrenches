@@ -1051,7 +1051,6 @@ public class DTItems {
 		createBlockItem("deep_trenches:chiseled_black_basalt", CHISELED_BLACK_BASALT, MINERALOGY);
 		createBlockItem("deep_trenches:cracked_black_basalt_bricks", CRACKED_BLACK_BASALT_BRICKS, MINERALOGY);
 		createBlockItem("deep_trenches:cracked_black_basalt_tiles", CRACKED_BLACK_BASALT_TILES, MINERALOGY);
-		createBlockItem("deep_trenches:polished_black_basalt_pillar", POLISHED_BLACK_BASALT_PILLAR, MINERALOGY);
 
 		createBlockItem("deep_trenches:bedrock_bricks", BEDROCK_BRICKS, MINERALOGY);
 		createBlockItem("deep_trenches:bedrock_pillar", BEDROCK_PILLAR, MINERALOGY);
@@ -1187,44 +1186,26 @@ public class DTItems {
 		createBlockItem("deep_trenches:bedrock_morganite_ore", BEDROCK_MORGANITE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:bedrock_void_crittered_diopside_ore", BEDROCK_VOID_CRITTERED_DIOPSIDE_ORE, MINERALOGY);
 
-		createBlockItem("deep_trenches:black_basalt_aquamarine_ore", BLACK_BASALT_AQUAMARINE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_black_opal_ore", BLACK_BASALT_BLACK_OPAL_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_chalcedony_ore", BLACK_BASALT_CHALCEDONY_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_clinohumite_ore", BLACK_BASALT_CLINOHUMITE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_coal_ore", BLACK_BASALT_COAL_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_copper_ore", BLACK_BASALT_COPPER_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:black_basalt_coal_ore", BLACK_BASALT_COAL_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_diamond_ore", BLACK_BASALT_DIAMOND_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_emerald_ore", BLACK_BASALT_EMERALD_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_garnet_ore", BLACK_BASALT_GARNET_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_lapis_ore", BLACK_BASALT_LAPIS_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_morganite_ore", BLACK_BASALT_MORGANITE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_redstone_ore", BLACK_BASALT_REDSTONE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_ruby_ore", BLACK_BASALT_RUBY_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_silver_ore", BLACK_BASALT_SILVER_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_sphene_ore", BLACK_BASALT_SPHENE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_spinel_ore", BLACK_BASALT_SPINEL_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_tanzanite_ore", BLACK_BASALT_TANZANITE_ORE, MINERALOGY);
 
-		createBlockItem("deep_trenches:blue_storcerack_aquamarine_ore", BLUE_STORCERACK_AQUAMARINE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:blue_storcerack_chalcedony_ore", BLUE_STORCERACK_CHALCEDONY_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_copper_ore", BLUE_STORCERACK_COPPER_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_diamond_ore", BLUE_STORCERACK_DIAMOND_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:blue_storcerack_emerald_ore", BLUE_STORCERACK_EMERALD_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_gold_ore", BLUE_STORCERACK_GOLD_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_iron_ore", BLUE_STORCERACK_IRON_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:blue_storcerack_lapis_ore", BLUE_STORCERACK_LAPIS_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:blue_storcerack_morganite_ore", BLUE_STORCERACK_MORGANITE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_redstone_ore", BLUE_STORCERACK_REDSTONE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_ruby_ore", BLUE_STORCERACK_RUBY_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:blue_storcerack_silver_ore", BLUE_STORCERACK_SILVER_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_sphene_ore", BLUE_STORCERACK_SPHENE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_spinel_ore", BLUE_STORCERACK_SPINEL_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_stroxite_ore", BLUE_STORCERACK_STROXITE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:blue_storcerack_tanzanite_ore", BLUE_STORCERACK_TANZANITE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_charged_tungsten_ore", BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE, MINERALOGY);
 
 		createBlockItem("deep_trenches:calcite_chalcedony_ore", CALCITE_CHALCEDONY_ORE, MINERALOGY);
