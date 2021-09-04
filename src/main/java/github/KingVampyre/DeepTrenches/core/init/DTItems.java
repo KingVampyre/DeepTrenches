@@ -216,9 +216,18 @@ public class DTItems {
 	public static final Item COOKED_GIANT_HATCHETFISH;
 
 	/* GOO's */
+	public static final Item BLACK_BIOLUMINESCENT_GOO;
+	public static final Item BROWN_BIOLUMINESCENT_GOO;
 	public static final Item CYAN_BIOLUMINESCENT_GOO;
 	public static final Item GREEN_BIOLUMINESCENT_GOO;
 	public static final Item LIGHT_BLUE_BIOLUMINESCENT_GOO;
+	public static final Item LIME_BIOLUMINESCENT_GOO;
+	public static final Item MAGENTA_BIOLUMINESCENT_GOO;
+	public static final Item ORANGE_BIOLUMINESCENT_GOO;
+	public static final Item PURPLE_BIOLUMINESCENT_GOO;
+	public static final Item RED_BIOLUMINESCENT_GOO;
+	public static final Item WHITE_BIOLUMINESCENT_GOO;
+	public static final Item YELLOW_BIOLUMINESCENT_GOO;
 
 	/* WEAPONS */
 	public static final Item ADAIGGER;
@@ -2961,9 +2970,18 @@ public class DTItems {
 		COOKED_GIANT_HATCHETFISH = createFood("deep_trenches:cooked_giant_hatchetfish", DTFoodComponents.COOKED_GIANT_HATCHETFISH);
 
 		/* GOO's */
+		BLACK_BIOLUMINESCENT_GOO = createItem("deep_trenches:black_bioluminescent_goo", MISC);
+		BROWN_BIOLUMINESCENT_GOO = createItem("deep_trenches:brown_bioluminescent_goo", MISC);
 		CYAN_BIOLUMINESCENT_GOO = createItem("deep_trenches:cyan_bioluminescent_goo", MISC);
 		GREEN_BIOLUMINESCENT_GOO = createItem("deep_trenches:green_bioluminescent_goo", MISC);
 		LIGHT_BLUE_BIOLUMINESCENT_GOO = createItem("deep_trenches:light_blue_bioluminescent_goo", MISC);
+		LIME_BIOLUMINESCENT_GOO = createItem("deep_trenches:lime_bioluminescent_goo", MISC);
+		MAGENTA_BIOLUMINESCENT_GOO = createItem("deep_trenches:magenta_bioluminescent_goo", MISC);
+		ORANGE_BIOLUMINESCENT_GOO = createItem("deep_trenches:orange_bioluminescent_goo", MISC);
+		PURPLE_BIOLUMINESCENT_GOO = createItem("deep_trenches:purple_bioluminescent_goo", MISC);
+		RED_BIOLUMINESCENT_GOO = createItem("deep_trenches:red_bioluminescent_goo", MISC);
+		WHITE_BIOLUMINESCENT_GOO = createItem("deep_trenches:white_bioluminescent_goo", MISC);
+		YELLOW_BIOLUMINESCENT_GOO = createItem("deep_trenches:yellow_bioluminescent_goo", MISC);
 
 		/* WEAPONS */
 		ADAIGGER = register("deep_trenches:adaigger", new AdaiggerItem(DTToolMaterials.GYLDELION, 4, 4F, new Settings().group(COMBAT)));
@@ -3550,60 +3568,60 @@ public class DTItems {
 		BLACK_PEARL = createItem("deep_trenches:black_pearl", MISC);
 
 		/* ORES */
-		AQUAMARINE = createItem("deep_trenches:aquamarine", MISC);
-		BLACK_OPAL = createItem("deep_trenches:black_opal", MISC);
-		CHALCEDONY = createItem("deep_trenches:chalcedony", MISC);
-		CLINOHUMITE = createItem("deep_trenches:clinohumite", MISC);
-		DIOPSIDE = createItem("deep_trenches:diopside", MISC);
-		ENSTATITE = createItem("deep_trenches:enstatite", MISC);
-		GARNET = createItem("deep_trenches:garnet", MISC);
-		MORGANITE = createItem("deep_trenches:morganite", MISC);
-		OPAL = createItem("deep_trenches:opal", MISC);
-		RAW_ACTINIUM = createItem("deep_trenches:raw_actinium", MISC);
-		RAW_BORON = createItem("deep_trenches:raw_boron", MISC);
-		RAW_ENRON = createItem("deep_trenches:raw_enron", MISC);
-		RAW_SILICON = createItem("deep_trenches:raw_silicon", MISC);
-		RAW_SILVER = createItem("deep_trenches:raw_silver", MISC);
-		RAW_STROXITE = createItem("deep_trenches:raw_stroxite", MISC);
-		RAW_TUNGSTEN = createItem("deep_trenches:raw_tungsten", MISC);
-		RAW_URANOLUMEN = createItem("deep_trenches:raw_uranolumen", MISC);
-		RUBY = createItem("deep_trenches:ruby", MISC);
-		SAPPHIRE = createItem("deep_trenches:sapphire", MISC);
-		SPHENE = createItem("deep_trenches:sphene", MISC);
-		SPINEL = createItem("deep_trenches:spinel", MISC);
-		SUGILITE = createItem("deep_trenches:sugilite", MISC);
-		TANZANITE = createItem("deep_trenches:tanzanite", MISC);
-		TOPAZ = createItem("deep_trenches:topaz", MISC);
-		VOID_CRITTERED_DIOPSIDE = createItem("deep_trenches:void_crittered_diopside", MISC);
+		AQUAMARINE = createItem("deep_trenches:aquamarine", MINERALOGY);
+		BLACK_OPAL = createItem("deep_trenches:black_opal", MINERALOGY);
+		CHALCEDONY = createItem("deep_trenches:chalcedony", MINERALOGY);
+		CLINOHUMITE = createItem("deep_trenches:clinohumite", MINERALOGY);
+		DIOPSIDE = createItem("deep_trenches:diopside", MINERALOGY);
+		ENSTATITE = createItem("deep_trenches:enstatite", MINERALOGY);
+		GARNET = createItem("deep_trenches:garnet", MINERALOGY);
+		MORGANITE = createItem("deep_trenches:morganite", MINERALOGY);
+		OPAL = createItem("deep_trenches:opal", MINERALOGY);
+		RAW_ACTINIUM = createItem("deep_trenches:raw_actinium", MINERALOGY);
+		RAW_BORON = createItem("deep_trenches:raw_boron", MINERALOGY);
+		RAW_ENRON = createItem("deep_trenches:raw_enron", MINERALOGY);
+		RAW_SILICON = createItem("deep_trenches:raw_silicon", MINERALOGY);
+		RAW_SILVER = createItem("deep_trenches:raw_silver", MINERALOGY);
+		RAW_STROXITE = createItem("deep_trenches:raw_stroxite", MINERALOGY);
+		RAW_TUNGSTEN = createItem("deep_trenches:raw_tungsten", MINERALOGY);
+		RAW_URANOLUMEN = createItem("deep_trenches:raw_uranolumen", MINERALOGY);
+		RUBY = createItem("deep_trenches:ruby", MINERALOGY);
+		SAPPHIRE = createItem("deep_trenches:sapphire", MINERALOGY);
+		SPHENE = createItem("deep_trenches:sphene", MINERALOGY);
+		SPINEL = createItem("deep_trenches:spinel", MINERALOGY);
+		SUGILITE = createItem("deep_trenches:sugilite", MINERALOGY);
+		TANZANITE = createItem("deep_trenches:tanzanite", MINERALOGY);
+		TOPAZ = createItem("deep_trenches:topaz", MINERALOGY);
+		VOID_CRITTERED_DIOPSIDE = createItem("deep_trenches:void_crittered_diopside", MINERALOGY);
 
 		/* INGOTS */
-		ACTINIUM_INGOT = createItem("deep_trenches:actinium_ingot", MISC);
-		BORON_INGOT = createItem("deep_trenches:boron_ingot", MISC);
-		ENRON_INGOT = createItem("deep_trenches:enron_ingot", MISC);
-		GYLDELION_INGOT = createItem("deep_trenches:gyldelion_ingot", MISC);
-		KRALCTIUM_INGOT = createItem("deep_trenches:kralctium_ingot", MISC);
-		SILICON_INGOT = createItem("deep_trenches:silicon_ingot", MISC);
-		SILVER_INGOT = createItem("deep_trenches:silver_ingot", MISC);
-		STROXITE_INGOT = createItem("deep_trenches:stroxite_ingot", MISC);
-		TUNGSTEN_INGOT = createItem("deep_trenches:tungsten_ingot", MISC);
-		URANIUM_INGOT = createItem("deep_trenches:uranium_ingot", MISC);
-		URANOLUMEN_INGOT = createItem("deep_trenches:uranolumen_ingot", MISC);
+		ACTINIUM_INGOT = createItem("deep_trenches:actinium_ingot", MINERALOGY);
+		BORON_INGOT = createItem("deep_trenches:boron_ingot", MINERALOGY);
+		ENRON_INGOT = createItem("deep_trenches:enron_ingot", MINERALOGY);
+		GYLDELION_INGOT = createItem("deep_trenches:gyldelion_ingot", MINERALOGY);
+		KRALCTIUM_INGOT = createItem("deep_trenches:kralctium_ingot", MINERALOGY);
+		SILICON_INGOT = createItem("deep_trenches:silicon_ingot", MINERALOGY);
+		SILVER_INGOT = createItem("deep_trenches:silver_ingot", MINERALOGY);
+		STROXITE_INGOT = createItem("deep_trenches:stroxite_ingot", MINERALOGY);
+		TUNGSTEN_INGOT = createItem("deep_trenches:tungsten_ingot", MINERALOGY);
+		URANIUM_INGOT = createItem("deep_trenches:uranium_ingot", MINERALOGY);
+		URANOLUMEN_INGOT = createItem("deep_trenches:uranolumen_ingot", MINERALOGY);
 
 		/* NUGGETS */
-		ACTINIUM_NUGGET = createItem("deep_trenches:actinium_nugget", MISC);
-		BORON_NUGGET = createItem("deep_trenches:boron_nugget", MISC);
-		ENRON_NUGGET = createItem("deep_trenches:enron_nugget", MISC);
-		GYLDELION_NUGGET = createItem("deep_trenches:gyldelion_nugget", MISC);
-		SILICON_NUGGET = createItem("deep_trenches:silicon_nugget", MISC);
-		SILVER_NUGGET = createItem("deep_trenches:silver_nugget", MISC);
-		STROXITE_NUGGET = createItem("deep_trenches:stroxite_nugget", MISC);
-		TUNGSTEN_NUGGET = createItem("deep_trenches:tungsten_nugget", MISC);
-		URANIUM_NUGGET = createItem("deep_trenches:uranium_nugget", MISC);
-		URANOLUMEN_NUGGET = createItem("deep_trenches:uranolumen_nugget", MISC);
+		ACTINIUM_NUGGET = createItem("deep_trenches:actinium_nugget", MINERALOGY);
+		BORON_NUGGET = createItem("deep_trenches:boron_nugget", MINERALOGY);
+		ENRON_NUGGET = createItem("deep_trenches:enron_nugget", MINERALOGY);
+		GYLDELION_NUGGET = createItem("deep_trenches:gyldelion_nugget", MINERALOGY);
+		SILICON_NUGGET = createItem("deep_trenches:silicon_nugget", MINERALOGY);
+		SILVER_NUGGET = createItem("deep_trenches:silver_nugget", MINERALOGY);
+		STROXITE_NUGGET = createItem("deep_trenches:stroxite_nugget", MINERALOGY);
+		TUNGSTEN_NUGGET = createItem("deep_trenches:tungsten_nugget", MINERALOGY);
+		URANIUM_NUGGET = createItem("deep_trenches:uranium_nugget", MINERALOGY);
+		URANOLUMEN_NUGGET = createItem("deep_trenches:uranolumen_nugget", MINERALOGY);
 
 		/* POWDERS */
-		URANIUM_POWDER = createItem("deep_trenches:uranium_powder", MISC);
-		URANOLUMEN_POWDER = createItem("deep_trenches:uranolumen_powder", MISC);
+		URANIUM_POWDER = createItem("deep_trenches:uranium_powder", MINERALOGY);
+		URANOLUMEN_POWDER = createItem("deep_trenches:uranolumen_powder", MINERALOGY);
 
 		/* GYNDELION */
 		GYLDELION_DYE = createItem("deep_trenches:gyldelion_dye", MISC);
