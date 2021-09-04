@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XXX",
+        " # ",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "tag": "deep_trenches:wooden_sticks"
+        },
+        "X": {
+            "item": "deep_trenches:aquamarine"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:aquamarine_pickaxe"
+    }
+}

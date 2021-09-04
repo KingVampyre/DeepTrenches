@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        "X#",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "tag": "deep_trenches:wooden_sticks"
+        },
+        "X": {
+            "item": "deep_trenches:morganite"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:morganite_axe"
+    }
+}

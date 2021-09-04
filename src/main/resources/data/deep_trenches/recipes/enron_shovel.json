@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X",
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "tag": "deep_trenches:wooden_sticks"
+        },
+        "X": {
+            "item": "deep_trenches:enron_ingot"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:enron_shovel"
+    }
+}

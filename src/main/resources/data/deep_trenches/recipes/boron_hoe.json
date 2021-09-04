@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        " #",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "tag": "deep_trenches:wooden_sticks"
+        },
+        "X": {
+            "item": "deep_trenches:boron_ingot"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:boron_hoe"
+    }
+}

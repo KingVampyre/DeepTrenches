@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X",
+        "X",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "tag": "deep_trenches:wooden_sticks"
+        },
+        "X": {
+            "item": "deep_trenches:enstatite"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:enstatite_sword"
+    }
+}

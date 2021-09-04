@@ -4585,7 +4585,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:chiseled_virdal_stone", CHISELED_VIRDAL_STONE);
 		Registry.register(BLOCK, "deep_trenches:cracked_virdal_stone_bricks", CRACKED_VIRDAL_STONE_BRICKS);
 		Registry.register(BLOCK, "deep_trenches:cracked_virdal_stone_tiles", CRACKED_VIRDAL_STONE_TILES);
-		Registry.register(BLOCK, "deep_trenches:polished_vidal_stone", POLISHED_VIRDAL_STONE);
+		Registry.register(BLOCK, "deep_trenches:polished_virdal_stone", POLISHED_VIRDAL_STONE);
 		Registry.register(BLOCK, "deep_trenches:waveite", WAVEITE);
 		Registry.register(BLOCK, "deep_trenches:waveite_bricks", WAVEITE_BRICKS);
 		Registry.register(BLOCK, "deep_trenches:waveite_pillar", WAVEITE_PILLAR);
