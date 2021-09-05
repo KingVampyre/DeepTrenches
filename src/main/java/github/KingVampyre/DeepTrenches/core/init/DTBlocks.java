@@ -5028,7 +5028,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:squisacle", SQUISACLE);
 		Registry.register(BLOCK, "deep_trenches:sweet_violet", SWEET_VIOLET);
 		Registry.register(BLOCK, "deep_trenches:topped_lavender", TOPPED_LAVENDER);
-		Registry.register(BLOCK, "deep_trenches:twisttrap_lavender", TWISTTRAP);
+		Registry.register(BLOCK, "deep_trenches:twisttrap", TWISTTRAP);
 		Registry.register(BLOCK, "deep_trenches:vaslame", VASLAME);
 		Registry.register(BLOCK, "deep_trenches:weepistil", WEEPISTIL);
 		Registry.register(BLOCK, "deep_trenches:weepy_hollower", WEEPY_HOLLOWER);
