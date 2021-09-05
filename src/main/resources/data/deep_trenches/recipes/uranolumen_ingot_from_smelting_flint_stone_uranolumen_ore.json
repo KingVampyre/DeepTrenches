@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "deep_trenches:uranolumen_ingot",
+    "ingredient": {
+        "item": "deep_trenches:flint_stone_uranolumen_ore"
+    },
+    "result": "deep_trenches:uranolumen_ingot",
+    "experience": 0.7,
+    "cookingtime": 200
+}

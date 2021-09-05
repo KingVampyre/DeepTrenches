@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "minecraft:gold_ingot",
+    "ingredient": {
+        "item": "deep_trenches:black_basalt_gold_ore"
+    },
+    "result": "minecraft:gold_ingot",
+    "experience": 0.7,
+    "cookingtime": 200
+}

@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "minecraft:gold_ingot",
+    "ingredient": {
+        "item": "deep_trenches:waveite_gold_ore"
+    },
+    "result": "minecraft:gold_ingot",
+    "experience": 0.7,
+    "cookingtime": 200
+}

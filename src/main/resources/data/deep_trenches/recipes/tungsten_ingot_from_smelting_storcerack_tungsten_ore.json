@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "deep_trenches:tungsten_ingot",
+    "ingredient": {
+        "item": "deep_trenches:storcerack_tungsten_ore"
+    },
+    "result": "deep_trenches:tungsten_ingot",
+    "experience": 0.7,
+    "cookingtime": 200
+}
