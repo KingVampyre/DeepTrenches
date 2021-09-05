@@ -830,6 +830,8 @@ public class DTItems {
 	public static final Item RAW_SILVER;
 	public static final Item RAW_STROXITE;
 	public static final Item RAW_TUNGSTEN;
+	public static final Item CHARGED_RAW_TUNGSTEN;
+	public static final Item RAW_URANIUM;
 	public static final Item RAW_URANOLUMEN;
 	public static final Item RUBY;
 	public static final Item SAPPHIRE;
@@ -1146,7 +1148,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:chiseled_virdal_stone", CHISELED_VIRDAL_STONE, MINERALOGY);
 		createBlockItem("deep_trenches:cracked_virdal_stone_bricks", CRACKED_VIRDAL_STONE_BRICKS, MINERALOGY);
 		createBlockItem("deep_trenches:cracked_virdal_stone_tiles", CRACKED_VIRDAL_STONE_TILES, MINERALOGY);
-		createBlockItem("deep_trenches:polished_vidal_stone", POLISHED_VIRDAL_STONE, MINERALOGY);
+		createBlockItem("deep_trenches:polished_virdal_stone", POLISHED_VIRDAL_STONE, MINERALOGY);
 
 		createBlockItem("deep_trenches:waveite", WAVEITE, MINERALOGY);
 		createBlockItem("deep_trenches:waveite_bricks", WAVEITE_BRICKS, MINERALOGY);
@@ -1189,12 +1191,10 @@ public class DTItems {
 
 		createBlockItem("deep_trenches:black_basalt_chalcedony_ore", BLACK_BASALT_CHALCEDONY_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_clinohumite_ore", BLACK_BASALT_CLINOHUMITE_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_copper_ore", BLACK_BASALT_COPPER_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_coal_ore", BLACK_BASALT_COAL_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_diamond_ore", BLACK_BASALT_DIAMOND_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:black_basalt_redstone_ore", BLACK_BASALT_REDSTONE_ORE, MINERALOGY);
 
 		createBlockItem("deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE, MINERALOGY);
@@ -1213,7 +1213,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:calcite_clinohumite_ore", CALCITE_CLINOHUMITE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:calcite_coal_ore", CALCITE_COAL_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:calcite_diamond_ore", CALCITE_DIAMOND_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:calcite_goal_ore", CALCITE_GOAL_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:calcite_gold_ore", CALCITE_GOLD_ORE, MINERALOGY);
 
 		createBlockItem("deep_trenches:deepslate_aquamarine_ore", DEEPSLATE_AQUAMARINE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:deepslate_black_opal_ore", DEEPSLATE_BLACK_OPAL_ORE, MINERALOGY);
@@ -1300,7 +1300,7 @@ public class DTItems {
 		createBlockItem("deep_trenches:hadal_stone_silver_ore", HADAL_STONE_SILVER_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:hadal_stone_sphene_ore", HADAL_STONE_SPHENE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:hadal_stone_spinel_ore", HADAL_STONE_SPINEL_ORE, MINERALOGY);
-		createBlockItem("deep_trenches:hadal_stone_suglite_ore", HADAL_STONE_SUGLITE_ORE, MINERALOGY);
+		createBlockItem("deep_trenches:hadal_stone_sugilite_ore", HADAL_STONE_SUGILITE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:hadal_stone_tanzanite_ore", HADAL_STONE_TANZANITE_ORE, MINERALOGY);
 		createBlockItem("deep_trenches:hadal_stone_topaz_ore", HADAL_STONE_TOPAZ_ORE, MINERALOGY);
 
@@ -3569,6 +3569,8 @@ public class DTItems {
 		RAW_SILVER = createItem("deep_trenches:raw_silver", MINERALOGY);
 		RAW_STROXITE = createItem("deep_trenches:raw_stroxite", MINERALOGY);
 		RAW_TUNGSTEN = createItem("deep_trenches:raw_tungsten", MINERALOGY);
+		CHARGED_RAW_TUNGSTEN = createItem("deep_trenches:charged_raw_tungsten", MINERALOGY);
+		RAW_URANIUM = createItem("deep_trenches:raw_uranium", MINERALOGY);
 		RAW_URANOLUMEN = createItem("deep_trenches:raw_uranolumen", MINERALOGY);
 		RUBY = createItem("deep_trenches:ruby", MINERALOGY);
 		SAPPHIRE = createItem("deep_trenches:sapphire", MINERALOGY);

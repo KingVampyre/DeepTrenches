@@ -6,10 +6,10 @@
     ],
     "key": {
         "X": {
-            "item": "deep_trenches:sapphrite"
+            "item": "deep_trenches:sapphire"
         }
     },
     "result": {
-        "item": "deep_trenches:sapphrite_helmet"
+        "item": "deep_trenches:sapphire_helmet"
     }
 }

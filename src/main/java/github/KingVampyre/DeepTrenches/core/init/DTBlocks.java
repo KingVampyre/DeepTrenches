@@ -218,12 +218,10 @@ public class DTBlocks {
 
 	public static final Block BLACK_BASALT_CHALCEDONY_ORE;
 	public static final Block BLACK_BASALT_CLINOHUMITE_ORE;
-	public static final Block BLACK_BASALT_COPPER_ORE;
 	public static final Block BLACK_BASALT_COAL_ORE;
 	public static final Block BLACK_BASALT_DIAMOND_ORE;
 	public static final Block BLACK_BASALT_GOLD_ORE;
 	public static final Block BLACK_BASALT_IRON_ORE;
-	public static final Block BLACK_BASALT_REDSTONE_ORE;
 
 	public static final Block BLUE_STORCERACK_BLACK_OPAL_ORE;
 	public static final Block BLUE_STORCERACK_COAL_ORE;
@@ -242,7 +240,7 @@ public class DTBlocks {
 	public static final Block CALCITE_CLINOHUMITE_ORE;
 	public static final Block CALCITE_COAL_ORE;
 	public static final Block CALCITE_DIAMOND_ORE;
-	public static final Block CALCITE_GOAL_ORE;
+	public static final Block CALCITE_GOLD_ORE;
 
 	public static final Block DEEPSLATE_AQUAMARINE_ORE;
 	public static final Block DEEPSLATE_BLACK_OPAL_ORE;
@@ -329,7 +327,7 @@ public class DTBlocks {
 	public static final Block HADAL_STONE_SILVER_ORE;
 	public static final Block HADAL_STONE_SPHENE_ORE;
 	public static final Block HADAL_STONE_SPINEL_ORE;
-	public static final Block HADAL_STONE_SUGLITE_ORE;
+	public static final Block HADAL_STONE_SUGILITE_ORE;
 	public static final Block HADAL_STONE_TANZANITE_ORE;
 	public static final Block HADAL_STONE_TOPAZ_ORE;
 
@@ -400,6 +398,7 @@ public class DTBlocks {
 
 	public static final Block STORCEAN_SAPPHIRE_ORE;
 	public static final Block STORCEAN_SILICON_ORE;
+	// TODO MOVE
 	public static final Block STORCEAN_SNOW;
 	public static final Block STORCEAN_TUNGSTEN_ORE;
 
@@ -2512,12 +2511,10 @@ public class DTBlocks {
 
 		BLACK_BASALT_CHALCEDONY_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_COPPER_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_COAL_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_DIAMOND_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_GOLD_ORE = createCopy(COAL_ORE);
 		BLACK_BASALT_IRON_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_REDSTONE_ORE = createCopy(COAL_ORE);
 
 		BLUE_STORCERACK_BLACK_OPAL_ORE = createCopy(COAL_ORE);
 		BLUE_STORCERACK_COAL_ORE = createCopy(COAL_ORE);
@@ -2536,7 +2533,7 @@ public class DTBlocks {
 		CALCITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
 		CALCITE_COAL_ORE = createCopy(COAL_ORE);
 		CALCITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		CALCITE_GOAL_ORE = createCopy(COAL_ORE);
+		CALCITE_GOLD_ORE = createCopy(COAL_ORE);
 
 		DEEPSLATE_AQUAMARINE_ORE = createCopy(COAL_ORE);
 		DEEPSLATE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
@@ -2623,7 +2620,7 @@ public class DTBlocks {
 		HADAL_STONE_SILVER_ORE = createCopy(COAL_ORE);
 		HADAL_STONE_SPHENE_ORE = createCopy(COAL_ORE);
 		HADAL_STONE_SPINEL_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_SUGLITE_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_SUGILITE_ORE = createCopy(COAL_ORE);
 		HADAL_STONE_TANZANITE_ORE = createCopy(COAL_ORE);
 		HADAL_STONE_TOPAZ_ORE = createCopy(COAL_ORE);
 
@@ -4594,12 +4591,10 @@ public class DTBlocks {
 
 		Registry.register(BLOCK, "deep_trenches:black_basalt_chalcedony_ore", BLACK_BASALT_CHALCEDONY_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_clinohumite_ore", BLACK_BASALT_CLINOHUMITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_copper_ore", BLACK_BASALT_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_coal_ore", BLACK_BASALT_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_diamond_ore", BLACK_BASALT_DIAMOND_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE);
-		Registry.register(BLOCK, "deep_trenches:black_basalt_redstone_ore", BLACK_BASALT_REDSTONE_ORE);
 
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE);
@@ -4618,7 +4613,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:calcite_clinohumite_ore", CALCITE_CLINOHUMITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:calcite_coal_ore", CALCITE_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:calcite_diamond_ore", CALCITE_DIAMOND_ORE);
-		Registry.register(BLOCK, "deep_trenches:calcite_goal_ore", CALCITE_GOAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:calcite_gold_ore", CALCITE_GOLD_ORE);
 
 		Registry.register(BLOCK, "deep_trenches:deepslate_aquamarine_ore", DEEPSLATE_AQUAMARINE_ORE);
 		Registry.register(BLOCK, "deep_trenches:deepslate_black_opal_ore", DEEPSLATE_BLACK_OPAL_ORE);
@@ -4705,7 +4700,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:hadal_stone_silver_ore", HADAL_STONE_SILVER_ORE);
 		Registry.register(BLOCK, "deep_trenches:hadal_stone_sphene_ore", HADAL_STONE_SPHENE_ORE);
 		Registry.register(BLOCK, "deep_trenches:hadal_stone_spinel_ore", HADAL_STONE_SPINEL_ORE);
-		Registry.register(BLOCK, "deep_trenches:hadal_stone_suglite_ore", HADAL_STONE_SUGLITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:hadal_stone_sugilite_ore", HADAL_STONE_SUGILITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:hadal_stone_tanzanite_ore", HADAL_STONE_TANZANITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:hadal_stone_topaz_ore", HADAL_STONE_TOPAZ_ORE);
 
@@ -4737,6 +4732,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:limestone_spinel_ore", LIMESTONE_SPINEL_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_sugilite_ore", LIMESTONE_SUGILITE_ORE);
 
+		// TODO MOVE
 		Registry.register(BLOCK, "deep_trenches:lustred_waveite", LUSTRED_WAVEITE);
 		Registry.register(BLOCK, "deep_trenches:lustred_waveite_sapphire_ore", LUSTRED_WAVEITE_SAPPHIRE_ORE);
 		Registry.register(BLOCK, "deep_trenches:lustred_waveite_tanzanite_ore", LUSTRED_WAVEITE_TANZANITE_ORE);
