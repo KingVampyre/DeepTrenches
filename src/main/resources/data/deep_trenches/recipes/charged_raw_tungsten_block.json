@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "deep_trenches:raw_tungsten"
+        }
+    },
+    "result": {
+        "item": "deep_trenches:charged_raw_tungsten_block"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "deep_trenches:charged_tungsten_ingot",
+    "ingredients": [
+        {
+            "item": "deep_trenches:charged_tungsten_block"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:charged_tungsten_ingot",
+        "count": 9
+    }
+}

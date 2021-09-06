@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "deep_trenches:charged_raw_tungsten_block"
+        }
+    ],
+    "result": {
+        "item": "deep_trenches:raw_tungsten",
+        "count": 9
+    }
+}

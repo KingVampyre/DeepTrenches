@@ -1,10 +1,10 @@
 {
     "type": "minecraft:smelting",
-    "group": "deep_trenches:charged_tungsten",
+    "group": "deep_trenches:charged_tungsten_ingot",
     "ingredient": {
         "item": "deep_trenches:blue_storcerack_charged_tungsten_ore"
     },
-    "result": "deep_trenches:charged_tungsten",
+    "result": "deep_trenches:charged_tungsten_ingot",
     "experience": 0.7,
     "cookingtime": 200
 }

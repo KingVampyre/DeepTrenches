@@ -852,6 +852,7 @@ public class DTItems {
 	public static final Item SILVER_INGOT;
 	public static final Item STROXITE_INGOT;
 	public static final Item TUNGSTEN_INGOT;
+	public static final Item CHARGED_TUNGSTEN_INGOT;
 	public static final Item URANIUM_INGOT;
 	public static final Item URANOLUMEN_INGOT;
 
@@ -865,6 +866,7 @@ public class DTItems {
 	public static final Item SILVER_NUGGET;
 	public static final Item STROXITE_NUGGET;
 	public static final Item TUNGSTEN_NUGGET;
+	public static final Item CHARGED_TUNGSTEN_NUGGET;
 	public static final Item URANIUM_NUGGET;
 	public static final Item URANOLUMEN_NUGGET;
 
@@ -1820,6 +1822,7 @@ public class DTItems {
 		SILVER_INGOT = createItem(MINERALOGY);
 		STROXITE_INGOT = createItem(MINERALOGY);
 		TUNGSTEN_INGOT = createItem(MINERALOGY);
+        CHARGED_TUNGSTEN_INGOT = createItem(MINERALOGY);
 		URANIUM_INGOT = createItem(MINERALOGY);
 		URANOLUMEN_INGOT = createItem(MINERALOGY);
 
@@ -1833,6 +1836,7 @@ public class DTItems {
 		SILVER_NUGGET = createItem(MINERALOGY);
 		STROXITE_NUGGET = createItem(MINERALOGY);
 		TUNGSTEN_NUGGET = createItem(MINERALOGY);
+        CHARGED_TUNGSTEN_NUGGET = createItem(MINERALOGY);
 		URANIUM_NUGGET = createItem(MINERALOGY);
 		URANOLUMEN_NUGGET = createItem(MINERALOGY);
 
@@ -4448,6 +4452,7 @@ public class DTItems {
 		registerItem("deep_trenches:silver_ingot", SILVER_INGOT);
 		registerItem("deep_trenches:stroxite_ingot", STROXITE_INGOT);
 		registerItem("deep_trenches:tungsten_ingot", TUNGSTEN_INGOT);
+		registerItem("deep_trenches:charged_tungsten_ingot", CHARGED_TUNGSTEN_INGOT);
 		registerItem("deep_trenches:uranium_ingot", URANIUM_INGOT);
 		registerItem("deep_trenches:uranolumen_ingot", URANOLUMEN_INGOT);
 
@@ -4461,6 +4466,7 @@ public class DTItems {
 		registerItem("deep_trenches:silver_nugget", SILVER_NUGGET);
 		registerItem("deep_trenches:stroxite_nugget", STROXITE_NUGGET);
 		registerItem("deep_trenches:tungsten_nugget", TUNGSTEN_NUGGET);
+		registerItem("deep_trenches:charged_tungsten_nugget", CHARGED_TUNGSTEN_NUGGET);
 		registerItem("deep_trenches:uranium_nugget", URANIUM_NUGGET);
 		registerItem("deep_trenches:uranolumen_nugget", URANOLUMEN_NUGGET);
 
