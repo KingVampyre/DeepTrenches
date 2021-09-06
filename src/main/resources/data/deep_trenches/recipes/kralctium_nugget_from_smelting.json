@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": [
+        {
+            "item": "deep_trenches:kralctium_helmet"
+        },
+        {
+            "item": "deep_trenches:kralctium_chestplate"
+        },
+        {
+            "item": "deep_trenches:kralctium_leggings"
+        },
+        {
+            "item": "deep_trenches:kralctium_boots"
+        },
+        {
+            "item": "deep_trenches:kralctium_axe"
+        },
+        {
+            "item": "deep_trenches:kralctium_hoe"
+        },
+        {
+            "item": "deep_trenches:kralctium_pickaxe"
+        },
+        {
+            "item": "deep_trenches:kralctium_shovel"
+        },
+        {
+            "item": "deep_trenches:kralctium_sword"
+        }
+    ],
+    "result": "deep_trenches:kralctium_nugget",
+    "experience": 0.1,
+    "cookingtime": 100
+}

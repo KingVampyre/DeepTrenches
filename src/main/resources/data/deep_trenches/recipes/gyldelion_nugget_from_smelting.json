@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": [
+        {
+            "item": "deep_trenches:gyldelion_axe"
+        },
+        {
+            "item": "deep_trenches:gyldelion_hoe"
+        },
+        {
+            "item": "deep_trenches:gyldelion_pickaxe"
+        },
+        {
+            "item": "deep_trenches:gyldelion_shovel"
+        },
+        {
+            "item": "deep_trenches:gyldelion_scythe"
+        }
+    ],
+    "result": "deep_trenches:gyldelion_nugget",
+    "experience": 0.1,
+    "cookingtime": 100
+}

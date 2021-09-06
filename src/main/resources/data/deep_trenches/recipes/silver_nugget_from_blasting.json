@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": [
+        {
+            "item": "deep_trenches:silver_helmet"
+        },
+        {
+            "item": "deep_trenches:silver_chestplate"
+        },
+        {
+            "item": "deep_trenches:silver_leggings"
+        },
+        {
+            "item": "deep_trenches:silver_boots"
+        },
+        {
+            "item": "deep_trenches:silver_axe"
+        },
+        {
+            "item": "deep_trenches:silver_hoe"
+        },
+        {
+            "item": "deep_trenches:silver_pickaxe"
+        },
+        {
+            "item": "deep_trenches:silver_shovel"
+        }
+    ],
+    "result": "deep_trenches:silver_nugget",
+    "experience": 0.1,
+    "cookingtime": 100
+}

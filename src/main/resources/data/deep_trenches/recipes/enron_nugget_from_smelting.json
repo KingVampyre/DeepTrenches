@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": [
+        {
+            "item": "deep_trenches:enron_helmet"
+        },
+        {
+            "item": "deep_trenches:enron_chestplate"
+        },
+        {
+            "item": "deep_trenches:enron_leggings"
+        },
+        {
+            "item": "deep_trenches:enron_boots"
+        },
+        {
+            "item": "deep_trenches:enron_axe"
+        },
+        {
+            "item": "deep_trenches:enron_hoe"
+        },
+        {
+            "item": "deep_trenches:enron_pickaxe"
+        },
+        {
+            "item": "deep_trenches:enron_shovel"
+        },
+        {
+            "item": "deep_trenches:enron_sword"
+        }
+    ],
+    "result": "deep_trenches:enron_nugget",
+    "experience": 0.1,
+    "cookingtime": 100
+}

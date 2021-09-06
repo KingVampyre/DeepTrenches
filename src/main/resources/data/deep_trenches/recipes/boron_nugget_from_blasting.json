@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": [
+        {
+            "item": "deep_trenches:boron_helmet"
+        },
+        {
+            "item": "deep_trenches:boron_chestplate"
+        },
+        {
+            "item": "deep_trenches:boron_leggings"
+        },
+        {
+            "item": "deep_trenches:boron_boots"
+        },
+        {
+            "item": "deep_trenches:boron_axe"
+        },
+        {
+            "item": "deep_trenches:boron_hoe"
+        },
+        {
+            "item": "deep_trenches:boron_pickaxe"
+        },
+        {
+            "item": "deep_trenches:boron_shovel"
+        },
+        {
+            "item": "deep_trenches:boron_scythe"
+        },
+        {
+            "item": "deep_trenches:boron_trookent"
+        },
+        {
+            "item": "deep_trenches:boron_sword"
+        }
+    ],
+    "result": "deep_trenches:boron_nugget",
+    "experience": 0.1,
+    "cookingtime": 100
+}
