@@ -2,7 +2,7 @@
     "type": "minecraft:smelting",
     "group": "deep_trenches:chalcedony",
     "ingredient": {
-        "item": "deep_trenches:sulfure_stone_chalcedony_ore"
+        "item": "deep_trenches:sulfur_stone_chalcedony_ore"
     },
     "result": "deep_trenches:chalcedony",
     "experience": 0.7,

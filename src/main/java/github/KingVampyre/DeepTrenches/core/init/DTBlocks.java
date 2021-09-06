@@ -47,6 +47,7 @@ public class DTBlocks {
 	public static final Block SUS;
 
 	/* ICE BLOCKS */
+	public static final Block STORCEAN_SNOW;
 	public static final Block CRYOGENIC_ICE;
 	public static final Block BLACK_ICE;
 	public static final Block GREEN_ICE;
@@ -398,8 +399,6 @@ public class DTBlocks {
 
 	public static final Block STORCEAN_SAPPHIRE_ORE;
 	public static final Block STORCEAN_SILICON_ORE;
-	// TODO MOVE
-	public static final Block STORCEAN_SNOW;
 	public static final Block STORCEAN_TUNGSTEN_ORE;
 
 	public static final Block STORCENDITE_AQUAMARINE_ORE;
@@ -1165,7 +1164,7 @@ public class DTBlocks {
 	public static final Block CHOTORN_LOG;
 	public static final Block CHOTORN_PLANKS;
 	public static final Block CHOTORN_PRESSURE_PLATE;
-	public static final Block CHOTORN_SAPLING;
+	public static final Block CHOTORN;
 	public static final Block CHOTORN_SIGN;
 	public static final Block CHOTORN_SLAB;
 	public static final Block CHOTORN_STAIRS;
@@ -2340,11 +2339,12 @@ public class DTBlocks {
 		SUS = createCopy(STONE);
 
 		/* ICE BLOCKS */
-		CRYOGENIC_ICE = createCopy(STONE);
-		BLACK_ICE = createCopy(STONE);
-		GREEN_ICE = createCopy(STONE);
-		MARINE_SNOW = createCopy(STONE);
-		STORCEAN_MARINE_SNOW = createCopy(STONE);
+		STORCEAN_SNOW = createCopy(SNOW_BLOCK);
+		CRYOGENIC_ICE = createCopy(ICE);
+		BLACK_ICE = createCopy(ICE);
+		GREEN_ICE = createCopy(ICE);
+		MARINE_SNOW = createCopy(SNOW_BLOCK);
+		STORCEAN_MARINE_SNOW = createCopy(SNOW_BLOCK);
 
 		/* BLOCK ENTITIES */
 		STASP_NEST = createBlock(StaspNestBlock::new, OAK_WOOD);
@@ -2691,7 +2691,6 @@ public class DTBlocks {
 
 		STORCEAN_SAPPHIRE_ORE = createCopy(COAL_ORE);
 		STORCEAN_SILICON_ORE = createCopy(COAL_ORE);
-		STORCEAN_SNOW = createCopy(COAL_ORE);
 		STORCEAN_TUNGSTEN_ORE = createCopy(COAL_ORE);
 
 		STORCENDITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
@@ -3431,7 +3430,7 @@ public class DTBlocks {
 		CHERRY_WALL_SIGN = createOakWallSign(DTSignTypes.CHERRY);
 		CHERRY_WOOD = createOakWood();
 
-		CHOTORN_SAPLING = createOakSapling(DTSaplingGenerators.CHOTORN);
+		CHOTORN = createOakSapling(DTSaplingGenerators.CHOTORN);
 		CHOTORN_BUTTON = createOakButton();
 		CHOTORN_DOOR = createOakDoor();
 		CHOTORN_FENCE = createOakFence();
@@ -4434,6 +4433,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:sus", SUS);
 
 		/* ICE BLOCKS */
+		Registry.register(BLOCK, "deep_trenches:storcean_snow", STORCEAN_SNOW);
 		Registry.register(BLOCK, "deep_trenches:cryogenic_ice", CRYOGENIC_ICE);
 		Registry.register(BLOCK, "deep_trenches:black_ice", BLACK_ICE);
 		Registry.register(BLOCK, "deep_trenches:green_ice", GREEN_ICE);
@@ -4772,7 +4772,6 @@ public class DTBlocks {
 
 		Registry.register(BLOCK, "deep_trenches:storcean_sapphire_ore", STORCEAN_SAPPHIRE_ORE);
 		Registry.register(BLOCK, "deep_trenches:storcean_silicon_ore", STORCEAN_SILICON_ORE);
-		Registry.register(BLOCK, "deep_trenches:storcean_snow", STORCEAN_SNOW);
 		Registry.register(BLOCK, "deep_trenches:storcean_tungsten_ore", STORCEAN_TUNGSTEN_ORE);
 
 		Registry.register(BLOCK, "deep_trenches:storcendite_aquamarine_ore", STORCENDITE_AQUAMARINE_ORE);
@@ -5065,6 +5064,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:jungle_umbrella", JUNGLE_UMBRELLA);
 		Registry.register(BLOCK, "deep_trenches:lichen", LICHEN);
 		Registry.register(BLOCK, "deep_trenches:mosses", MOSSES);
+		Registry.register(BLOCK, "deep_trenches:murkstem", MURKSTEM);
 		Registry.register(BLOCK, "deep_trenches:pomegranate_bush", POMEGRANATE_BUSH);
 		Registry.register(BLOCK, "deep_trenches:reebloon", REEBLOON);
 		Registry.register(BLOCK, "deep_trenches:sea_buckthorn", SEA_BUCKTHORN);
@@ -5537,7 +5537,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:chotorn_log", CHOTORN_LOG);
 		Registry.register(BLOCK, "deep_trenches:chotorn_planks", CHOTORN_PLANKS);
 		Registry.register(BLOCK, "deep_trenches:chotorn_pressure_plate", CHOTORN_PRESSURE_PLATE);
-		Registry.register(BLOCK, "deep_trenches:chotorn_sapling", CHOTORN_SAPLING);
+		Registry.register(BLOCK, "deep_trenches:chotorn", CHOTORN);
 		Registry.register(BLOCK, "deep_trenches:chotorn_sign", CHOTORN_SIGN);
 		Registry.register(BLOCK, "deep_trenches:chotorn_slab", CHOTORN_SLAB);
 		Registry.register(BLOCK, "deep_trenches:chotorn_stairs", CHOTORN_STAIRS);
@@ -5698,6 +5698,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:flalm_slab", FLALM_SLAB);
 		Registry.register(BLOCK, "deep_trenches:flalm_stairs", FLALM_STAIRS);
 		Registry.register(BLOCK, "deep_trenches:flalm_stem", FLALM_STEM);
+		Registry.register(BLOCK, "deep_trenches:flalm_thorns", FLALM_THORNS);
 		Registry.register(BLOCK, "deep_trenches:flalm_trapdoor", FLALM_TRAPDOOR);
 		Registry.register(BLOCK, "deep_trenches:flalm_wall_sign", FLALM_WALL_SIGN);
 		Registry.register(BLOCK, "deep_trenches:flalm_wood", FLALM_WOOD);
@@ -6208,6 +6209,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:vynhert_fence_gate", VYNHERT_FENCE_GATE);
 		Registry.register(BLOCK, "deep_trenches:vynhert_fruit", VYNHERT_FRUIT);
 		Registry.register(BLOCK, "deep_trenches:carved_vynhert_fruit", CARVED_VYNHERT_FRUIT);
+		Registry.register(BLOCK, "deep_trenches:vynhert_leaf", VYNHERT_LEAF);
 		Registry.register(BLOCK, "deep_trenches:vynhert_log", VYNHERT_LOG);
 		Registry.register(BLOCK, "deep_trenches:vynhert_o_lantern", VYNHERT_O_LANTERN);
 		Registry.register(BLOCK, "deep_trenches:vynhert_planks", VYNHERT_PLANKS);
@@ -6217,6 +6219,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:vynhert_slab", VYNHERT_SLAB);
 		Registry.register(BLOCK, "deep_trenches:vynhert_stairs", VYNHERT_STAIRS);
 		Registry.register(BLOCK, "deep_trenches:vynhert_tentacles", VYNHERT_TENTACLES);
+		Registry.register(BLOCK, "deep_trenches:vynhert_thorns", VYNHERT_THORNS);
 		Registry.register(BLOCK, "deep_trenches:vynhert_trapdoor", VYNHERT_TRAPDOOR);
 		Registry.register(BLOCK, "deep_trenches:vynhert_wall_sign", VYNHERT_WALL_SIGN);
 		Registry.register(BLOCK, "deep_trenches:vynhert_wood", VYNHERT_WOOD);

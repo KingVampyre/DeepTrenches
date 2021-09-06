@@ -1,8 +1,8 @@
 {
-    "type": "minecraft:smelting",
+    "type": "minecraft:blasting",
     "group": "deep_trenches:clinohumite",
     "ingredient": {
-        "item": "deep_trenches:sulfure_stone_clinohumite_ore"
+        "item": "deep_trenches:sulfur_stone_clinohumite_ore"
     },
     "result": "deep_trenches:clinohumite",
     "experience": 0.7,

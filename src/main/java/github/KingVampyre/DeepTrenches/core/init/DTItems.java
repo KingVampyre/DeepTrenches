@@ -2500,14 +2500,11 @@ public class DTItems {
 		registerBlockItem("deep_trenches:blue_mahoe_flower", BLUE_MAHOE_FLOWER, ARBOROLOGY);
 		registerBlockItem("deep_trenches:murkantuan_flower", MURKANTUAN_FLOWER, ARBOROLOGY);
 
-		registerBlockItem("deep_trenches:rhadi_thorns", RHADI_THORNS, ARBOROLOGY);
-
 		/* TALL FLOWERS */
 		registerBlockItem("deep_trenches:black_lily", BLACK_LILY, PHYTOLOGY);
 		registerBlockItem("deep_trenches:bullthorn", BULLTHORN, PHYTOLOGY);
 		registerBlockItem("deep_trenches:cactlow", CACTLOW, PHYTOLOGY);
 		registerBlockItem("deep_trenches:clawbulb", CLAWBULB, PHYTOLOGY);
-		registerBlockItem("deep_trenches:murkstem", MURKSTEM, PHYTOLOGY);
 		registerBlockItem("deep_trenches:lime_spurge", LIME_SPURGE, PHYTOLOGY);
 		registerBlockItem("deep_trenches:lupin_flower", LUPIN_FLOWER, PHYTOLOGY);
 		registerBlockItem("deep_trenches:orange_lily", ORANGE_LILY, PHYTOLOGY);
@@ -2532,6 +2529,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:jungle_umbrella", JUNGLE_UMBRELLA, PHYTOLOGY);
 		registerBlockItem("deep_trenches:lichen", LICHEN, PHYTOLOGY);
 		registerBlockItem("deep_trenches:mosses", MOSSES, PHYTOLOGY);
+		registerBlockItem("deep_trenches:murkstem", MURKSTEM, PHYTOLOGY);
 		registerBlockItem("deep_trenches:pomegranate_bush", POMEGRANATE_BUSH, PHYTOLOGY);
 		registerBlockItem("deep_trenches:reebloon", REEBLOON, PHYTOLOGY);
 		registerBlockItem("deep_trenches:sea_buckthorn", SEA_BUCKTHORN, PHYTOLOGY);
@@ -2547,6 +2545,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:white_mushroom", WHITE_MUSHROOM, PHYTOLOGY);
 
 		/* GIANT VIOLET */
+		registerBlockItem("deep_trenches:flalm_petal_block", FLALM_PETAL_BLOCK, PHYTOLOGY);
 		registerBlockItem("deep_trenches:giant_violet", GIANT_VIOLET, PHYTOLOGY);
 		registerBlockItem("deep_trenches:giant_violet_leaf", GIANT_VIOLET_LEAF, PHYTOLOGY);
 		registerBlockItem("deep_trenches:giant_violet_petal", GIANT_VIOLET_PETAL, PHYTOLOGY);
@@ -2827,6 +2826,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:bottlebrush_fence", BOTTLEBRUSH_FENCE, ARBOROLOGY);
 		registerBlockItem("deep_trenches:bromya_fence", BROMYA_FENCE, ARBOROLOGY);
 		registerBlockItem("deep_trenches:bubbletree_fence", BUBBLETREE_FENCE, ARBOROLOGY);
+		registerBlockItem("deep_trenches:bubbletree_bubbles", BUBBLETREE_BUBBLES, ARBOROLOGY);
 		registerBlockItem("deep_trenches:calcearb_fence", CALCEARB_FENCE, ARBOROLOGY);
 		registerBlockItem("deep_trenches:cherry_fence", CHERRY_FENCE, ARBOROLOGY);
 		registerBlockItem("deep_trenches:chotorn_fence", CHOTORN_FENCE, ARBOROLOGY);
@@ -3630,6 +3630,36 @@ public class DTItems {
 		registerBlockItem("deep_trenches:stripped_wart_tree_wood", STRIPPED_WART_TREE_WOOD, ARBOROLOGY);
 		registerBlockItem("deep_trenches:stripped_wenge_wood", STRIPPED_WENGE_WOOD, ARBOROLOGY);
 		registerBlockItem("deep_trenches:stripped_yew_wood", STRIPPED_YEW_WOOD, ARBOROLOGY);
+
+		registerBlockItem("deep_trenches:fugmos_moss", FUGMOS_MOSS, PHYTOLOGY);
+		registerBlockItem("deep_trenches:wart_tree_warts", WART_TREE_WARTS, PHYTOLOGY);
+
+		registerBlockItem("deep_trenches:rhadi_fruit", RHADI_FRUIT, PHYTOLOGY);
+		registerBlockItem("deep_trenches:carved_rhadi_fruit", CARVED_RHADI_FRUIT, PHYTOLOGY);
+		registerBlockItem("deep_trenches:rhadi_o_lantern", RHADI_O_LANTERN, PHYTOLOGY);
+
+		registerBlockItem("deep_trenches:vynhert_fruit", VYNHERT_FRUIT, PHYTOLOGY);
+		registerBlockItem("deep_trenches:carved_vynhert_fruit", CARVED_VYNHERT_FRUIT, PHYTOLOGY);
+		registerBlockItem("deep_trenches:vynhert_o_lantern", VYNHERT_O_LANTERN, PHYTOLOGY);
+
+		registerBlockItem("deep_trenches:bottlebrush_flowers", BOTTLEBRUSH_FLOWERS, PHYTOLOGY);
+		registerBlockItem("deep_trenches:guaiacum_flowers", GUAIACUM_FLOWERS, PHYTOLOGY);
+		registerBlockItem("deep_trenches:melaleuca_flowers", MELALEUCA_FLOWERS, PHYTOLOGY);
+
+		registerBlockItem("deep_trenches:chotorn", CHOTORN, PHYTOLOGY);
+		registerBlockItem("deep_trenches:drigyus", DRIGYUS, PHYTOLOGY);
+		registerBlockItem("deep_trenches:flalm", FLALM, PHYTOLOGY);
+		registerBlockItem("deep_trenches:fugmos", FUGMOS, PHYTOLOGY);
+		registerBlockItem("deep_trenches:obscrus", OBSCRUS, PHYTOLOGY);
+		registerBlockItem("deep_trenches:scarlet_thiorcen", SCARLET_THIORCEN, PHYTOLOGY);
+
+		registerBlockItem("deep_trenches:enderheart_leaf", ENDERHEART_LEAF, PHYTOLOGY);
+		registerBlockItem("deep_trenches:vynhert_leaf", VYNHERT_LEAF, PHYTOLOGY);
+
+		registerBlockItem("deep_trenches:flalm_thorns", FLALM_THORNS, PHYTOLOGY);
+		registerBlockItem("deep_trenches:rhadi_thorns", RHADI_THORNS, PHYTOLOGY);
+		registerBlockItem("deep_trenches:vynhert_tentacles", VYNHERT_TENTACLES, PHYTOLOGY);
+		registerBlockItem("deep_trenches:vynhert_thorns", VYNHERT_THORNS, PHYTOLOGY);
 
 		/* FISH BUCKETS */
 		registerItem("deep_trenches:barbeled_loosejaw_bucket", BARBELED_LOOSEJAW_BUCKET);
