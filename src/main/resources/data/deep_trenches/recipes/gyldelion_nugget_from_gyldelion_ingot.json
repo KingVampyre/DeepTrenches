@@ -1,17 +1,12 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "group": "deep_trenches:gyldelion_ingot",
-    "pattern": [
-        "###",
-        "###",
-        "###"
-    ],
-    "key": {
-        "#": {
-            "item": "deep_trenches:gyldelion_nugget"
-        }
-    },
-    "result": {
-        "item": "deep_trenches:gyldelion_ingot"
-    }
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "deep_trenches:gyldelion_ingot"
+		}
+	],
+	"result": {
+		"item": "deep_trenches:gyldelion_nugget",
+		"count": 9
+	}
 }
