@@ -23,6 +23,7 @@ public class  DeepTrenches implements ModInitializer {
     public void onInitialize() {
 		GeckoLib.initialize();
 		DTBlocks.initialize();
+		DTItems.initialize();
 		DTFuelRegistry.initialize();
 
 		/* GENERATOR TYPE */

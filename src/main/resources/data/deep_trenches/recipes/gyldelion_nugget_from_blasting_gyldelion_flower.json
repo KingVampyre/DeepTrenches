@@ -4,7 +4,7 @@
     "ingredient": {
         "item": "deep_trenches:gyldelion_flower"
     },
-    "result": "deep_trenches:gyldelion_ingot",
+    "result": "deep_trenches:gyldelion_nugget",
     "experience": 0.7,
     "cookingtime": 200
 }
