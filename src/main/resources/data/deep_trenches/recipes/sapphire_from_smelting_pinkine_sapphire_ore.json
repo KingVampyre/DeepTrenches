@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "deep_trenches:sapphire",
+    "ingredient": {
+        "item": "deep_trenches:pinkine_sapphire_ore"
+    },
+    "result": "deep_trenches:sapphire",
+    "experience": 0.7,
+    "cookingtime": 200
+}

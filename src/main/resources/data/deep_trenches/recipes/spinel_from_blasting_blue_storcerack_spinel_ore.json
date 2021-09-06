@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "deep_trenches:spinel",
+    "ingredient": {
+        "item": "deep_trenches:blue_storcerack_spinel_ore"
+    },
+    "result": "deep_trenches:spinel",
+    "experience": 0.7,
+    "cookingtime": 200
+}

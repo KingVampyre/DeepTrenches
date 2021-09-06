@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "deep_trenches:void_crittered_diopside",
+    "ingredient": {
+        "item": "deep_trenches:bedrock_void_crittered_diopside_ore"
+    },
+    "result": "deep_trenches:void_crittered_diopside",
+    "experience": 0.7,
+    "cookingtime": 200
+}

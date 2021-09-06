@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "deep_trenches:chalcedony",
+    "ingredient": {
+        "item": "deep_trenches:smooth_basalt_chalcedony_ore"
+    },
+    "result": "deep_trenches:chalcedony",
+    "experience": 0.7,
+    "cookingtime": 200
+}

@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "minecraft:coal",
+    "ingredient": {
+        "item": "deep_trenches:pinkine_coal_ore"
+    },
+    "result": "minecraft:coal",
+    "experience": 0.7,
+    "cookingtime": 200
+}

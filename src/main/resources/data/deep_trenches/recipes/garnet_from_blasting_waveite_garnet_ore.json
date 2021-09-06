@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "deep_trenches:garnet",
+    "ingredient": {
+        "item": "deep_trenches:waveite_garnet_ore"
+    },
+    "result": "deep_trenches:garnet",
+    "experience": 0.7,
+    "cookingtime": 200
+}

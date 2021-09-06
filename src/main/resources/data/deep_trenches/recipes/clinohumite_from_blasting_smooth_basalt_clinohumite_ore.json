@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "deep_trenches:clinohumite",
+    "ingredient": {
+        "item": "deep_trenches:smooth_basalt_clinohumite_ore"
+    },
+    "result": "deep_trenches:clinohumite",
+    "experience": 0.7,
+    "cookingtime": 200
+}

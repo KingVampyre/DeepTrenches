@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "deep_trenches:sugilite",
+    "ingredient": {
+        "item": "deep_trenches:pinkine_sugilite_ore"
+    },
+    "result": "deep_trenches:sugilite",
+    "experience": 0.7,
+    "cookingtime": 200
+}

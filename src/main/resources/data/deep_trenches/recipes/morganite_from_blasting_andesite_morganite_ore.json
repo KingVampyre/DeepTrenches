@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "deep_trenches:morganite",
+    "ingredient": {
+        "item": "deep_trenches:andesite_morganite_ore"
+    },
+    "result": "deep_trenches:morganite",
+    "experience": 0.7,
+    "cookingtime": 200
+}

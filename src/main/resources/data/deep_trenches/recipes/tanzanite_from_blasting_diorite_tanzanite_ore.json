@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "deep_trenches:tanzanite",
+    "ingredient": {
+        "item": "deep_trenches:diorite_tanzanite_ore"
+    },
+    "result": "deep_trenches:tanzanite",
+    "experience": 0.7,
+    "cookingtime": 200
+}

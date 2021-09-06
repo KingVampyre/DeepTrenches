@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "deep_trenches:diopside",
+    "ingredient": {
+        "item": "deep_trenches:pinkine_diopside_ore"
+    },
+    "result": "deep_trenches:diopside",
+    "experience": 0.7,
+    "cookingtime": 200
+}

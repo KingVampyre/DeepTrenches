@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:blasting",
+    "group": "deep_trenches:charged_tungsten",
+    "ingredient": {
+        "item": "deep_trenches:blue_storcerack_charged_tungsten_ore"
+    },
+    "result": "deep_trenches:charged_tungsten",
+    "experience": 0.7,
+    "cookingtime": 200
+}
