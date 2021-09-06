@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/pointed_dripstone",
+    "textures": {
+        "cross": "deep_trenches:block/pointed_light_opalite_up_tip"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/pointed_dripstone",
+    "textures": {
+        "cross": "deep_trenches:block/pointed_skystone_up_middle"
+    }
+}

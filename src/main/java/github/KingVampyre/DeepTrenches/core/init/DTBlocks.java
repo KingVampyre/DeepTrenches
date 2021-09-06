@@ -2899,8 +2899,8 @@ public class DTBlocks {
 		SMALL_SUGILITE_BUD = createSmallAmethystBud();
 
 		/* POINTED STONES */
-		POINTED_LIGHT_OPALITE = createCopy(POINTED_DRIPSTONE);
-		POINTED_SKYSTONE = createCopy(POINTED_DRIPSTONE);
+		POINTED_LIGHT_OPALITE = createBlock(PointedDripstoneBlock::new, POINTED_DRIPSTONE);
+		POINTED_SKYSTONE = createBlock(PointedDripstoneBlock::new, POINTED_DRIPSTONE);
 		TWISTED_BLUE_STORCERACK = createCopy(POINTED_DRIPSTONE);
 
 		/* SURFACE BLOCKS */
