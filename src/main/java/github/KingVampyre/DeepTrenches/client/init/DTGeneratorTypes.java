@@ -1,19 +1,13 @@
 package github.KingVampyre.DeepTrenches.client.init;
 
-import com.google.common.collect.ImmutableMap;
 import github.KingVampyre.DeepTrenches.core.init.DTChunkGeneratorSettings;
 import github.KingVampyre.DeepTrenches.core.world.gen.chunk.TheDreamChunkGenerator;
 import net.minecraft.client.world.GeneratorType;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.source.VanillaLayeredBiomeSource;
+import net.minecraft.world.biome.source.MultiNoiseBiomeSource;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.ChunkGeneratorSettings;
-
-import static github.KingVampyre.DeepTrenches.core.init.DTBiomes.*;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.CLEAR_WATER;
-import static net.minecraft.block.Blocks.COBBLESTONE;
-import static net.minecraft.block.Blocks.DIORITE;
 
 public class DTGeneratorTypes {
 
@@ -21,19 +15,9 @@ public class DTGeneratorTypes {
 
         @Override
         protected ChunkGenerator getChunkGenerator(Registry<Biome> biomeRegistry, Registry<ChunkGeneratorSettings> registry, long seed) {
-            var biomeSource = new VanillaLayeredBiomeSource(seed, false, false, biomeRegistry);
-            var terrainSources = ImmutableMap.of(
-                    ALMOND_FOREST_KEY, DIORITE.getDefaultState(),
-                    ALMOND_PLUS_FOREST_KEY, DIORITE.getDefaultState(),
-                    BLACK_BIRCH_FOREST_KEY, COBBLESTONE.getDefaultState()
-            );
+            var biomeSource = MultiNoiseBiomeSource.createVanillaSource(biomeRegistry, seed);
 
-            var fluids = ImmutableMap.of(
-                    ALMOND_FOREST_KEY, CLEAR_WATER.getDefaultState(),
-                    ALMOND_PLUS_FOREST_KEY, CLEAR_WATER.getDefaultState()
-            );
-
-            return new TheDreamChunkGenerator(biomeRegistry, terrainSources, fluids, biomeSource, seed, () -> registry.getOrThrow(DTChunkGeneratorSettings.THE_DREAM_KEY));
+            return new TheDreamChunkGenerator(biomeRegistry, biomeSource, seed, () -> registry.getOrThrow(DTChunkGeneratorSettings.THE_DREAM_KEY));
         }
 
     };

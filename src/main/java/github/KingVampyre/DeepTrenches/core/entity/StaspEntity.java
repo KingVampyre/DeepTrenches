@@ -27,7 +27,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.ANGRY_TICKS;
 import static net.minecraft.entity.ai.brain.Activity.*;
@@ -101,7 +100,7 @@ public class StaspEntity extends FlyingHangBugEntity {
 
 		brain.setTaskList(IDLE, ImmutableList.of(
 				Pair.of(0, new UpdateAngryAtTask<>(this::getPreferredTarget)),
-				Pair.of(2, new StrollTask(2.25F, false)),
+				Pair.of(2, new StrollTask(2.25F)),
 				Pair.of(2, new GoTowardsLookTarget(2.25F, 3)),
 				Pair.of(3, new ConditionalTask<>(Entity::isOnGround, new WaitTask(200, 400)))
 		));
@@ -120,7 +119,7 @@ public class StaspEntity extends FlyingHangBugEntity {
 		if (angryAt.isPresent()) {
 			var living = angryAt.get();
 
-			if(Sensor.testAttackableTargetPredicateIgnoreVisibility(stasp, living))
+			if(Sensor.testAttackableTargetPredicate(stasp, living))
 				return angryAt;
 		} else if(brain.hasMemoryModule(UNIVERSAL_ANGER)) {
 			var player = brain.getOptionalMemory(NEAREST_VISIBLE_TARGETABLE_PLAYER);

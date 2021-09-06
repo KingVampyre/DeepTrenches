@@ -139,8 +139,6 @@ public class BiomeCreator {
         return new Biome.Builder()
                 .precipitation(Biome.Precipitation.RAIN)
                 .category(category)
-                .depth(depth)
-                .scale(scale)
                 .temperature(1.0F)
                 .downfall(0.55F)
                 .effects(biomeEffects)

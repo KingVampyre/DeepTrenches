@@ -1,7 +1,9 @@
 package github.KingVampyre.DeepTrenches.core.entity.ai.task;
 
 import com.google.common.collect.ImmutableMap;
+import java.util.Optional;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.brain.Brain;
 import net.minecraft.entity.ai.brain.task.LookTargetUtil;
 import net.minecraft.entity.ai.brain.task.Task;
 import net.minecraft.entity.mob.MobEntity;
