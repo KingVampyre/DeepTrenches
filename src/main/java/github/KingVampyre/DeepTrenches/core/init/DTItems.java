@@ -3943,7 +3943,7 @@ public class DTItems {
 		registerItem("deep_trenches:diopside_scythe", DIOPSIDE_SCYTHE);
 		registerItem("deep_trenches:gyldelion_scythe", GYLDELION_SCYTHE);
 		registerItem("deep_trenches:netherite_scythe", NETHERITE_SCYTHE);
-		registerItem("deep_trenches:ruby_disrapper", RUBY_DISRAPPER);
+		registerItem("deep_trenches:ruby_disripper", RUBY_DISRAPPER);
 		registerItem("deep_trenches:sapphire_scythe", SAPPHIRE_SCYTHE);
 		registerItem("deep_trenches:spinel_scythe", SPINEL_SCYTHE);
 		registerItem("deep_trenches:tanzanite_scythe", TANZANITE_SCYTHE);

@@ -10,6 +10,8 @@ import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.SignType;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.ConfiguredFeatures;
 
 import java.util.function.Function;
 
@@ -2114,6 +2116,12 @@ public class DTBlocks {
 	public static final Block POTTED_WEEPY_HOLLOWER;
 	public static final Block POTTED_YELLOW_VIOLET;
 
+	public static final Block POTTED_GRAY_SHAG_MUSHROOM;
+	public static final Block POTTED_INKY_CAP_MUSHROOM;
+	public static final Block POTTED_PUFFBALL_MUSHROOM;
+	public static final Block POTTED_SHELF_MUSHROOM;
+	public static final Block POTTED_WHITE_MUSHROOM;
+
 	protected static Block createAcuaticFungus(SaplingGenerator saplingGenerator) {
 		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
 		return new AcuaticFungusBlock(saplingGenerator, Settings.of(Material.LEAVES).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque());
@@ -2202,6 +2210,10 @@ public class DTBlocks {
 
 	protected static Block createFlowerBlock(StatusEffect effect, int effectDuration) {
 		return new FlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP));
+	}
+
+	protected static Block createMushroomPlant(ConfiguredFeature<?, ?> feature) {
+		return new MushroomPlantBlock(Settings.copy(BROWN_MUSHROOM), () -> feature);
 	}
 
 	protected static Block createStorceanFlower(StatusEffect effect, int effectDuration) {
@@ -2992,11 +3004,11 @@ public class DTBlocks {
 		THREE_LEAFED_CLOVER = createCopy(IRON_BLOCK);
 
 		/* MUSHROOMS */
-		GRAY_SHAG_MUSHROOM = createCopy(IRON_BLOCK);
-		INKY_CAP_MUSHROOM = createCopy(IRON_BLOCK);
-		PUFFBALL_MUSHROOM = createCopy(IRON_BLOCK);
-		SHELF_MUSHROOM = createCopy(IRON_BLOCK);
-		WHITE_MUSHROOM = createCopy(IRON_BLOCK);
+		GRAY_SHAG_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
+		INKY_CAP_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
+		PUFFBALL_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
+		SHELF_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
+		WHITE_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
 
 		/* GIANT VIOLET */
 		GIANT_VIOLET = createCopy(IRON_BLOCK);
@@ -4387,6 +4399,12 @@ public class DTBlocks {
 		POTTED_WEEPISTIL = createFlowerPot(WEEPISTIL);
 		POTTED_WEEPY_HOLLOWER = createFlowerPot(WEEPY_HOLLOWER);
 		POTTED_YELLOW_VIOLET = createFlowerPot(YELLOW_VIOLET);
+
+		POTTED_GRAY_SHAG_MUSHROOM = createFlowerPot(GRAY_SHAG_MUSHROOM);
+		POTTED_INKY_CAP_MUSHROOM = createFlowerPot(INKY_CAP_MUSHROOM);
+		POTTED_PUFFBALL_MUSHROOM = createFlowerPot(PUFFBALL_MUSHROOM);
+		POTTED_SHELF_MUSHROOM = createFlowerPot(SHELF_MUSHROOM);
+		POTTED_WHITE_MUSHROOM = createFlowerPot(WHITE_MUSHROOM);
 
 		ABYSSOPELAGIC_WATER = createWaterFluid(DTFluids.ABYSSOPELAGIC_WATER, 0.22F);
 		ACID = createFluid(DTFluids.ACID, Settings.copy(WATER));
@@ -6485,6 +6503,12 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:potted_weepistil", POTTED_WEEPISTIL);
 		Registry.register(BLOCK, "deep_trenches:potted_weepy_hollower", POTTED_WEEPY_HOLLOWER);
 		Registry.register(BLOCK, "deep_trenches:potted_yellow_violet", POTTED_YELLOW_VIOLET);
+
+		Registry.register(BLOCK, "deep_trenches:potted_gray_shag_mushroom", POTTED_GRAY_SHAG_MUSHROOM);
+		Registry.register(BLOCK, "deep_trenches:potted_inky_cap_mushroom", POTTED_INKY_CAP_MUSHROOM);
+		Registry.register(BLOCK, "deep_trenches:potted_puffball_mushroom", POTTED_PUFFBALL_MUSHROOM);
+		Registry.register(BLOCK, "deep_trenches:potted_shelf_mushroom", POTTED_SHELF_MUSHROOM);
+		Registry.register(BLOCK, "deep_trenches:potted_white_mushroom", POTTED_WHITE_MUSHROOM);
 	}
 
 }

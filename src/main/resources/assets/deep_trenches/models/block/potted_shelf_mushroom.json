@@ -1,0 +1,6 @@
+{
+    "parent": "deep_trenches:block/log_mushroom_pot",
+    "textures": {
+        "plant": "deep_trenches:block/shelf_mushroom"
+    }
+}

@@ -13,8 +13,8 @@ import github.KingVampyre.DeepTrenches.client.particle.MarineSnowParticle;
 import github.KingVampyre.DeepTrenches.client.particle.StatusEffectParticle;
 import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
 import github.KingVampyre.DeepTrenches.core.init.DTBlockEntityTypes;
-import github.KingVampyre.DeepTrenches.core.init.DTEntityTypes;
 import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.DTEntityTypes;
 import github.Louwind.Reload.client.event.client.callback.ColorCacheLoad;
 import github.Louwind.Reload.client.resource.ColorMapReloadListener;
 import github.Louwind.Reload.client.resource.sprite.BlockSpritesReloadListener;
@@ -24,8 +24,8 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
-import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
-import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -145,7 +145,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 5614908, DTBlocks.ALMOND_LEAVES, DTBlocks.BLACK_BIRCH_LEAVES, DTBlocks.COOK_PINE_LEAVES, DTBlocks.EBONY_LEAVES, DTBlocks.PELTOGYNE_LEAVES, DTBlocks.PLUM_LEAVES, DTBlocks.TEAK_LEAVES);
 
         /* BLOCK ENTITY RENDERERS */
-        BlockEntityRendererRegistry.INSTANCE.register(DTBlockEntityTypes.SIGN, FabricSignBlockEntityRenderer::new);
+        BlockEntityRendererRegistry.register(DTBlockEntityTypes.SIGN, FabricSignBlockEntityRenderer::new);
 
         /* BLOCK RENDER LAYERS */
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DEAD_BLACKGREEN_TREE_CORAL, RenderLayer.getCutout());
@@ -415,6 +415,12 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.WENGE_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.YEW_SAPLING, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.GRAY_SHAG_MUSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.INKY_CAP_MUSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.PUFFBALL_MUSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SHELF_MUSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.WHITE_MUSHROOM, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_ALMOND_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_ANAMEATA_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_ANGELS_TRUMPET_SAPLING, RenderLayer.getCutout());
@@ -477,6 +483,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_CYCAWLER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_GARDEN_PINKS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_GYLDELION_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_LIMEFORK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_MARSH_VIOLET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_NATIVE_VIOLET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_OPIUM_POPPY, RenderLayer.getCutout());
@@ -492,9 +499,16 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_SPROOM_SPIKE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_SWEET_VIOLET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_TOPPED_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_TWISTTRAP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_VASLAME, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_WEEPY_HOLLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_YELLOW_VIOLET, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_GRAY_SHAG_MUSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_INKY_CAP_MUSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_PUFFBALL_MUSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_SHELF_MUSHROOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_WHITE_MUSHROOM, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.FLINT_SHARDS, RenderLayer.getCutout());
 
@@ -536,40 +550,40 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_STORCEAN_WATER, RenderLayer.getTranslucent());
 
         /* ------------------------------------------ ENTITY RENDERERS ----------------------------------------------------- */
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.ADAIGGER, AdaiggerRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BEARDED_SEADEVIL, BeardedSeadevilRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BARBELED_LOOSEJAW, BarbeledLoosejawRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BOAT, FabricBoatEntityRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BETTA, BettaRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BLACK_DRAGONFISH, BlackDragonfishRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BLACK_SCABBARD, BlackScabbardRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BLACK_SEADEVIL, BlackSeadevilRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BLOBFISH, BlobfishRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BLUE_WHALE, BlueWhaleRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BOTTLE_FLY, BottleFlyRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BOTTLE_FLY_MAGGOT, BottleFlyMaggotRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BROWN_BEAR, BrownBearRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.CETACHSAL, CetachsalRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.DEEP_LAKE_BETTA, DeepLakeBettaRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.FANGTOOTH, FangtoothRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.FINANGITE, FinangiteRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.FLY, FlyRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.GIANT_HATCHETFISH, GiantHatchetfishRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.GIANT_SEED_SHRIMP, GiantSeedShrimpRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.HONEYCOMB_DRAGONFISH, HoneycombDragonfishRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.LACERATOR, LaceratorRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.LANCETFISH, LancetfishRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.BLACK_LOOSEJAW, BlackLoosejawRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.LIGHT_LOOSEJAW, LightLoosejawRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.MAGGOT, MaggotRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.PRINCE_AXELS_WONDERFISH, PrinceAxelsWonderfishRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.SMALLTOOTH_DRAGONFISH, SmalltoothDragonfishRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.STASP, StaspRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.TELESCOPEFISH, TelescopefishEntityRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.THREADFIN_DRAGONFISH, ThreadfinDragonfishRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.VIPERFISH, ViperfishRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.VOID_BEAST, VoidBeastRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(DTEntityTypes.WOLFTRAP_SEADEVIL, WolftrapSeadevilRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.ADAIGGER, AdaiggerRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BEARDED_SEADEVIL, BeardedSeadevilRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BARBELED_LOOSEJAW, BarbeledLoosejawRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BOAT, FabricBoatEntityRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BETTA, BettaRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BLACK_DRAGONFISH, BlackDragonfishRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BLACK_SCABBARD, BlackScabbardRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BLACK_SEADEVIL, BlackSeadevilRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BLOBFISH, BlobfishRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BLUE_WHALE, BlueWhaleRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BOTTLE_FLY, BottleFlyRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BOTTLE_FLY_MAGGOT, BottleFlyMaggotRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BROWN_BEAR, BrownBearRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.CETACHSAL, CetachsalRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.DEEP_LAKE_BETTA, DeepLakeBettaRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.FANGTOOTH, FangtoothRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.FINANGITE, FinangiteRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.FLY, FlyRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.GIANT_HATCHETFISH, GiantHatchetfishRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.GIANT_SEED_SHRIMP, GiantSeedShrimpRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.HONEYCOMB_DRAGONFISH, HoneycombDragonfishRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.LACERATOR, LaceratorRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.LANCETFISH, LancetfishRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.BLACK_LOOSEJAW, BlackLoosejawRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.LIGHT_LOOSEJAW, LightLoosejawRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.MAGGOT, MaggotRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.PRINCE_AXELS_WONDERFISH, PrinceAxelsWonderfishRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.SMALLTOOTH_DRAGONFISH, SmalltoothDragonfishRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.STASP, StaspRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.TELESCOPEFISH, TelescopefishEntityRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.THREADFIN_DRAGONFISH, ThreadfinDragonfishRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.VIPERFISH, ViperfishRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.VOID_BEAST, VoidBeastRenderer::new);
+        EntityRendererRegistry.register(DTEntityTypes.WOLFTRAP_SEADEVIL, WolftrapSeadevilRenderer::new);
     }
 
 }
