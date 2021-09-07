@@ -2216,6 +2216,10 @@ public class DTBlocks {
 		return new MushroomPlantBlock(Settings.copy(BROWN_MUSHROOM), () -> feature);
 	}
 
+	protected static Block createShelfMushroom(ConfiguredFeature<?, ?> feature) {
+		return new ShelfMushroomBlock(Settings.copy(BROWN_MUSHROOM), () -> feature);
+	}
+
 	protected static Block createStorceanFlower(StatusEffect effect, int effectDuration) {
 		return new StorceanFlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP));
 	}
@@ -3007,7 +3011,7 @@ public class DTBlocks {
 		GRAY_SHAG_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
 		INKY_CAP_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
 		PUFFBALL_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
-		SHELF_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
+		SHELF_MUSHROOM = createShelfMushroom(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
 		WHITE_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
 
 		/* GIANT VIOLET */

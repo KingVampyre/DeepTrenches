@@ -14,7 +14,7 @@ public class VynhertThornsBlock extends StorceanThornsBlock {
     }
 
     @Override
-    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+    protected boolean canPlantAt(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isIn(VYNHERT_LOGS);
     }
 

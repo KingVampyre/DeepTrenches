@@ -1,6 +1,7 @@
 {
-    "parent": "block/coral_fan",
+    "parent": "block/coral_wall_fan",
     "textures": {
         "fan": "deep_trenches:block/shelf_mushroom"
     }
 }
+

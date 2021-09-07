@@ -10,6 +10,7 @@ import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
@@ -23,6 +24,8 @@ public abstract class FacingExceptDownPlantBlock extends PlantBlock {
         super(settings);
     }
 
+    protected abstract boolean canPlantAt(BlockState state, BlockView world, BlockPos pos);
+
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING_EXCEPT_DOWN);
@@ -34,7 +37,12 @@ public abstract class FacingExceptDownPlantBlock extends PlantBlock {
         BlockPos offset = pos.offset(direction.getOpposite());
         BlockState offsetState = world.getBlockState(offset);
 
-        return this.canPlantOnTop(offsetState, world, pos);
+        return this.canPlantAt(offsetState, world, pos);
+    }
+
+    @Override
+    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+        return this.canPlantAt(floor, world, pos);
     }
 
     @Override
