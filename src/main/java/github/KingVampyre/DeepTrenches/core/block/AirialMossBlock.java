@@ -32,10 +32,10 @@ public class AirialMossBlock extends GrassBlock {
     public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack stack) {
         super.afterBreak(world, player, pos, state, blockEntity, stack);
 
-        AirialMossType type = state.get(AIRIAL_MOSS_TYPE);
+        var type = state.get(AIRIAL_MOSS_TYPE);
 
         if(!world.isClient && type != null) {
-            Block block = type.asBlock();
+            var block = type.asBlock();
 
             if (block != null)
                 world.setBlockState(pos, block.getDefaultState());
@@ -53,15 +53,15 @@ public class AirialMossBlock extends GrassBlock {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        BlockPos pos = ctx.getBlockPos();
-        World world = ctx.getWorld();
+        var pos = ctx.getBlockPos();
+        var world = ctx.getWorld();
 
-        BlockState state = world.getBlockState(pos);
-        Block block = state.getBlock();
-        AirialMossType type = AirialMossType.from(block);
+        var state = world.getBlockState(pos);
+        var block = state.getBlock();
+        var type = AirialMossType.from(block);
 
         if(type != null) {
-            BlockState placementState = super.getPlacementState(ctx);
+            var placementState = super.getPlacementState(ctx);
 
             if(placementState != null)
                 return placementState.with(AIRIAL_MOSS_TYPE, type);
@@ -72,29 +72,29 @@ public class AirialMossBlock extends GrassBlock {
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        AirialMossType type = state.get(AIRIAL_MOSS_TYPE);
+        var type = state.get(AIRIAL_MOSS_TYPE);
 
         if (!InvokerSpreadableBlock.canSurvive(state, world, pos))
             world.setBlockState(pos, type.asBlock().getDefaultState());
         else {
-            BlockPos up = pos.up();
+            var up = pos.up();
 
-            if (world.getLightLevel(up) >= 9 & random.nextInt(3) == 0) {
-                BlockState defaultState = this.getDefaultState();
+            if (world.getLightLevel(up) >= 9 && random.nextInt(3) == 0) {
+                var defaultState = this.getDefaultState();
 
                 for(int i = 0; i < 2; ++i) {
-                    int x = random.nextInt(20) - 10;
-                    int y = random.nextInt(6) - 3;
-                    int z = random.nextInt(20) - 10;
+                    var x = random.nextInt(20) - 10;
+                    var y = random.nextInt(6) - 3;
+                    var z = random.nextInt(20) - 10;
 
-                    BlockPos blockPos = pos.add(x, y, z);
-                    BlockState blockState =  world.getBlockState(blockPos);
+                    var blockPos = pos.add(x, y, z);
+                    var blockState =  world.getBlockState(blockPos);
 
                     if (blockState.isIn(AIRIAL_MOSS_SPREADABLE) && InvokerSpreadableBlock.canSpread(defaultState, world, blockPos)) {
-                        BlockState aboveState = world.getBlockState(blockPos.up());
-                        Block block = blockState.getBlock();
+                        var aboveState = world.getBlockState(blockPos.up());
+                        var block = blockState.getBlock();
 
-                        BlockState moss = defaultState
+                        var moss = defaultState
                                 .with(AIRIAL_MOSS_TYPE, AirialMossType.from(block))
                                 .with(SNOWY, aboveState.isOf(SNOW));
 

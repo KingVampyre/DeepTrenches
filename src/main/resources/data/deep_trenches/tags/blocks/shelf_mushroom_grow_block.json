@@ -1,9 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"deep_trenches:almond_log",
-		"deep_trenches:stripped_almond_log",
-		"deep_trenches:almond_wood",
-		"deep_trenches:stripped_almond_wood"
+		"#minecraft:logs",
+		"#minecraft:planks"
 	]
 }

@@ -1,0 +1,6 @@
+{
+    "parent": "deep_trenches:block/ilmium_under",
+    "textures": {
+        "stone": "deep_trenches:block/storcerack"
+    }
+}

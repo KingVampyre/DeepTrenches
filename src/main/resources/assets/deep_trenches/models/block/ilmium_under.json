@@ -1,0 +1,30 @@
+{   "parent": "block/block",
+    "textures": {
+        "particle": "deep_trenches:block/ilmium",
+        "moss": "deep_trenches:block/ilmium",
+        "side": "deep_trenches:block/ilmium_side_down_overlay"
+    },
+    "elements": [
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "down" },
+                "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "up" },
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "north" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "south" },
+                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "west" },
+                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#stone", "cullface": "east" }
+            }
+        },
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "down": { "uv": [ 0, 0, 16, 16 ], "texture": "#moss", "tintindex": 0, "cullface": "up" },
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "tintindex": 0, "cullface": "north" },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "tintindex": 0, "cullface": "south" },
+                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "tintindex": 0, "cullface": "west" },
+                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "tintindex": 0, "cullface": "east" }
+            }
+        }
+    ]
+}

@@ -882,6 +882,7 @@ public class DTItems {
 
 	/* BLOCK ITEMS */
 	public static final Item AIRIAL_MOSS;
+	public static final Item ILMIUM;
 
 	protected static Item createArmorItem(ArmorMaterial material, EquipmentSlot slot) {
 		return new ArmorItem(material, slot, new Settings().group(COMBAT));
@@ -1852,6 +1853,7 @@ public class DTItems {
 
 		/* BLOCK ITEMS */
 		AIRIAL_MOSS = createBlockItem(DTBlocks.AIRIAL_MOSS, ARBOROLOGY);
+		ILMIUM = createBlockItem(DTBlocks.ILMIUM, ARBOROLOGY);
 	}
 
 	public static void initialize() {
@@ -2516,8 +2518,8 @@ public class DTItems {
 
 		/* MOSSES */
 		registerItem("deep_trenches:airial_moss", AIRIAL_MOSS);
-		registerBlockItem("deep_trenches:ilmium", ILMIUM, ARBOROLOGY);
-		registerBlockItem("deep_trenches:moss", MOSS, ARBOROLOGY);
+		registerItem("deep_trenches:ilmium", ILMIUM);
+		registerBlockItem("deep_trenches:moss", MOSS, PHYTOLOGY);
 
 		/* PLANTS */
 		registerBlockItem("deep_trenches:airial_bush", AIRIAL_BUSH, PHYTOLOGY);

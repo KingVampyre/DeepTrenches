@@ -24,15 +24,6 @@ public enum AirialMossType implements StringIdentifiable {
     STORCERACK,
     STORCENDITE;
 
-    public static AirialMossType getType(String name) {
-
-        for (AirialMossType type : AirialMossType.values())
-            if (type.asString().equals(name))
-                return type;
-
-        return null;
-    }
-
     public static AirialMossType from(Block block) {
 
         if(Blocks.ANDESITE == block)
@@ -72,45 +63,25 @@ public enum AirialMossType implements StringIdentifiable {
     }
 
     public Block asBlock() {
-
-        switch (this) {
-            case ANDESITE:
-                return Blocks.ANDESITE;
-            case BASALT:
-                return Blocks.BASALT;
-            case BLACKSTONE:
-                return Blocks.BLACKSTONE;
-            case COARSE_DIRT:
-                return Blocks.COARSE_DIRT;
-            case DIORITE:
-                return Blocks.DIORITE;
-            case DIRT:
-                return Blocks.DIRT;
-            case DRITEAN:
-                return DTBlocks.DRITEAN;
-            case GRANITE:
-                return Blocks.GRANITE;
-            case NETHERRACK:
-                return Blocks.NETHERRACK;
-            case POININE:
-                return DTBlocks.POININE;
-            case RHODONITE:
-                return DTBlocks.RHODONITE;
-            case SAND:
-                return Blocks.SAND;
-            case SKYSOIL:
-                return DTBlocks.SKYSOIL;
-            case SKYSTONE:
-                return DTBlocks.SKYSTONE;
-            case STONE:
-                return Blocks.STONE;
-            case STORCERACK:
-                return DTBlocks.STORCERACK;
-            case STORCENDITE:
-                return DTBlocks.STORCENDITE;
-            default:
-                return null;
-        }
+        return switch (this) {
+            case ANDESITE -> Blocks.ANDESITE;
+            case BASALT -> Blocks.BASALT;
+            case BLACKSTONE -> Blocks.BLACKSTONE;
+            case COARSE_DIRT -> Blocks.COARSE_DIRT;
+            case DIORITE -> Blocks.DIORITE;
+            case DIRT -> Blocks.DIRT;
+            case DRITEAN -> DTBlocks.DRITEAN;
+            case GRANITE -> Blocks.GRANITE;
+            case NETHERRACK -> Blocks.NETHERRACK;
+            case POININE -> DTBlocks.POININE;
+            case RHODONITE -> DTBlocks.RHODONITE;
+            case SAND -> Blocks.SAND;
+            case SKYSOIL -> DTBlocks.SKYSOIL;
+            case SKYSTONE -> DTBlocks.SKYSTONE;
+            case STONE -> Blocks.STONE;
+            case STORCERACK -> DTBlocks.STORCERACK;
+            case STORCENDITE -> DTBlocks.STORCENDITE;
+        };
 
     }
     

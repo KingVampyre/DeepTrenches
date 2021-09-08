@@ -1,6 +1,7 @@
 {
 	"parent": "block/flower_pot_cross",
 	"textures": {
-		"plant": "deep_trenches:block/cycawler"
+		"plant": "deep_trenches:block/cycawler",
+		"dirt": "deep_trenches:block/dritean"
 	}
 }

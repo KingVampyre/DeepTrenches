@@ -355,6 +355,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SPRINLY, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SWEET_VIOLET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.TOPPED_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.TWISTTRAP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.VASLAME, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.VELVET_LILY, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.WEEPY_HOLLOWER, RenderLayer.getCutout());
@@ -513,6 +514,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.FLINT_SHARDS, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.AIRIAL_MOSS, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.ILMIUM, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MOSOIL, RenderLayer.getCutoutMipped());
 
         /* ------------------------------------------ FLUID RENDER LAYERS ----------------------------------------------------- */

@@ -21,6 +21,8 @@ public class DTBlockTags {
 
     public static final Tag<Block> HYBRID_STORCEAN_SAPLING = TagFactory.BLOCK.create(new Identifier("deep_trenches:hybrid_storcean_sapling"));
 
+    public static final Tag<Block> ILMIUM_SPREADABLE = TagFactory.BLOCK.create(new Identifier("deep_trenches:ilmium_spreadable"));
+
     public static final Tag<Block> FLALM_LOGS = TagFactory.BLOCK.create(new Identifier("deep_trenches:flalm_logs"));
 
     public static final Tag<Block> FUCHSITRA_LOGS = TagFactory.BLOCK.create(new Identifier("deep_trenches:fuchsitra_logs"));

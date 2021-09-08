@@ -2986,7 +2986,7 @@ public class DTBlocks {
 
 		/* MOSSES */
 		AIRIAL_MOSS = createBlock(AirialMossBlock::new, GRASS_BLOCK);
-		ILMIUM = createCopy(GRASS_BLOCK);
+		ILMIUM = createBlock(IlmiumBlock::new, Settings.copy(GRASS_BLOCK).luminance(state -> 6));
 		MOSS = createCopy(GRASS_BLOCK);
 
 		/* PLANTS */

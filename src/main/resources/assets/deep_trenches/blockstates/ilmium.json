@@ -1,0 +1,76 @@
+{
+	"variants": {
+		"type=black_marble,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_black_marble"
+		},
+		"type=black_marble,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_black_marble"
+		},
+		"type=blue_storcerack,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_blue_storcerack"
+		},
+		"type=blue_storcerack,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_blue_storcerack"
+		},
+		"type=gray_marble,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_gray_marble"
+		},
+		"type=gray_marble,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_gray_marble"
+		},
+		"type=infinital_stone,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_infinital_stone"
+		},
+		"type=infinital_stone,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_infinital_stone"
+		},
+		"type=lushine,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_lushine"
+		},
+		"type=lushine,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_lushine"
+		},
+		"type=lustrite,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_lustrite"
+		},
+		"type=lustrite,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_lustrite"
+		},
+		"type=marble,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_marble"
+		},
+		"type=marble,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_marble"
+		},
+		"type=pinkine,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_pinkine"
+		},
+		"type=pinkine,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_pinkine"
+		},
+		"type=storcendite,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_storcendite"
+		},
+		"type=storcendite,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_storcendite"
+		},
+		"type=storcerack,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_storcerack"
+		},
+		"type=storcerack,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_storcerack"
+		},
+		"type=verdine,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_verdine"
+		},
+		"type=verdine,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_verdine"
+		},
+		"type=virdal_stone,vertical_direction=up": {
+			"model": "deep_trenches:block/ilmium_on_virdal_stone"
+		},
+		"type=virdal_stone,vertical_direction=down": {
+			"model": "deep_trenches:block/ilmium_under_virdal_stone"
+		}
+	}
+}

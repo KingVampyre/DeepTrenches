@@ -3,6 +3,7 @@ package github.KingVampyre.DeepTrenches.core;
 import github.KingVampyre.DeepTrenches.client.init.DTGeneratorTypes;
 import github.KingVampyre.DeepTrenches.common.event.block.BlockReplacementCallback;
 import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
+import github.KingVampyre.DeepTrenches.core.event.block.IlmiumCallback;
 import github.KingVampyre.DeepTrenches.core.event.entity.AllowSleepyStatusEffect;
 import github.KingVampyre.DeepTrenches.core.init.*;
 import github.KingVampyre.DeepTrenches.core.mixin.AccessorGeneratorType;
@@ -31,6 +32,7 @@ public class  DeepTrenches implements ModInitializer {
 
 		/* EVENT */
 		BlockReplacementCallback.EVENT.register(AirialMossCallback.INSTANCE);
+		BlockReplacementCallback.EVENT.register(IlmiumCallback.INSTANCE);
 		EntitySleepEvents.ALLOW_SLEEPING.register(AllowSleepyStatusEffect.INSTANCE);
 
 		/* BIOME */

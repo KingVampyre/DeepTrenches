@@ -1,21 +1,15 @@
 package github.KingVampyre.DeepTrenches.core.event.block;
 
 import github.KingVampyre.DeepTrenches.common.event.block.BlockReplacementCallback;
-import github.KingVampyre.DeepTrenches.core.block.enums.AirialMossType;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.item.Item;
+import github.KingVampyre.DeepTrenches.core.block.enums.IlmiumType;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.AIRIAL_MOSS;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.ILMIUM;
 
-public class AirialMossCallback implements BlockReplacementCallback {
+public class IlmiumCallback implements BlockReplacementCallback {
 
-    public static final AirialMossCallback INSTANCE = new AirialMossCallback();
+    public static final IlmiumCallback INSTANCE = new IlmiumCallback();
 
     @Override
     public ActionResult interact(ItemPlacementContext context) {
@@ -25,13 +19,13 @@ public class AirialMossCallback implements BlockReplacementCallback {
         var state = world.getBlockState(pos);
         var block = state.getBlock();
 
-        var type = AirialMossType.from(block);
+        var type = IlmiumType.from(block);
         var stack = context.getStack();
 
         if(type != null && stack != null) {
             var item = stack.getItem();
 
-            if(item == AIRIAL_MOSS)
+            if(item == ILMIUM)
                 return ActionResult.SUCCESS;
         }
 

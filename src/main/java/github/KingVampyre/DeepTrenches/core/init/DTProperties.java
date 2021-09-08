@@ -2,6 +2,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.core.block.enums.AirialMossType;
 import github.KingVampyre.DeepTrenches.core.block.enums.BlockThird;
+import github.KingVampyre.DeepTrenches.core.block.enums.IlmiumType;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
@@ -12,6 +13,8 @@ import static net.minecraft.util.math.Direction.DOWN;
 public class DTProperties {
 
     public static final EnumProperty<AirialMossType> AIRIAL_MOSS_TYPE = EnumProperty.of("type", AirialMossType.class);
+
+    public static final EnumProperty<IlmiumType> ILMIUM_TYPE = EnumProperty.of("type", IlmiumType.class);
 
     public static final EnumProperty<BlockThird> BLOCK_THIRD = EnumProperty.of("third", BlockThird.class);
 
