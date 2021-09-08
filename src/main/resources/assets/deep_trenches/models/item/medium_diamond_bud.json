@@ -1,0 +1,15 @@
+{
+    "parent": "item/amethyst_bud",
+    "textures": {
+        "layer0": "deep_trenches:block/medium_diamond_bud"
+    },
+    "display": {
+        "fixed": {
+            "translation": [
+                0,
+                4,
+                0
+            ]
+        }
+    }
+}

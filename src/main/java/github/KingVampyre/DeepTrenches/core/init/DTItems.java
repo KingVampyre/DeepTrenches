@@ -1894,14 +1894,12 @@ public class DTItems {
 
 		/* OTHER STONES */
 		registerBlockItem("deep_trenches:black_marble", BLACK_MARBLE, MINERALOGY);
-		registerBlockItem("deep_trenches:black_opalite", BLACK_OPALITE, MINERALOGY);
 		registerBlockItem("deep_trenches:gray_marble", GRAY_MARBLE, MINERALOGY);
 		registerBlockItem("deep_trenches:marble", MARBLE, MINERALOGY);
 		registerBlockItem("deep_trenches:light_opalite", LIGHT_OPALITE, MINERALOGY);
 		registerBlockItem("deep_trenches:lushine", LUSHINE, MINERALOGY);
 		registerBlockItem("deep_trenches:lushine_pillar", LUSHINE_PILLAR, MINERALOGY);
 		registerBlockItem("deep_trenches:lustrite", LUSTRITE, MINERALOGY);
-		registerBlockItem("deep_trenches:opalite", OPALITE, MINERALOGY);
 		registerBlockItem("deep_trenches:poinine", POININE, MINERALOGY);
 		registerBlockItem("deep_trenches:ringwoodite", RINGWOODITE, MINERALOGY);
 		registerBlockItem("deep_trenches:skystone", SKYSTONE, MINERALOGY);
@@ -2354,10 +2352,12 @@ public class DTItems {
 		/* MINERAL BLOCKS */
 		registerBlockItem("deep_trenches:actinium_block", ACTINIUM_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:aquamarine_block", AQUAMARINE_BLOCK, MINERALOGY);
+		registerBlockItem("deep_trenches:black_opal_block", BLACK_OPAL_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:black_pearl_block", BLACK_PEARL_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:boron_block", BORON_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:cut_boron_block", CUT_BORON_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:chalcedony_block", CHALCEDONY_BLOCK, MINERALOGY);
+		registerBlockItem("deep_trenches:cut_clinohumite_block", CUT_CLINOHUMITE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:diopside_block", DIOPSIDE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:enron_block", ENRON_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:enstatite_block", ENSTATITE_BLOCK, MINERALOGY);
@@ -2367,6 +2367,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:cut_kralium_block", CUT_KRALIUM_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:lekralite_block", LEKRALITE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:morganite_block", MORGANITE_BLOCK, MINERALOGY);
+		registerBlockItem("deep_trenches:opal_block", OPAL_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:ruby_block", RUBY_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:sapphire_block", SAPPHIRE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:silicon_block", SILICON_BLOCK, MINERALOGY);
@@ -2392,8 +2393,8 @@ public class DTItems {
 		/* CRYSTALS */
 		registerBlockItem("deep_trenches:lekralite_crystals", LEKRALITE_CRYSTALS, MINERALOGY);
 
-		registerBlockItem("deep_trenches:black_opal_block", BLACK_OPAL_BLOCK, MINERALOGY);
-		registerBlockItem("deep_trenches:budding_black_opal", BUDDING_BLACK_OPAL, MINERALOGY);
+		registerBlockItem("deep_trenches:black_opalite_block", BLACK_OPALITE_BLOCK, MINERALOGY);
+		registerBlockItem("deep_trenches:budding_black_opalite", BUDDING_BLACK_OPALITE, MINERALOGY);
 		registerBlockItem("deep_trenches:black_opal_cluster", BLACK_OPAL_CLUSTER, MINERALOGY);
 		registerBlockItem("deep_trenches:large_black_opal_bud", LARGE_BLACK_OPAL_BUD, MINERALOGY);
 		registerBlockItem("deep_trenches:medium_black_opal_bud", MEDIUM_BLACK_OPAL_BUD, MINERALOGY);
@@ -2408,31 +2409,31 @@ public class DTItems {
 
 		registerBlockItem("deep_trenches:diamite_block", DIAMITE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:budding_diamite", BUDDING_DIAMITE, MINERALOGY);
-		registerBlockItem("deep_trenches:diamite_cluster", DIAMITE_CLUSTER, MINERALOGY);
-		registerBlockItem("deep_trenches:large_diamite_bud", LARGE_DIAMITE_BUD, MINERALOGY);
-		registerBlockItem("deep_trenches:medium_diamite_bud", MEDIUM_DIAMITE_BUD, MINERALOGY);
-		registerBlockItem("deep_trenches:small_diamite_bud", SMALL_DIAMITE_BUD, MINERALOGY);
+		registerBlockItem("deep_trenches:diamond_cluster", DIAMOND_CLUSTER, MINERALOGY);
+		registerBlockItem("deep_trenches:large_diamond_bud", LARGE_DIAMOND_BUD, MINERALOGY);
+		registerBlockItem("deep_trenches:medium_diamond_bud", MEDIUM_DIAMOND_BUD, MINERALOGY);
+		registerBlockItem("deep_trenches:small_diamond_bud", SMALL_DIAMOND_BUD, MINERALOGY);
+
 		registerBlockItem("deep_trenches:garnet_block", GARNET_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:budding_garnet", BUDDING_GARNET, MINERALOGY);
-
 		registerBlockItem("deep_trenches:garnet_cluster", GARNET_CLUSTER, MINERALOGY);
 		registerBlockItem("deep_trenches:large_garnet_bud", LARGE_GARNET_BUD, MINERALOGY);
 		registerBlockItem("deep_trenches:medium_garnet_bud", MEDIUM_GARNET_BUD, MINERALOGY);
 		registerBlockItem("deep_trenches:small_garnet_bud", SMALL_GARNET_BUD, MINERALOGY);
-		registerBlockItem("deep_trenches:opal_block", OPAL_BLOCK, MINERALOGY);
-		registerBlockItem("deep_trenches:budding_opal", BUDDING_OPAL, MINERALOGY);
 
+		registerBlockItem("deep_trenches:opalite_block", OPALITE_BLOCK, MINERALOGY);
+		registerBlockItem("deep_trenches:budding_opalite", BUDDING_OPALITE, MINERALOGY);
 		registerBlockItem("deep_trenches:opal_cluster", OPAL_CLUSTER, MINERALOGY);
 		registerBlockItem("deep_trenches:large_opal_bud", LARGE_OPAL_BUD, MINERALOGY);
 		registerBlockItem("deep_trenches:medium_opal_bud", MEDIUM_OPAL_BUD, MINERALOGY);
 		registerBlockItem("deep_trenches:small_opal_bud", SMALL_OPAL_BUD, MINERALOGY);
+
 		registerBlockItem("deep_trenches:sapphrite_block", SAPPHRITE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:budding_sapphrite", BUDDING_SAPPHRITE, MINERALOGY);
-
-		registerBlockItem("deep_trenches:sapphrite_cluster", SAPPHRITE_CLUSTER, MINERALOGY);
-		registerBlockItem("deep_trenches:large_sapphrite_bud", LARGE_SAPPHRITE_BUD, MINERALOGY);
-		registerBlockItem("deep_trenches:medium_sapphrite_bud", MEDIUM_SAPPHRITE_BUD, MINERALOGY);
-		registerBlockItem("deep_trenches:small_sapphrite_bud", SMALL_SAPPHRITE_BUD, MINERALOGY);
+		registerBlockItem("deep_trenches:sapphire_cluster", SAPPHIRE_CLUSTER, MINERALOGY);
+		registerBlockItem("deep_trenches:large_sapphire_bud", LARGE_SAPPHIRE_BUD, MINERALOGY);
+		registerBlockItem("deep_trenches:medium_sapphire_bud", MEDIUM_SAPPHIRE_BUD, MINERALOGY);
+		registerBlockItem("deep_trenches:small_sapphire_bud", SMALL_SAPPHIRE_BUD, MINERALOGY);
 
 		registerBlockItem("deep_trenches:sugilite_block", SUGILITE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:budding_sugilite", BUDDING_SUGILITE, MINERALOGY);

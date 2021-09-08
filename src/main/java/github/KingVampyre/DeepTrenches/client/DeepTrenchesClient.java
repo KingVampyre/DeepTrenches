@@ -25,8 +25,8 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.render.RenderLayer;
@@ -516,6 +516,55 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.AIRIAL_MOSS, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.ILMIUM, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MOSOIL, RenderLayer.getCutoutMipped());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.BLACK_OPALITE_BLOCK, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.BUDDING_BLACK_OPALITE, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.BLACK_OPAL_CLUSTER, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LARGE_BLACK_OPAL_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MEDIUM_BLACK_OPAL_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SMALL_BLACK_OPAL_BUD, RenderLayer.getCutoutMipped());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.CLINOHUMITE_BLOCK, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.BUDDING_CLINOHUMITE, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.CLINOHUMITE_CLUSTER, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LARGE_CLINOHUMITE_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MEDIUM_CLINOHUMITE_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SMALL_CLINOHUMITE_BUD, RenderLayer.getCutoutMipped());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DIAMITE_BLOCK, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.BUDDING_DIAMITE, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.DIAMOND_CLUSTER, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LARGE_DIAMOND_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MEDIUM_DIAMOND_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SMALL_DIAMOND_BUD, RenderLayer.getCutoutMipped());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.GARNET_BLOCK, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.BUDDING_GARNET, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.GARNET_CLUSTER, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LARGE_GARNET_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MEDIUM_GARNET_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SMALL_GARNET_BUD, RenderLayer.getCutoutMipped());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.OPALITE_BLOCK, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.BUDDING_OPALITE, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.OPAL_CLUSTER, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LARGE_OPAL_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MEDIUM_OPAL_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SMALL_OPAL_BUD, RenderLayer.getCutoutMipped());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SAPPHRITE_BLOCK, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.BUDDING_SAPPHRITE, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SAPPHIRE_CLUSTER, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LARGE_SAPPHIRE_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MEDIUM_SAPPHIRE_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SMALL_SAPPHIRE_BUD, RenderLayer.getCutoutMipped());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SUGILITE_BLOCK, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.BUDDING_SUGILITE, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SUGILITE_CLUSTER, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LARGE_SUGILITE_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MEDIUM_SUGILITE_BUD, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SMALL_SUGILITE_BUD, RenderLayer.getCutoutMipped());
 
         /* ------------------------------------------ FLUID RENDER LAYERS ----------------------------------------------------- */
         BlockRenderLayerMap.INSTANCE.putFluid(ABYSSOPELAGIC_WATER, RenderLayer.getTranslucent());

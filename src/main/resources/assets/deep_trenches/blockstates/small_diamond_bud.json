@@ -1,0 +1,30 @@
+{
+    "variants": {
+        "facing=down": {
+            "model": "deep_trenches:block/small_diamond_bud",
+            "x": 180
+        },
+        "facing=east": {
+            "model": "deep_trenches:block/small_diamond_bud",
+            "x": 90,
+            "y": 90
+        },
+        "facing=north": {
+            "model": "deep_trenches:block/small_diamond_bud",
+            "x": 90
+        },
+        "facing=south": {
+            "model": "deep_trenches:block/small_diamond_bud",
+            "x": 90,
+            "y": 180
+        },
+        "facing=up": {
+            "model": "deep_trenches:block/small_diamond_bud"
+        },
+        "facing=west": {
+            "model": "deep_trenches:block/small_diamond_bud",
+            "x": 90,
+            "y": 270
+        }
+    }
+}

@@ -3,7 +3,7 @@ package github.KingVampyre.DeepTrenches.core.mixin;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.core.init.DTStatusEffects;
-import github.KingVampyre.DeepTrenches.core.util.ModEnchantmentHelper;
+import github.KingVampyre.DeepTrenches.core.util.DTEnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -136,14 +136,14 @@ public abstract class MixinLivingEntity extends MixinEntity {
                 if(attacker != null && sourceEntity instanceof ArrowEntity) {
                     ItemStack stack = attacker.getEquippedStack(MAINHAND);
 
-                    ModEnchantmentHelper.applySoulDraining(attacker, living, stack);
+                    DTEnchantmentHelper.applySoulDraining(attacker, living, stack);
                 }
 
                 if(sourceEntity instanceof TridentEntity trident) {
                     AccessorTridentEntity accessor = (AccessorTridentEntity) trident;
                     ItemStack stack = accessor.getTridentStack();
 
-                    ModEnchantmentHelper.applySoulDraining(attacker, living, stack);
+                    DTEnchantmentHelper.applySoulDraining(attacker, living, stack);
                 }
 
             }

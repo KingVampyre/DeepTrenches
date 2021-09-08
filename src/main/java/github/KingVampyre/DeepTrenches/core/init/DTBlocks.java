@@ -61,14 +61,12 @@ public class DTBlocks {
 
 	/* OTHER STONES */
 	public static final Block BLACK_MARBLE;
-	public static final Block BLACK_OPALITE;
 	public static final Block GRAY_MARBLE;
 	public static final Block MARBLE;
 	public static final Block LIGHT_OPALITE;
 	public static final Block LUSHINE;
 	public static final Block LUSHINE_PILLAR;
 	public static final Block LUSTRITE;
-	public static final Block OPALITE;
 	public static final Block POININE;
 	public static final Block RINGWOODITE;
 	public static final Block SKYSTONE;
@@ -521,10 +519,12 @@ public class DTBlocks {
 	/* MINERAL BLOCKS */
 	public static final Block ACTINIUM_BLOCK;
 	public static final Block AQUAMARINE_BLOCK;
-	public static final Block BLACK_PEARL_BLOCK;
+    public static final Block BLACK_OPAL_BLOCK;
+    public static final Block BLACK_PEARL_BLOCK;
 	public static final Block BORON_BLOCK;
 	public static final Block CUT_BORON_BLOCK;
 	public static final Block CHALCEDONY_BLOCK;
+	public static final Block CUT_CLINOHUMITE_BLOCK;
 	public static final Block DIOPSIDE_BLOCK;
 	public static final Block ENRON_BLOCK;
 	public static final Block ENSTATITE_BLOCK;
@@ -534,7 +534,8 @@ public class DTBlocks {
 	public static final Block CUT_KRALIUM_BLOCK;
 	public static final Block LEKRALITE_BLOCK;
 	public static final Block MORGANITE_BLOCK;
-	public static final Block RUBY_BLOCK;
+    public static final Block OPAL_BLOCK;
+    public static final Block RUBY_BLOCK;
 	public static final Block SAPPHIRE_BLOCK;
 	public static final Block SILICON_BLOCK;
 	public static final Block SILVER_BLOCK;
@@ -559,8 +560,8 @@ public class DTBlocks {
 	/* CRYSTALS */
 	public static final Block LEKRALITE_CRYSTALS;
 
-	public static final Block BLACK_OPAL_BLOCK;
-	public static final Block BUDDING_BLACK_OPAL;
+	public static final Block BLACK_OPALITE_BLOCK;
+	public static final Block BUDDING_BLACK_OPALITE;
 	public static final Block BLACK_OPAL_CLUSTER;
 	public static final Block LARGE_BLACK_OPAL_BUD;
 	public static final Block MEDIUM_BLACK_OPAL_BUD;
@@ -575,10 +576,10 @@ public class DTBlocks {
 
 	public static final Block DIAMITE_BLOCK;
 	public static final Block BUDDING_DIAMITE;
-	public static final Block DIAMITE_CLUSTER;
-	public static final Block LARGE_DIAMITE_BUD;
-	public static final Block MEDIUM_DIAMITE_BUD;
-	public static final Block SMALL_DIAMITE_BUD;
+	public static final Block DIAMOND_CLUSTER;
+	public static final Block LARGE_DIAMOND_BUD;
+	public static final Block MEDIUM_DIAMOND_BUD;
+	public static final Block SMALL_DIAMOND_BUD;
 
 	public static final Block GARNET_BLOCK;
 	public static final Block BUDDING_GARNET;
@@ -587,19 +588,19 @@ public class DTBlocks {
 	public static final Block MEDIUM_GARNET_BUD;
 	public static final Block SMALL_GARNET_BUD;
 
-	public static final Block OPAL_BLOCK;
-	public static final Block BUDDING_OPAL;
+	public static final Block OPALITE_BLOCK;
+	public static final Block BUDDING_OPALITE;
 	public static final Block OPAL_CLUSTER;
 	public static final Block LARGE_OPAL_BUD;
 	public static final Block MEDIUM_OPAL_BUD;
 	public static final Block SMALL_OPAL_BUD;
 
-	public static final Block SAPPHRITE_BLOCK;
-	public static final Block BUDDING_SAPPHRITE;
-	public static final Block SAPPHRITE_CLUSTER;
-	public static final Block LARGE_SAPPHRITE_BUD;
-	public static final Block MEDIUM_SAPPHRITE_BUD;
-	public static final Block SMALL_SAPPHRITE_BUD;
+    public static final Block SAPPHRITE_BLOCK;
+    public static final Block BUDDING_SAPPHRITE;
+    public static final Block SAPPHIRE_CLUSTER;
+    public static final Block LARGE_SAPPHIRE_BUD;
+    public static final Block MEDIUM_SAPPHIRE_BUD;
+    public static final Block SMALL_SAPPHIRE_BUD;
 
 	public static final Block SUGILITE_BLOCK;
 	public static final Block BUDDING_SUGILITE;
@@ -2131,8 +2132,8 @@ public class DTBlocks {
 		return createBlock(AmethystBlock::new, Settings.of(Material.AMETHYST, MapColor.PURPLE).strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
 	}
 
-	protected static Block createBuddingAmethyst() {
-		return createBlock(BuddingAmethystBlock::new, Settings.of(Material.AMETHYST, MapColor.PURPLE).strength(1.5F).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
+	protected static Block createBuddingAmethyst(Function<Settings, Block> function) {
+		return createBlock(function, Settings.of(Material.AMETHYST, MapColor.PURPLE).strength(1.5F).ticksRandomly().sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool());
 	}
 
 	protected static Block createClusterAmethyst(int height, int xzOffset, int luminance) {
@@ -2214,10 +2215,6 @@ public class DTBlocks {
 
 	protected static Block createMushroomPlant(ConfiguredFeature<?, ?> feature) {
 		return new MushroomPlantBlock(Settings.copy(BROWN_MUSHROOM), () -> feature);
-	}
-
-	protected static Block createShelfMushroom(ConfiguredFeature<?, ?> feature) {
-		return new ShelfMushroomBlock(Settings.copy(BROWN_MUSHROOM), () -> feature);
 	}
 
 	protected static Block createStorceanFlower(StatusEffect effect, int effectDuration) {
@@ -2367,14 +2364,12 @@ public class DTBlocks {
 
 		/* OTHER STONES */
 		BLACK_MARBLE = createCopy(STONE);
-		BLACK_OPALITE = createCopy(STONE);
 		GRAY_MARBLE = createCopy(STONE);
 		MARBLE = createCopy(STONE);
 		LIGHT_OPALITE = createCopy(STONE);
 		LUSHINE = createCopy(STONE);
 		LUSHINE_PILLAR = createCopy(STONE);
 		LUSTRITE = createCopy(STONE);
-		OPALITE = createCopy(STONE);
 		POININE = createCopy(STONE);
 		RINGWOODITE = createCopy(STONE);
 		SKYSTONE = createCopy(STONE);
@@ -2827,10 +2822,12 @@ public class DTBlocks {
 		/* MINERAL BLOCKS */
 		ACTINIUM_BLOCK = createCopy(IRON_BLOCK);
 		AQUAMARINE_BLOCK = createCopy(IRON_BLOCK);
+        BLACK_OPAL_BLOCK = createCopy(IRON_BLOCK);
 		BLACK_PEARL_BLOCK = createCopy(IRON_BLOCK);
 		BORON_BLOCK = createCopy(IRON_BLOCK);
 		CUT_BORON_BLOCK = createCopy(IRON_BLOCK);
 		CHALCEDONY_BLOCK = createCopy(IRON_BLOCK);
+		CUT_CLINOHUMITE_BLOCK = createCopy(IRON_BLOCK);
 		DIOPSIDE_BLOCK = createCopy(IRON_BLOCK);
 		ENRON_BLOCK = createCopy(IRON_BLOCK);
 		ENSTATITE_BLOCK = createCopy(IRON_BLOCK);
@@ -2840,6 +2837,7 @@ public class DTBlocks {
 		CUT_KRALIUM_BLOCK = createCopy(IRON_BLOCK);
 		LEKRALITE_BLOCK = createCopy(IRON_BLOCK);
 		MORGANITE_BLOCK = createCopy(IRON_BLOCK);
+        OPAL_BLOCK = createCopy(IRON_BLOCK);
 		RUBY_BLOCK = createCopy(IRON_BLOCK);
 		SAPPHIRE_BLOCK = createCopy(IRON_BLOCK);
 		SILICON_BLOCK = createCopy(IRON_BLOCK);
@@ -2865,50 +2863,50 @@ public class DTBlocks {
 		/* CRYSTALS */
 		LEKRALITE_CRYSTALS = createAmethystBlock();
 
-		BLACK_OPAL_BLOCK = createAmethystBlock();
-		BUDDING_BLACK_OPAL = createBuddingAmethyst();
+		BLACK_OPALITE_BLOCK = createAmethystBlock();
+		BUDDING_BLACK_OPALITE = createBuddingAmethyst(BuddingBlackOpalBlock::new);
 		BLACK_OPAL_CLUSTER = createClusterAmethyst();
 		LARGE_BLACK_OPAL_BUD = createLargeAmethystBud();
 		MEDIUM_BLACK_OPAL_BUD = createMediumAmethystBud();
 		SMALL_BLACK_OPAL_BUD = createSmallAmethystBud();
 
 		CLINOHUMITE_BLOCK = createAmethystBlock();
-		BUDDING_CLINOHUMITE = createBuddingAmethyst();
+		BUDDING_CLINOHUMITE = createBuddingAmethyst(BuddingClinohumiteBlock::new);
 		CLINOHUMITE_CLUSTER = createClusterAmethyst();
 		LARGE_CLINOHUMITE_BUD = createLargeAmethystBud();
 		MEDIUM_CLINOHUMITE_BUD = createMediumAmethystBud();
 		SMALL_CLINOHUMITE_BUD = createSmallAmethystBud();
 
 		DIAMITE_BLOCK = createAmethystBlock();
-		BUDDING_DIAMITE = createBuddingAmethyst();
-		DIAMITE_CLUSTER = createClusterAmethyst();
-		LARGE_DIAMITE_BUD = createLargeAmethystBud();
-		MEDIUM_DIAMITE_BUD = createMediumAmethystBud();
-		SMALL_DIAMITE_BUD = createSmallAmethystBud();
+		BUDDING_DIAMITE = createBuddingAmethyst(BuddingDiamiteBlock::new);
+		DIAMOND_CLUSTER = createClusterAmethyst();
+		LARGE_DIAMOND_BUD = createLargeAmethystBud();
+		MEDIUM_DIAMOND_BUD = createMediumAmethystBud();
+		SMALL_DIAMOND_BUD = createSmallAmethystBud();
 
 		GARNET_BLOCK = createAmethystBlock();
-		BUDDING_GARNET = createBuddingAmethyst();
+		BUDDING_GARNET = createBuddingAmethyst(BuddingGarnetBlock::new);
 		GARNET_CLUSTER = createClusterAmethyst();
 		LARGE_GARNET_BUD = createLargeAmethystBud();
 		MEDIUM_GARNET_BUD = createMediumAmethystBud();
 		SMALL_GARNET_BUD = createSmallAmethystBud();
 
-		OPAL_BLOCK = createAmethystBlock();
-		BUDDING_OPAL = createBuddingAmethyst();
+		OPALITE_BLOCK = createAmethystBlock();
+		BUDDING_OPALITE = createBuddingAmethyst(BuddingOpaliteBlock::new);
 		OPAL_CLUSTER = createClusterAmethyst();
 		LARGE_OPAL_BUD = createLargeAmethystBud();
 		MEDIUM_OPAL_BUD = createMediumAmethystBud();
 		SMALL_OPAL_BUD = createSmallAmethystBud();
 
 		SAPPHRITE_BLOCK = createAmethystBlock();
-		BUDDING_SAPPHRITE = createBuddingAmethyst();
-		SAPPHRITE_CLUSTER = createClusterAmethyst();
-		LARGE_SAPPHRITE_BUD = createLargeAmethystBud();
-		MEDIUM_SAPPHRITE_BUD = createMediumAmethystBud();
-		SMALL_SAPPHRITE_BUD = createSmallAmethystBud();
+		BUDDING_SAPPHRITE = createBuddingAmethyst(BuddingSapphriteBlock::new);
+		SAPPHIRE_CLUSTER = createClusterAmethyst();
+		LARGE_SAPPHIRE_BUD = createLargeAmethystBud();
+		MEDIUM_SAPPHIRE_BUD = createMediumAmethystBud();
+		SMALL_SAPPHIRE_BUD = createSmallAmethystBud();
 
 		SUGILITE_BLOCK = createAmethystBlock();
-		BUDDING_SUGILITE = createBuddingAmethyst();
+		BUDDING_SUGILITE = createBuddingAmethyst(BuddingSugiliteBlock::new);
 		SUGILITE_CLUSTER = createClusterAmethyst();
 		LARGE_SUGILITE_BUD = createLargeAmethystBud();
 		MEDIUM_SUGILITE_BUD = createMediumAmethystBud();
@@ -3011,7 +3009,7 @@ public class DTBlocks {
 		GRAY_SHAG_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
 		INKY_CAP_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
 		PUFFBALL_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
-		SHELF_MUSHROOM = createShelfMushroom(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
+		SHELF_MUSHROOM = new ShelfMushroomBlock(Settings.copy(BROWN_MUSHROOM), () -> ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
 		WHITE_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
 
 		/* GIANT VIOLET */
@@ -4467,14 +4465,12 @@ public class DTBlocks {
 
 		/* OTHER STONES */
 		Registry.register(BLOCK, "deep_trenches:black_marble", BLACK_MARBLE);
-		Registry.register(BLOCK, "deep_trenches:black_opalite", BLACK_OPALITE);
 		Registry.register(BLOCK, "deep_trenches:gray_marble", GRAY_MARBLE);
 		Registry.register(BLOCK, "deep_trenches:marble", MARBLE);
 		Registry.register(BLOCK, "deep_trenches:light_opalite", LIGHT_OPALITE);
 		Registry.register(BLOCK, "deep_trenches:lushine", LUSHINE);
 		Registry.register(BLOCK, "deep_trenches:lushine_pillar", LUSHINE_PILLAR);
 		Registry.register(BLOCK, "deep_trenches:lustrite", LUSTRITE);
-		Registry.register(BLOCK, "deep_trenches:opalite", OPALITE);
 		Registry.register(BLOCK, "deep_trenches:poinine", POININE);
 		Registry.register(BLOCK, "deep_trenches:ringwoodite", RINGWOODITE);
 		Registry.register(BLOCK, "deep_trenches:skystone", SKYSTONE);
@@ -4914,10 +4910,12 @@ public class DTBlocks {
 		/* MINERAL BLOCKS */
 		Registry.register(BLOCK, "deep_trenches:actinium_block", ACTINIUM_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:aquamarine_block", AQUAMARINE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:black_opal_block", BLACK_OPAL_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:black_pearl_block", BLACK_PEARL_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:boron_block", BORON_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:cut_boron_block", CUT_BORON_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:chalcedony_block", CHALCEDONY_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:cut_clinohumite_block", CUT_CLINOHUMITE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:diopside_block", DIOPSIDE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:enron_block", ENRON_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:enstatite_block", ENSTATITE_BLOCK);
@@ -4927,6 +4925,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:cut_kralium_block", CUT_KRALIUM_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:lekralite_block", LEKRALITE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:morganite_block", MORGANITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:opal_block", OPAL_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:ruby_block", RUBY_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:sapphire_block", SAPPHIRE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:silicon_block", SILICON_BLOCK);
@@ -4952,8 +4951,8 @@ public class DTBlocks {
 		/* CRYSTALS */
 		Registry.register(BLOCK, "deep_trenches:lekralite_crystals", LEKRALITE_CRYSTALS);
 
-		Registry.register(BLOCK, "deep_trenches:black_opal_block", BLACK_OPAL_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:budding_black_opal", BUDDING_BLACK_OPAL);
+		Registry.register(BLOCK, "deep_trenches:black_opalite_block", BLACK_OPALITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_black_opalite", BUDDING_BLACK_OPALITE);
 		Registry.register(BLOCK, "deep_trenches:black_opal_cluster", BLACK_OPAL_CLUSTER);
 		Registry.register(BLOCK, "deep_trenches:large_black_opal_bud", LARGE_BLACK_OPAL_BUD);
 		Registry.register(BLOCK, "deep_trenches:medium_black_opal_bud", MEDIUM_BLACK_OPAL_BUD);
@@ -4968,10 +4967,10 @@ public class DTBlocks {
 
 		Registry.register(BLOCK, "deep_trenches:diamite_block", DIAMITE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:budding_diamite", BUDDING_DIAMITE);
-		Registry.register(BLOCK, "deep_trenches:diamite_cluster", DIAMITE_CLUSTER);
-		Registry.register(BLOCK, "deep_trenches:large_diamite_bud", LARGE_DIAMITE_BUD);
-		Registry.register(BLOCK, "deep_trenches:medium_diamite_bud", MEDIUM_DIAMITE_BUD);
-		Registry.register(BLOCK, "deep_trenches:small_diamite_bud", SMALL_DIAMITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:diamond_cluster", DIAMOND_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_diamond_bud", LARGE_DIAMOND_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_diamond_bud", MEDIUM_DIAMOND_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_diamond_bud", SMALL_DIAMOND_BUD);
 
 		Registry.register(BLOCK, "deep_trenches:garnet_block", GARNET_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:budding_garnet", BUDDING_GARNET);
@@ -4980,8 +4979,8 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:medium_garnet_bud", MEDIUM_GARNET_BUD);
 		Registry.register(BLOCK, "deep_trenches:small_garnet_bud", SMALL_GARNET_BUD);
 
-		Registry.register(BLOCK, "deep_trenches:opal_block", OPAL_BLOCK);
-		Registry.register(BLOCK, "deep_trenches:budding_opal", BUDDING_OPAL);
+		Registry.register(BLOCK, "deep_trenches:opalite_block", OPALITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:budding_opalite", BUDDING_OPALITE);
 		Registry.register(BLOCK, "deep_trenches:opal_cluster", OPAL_CLUSTER);
 		Registry.register(BLOCK, "deep_trenches:large_opal_bud", LARGE_OPAL_BUD);
 		Registry.register(BLOCK, "deep_trenches:medium_opal_bud", MEDIUM_OPAL_BUD);
@@ -4989,10 +4988,10 @@ public class DTBlocks {
 
 		Registry.register(BLOCK, "deep_trenches:sapphrite_block", SAPPHRITE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:budding_sapphrite", BUDDING_SAPPHRITE);
-		Registry.register(BLOCK, "deep_trenches:sapphrite_cluster", SAPPHRITE_CLUSTER);
-		Registry.register(BLOCK, "deep_trenches:large_sapphrite_bud", LARGE_SAPPHRITE_BUD);
-		Registry.register(BLOCK, "deep_trenches:medium_sapphrite_bud", MEDIUM_SAPPHRITE_BUD);
-		Registry.register(BLOCK, "deep_trenches:small_sapphrite_bud", SMALL_SAPPHRITE_BUD);
+		Registry.register(BLOCK, "deep_trenches:sapphire_cluster", SAPPHIRE_CLUSTER);
+		Registry.register(BLOCK, "deep_trenches:large_sapphire_bud", LARGE_SAPPHIRE_BUD);
+		Registry.register(BLOCK, "deep_trenches:medium_sapphire_bud", MEDIUM_SAPPHIRE_BUD);
+		Registry.register(BLOCK, "deep_trenches:small_sapphire_bud", SMALL_SAPPHIRE_BUD);
 
 		Registry.register(BLOCK, "deep_trenches:sugilite_block", SUGILITE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:budding_sugilite", BUDDING_SUGILITE);
