@@ -3,65 +3,39 @@ package github.KingVampyre.DeepTrenches.core.block.enums;
 import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.util.StringIdentifiable;
+import net.minecraft.util.Util;
+
+import java.util.Arrays;
+import java.util.function.Function;
 
 public enum IlmiumType implements StringIdentifiable {
-    BLACK_MARBLE,
-    BLUE_STORCERACK,
-    GRAY_MARBLE,
-    INFINITAL_STONE,
-    LUSHINE,
-    LUSTRITE,
-    MARBLE,
-    PINKINE,
-    STORCENDITE,
-    STORCERACK,
-    VERDINE,
-    VIRDAL_STONE;
+    BLACK_MARBLE(DTBlocks.BLACK_MARBLE),
+    BLUE_STORCERACK(DTBlocks.BLUE_STORCERACK),
+    GRAY_MARBLE(DTBlocks.GRAY_MARBLE),
+    INFINITAL_STONE(DTBlocks.INFINITAL_STONE),
+    LUSHINE(DTBlocks.LUSHINE),
+    LUSTRITE(DTBlocks.LUSTRITE),
+    MARBLE(DTBlocks.MARBLE),
+    PINKINE(DTBlocks.PINKINE),
+    STORCENDITE(DTBlocks.STORCENDITE),
+    STORCERACK(DTBlocks.STORCERACK),
+    VERDINE(DTBlocks.VERDINE),
+    VIRDAL_STONE(DTBlocks.VIRDAL_STONE);
+
+    private static final Function<Block, IlmiumType> ILMIUM = Util.memoize(block -> Arrays.stream(values()).filter(type -> type.block == block).findFirst().orElse(null));
+
+    private final Block block;
+
+    IlmiumType(Block block) {
+        this.block = block;
+    }
 
     public static IlmiumType from(Block block) {
-
-        if(DTBlocks.BLACK_MARBLE == block)
-            return BLACK_MARBLE;
-        else if(DTBlocks.BLUE_STORCERACK == block)
-            return BLUE_STORCERACK;
-        else if(DTBlocks.GRAY_MARBLE == block)
-            return GRAY_MARBLE;
-        else if(DTBlocks.INFINITAL_STONE == block)
-            return INFINITAL_STONE;
-        else if(DTBlocks.LUSHINE == block)
-            return LUSHINE;
-        else if(DTBlocks.LUSTRITE == block)
-            return LUSTRITE;
-        else if(DTBlocks.PINKINE == block)
-            return PINKINE;
-        else if(DTBlocks.STORCENDITE == block)
-            return STORCENDITE;
-        else if(DTBlocks.STORCERACK == block)
-            return STORCERACK;
-        else if(DTBlocks.VERDINE == block)
-            return VERDINE;
-        else if(DTBlocks.VIRDAL_STONE == block)
-            return VIRDAL_STONE;
-
-        return null;
+        return ILMIUM.apply(block);
     }
 
     public Block asBlock() {
-        return switch (this) {
-            case BLACK_MARBLE -> DTBlocks.BLACK_MARBLE;
-            case BLUE_STORCERACK -> DTBlocks.BLUE_STORCERACK;
-            case GRAY_MARBLE -> DTBlocks.GRAY_MARBLE;
-            case INFINITAL_STONE -> DTBlocks.INFINITAL_STONE;
-            case LUSHINE -> DTBlocks.LUSHINE;
-            case LUSTRITE -> DTBlocks.LUSTRITE;
-            case MARBLE -> DTBlocks.MARBLE;
-            case PINKINE -> DTBlocks.PINKINE;
-            case STORCENDITE -> DTBlocks.STORCENDITE;
-            case STORCERACK -> DTBlocks.STORCERACK;
-            case VERDINE -> DTBlocks.VERDINE;
-            case VIRDAL_STONE -> DTBlocks.VIRDAL_STONE;
-        };
-
+        return this.block;
     }
 
     public String asString() {
