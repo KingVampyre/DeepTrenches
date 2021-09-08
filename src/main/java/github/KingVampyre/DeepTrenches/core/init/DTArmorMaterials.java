@@ -15,7 +15,7 @@ public enum DTArmorMaterials implements ArmorMaterial {
     CHALCEDONY(24, new int[] {2, 7, 6, 2}, 9, ITEM_ARMOR_EQUIP_IRON, 2, 2, () -> Ingredient.ofItems(DTItems.CHALCEDONY)),
     CLINOHUMITE(19, new int[] {2, 4, 5, 2}, 12, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.CLINOHUMITE)),
     DIOPSIDE(37, new int[] {3, 8, 6, 3}, 17, ITEM_ARMOR_EQUIP_IRON, 2, 0, () -> Ingredient.ofItems(DTItems.DIOPSIDE)),
-    ENRON(30, new int[] {2, 8, 7, 2}, 14, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.ENRON_INGOT)),
+    ENRON(88, new int[] {6, 16, 12, 6}, 18, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.ENRON_INGOT)),
     ENSTATITE(30, new int[] {2, 8, 7, 2}, 14, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.ENSTATITE)),
     KRALCTIUM(66, new int[] {6, 16, 12, 6}, 20, ITEM_ARMOR_EQUIP_IRON, 6, 4, () -> Ingredient.ofItems(DTItems.KRALCTIUM_INGOT)),
     MORGANITE(32, new int[] {3, 8, 6, 3}, 11, ITEM_ARMOR_EQUIP_IRON, 1, 0, () -> Ingredient.ofItems(DTItems.MORGANITE)),
