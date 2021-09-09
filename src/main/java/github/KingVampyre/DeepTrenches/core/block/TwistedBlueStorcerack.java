@@ -237,7 +237,7 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         var e = (double)pos.getX() + 0.5D + vec3d.x;
         var f = (float) (pos.getY() + 1) - d - d;
         var g = (double)pos.getZ() + 0.5D + vec3d.z;
-        var fluid2 = getDripFluid(world, fluid);
+        var fluid2 = fluid == EMPTY ? world.getDimension().isUltrawarm() ? LAVA : WATER : fluid;
         var particleEffect = fluid2.isIn(FluidTags.LAVA) ? DRIPPING_DRIPSTONE_LAVA : DRIPPING_DRIPSTONE_WATER;
 
         world.addParticle(particleEffect, e, f, g, 0, 0, 0);
@@ -277,14 +277,6 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         var thickness = state.get(TWISTED);
 
         return thickness == TIP || allowMerged && thickness == TIP_MERGE;
-    }
-
-    protected Fluid getDripFluid(World world, Fluid fluid) {
-
-        if (fluid.matchesType(EMPTY))
-            return world.getDimension().isUltrawarm() ? LAVA : WATER;
-
-        return fluid;
     }
 
 }

@@ -249,7 +249,7 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
     }
 
     protected boolean isTip(BlockState state, Direction direction) {
-        return isTip(state, false) && state.get(VERTICAL_DIRECTION) == direction;
+        return this.isTip(state, false) && state.get(VERTICAL_DIRECTION) == direction;
     }
 
     protected void scheduleFall(BlockState state, WorldAccess world, BlockPos pos) {
