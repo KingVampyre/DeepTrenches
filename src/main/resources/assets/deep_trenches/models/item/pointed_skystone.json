@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
+    "parent": "item/pointed_dripstone",
     "textures": {
-        "layer0": "deep_trenches:block/pointed_skystone_bottom_tip"
+        "layer0": "deep_trenches:block/pointed_skystone_down_tip"
     }
 }

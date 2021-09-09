@@ -79,6 +79,7 @@ accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     sampleNo
 accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createBlockSourceFactory    (ILnet/minecraft/util/math/ChunkPos;Ljava/util/function/Consumer;)Ljava/util/function/DoubleFunction;
 accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createWeightSamplerFactory  (ILnet/minecraft/util/math/ChunkPos;Ljava/util/function/Consumer;)Ljava/util/function/DoubleFunction;
 
+accessible method net/minecraft/block/AbstractCauldronBlock             canBeFilledByDripstone      (Lnet/minecraft/fluid/Fluid;)Z
 accessible method net/minecraft/world/gen/chunk/ChunkGeneratorSettings  hasDeepslate            ()Z
 accessible method net/minecraft/world/gen/chunk/ChunkGeneratorSettings  hasOreVeins             ()Z
 accessible method net/minecraft/world/gen/trunk/LargeOakTrunkPlacer     getLogAxis              (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/Direction$Axis;

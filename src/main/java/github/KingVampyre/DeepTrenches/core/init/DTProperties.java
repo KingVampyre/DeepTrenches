@@ -3,6 +3,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 import github.KingVampyre.DeepTrenches.core.block.enums.AirialMossType;
 import github.KingVampyre.DeepTrenches.core.block.enums.BlockThird;
 import github.KingVampyre.DeepTrenches.core.block.enums.IlmiumType;
+import github.KingVampyre.DeepTrenches.core.block.enums.Twisted;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
@@ -23,5 +24,7 @@ public class DTProperties {
     public static final BooleanProperty FRUIT = BooleanProperty.of("fruit");
 
     public static final IntProperty STAGE_2 = IntProperty.of("stage", 0, 2);
+
+    public static final EnumProperty<Twisted> TWISTED = EnumProperty.of("twisted", Twisted.class);
 
 }

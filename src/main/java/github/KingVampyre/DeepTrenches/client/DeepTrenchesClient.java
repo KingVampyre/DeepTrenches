@@ -566,6 +566,10 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.MEDIUM_SUGILITE_BUD, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.SMALL_SUGILITE_BUD, RenderLayer.getCutoutMipped());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POINTED_LIGHT_OPALITE, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POINTED_SKYSTONE, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.TWISTED_BLUE_STORCERACK, RenderLayer.getCutoutMipped());
+
         /* ------------------------------------------ FLUID RENDER LAYERS ----------------------------------------------------- */
         BlockRenderLayerMap.INSTANCE.putFluid(ABYSSOPELAGIC_WATER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putFluid(FLOWING_ABYSSOPELAGIC_WATER, RenderLayer.getTranslucent());

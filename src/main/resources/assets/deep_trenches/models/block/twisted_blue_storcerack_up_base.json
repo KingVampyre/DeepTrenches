@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/pointed_dripstone",
+    "textures": {
+        "cross": "deep_trenches:block/twisted_blue_storcerack_up_base"
+    }
+}

@@ -2915,7 +2915,7 @@ public class DTBlocks {
 		/* POINTED STONES */
 		POINTED_LIGHT_OPALITE = createBlock(PointedDripstoneBlock::new, POINTED_DRIPSTONE);
 		POINTED_SKYSTONE = createBlock(PointedDripstoneBlock::new, POINTED_DRIPSTONE);
-		TWISTED_BLUE_STORCERACK = createCopy(POINTED_DRIPSTONE);
+		TWISTED_BLUE_STORCERACK = createBlock(TwistedBlueStorcerack::new, POINTED_DRIPSTONE);
 
 		/* SURFACE BLOCKS */
 		DRITEAN = createCopy(DIRT);

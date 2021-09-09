@@ -1,0 +1,40 @@
+{
+    "variants": {
+        "twisted=base,vertical_direction=down": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_down_base"
+        },
+        "twisted=base,vertical_direction=up": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_up_base"
+        },
+        "twisted=frustum,vertical_direction=down": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_down_frustum"
+        },
+        "twisted=frustum,vertical_direction=up": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_up_frustum"
+        },
+        "twisted=opal_ore_merge,vertical_direction=down": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_down_opal_ore_merge"
+        },
+        "twisted=opal_ore_merge,vertical_direction=up": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_up_opal_ore_merge"
+        },
+        "twisted=middle,vertical_direction=down": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_down_middle"
+        },
+        "twisted=middle,vertical_direction=up": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_up_middle"
+        },
+        "twisted=tip,vertical_direction=down": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_down_tip"
+        },
+        "twisted=tip,vertical_direction=up": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_up_tip"
+        },
+        "twisted=tip_merge,vertical_direction=down": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_down_tip_merge"
+        },
+        "twisted=tip_merge,vertical_direction=up": {
+            "model": "deep_trenches:block/twisted_blue_storcerack_up_tip_merge"
+        }
+    }
+}
