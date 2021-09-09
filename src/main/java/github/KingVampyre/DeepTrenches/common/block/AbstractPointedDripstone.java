@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.common.block;
 
+import github.KingVampyre.DeepTrenches.core.util.DTUtils;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.Entity;
@@ -8,6 +9,7 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.TridentEntity;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.server.world.ServerWorld;
@@ -24,8 +26,6 @@ import java.util.Optional;
 import java.util.Random;
 import java.util.function.Predicate;
 
-import static github.KingVampyre.DeepTrenches.core.block.enums.Twisted.TIP;
-import static github.KingVampyre.DeepTrenches.core.block.enums.Twisted.TIP_MERGE;
 import static java.lang.Integer.MAX_VALUE;
 import static net.minecraft.block.AbstractBlock.OffsetType.XZ;
 import static net.minecraft.block.piston.PistonBehavior.DESTROY;
@@ -35,7 +35,6 @@ import static net.minecraft.predicate.entity.EntityPredicates.EXCEPT_CREATIVE_OR
 import static net.minecraft.predicate.entity.EntityPredicates.VALID_LIVING_ENTITY;
 import static net.minecraft.state.property.Properties.VERTICAL_DIRECTION;
 import static net.minecraft.state.property.Properties.WATERLOGGED;
-import static net.minecraft.util.math.Direction.Axis.Y;
 import static net.minecraft.util.math.Direction.DOWN;
 import static net.minecraft.util.math.Direction.UP;
 import static net.minecraft.world.WorldEvents.POINTED_DRIPSTONE_LANDS;
@@ -154,10 +153,10 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
 
         var direction = state.get(VERTICAL_DIRECTION);
 
-        return this.search(world, pos, direction.getDirection(), (statex) -> statex.isOf(this) && statex.get(VERTICAL_DIRECTION) == direction, (statex) -> isTip(statex, allowMerged), range).orElse(null);
+        return DTUtils.search(world, pos, direction, (statex) -> statex.isOf(this) && statex.get(VERTICAL_DIRECTION) == direction, (statex) -> isTip(statex, allowMerged), range).orElse(null);
     }
 
-    protected boolean isHeldByPointedDripstone(BlockState state, WorldView world, BlockPos pos) {
+    protected boolean isHeldBy(BlockState state, WorldView world, BlockPos pos) {
         return this.isPointingDown(state) && !world.getBlockState(pos.up()).isOf(this);
     }
 
@@ -174,10 +173,10 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
     protected void dripTick(BlockState state, ServerWorld world, BlockPos pos, float dripChance) {
 
         if (dripChance < 0.17578125F) {
-            if (this.isHeldByPointedDripstone(state, world, pos)) {
-                var fluid = this.getDripFluid(world, pos);
+            if (this.isHeldBy(state, world, pos)) {
+                var fluid = this.getFlowableFluid(world, pos, state);
 
-                if(this.isFluidLiquid(fluid)) {
+                if(fluid != null) {
                     float fluidChance = fluid == WATER ? 0.17578125F : 0.05859375F;
 
                     if (dripChance < fluidChance) {
@@ -209,31 +208,22 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
 
     @Nullable
     protected BlockPos getCauldronPos(World world, BlockPos pos, Fluid fluid) {
-        Predicate<BlockState> predicate = (state) ->
-                state.getBlock() instanceof AbstractCauldronBlock &&
-                        ((AbstractCauldronBlock)state.getBlock()).canBeFilledByDripstone(fluid);
-
-        return search(world, pos, DOWN.getDirection(), AbstractBlockState::isAir, predicate, 11).orElse(null);
+        return DTUtils.search(world, pos, DOWN, AbstractBlockState::isAir, state -> state.getBlock() instanceof AbstractCauldronBlock cauldron && cauldron.canBeFilledByDripstone(fluid), 11).orElse(null);
     }
 
-    protected Fluid getDripFluid(World world, BlockPos pos) {
-        return this.getFluid(world, pos, world.getBlockState(pos)).filter(this::isFluidLiquid).orElse(EMPTY);
-    }
+    protected Fluid getFlowableFluid(World world, BlockPos pos, BlockState tipState) {
 
-    protected Optional<Fluid> getFluid(World world, BlockPos pos, BlockState state) {
-        return !this.isPointingDown(state) ? Optional.empty() : this.getSupportingPos(world, pos, state, 11).map((posx) -> world.getFluidState(posx.up()).getFluid());
-    }
+        if(!this.isPointingDown(tipState))
+            return null;
 
-    protected Optional<BlockPos> getSupportingPos(World world, BlockPos pos, BlockState state, int range) {
-        var direction = state.get(VERTICAL_DIRECTION);
-        Predicate<BlockState> predicate = (statex) -> statex.isOf(this) && statex.get(VERTICAL_DIRECTION) == direction;
+        var direction = tipState.get(VERTICAL_DIRECTION);
 
-        return search(world, pos, direction.getOpposite().getDirection(), predicate, (statex) -> !statex.isOf(this), range);
-    }
-
-
-    protected boolean isFluidLiquid(Fluid fluid) {
-        return fluid == LAVA || fluid == WATER;
+        return DTUtils.search(world, pos, direction.getOpposite(), state -> this.isPointing(state, direction), statex -> !statex.isOf(this), 11)
+                .map(BlockPos::up)
+                .map(world::getFluidState)
+                .map(FluidState::getFluid)
+                .filter(FlowableFluid.class::isInstance)
+                .orElse(EMPTY);
     }
 
     protected boolean isPointingDown(BlockState state) {
@@ -248,7 +238,7 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
         return state.isOf(this) && state.get(VERTICAL_DIRECTION) == direction;
     }
 
-    protected boolean isTip(BlockState state, Direction direction) {
+    protected boolean isTipPointing(BlockState state, Direction direction) {
         return this.isTip(state, false) && state.get(VERTICAL_DIRECTION) == direction;
     }
 
@@ -265,25 +255,6 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
 
         }
 
-    }
-
-    protected Optional<BlockPos> search(WorldAccess world, BlockPos pos, Direction.AxisDirection axisDirection, Predicate<BlockState> continuePredicate, Predicate<BlockState> stopPredicate, int range) {
-        var direction = Direction.get(axisDirection, Y);
-        var mutable = pos.mutableCopy();
-
-        for(int i = 1; i < range; ++i) {
-            mutable.move(direction);
-            BlockState state = world.getBlockState(mutable);
-
-            if (stopPredicate.test(state))
-                return Optional.of(mutable.toImmutable());
-
-            if (world.isOutOfHeightLimit(mutable.getY()) || !continuePredicate.test(state))
-                return Optional.empty();
-
-        }
-
-        return Optional.empty();
     }
 
 }

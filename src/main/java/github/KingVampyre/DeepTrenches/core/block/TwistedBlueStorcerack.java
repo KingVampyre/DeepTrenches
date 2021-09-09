@@ -108,8 +108,13 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         if (this.canDrip(state)) {
             var chance = random.nextFloat();
 
-            if (chance < 0.12F)
-                this.getFluid(world, pos, state).filter(fluid -> chance < 0.02F || this.isFluidLiquid(fluid)).ifPresent((fluid) -> this.createParticle(world, pos, state, fluid));
+            if (chance < 0.12F) {
+                var fluid = this.getFlowableFluid(world, pos, state);
+
+                if(fluid != null)
+                    this.createParticle(world, pos, state, fluid);
+            }
+
         }
 
     }
@@ -151,7 +156,7 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         dripTick(state, world, pos, random.nextFloat());
 
-        if (random.nextFloat() < 0.011377778F && this.isHeldByPointedDripstone(state, world, pos)) {
+        if (random.nextFloat() < 0.011377778F && this.isHeldBy(state, world, pos)) {
             var blockState = world.getBlockState(pos.up());
             var blockState2 = world.getBlockState(pos.up(2));
 
@@ -174,7 +179,7 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
                                 if (!downState.getFluidState().isEmpty())
                                     return;
 
-                                if (this.isTip(downState, UP) && this.canGrow(downState, world, mutable))
+                                if (this.isTipPointing(downState, UP) && this.canGrow(downState, world, mutable))
                                     this.tryGrow(world, mutable, UP);
                                 else if (this.canPlaceTowards(world, mutable, UP) && !world.isWater(mutable.down()))
                                     this.tryGrow(world, mutable.down(), UP);
@@ -200,14 +205,14 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         if (!blockState.getFluidState().isEmpty())
             return false;
 
-        return blockState.isAir() || isTip(blockState, direction.getOpposite());
+        return blockState.isAir() || isTipPointing(blockState, direction.getOpposite());
     }
 
     protected void tryGrow(ServerWorld world, BlockPos pos, Direction direction) {
         var blockPos = pos.offset(direction);
         var blockState = world.getBlockState(blockPos);
 
-        if (isTip(blockState, direction.getOpposite())) {
+        if (isTipPointing(blockState, direction.getOpposite())) {
             BlockPos blockPos3;
             BlockPos blockPos4;
 
