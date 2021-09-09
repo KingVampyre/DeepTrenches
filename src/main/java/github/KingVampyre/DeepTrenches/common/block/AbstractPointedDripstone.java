@@ -14,6 +14,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.*;
@@ -23,6 +24,8 @@ import java.util.Optional;
 import java.util.Random;
 import java.util.function.Predicate;
 
+import static github.KingVampyre.DeepTrenches.core.block.enums.Twisted.TIP;
+import static github.KingVampyre.DeepTrenches.core.block.enums.Twisted.TIP_MERGE;
 import static java.lang.Integer.MAX_VALUE;
 import static net.minecraft.block.AbstractBlock.OffsetType.XZ;
 import static net.minecraft.block.piston.PistonBehavior.DESTROY;
@@ -46,13 +49,6 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
     @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
-    }
-
-    @Override
-    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        var direction = state.get(VERTICAL_DIRECTION);
-
-        return this.canPlaceTowards(world, pos, direction);
     }
 
     @Override
@@ -129,30 +125,43 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
 
         if (this.isPointingUp(state) && !this.canPlaceAt(state, world, pos))
             world.breakBlock(pos, true);
-        else
-            this.spawnFallingBlock(state, world, pos);
+        else {
+            var vec3d = Vec3d.ofBottomCenter(pos);
+            var entity = new FallingBlockEntity(world, vec3d.x, vec3d.y, vec3d.z, state);
 
-    }
+            if (this.isTip(state, true)) {
+                var mutable = pos.mutableCopy().move(UP);
+                var i = 1;
 
-    @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        dripTick(state, world, pos, random.nextFloat());
+                while(i < 6 && this.isPointingDown(world.getBlockState(mutable))) {
+                    ++i;
+                    mutable.move(UP);
+                }
 
-        if (random.nextFloat() < 0.011377778F && this.isHeldByPointedDripstone(state, world, pos))
-            tryGrow(state, world, pos, random);
+                entity.setHurtEntities(i, 40);
+            }
+
+            world.spawnEntity(entity);
+        }
 
     }
 
     @Nullable
-    protected abstract BlockPos getTipPos(BlockState state, WorldAccess world, BlockPos pos, int range, boolean allowMerged);
+    protected BlockPos getTipPos(BlockState state, WorldAccess world, BlockPos pos, int range, boolean allowMerged) {
 
-    protected abstract boolean isHeldByPointedDripstone(BlockState state, WorldView world, BlockPos pos);
+        if (this.isTip(state, allowMerged))
+            return pos;
+
+        var direction = state.get(VERTICAL_DIRECTION);
+
+        return this.search(world, pos, direction.getDirection(), (statex) -> statex.isOf(this) && statex.get(VERTICAL_DIRECTION) == direction, (statex) -> isTip(statex, allowMerged), range).orElse(null);
+    }
+
+    protected boolean isHeldByPointedDripstone(BlockState state, WorldView world, BlockPos pos) {
+        return this.isPointingDown(state) && !world.getBlockState(pos.up()).isOf(this);
+    }
 
     protected abstract boolean isTip(BlockState state, boolean allowMerged);
-
-    protected abstract void tryGrow(BlockState state, ServerWorld world, BlockPos pos, Random random);
-
-    protected abstract void spawnFallingBlock(BlockState state, ServerWorld world, BlockPos pos);
 
     protected boolean canPlaceTowards(WorldView world, BlockPos pos, Direction direction) {
         var opposite = direction.getOpposite();
@@ -244,7 +253,7 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
     }
 
     protected void scheduleFall(BlockState state, WorldAccess world, BlockPos pos) {
-        var blockPos = getTipPos(state, world, pos, MAX_VALUE, true);
+        var blockPos = this.getTipPos(state, world, pos, MAX_VALUE, true);
 
         if (blockPos != null) {
             var mutable = blockPos.mutableCopy();

@@ -2,34 +2,32 @@ package github.KingVampyre.DeepTrenches.core.block;
 
 import github.KingVampyre.DeepTrenches.common.block.AbstractPointedDripstone;
 import github.KingVampyre.DeepTrenches.core.block.enums.Twisted;
-import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.FallingBlockEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.tag.FluidTags;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.*;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Optional;
 import java.util.Random;
 import java.util.function.BiFunction;
-import java.util.function.Predicate;
 
 import static github.KingVampyre.DeepTrenches.core.block.enums.Twisted.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.BLUE_STORCERACK;
 import static github.KingVampyre.DeepTrenches.core.init.DTProperties.TWISTED;
-import static java.lang.Integer.MAX_VALUE;
 import static net.minecraft.entity.damage.DamageSource.STALAGMITE;
 import static net.minecraft.fluid.Fluids.*;
 import static net.minecraft.particle.ParticleTypes.DRIPPING_DRIPSTONE_LAVA;
@@ -142,34 +140,49 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         return shape.offset(vec3d.x, 0, vec3d.z);
     }
 
-    private int getStalactiteSize(ServerWorld world, BlockPos pos, int range) {
-        var mutable = pos.mutableCopy().move(UP);
-        var i = 1;
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        var direction = state.get(VERTICAL_DIRECTION);
 
-        while(i < range && this.isPointingDown(world.getBlockState(mutable))) {
-            ++i;
-            mutable.move(UP);
-        }
-
-        return i;
+        return this.canPlaceTowards(world, pos, direction);
     }
 
     @Override
-    public void tryGrow(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        var blockState = world.getBlockState(pos.up());
-        var blockState2 = world.getBlockState(pos.up(2));
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        dripTick(state, world, pos, random.nextFloat());
 
-        if (this.canGrow(blockState, blockState2)) {
-            var blockPos = this.getTipPos(state, world, pos, 7, false);
+        if (random.nextFloat() < 0.011377778F && this.isHeldByPointedDripstone(state, world, pos)) {
+            var blockState = world.getBlockState(pos.up());
+            var blockState2 = world.getBlockState(pos.up(2));
 
-            if (blockPos != null) {
-                var blockState3 = world.getBlockState(blockPos);
+            if (blockState.isOf(BLUE_STORCERACK) && blockState2.isOf(Blocks.WATER) && blockState2.getFluidState().isStill()) {
+                var tipPos = this.getTipPos(state, world, pos, 7, false);
 
-                if (this.canDrip(blockState3) && this.canGrow(blockState3, world, blockPos)) {
-                    if (random.nextBoolean())
-                        this.tryGrow(world, blockPos, Direction.DOWN);
-                    else
-                        this.tryGrowStalagmite(world, blockPos);
+                if (tipPos != null) {
+                    var tipState = world.getBlockState(tipPos);
+
+                    if (this.canDrip(tipState) && this.canGrow(tipState, world, tipPos)) {
+                        if (random.nextBoolean())
+                            this.tryGrow(world, tipPos, Direction.DOWN);
+                        else {
+                            var mutable = tipPos.mutableCopy();
+
+                            for(int i = 0; i < 10; ++i) {
+                                mutable.move(DOWN);
+                                var downState =  world.getBlockState(mutable);
+
+                                if (!downState.getFluidState().isEmpty())
+                                    return;
+
+                                if (this.isTip(downState, UP) && this.canGrow(downState, world, mutable))
+                                    this.tryGrow(world, mutable, UP);
+                                else if (this.canPlaceTowards(world, mutable, UP) && !world.isWater(mutable.down()))
+                                    this.tryGrow(world, mutable.down(), UP);
+                            }
+
+                        }
+
+                    }
 
                 }
 
@@ -179,7 +192,7 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
 
     }
 
-    private boolean canGrow(BlockState state, ServerWorld world, BlockPos pos) {
+    protected boolean canGrow(BlockState state, ServerWorld world, BlockPos pos) {
         var direction = state.get(VERTICAL_DIRECTION);
         var blockPos = pos.offset(direction);
         var blockState = world.getBlockState(blockPos);
@@ -190,43 +203,7 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         return blockState.isAir() || isTip(blockState, direction.getOpposite());
     }
 
-    private void tryGrowStalagmite(ServerWorld world, BlockPos pos) {
-        var mutable = pos.mutableCopy();
-
-        for(int i = 0; i < 10; ++i) {
-            mutable.move(DOWN);
-            var state = world.getBlockState(mutable);
-
-            if (!state.getFluidState().isEmpty())
-                return;
-
-            if (this.isTip(state, UP) && this.canGrow(state, world, mutable))
-                this.tryGrow(world, mutable, UP);
-            else if (this.canPlaceTowards(world, mutable, UP) && !world.isWater(mutable.down()))
-                this.tryGrow(world, mutable.down(), UP);
-        }
-
-    }
-
-    private boolean canGrow(BlockState dripstoneBlockState, BlockState waterState) {
-        return dripstoneBlockState.isOf(BLUE_STORCERACK) && waterState.isOf(Blocks.WATER) && waterState.getFluidState().isStill();
-    }
-
-    @Override
-    protected void spawnFallingBlock(BlockState state, ServerWorld world, BlockPos pos) {
-        var vec3d = Vec3d.ofBottomCenter(pos);
-        var fallingBlockEntity = new FallingBlockEntity(world, vec3d.x, vec3d.y, vec3d.z, state);
-
-        if (isTip(state, true)) {
-            var i = getStalactiteSize(world, pos, 6);
-
-            fallingBlockEntity.setHurtEntities(i, 40);
-        }
-
-        world.spawnEntity(fallingBlockEntity);
-    }
-
-    private void tryGrow(ServerWorld world, BlockPos pos, Direction direction) {
+    protected void tryGrow(ServerWorld world, BlockPos pos, Direction direction) {
         var blockPos = pos.offset(direction);
         var blockState = world.getBlockState(blockPos);
 
@@ -246,20 +223,19 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
             this.place(world, blockPos4, UP, TIP_MERGE);
         } else if (blockState.isAir() || blockState.isOf(Blocks.WATER))
             this.place(world, blockPos, direction, TIP);
-
     }
 
-    private void place(WorldAccess world, BlockPos pos, Direction direction, Twisted thickness) {
-        var blockState = this.getDefaultState().with(VERTICAL_DIRECTION, direction).with(TWISTED, thickness).with(WATERLOGGED, world.getFluidState(pos).getFluid() == WATER);
+    protected void place(WorldAccess world, BlockPos pos, Direction direction, Twisted twisted) {
+        var blockState = this.getDefaultState().with(VERTICAL_DIRECTION, direction).with(TWISTED, twisted).with(WATERLOGGED, world.getFluidState(pos).getFluid() == WATER);
 
         world.setBlockState(pos, blockState, Block.NOTIFY_ALL);
     }
 
-    private void createParticle(World world, BlockPos pos, BlockState state, Fluid fluid) {
+    protected void createParticle(World world, BlockPos pos, BlockState state, Fluid fluid) {
         var vec3d = state.getModelOffset(world, pos);
         var d = 0.0625D;
         var e = (double)pos.getX() + 0.5D + vec3d.x;
-        var f = (double)((float)(pos.getY() + 1) - d) - d;
+        var f = (float) (pos.getY() + 1) - d - d;
         var g = (double)pos.getZ() + 0.5D + vec3d.z;
         var fluid2 = getDripFluid(world, fluid);
         var particleEffect = fluid2.isIn(FluidTags.LAVA) ? DRIPPING_DRIPSTONE_LAVA : DRIPPING_DRIPSTONE_WATER;
@@ -267,19 +243,7 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         world.addParticle(particleEffect, e, f, g, 0, 0, 0);
     }
 
-    @Override
-    @Nullable
-    protected BlockPos getTipPos(BlockState state, WorldAccess world, BlockPos pos, int range, boolean allowMerged) {
-
-        if (this.isTip(state, allowMerged))
-            return pos;
-
-        var direction = state.get(VERTICAL_DIRECTION);
-
-        return this.search(world, pos, direction.getDirection(), (statex) -> statex.isOf(this) && statex.get(VERTICAL_DIRECTION) == direction, (statex) -> isTip(statex, allowMerged), range).orElse(null);
-    }
-
-    private Twisted getTwisted(WorldView world, BlockPos pos, Direction direction, boolean tryMerge) {
+    protected Twisted getTwisted(WorldView world, BlockPos pos, Direction direction, boolean tryMerge) {
         var opposite = direction.getOpposite();
         var offset = pos.offset(direction);
         var state = world.getBlockState(offset);
@@ -301,7 +265,7 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         return FRUSTUM;
     }
 
-    public boolean canDrip(BlockState state) {
+    protected boolean canDrip(BlockState state) {
         return this.isPointingDown(state) && state.get(TWISTED) == TIP && !state.get(WATERLOGGED);
     }
 
@@ -315,12 +279,7 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         return thickness == TIP || allowMerged && thickness == TIP_MERGE;
     }
 
-    @Override
-    protected boolean isHeldByPointedDripstone(BlockState state, WorldView world, BlockPos pos) {
-        return this.isPointingDown(state) && !world.getBlockState(pos.up()).isOf(DTBlocks.TWISTED_BLUE_STORCERACK);
-    }
-
-    private Fluid getDripFluid(World world, Fluid fluid) {
+    protected Fluid getDripFluid(World world, Fluid fluid) {
 
         if (fluid.matchesType(EMPTY))
             return world.getDimension().isUltrawarm() ? LAVA : WATER;
