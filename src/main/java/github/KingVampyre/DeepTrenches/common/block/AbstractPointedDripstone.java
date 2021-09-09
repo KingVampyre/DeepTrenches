@@ -156,11 +156,11 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
         return DTUtils.search(world, pos, direction, (statex) -> statex.isOf(this) && statex.get(VERTICAL_DIRECTION) == direction, (statex) -> isTip(statex, allowMerged), range).orElse(null);
     }
 
-    protected boolean isHeldBy(BlockState state, WorldView world, BlockPos pos) {
-        return this.isPointingDown(state) && !world.getBlockState(pos.up()).isOf(this);
-    }
-
     protected abstract boolean isTip(BlockState state, boolean allowMerged);
+
+    protected boolean canDrip(BlockState state) {
+        return this.isTipPointing(state, DOWN) && !state.get(WATERLOGGED);
+    }
 
     protected boolean canPlaceTowards(WorldView world, BlockPos pos, Direction direction) {
         var opposite = direction.getOpposite();
@@ -204,6 +204,10 @@ public abstract class AbstractPointedDripstone extends Block implements LandingB
 
         }
 
+    }
+
+    protected boolean isHeldBy(BlockState state, WorldView world, BlockPos pos) {
+        return this.isPointingDown(state) && !world.getBlockState(pos.up()).isOf(this);
     }
 
     @Nullable

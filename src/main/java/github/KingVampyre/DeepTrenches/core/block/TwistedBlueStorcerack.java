@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.block.enums.Thickness;
 import net.minecraft.entity.Entity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.ItemPlacementContext;
@@ -209,25 +210,22 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
     }
 
     protected void tryGrow(ServerWorld world, BlockPos pos, Direction direction) {
-        var blockPos = pos.offset(direction);
-        var blockState = world.getBlockState(blockPos);
+        var offset = pos.offset(direction);
+        var state = world.getBlockState(offset);
+        var opposite = direction.getOpposite();
 
-        if (isTipPointing(blockState, direction.getOpposite())) {
-            BlockPos blockPos3;
-            BlockPos blockPos4;
+        if (this.isTipPointing(state, opposite)) {
+            var vertical = state.get(VERTICAL_DIRECTION);
 
-            if (blockState.get(VERTICAL_DIRECTION) == UP) {
-                blockPos4 = blockPos;
-                blockPos3 = blockPos.up();
-            } else {
-                blockPos3 = blockPos;
-                blockPos4 = blockPos.down();
-            }
+            var mergedDown = vertical == UP ? pos.up() : pos;
+            var mergedUp = vertical == DOWN ? pos.down() : pos;
 
-            this.place(world, blockPos3, DOWN, TIP_MERGE);
-            this.place(world, blockPos4, UP, TIP_MERGE);
-        } else if (blockState.isAir() || blockState.isOf(Blocks.WATER))
-            this.place(world, blockPos, direction, TIP);
+            this.place(world, mergedDown, DOWN, TIP_MERGE);
+            this.place(world, mergedUp, UP, TIP_MERGE);
+
+        } else if (state.isAir() || state.isOf(Blocks.WATER))
+            place(world, offset, direction, TIP);
+
     }
 
     protected void place(WorldAccess world, BlockPos pos, Direction direction, Twisted twisted) {
@@ -238,9 +236,8 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
 
     protected void createParticle(World world, BlockPos pos, BlockState state, Fluid fluid) {
         var vec3d = state.getModelOffset(world, pos);
-        var d = 0.0625D;
         var e = (double)pos.getX() + 0.5D + vec3d.x;
-        var f = (float) (pos.getY() + 1) - d - d;
+        var f = pos.getY() - 0.0625D;
         var g = (double)pos.getZ() + 0.5D + vec3d.z;
         var fluid2 = fluid == EMPTY ? world.getDimension().isUltrawarm() ? LAVA : WATER : fluid;
         var particleEffect = fluid2.isIn(FluidTags.LAVA) ? DRIPPING_DRIPSTONE_LAVA : DRIPPING_DRIPSTONE_WATER;
