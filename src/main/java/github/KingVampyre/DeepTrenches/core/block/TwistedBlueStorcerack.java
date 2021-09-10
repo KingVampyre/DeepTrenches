@@ -7,7 +7,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
@@ -31,6 +30,7 @@ import java.util.function.BiFunction;
 
 import static github.KingVampyre.DeepTrenches.core.block.enums.Twisted.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTProperties.TWISTED;
+import static net.minecraft.enchantment.Enchantments.SILK_TOUCH;
 import static net.minecraft.fluid.Fluids.WATER;
 import static net.minecraft.particle.ParticleTypes.DRIPPING_DRIPSTONE_LAVA;
 import static net.minecraft.particle.ParticleTypes.DRIPPING_DRIPSTONE_WATER;
@@ -166,11 +166,12 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
     @Override
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
         super.onStacksDropped(state, world, pos, stack);
-        if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-            int i = this.experienceDropped.get(world.random);
-            if (i > 0) {
+
+        if (EnchantmentHelper.getLevel(SILK_TOUCH, stack) == 0) {
+            var i = this.experienceDropped.get(world.random);
+
+            if (i > 0)
                 this.dropExperience(world, pos, i);
-            }
         }
 
     }
