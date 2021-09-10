@@ -144,9 +144,16 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
 
         var aheadPos = pos.offset(verticalDirection);
         var aheadState = world.getBlockState(aheadPos);
+        var opposite = verticalDirection.getOpposite();
 
         if(!aheadState.isOf(this))
             return state.with(TWISTED, TIP);
+
+        if(aheadState.get(TWISTED) == TIP_MERGE && this.isTip(state, false))
+            return state.with(TWISTED, TIP_MERGE);
+
+        if(this.isTip(state, false) && this.isTipPointing(aheadState, opposite))
+            return state.with(TWISTED, TIP_MERGE);
 
         if(this.isTipPointing(aheadState, verticalDirection))
             return state.with(TWISTED, FRUSTUM);
@@ -154,7 +161,6 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         if(this.isPointing(aheadState, verticalDirection) && aheadState.get(TWISTED) == FRUSTUM)
             return state.with(TWISTED, MIDDLE);
 
-        var opposite = verticalDirection.getOpposite();
         var offset = pos.offset(opposite);
         var offsetState = world.getBlockState(offset);
 
@@ -273,9 +279,6 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
             if(twisted == TIP_MERGE) {
                 this.place(world, mergedDown, DOWN, OPAL_ORE_MERGE);
                 this.place(world, mergedUp, UP, OPAL_ORE_MERGE);
-            } else if(twisted == TIP) {
-                this.place(world, mergedDown, DOWN, TIP_MERGE);
-                this.place(world, mergedUp, UP, TIP_MERGE);
             }
 
         } else if (state.isAir() || state.isOf(Blocks.WATER))
