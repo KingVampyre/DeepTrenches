@@ -21,7 +21,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
-import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -143,9 +142,26 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
             return state;
         }
 
-        var twisted = this.getTwisted(world, pos, verticalDirection, state.get(TWISTED) != TIP_MERGE);
+        var aheadPos = pos.offset(verticalDirection);
+        var aheadState = world.getBlockState(aheadPos);
 
-        return state.with(TWISTED, twisted);
+        if(!aheadState.isOf(this))
+            return state.with(TWISTED, TIP);
+
+        if(this.isTipPointing(aheadState, verticalDirection))
+            return state.with(TWISTED, FRUSTUM);
+
+        if(this.isPointing(aheadState, verticalDirection) && aheadState.get(TWISTED) == FRUSTUM)
+            return state.with(TWISTED, MIDDLE);
+
+        var opposite = verticalDirection.getOpposite();
+        var offset = pos.offset(opposite);
+        var offsetState = world.getBlockState(offset);
+
+        if(offsetState.isSideSolidFullSquare(world, offset, opposite))
+            return state.with(TWISTED, BASE);
+
+        return state;
     }
 
     @Override
@@ -167,11 +183,12 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
         super.onStacksDropped(state, world, pos, stack);
 
-        if (EnchantmentHelper.getLevel(SILK_TOUCH, stack) == 0) {
+        if (state.get(TWISTED) == OPAL_ORE_MERGE && EnchantmentHelper.getLevel(SILK_TOUCH, stack) == 0) {
             var i = this.experienceDropped.get(world.random);
 
             if (i > 0)
                 this.dropExperience(world, pos, i);
+
         }
 
     }
@@ -239,34 +256,6 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
             return true;
 
         return offsetState.isAir();
-    }
-
-    protected Twisted getTwisted(WorldView world, BlockPos pos, Direction direction, boolean tryMerge) {
-        var opposite = direction.getOpposite();
-        var offset = pos.offset(direction);
-        var state = world.getBlockState(offset);
-
-        if (this.isPointing(state, opposite)) {
-            var twisted = state.get(TWISTED);
-
-            if(!tryMerge && twisted != TIP_MERGE)
-                return TIP;
-
-            return twisted == TIP_MERGE ? TIP_MERGE : OPAL_ORE_MERGE;
-        }
-
-        if (!this.isPointing(state, direction))
-            return TIP;
-
-        var twisted = state.get(TWISTED);
-
-        if (twisted != TIP && twisted != TIP_MERGE) {
-            var blockState = world.getBlockState(pos.offset(opposite));
-
-            return !this.isPointing(blockState, direction) ? BASE : MIDDLE;
-        }
-
-        return FRUSTUM;
     }
 
     protected void tryGrow(ServerWorld world, BlockPos pos, Direction direction) {
