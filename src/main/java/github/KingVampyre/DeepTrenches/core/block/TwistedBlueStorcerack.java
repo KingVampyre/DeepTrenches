@@ -6,14 +6,18 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.tag.FluidTags;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -54,8 +58,12 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         default -> MIDDLE_SHAPE;
     });
 
-    public TwistedBlueStorcerack(Settings settings) {
+    private final UniformIntProvider experienceDropped;
+
+    public TwistedBlueStorcerack(Settings settings, UniformIntProvider experienceDropped) {
         super(settings);
+
+        this.experienceDropped = experienceDropped;
 
         this.setDefaultState(this.stateManager.getDefaultState().with(VERTICAL_DIRECTION, UP).with(TWISTED, TIP).with(WATERLOGGED, false));
     }
@@ -156,6 +164,18 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
     }
 
     @Override
+    public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
+        super.onStacksDropped(state, world, pos, stack);
+        if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
+            int i = this.experienceDropped.get(world.random);
+            if (i > 0) {
+                this.dropExperience(world, pos, i);
+            }
+        }
+
+    }
+
+    @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         dripTick(state, world, pos, random.nextFloat());
 
@@ -225,8 +245,14 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         var offset = pos.offset(direction);
         var state = world.getBlockState(offset);
 
-        if (this.isPointing(state, opposite))
-            return !tryMerge && state.get(TWISTED) != TIP_MERGE ? TIP : TIP_MERGE;
+        if (this.isPointing(state, opposite)) {
+            var twisted = state.get(TWISTED);
+
+            if(!tryMerge && twisted != TIP_MERGE)
+                return TIP;
+
+            return twisted == TIP_MERGE ? TIP_MERGE : OPAL_ORE_MERGE;
+        }
 
         if (!this.isPointing(state, direction))
             return TIP;

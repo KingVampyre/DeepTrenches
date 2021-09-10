@@ -9,6 +9,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.SignType;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.ConfiguredFeatures;
@@ -2915,7 +2916,7 @@ public class DTBlocks {
 		/* POINTED STONES */
 		POINTED_LIGHT_OPALITE = createBlock(PointedDripstoneBlock::new, POINTED_DRIPSTONE);
 		POINTED_SKYSTONE = createBlock(PointedDripstoneBlock::new, POINTED_DRIPSTONE);
-		TWISTED_BLUE_STORCERACK = createBlock(TwistedBlueStorcerack::new, POINTED_DRIPSTONE);
+		TWISTED_BLUE_STORCERACK = new TwistedBlueStorcerack(POINTED_DRIPSTONE, UniformIntProvider.create(2, 5));
 
 		/* SURFACE BLOCKS */
 		DRITEAN = createCopy(DIRT);

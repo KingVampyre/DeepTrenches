@@ -24,8 +24,7 @@
 					"condition": "minecraft:block_state_property",
 					"block": "deep_trenches:twisted_blue_storcerack",
 					"properties": {
-						"twisted": "opal_ore_merge",
-						"vertical_direction": "up"
+						"twisted": "opal_ore_merge"
 					}
 				}
 			]
