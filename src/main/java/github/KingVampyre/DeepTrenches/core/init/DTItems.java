@@ -812,6 +812,13 @@ public class DTItems {
 
 	/* JEWELRY */
 	public static final Item BLACK_PEARL;
+	public static final Item BLACK_OPAL_SHARD;
+	public static final Item CLINOHUMITE_SHARD;
+	public static final Item DIAMOND_SHARD;
+	public static final Item GARNET_SHARD;
+	public static final Item OPAL_SHARD;
+	public static final Item SAPPHIRE_SHARD;
+	public static final Item SUGILITE_SHARD;
 
 	/* ORES */
 	public static final Item AQUAMARINE;
@@ -1782,7 +1789,14 @@ public class DTItems {
 		TANZANITE_TALISMAN = createItem(COMBAT);
 
 		/* JEWELRY */
-		BLACK_PEARL = createItem(MISC);
+		BLACK_PEARL = createItem(MINERALOGY);
+		BLACK_OPAL_SHARD = createItem(MINERALOGY);
+		CLINOHUMITE_SHARD = createItem(MINERALOGY);
+		DIAMOND_SHARD = createItem(MINERALOGY);
+		GARNET_SHARD = createItem(MINERALOGY);
+		OPAL_SHARD = createItem(MINERALOGY);
+		SAPPHIRE_SHARD = createItem(MINERALOGY);
+		SUGILITE_SHARD = createItem(MINERALOGY);
 
 		/* ORES */
 		AQUAMARINE = createItem(MINERALOGY);
@@ -4445,6 +4459,13 @@ public class DTItems {
 
 		/* JEWELRY */
 		registerItem("deep_trenches:black_pearl", BLACK_PEARL);
+		registerItem("deep_trenches:black_opal_shard", BLACK_OPAL_SHARD);
+		registerItem("deep_trenches:clinohumite_shard", CLINOHUMITE_SHARD);
+		registerItem("deep_trenches:diamond_shard", DIAMOND_SHARD);
+		registerItem("deep_trenches:garnet_shard", GARNET_SHARD);
+		registerItem("deep_trenches:opal_shard", OPAL_SHARD);
+		registerItem("deep_trenches:sapphire_shard", SAPPHIRE_SHARD);
+		registerItem("deep_trenches:sugilite_shard", SUGILITE_SHARD);
 
 		/* ORES */
 		registerItem("deep_trenches:aquamarine", AQUAMARINE);
