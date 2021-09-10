@@ -26,6 +26,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Random;
 import java.util.function.Predicate;
 
+import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.BLUE_STORCERACK;
 import static java.lang.Integer.MAX_VALUE;
 import static net.minecraft.block.AbstractBlock.OffsetType.XZ;
 import static net.minecraft.block.piston.PistonBehavior.DESTROY;
@@ -98,6 +99,10 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
 
     @Nullable
     protected BlockPos getTipPos(BlockState state, WorldAccess world, BlockPos pos, int range, boolean allowMerged) {
+
+        if (this.isTip(state, allowMerged))
+            return pos;
+
         var direction = state.get(VERTICAL_DIRECTION);
 
         return DTUtils.search(world, pos, direction,
@@ -233,14 +238,12 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
         return DTUtils.search(world, pos, DOWN, AbstractBlockState::isAir, state -> state.getBlock() instanceof AbstractCauldronBlock cauldron && cauldron.canBeFilledByDripstone(fluid), 11).orElse(null);
     }
 
-    protected Fluid getFlowableFluid(World world, BlockPos pos, BlockState tipState) {
+    protected Fluid getFlowableFluid(World world, BlockPos pos, BlockState state) {
+        var direction = state.get(VERTICAL_DIRECTION);
 
-        if(!this.isTipPointing(tipState, DOWN))
-            return EMPTY;
-
-        var direction = tipState.get(VERTICAL_DIRECTION);
-
-        return DTUtils.search(world, pos, UP, state -> this.isPointing(state, direction), state -> !state.isOf(this), 11)
+        return DTUtils.search(world, pos, direction.getOpposite(),
+                        upState -> this.isPointing(upState, direction),
+                        upState -> !upState.isOf(this), 11)
                 .map(BlockPos::up)
                 .map(world::getFluidState)
                 .map(FluidState::getFluid)
