@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.util;
 
+import com.google.common.collect.Lists;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -7,6 +8,7 @@ import net.minecraft.world.WorldAccess;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 
@@ -27,6 +29,31 @@ public class DTUtils {
             return iterator.next();
         else
             return Arrays.stream(arr).iterator().next();
+    }
+
+    public static int count(WorldAccess world, BlockPos pos, Direction direction, Predicate<BlockState> continuePredicate, int range) {
+        return DTUtils.findAll(world, pos, direction, continuePredicate, range).size();
+    }
+
+    public static List<BlockPos> findAll(WorldAccess world, BlockPos pos, Direction direction, Predicate<BlockState> continuePredicate, int range) {
+        var mutable = pos.mutableCopy();
+        var list = Lists.<BlockPos>newArrayList();
+
+        for(int i = 1; i < range; ++i) {
+            mutable.move(direction);
+            var state = world.getBlockState(mutable);
+
+            if (world.isOutOfHeightLimit(mutable.getY()))
+                return list;
+
+            list.add(mutable.toImmutable());
+
+            if (!continuePredicate.test(state))
+                return list;
+
+        }
+
+        return list;
     }
 
     public static Optional<BlockPos> search(WorldAccess world, BlockPos pos, Direction direction, Predicate<BlockState> continuePredicate, Predicate<BlockState> stopPredicate, int range) {

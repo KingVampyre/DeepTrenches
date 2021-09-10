@@ -1,13 +1,11 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.KingVampyre.DeepTrenches.common.block.AbstractPointedDripstone;
+import github.KingVampyre.DeepTrenches.common.block.AbstractPointedStone;
 import github.KingVampyre.DeepTrenches.core.block.enums.Twisted;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.block.enums.Thickness;
-import net.minecraft.entity.Entity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
@@ -21,24 +19,25 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 import java.util.function.BiFunction;
 
 import static github.KingVampyre.DeepTrenches.core.block.enums.Twisted.*;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.BLUE_STORCERACK;
 import static github.KingVampyre.DeepTrenches.core.init.DTProperties.TWISTED;
-import static net.minecraft.entity.damage.DamageSource.STALAGMITE;
-import static net.minecraft.fluid.Fluids.*;
+import static net.minecraft.fluid.Fluids.WATER;
 import static net.minecraft.particle.ParticleTypes.DRIPPING_DRIPSTONE_LAVA;
 import static net.minecraft.particle.ParticleTypes.DRIPPING_DRIPSTONE_WATER;
 import static net.minecraft.state.property.Properties.VERTICAL_DIRECTION;
 import static net.minecraft.state.property.Properties.WATERLOGGED;
+import static net.minecraft.util.math.Direction.Axis.Y;
 import static net.minecraft.util.math.Direction.DOWN;
 import static net.minecraft.util.math.Direction.UP;
 
-public class TwistedBlueStorcerack extends AbstractPointedDripstone {
+@SuppressWarnings("deprecation")
+public class TwistedBlueStorcerack extends AbstractPointedStone {
 
     private static final VoxelShape TIP_MERGE_SHAPE = Block.createCuboidShape(5, 0, 5, 11, 16, 11);
     private static final VoxelShape UP_TIP_SHAPE = Block.createCuboidShape(5, 0, 5, 11, 11, 11);
@@ -67,72 +66,14 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    protected void createParticle(@NotNull BlockState state, World world, BlockPos pos, @NotNull Fluid fluid) {
+        var particleEffect = fluid.isIn(FluidTags.LAVA) ? DRIPPING_DRIPSTONE_LAVA : DRIPPING_DRIPSTONE_WATER;
+        var vec3d = state.getModelOffset(world, pos);
+        var x = (double) pos.getX() + 0.5D + vec3d.x;
+        var y = pos.getY() - 0.125D;
+        var z = (double) pos.getZ() + 0.5D + vec3d.z;
 
-        if (state.get(WATERLOGGED))
-            world.getFluidTickScheduler().schedule(pos, WATER, WATER.getTickRate(world));
-
-        if (direction != UP && direction != DOWN)
-            return state;
-
-        var verticalDirection = state.get(VERTICAL_DIRECTION);
-
-        if (verticalDirection == DOWN && world.getBlockTickScheduler().isScheduled(pos, this))
-            return state;
-        else if (direction == verticalDirection.getOpposite() && !this.canPlaceAt(state, world, pos)) {
-            if (verticalDirection == DOWN)
-                this.scheduleFall(state, world, pos);
-            else
-                world.getBlockTickScheduler().schedule(pos, this, 1);
-
-            return state;
-        }
-
-        var twisted = this.getTwisted(world, pos, verticalDirection, state.get(TWISTED) == TIP_MERGE);
-
-        return state.with(TWISTED, twisted);
-    }
-
-    @Override
-    public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-
-        if (state.get(VERTICAL_DIRECTION) == UP && state.get(TWISTED) == TIP)
-            entity.handleFallDamage(fallDistance + 2.0F, 2.0F, STALAGMITE);
-        else
-            super.onLandedUpon(world, state, pos, entity, fallDistance);
-
-    }
-
-    @Override
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-
-        if (this.canDrip(state)) {
-            var chance = random.nextFloat();
-
-            if (chance < 0.12F) {
-                var fluid = this.getFlowableFluid(world, pos, state);
-
-                if(fluid != null)
-                    this.createParticle(world, pos, state, fluid);
-            }
-
-        }
-
-    }
-
-    @Nullable
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        var world = ctx.getWorld();
-        var pos = ctx.getBlockPos();
-        var opposite = ctx.getVerticalPlayerLookDirection().getOpposite();
-        var direction = this.getPlaceDirection(world, pos, opposite);
-
-        if (direction == null)
-            return null;
-
-        var twisted = this.getTwisted(world, pos, direction, !ctx.shouldCancelInteraction());
-
-        return twisted == null ? null : this.getDefaultState().with(VERTICAL_DIRECTION, direction).with(TWISTED, twisted).with(WATERLOGGED, world.getFluidState(pos).getFluid() == WATER);
+        world.addParticle(particleEffect, x, y, z, 0, 0, 0);
     }
 
     @Override
@@ -146,46 +87,101 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         return shape.offset(vec3d.x, 0, vec3d.z);
     }
 
-    @Override
-    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        var direction = state.get(VERTICAL_DIRECTION);
+    @Nullable
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        var world = ctx.getWorld();
+        var pos = ctx.getBlockPos();
+        var lookDirection = ctx.getVerticalPlayerLookDirection();
 
-        return this.canPlaceTowards(world, pos, direction);
+        if(lookDirection.getAxis() != Y)
+            return null;
+
+        var direction = lookDirection.getOpposite();
+        var offset = pos.offset(lookDirection);
+        var state = world.getBlockState(offset);
+
+        if(state.isSideSolidFullSquare(world, offset, direction) || this.isPointing(state, direction))
+            return this.getDefaultState()
+                    .with(VERTICAL_DIRECTION, direction)
+                    .with(WATERLOGGED, world.getFluidState(pos).getFluid() == WATER);
+
+        return null;
+    }
+
+    @Override
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+
+        if (state.get(WATERLOGGED))
+            world.getFluidTickScheduler().schedule(pos, WATER, WATER.getTickRate(world));
+
+        if (direction.getAxis() != Y)
+            return state;
+
+        var scheduler = world.getBlockTickScheduler();
+        var verticalDirection = state.get(VERTICAL_DIRECTION);
+
+        if (scheduler.isScheduled(pos, this) && verticalDirection == DOWN)
+            return state;
+
+        var canPlaceAt = this.canPlaceAt(state, world, pos);
+
+        if(!canPlaceAt && verticalDirection == UP) {
+            scheduler.schedule(pos, this, 1);
+            return state;
+        }
+
+        if(!canPlaceAt && verticalDirection == DOWN) {
+            this.scheduleFall(state, world, pos);
+            return state;
+        }
+
+        var twisted = this.getTwisted(world, pos, verticalDirection, state.get(TWISTED) != TIP_MERGE);
+
+        return state.with(TWISTED, twisted);
+    }
+
+    @Override
+    protected boolean isTip(BlockState state, boolean allowMerged) {
+        if (!state.isOf(this))
+            return false;
+
+        var twisted = state.get(TWISTED);
+
+        if(twisted == TIP)
+            return true;
+        else if(allowMerged)
+            return twisted == TIP_MERGE || twisted == OPAL_ORE_MERGE;
+
+        return false;
     }
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         dripTick(state, world, pos, random.nextFloat());
 
-        if (random.nextFloat() < 0.011377778F && this.isHeldBy(state, world, pos)) {
-            var blockState = world.getBlockState(pos.up());
-            var blockState2 = world.getBlockState(pos.up(2));
+        if(random.nextFloat() < 0.011377778F) {
+            var tipPos = this.getTipPos(state, world, pos, 7, false);
 
-            if (blockState.isOf(BLUE_STORCERACK) && blockState2.isOf(Blocks.WATER) && blockState2.getFluidState().isStill()) {
-                var tipPos = this.getTipPos(state, world, pos, 7, false);
+            if (tipPos != null) {
+                var tipState = world.getBlockState(tipPos);
 
-                if (tipPos != null) {
-                    var tipState = world.getBlockState(tipPos);
+                if (this.canDrip(tipState) && this.canGrow(tipState, world, tipPos)) {
+                    if (random.nextBoolean())
+                        this.tryGrow(world, tipPos, Direction.DOWN);
+                    else {
+                        var mutable = tipPos.mutableCopy();
 
-                    if (this.canDrip(tipState) && this.canGrow(tipState, world, tipPos)) {
-                        if (random.nextBoolean())
-                            this.tryGrow(world, tipPos, Direction.DOWN);
-                        else {
-                            var mutable = tipPos.mutableCopy();
+                        for(int i = 0; i < 10; ++i) {
+                            mutable.move(DOWN);
+                            var downState =  world.getBlockState(mutable);
 
-                            for(int i = 0; i < 10; ++i) {
-                                mutable.move(DOWN);
-                                var downState =  world.getBlockState(mutable);
+                            if (!downState.getFluidState().isEmpty())
+                                return;
 
-                                if (!downState.getFluidState().isEmpty())
-                                    return;
-
-                                if (this.isTipPointing(downState, UP) && this.canGrow(downState, world, mutable))
-                                    this.tryGrow(world, mutable, UP);
-                                else if (this.canPlaceTowards(world, mutable, UP) && !world.isWater(mutable.down()))
-                                    this.tryGrow(world, mutable.down(), UP);
-                            }
-
+                            if (this.isTipPointing(downState, UP) && this.canGrow(downState, world, mutable))
+                                this.tryGrow(world, mutable, UP);
+                            else if (this.canPlaceTowards(world, mutable, UP) && !world.isWater(mutable.down()))
+                                this.tryGrow(world, mutable.down(), UP);
                         }
 
                     }
@@ -200,49 +196,21 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
 
     protected boolean canGrow(BlockState state, ServerWorld world, BlockPos pos) {
         var direction = state.get(VERTICAL_DIRECTION);
-        var blockPos = pos.offset(direction);
-        var blockState = world.getBlockState(blockPos);
+        var offset = pos.offset(direction);
+        var offsetState = world.getBlockState(offset);
 
-        if (!blockState.getFluidState().isEmpty())
+        if (!offsetState.getFluidState().isEmpty())
             return false;
 
-        return blockState.isAir() || isTipPointing(blockState, direction.getOpposite());
-    }
-
-    protected void tryGrow(ServerWorld world, BlockPos pos, Direction direction) {
-        var offset = pos.offset(direction);
-        var state = world.getBlockState(offset);
         var opposite = direction.getOpposite();
 
-        if (this.isTipPointing(state, opposite)) {
-            var vertical = state.get(VERTICAL_DIRECTION);
+        if(this.isTipPointing(offsetState, opposite))
+            return true;
 
-            var mergedDown = vertical == UP ? pos.up() : pos;
-            var mergedUp = vertical == DOWN ? pos.down() : pos;
+        if(this.isPointing(offsetState, opposite) && offsetState.get(TWISTED) == TIP_MERGE)
+            return true;
 
-            this.place(world, mergedDown, DOWN, TIP_MERGE);
-            this.place(world, mergedUp, UP, TIP_MERGE);
-
-        } else if (state.isAir() || state.isOf(Blocks.WATER))
-            place(world, offset, direction, TIP);
-
-    }
-
-    protected void place(WorldAccess world, BlockPos pos, Direction direction, Twisted twisted) {
-        var blockState = this.getDefaultState().with(VERTICAL_DIRECTION, direction).with(TWISTED, twisted).with(WATERLOGGED, world.getFluidState(pos).getFluid() == WATER);
-
-        world.setBlockState(pos, blockState, Block.NOTIFY_ALL);
-    }
-
-    protected void createParticle(World world, BlockPos pos, BlockState state, Fluid fluid) {
-        var vec3d = state.getModelOffset(world, pos);
-        var e = (double)pos.getX() + 0.5D + vec3d.x;
-        var f = pos.getY() - 0.0625D;
-        var g = (double)pos.getZ() + 0.5D + vec3d.z;
-        var fluid2 = fluid == EMPTY ? world.getDimension().isUltrawarm() ? LAVA : WATER : fluid;
-        var particleEffect = fluid2.isIn(FluidTags.LAVA) ? DRIPPING_DRIPSTONE_LAVA : DRIPPING_DRIPSTONE_WATER;
-
-        world.addParticle(particleEffect, e, f, g, 0, 0, 0);
+        return offsetState.isAir();
     }
 
     protected Twisted getTwisted(WorldView world, BlockPos pos, Direction direction, boolean tryMerge) {
@@ -267,18 +235,35 @@ public class TwistedBlueStorcerack extends AbstractPointedDripstone {
         return FRUSTUM;
     }
 
-    protected boolean canDrip(BlockState state) {
-        return this.isPointingDown(state) && state.get(TWISTED) == TIP && !state.get(WATERLOGGED);
+    protected void tryGrow(ServerWorld world, BlockPos pos, Direction direction) {
+        var offset = pos.offset(direction);
+        var state = world.getBlockState(offset);
+        var opposite = direction.getOpposite();
+
+        if (this.isPointing(state, opposite)) {
+            var twisted = state.get(TWISTED);
+            var vertical = state.get(VERTICAL_DIRECTION);
+
+            var mergedDown = vertical == UP ? offset.up() : offset;
+            var mergedUp = vertical == DOWN ? offset.down() : offset;
+
+            if(twisted == TIP_MERGE) {
+                this.place(world, mergedDown, DOWN, OPAL_ORE_MERGE);
+                this.place(world, mergedUp, UP, OPAL_ORE_MERGE);
+            } else if(twisted == TIP){
+                this.place(world, mergedDown, DOWN, TIP_MERGE);
+                this.place(world, mergedUp, UP, TIP_MERGE);
+            }
+
+        } else if (state.isAir() || state.isOf(Blocks.WATER))
+            place(world, offset, direction, TIP);
+
     }
 
-    @Override
-    protected boolean isTip(BlockState state, boolean allowMerged) {
-        if (!state.isOf(this))
-            return false;
+    protected void place(WorldAccess world, BlockPos pos, Direction direction, Twisted twisted) {
+        var blockState = this.getDefaultState().with(VERTICAL_DIRECTION, direction).with(TWISTED, twisted).with(WATERLOGGED, world.getFluidState(pos).getFluid() == WATER);
 
-        var thickness = state.get(TWISTED);
-
-        return thickness == TIP || allowMerged && thickness == TIP_MERGE;
+        world.setBlockState(pos, blockState, Block.NOTIFY_ALL);
     }
 
 }
