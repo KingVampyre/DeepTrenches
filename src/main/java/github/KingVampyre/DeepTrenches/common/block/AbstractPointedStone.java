@@ -12,6 +12,7 @@ import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -186,7 +187,11 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
     protected abstract boolean isTip(BlockState state, boolean allowMerged);
 
     protected boolean canDrip(BlockState state) {
-        return this.isTipPointing(state, DOWN) && !state.get(WATERLOGGED);
+        return this.canDrip(state, false);
+    }
+
+    protected boolean canDrip(BlockState state, boolean allowMerge) {
+        return this.isTipPointing(state, DOWN, allowMerge) && !state.get(WATERLOGGED);
     }
 
     protected boolean canPlaceTowards(WorldView world, BlockPos pos, Direction direction) {
@@ -238,7 +243,7 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
         return DTUtils.search(world, pos, DOWN, AbstractBlockState::isAir, state -> state.getBlock() instanceof AbstractCauldronBlock cauldron && cauldron.canBeFilledByDripstone(fluid), 11).orElse(null);
     }
 
-    protected Fluid getFlowableFluid(World world, BlockPos pos, BlockState state) {
+    public Fluid getFlowableFluid(World world, BlockPos pos, BlockState state) {
         var direction = state.get(VERTICAL_DIRECTION);
 
         return DTUtils.search(world, pos, direction.getOpposite(),
@@ -268,7 +273,11 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
     }
 
     protected boolean isTipPointing(BlockState state, Direction direction) {
-        return this.isTip(state, false) && state.get(VERTICAL_DIRECTION) == direction;
+        return this.isTipPointing(state, direction, false);
+    }
+
+    protected boolean isTipPointing(BlockState state, Direction direction, boolean allowMerged) {
+        return this.isTip(state, allowMerged) && state.get(VERTICAL_DIRECTION) == direction;
     }
 
     protected void scheduleFall(BlockState state, WorldAccess world, BlockPos pos) {
@@ -278,6 +287,11 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
         if (tipPos != null)
             DTUtils.findAll(world, tipPos.down(), UP, this::isPointingDown, MAX_VALUE).forEach(p -> scheduler.schedule(p, this, 2));
 
+    }
+
+    @Nullable
+    public static BlockPos getDripPos(World world, BlockPos pos) {
+        return DTUtils.search(world, pos, UP, BlockState::isAir, state -> state.getBlock() instanceof AbstractPointedStone block && block.canDrip(state), 11).orElse(null);
     }
 
 }

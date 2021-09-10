@@ -160,36 +160,43 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         dripTick(state, world, pos, random.nextFloat());
 
         if(random.nextFloat() < 0.011377778F) {
-            var tipPos = this.getTipPos(state, world, pos, 7, false);
+            var tipPos = this.getTipPos(state, world, pos, 7, true);
 
             if (tipPos != null) {
                 var tipState = world.getBlockState(tipPos);
 
-                if (this.canDrip(tipState) && this.canGrow(tipState, world, tipPos)) {
-                    if (random.nextBoolean())
-                        this.tryGrow(world, tipPos, Direction.DOWN);
-                    else {
-                        var mutable = tipPos.mutableCopy();
+                if(this.canGrow(tipState, world, tipPos)) {
 
-                        for(int i = 0; i < 10; ++i) {
-                            mutable.move(DOWN);
-                            var downState =  world.getBlockState(mutable);
-
-                            if (!downState.getFluidState().isEmpty())
-                                return;
-
-                            if (this.isTipPointing(downState, UP) && this.canGrow(downState, world, mutable))
-                                this.tryGrow(world, mutable, UP);
-                            else if (this.canPlaceTowards(world, mutable, UP) && !world.isWater(mutable.down()))
-                                this.tryGrow(world, mutable.down(), UP);
-                        }
-
-                    }
+                    if (this.canDrip(tipState)) {
+                        if (random.nextBoolean())
+                            this.tryGrow(world, tipPos, DOWN);
+                        else
+                            this.tryGrowStalagmite(world, tipPos);
+                    } else
+                        this.tryGrow(world, tipPos, DOWN);
 
                 }
 
             }
 
+        }
+
+    }
+
+    protected void tryGrowStalagmite(ServerWorld world, BlockPos pos) {
+        var mutable = pos.mutableCopy();
+
+        for(int i = 0; i < 10; ++i) {
+            mutable.move(DOWN);
+            var downState =  world.getBlockState(mutable);
+
+            if (!downState.getFluidState().isEmpty())
+                return;
+
+            if (this.isTipPointing(downState, UP) && this.canGrow(downState, world, mutable))
+                this.tryGrow(world, mutable, UP);
+            else if (this.canPlaceTowards(world, mutable, UP) && !world.isWater(mutable.down()))
+                this.tryGrow(world, mutable.down(), UP);
         }
 
     }
@@ -250,7 +257,7 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
             if(twisted == TIP_MERGE) {
                 this.place(world, mergedDown, DOWN, OPAL_ORE_MERGE);
                 this.place(world, mergedUp, UP, OPAL_ORE_MERGE);
-            } else if(twisted == TIP){
+            } else if(twisted == TIP) {
                 this.place(world, mergedDown, DOWN, TIP_MERGE);
                 this.place(world, mergedUp, UP, TIP_MERGE);
             }
@@ -261,9 +268,9 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
     }
 
     protected void place(WorldAccess world, BlockPos pos, Direction direction, Twisted twisted) {
-        var blockState = this.getDefaultState().with(VERTICAL_DIRECTION, direction).with(TWISTED, twisted).with(WATERLOGGED, world.getFluidState(pos).getFluid() == WATER);
+        var state = this.getDefaultState().with(VERTICAL_DIRECTION, direction).with(TWISTED, twisted).with(WATERLOGGED, world.getFluidState(pos).getFluid() == WATER);
 
-        world.setBlockState(pos, blockState, Block.NOTIFY_ALL);
+        world.setBlockState(pos, state, Block.NOTIFY_ALL);
     }
 
 }

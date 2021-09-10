@@ -9,6 +9,7 @@
     "InvokerSpreadableBlock",
     "InvokerTrunkPlacerType",
     "MixinAbstractBlockState",
+    "MixinAbstractCauldronBlock",
     "MixinBrewingRecipeRegistry",
     "MixinEnchantmentHelper",
     "MixinEntity",
