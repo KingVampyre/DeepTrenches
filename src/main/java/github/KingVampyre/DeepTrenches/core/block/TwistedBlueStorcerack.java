@@ -125,37 +125,41 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
             return state;
 
         var scheduler = world.getBlockTickScheduler();
-        var verticalDirection = state.get(VERTICAL_DIRECTION);
 
-        if (scheduler.isScheduled(pos, this) && verticalDirection == DOWN)
+        if (scheduler.isScheduled(pos, this) && this.isPointing(state, DOWN))
             return state;
 
         var canPlaceAt = this.canPlaceAt(state, world, pos);
 
-        if(!canPlaceAt && verticalDirection == UP) {
+        if(!canPlaceAt && this.isPointing(state, UP)) {
             scheduler.schedule(pos, this, 1);
             return state;
         }
 
-        if(!canPlaceAt && verticalDirection == DOWN) {
+        if(!canPlaceAt && this.isPointing(state, DOWN)) {
             this.scheduleFall(state, world, pos);
             return state;
         }
 
+        var verticalDirection = state.get(VERTICAL_DIRECTION);
         var aheadPos = pos.offset(verticalDirection);
         var aheadState = world.getBlockState(aheadPos);
         var opposite = verticalDirection.getOpposite();
 
         if(!aheadState.isOf(this)) {
 
-            if(aheadState.isSideSolidFullSquare(world, aheadPos, opposite))
-                return state.with(TWISTED, TIP_MERGE);
+            if (aheadState.isSideSolidFullSquare(world, aheadPos, opposite))
+                return state.with(TWISTED, TIP_MERGE).with(VERTICAL_DIRECTION, opposite);
             else
                 return state.with(TWISTED, TIP);
         }
 
-        if(aheadState.get(TWISTED) == TIP_MERGE && this.isTip(state, false))
-            return state.with(TWISTED, TIP_MERGE);
+        var twisted = state.get(TWISTED);
+        var aheadTwisted = aheadState.get(TWISTED);
+        var aheadDirection = aheadState.get(VERTICAL_DIRECTION);
+
+        if(aheadTwisted == TIP_MERGE && this.isTip(state, false))
+            return state.with(TWISTED, aheadDirection == verticalDirection ? FRUSTUM : TIP_MERGE);
 
         if(this.isTip(state, false) && this.isTipPointing(aheadState, opposite))
             return state.with(TWISTED, TIP_MERGE);
@@ -163,20 +167,31 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         if(this.isTipPointing(aheadState, verticalDirection))
             return state.with(TWISTED, FRUSTUM);
 
-        if(this.isPointing(aheadState, verticalDirection) && aheadState.get(TWISTED) == FRUSTUM)
+        if(this.isPointing(aheadState, verticalDirection) && aheadTwisted == FRUSTUM)
             return state.with(TWISTED, MIDDLE);
 
         var offset = pos.offset(opposite);
         var offsetState = world.getBlockState(offset);
 
         if(offsetState.isSideSolidFullSquare(world, offset, opposite)) {
-            var twisted = aheadState.get(TWISTED);
 
-            if(this.isTipPointing(aheadState, opposite, true))
+            if(twisted == FRUSTUM && aheadTwisted == TIP_MERGE && verticalDirection == aheadDirection)
+                return state;
+
+            if(twisted == FRUSTUM && aheadTwisted == OPAL_ORE_MERGE && verticalDirection == aheadDirection)
+                return state;
+
+            if(aheadTwisted == TIP_MERGE && verticalDirection != aheadDirection)
+                return state.with(TWISTED, TIP_MERGE);
+            else if(aheadTwisted == OPAL_ORE_MERGE && verticalDirection != aheadDirection)
+                return state.with(TWISTED, OPAL_ORE_MERGE);
+            else if(this.isTipPointing(aheadState, opposite))
                 return state.with(TWISTED, FRUSTUM);
-            else if(twisted == FRUSTUM && this.isPointing(aheadState, opposite))
+            else if(aheadTwisted == FRUSTUM && this.isPointing(aheadState, opposite))
                 return state.with(TWISTED, MIDDLE);
-            else if(twisted == TIP_MERGE && this.isPointing(aheadState, opposite))
+            else if(aheadTwisted == OPAL_ORE_MERGE && twisted == BASE)
+                return state.with(TWISTED, FRUSTUM);
+            else if(aheadTwisted == TIP_MERGE && twisted == BASE)
                 return state.with(TWISTED, FRUSTUM);
             else
                 return state.with(TWISTED, BASE);
