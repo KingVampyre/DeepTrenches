@@ -9,8 +9,6 @@ import github.KingVampyre.DeepTrenches.core.init.*;
 import github.KingVampyre.DeepTrenches.core.mixin.AccessorGeneratorType;
 import github.KingVampyre.DeepTrenches.core.world.gen.chunk.TheDreamChunkGenerator;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
-import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
 import net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.GeckoLib;
@@ -38,10 +36,6 @@ public class  DeepTrenches implements ModInitializer {
 		/* BIOME */
 		Registry.register(BIOME, "deep_trenches:almond_forest", DTBiomes.ALMOND_FOREST);
 		Registry.register(BIOME, "deep_trenches:almond_plus_forest", DTBiomes.ALMOND_PLUS_FOREST);
-
-		/* OVERWORLD BIOME */
-		OverworldBiomes.addContinentalBiome(DTBiomes.ALMOND_FOREST_KEY, OverworldClimate.TEMPERATE, 1);
-		OverworldBiomes.addContinentalBiome(DTBiomes.ALMOND_PLUS_FOREST_KEY, OverworldClimate.TEMPERATE, 1);
 
 		/* BLOCK ENTITY */
 		Registry.register(BLOCK_ENTITY_TYPE, "deep_trenches:sign", DTBlockEntityTypes.SIGN);
