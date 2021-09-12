@@ -30,6 +30,7 @@ import java.util.function.BiFunction;
 import static github.KingVampyre.DeepTrenches.core.block.enums.Twisted.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTProperties.TWISTED;
 import static net.minecraft.enchantment.Enchantments.SILK_TOUCH;
+import static net.minecraft.fluid.Fluids.EMPTY;
 import static net.minecraft.fluid.Fluids.WATER;
 import static net.minecraft.particle.ParticleTypes.DRIPPING_DRIPSTONE_LAVA;
 import static net.minecraft.particle.ParticleTypes.DRIPPING_DRIPSTONE_WATER;
@@ -149,7 +150,7 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         if(!aheadState.isOf(this)) {
 
             if (aheadState.isSideSolidFullSquare(world, aheadPos, opposite))
-                return state.with(TWISTED, TIP_MERGE).with(VERTICAL_DIRECTION, opposite);
+                return state.with(TWISTED, TIP_MERGE);
             else
                 return state.with(TWISTED, TIP);
         }
@@ -159,7 +160,7 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         var aheadDirection = aheadState.get(VERTICAL_DIRECTION);
 
         if(aheadTwisted == TIP_MERGE && this.isTip(state, false))
-            return state.with(TWISTED, aheadDirection == verticalDirection ? FRUSTUM : TIP_MERGE);
+            return state.with(TWISTED, verticalDirection == aheadDirection ? FRUSTUM : TIP_MERGE);
 
         if(this.isTip(state, false) && this.isTipPointing(aheadState, opposite))
             return state.with(TWISTED, TIP_MERGE);
@@ -167,7 +168,7 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         if(this.isTipPointing(aheadState, verticalDirection))
             return state.with(TWISTED, FRUSTUM);
 
-        if(this.isPointing(aheadState, verticalDirection) && aheadTwisted == FRUSTUM)
+        if(verticalDirection == aheadDirection && aheadTwisted == FRUSTUM)
             return state.with(TWISTED, MIDDLE);
 
         var offset = pos.offset(opposite);
@@ -175,26 +176,16 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
 
         if(offsetState.isSideSolidFullSquare(world, offset, opposite)) {
 
-            if(twisted == FRUSTUM && aheadTwisted == TIP_MERGE && verticalDirection == aheadDirection)
+            if(twisted == FRUSTUM && aheadTwisted.isMerged() && verticalDirection == aheadDirection)
                 return state;
-
-            if(twisted == FRUSTUM && aheadTwisted == OPAL_ORE_MERGE && verticalDirection == aheadDirection)
-                return state;
-
-            if(aheadTwisted == TIP_MERGE && verticalDirection != aheadDirection)
-                return state.with(TWISTED, TIP_MERGE);
-            else if(aheadTwisted == OPAL_ORE_MERGE && verticalDirection != aheadDirection)
-                return state.with(TWISTED, OPAL_ORE_MERGE);
-            else if(this.isTipPointing(aheadState, opposite))
+            else if(aheadTwisted.isMerged() && verticalDirection != aheadDirection)
+                return state.with(TWISTED, aheadTwisted);
+            else if(aheadTwisted.isMerged() && twisted == BASE || this.isTipPointing(aheadState, opposite))
                 return state.with(TWISTED, FRUSTUM);
-            else if(aheadTwisted == FRUSTUM && this.isPointing(aheadState, opposite))
+            else if(aheadTwisted == FRUSTUM)
                 return state.with(TWISTED, MIDDLE);
-            else if(aheadTwisted == OPAL_ORE_MERGE && twisted == BASE)
-                return state.with(TWISTED, FRUSTUM);
-            else if(aheadTwisted == TIP_MERGE && twisted == BASE)
-                return state.with(TWISTED, FRUSTUM);
-            else
-                return state.with(TWISTED, BASE);
+
+            return state.with(TWISTED, BASE);
         }
 
         return state;
@@ -283,15 +274,21 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         if (!offsetState.getFluidState().isEmpty())
             return false;
 
-        var opposite = direction.getOpposite();
+        var fluid = this.getFlowableFluid(world, pos, state);
 
-        if(this.isTipPointing(offsetState, opposite))
-            return true;
+        if(fluid != EMPTY) {
+            var opposite = direction.getOpposite();
 
-        if(this.isPointing(offsetState, opposite) && offsetState.get(TWISTED) == TIP_MERGE)
-            return true;
+            if(this.isTipPointing(offsetState, opposite))
+                return true;
 
-        return offsetState.isAir();
+            if(this.isPointing(offsetState, opposite) && offsetState.get(TWISTED) == TIP_MERGE)
+                return true;
+
+            return offsetState.isAir();
+        }
+
+        return false;
     }
 
     protected void tryGrow(ServerWorld world, BlockPos pos, Direction direction) {

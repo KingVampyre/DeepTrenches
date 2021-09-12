@@ -16,4 +16,8 @@ public enum Twisted implements StringIdentifiable {
         return this.name().toLowerCase();
     }
 
+    public boolean isMerged() {
+        return this == OPAL_ORE_MERGE || this == TIP_MERGE;
+    }
+
 }

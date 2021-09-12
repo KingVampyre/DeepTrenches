@@ -252,6 +252,7 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
                         upState -> !upState.isOf(this), 11)
                 .map(BlockPos::up)
                 .map(world::getFluidState)
+                .filter(FluidState::isStill)
                 .map(FluidState::getFluid)
                 .filter(FlowableFluid.class::isInstance)
                 .orElse(EMPTY);
