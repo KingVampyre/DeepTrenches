@@ -2218,6 +2218,10 @@ public class DTBlocks {
 		return new MushroomPlantBlock(Settings.copy(BROWN_MUSHROOM), () -> feature);
 	}
 
+	protected static Block createOreBlock(Settings settings, int min, int max) {
+		return new OreBlock(settings, UniformIntProvider.create(min, max));
+	}
+
 	protected static Block createStorceanFlower(StatusEffect effect, int effectDuration) {
 		return new StorceanFlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP));
 	}
