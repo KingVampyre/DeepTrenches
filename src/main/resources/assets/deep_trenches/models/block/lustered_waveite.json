@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "deep_trenches:block/lustred_waveite"
+        "all": "deep_trenches:block/lustered_waveite"
     }
 }

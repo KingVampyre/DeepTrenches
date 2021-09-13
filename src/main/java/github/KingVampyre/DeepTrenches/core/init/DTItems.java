@@ -2206,10 +2206,10 @@ public class DTItems {
 		registerBlockItem("deep_trenches:limestone_sphene_ore", LIMESTONE_SPHENE_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:limestone_spinel_ore", LIMESTONE_SPINEL_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:limestone_sugilite_ore", LIMESTONE_SUGILITE_ORE, MINERALOGY);
-		registerBlockItem("deep_trenches:lustred_waveite", LUSTRED_WAVEITE, MINERALOGY);
 
-		registerBlockItem("deep_trenches:lustred_waveite_sapphire_ore", LUSTRED_WAVEITE_SAPPHIRE_ORE, MINERALOGY);
-		registerBlockItem("deep_trenches:lustred_waveite_tanzanite_ore", LUSTRED_WAVEITE_TANZANITE_ORE, MINERALOGY);
+		registerBlockItem("deep_trenches:lustered_waveite", LUSTERED_WAVEITE, MINERALOGY);
+		registerBlockItem("deep_trenches:lustered_waveite_sapphire_ore", LUSTERED_WAVEITE_SAPPHIRE_ORE, MINERALOGY);
+		registerBlockItem("deep_trenches:lustered_waveite_tanzanite_ore", LUSTERED_WAVEITE_TANZANITE_ORE, MINERALOGY);
 
 		registerBlockItem("deep_trenches:marble_diamond_ore", MARBLE_DIAMOND_ORE, MINERALOGY);
 

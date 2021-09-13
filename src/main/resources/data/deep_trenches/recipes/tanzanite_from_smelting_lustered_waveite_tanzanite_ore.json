@@ -1,8 +1,8 @@
 {
-    "type": "minecraft:blasting",
+    "type": "minecraft:smelting",
     "group": "deep_trenches:tanzanite",
     "ingredient": {
-        "item": "deep_trenches:lustred_waveite_tanzanite_ore"
+        "item": "deep_trenches:lustered_waveite_tanzanite_ore"
     },
     "result": "deep_trenches:tanzanite",
     "experience": 0.7,

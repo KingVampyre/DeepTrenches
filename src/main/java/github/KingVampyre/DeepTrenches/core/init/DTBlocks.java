@@ -361,9 +361,9 @@ public class DTBlocks {
 	public static final Block LIMESTONE_SPINEL_ORE;
 	public static final Block LIMESTONE_SUGILITE_ORE;
 
-	public static final Block LUSTRED_WAVEITE;
-	public static final Block LUSTRED_WAVEITE_SAPPHIRE_ORE;
-	public static final Block LUSTRED_WAVEITE_TANZANITE_ORE;
+	public static final Block LUSTERED_WAVEITE;
+	public static final Block LUSTERED_WAVEITE_SAPPHIRE_ORE;
+	public static final Block LUSTERED_WAVEITE_TANZANITE_ORE;
 
 	public static final Block MARBLE_DIAMOND_ORE;
 
@@ -2668,9 +2668,9 @@ public class DTBlocks {
 		LIMESTONE_SPINEL_ORE = createCopy(COAL_ORE);
 		LIMESTONE_SUGILITE_ORE = createCopy(COAL_ORE);
 
-		LUSTRED_WAVEITE = createCopy(COAL_ORE);
-		LUSTRED_WAVEITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		LUSTRED_WAVEITE_TANZANITE_ORE = createCopy(COAL_ORE);
+		LUSTERED_WAVEITE = createCopy(COAL_ORE);
+		LUSTERED_WAVEITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		LUSTERED_WAVEITE_TANZANITE_ORE = createCopy(COAL_ORE);
 
 		MARBLE_DIAMOND_ORE = createCopy(COAL_ORE);
 
@@ -4755,10 +4755,9 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:limestone_spinel_ore", LIMESTONE_SPINEL_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_sugilite_ore", LIMESTONE_SUGILITE_ORE);
 
-		// TODO MOVE
-		Registry.register(BLOCK, "deep_trenches:lustred_waveite", LUSTRED_WAVEITE);
-		Registry.register(BLOCK, "deep_trenches:lustred_waveite_sapphire_ore", LUSTRED_WAVEITE_SAPPHIRE_ORE);
-		Registry.register(BLOCK, "deep_trenches:lustred_waveite_tanzanite_ore", LUSTRED_WAVEITE_TANZANITE_ORE);
+		Registry.register(BLOCK, "deep_trenches:lustered_waveite", LUSTERED_WAVEITE);
+		Registry.register(BLOCK, "deep_trenches:lustered_waveite_sapphire_ore", LUSTERED_WAVEITE_SAPPHIRE_ORE);
+		Registry.register(BLOCK, "deep_trenches:lustered_waveite_tanzanite_ore", LUSTERED_WAVEITE_TANZANITE_ORE);
 
 		Registry.register(BLOCK, "deep_trenches:marble_diamond_ore", MARBLE_DIAMOND_ORE);
 
