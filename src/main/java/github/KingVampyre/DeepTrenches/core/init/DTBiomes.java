@@ -3,7 +3,6 @@ package github.KingVampyre.DeepTrenches.core.init;
 import github.KingVampyre.DeepTrenches.core.world.biome.BiomeCreator;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
 
