@@ -16,6 +16,8 @@ import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.heightprovider.BiasedToBottomHeightProvider;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.treedecorator.BeehiveTreeDecorator;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
@@ -47,14 +49,17 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND_VERY_RARE_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND_REGULAR_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND_MORE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND_HALF_BEEHIVES;
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_ALMOND_VERY_RARE_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_ALMOND_REGULAR_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_ALMOND_MORE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_ALMOND_HALF_BEEHIVES;
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ALMOND_VERY_RARE_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ALMOND_REGULAR_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ALMOND_MORE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ALMOND_HALF_BEEHIVES;
 
     public static final ConfiguredFeature<?, ?> ALMOND_FOREST_FLOWER;
     public static final ConfiguredFeature<?, ?> ALMOND_FOREST_FLOWER_VEGETATION;
@@ -69,99 +74,49 @@ public class DTConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> ORE_CALCITE;
 
+    protected static ConfiguredFeature<TreeFeatureConfig, ?> createTree(BlockStateProvider trunk, BlockStateProvider foliage, BlockStateProvider sapling) {
+        return Feature.TREE.configure(new TreeFeatureConfig.Builder(trunk, new StraightTrunkPlacer(4, 3, 0), foliage, sapling, new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3), new TwoLayersFeatureSize(1, 0, 1)).ignoreVines().build());
+    }
+
+    protected static ConfiguredFeature<TreeFeatureConfig, ?> createFancyTree(BlockStateProvider trunk, BlockStateProvider foliage, BlockStateProvider sapling) {
+        return Feature.TREE.configure(new TreeFeatureConfig.Builder(trunk, new LargeOakTrunkPlacer(5, 11, 0), foliage, sapling, new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).ignoreVines().build());
+    }
+
+    protected static ConfiguredFeature<TreeFeatureConfig, ?> createGreatTree(BlockStateProvider trunk, BlockStateProvider foliage, BlockStateProvider sapling) {
+        return Feature.TREE.configure(new TreeFeatureConfig.Builder(trunk, new GreatTrunkPlacer(12, 7, 0), foliage, sapling, new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).ignoreVines().build());
+    }
+
+    protected static ConfiguredFeature<TreeFeatureConfig, ?> createBeehiveTree(ConfiguredFeature<TreeFeatureConfig, ?> tree, BeehiveTreeDecorator beehiveTreeDecorator) {
+        return Feature.TREE.configure(tree.getConfig().setTreeDecorators(ImmutableList.of(beehiveTreeDecorator)));
+    }
+
     static {
-        ALMOND = Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                ALMOND_TRUNK_PROVIDER,
-                new StraightTrunkPlacer(4, 3, 0),
-                ALMOND_FOLIAGE_PROVIDER,
-                ALMOND_SAPLING_PROVIDER,
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)
-        ).ignoreVines().build());
+        ALMOND = createTree(ALMOND_TRUNK_PROVIDER, ALMOND_FOLIAGE_PROVIDER, ALMOND_SAPLING_PROVIDER);
+        CHERRY = createTree(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER, CHERRY_SAPLING_PROVIDER);
+        PIN_CHERRY = createTree(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER, PIN_CHERRY_SAPLING_PROVIDER);
 
-        CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                CHERRY_TRUNK_PROVIDER,
-                new StraightTrunkPlacer(4, 3, 0),
-                CHERRY_FOLIAGE_PROVIDER,
-                CHERRY_SAPLING_PROVIDER,
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)
-        ).ignoreVines().build());
+        FANCY_ALMOND = createFancyTree(ALMOND_TRUNK_PROVIDER, ALMOND_FOLIAGE_PROVIDER, ALMOND_SAPLING_PROVIDER);
+        FANCY_CHERRY = createFancyTree(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER, CHERRY_SAPLING_PROVIDER);
+        FANCY_PIN_CHERRY = createFancyTree(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER, PIN_CHERRY_SAPLING_PROVIDER);
 
-        PIN_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                PIN_CHERRY_TRUNK_PROVIDER,
-                new StraightTrunkPlacer(4, 3, 0),
-                PIN_CHERRY_FOLIAGE_PROVIDER,
-                PIN_CHERRY_SAPLING_PROVIDER,
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)
-        ).ignoreVines().build());
+        GREAT_ALMOND = createGreatTree(ALMOND_TRUNK_PROVIDER, ALMOND_FOLIAGE_PROVIDER, ALMOND_SAPLING_PROVIDER);
+        GREAT_CHERRY = createGreatTree(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER, CHERRY_SAPLING_PROVIDER);
+        GREAT_PIN_CHERRY = createGreatTree(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER, PIN_CHERRY_SAPLING_PROVIDER);
 
-        FANCY_ALMOND = Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                ALMOND_TRUNK_PROVIDER,
-                new LargeOakTrunkPlacer(5, 11, 0),
-                ALMOND_FOLIAGE_PROVIDER,
-                ALMOND_SAPLING_PROVIDER,
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
-                new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).ignoreVines().build());
+        ALMOND_VERY_RARE_BEEHIVES = createBeehiveTree(ALMOND, VERY_RARE_BEEHIVES_TREES);
+        ALMOND_REGULAR_BEEHIVES = createBeehiveTree(ALMOND, REGULAR_BEEHIVES_TREES);
+        ALMOND_MORE_BEEHIVES = createBeehiveTree(ALMOND, MORE_BEEHIVES_TREES);
+        ALMOND_HALF_BEEHIVES = createBeehiveTree(ALMOND, HALF_BEEHIVES_TREES);
 
-        FANCY_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                CHERRY_TRUNK_PROVIDER,
-                new LargeOakTrunkPlacer(5, 11, 0),
-                CHERRY_FOLIAGE_PROVIDER,
-                CHERRY_SAPLING_PROVIDER,
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
-                new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).ignoreVines().build());
+        FANCY_ALMOND_VERY_RARE_BEEHIVES = createBeehiveTree(FANCY_ALMOND, VERY_RARE_BEEHIVES_TREES);
+        FANCY_ALMOND_REGULAR_BEEHIVES = createBeehiveTree(FANCY_ALMOND, REGULAR_BEEHIVES_TREES);
+        FANCY_ALMOND_MORE_BEEHIVES = createBeehiveTree(FANCY_ALMOND, MORE_BEEHIVES_TREES);
+        FANCY_ALMOND_HALF_BEEHIVES = createBeehiveTree(FANCY_ALMOND, HALF_BEEHIVES_TREES);
 
-        FANCY_PIN_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                PIN_CHERRY_TRUNK_PROVIDER,
-                new LargeOakTrunkPlacer(5, 11, 0),
-                PIN_CHERRY_FOLIAGE_PROVIDER,
-                PIN_CHERRY_SAPLING_PROVIDER,
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
-                new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).ignoreVines().build());
-
-        GREAT_ALMOND = Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                ALMOND_TRUNK_PROVIDER,
-                new GreatTrunkPlacer(12, 7, 0),
-                ALMOND_FOLIAGE_PROVIDER,
-                ALMOND_SAPLING_PROVIDER,
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4),
-                new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).ignoreVines().build());
-
-        GREAT_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                CHERRY_TRUNK_PROVIDER,
-                new GreatTrunkPlacer(12, 7, 0),
-                CHERRY_FOLIAGE_PROVIDER,
-                CHERRY_SAPLING_PROVIDER,
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4),
-                new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).ignoreVines().build());
-
-        GREAT_PIN_CHERRY = Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                PIN_CHERRY_TRUNK_PROVIDER,
-                new GreatTrunkPlacer(12, 7, 0),
-                PIN_CHERRY_FOLIAGE_PROVIDER,
-                PIN_CHERRY_SAPLING_PROVIDER,
-                new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4),
-                new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).ignoreVines().build());
-
-        ALMOND_VERY_RARE_BEEHIVES = Feature.TREE.configure(ALMOND.getConfig().setTreeDecorators(ImmutableList.of(VERY_RARE_BEEHIVES_TREES)));
-        ALMOND_REGULAR_BEEHIVES = Feature.TREE.configure(ALMOND.getConfig().setTreeDecorators(ImmutableList.of(REGULAR_BEEHIVES_TREES)));
-        ALMOND_MORE_BEEHIVES = Feature.TREE.configure(ALMOND.getConfig().setTreeDecorators(ImmutableList.of(MORE_BEEHIVES_TREES)));
-
-        FANCY_ALMOND_VERY_RARE_BEEHIVES = Feature.TREE.configure(FANCY_ALMOND.getConfig().setTreeDecorators(ImmutableList.of(VERY_RARE_BEEHIVES_TREES)));
-        FANCY_ALMOND_REGULAR_BEEHIVES = Feature.TREE.configure(FANCY_ALMOND.getConfig().setTreeDecorators(ImmutableList.of(REGULAR_BEEHIVES_TREES)));
-        FANCY_ALMOND_MORE_BEEHIVES = Feature.TREE.configure(FANCY_ALMOND.getConfig().setTreeDecorators(ImmutableList.of(MORE_BEEHIVES_TREES)));
-
-        GREAT_ALMOND_VERY_RARE_BEEHIVES = Feature.TREE.configure(GREAT_ALMOND.getConfig().setTreeDecorators(ImmutableList.of(VERY_RARE_BEEHIVES_TREES)));
-        GREAT_ALMOND_REGULAR_BEEHIVES = Feature.TREE.configure(GREAT_ALMOND.getConfig().setTreeDecorators(ImmutableList.of(REGULAR_BEEHIVES_TREES)));
-        GREAT_ALMOND_MORE_BEEHIVES = Feature.TREE.configure(GREAT_ALMOND.getConfig().setTreeDecorators(ImmutableList.of(MORE_BEEHIVES_TREES)));
+        GREAT_ALMOND_VERY_RARE_BEEHIVES = createBeehiveTree(GREAT_ALMOND, VERY_RARE_BEEHIVES_TREES);
+        GREAT_ALMOND_REGULAR_BEEHIVES = createBeehiveTree(GREAT_ALMOND, REGULAR_BEEHIVES_TREES);
+        GREAT_ALMOND_MORE_BEEHIVES = createBeehiveTree(GREAT_ALMOND, MORE_BEEHIVES_TREES);
+        GREAT_ALMOND_HALF_BEEHIVES = createBeehiveTree(GREAT_ALMOND, HALF_BEEHIVES_TREES);
 
         ALMOND_FOREST_FLOWER = Feature.FLOWER.configure(ALMOND_FOREST_FLOWER_CONFIG)
                 .decorate(SPREAD_32_ABOVE)
@@ -174,8 +129,17 @@ public class DTConfiguredFeatures {
                 .repeat(5);
 
         ALMOND_FOREST_TREE = Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(
-                FANCY_ALMOND_REGULAR_BEEHIVES.withChance(0.35F),
-                GREAT_ALMOND_REGULAR_BEEHIVES.withChance(0.3F)
+                ALMOND_REGULAR_BEEHIVES.withChance(0.25F),
+                ALMOND_MORE_BEEHIVES.withChance(0.20F),
+                ALMOND_HALF_BEEHIVES.withChance(0.15F),
+                FANCY_ALMOND_VERY_RARE_BEEHIVES.withChance(0.25F),
+                FANCY_ALMOND_REGULAR_BEEHIVES.withChance(0.20F),
+                FANCY_ALMOND_MORE_BEEHIVES.withChance(0.15F),
+                FANCY_ALMOND_HALF_BEEHIVES.withChance(0.15F),
+                GREAT_ALMOND_VERY_RARE_BEEHIVES.withChance(0.20F),
+                GREAT_ALMOND_REGULAR_BEEHIVES.withChance(0.15F),
+                GREAT_ALMOND_MORE_BEEHIVES.withChance(0.15F),
+                GREAT_ALMOND_HALF_BEEHIVES.withChance(0.15F)
         ), ALMOND_VERY_RARE_BEEHIVES))
                 .decorate(SQUARE_HEIGHTMAP_OCEAN_FLOOR_NO_WATER)
                 .decorate(COUNT_EXTRA.configure(new CountExtraDecoratorConfig(10, 0.1F, 1)));
@@ -191,20 +155,32 @@ public class DTConfiguredFeatures {
                 .repeat(5);
 
         ALMOND_PLUS_TREE = Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(
+                ALMOND_REGULAR_BEEHIVES.withChance(0.175F),
+                ALMOND_MORE_BEEHIVES.withChance(0.12F),
+                ALMOND_HALF_BEEHIVES.withChance(0.05F),
+                FANCY_ALMOND_VERY_RARE_BEEHIVES.withChance(0.25F),
                 FANCY_ALMOND_REGULAR_BEEHIVES.withChance(0.175F),
-                GREAT_ALMOND_REGULAR_BEEHIVES.withChance(0.15F),
-                ConfiguredFeatures.BIRCH_BEES_002.withChance(0.1F),
+                FANCY_ALMOND_MORE_BEEHIVES.withChance(0.12F),
+                FANCY_ALMOND_HALF_BEEHIVES.withChance(0.05F),
+                GREAT_ALMOND_VERY_RARE_BEEHIVES.withChance(0.25F),
+                GREAT_ALMOND_REGULAR_BEEHIVES.withChance(0.175F),
+                GREAT_ALMOND_MORE_BEEHIVES.withChance(0.12F),
+                GREAT_ALMOND_HALF_BEEHIVES.withChance(0.05F),
+                ConfiguredFeatures.BIRCH_BEES_002.withChance(0.20F),
+                ConfiguredFeatures.BIRCH_BEES_005.withChance(0.20F),
                 ConfiguredFeatures.FANCY_OAK_BEES_002.withChance(0.32F),
-                ConfiguredFeatures.OAK_BEES_002.withChance(0.08F)
+                ConfiguredFeatures.FANCY_OAK_BEES_05.withChance(0.32F),
+                ConfiguredFeatures.OAK_BEES_002.withChance(0.16F),
+                ConfiguredFeatures.OAK_BEES_005.withChance(0.16F)
         ), ALMOND_VERY_RARE_BEEHIVES))
                 .decorate(SQUARE_HEIGHTMAP_OCEAN_FLOOR_NO_WATER)
                 .decorate(COUNT_EXTRA.configure(new CountExtraDecoratorConfig(10, 0.1F, 1)));
 
-        LAKE_CLEAR_WATER = (Feature.LAKE
+        LAKE_CLEAR_WATER = Feature.LAKE
                 .configure(new SingleStateFeatureConfig(CLEAR_WATER.getDefaultState()))
                 .range(BOTTOM_TO_TOP)
                 .spreadHorizontally()
-        ).applyChance(4);
+        .applyChance(4);
 
         SPRING_CLEAR_WATER = Feature.SPRING_FEATURE
                 .configure(new SpringFeatureConfig(DTFluids.CLEAR_WATER.getDefaultState(), true, 4, 1, ImmutableSet.of(Blocks.STONE, Blocks.GRANITE, Blocks.DIORITE, Blocks.ANDESITE)))
@@ -212,10 +188,10 @@ public class DTConfiguredFeatures {
                 .spreadHorizontally()
                 .repeat(50);
 
-        ORE_CALCITE = (Feature.ORE.configure(new OreFeatureConfig(BASE_STONE_OVERWORLD, CALCITE.getDefaultState(), 33))
+        ORE_CALCITE = Feature.ORE.configure(new OreFeatureConfig(BASE_STONE_OVERWORLD, CALCITE.getDefaultState(), 33))
                 .uniformRange(YOffset.fixed(0), YOffset.fixed(79))
                 .spreadHorizontally()
-                .repeat(10));
+                .repeat(10);
     }
 
     public static void initialize() {
@@ -238,14 +214,17 @@ public class DTConfiguredFeatures {
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_very_rare_beehives", ALMOND_VERY_RARE_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_regular_beehives", ALMOND_REGULAR_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_more_beehives", ALMOND_MORE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_half_beehives", ALMOND_HALF_BEEHIVES);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_very_rare_beehives", FANCY_ALMOND_VERY_RARE_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_regular_beehives", FANCY_ALMOND_REGULAR_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_more_beehives", FANCY_ALMOND_MORE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_half_beehives", FANCY_ALMOND_HALF_BEEHIVES);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_very_rare_beehives", GREAT_ALMOND_VERY_RARE_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_regular_beehives", GREAT_ALMOND_REGULAR_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_more_beehives", GREAT_ALMOND_MORE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_half_beehives", GREAT_ALMOND_HALF_BEEHIVES);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower", ALMOND_PLUS_FOREST_FLOWER);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower_vegetation", ALMOND_PLUS_FOREST_FLOWER_VEGETATION);

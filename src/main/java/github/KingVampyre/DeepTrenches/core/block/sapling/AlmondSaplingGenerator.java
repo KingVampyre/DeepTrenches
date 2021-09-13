@@ -7,9 +7,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.ALMOND;
-import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.FANCY_ALMOND;
-import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.GREAT_ALMOND;
+import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.*;
 
 public class AlmondSaplingGenerator extends LargeTreeSaplingGenerator {
 
@@ -22,7 +20,12 @@ public class AlmondSaplingGenerator extends LargeTreeSaplingGenerator {
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean bees) {
-        return random.nextInt(5) == 0 ? FANCY_ALMOND : ALMOND;
+        var fancy = random.nextInt(5) == 0;
+
+        if(bees)
+            return fancy ? FANCY_ALMOND_HALF_BEEHIVES : ALMOND_HALF_BEEHIVES;
+        else
+            return fancy ? FANCY_ALMOND : ALMOND;
     }
 
 }
