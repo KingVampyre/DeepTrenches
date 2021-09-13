@@ -7,6 +7,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.util.math.intprovider.ClampedIntProvider;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
 import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
@@ -24,6 +25,7 @@ import static github.KingVampyre.DeepTrenches.core.init.DTBlockStateProviders.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTFeatureConfigs.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.CLEAR_WATER;
 import static net.minecraft.block.Blocks.CALCITE;
+import static net.minecraft.util.registry.BuiltinRegistries.CONFIGURED_FEATURE;
 import static net.minecraft.world.gen.decorator.Decorator.COUNT_EXTRA;
 import static net.minecraft.world.gen.feature.ConfiguredFeatures.Decorators.*;
 import static net.minecraft.world.gen.feature.OreFeatureConfig.Rules.BASE_STONE_OVERWORLD;
@@ -214,6 +216,45 @@ public class DTConfiguredFeatures {
                 .uniformRange(YOffset.fixed(0), YOffset.fixed(79))
                 .spreadHorizontally()
                 .repeat(10));
+    }
+
+    public static void initialize() {
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond", ALMOND);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry", CHERRY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry", PIN_CHERRY);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond", FANCY_ALMOND);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry", FANCY_CHERRY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry", FANCY_PIN_CHERRY);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond", GREAT_ALMOND);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry", GREAT_CHERRY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry", GREAT_PIN_CHERRY);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower", ALMOND_FOREST_FLOWER);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower_vegetation", ALMOND_FOREST_FLOWER_VEGETATION);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_tree", ALMOND_FOREST_TREE);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_very_rare_beehives", ALMOND_VERY_RARE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_regular_beehives", ALMOND_REGULAR_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_more_beehives", ALMOND_MORE_BEEHIVES);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_very_rare_beehives", FANCY_ALMOND_VERY_RARE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_regular_beehives", FANCY_ALMOND_REGULAR_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond_more_beehives", FANCY_ALMOND_MORE_BEEHIVES);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_very_rare_beehives", GREAT_ALMOND_VERY_RARE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_regular_beehives", GREAT_ALMOND_REGULAR_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_more_beehives", GREAT_ALMOND_MORE_BEEHIVES);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower", ALMOND_PLUS_FOREST_FLOWER);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower_vegetation", ALMOND_PLUS_FOREST_FLOWER_VEGETATION);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_tree", ALMOND_PLUS_TREE);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:lake_clear_water", LAKE_CLEAR_WATER);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:spring_clear_water", SPRING_CLEAR_WATER);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:ore_calcite", ORE_CALCITE);
     }
 
 }

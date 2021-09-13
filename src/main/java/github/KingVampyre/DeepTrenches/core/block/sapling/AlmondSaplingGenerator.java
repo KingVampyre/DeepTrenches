@@ -1,30 +1,28 @@
 package github.KingVampyre.DeepTrenches.core.block.sapling;
 
-import github.Louwind.worldgen.util.RegistryHelper;
 import net.minecraft.block.sapling.LargeTreeSaplingGenerator;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class AlmondSaplingGenerator extends LargeTreeSaplingGenerator {
+import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.ALMOND;
+import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.FANCY_ALMOND;
+import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.GREAT_ALMOND;
 
-    private static final Identifier FANCY_ALMOND = new Identifier("deep_trenches:fancy_almond");
-    private static final Identifier GREAT_ALMOND = new Identifier("deep_trenches:great_almond");
-    private static final Identifier ALMOND = new Identifier("deep_trenches:almond");
+public class AlmondSaplingGenerator extends LargeTreeSaplingGenerator {
 
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> getLargeTreeFeature(Random random) {
-        return RegistryHelper.getTree(GREAT_ALMOND);
+        return GREAT_ALMOND;
     }
 
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean bees) {
-        return RegistryHelper.getTree(random.nextInt(5) == 0 ? FANCY_ALMOND : ALMOND);
+        return random.nextInt(5) == 0 ? FANCY_ALMOND : ALMOND;
     }
 
 }

@@ -60,25 +60,11 @@ processResources {
 	}
 
 	exclude("data/deep_trenches/worldgen")
-	exclude('pack.mcmeta')
 }
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
 	it.options.release = 16
-}
-
-task datapack(type: Zip) {
-	from ("src/main/resources/assets/${project.archivesBaseName}/icon.png") {
-		rename { "pack.png" }
-	}
-	from ('src/main/resources') {
-		exclude 'assets'
-		exclude "*.json"
-		exclude '*.accesswidener'
-	}
-	archiveName "Deep Trenches-${project.mod_version}.zip"
-	destinationDir(file('/build/libs'))
 }
 
 java {
@@ -89,10 +75,6 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}
 	}
-}
-
-jar.configure {
-	dependsOn datapack
 }
 
 publishing {

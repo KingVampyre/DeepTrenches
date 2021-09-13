@@ -20,9 +20,9 @@ public class ThundercloudPlumSaplingGenerator extends SaplingGenerator {
     protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean bees) {
 
         if (random.nextInt(10) == 0)
-            return RegistryHelper.getTree(BIG_THUNDERCLOUD_PLUM);
+            return BIG_THUNDERCLOUD_PLUM);
 
-        return RegistryHelper.getTree(random.nextInt(5) == 0 ? MEDIUM_THUNDERCLOUD_PLUM : SMALL_THUNDERCLOUD_PLUM);
+        return random.nextInt(5) == 0 ? MEDIUM_THUNDERCLOUD_PLUM : SMALL_THUNDERCLOUD_PLUM);
     }
 
 }
