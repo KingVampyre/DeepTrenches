@@ -66,7 +66,7 @@ public class BiomeCreator {
 
         builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_FOREST_FLOWER);
         builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_FOREST_FLOWER_VEGETATION);
-        builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_TREE);
+        builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_FOREST_TREE);
         builder.feature(VEGETAL_DECORATION, BROWN_MUSHROOM_NORMAL);
 
         BiomeEffects biomeEffects = new BiomeEffects.Builder()
