@@ -367,6 +367,7 @@ public class DTBlocks {
 
 	public static final Block MARBLE_DIAMOND_ORE;
 
+	// TODO rename NETHER_ORE
 	public static final Block NETHERRACK_BORON_ORE;
 	public static final Block NETHERRACK_CLINOHUMITE_ORE;
 
@@ -2218,8 +2219,28 @@ public class DTBlocks {
 		return new MushroomPlantBlock(Settings.copy(BROWN_MUSHROOM), () -> feature);
 	}
 
-	protected static Block createOreBlock(Settings settings, int min, int max) {
+	protected static Block createOre(Settings settings, int min, int max) {
 		return new OreBlock(settings, UniformIntProvider.create(min, max));
+	}
+
+	protected static Block createOre(float strength, int min, int max) {
+		return createOre(strength, strength, min, max);
+	}
+
+	protected static Block createOre(float hardness, float resistance, int min, int max) {
+		return createOre(Settings.of(Material.STONE).requiresTool().strength(hardness, resistance), min, max);
+	}
+
+	protected static Block createOre(float strength) {
+		return createOre(strength, strength, 0, 0);
+	}
+	
+	protected static Block createOre(float hardness, float resistance) {
+		return createOre(hardness, resistance, 0, 0);
+	}
+
+	protected static Block createRedstoneOre(float hardness, float resistance) {
+		return createBlock(RedstoneOreBlock::new, Settings.copy(REDSTONE_ORE).strength(hardness, resistance));
 	}
 
 	protected static Block createStorceanFlower(StatusEffect effect, int effectDuration) {
@@ -2496,26 +2517,26 @@ public class DTBlocks {
 		POLISHED_WAVEITE = createCopy(STONE);
 
 		/* ORES */
-		ANDESITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		ANDESITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		ANDESITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		ANDESITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		ANDESITE_COAL_ORE = createCopy(COAL_ORE);
-		ANDESITE_COPPER_ORE = createCopy(COAL_ORE);
-		ANDESITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		ANDESITE_EMERALD_ORE = createCopy(COAL_ORE);
-		ANDESITE_GARNET_ORE = createCopy(COAL_ORE);
-		ANDESITE_GOLD_ORE = createCopy(COAL_ORE);
-		ANDESITE_IRON_ORE = createCopy(COAL_ORE);
-		ANDESITE_LAPIS_ORE = createCopy(COAL_ORE);
-		ANDESITE_MORGANITE_ORE = createCopy(COAL_ORE);
-		ANDESITE_REDSTONE_ORE = createCopy(COAL_ORE);
-		ANDESITE_RUBY_ORE = createCopy(COAL_ORE);
-		ANDESITE_SILVER_ORE = createCopy(COAL_ORE);
-		ANDESITE_SPHENE_ORE = createCopy(COAL_ORE);
-		ANDESITE_SPINEL_ORE = createCopy(COAL_ORE);
-		ANDESITE_TANZANITE_ORE = createCopy(COAL_ORE);
-		ANDESITE_TOPAZ_ORE = createCopy(COAL_ORE);
+		ANDESITE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_COAL_ORE = createOre(3.0F, 0, 2);
+		ANDESITE_COPPER_ORE = createOre(3.0F);
+		ANDESITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_EMERALD_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_GARNET_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_GOLD_ORE = createOre(3.0F);
+		ANDESITE_IRON_ORE = createOre(3.0F);
+		ANDESITE_LAPIS_ORE = createOre(3.0F, 2, 5);
+		ANDESITE_MORGANITE_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		ANDESITE_RUBY_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_SILVER_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_TANZANITE_ORE = createOre(3.0F, 3, 7);
+		ANDESITE_TOPAZ_ORE = createOre(3.0F, 3, 7);
 
 		BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
 		BASALT_COAL_ORE = createCopy(COAL_ORE);
