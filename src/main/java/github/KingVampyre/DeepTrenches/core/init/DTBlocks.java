@@ -4508,7 +4508,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:light_opalite", LIGHT_OPALITE);
 		Registry.register(BLOCK, "deep_trenches:lushine", LUSHINE);
 		Registry.register(BLOCK, "deep_trenches:lushine_pillar", LUSHINE_PILLAR);
-		Registry.register(BLOCK, "deep_trenches:lustrite_waveite", LUSTERED_WAVEITE);
+		Registry.register(BLOCK, "deep_trenches:lustered_waveite", LUSTERED_WAVEITE);
 		Registry.register(BLOCK, "deep_trenches:lustrite", LUSTRITE);
 		Registry.register(BLOCK, "deep_trenches:poinine", POININE);
 		Registry.register(BLOCK, "deep_trenches:ringwoodite", RINGWOODITE);
