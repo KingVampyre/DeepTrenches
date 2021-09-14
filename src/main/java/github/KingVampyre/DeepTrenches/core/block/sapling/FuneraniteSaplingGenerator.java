@@ -1,22 +1,20 @@
 package github.KingVampyre.DeepTrenches.core.block.sapling;
 
-import github.Louwind.worldgen.util.RegistryHelper;
 import net.minecraft.block.sapling.LargeTreeSaplingGenerator;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class FuneraniteSaplingGenerator extends LargeTreeSaplingGenerator {
+import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.FUNERANITE;
 
-    private static final Identifier FUNERANITE = new Identifier("deep_trenches:funeranite");
+public class FuneraniteSaplingGenerator extends LargeTreeSaplingGenerator {
 
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> getLargeTreeFeature(Random random) {
-        return RegistryHelper.getTree(FUNERANITE);
+        return FUNERANITE;
     }
 
     @Nullable

@@ -23,7 +23,7 @@ public class AlmondSaplingGenerator extends LargeTreeSaplingGenerator {
         var fancy = random.nextInt(5) == 0;
 
         if(bees)
-            return fancy ? FANCY_ALMOND_HALF_BEEHIVES : ALMOND_HALF_BEEHIVES;
+            return fancy ? FANCY_ALMOND_MORE_BEEHIVES : ALMOND_MORE_BEEHIVES;
         else
             return fancy ? FANCY_ALMOND : ALMOND;
     }

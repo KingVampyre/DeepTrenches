@@ -37,16 +37,47 @@ import static net.minecraft.world.gen.feature.OreFeatureConfig.Rules.BASE_STONE_
 public class DTConfiguredFeatures {
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> ANAMEATA;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> AQUEAN;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> BARSHROOKLE;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> BLACK_BIRCH;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> CHERRY;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> COOK_PINE;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> CROLOOD;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> DARK_CROLOOD;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> EBONY;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FUCHSITRA;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FUNERANITE;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GHOSHROOM;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> PELTOGYNE;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> PIN_CHERRY;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> PLUM;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> PURFUNGA;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> SPROOM;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> STORTREEAN;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> STROOMEAN;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> SUNRISE_FUNGUS;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> TEAK;
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_ALMOND;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_ANAMEATA;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_AQUEAN;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_BLACK_BIRCH;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_CHERRY;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_FUCHSITRA;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_PIN_CHERRY;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_PLUM;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_TEAK;
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ALMOND;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ANAMEATA;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_AQUEAN;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_BLACK_BIRCH;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_CHERRY;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_FUCHSITRA;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PIN_CHERRY;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PLUM;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_TEAK;
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND_VERY_RARE_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND_REGULAR_BEEHIVES;
@@ -62,6 +93,36 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ALMOND_REGULAR_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ALMOND_MORE_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ALMOND_HALF_BEEHIVES;
+
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> CHERRY_VERY_RARE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> CHERRY_REGULAR_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> CHERRY_MORE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> CHERRY_HALF_BEEHIVES;
+
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_CHERRY_VERY_RARE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_CHERRY_REGULAR_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_CHERRY_MORE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_CHERRY_HALF_BEEHIVES;
+
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_CHERRY_VERY_RARE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_CHERRY_REGULAR_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_CHERRY_MORE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_CHERRY_HALF_BEEHIVES;
+
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> PIN_CHERRY_VERY_RARE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> PIN_CHERRY_REGULAR_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> PIN_CHERRY_MORE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> PIN_CHERRY_HALF_BEEHIVES;
+
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_PIN_CHERRY_VERY_RARE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_PIN_CHERRY_REGULAR_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_PIN_CHERRY_MORE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_PIN_CHERRY_HALF_BEEHIVES;
+
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PIN_CHERRY_VERY_RARE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PIN_CHERRY_REGULAR_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PIN_CHERRY_MORE_BEEHIVES;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PIN_CHERRY_HALF_BEEHIVES;
 
     public static final ConfiguredFeature<?, ?> ALMOND_FOREST_FLOWER;
     public static final ConfiguredFeature<?, ?> ALMOND_PLUS_FOREST_FLOWER;
@@ -132,16 +193,47 @@ public class DTConfiguredFeatures {
 
     static {
         ALMOND = createBlobTree(ALMOND_TRUNK_PROVIDER, ALMOND_FOLIAGE_PROVIDER, ALMOND_SAPLING_PROVIDER);
+        ANAMEATA = createBlobTree(ANAMEATA_TRUNK_PROVIDER, ANAMEATA_FOLIAGE_PROVIDER, ANAMEATA_SAPLING_PROVIDER);
+        AQUEAN = createBlobTree(AQUEAN_TRUNK_PROVIDER, AQUEAN_FOLIAGE_PROVIDER, AQUEAN_SAPLING_PROVIDER);
+        BARSHROOKLE = createBlobTree(BARSHROOKLE_TRUNK_PROVIDER, BARSHROOKLE_FOLIAGE_PROVIDER, BARSHROOKLE_SAPLING_PROVIDER);
+        BLACK_BIRCH = createBlobTree(BLACK_BIRCH_TRUNK_PROVIDER, BLACK_BIRCH_FOLIAGE_PROVIDER, BLACK_BIRCH_SAPLING_PROVIDER);
         CHERRY = createBlobTree(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER, CHERRY_SAPLING_PROVIDER);
+        COOK_PINE = createBlobTree(COOK_PINE_TRUNK_PROVIDER, COOK_PINE_FOLIAGE_PROVIDER, COOK_PINE_SAPLING_PROVIDER);
+        CROLOOD = createBlobTree(CROLOOD_TRUNK_PROVIDER, CROLOOD_FOLIAGE_PROVIDER, CROLOOD_SAPLING_PROVIDER);
+        DARK_CROLOOD = createBlobTree(DARK_CROLOOD_TRUNK_PROVIDER, DARK_CROLOOD_FOLIAGE_PROVIDER, DARK_CROLOOD_SAPLING_PROVIDER);
+        EBONY = createBlobTree(EBONY_TRUNK_PROVIDER, EBONY_FOLIAGE_PROVIDER, EBONY_SAPLING_PROVIDER);
+        FUCHSITRA = createBlobTree(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER, FUCHSITRA_SAPLING_PROVIDER);
+        FUNERANITE = createBlobTree(FUNERANITE_TRUNK_PROVIDER, FUNERANITE_FOLIAGE_PROVIDER, FUNERANITE_SAPLING_PROVIDER);
+        GHOSHROOM = createBlobTree(GHOSHROOM_TRUNK_PROVIDER, GHOSHROOM_FOLIAGE_PROVIDER, GHOSHROOM_SAPLING_PROVIDER);
+        PELTOGYNE = createBlobTree(PELTOGYNE_TRUNK_PROVIDER, PELTOGYNE_FOLIAGE_PROVIDER, PELTOGYNE_SAPLING_PROVIDER);
         PIN_CHERRY = createBlobTree(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER, PIN_CHERRY_SAPLING_PROVIDER);
+        PLUM = createBlobTree(PLUM_TRUNK_PROVIDER, PLUM_FOLIAGE_PROVIDER, PLUM_SAPLING_PROVIDER);
+        PURFUNGA = createBlobTree(PURFUNGA_TRUNK_PROVIDER, PURFUNGA_FOLIAGE_PROVIDER, PURFUNGA_SAPLING_PROVIDER);
+        SPROOM = createBlobTree(SPROOM_TRUNK_PROVIDER, SPROOM_FOLIAGE_PROVIDER, SPROOM_SAPLING_PROVIDER);
+        STORTREEAN = createBlobTree(STORTREEAN_TRUNK_PROVIDER, STORTREEAN_FOLIAGE_PROVIDER, STORTREEAN_SAPLING_PROVIDER);
+        STROOMEAN = createBlobTree(STROOMEAN_TRUNK_PROVIDER, STROOMEAN_FOLIAGE_PROVIDER, STROOMEAN_SAPLING_PROVIDER);
+        SUNRISE_FUNGUS = createBlobTree(SUNRISE_FUNGUS_TRUNK_PROVIDER, SUNRISE_FUNGUS_FOLIAGE_PROVIDER, SUNRISE_FUNGUS_SAPLING_PROVIDER);
+        TEAK = createBlobTree(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER, TEAK_SAPLING_PROVIDER);
 
         FANCY_ALMOND = createFancyTree(ALMOND_TRUNK_PROVIDER, ALMOND_FOLIAGE_PROVIDER, ALMOND_SAPLING_PROVIDER);
+        FANCY_ANAMEATA = createFancyTree(ANAMEATA_TRUNK_PROVIDER, ANAMEATA_FOLIAGE_PROVIDER, ANAMEATA_SAPLING_PROVIDER);
+        FANCY_AQUEAN = createFancyTree(AQUEAN_TRUNK_PROVIDER, AQUEAN_FOLIAGE_PROVIDER, AQUEAN_SAPLING_PROVIDER);
+        FANCY_BLACK_BIRCH = createFancyTree(BLACK_BIRCH_TRUNK_PROVIDER, BLACK_BIRCH_FOLIAGE_PROVIDER, BLACK_BIRCH_SAPLING_PROVIDER);
         FANCY_CHERRY = createFancyTree(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER, CHERRY_SAPLING_PROVIDER);
+        FANCY_FUCHSITRA = createFancyTree(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER, FUCHSITRA_SAPLING_PROVIDER);
         FANCY_PIN_CHERRY = createFancyTree(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER, PIN_CHERRY_SAPLING_PROVIDER);
+        FANCY_PLUM = createFancyTree(PLUM_TRUNK_PROVIDER, PLUM_FOLIAGE_PROVIDER, PLUM_SAPLING_PROVIDER);
+        FANCY_TEAK = createFancyTree(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER, TEAK_SAPLING_PROVIDER);
 
         GREAT_ALMOND = createGreatTree(ALMOND_TRUNK_PROVIDER, ALMOND_FOLIAGE_PROVIDER, ALMOND_SAPLING_PROVIDER);
+        GREAT_ANAMEATA = createGreatTree(ANAMEATA_TRUNK_PROVIDER, ANAMEATA_FOLIAGE_PROVIDER, ANAMEATA_SAPLING_PROVIDER);
+        GREAT_AQUEAN = createGreatTree(AQUEAN_TRUNK_PROVIDER, AQUEAN_FOLIAGE_PROVIDER, AQUEAN_SAPLING_PROVIDER);
+        GREAT_BLACK_BIRCH = createGreatTree(BLACK_BIRCH_TRUNK_PROVIDER, BLACK_BIRCH_FOLIAGE_PROVIDER, BLACK_BIRCH_SAPLING_PROVIDER);
         GREAT_CHERRY = createGreatTree(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER, CHERRY_SAPLING_PROVIDER);
+        GREAT_FUCHSITRA = createGreatTree(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER, FUCHSITRA_SAPLING_PROVIDER);
         GREAT_PIN_CHERRY = createGreatTree(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER, PIN_CHERRY_SAPLING_PROVIDER);
+        GREAT_PLUM = createGreatTree(PLUM_TRUNK_PROVIDER, PLUM_FOLIAGE_PROVIDER, PLUM_SAPLING_PROVIDER);
+        GREAT_TEAK = createGreatTree(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER, TEAK_SAPLING_PROVIDER);
 
         ALMOND_VERY_RARE_BEEHIVES = createTree(ALMOND, VERY_RARE_BEEHIVES_TREES);
         ALMOND_REGULAR_BEEHIVES = createTree(ALMOND, REGULAR_BEEHIVES_TREES);
@@ -158,6 +250,36 @@ public class DTConfiguredFeatures {
         GREAT_ALMOND_MORE_BEEHIVES = createTree(GREAT_ALMOND, MORE_BEEHIVES_TREES);
         GREAT_ALMOND_HALF_BEEHIVES = createTree(GREAT_ALMOND, HALF_BEEHIVES_TREES);
 
+        CHERRY_VERY_RARE_BEEHIVES = createTree(CHERRY, VERY_RARE_BEEHIVES_TREES);
+        CHERRY_REGULAR_BEEHIVES = createTree(CHERRY, REGULAR_BEEHIVES_TREES);
+        CHERRY_MORE_BEEHIVES = createTree(CHERRY, MORE_BEEHIVES_TREES);
+        CHERRY_HALF_BEEHIVES = createTree(CHERRY, HALF_BEEHIVES_TREES);
+
+        FANCY_CHERRY_VERY_RARE_BEEHIVES = createTree(FANCY_CHERRY, VERY_RARE_BEEHIVES_TREES);
+        FANCY_CHERRY_REGULAR_BEEHIVES = createTree(FANCY_CHERRY, REGULAR_BEEHIVES_TREES);
+        FANCY_CHERRY_MORE_BEEHIVES = createTree(FANCY_CHERRY, MORE_BEEHIVES_TREES);
+        FANCY_CHERRY_HALF_BEEHIVES = createTree(FANCY_CHERRY, HALF_BEEHIVES_TREES);
+
+        GREAT_CHERRY_VERY_RARE_BEEHIVES = createTree(GREAT_CHERRY, VERY_RARE_BEEHIVES_TREES);
+        GREAT_CHERRY_REGULAR_BEEHIVES = createTree(GREAT_CHERRY, REGULAR_BEEHIVES_TREES);
+        GREAT_CHERRY_MORE_BEEHIVES = createTree(GREAT_CHERRY, MORE_BEEHIVES_TREES);
+        GREAT_CHERRY_HALF_BEEHIVES = createTree(GREAT_CHERRY, HALF_BEEHIVES_TREES);
+
+        PIN_CHERRY_VERY_RARE_BEEHIVES = createTree(PIN_CHERRY, VERY_RARE_BEEHIVES_TREES);
+        PIN_CHERRY_REGULAR_BEEHIVES = createTree(PIN_CHERRY, REGULAR_BEEHIVES_TREES);
+        PIN_CHERRY_MORE_BEEHIVES = createTree(PIN_CHERRY, MORE_BEEHIVES_TREES);
+        PIN_CHERRY_HALF_BEEHIVES = createTree(PIN_CHERRY, HALF_BEEHIVES_TREES);
+
+        FANCY_PIN_CHERRY_VERY_RARE_BEEHIVES = createTree(FANCY_PIN_CHERRY, VERY_RARE_BEEHIVES_TREES);
+        FANCY_PIN_CHERRY_REGULAR_BEEHIVES = createTree(FANCY_PIN_CHERRY, REGULAR_BEEHIVES_TREES);
+        FANCY_PIN_CHERRY_MORE_BEEHIVES = createTree(FANCY_PIN_CHERRY, MORE_BEEHIVES_TREES);
+        FANCY_PIN_CHERRY_HALF_BEEHIVES = createTree(FANCY_PIN_CHERRY, HALF_BEEHIVES_TREES);
+
+        GREAT_PIN_CHERRY_VERY_RARE_BEEHIVES = createTree(GREAT_PIN_CHERRY, VERY_RARE_BEEHIVES_TREES);
+        GREAT_PIN_CHERRY_REGULAR_BEEHIVES = createTree(GREAT_PIN_CHERRY, REGULAR_BEEHIVES_TREES);
+        GREAT_PIN_CHERRY_MORE_BEEHIVES = createTree(GREAT_PIN_CHERRY, MORE_BEEHIVES_TREES);
+        GREAT_PIN_CHERRY_HALF_BEEHIVES = createTree(GREAT_PIN_CHERRY, HALF_BEEHIVES_TREES);
+        
         ALMOND_FOREST_FLOWER = createFlower(ALMOND_FOREST_FLOWER_CONFIG);
         ALMOND_PLUS_FOREST_FLOWER = createFlower(ALMOND_PLUS_FOREST_FLOWER_CONFIG);
 
@@ -176,17 +298,48 @@ public class DTConfiguredFeatures {
 
     public static void initialize() {
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond", ALMOND);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:anameata", ANAMEATA);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:aquean", AQUEAN);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:barshrookle", BARSHROOKLE);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:black_birch", BLACK_BIRCH);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry", CHERRY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cook_pine", COOK_PINE);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:crolood", CROLOOD);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:dark_crolood", DARK_CROLOOD);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:ebony", EBONY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fuchsitra", FUCHSITRA);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:funeranite", FUNERANITE);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:ghoshroom", GHOSHROOM);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:peltogyne", PELTOGYNE);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry", PIN_CHERRY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:plum", PLUM);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:purfunga", PURFUNGA);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:sproom", SPROOM);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:stortreean", STORTREEAN);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:stroomean", STROOMEAN);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:sunrise_fungus", SUNRISE_FUNGUS);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:teak", TEAK);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond", FANCY_ALMOND);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_anameata", FANCY_ANAMEATA);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_aquean", FANCY_AQUEAN);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_black_birch", FANCY_BLACK_BIRCH);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry", FANCY_CHERRY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_fuchsitra", FANCY_FUCHSITRA);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry", FANCY_PIN_CHERRY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_plum", FANCY_PLUM);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_teak", FANCY_TEAK);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond", GREAT_ALMOND);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_anameata", GREAT_ANAMEATA);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_aquean", GREAT_AQUEAN);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_black_birch", GREAT_BLACK_BIRCH);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry", GREAT_CHERRY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_fuchsitra", GREAT_FUCHSITRA);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry", GREAT_PIN_CHERRY);
-
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_plum", GREAT_PLUM);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_teak", GREAT_TEAK);
+        
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_very_rare_beehives", ALMOND_VERY_RARE_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_regular_beehives", ALMOND_REGULAR_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_more_beehives", ALMOND_MORE_BEEHIVES);
@@ -201,6 +354,36 @@ public class DTConfiguredFeatures {
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_regular_beehives", GREAT_ALMOND_REGULAR_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_more_beehives", GREAT_ALMOND_MORE_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond_half_beehives", GREAT_ALMOND_HALF_BEEHIVES);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_very_rare_beehives", CHERRY_VERY_RARE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_regular_beehives", CHERRY_REGULAR_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_more_beehives", CHERRY_MORE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_half_beehives", CHERRY_HALF_BEEHIVES);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry_very_rare_beehives", FANCY_CHERRY_VERY_RARE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry_regular_beehives", FANCY_CHERRY_REGULAR_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry_more_beehives", FANCY_CHERRY_MORE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_cherry_half_beehives", FANCY_CHERRY_HALF_BEEHIVES);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry_very_rare_beehives", GREAT_CHERRY_VERY_RARE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry_regular_beehives", GREAT_CHERRY_REGULAR_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry_more_beehives", GREAT_CHERRY_MORE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_cherry_half_beehives", GREAT_CHERRY_HALF_BEEHIVES);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry_very_rare_beehives", PIN_CHERRY_VERY_RARE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry_regular_beehives", PIN_CHERRY_REGULAR_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry_more_beehives", PIN_CHERRY_MORE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:pin_cherry_half_beehives", PIN_CHERRY_HALF_BEEHIVES);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry_very_rare_beehives", FANCY_PIN_CHERRY_VERY_RARE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry_regular_beehives", FANCY_PIN_CHERRY_REGULAR_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry_more_beehives", FANCY_PIN_CHERRY_MORE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry_half_beehives", FANCY_PIN_CHERRY_HALF_BEEHIVES);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry_very_rare_beehives", GREAT_PIN_CHERRY_VERY_RARE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry_regular_beehives", GREAT_PIN_CHERRY_REGULAR_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry_more_beehives", GREAT_PIN_CHERRY_MORE_BEEHIVES);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry_half_beehives", GREAT_PIN_CHERRY_HALF_BEEHIVES);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower", ALMOND_FOREST_FLOWER);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower", ALMOND_PLUS_FOREST_FLOWER);

@@ -1,22 +1,20 @@
 package github.KingVampyre.DeepTrenches.core.block.sapling;
 
-import github.Louwind.worldgen.util.RegistryHelper;
 import net.minecraft.block.sapling.LargeTreeSaplingGenerator;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class SproomSaplingGenerator extends LargeTreeSaplingGenerator {
+import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.SPROOM;
 
-    private static final Identifier SPROOM = new Identifier("deep_trenches:sproom");
+public class SproomSaplingGenerator extends LargeTreeSaplingGenerator {
 
     @Nullable
     @Override
     protected ConfiguredFeature<TreeFeatureConfig, ?> getLargeTreeFeature(Random random) {
-        return RegistryHelper.getTree(SPROOM);
+        return SPROOM;
     }
 
     @Nullable
