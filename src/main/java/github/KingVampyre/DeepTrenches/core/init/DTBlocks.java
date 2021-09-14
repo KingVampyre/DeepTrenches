@@ -2125,8 +2125,7 @@ public class DTBlocks {
 	public static final Block POTTED_WHITE_MUSHROOM;
 
 	protected static Block createAcuaticFungus(SaplingGenerator saplingGenerator) {
-		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
-		return new AcuaticFungusBlock(saplingGenerator, Settings.of(Material.LEAVES).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque());
+		return new AcuaticFungusBlock(saplingGenerator, Settings.of(Material.LEAVES).suffocates((state, world, pos) -> false).blockVision((state, world, pos) -> false).strength(0, 0).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque());
 	}
 
 	protected static Block createAmethystBlock() {
