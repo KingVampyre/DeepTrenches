@@ -2169,8 +2169,7 @@ public class DTBlocks {
 	}
 
 	protected static Block createCap() {
-		// TODO .suffocates(Blocks::never).blockVision(Blocks::never);
-		return new CapBlock(Settings.of(Material.LEAVES).strength(0.2F, 0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque());
+		return new CapBlock(Settings.of(Material.LEAVES).suffocates((state, world, pos) -> false).blockVision((state, world, pos) -> false).strength(0.2F, 0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque());
 	}
 
 	protected static Block createCopy(Block block) {
