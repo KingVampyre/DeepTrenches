@@ -67,6 +67,7 @@ public class DTBlocks {
 	public static final Block LIGHT_OPALITE;
 	public static final Block LUSHINE;
 	public static final Block LUSHINE_PILLAR;
+	public static final Block LUSTERED_WAVEITE;
 	public static final Block LUSTRITE;
 	public static final Block POININE;
 	public static final Block RINGWOODITE;
@@ -361,13 +362,11 @@ public class DTBlocks {
 	public static final Block LIMESTONE_SPINEL_ORE;
 	public static final Block LIMESTONE_SUGILITE_ORE;
 
-	public static final Block LUSTERED_WAVEITE;
 	public static final Block LUSTERED_WAVEITE_SAPPHIRE_ORE;
 	public static final Block LUSTERED_WAVEITE_TANZANITE_ORE;
 
 	public static final Block MARBLE_DIAMOND_ORE;
 
-	// TODO rename NETHER_ORE
 	public static final Block NETHERRACK_BORON_ORE;
 	public static final Block NETHERRACK_CLINOHUMITE_ORE;
 
@@ -2227,6 +2226,14 @@ public class DTBlocks {
 		return createOre(strength, strength, min, max);
 	}
 
+	protected static Block createOre(float strength, int min, int max, BlockSoundGroup group) {
+		return createOre(strength, strength, min, max, group);
+	}
+
+	protected static Block createOre(float hardness, float resistance, int min, int max, BlockSoundGroup group) {
+		return createOre(Settings.of(Material.STONE).requiresTool().strength(hardness, resistance).sounds(group), min, max);
+	}
+
 	protected static Block createOre(float hardness, float resistance, int min, int max) {
 		return createOre(Settings.of(Material.STONE).requiresTool().strength(hardness, resistance), min, max);
 	}
@@ -2234,9 +2241,13 @@ public class DTBlocks {
 	protected static Block createOre(float strength) {
 		return createOre(strength, strength, 0, 0);
 	}
-	
-	protected static Block createOre(float hardness, float resistance) {
-		return createOre(hardness, resistance, 0, 0);
+
+	protected static Block createDeepslateOre(float hardness, float resistance, int min, int max) {
+		return createOre(Settings.copy(DEEPSLATE_IRON_ORE).strength(hardness, resistance), min, max);
+	}
+
+	protected static Block createBasaltOre(float hardness, float resistance, int min, int max) {
+		return createOre(Settings.copy(BASALT).strength(hardness, resistance), min, max);
 	}
 
 	protected static Block createRedstoneOre(float hardness, float resistance) {
@@ -2395,6 +2406,7 @@ public class DTBlocks {
 		LIGHT_OPALITE = createCopy(STONE);
 		LUSHINE = createCopy(STONE);
 		LUSHINE_PILLAR = createCopy(STONE);
+		LUSTERED_WAVEITE = createCopy(STONE);
 		LUSTRITE = createCopy(STONE);
 		POININE = createCopy(STONE);
 		RINGWOODITE = createCopy(STONE);
@@ -2538,300 +2550,300 @@ public class DTBlocks {
 		ANDESITE_TANZANITE_ORE = createOre(3.0F, 3, 7);
 		ANDESITE_TOPAZ_ORE = createOre(3.0F, 3, 7);
 
-		BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		BASALT_COAL_ORE = createCopy(COAL_ORE);
+		BASALT_CLINOHUMITE_ORE = createOre(3.0F, 3, 7, BlockSoundGroup.BASALT);
+		BASALT_COAL_ORE = createOre(3.0F, 0, 2, BlockSoundGroup.BASALT);
 
-		BEDROCK_DIAMOND_ORE = createCopy(COAL_ORE);
-		BEDROCK_DIOPSIDE_ORE = createCopy(COAL_ORE);
-		BEDROCK_MORGANITE_ORE = createCopy(COAL_ORE);
-		BEDROCK_VOID_CRITTERED_DIOPSIDE_ORE = createCopy(COAL_ORE);
+		BEDROCK_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		BEDROCK_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
+		BEDROCK_MORGANITE_ORE = createOre(3.0F, 3, 7);
+		BEDROCK_VOID_CRITTERED_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
 
-		BLACK_BASALT_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_COAL_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_DIAMOND_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_GOLD_ORE = createCopy(COAL_ORE);
-		BLACK_BASALT_IRON_ORE = createCopy(COAL_ORE);
+		BLACK_BASALT_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
+		BLACK_BASALT_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		BLACK_BASALT_COAL_ORE = createOre(3.0F, 0, 2);
+		BLACK_BASALT_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		BLACK_BASALT_GOLD_ORE = createOre(3.0F);
+		BLACK_BASALT_IRON_ORE = createOre(3.0F);
 
-		BLUE_STORCERACK_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_COAL_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_COPPER_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_DIAMOND_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_GOLD_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_IRON_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_REDSTONE_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_RUBY_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_SPHENE_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_SPINEL_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_STROXITE_ORE = createCopy(COAL_ORE);
-		BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE = createCopy(COAL_ORE);
+		BLUE_STORCERACK_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		BLUE_STORCERACK_COAL_ORE = createOre(3.0F, 0, 2);
+		BLUE_STORCERACK_COPPER_ORE = createOre(3.0F);
+		BLUE_STORCERACK_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		BLUE_STORCERACK_GOLD_ORE = createOre(3.0F);
+		BLUE_STORCERACK_IRON_ORE = createOre(3.0F);
+		BLUE_STORCERACK_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		BLUE_STORCERACK_RUBY_ORE = createOre(3.0F, 3, 7);
+		BLUE_STORCERACK_SPHENE_ORE = createOre(3.0F, 3, 7);
+		BLUE_STORCERACK_SPINEL_ORE = createOre(3.0F, 3, 7);
+		BLUE_STORCERACK_STROXITE_ORE = createOre(3.0F);
+		BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE = createOre(3.0F);
 
-		CALCITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		CALCITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		CALCITE_COAL_ORE = createCopy(COAL_ORE);
-		CALCITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		CALCITE_GOLD_ORE = createCopy(COAL_ORE);
+		CALCITE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
+		CALCITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		CALCITE_COAL_ORE = createOre(3.0F, 0, 2);
+		CALCITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		CALCITE_GOLD_ORE = createOre(3.0F);
 
-		DEEPSLATE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_GARNET_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_MORGANITE_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_OPAL_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_RUBY_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_SILVER_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_SPHENE_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_SPINEL_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_SUGILITE_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_TANZANITE_ORE = createCopy(COAL_ORE);
-		DEEPSLATE_TOPAZ_ORE = createCopy(COAL_ORE);
+		DEEPSLATE_AQUAMARINE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_BLACK_OPAL_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_CHALCEDONY_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_CLINOHUMITE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_GARNET_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_MORGANITE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_OPAL_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_RUBY_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_SAPPHIRE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_SILVER_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_SPHENE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_SPINEL_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_SUGILITE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_TANZANITE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_TOPAZ_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
 
-		DIORITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		DIORITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		DIORITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		DIORITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		DIORITE_COAL_ORE = createCopy(COAL_ORE);
-		DIORITE_COPPER_ORE = createCopy(COAL_ORE);
-		DIORITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		DIORITE_EMERALD_ORE = createCopy(COAL_ORE);
-		DIORITE_GARNET_ORE = createCopy(COAL_ORE);
-		DIORITE_GOLD_ORE = createCopy(COAL_ORE);
-		DIORITE_IRON_ORE = createCopy(COAL_ORE);
-		DIORITE_LAPIS_ORE = createCopy(COAL_ORE);
-		DIORITE_MORGANITE_ORE = createCopy(COAL_ORE);
-		DIORITE_REDSTONE_ORE = createCopy(COAL_ORE);
-		DIORITE_RUBY_ORE = createCopy(COAL_ORE);
-		DIORITE_SILVER_ORE = createCopy(COAL_ORE);
-		DIORITE_SPHENE_ORE = createCopy(COAL_ORE);
-		DIORITE_SPINEL_ORE = createCopy(COAL_ORE);
-		DIORITE_TANZANITE_ORE = createCopy(COAL_ORE);
-		DIORITE_TOPAZ_ORE = createCopy(COAL_ORE);
+		DIORITE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		DIORITE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		DIORITE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
+		DIORITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		DIORITE_COAL_ORE = createOre(3.0F, 0, 2);
+		DIORITE_COPPER_ORE = createOre(3.0F);
+		DIORITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		DIORITE_EMERALD_ORE = createOre(3.0F, 3, 7);
+		DIORITE_GARNET_ORE = createOre(3.0F, 3, 7);
+		DIORITE_GOLD_ORE = createOre(3.0F);
+		DIORITE_IRON_ORE = createOre(3.0F);
+		DIORITE_LAPIS_ORE = createOre(3.0F, 2, 5);
+		DIORITE_MORGANITE_ORE = createOre(3.0F, 3, 7);
+		DIORITE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		DIORITE_RUBY_ORE = createOre(3.0F, 3, 7);
+		DIORITE_SILVER_ORE = createOre(3.0F);
+		DIORITE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		DIORITE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		DIORITE_TANZANITE_ORE = createOre(3.0F, 3, 7);
+		DIORITE_TOPAZ_ORE = createOre(3.0F, 3, 7);
 
-		END_STONE_DIOPSIDE_ORE = createCopy(COAL_ORE);
-		END_STONE_SPINEL_ORE = createCopy(COAL_ORE);
-		END_STONE_VOID_CRITTERED_DIOPSIDE_ORE = createCopy(COAL_ORE);
+		END_STONE_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
+		END_STONE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		END_STONE_VOID_CRITTERED_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
 
-		FLINT_STONE_SILICON_ORE = createCopy(COAL_ORE);
-		FLINT_STONE_URANOLUMEN_ORE = createCopy(COAL_ORE);
+		FLINT_STONE_SILICON_ORE = createOre(3.0F);
+		FLINT_STONE_URANOLUMEN_ORE = createOre(3.0F);
 
-		GRAY_MARBLE_DIAMOND_ORE = createCopy(COAL_ORE);
+		GRAY_MARBLE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 
-		GRANITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		GRANITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		GRANITE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		GRANITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		GRANITE_COAL_ORE = createCopy(COAL_ORE);
-		GRANITE_COPPER_ORE = createCopy(COAL_ORE);
-		GRANITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		GRANITE_EMERALD_ORE = createCopy(COAL_ORE);
-		GRANITE_GARNET_ORE = createCopy(COAL_ORE);
-		GRANITE_GOLD_ORE = createCopy(COAL_ORE);
-		GRANITE_IRON_ORE = createCopy(COAL_ORE);
-		GRANITE_LAPIS_ORE = createCopy(COAL_ORE);
-		GRANITE_MORGANITE_ORE = createCopy(COAL_ORE);
-		GRANITE_REDSTONE_ORE = createCopy(COAL_ORE);
-		GRANITE_RUBY_ORE = createCopy(COAL_ORE);
-		GRANITE_SILVER_ORE = createCopy(COAL_ORE);
-		GRANITE_SPHENE_ORE = createCopy(COAL_ORE);
-		GRANITE_SPINEL_ORE = createCopy(COAL_ORE);
-		GRANITE_TANZANITE_ORE = createCopy(COAL_ORE);
-		GRANITE_TOPAZ_ORE = createCopy(COAL_ORE);
+		GRANITE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		GRANITE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		GRANITE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
+		GRANITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		GRANITE_COAL_ORE = createOre(3.0F, 0, 2);
+		GRANITE_COPPER_ORE = createOre(3.0F);
+		GRANITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		GRANITE_EMERALD_ORE = createOre(3.0F, 3, 7);
+		GRANITE_GARNET_ORE = createOre(3.0F, 3, 7);
+		GRANITE_GOLD_ORE = createOre(3.0F);
+		GRANITE_IRON_ORE = createOre(3.0F);
+		GRANITE_LAPIS_ORE = createOre(3.0F, 2, 5);
+		GRANITE_MORGANITE_ORE = createOre(3.0F, 3, 7);
+		GRANITE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		GRANITE_RUBY_ORE = createOre(3.0F, 3, 7);
+		GRANITE_SILVER_ORE = createOre(3.0F, 3, 7);
+		GRANITE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		GRANITE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		GRANITE_TANZANITE_ORE = createOre(3.0F, 3, 7);
+		GRANITE_TOPAZ_ORE = createOre(3.0F, 3, 7);
 
-		HADAL_STONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_COAL_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_COPPER_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_DIAMOND_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_EMERALD_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_GARNET_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_GOLD_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_IRON_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_LAPIS_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_MORGANITE_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_REDSTONE_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_RUBY_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_SILVER_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_SPHENE_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_SPINEL_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_SUGILITE_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_TANZANITE_ORE = createCopy(COAL_ORE);
-		HADAL_STONE_TOPAZ_ORE = createCopy(COAL_ORE);
+		HADAL_STONE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_COAL_ORE = createOre(3.0F, 0, 2);
+		HADAL_STONE_COPPER_ORE = createOre(3.0F);
+		HADAL_STONE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_EMERALD_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_GARNET_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_GOLD_ORE = createOre(3.0F);
+		HADAL_STONE_IRON_ORE = createOre(3.0F);
+		HADAL_STONE_LAPIS_ORE = createOre(3.0F, 2, 5);
+		HADAL_STONE_MORGANITE_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		HADAL_STONE_RUBY_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_SILVER_ORE = createOre(3.0F);
+		HADAL_STONE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_SUGILITE_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_TANZANITE_ORE = createOre(3.0F, 3, 7);
+		HADAL_STONE_TOPAZ_ORE = createOre(3.0F, 3, 7);
 
-		INFINITAL_STONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_COAL_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_COPPER_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_DIAMOND_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_ENSTATITE_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_OPAL_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_IRON_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_RUBY_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_SPHENE_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_SPINEL_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_SUGILITE_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_URANOLUMEN_ORE = createCopy(COAL_ORE);
-		INFINITAL_STONE_SILICON_ORE = createCopy(COAL_ORE);
+		INFINITAL_STONE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_COAL_ORE = createOre(3.0F, 0, 2);
+		INFINITAL_STONE_COPPER_ORE = createOre(3.0F);
+		INFINITAL_STONE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_ENSTATITE_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_OPAL_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_IRON_ORE = createOre(3.0F);
+		INFINITAL_STONE_RUBY_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_SUGILITE_ORE = createOre(3.0F, 3, 7);
+		INFINITAL_STONE_URANOLUMEN_ORE = createOre(3.0F);
+		INFINITAL_STONE_SILICON_ORE = createOre(3.0F);
 
-		LIMESTONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		LIMESTONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		LIMESTONE_COAL_ORE = createCopy(COAL_ORE);
-		LIMESTONE_COPPER_ORE = createCopy(COAL_ORE);
-		LIMESTONE_DIAMOND_ORE = createCopy(COAL_ORE);
-		LIMESTONE_OPAL_ORE = createCopy(COAL_ORE);
-		LIMESTONE_IRON_ORE = createCopy(COAL_ORE);
-		LIMESTONE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		LIMESTONE_SPHENE_ORE = createCopy(COAL_ORE);
-		LIMESTONE_SPINEL_ORE = createCopy(COAL_ORE);
-		LIMESTONE_SUGILITE_ORE = createCopy(COAL_ORE);
+		LIMESTONE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		LIMESTONE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		LIMESTONE_COAL_ORE = createOre(3.0F, 0, 2);
+		LIMESTONE_COPPER_ORE = createOre(3.0F);
+		LIMESTONE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		LIMESTONE_OPAL_ORE = createOre(3.0F, 3, 7);
+		LIMESTONE_IRON_ORE = createOre(3.0F);
+		LIMESTONE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		LIMESTONE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		LIMESTONE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		LIMESTONE_SUGILITE_ORE = createOre(3.0F, 3, 7);
 
-		LUSTERED_WAVEITE = createCopy(COAL_ORE);
-		LUSTERED_WAVEITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		LUSTERED_WAVEITE_TANZANITE_ORE = createCopy(COAL_ORE);
+		LUSTERED_WAVEITE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		LUSTERED_WAVEITE_TANZANITE_ORE = createOre(3.0F, 3, 7);
 
-		MARBLE_DIAMOND_ORE = createCopy(COAL_ORE);
+		MARBLE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 
-		NETHERRACK_BORON_ORE = createCopy(COAL_ORE);
-		NETHERRACK_CLINOHUMITE_ORE = createCopy(COAL_ORE);
+		// TODO RENAME
+		NETHERRACK_BORON_ORE = createOre(3.0F);
+		NETHERRACK_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 
-		PINKINE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		PINKINE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		PINKINE_COAL_ORE = createCopy(COAL_ORE);
-		PINKINE_COPPER_ORE = createCopy(COAL_ORE);
-		PINKINE_DIAMOND_ORE = createCopy(COAL_ORE);
-		PINKINE_DIOPSIDE_ORE = createCopy(COAL_ORE);
-		PINKINE_ENSTATITE_ORE = createCopy(COAL_ORE);
-		PINKINE_OPAL_ORE = createCopy(COAL_ORE);
-		PINKINE_IRON_ORE = createCopy(COAL_ORE);
-		PINKINE_RUBY_ORE = createCopy(COAL_ORE);
-		PINKINE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		PINKINE_SILICON_ORE = createCopy(COAL_ORE);
-		PINKINE_SPHENE_ORE = createCopy(COAL_ORE);
-		PINKINE_SPINEL_ORE = createCopy(COAL_ORE);
-		PINKINE_SUGILITE_ORE = createCopy(COAL_ORE);
-		PINKINE_URANIUM_ORE = createCopy(COAL_ORE);
-		PINKINE_URANOLUMEN_ORE = createCopy(COAL_ORE);
-		PINKINE_VOID_CRITTERED_DIOPSIDE_ORE = createCopy(COAL_ORE);
+		PINKINE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		PINKINE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		PINKINE_COAL_ORE = createOre(3.0F, 0, 2);
+		PINKINE_COPPER_ORE = createOre(3.0F);
+		PINKINE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		PINKINE_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
+		PINKINE_ENSTATITE_ORE = createOre(3.0F, 3, 7);
+		PINKINE_OPAL_ORE = createOre(3.0F, 3, 7);
+		PINKINE_IRON_ORE = createOre(3.0F);
+		PINKINE_RUBY_ORE = createOre(3.0F, 3, 7);
+		PINKINE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		PINKINE_SILICON_ORE = createOre(3.0F);
+		PINKINE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		PINKINE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		PINKINE_SUGILITE_ORE = createOre(3.0F, 3, 7);
+		PINKINE_URANIUM_ORE = createOre(3.0F);
+		PINKINE_URANOLUMEN_ORE = createOre(3.0F);
+		PINKINE_VOID_CRITTERED_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
 
-		RINGWOODITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
+		RINGWOODITE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
 
-		SKYSTONE_OPAL_ORE = createCopy(COAL_ORE);
+		SKYSTONE_OPAL_ORE = createOre(3.0F, 3, 7);
 
-		SMOOTH_BASALT_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		SMOOTH_BASALT_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		SMOOTH_BASALT_DIAMOND_ORE = createCopy(COAL_ORE);
-		SMOOTH_BASALT_GOLD_ORE = createCopy(COAL_ORE);
+		SMOOTH_BASALT_CHALCEDONY_ORE = createBasaltOre(3.0F, 3.0F, 3, 7);
+		SMOOTH_BASALT_CLINOHUMITE_ORE = createBasaltOre(3.0F, 3.0F, 3, 7);
+		SMOOTH_BASALT_DIAMOND_ORE = createBasaltOre(3.0F, 3.0F, 3, 7);
+		SMOOTH_BASALT_GOLD_ORE = createBasaltOre(3.0F, 3.0F, 0, 0);
 
-		STORCEAN_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		STORCEAN_SILICON_ORE = createCopy(COAL_ORE);
-		STORCEAN_TUNGSTEN_ORE = createCopy(COAL_ORE);
+		STORCEAN_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		STORCEAN_SILICON_ORE = createOre(3.0F);
+		STORCEAN_TUNGSTEN_ORE = createOre(3.0F);
 
-		STORCENDITE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		STORCENDITE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		STORCENDITE_COAL_ORE = createCopy(COAL_ORE);
-		STORCENDITE_COPPER_ORE = createCopy(COAL_ORE);
-		STORCENDITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		STORCENDITE_ENSTATITE_ORE = createCopy(COAL_ORE);
-		STORCENDITE_IRON_ORE = createCopy(COAL_ORE);
-		STORCENDITE_OPAL_ORE = createCopy(COAL_ORE);
-		STORCENDITE_RUBY_ORE = createCopy(COAL_ORE);
-		STORCENDITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		STORCENDITE_SILICON_ORE = createCopy(COAL_ORE);
-		STORCENDITE_SPHENE_ORE = createCopy(COAL_ORE);
-		STORCENDITE_SPINEL_ORE = createCopy(COAL_ORE);
-		STORCENDITE_SUGILITE_ORE = createCopy(COAL_ORE);
-		STORCENDITE_URANIUM_ORE = createCopy(COAL_ORE);
-		STORCENDITE_URANOLUMEN_ORE = createCopy(COAL_ORE);
+		STORCENDITE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_COAL_ORE = createOre(3.0F, 0, 2);
+		STORCENDITE_COPPER_ORE = createOre(3.0F);
+		STORCENDITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_ENSTATITE_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_IRON_ORE = createOre(3.0F);
+		STORCENDITE_OPAL_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_RUBY_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_SILICON_ORE = createOre(3.0F);
+		STORCENDITE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_SUGILITE_ORE = createOre(3.0F, 3, 7);
+		STORCENDITE_URANIUM_ORE = createOre(3.0F);
+		STORCENDITE_URANOLUMEN_ORE = createOre(3.0F);
 
-		STORCERACK_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		STORCERACK_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		STORCERACK_COAL_ORE = createCopy(COAL_ORE);
-		STORCERACK_COPPER_ORE = createCopy(COAL_ORE);
-		STORCERACK_DIAMOND_ORE = createCopy(COAL_ORE);
-		STORCERACK_GOLD_ORE = createCopy(COAL_ORE);
-		STORCERACK_IRON_ORE = createCopy(COAL_ORE);
-		STORCERACK_OPAL_ORE = createCopy(COAL_ORE);
-		STORCERACK_REDSTONE_ORE = createCopy(COAL_ORE);
-		STORCERACK_RUBY_ORE = createCopy(COAL_ORE);
-		STORCERACK_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		STORCERACK_SILICON_ORE = createCopy(COAL_ORE);
-		STORCERACK_SPHENE_ORE = createCopy(COAL_ORE);
-		STORCERACK_SPINEL_ORE = createCopy(COAL_ORE);
-		STORCERACK_SUGILITE_ORE = createCopy(COAL_ORE);
-		STORCERACK_TUNGSTEN_ORE = createCopy(COAL_ORE);
-		STORCERACK_URANOLUMEN_ORE = createCopy(COAL_ORE);
+		STORCERACK_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_COAL_ORE = createOre(3.0F, 0, 2);
+		STORCERACK_COPPER_ORE = createOre(3.0F);
+		STORCERACK_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_GOLD_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_IRON_ORE = createOre(3.0F);
+		STORCERACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		STORCERACK_RUBY_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_SILICON_ORE = createOre(3.0F);
+		STORCERACK_SPHENE_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_SPINEL_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_SUGILITE_ORE = createOre(3.0F, 3, 7);
+		STORCERACK_TUNGSTEN_ORE = createOre(3.0F);
+		STORCERACK_URANOLUMEN_ORE = createOre(3.0F);
 
-		SULFUR_STONE_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		SULFUR_STONE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		SULFUR_STONE_COAL_ORE = createCopy(COAL_ORE);
+		SULFUR_STONE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
+		SULFUR_STONE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		SULFUR_STONE_COAL_ORE = createOre(3.0F, 0, 2);
 
-		TUFF_CHALCEDONY_ORE = createCopy(COAL_ORE);
-		TUFF_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		TUFF_COAL_ORE = createCopy(COAL_ORE);
-		TUFF_DIAMOND_ORE = createCopy(COAL_ORE);
-		TUFF_GOLD_ORE = createCopy(COAL_ORE);
+		TUFF_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
+		TUFF_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		TUFF_COAL_ORE = createOre(3.0F, 0, 2);
+		TUFF_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		TUFF_GOLD_ORE = createOre(3.0F);
 
-		VERDINE_COAL_ORE = createCopy(COAL_ORE);
+		VERDINE_COAL_ORE = createOre(3.0F, 0, 2);
 
-		VIRDAL_STONE_AQUAMARINE_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_COAL_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_COPPER_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_DIAMOND_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_IRON_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_OPAL_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_RUBY_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_SILICON_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_SPHENE_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_SPINEL_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_SUGILITE_ORE = createCopy(COAL_ORE);
-		VIRDAL_STONE_URANOLUMEN_ORE = createCopy(COAL_ORE);
+		VIRDAL_STONE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		VIRDAL_STONE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		VIRDAL_STONE_COAL_ORE = createOre(3.0F, 0, 2);
+		VIRDAL_STONE_COPPER_ORE = createOre(3.0F);
+		VIRDAL_STONE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		VIRDAL_STONE_IRON_ORE = createOre(3.0F);
+		VIRDAL_STONE_OPAL_ORE = createOre(3.0F, 3, 7);
+		VIRDAL_STONE_RUBY_ORE = createOre(3.0F, 3, 7);
+		VIRDAL_STONE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		VIRDAL_STONE_SILICON_ORE = createOre(3.0F);
+		VIRDAL_STONE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		VIRDAL_STONE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		VIRDAL_STONE_SUGILITE_ORE = createOre(3.0F, 3, 7);
+		VIRDAL_STONE_URANOLUMEN_ORE = createOre(3.0F);
 
-		WAVED_BEDROCK_DIAMOND_ORE = createCopy(COAL_ORE);
-		WAVED_BEDROCK_DIOPSIDE_ORE = createCopy(COAL_ORE);
-		WAVED_BEDROCK_MORGANITE_ORE = createCopy(COAL_ORE);
-		WAVED_BEDROCK_TANZANITE_ORE = createCopy(COAL_ORE);
+		WAVED_BEDROCK_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		WAVED_BEDROCK_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
+		WAVED_BEDROCK_MORGANITE_ORE = createOre(3.0F, 3, 7);
+		WAVED_BEDROCK_TANZANITE_ORE = createOre(3.0F, 3, 7);
 
-		WAVEITE_CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		WAVEITE_COAL_ORE = createCopy(COAL_ORE);
-		WAVEITE_COPPER_ORE = createCopy(COAL_ORE);
-		WAVEITE_DIAMOND_ORE = createCopy(COAL_ORE);
-		WAVEITE_EMERALD_ORE = createCopy(COAL_ORE);
-		WAVEITE_IRON_ORE = createCopy(COAL_ORE);
-		WAVEITE_GARNET_ORE = createCopy(COAL_ORE);
-		WAVEITE_GOLD_ORE = createCopy(COAL_ORE);
-		WAVEITE_LAPIS_ORE = createCopy(COAL_ORE);
-		WAVEITE_MORGANITE_ORE = createCopy(COAL_ORE);
-		WAVEITE_REDSTONE_ORE = createCopy(COAL_ORE);
-		WAVEITE_RUBY_ORE = createCopy(COAL_ORE);
-		WAVEITE_SAPPHIRE_ORE = createCopy(COAL_ORE);
-		WAVEITE_SILICON_ORE = createCopy(COAL_ORE);
-		WAVEITE_SILVER_ORE = createCopy(COAL_ORE);
-		WAVEITE_SPHENE_ORE = createCopy(COAL_ORE);
-		WAVEITE_SPINEL_ORE = createCopy(COAL_ORE);
-		WAVEITE_SUGILITE_ORE = createCopy(COAL_ORE);
-		WAVEITE_TANZANITE_ORE = createCopy(COAL_ORE);
-		WAVEITE_TOPAZ_ORE = createCopy(COAL_ORE);
+		WAVEITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_COAL_ORE = createOre(3.0F, 0, 2);
+		WAVEITE_COPPER_ORE = createOre(3.0F);
+		WAVEITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_EMERALD_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_IRON_ORE = createOre(3.0F);
+		WAVEITE_GARNET_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_GOLD_ORE = createOre(3.0F);
+		WAVEITE_LAPIS_ORE = createOre(3.0F, 2, 5);
+		WAVEITE_MORGANITE_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		WAVEITE_RUBY_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_SILICON_ORE = createOre(3.0F);
+		WAVEITE_SILVER_ORE = createOre(3.0F);
+		WAVEITE_SPHENE_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_SPINEL_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_SUGILITE_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_TANZANITE_ORE = createOre(3.0F, 3, 7);
+		WAVEITE_TOPAZ_ORE = createOre(3.0F, 3, 7);
 
-		ACTINIUM_ORE = createCopy(COAL_ORE);
-		AQUAMARINE_ORE = createCopy(COAL_ORE);
-		BLACK_OPAL_ORE = createCopy(COAL_ORE);
-		CLINOHUMITE_ORE = createCopy(COAL_ORE);
-		ENSTATITE_ORE = createCopy(COAL_ORE);
-		MORGANITE_ORE = createCopy(COAL_ORE);
-		OPAL_ORE = createCopy(COAL_ORE);
-		RUBY_ORE = createCopy(COAL_ORE);
-		SAPPHIRE_ORE = createCopy(COAL_ORE);
-		SUGILITE_ORE = createCopy(COAL_ORE);
-		SPHENE_ORE = createCopy(COAL_ORE);
-		SPINEL_ORE = createCopy(COAL_ORE);
-		TANZANITE_ORE = createCopy(COAL_ORE);
-		TOPAZ_ORE = createCopy(COAL_ORE);
+		ACTINIUM_ORE = createOre(3.0F);
+		AQUAMARINE_ORE = createOre(3.0F, 3, 7);
+		BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
+		CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
+		ENSTATITE_ORE = createOre(3.0F, 3, 7);
+		MORGANITE_ORE = createOre(3.0F, 3, 7);
+		OPAL_ORE = createOre(3.0F, 3, 7);
+		RUBY_ORE = createOre(3.0F, 3, 7);
+		SAPPHIRE_ORE = createOre(3.0F, 3, 7);
+		SUGILITE_ORE = createOre(3.0F, 3, 7);
+		SPHENE_ORE = createOre(3.0F, 3, 7);
+		SPINEL_ORE = createOre(3.0F, 3, 7);
+		TANZANITE_ORE = createOre(3.0F, 3, 7);
+		TOPAZ_ORE = createOre(3.0F, 3, 7);
 
 		/* RAW BLOCKS */
 		RAW_ACTINIUM_BLOCK = createCopy(RAW_IRON_BLOCK);
@@ -4496,6 +4508,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:light_opalite", LIGHT_OPALITE);
 		Registry.register(BLOCK, "deep_trenches:lushine", LUSHINE);
 		Registry.register(BLOCK, "deep_trenches:lushine_pillar", LUSHINE_PILLAR);
+		Registry.register(BLOCK, "deep_trenches:lustrite_waveite", LUSTERED_WAVEITE);
 		Registry.register(BLOCK, "deep_trenches:lustrite", LUSTRITE);
 		Registry.register(BLOCK, "deep_trenches:poinine", POININE);
 		Registry.register(BLOCK, "deep_trenches:ringwoodite", RINGWOODITE);
@@ -4776,7 +4789,6 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:limestone_spinel_ore", LIMESTONE_SPINEL_ORE);
 		Registry.register(BLOCK, "deep_trenches:limestone_sugilite_ore", LIMESTONE_SUGILITE_ORE);
 
-		Registry.register(BLOCK, "deep_trenches:lustered_waveite", LUSTERED_WAVEITE);
 		Registry.register(BLOCK, "deep_trenches:lustered_waveite_sapphire_ore", LUSTERED_WAVEITE_SAPPHIRE_ORE);
 		Registry.register(BLOCK, "deep_trenches:lustered_waveite_tanzanite_ore", LUSTERED_WAVEITE_TANZANITE_ORE);
 
