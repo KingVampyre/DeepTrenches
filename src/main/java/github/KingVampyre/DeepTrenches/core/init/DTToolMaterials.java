@@ -15,7 +15,7 @@ public enum DTToolMaterials implements ToolMaterial {
 	DIOPSIDE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.DIOPSIDE)),
 	ENRON(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.ENRON_INGOT)),
 	ENSTATITE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.ENSTATITE)),
-	GYLDELION(MiningLevels.WOOD, 32, 12F, 0, 22, () -> Ingredient.ofItems(DTItems.GYLDELION_INGOT)),
+	GYLDELION(MiningLevels.IRON, 32, 12F, 0, 22, () -> Ingredient.ofItems(DTItems.GYLDELION_INGOT)),
 	KRALCTIUM(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.KRALCTIUM_INGOT)),
 	MORGANITE(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.MORGANITE)),
 	RUBY(MiningLevels.IRON, 250, 6F, 2F, 14, () -> Ingredient.ofItems(DTItems.RUBY)),
