@@ -92,7 +92,7 @@ public class DTBiomeCreator {
         builder.feature(VEGETAL_DECORATION, BLACK_BIRCH_FOREST_FLOWER);
         builder.feature(VEGETAL_DECORATION, BLACK_BIRCH_FOREST_FLOWER_VEGETATION);
 
-        var settings = DTSpawnSettings.builder(0.8F);
+        var settings = DTSpawnSettings.builder(0.25F);
 
         DTSpawnSettings.ambient(settings, AXOLOTL, 4, 1, 4);
         DTSpawnSettings.ambient(settings, BAT, 40, 2, 12);
@@ -123,7 +123,7 @@ public class DTBiomeCreator {
         builder.feature(VEGETAL_DECORATION, CHERRY_CLIFFS_FOREST_FLOWER);
         builder.feature(VEGETAL_DECORATION, CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION);
 
-        var settings = DTSpawnSettings.builder(0.6F);
+        var settings = DTSpawnSettings.builder(0.25F);
 
         DTSpawnSettings.ambient(settings, BAT, 20, 0, 6);
         DTSpawnSettings.creature(settings, CAT, 14, 1, 2);
@@ -155,27 +155,27 @@ public class DTBiomeCreator {
         builder.feature(VEGETAL_DECORATION, CHERRY_FOREST_FLOWER);
         builder.feature(VEGETAL_DECORATION, CHERRY_FOREST_FLOWER_VEGETATION);
 
-        var settings = DTSpawnSettings.builder(0.6F);
+        var settings = DTSpawnSettings.builder(0.2F);
 
         DTSpawnSettings.ambient(settings, BAT, 5, 0, 3);
         DTSpawnSettings.creature(settings, CAT, 4, 1, 2);
-        DTSpawnSettings.creature(settings, CHICKEN, 4, 1, 6);
-        DTSpawnSettings.creature(settings, COW, 6, 2, 4);
+        DTSpawnSettings.creature(settings, CHICKEN, 8, 1, 4);
+        DTSpawnSettings.creature(settings, COW, 10, 2, 4);
         DTSpawnSettings.creature(settings, GOAT, 2, 1, 1);
-        DTSpawnSettings.creature(settings, FOX, 2, 2, 4);
-        DTSpawnSettings.creature(settings, PARROT, 6, 2, 24);
-        DTSpawnSettings.creature(settings, PIG, 2, 2, 2);
-        DTSpawnSettings.creature(settings, RABBIT, 10, 3, 8);
-        DTSpawnSettings.creature(settings, SHEEP, 10, 2, 8);
-        DTSpawnSettings.creature(settings, WOLF, 1, 2, 4);
-        DTSpawnSettings.monster(settings, ENDERMAN, 2, 1, 4);
-        DTSpawnSettings.monster(settings, SKELETON, 2, 1, 4);
-        DTSpawnSettings.monster(settings, SPIDER, 2, 4, 4);
-        DTSpawnSettings.monster(settings, WITCH, 1, 1, 2);
-        DTSpawnSettings.monster(settings, ZOMBIE, 1, 1, 2);
-        DTSpawnSettings.monster(settings, ZOMBIE_VILLAGER, 1, 1, 3);
+        DTSpawnSettings.creature(settings, FOX, 2, 1, 3);
+        DTSpawnSettings.creature(settings, PARROT, 2, 2, 4);
+        DTSpawnSettings.creature(settings, PIG, 8, 2, 2);
+        DTSpawnSettings.creature(settings, RABBIT, 15, 2, 3);
+        DTSpawnSettings.creature(settings, SHEEP, 15, 1, 2);
+        DTSpawnSettings.creature(settings, WOLF, 1, 2, 3);
+        DTSpawnSettings.monster(settings, ENDERMAN, 5, 1, 2);
+        DTSpawnSettings.monster(settings, SKELETON, 55, 1, 2);
+        DTSpawnSettings.monster(settings, SPIDER, 60, 2, 4);
+        DTSpawnSettings.monster(settings, WITCH, 5, 1, 2);
+        DTSpawnSettings.monster(settings, ZOMBIE, 65, 1, 2);
+        DTSpawnSettings.monster(settings, ZOMBIE_VILLAGER, 5, 1, 2);
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 1, 1, 2);
-        DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 4, 2, 6);
+        DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 4, 2, 4);
 
         return createClearForest(FOREST, 0.9F, 0.56F, true, CHERRY_FOREST, settings.build(), builder);
     }
@@ -187,7 +187,7 @@ public class DTBiomeCreator {
         builder.feature(VEGETAL_DECORATION, PLUM_FOREST_FLOWER);
         builder.feature(VEGETAL_DECORATION, PLUM_FOREST_FLOWER_VEGETATION);
 
-        var settings = DTSpawnSettings.builder(0.6F);
+        var settings = DTSpawnSettings.builder(0.25F);
 
         DTSpawnSettings.ambient(settings, BAT, 25, 2, 6);
         DTSpawnSettings.creature(settings, CHICKEN, 4, 1, 1);
@@ -216,7 +216,7 @@ public class DTBiomeCreator {
         builder.feature(VEGETAL_DECORATION, THUNDERCLOUD_PLUM_FOREST_FLOWER);
         builder.feature(VEGETAL_DECORATION, THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION);
 
-        var settings = DTSpawnSettings.builder(0.6F);
+        var settings = DTSpawnSettings.builder(0.25F);
 
         DTSpawnSettings.ambient(settings, BAT, 40, 2, 8);
         DTSpawnSettings.creature(settings, CHICKEN, 4, 1, 1);

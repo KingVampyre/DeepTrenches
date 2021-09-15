@@ -330,6 +330,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.CYAN_BLUE_VIOLET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.CYCAWLER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.GARDEN_PINKS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.GREEN_PANSY, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.GYLDELION_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LIME_SPURGE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.LUPIN_FLOWER, RenderLayer.getCutout());
@@ -483,6 +484,7 @@ public class DeepTrenchesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_CYAN_BLUE_VIOLET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_CYCAWLER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_GARDEN_PINKS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_GREEN_PANSY, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_GYLDELION_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_LIMEFORK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DTBlocks.POTTED_MARSH_VIOLET, RenderLayer.getCutout());
