@@ -109,7 +109,7 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 30, 4, 10);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 25, 4, 8);
 
-        return createForest(RAIN, FOREST, 0.9F, 0.57F, BLACK_BIRCH_FOREST, settings.build(), builder);
+        return createForest(RAIN, FOREST, 0.9F, 0.57F, true, BLACK_BIRCH_FOREST, settings.build(), builder);
     }
 
     public static Biome createCherryCliffsForest() {
@@ -137,7 +137,7 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 4, 1, 2);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 8, 2, 6);
 
-        return createForest(RAIN, FOREST, 0.9F, 0.56F, CHERRY_CLIFFS_FOREST, settings.build(), builder);
+        return createForest(RAIN, FOREST, 0.9F, 0.56F, true, CHERRY_CLIFFS_FOREST, settings.build(), builder);
     }
 
     public static Biome createCherryForest() {
@@ -165,7 +165,7 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 1, 1, 2);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 4, 2, 6);
 
-        return createForest(RAIN, FOREST, 0.9F, 0.56F, CHERRY_FOREST, settings.build(), builder);
+        return createForest(RAIN, FOREST, 0.9F, 0.56F, true, CHERRY_FOREST, settings.build(), builder);
     }
 
     public static Biome createPlumForest() {
@@ -190,7 +190,7 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 15, 4, 6);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 30, 4, 6);
 
-        return createForest(RAIN, FOREST, 1.1F, 0.6F, PLUM_FOREST, settings.build(), builder);
+        return createForest(RAIN, FOREST, 1.1F, 0.6F, true, PLUM_FOREST, settings.build(), builder);
     }
 
     public static Biome createThundercloudPlumForest() {
@@ -217,7 +217,7 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 4, 2, 6);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 15, 4, 4);
 
-        return createForest(RAIN, FOREST, 0.76F, 0.47F, THUNDERCLOUD_PLUM_FOREST, settings.build(), builder);
+        return createForest(RAIN, FOREST, 0.76F, 0.47F, true, THUNDERCLOUD_PLUM_FOREST, settings.build(), builder);
     }
 
     protected static Biome createAlmondForest(Biome.Category category, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
@@ -234,10 +234,10 @@ public class DTBiomeCreator {
         builder.feature(LAKES, LAKE_CLEAR_WATER);
         builder.feature(LAKES, LAKE_LAVA);
 
-        return createForest(RAIN, category, 1.0F, 0.55F, ALMOND_FOREST, spawnSettings, builder);
+        return createForest(RAIN, category, 1.0F, 0.55F, false, ALMOND_FOREST, spawnSettings, builder);
     }
 
-    protected static Biome createForest(Biome.Precipitation precipitation, Biome.Category category, float temperature, float downfall, BiomeEffects biomeEffects, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
+    protected static Biome createForest(Biome.Precipitation precipitation, Biome.Category category, float temperature, float downfall, boolean mineables, BiomeEffects biomeEffects, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
         DefaultBiomeFeatures.addAmethystGeodes(builder);
         DefaultBiomeFeatures.addDefaultOres(builder);
         DefaultBiomeFeatures.addDefaultDisks(builder);
@@ -248,6 +248,9 @@ public class DTBiomeCreator {
         DefaultBiomeFeatures.addForestGrass(builder);
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
         DefaultBiomeFeatures.addLandCarvers(builder);
+
+        if(mineables)
+            DefaultBiomeFeatures.addMineables(builder);
 
         builder.structureFeature(RUINED_PORTAL);
 
