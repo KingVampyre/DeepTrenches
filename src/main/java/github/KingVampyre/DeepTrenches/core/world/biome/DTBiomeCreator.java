@@ -226,13 +226,7 @@ public class DTBiomeCreator {
         builder.feature(UNDERGROUND_ORES, PROTOTYPE_ORE_GRAVEL);
         builder.feature(UNDERGROUND_ORES, ORE_CALCITE);
         builder.feature(UNDERGROUND_ORES, PROTOTYPE_ORE_TUFF);
-
         builder.feature(VEGETAL_DECORATION, PROTOTYPE_GLOW_LICHEN);
-        builder.feature(VEGETAL_DECORATION, SPRING_CLEAR_WATER);
-        builder.feature(VEGETAL_DECORATION, SPRING_LAVA);
-
-        builder.feature(LAKES, LAKE_CLEAR_WATER);
-        builder.feature(LAKES, LAKE_LAVA);
 
         return createForest(RAIN, category, 1.0F, 0.55F, false, ALMOND_FOREST, spawnSettings, builder);
     }
@@ -248,6 +242,9 @@ public class DTBiomeCreator {
         DefaultBiomeFeatures.addForestGrass(builder);
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
         DefaultBiomeFeatures.addLandCarvers(builder);
+
+        DTBiomeFeatures.addClearWaterLakes(builder);
+        DTBiomeFeatures.addClearWaterSprings(builder);
 
         if(mineables)
             DefaultBiomeFeatures.addMineables(builder);
