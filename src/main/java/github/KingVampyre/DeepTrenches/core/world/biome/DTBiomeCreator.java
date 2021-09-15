@@ -12,7 +12,6 @@ import static github.KingVampyre.DeepTrenches.core.world.biome.DTBiomeEffects.*;
 import static net.minecraft.entity.EntityType.*;
 import static net.minecraft.world.biome.Biome.Category.FOREST;
 import static net.minecraft.world.biome.Biome.Category.JUNGLE;
-import static net.minecraft.world.biome.Biome.Precipitation.RAIN;
 import static net.minecraft.world.gen.GenerationStep.Feature.*;
 import static net.minecraft.world.gen.feature.ConfiguredFeatures.*;
 import static net.minecraft.world.gen.feature.ConfiguredStructureFeatures.RUINED_PORTAL;
@@ -88,7 +87,10 @@ public class DTBiomeCreator {
     public static Biome createBlackBirchForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
 
+        DefaultBiomeFeatures.addDefaultMushrooms(builder);
         builder.feature(VEGETAL_DECORATION, BLACK_BIRCH_FOREST_TREE);
+        builder.feature(VEGETAL_DECORATION, BLACK_BIRCH_FOREST_FLOWER);
+        builder.feature(VEGETAL_DECORATION, BLACK_BIRCH_FOREST_FLOWER_VEGETATION);
 
         var settings = DTSpawnSettings.builder(0.8F);
 
@@ -111,13 +113,15 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 30, 4, 10);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 25, 4, 8);
 
-        return createForest(RAIN, FOREST, 0.9F, 0.57F, true, BLACK_BIRCH_FOREST, settings.build(), builder);
+        return createClearForest(FOREST, 0.9F, 0.57F, true, BLACK_BIRCH_FOREST, settings.build(), builder);
     }
 
     public static Biome createCherryCliffsForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
 
         builder.feature(VEGETAL_DECORATION, CHERRY_CLIFFS_FOREST_TREE);
+        builder.feature(VEGETAL_DECORATION, CHERRY_CLIFFS_FOREST_FLOWER);
+        builder.feature(VEGETAL_DECORATION, CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION);
 
         var settings = DTSpawnSettings.builder(0.6F);
 
@@ -141,13 +145,15 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 4, 1, 2);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 8, 2, 6);
 
-        return createForest(RAIN, FOREST, 0.9F, 0.56F, true, CHERRY_CLIFFS_FOREST, settings.build(), builder);
+        return createClearForest(FOREST, 0.9F, 0.56F, true, CHERRY_CLIFFS_FOREST, settings.build(), builder);
     }
 
     public static Biome createCherryForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
 
         builder.feature(VEGETAL_DECORATION, CHERRY_FOREST_TREE);
+        builder.feature(VEGETAL_DECORATION, CHERRY_FOREST_FLOWER);
+        builder.feature(VEGETAL_DECORATION, CHERRY_FOREST_FLOWER_VEGETATION);
 
         var settings = DTSpawnSettings.builder(0.6F);
 
@@ -171,13 +177,15 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 1, 1, 2);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 4, 2, 6);
 
-        return createForest(RAIN, FOREST, 0.9F, 0.56F, true, CHERRY_FOREST, settings.build(), builder);
+        return createClearForest(FOREST, 0.9F, 0.56F, true, CHERRY_FOREST, settings.build(), builder);
     }
 
     public static Biome createPlumForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
 
         builder.feature(VEGETAL_DECORATION, PLUM_FOREST_TREE);
+        builder.feature(VEGETAL_DECORATION, PLUM_FOREST_FLOWER);
+        builder.feature(VEGETAL_DECORATION, PLUM_FOREST_FLOWER_VEGETATION);
 
         var settings = DTSpawnSettings.builder(0.6F);
 
@@ -198,13 +206,15 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 15, 4, 6);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 30, 4, 6);
 
-        return createForest(RAIN, FOREST, 1.1F, 0.6F, true, PLUM_FOREST, settings.build(), builder);
+        return createClearForest(FOREST, 1.1F, 0.6F, true, PLUM_FOREST, settings.build(), builder);
     }
 
     public static Biome createThundercloudPlumForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
 
         builder.feature(VEGETAL_DECORATION, THUNDERCLOUD_PLUM_FOREST_TREE);
+        builder.feature(VEGETAL_DECORATION, THUNDERCLOUD_PLUM_FOREST_FLOWER);
+        builder.feature(VEGETAL_DECORATION, THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION);
 
         var settings = DTSpawnSettings.builder(0.6F);
 
@@ -227,7 +237,7 @@ public class DTBiomeCreator {
         DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 4, 2, 6);
         DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 15, 4, 4);
 
-        return createForest(RAIN, FOREST, 0.76F, 0.47F, true, THUNDERCLOUD_PLUM_FOREST, settings.build(), builder);
+        return createClearForest(FOREST, 0.76F, 0.47F, true, THUNDERCLOUD_PLUM_FOREST, settings.build(), builder);
     }
 
     protected static Biome createAlmondForest(Biome.Category category, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
@@ -238,10 +248,10 @@ public class DTBiomeCreator {
         builder.feature(UNDERGROUND_ORES, PROTOTYPE_ORE_TUFF);
         builder.feature(VEGETAL_DECORATION, PROTOTYPE_GLOW_LICHEN);
 
-        return createForest(RAIN, category, 1.0F, 0.55F, false, ALMOND_FOREST, spawnSettings, builder);
+        return createClearForest(category, 1.0F, 0.55F, false, ALMOND_FOREST, spawnSettings, builder);
     }
 
-    protected static Biome createForest(Biome.Precipitation precipitation, Biome.Category category, float temperature, float downfall, boolean mineables, BiomeEffects biomeEffects, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
+    protected static Biome createClearForest(Biome.Category category, float temperature, float downfall, boolean mineables, BiomeEffects biomeEffects, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
         DefaultBiomeFeatures.addAmethystGeodes(builder);
         DefaultBiomeFeatures.addDefaultOres(builder);
         DefaultBiomeFeatures.addDefaultDisks(builder);
@@ -252,7 +262,9 @@ public class DTBiomeCreator {
         DefaultBiomeFeatures.addForestGrass(builder);
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
         DefaultBiomeFeatures.addLandCarvers(builder);
+        DefaultBiomeFeatures.addLargeFerns(builder);
 
+        DTBiomeFeatures.addClearForestGrass(builder);
         DTBiomeFeatures.addClearWaterLakes(builder);
         DTBiomeFeatures.addClearWaterSprings(builder);
 
@@ -262,7 +274,7 @@ public class DTBiomeCreator {
         builder.structureFeature(RUINED_PORTAL);
 
         return new Biome.Builder()
-                .precipitation(precipitation)
+                .precipitation(Biome.Precipitation.RAIN)
                 .category(category)
                 .temperature(temperature)
                 .downfall(downfall)

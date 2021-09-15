@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.util;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
@@ -11,8 +12,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
-
-import static net.minecraft.util.math.Direction.Axis.Y;
+import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class DTUtils {
 
@@ -29,6 +30,12 @@ public class DTUtils {
             return iterator.next();
         else
             return Arrays.stream(arr).iterator().next();
+    }
+
+    public static <T> ImmutableList<Supplier<T>> immutableList(T[] arr) {
+        return Stream.of(arr)
+                .map(feature -> (Supplier<T>) () -> feature)
+                .collect(ImmutableList.toImmutableList());
     }
 
     public static int count(WorldAccess world, BlockPos pos, Direction direction, Predicate<BlockState> continuePredicate, int range) {

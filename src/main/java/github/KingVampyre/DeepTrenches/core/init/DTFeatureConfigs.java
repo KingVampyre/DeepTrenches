@@ -1,6 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
 import com.google.common.collect.ImmutableList;
+import github.KingVampyre.DeepTrenches.core.util.DTUtils;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placer.BlockPlacer;
 import net.minecraft.world.gen.placer.DoublePlantPlacer;
@@ -14,11 +15,26 @@ public class DTFeatureConfigs {
 
     public static final RandomPatchFeatureConfig ALMOND_FOREST_FLOWER_CONFIG;
     public static final RandomPatchFeatureConfig ALMOND_PLUS_FOREST_FLOWER_CONFIG;
+    public static final RandomPatchFeatureConfig BLACK_BIRCH_FOREST_FLOWER_CONFIG;
+    public static final RandomPatchFeatureConfig CHERRY_CLIFFS_FOREST_FLOWER_CONFIG;
+    public static final RandomPatchFeatureConfig CHERRY_FOREST_FLOWER_CONFIG;
+    public static final RandomPatchFeatureConfig PLUM_FOREST_FLOWER_CONFIG;
+    public static final RandomPatchFeatureConfig THUNDERCLOUD_PLUM_FOREST_FLOWER_CONFIG;
 
     public static final SimpleRandomFeatureConfig ALMOND_FOREST_FLOWER_VEGETATION_CONFIG;
     public static final SimpleRandomFeatureConfig ALMOND_PLUS_FOREST_FLOWER_VEGETATION_CONFIG;
+    public static final SimpleRandomFeatureConfig BLACK_BIRCH_FOREST_FLOWER_VEGETATION_CONFIG;
+    public static final SimpleRandomFeatureConfig CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION_CONFIG;
+    public static final SimpleRandomFeatureConfig CHERRY_FOREST_FLOWER_VEGETATION_CONFIG;
+    public static final SimpleRandomFeatureConfig PLUM_FOREST_FLOWER_VEGETATION_CONFIG;
+    public static final SimpleRandomFeatureConfig THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION_CONFIG;
 
+    public static final RandomPatchFeatureConfig BLACK_LILY_CONFIG;
     public static final RandomPatchFeatureConfig LILAC_CONFIG;
+    public static final RandomPatchFeatureConfig ORANGE_LILY_CONFIG;
+    public static final RandomPatchFeatureConfig VELVET_LILY_CONFIG;
+
+    public static final RandomPatchFeatureConfig PATCH_CLEAR_FOREST_GRASS_CONFIG;
 
     public static final RandomFeatureConfig ALMOND_FOREST_TREE_CONFIG;
     public static final RandomFeatureConfig ALMOND_PLUS_FOREST_TREE_CONFIG;
@@ -32,27 +48,45 @@ public class DTFeatureConfigs {
         return new RandomPatchFeatureConfig.Builder(provider, placer);
     }
 
-    protected static RandomPatchFeatureConfig createDoublePlantConfig(BlockStateProvider provider) {
-        return builder(provider, DoublePlantPlacer.INSTANCE).tries(64).cannotProject().build();
+    protected static RandomPatchFeatureConfig createDoublePlacerConfig(BlockStateProvider provider, int tries) {
+        return builder(provider, DoublePlantPlacer.INSTANCE).tries(tries).cannotProject().build();
     }
 
-    protected static RandomPatchFeatureConfig createFlowerConfig(BlockStateProvider provider) {
-        return builder(provider, SimpleBlockPlacer.INSTANCE).tries(64).build();
+    protected static RandomPatchFeatureConfig createSimplePlacerConfig(BlockStateProvider provider, int tries) {
+        return builder(provider, SimpleBlockPlacer.INSTANCE).tries(tries).build();
+    }
+
+    protected static RandomPatchFeatureConfig createSimplePlacerConfig(BlockStateProvider provider) {
+        return createSimplePlacerConfig(provider, 64);
+    }
+
+    protected static SimpleRandomFeatureConfig createFlowerVegetationConfig(ConfiguredFeature<?, ?> ...features) {
+        return new SimpleRandomFeatureConfig(DTUtils.immutableList(features));
     }
 
     static {
-        LILAC_CONFIG = createDoublePlantConfig(LILAC_PROVIDER);
+        BLACK_LILY_CONFIG = createDoublePlacerConfig(BLACK_LILY_PROVIDER, 64);
+        LILAC_CONFIG = createDoublePlacerConfig(LILAC_PROVIDER, 64);
+        ORANGE_LILY_CONFIG = createDoublePlacerConfig(ORANGE_LILY_PROVIDER, 32);
+        VELVET_LILY_CONFIG = createDoublePlacerConfig(VELVET_LILY_PROVIDER, 32);
 
-        ALMOND_FOREST_FLOWER_CONFIG = createFlowerConfig(ALMOND_FOREST_FLOWER_PROVIDER);
-        ALMOND_PLUS_FOREST_FLOWER_CONFIG = createFlowerConfig(ALMOND_PLUS_FOREST_FLOWER_PROVIDER);
+        PATCH_CLEAR_FOREST_GRASS_CONFIG = createSimplePlacerConfig(PATCH_CLEAR_FOREST_GRASS_PROVIDER, 32);
 
-        ALMOND_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
-                () -> Feature.RANDOM_PATCH.configure(LILAC_CONFIG)
-        ));
+        ALMOND_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(ALMOND_FOREST_FLOWER_PROVIDER);
+        ALMOND_PLUS_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(ALMOND_PLUS_FOREST_FLOWER_PROVIDER);
+        BLACK_BIRCH_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(BLACK_BIRCH_FOREST_FLOWER_PROVIDER);
+        CHERRY_CLIFFS_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(CHERRY_CLIFFS_FOREST_FLOWER_PROVIDER);
+        CHERRY_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(CHERRY_FOREST_FLOWER_PROVIDER);
+        PLUM_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(PLUM_FOREST_FLOWER_PROVIDER);
+        THUNDERCLOUD_PLUM_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER);
 
-        ALMOND_PLUS_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
-                () -> Feature.RANDOM_PATCH.configure(LILAC_CONFIG)
-        ));
+        ALMOND_FOREST_FLOWER_VEGETATION_CONFIG = createFlowerVegetationConfig(LILAC);
+        ALMOND_PLUS_FOREST_FLOWER_VEGETATION_CONFIG = createFlowerVegetationConfig(LILAC);
+        BLACK_BIRCH_FOREST_FLOWER_VEGETATION_CONFIG = createFlowerVegetationConfig(BLACK_LILY, ORANGE_LILY, VELVET_LILY);
+        CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION_CONFIG = createFlowerVegetationConfig(LILAC);
+        CHERRY_FOREST_FLOWER_VEGETATION_CONFIG = createFlowerVegetationConfig(LILAC);
+        PLUM_FOREST_FLOWER_VEGETATION_CONFIG = createFlowerVegetationConfig(ORANGE_LILY, VELVET_LILY);
+        THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION_CONFIG = createFlowerVegetationConfig(LILAC);
 
         ALMOND_FOREST_TREE_CONFIG = new RandomFeatureConfig(ImmutableList.of(
                 ALMOND_REGULAR_BEEHIVES.withChance(0.25F),

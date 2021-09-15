@@ -127,11 +127,28 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PIN_CHERRY_MORE_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PIN_CHERRY_HALF_BEEHIVES;
 
+    public static final ConfiguredFeature<?, ?> BLACK_LILY;
+    public static final ConfiguredFeature<?, ?> LILAC;
+    public static final ConfiguredFeature<?, ?> ORANGE_LILY;
+    public static final ConfiguredFeature<?, ?> VELVET_LILY;
+
+    public static final ConfiguredFeature<?, ?> PATCH_CLEAR_FOREST_GRASS;
+
     public static final ConfiguredFeature<?, ?> ALMOND_FOREST_FLOWER;
     public static final ConfiguredFeature<?, ?> ALMOND_PLUS_FOREST_FLOWER;
+    public static final ConfiguredFeature<?, ?> BLACK_BIRCH_FOREST_FLOWER;
+    public static final ConfiguredFeature<?, ?> CHERRY_CLIFFS_FOREST_FLOWER;
+    public static final ConfiguredFeature<?, ?> CHERRY_FOREST_FLOWER;
+    public static final ConfiguredFeature<?, ?> PLUM_FOREST_FLOWER;
+    public static final ConfiguredFeature<?, ?> THUNDERCLOUD_PLUM_FOREST_FLOWER;
 
     public static final ConfiguredFeature<?, ?> ALMOND_FOREST_FLOWER_VEGETATION;
     public static final ConfiguredFeature<?, ?> ALMOND_PLUS_FOREST_FLOWER_VEGETATION;
+    public static final ConfiguredFeature<?, ?> BLACK_BIRCH_FOREST_FLOWER_VEGETATION;
+    public static final ConfiguredFeature<?, ?> CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION;
+    public static final ConfiguredFeature<?, ?> CHERRY_FOREST_FLOWER_VEGETATION;
+    public static final ConfiguredFeature<?, ?> PLUM_FOREST_FLOWER_VEGETATION;
+    public static final ConfiguredFeature<?, ?> THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION;
 
     public static final ConfiguredFeature<?, ?> ALMOND_FOREST_TREE;
     public static final ConfiguredFeature<?, ?> ALMOND_PLUS_FOREST_TREE;
@@ -143,7 +160,6 @@ public class DTConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> LAKE_CLEAR_WATER;
     public static final ConfiguredFeature<?, ?> SPRING_CLEAR_WATER;
-
     public static final ConfiguredFeature<?, ?> ORE_CALCITE;
 
     protected static ConfiguredFeature<TreeFeatureConfig, ?> createTree(ConfiguredFeature<TreeFeatureConfig, ?> tree, TreeDecorator ...decorators) {
@@ -166,6 +182,10 @@ public class DTConfiguredFeatures {
 
     protected static ConfiguredFeature<TreeFeatureConfig, ?> createGreatTree(BlockStateProvider trunk, BlockStateProvider foliage, BlockStateProvider sapling) {
         return Feature.TREE.configure(new TreeFeatureConfig.Builder(trunk, new GreatTrunkPlacer(12, 7, 0), foliage, sapling, new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).ignoreVines().build());
+    }
+
+    protected static ConfiguredFeature<?, ?> createRandomPatch(RandomPatchFeatureConfig config) {
+        return Feature.RANDOM_PATCH.configure(config);
     }
 
     protected static ConfiguredFeature<?, ?> createFlower(RandomPatchFeatureConfig config) {
@@ -290,12 +310,29 @@ public class DTConfiguredFeatures {
         GREAT_PIN_CHERRY_REGULAR_BEEHIVES = createTree(GREAT_PIN_CHERRY, REGULAR_BEEHIVES_TREES);
         GREAT_PIN_CHERRY_MORE_BEEHIVES = createTree(GREAT_PIN_CHERRY, MORE_BEEHIVES_TREES);
         GREAT_PIN_CHERRY_HALF_BEEHIVES = createTree(GREAT_PIN_CHERRY, HALF_BEEHIVES_TREES);
-        
+
+        BLACK_LILY = createRandomPatch(BLACK_LILY_CONFIG);
+        LILAC = createRandomPatch(LILAC_CONFIG);
+        ORANGE_LILY = createRandomPatch(ORANGE_LILY_CONFIG);
+        VELVET_LILY = createRandomPatch(VELVET_LILY_CONFIG);
+
+        PATCH_CLEAR_FOREST_GRASS = createRandomPatch(PATCH_CLEAR_FOREST_GRASS_CONFIG);
+
         ALMOND_FOREST_FLOWER = createFlower(ALMOND_FOREST_FLOWER_CONFIG);
         ALMOND_PLUS_FOREST_FLOWER = createFlower(ALMOND_PLUS_FOREST_FLOWER_CONFIG);
+        BLACK_BIRCH_FOREST_FLOWER = createFlower(BLACK_BIRCH_FOREST_FLOWER_CONFIG);
+        CHERRY_CLIFFS_FOREST_FLOWER = createFlower(CHERRY_CLIFFS_FOREST_FLOWER_CONFIG);
+        CHERRY_FOREST_FLOWER = createFlower(CHERRY_FOREST_FLOWER_CONFIG);
+        PLUM_FOREST_FLOWER = createFlower(PLUM_FOREST_FLOWER_CONFIG);
+        THUNDERCLOUD_PLUM_FOREST_FLOWER = createFlower(THUNDERCLOUD_PLUM_FOREST_FLOWER_CONFIG);
 
         ALMOND_FOREST_FLOWER_VEGETATION = createFlowerVegetation(ALMOND_FOREST_FLOWER_VEGETATION_CONFIG);
         ALMOND_PLUS_FOREST_FLOWER_VEGETATION = createFlowerVegetation(ALMOND_PLUS_FOREST_FLOWER_VEGETATION_CONFIG);
+        BLACK_BIRCH_FOREST_FLOWER_VEGETATION = createFlowerVegetation(BLACK_BIRCH_FOREST_FLOWER_VEGETATION_CONFIG);
+        CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION = createFlowerVegetation(CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION_CONFIG);
+        CHERRY_FOREST_FLOWER_VEGETATION = createFlowerVegetation(CHERRY_FOREST_FLOWER_VEGETATION_CONFIG);
+        PLUM_FOREST_FLOWER_VEGETATION = createFlowerVegetation(PLUM_FOREST_FLOWER_VEGETATION_CONFIG);
+        THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION = createFlowerVegetation(THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION_CONFIG);
 
         ALMOND_FOREST_TREE = createTree(ALMOND_FOREST_TREE_CONFIG);
         ALMOND_PLUS_FOREST_TREE = createTree(ALMOND_PLUS_FOREST_TREE_CONFIG);
@@ -404,11 +441,28 @@ public class DTConfiguredFeatures {
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry_more_beehives", GREAT_PIN_CHERRY_MORE_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry_half_beehives", GREAT_PIN_CHERRY_HALF_BEEHIVES);
 
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:black_lily", BLACK_LILY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:lilac", LILAC);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:orange_lily", ORANGE_LILY);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:velvet_lily", VELVET_LILY);
+
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:patch_clear_forest_grass", PATCH_CLEAR_FOREST_GRASS);
+
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower", ALMOND_FOREST_FLOWER);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower", ALMOND_PLUS_FOREST_FLOWER);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:black_birch_forest_flower", BLACK_BIRCH_FOREST_FLOWER);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_cliffs_forest_flower", CHERRY_CLIFFS_FOREST_FLOWER);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_forest_flower", CHERRY_FOREST_FLOWER);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:plum_forest_flower", PLUM_FOREST_FLOWER);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:thundercloud_plum_forest_flower", THUNDERCLOUD_PLUM_FOREST_FLOWER);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower_vegetation", ALMOND_FOREST_FLOWER_VEGETATION);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower_vegetation", ALMOND_PLUS_FOREST_FLOWER_VEGETATION);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:black_birch_forest_flower_vegetation", BLACK_BIRCH_FOREST_FLOWER_VEGETATION);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_cliffs_forest_flower_vegetation", CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_forest_flower_vegetation", CHERRY_FOREST_FLOWER_VEGETATION);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:plum_forest_flower_vegetation", PLUM_FOREST_FLOWER_VEGETATION);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:thundercloud_plum_forest_flower_vegetation", THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_tree", ALMOND_FOREST_TREE);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_tree", ALMOND_PLUS_FOREST_TREE);

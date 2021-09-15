@@ -9,6 +9,8 @@ import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.*;
+import static net.minecraft.block.Blocks.FERN;
+import static net.minecraft.block.Blocks.GRASS;
 
 public class DTBlockStateProviders {
 
@@ -84,13 +86,27 @@ public class DTBlockStateProviders {
     public static final BlockStateProvider TEAK_TRUNK_PROVIDER;
     public static final BlockStateProvider THUNDERCLOUD_PLUM_TRUNK_PROVIDER;
 
+    public static final BlockStateProvider BLACK_LILY_PROVIDER;
+    public static final BlockStateProvider LILAC_PROVIDER;
+    public static final BlockStateProvider ORANGE_LILY_PROVIDER;
+    public static final BlockStateProvider VELVET_LILY_PROVIDER;
+
+    public static final BlockStateProvider PATCH_CLEAR_FOREST_GRASS_PROVIDER;
+
     public static final BlockStateProvider ALMOND_FOREST_FLOWER_PROVIDER;
     public static final BlockStateProvider ALMOND_PLUS_FOREST_FLOWER_PROVIDER;
-
-    public static final BlockStateProvider LILAC_PROVIDER;
+    public static final BlockStateProvider BLACK_BIRCH_FOREST_FLOWER_PROVIDER;
+    public static final BlockStateProvider CHERRY_CLIFFS_FOREST_FLOWER_PROVIDER;
+    public static final BlockStateProvider CHERRY_FOREST_FLOWER_PROVIDER;
+    public static final BlockStateProvider PLUM_FOREST_FLOWER_PROVIDER;
+    public static final BlockStateProvider THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER;
 
     protected static BlockStateProvider simple(Block block) {
         return new SimpleBlockStateProvider(block.getDefaultState());
+    }
+
+    protected static WeightedBlockStateProvider weighted(DataPool.Builder<BlockState> builder) {
+        return new WeightedBlockStateProvider(builder.build());
     }
 
     static {
@@ -166,13 +182,13 @@ public class DTBlockStateProviders {
         TEAK_TRUNK_PROVIDER = simple(TEAK_LOG);
         THUNDERCLOUD_PLUM_TRUNK_PROVIDER = simple(THUNDERCLOUD_PLUM_LOG);
 
-        ALMOND_FOREST_FLOWER_PROVIDER = new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+        ALMOND_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
                 .add(BLUE_VIOLET.getDefaultState(), 1)
                 .add(CYAN_BLUE_VIOLET.getDefaultState(), 1)
                 .add(WILD_PANSY.getDefaultState(), 1)
         );
 
-        ALMOND_PLUS_FOREST_FLOWER_PROVIDER = new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+        ALMOND_PLUS_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
                 .add(BLUE_VIOLET.getDefaultState(), 1)
                 .add(CYAN_BLUE_VIOLET.getDefaultState(), 1)
                 .add(WILD_PANSY.getDefaultState(), 1)
@@ -183,7 +199,41 @@ public class DTBlockStateProviders {
                 .add(NATIVE_VIOLET.getDefaultState(), 1)
         );
 
+        BLACK_BIRCH_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
+                .add(GREEN_PANSY.getDefaultState(), 1)
+                .add(BLACK_PANSY.getDefaultState(), 1)
+                .add(BLUE_PANSY.getDefaultState(), 1)
+                .add(PINK_ROSE.getDefaultState(), 1)
+                .add(PINK_ROSE_BUSH.getDefaultState(), 1)
+        );
+
+        CHERRY_CLIFFS_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
+                .add(GREEN_PANSY.getDefaultState(), 1)
+        );
+
+        CHERRY_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
+                .add(GREEN_PANSY.getDefaultState(), 1)
+        );
+
+        PLUM_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
+                .add(YELLOW_VIOLET.getDefaultState(), 1)
+                .add(BROWN_PANSY.getDefaultState(), 1)
+        );
+
+        THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
+                .add(GREEN_PANSY.getDefaultState(), 1)
+        );
+
+        BLACK_LILY_PROVIDER = simple(BLACK_LILY);
         LILAC_PROVIDER = simple(Blocks.LILAC);
+        ORANGE_LILY_PROVIDER = simple(ORANGE_LILY);
+        VELVET_LILY_PROVIDER = simple(VELVET_LILY);
+
+        PATCH_CLEAR_FOREST_GRASS_PROVIDER = weighted(DataPool.<BlockState>builder()
+                .add(GRASS.getDefaultState(), 1)
+                .add(FERN.getDefaultState(), 4)
+        );
+
     }
 
 }
