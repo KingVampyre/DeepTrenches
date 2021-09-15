@@ -10,7 +10,6 @@ import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilders;
 import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.*;
 import static github.KingVampyre.DeepTrenches.core.world.biome.DTBiomeEffects.*;
 import static net.minecraft.entity.EntityType.*;
-import static net.minecraft.entity.SpawnGroup.*;
 import static net.minecraft.world.biome.Biome.Category.FOREST;
 import static net.minecraft.world.biome.Biome.Category.JUNGLE;
 import static net.minecraft.world.biome.Biome.Precipitation.RAIN;
@@ -28,30 +27,28 @@ public class DTBiomeCreator {
         builder.feature(VEGETAL_DECORATION, ALMOND_FOREST_TREE);
         builder.feature(VEGETAL_DECORATION, BROWN_MUSHROOM_NORMAL);
 
-        var spawnSettings = new SpawnSettings.Builder()
-                .spawn(AMBIENT, new SpawnSettings.SpawnEntry(BAT, 5, 2, 8))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(SHEEP, 10, 2, 6))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(PIG, 4, 2, 2))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(CHICKEN, 1, 1, 1))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(COW, 6, 2, 4))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(FOX, 1, 2, 3))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(RABBIT, 6, 3, 6))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(WOLF, 1, 1, 2))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SPIDER, 10, 2, 3))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE, 10, 1, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE_VILLAGER, 1, 1, 1))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SKELETON, 10, 1, 2))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(CREEPER, 10, 1, 2))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SLIME, 10, 1, 2))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ENDERMAN, 3, 1, 3))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(WITCH, 2, 1, 1))
-                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(GLOW_SQUID, 3, 4, 6))
-                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(AXOLOTL, 2, 4, 6))
-                .playerSpawnFriendly()
-                .creatureSpawnProbability(0.2F)
-                .build();
+        var settings = DTSpawnSettings.builder(0.2F);
 
-        return createAlmondForest(FOREST, spawnSettings, builder);
+        DTSpawnSettings.ambient(settings, BAT, 5, 2, 8);
+        DTSpawnSettings.creature(settings, CHICKEN, 1, 1, 1);
+        DTSpawnSettings.creature(settings, COW, 6, 2, 4);
+        DTSpawnSettings.creature(settings, FOX, 1, 2, 3);
+        DTSpawnSettings.creature(settings, PIG, 4, 2, 2);
+        DTSpawnSettings.creature(settings, RABBIT, 6, 3, 6);
+        DTSpawnSettings.creature(settings, SHEEP, 10, 2, 6);
+        DTSpawnSettings.creature(settings, WOLF, 1, 1, 2);
+        DTSpawnSettings.monster(settings, CREEPER, 10, 1, 2);
+        DTSpawnSettings.monster(settings, ENDERMAN, 3, 1, 3);
+        DTSpawnSettings.monster(settings, SKELETON, 10, 1, 2);
+        DTSpawnSettings.monster(settings, SLIME, 10, 1, 2);
+        DTSpawnSettings.monster(settings, SPIDER, 10, 2, 3);
+        DTSpawnSettings.monster(settings, WITCH, 2, 1, 1);
+        DTSpawnSettings.monster(settings, ZOMBIE, 10, 1, 4);
+        DTSpawnSettings.monster(settings, ZOMBIE_VILLAGER, 1, 1, 1);
+        DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 2, 4, 6);
+        DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 3, 4, 6);
+
+        return createAlmondForest(FOREST, settings.build(), builder);
     }
 
     public static Biome createAlmondPlusForest() {
@@ -62,68 +59,165 @@ public class DTBiomeCreator {
         builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_FOREST_TREE);
         builder.feature(VEGETAL_DECORATION, BROWN_MUSHROOM_NORMAL);
 
-        var spawnSettings = new SpawnSettings.Builder()
-                .spawn(AMBIENT, new SpawnSettings.SpawnEntry(BAT, 5, 2, 8))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(SHEEP, 6, 2, 6))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(PIG, 4, 2, 2))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(CHICKEN, 1, 1, 1))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(COW, 6, 2, 4))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(FOX, 1, 2, 4))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(OCELOT, 2, 1, 2))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(RABBIT, 2, 3, 6))
-                .spawn(CREATURE, new SpawnSettings.SpawnEntry(WOLF, 2, 1, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(CAVE_SPIDER, 8, 1, 2))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SPIDER, 12, 3, 5))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE, 8, 1, 2))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ZOMBIE_VILLAGER, 3, 1, 1))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SKELETON, 8, 1, 4))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(CREEPER, 8, 1, 2))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(SLIME, 4, 1, 1))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(ENDERMAN, 4, 1, 2))
-                .spawn(MONSTER, new SpawnSettings.SpawnEntry(WITCH, 3, 1, 1))
-                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(GLOW_SQUID, 5, 4, 6))
-                .spawn(UNDERGROUND_WATER_CREATURE, new SpawnSettings.SpawnEntry(AXOLOTL, 7, 4, 6))
-                .playerSpawnFriendly()
-                .creatureSpawnProbability(0.2F)
-                .build();
+        var settings = DTSpawnSettings.builder(0.2F);
 
-        return createAlmondForest(JUNGLE, spawnSettings, builder);
+        DTSpawnSettings.ambient(settings, BAT, 5, 2, 8);
+        DTSpawnSettings.creature(settings, CHICKEN, 1, 1, 1);
+        DTSpawnSettings.creature(settings, COW, 6, 2, 4);
+        DTSpawnSettings.creature(settings, FOX, 1, 2, 4);
+        DTSpawnSettings.creature(settings, OCELOT, 2, 1, 2);
+        DTSpawnSettings.creature(settings, PIG, 4, 2, 2);
+        DTSpawnSettings.creature(settings, RABBIT, 2, 3, 6);
+        DTSpawnSettings.creature(settings, SHEEP, 6, 2, 6);
+        DTSpawnSettings.creature(settings, WOLF, 2, 1, 4);
+        DTSpawnSettings.monster(settings, CAVE_SPIDER, 8, 1, 2);
+        DTSpawnSettings.monster(settings, CREEPER, 8, 1, 2);
+        DTSpawnSettings.monster(settings, ENDERMAN, 4, 1, 2);
+        DTSpawnSettings.monster(settings, SPIDER, 12, 3, 5);
+        DTSpawnSettings.monster(settings, SKELETON, 8, 1, 4);
+        DTSpawnSettings.monster(settings, SLIME, 4, 1, 1);
+        DTSpawnSettings.monster(settings, WITCH, 3, 1, 1);
+        DTSpawnSettings.monster(settings, ZOMBIE, 8, 1, 2);
+        DTSpawnSettings.monster(settings, ZOMBIE_VILLAGER, 3, 1, 1);
+        DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 7, 4, 6);
+        DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 5, 4, 6);
+
+        return createAlmondForest(JUNGLE, settings.build(), builder);
     }
 
     public static Biome createBlackBirchForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
-        var spawnSettings = DTSpawnSettings.builder(0.8F).build();
 
-        return createForest(RAIN, FOREST, 0.9F, 0.57F, BLACK_BIRCH_FOREST, spawnSettings, builder);
+        var settings = DTSpawnSettings.builder(0.8F);
+
+        DTSpawnSettings.ambient(settings, AXOLOTL, 4, 1, 4);
+        DTSpawnSettings.ambient(settings, BAT, 40, 2, 12);
+        DTSpawnSettings.creature(settings, COW, 16, 2, 4);
+        DTSpawnSettings.creature(settings, GOAT, 4, 1, 4);
+        DTSpawnSettings.creature(settings, LLAMA, 13, 2, 6);
+        DTSpawnSettings.creature(settings, PIG, 14, 2, 6);
+        DTSpawnSettings.creature(settings, RABBIT, 4, 1, 4);
+        DTSpawnSettings.creature(settings, SHEEP, 12, 2, 2);
+        DTSpawnSettings.creature(settings, WOLF, 6, 1, 8);
+        DTSpawnSettings.monster(settings, CREEPER, 4, 1, 3);
+        DTSpawnSettings.monster(settings, SKELETON, 15, 2, 4);
+        DTSpawnSettings.monster(settings, SLIME, 4, 1, 2);
+        DTSpawnSettings.monster(settings, SPIDER, 6, 2, 2);
+        DTSpawnSettings.monster(settings, WITCH, 2, 1, 3);
+        DTSpawnSettings.monster(settings, ZOMBIE, 16, 1, 2);
+        DTSpawnSettings.monster(settings, ZOMBIE_VILLAGER, 7, 2, 3);
+        DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 30, 4, 10);
+        DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 25, 4, 8);
+
+        return createForest(RAIN, FOREST, 0.9F, 0.57F, BLACK_BIRCH_FOREST, settings.build(), builder);
     }
 
     public static Biome createCherryCliffsForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
-        var spawnSettings = DTSpawnSettings.builder(0.6F).build();
 
-        return createForest(RAIN, FOREST, 0.9F, 0.56F, CHERRY_CLIFFS_FOREST, spawnSettings, builder);
+        var settings = DTSpawnSettings.builder(0.6F);
 
+        DTSpawnSettings.ambient(settings, BAT, 20, 0, 6);
+        DTSpawnSettings.creature(settings, CAT, 14, 1, 2);
+        DTSpawnSettings.creature(settings, CHICKEN, 14, 1, 6);
+        DTSpawnSettings.creature(settings, COW, 16, 2, 4);
+        DTSpawnSettings.creature(settings, GOAT, 30, 2, 4);
+        DTSpawnSettings.creature(settings, FOX, 12, 2, 4);
+        DTSpawnSettings.creature(settings, PARROT, 16, 2, 4);
+        DTSpawnSettings.creature(settings, PIG, 12, 2, 2);
+        DTSpawnSettings.creature(settings, RABBIT, 20, 3, 8);
+        DTSpawnSettings.creature(settings, SHEEP, 22, 2, 8);
+        DTSpawnSettings.creature(settings, WOLF, 4, 2, 4);
+        DTSpawnSettings.monster(settings, ENDERMAN, 6, 1, 4);
+        DTSpawnSettings.monster(settings, SKELETON, 6, 1, 4);
+        DTSpawnSettings.monster(settings, SPIDER, 6, 4, 4);
+        DTSpawnSettings.monster(settings, WITCH, 1, 1, 2);
+        DTSpawnSettings.monster(settings, ZOMBIE, 4, 1, 2);
+        DTSpawnSettings.monster(settings, ZOMBIE_VILLAGER, 4, 1, 3);
+        DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 4, 1, 2);
+        DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 8, 2, 6);
+
+        return createForest(RAIN, FOREST, 0.9F, 0.56F, CHERRY_CLIFFS_FOREST, settings.build(), builder);
     }
 
     public static Biome createCherryForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
-        var spawnSettings = DTSpawnSettings.builder(0.6F).build();
 
-        return createForest(RAIN, FOREST, 0.9F, 0.56F, CHERRY_FOREST, spawnSettings, builder);
+        var settings = DTSpawnSettings.builder(0.6F);
+
+        DTSpawnSettings.ambient(settings, BAT, 5, 0, 3);
+        DTSpawnSettings.creature(settings, CAT, 4, 1, 2);
+        DTSpawnSettings.creature(settings, CHICKEN, 4, 1, 6);
+        DTSpawnSettings.creature(settings, COW, 6, 2, 4);
+        DTSpawnSettings.creature(settings, GOAT, 2, 1, 1);
+        DTSpawnSettings.creature(settings, FOX, 2, 2, 4);
+        DTSpawnSettings.creature(settings, PARROT, 6, 2, 24);
+        DTSpawnSettings.creature(settings, PIG, 2, 2, 2);
+        DTSpawnSettings.creature(settings, RABBIT, 10, 3, 8);
+        DTSpawnSettings.creature(settings, SHEEP, 10, 2, 8);
+        DTSpawnSettings.creature(settings, WOLF, 1, 2, 4);
+        DTSpawnSettings.monster(settings, ENDERMAN, 2, 1, 4);
+        DTSpawnSettings.monster(settings, SKELETON, 2, 1, 4);
+        DTSpawnSettings.monster(settings, SPIDER, 2, 4, 4);
+        DTSpawnSettings.monster(settings, WITCH, 1, 1, 2);
+        DTSpawnSettings.monster(settings, ZOMBIE, 1, 1, 2);
+        DTSpawnSettings.monster(settings, ZOMBIE_VILLAGER, 1, 1, 3);
+        DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 1, 1, 2);
+        DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 4, 2, 6);
+
+        return createForest(RAIN, FOREST, 0.9F, 0.56F, CHERRY_FOREST, settings.build(), builder);
     }
 
     public static Biome createPlumForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
-        var spawnSettings = DTSpawnSettings.builder(0.6F).build();
 
-        return createForest(RAIN, FOREST, 1.1F, 0.6F, PLUM_FOREST, spawnSettings, builder);
+        var settings = DTSpawnSettings.builder(0.6F);
+
+        DTSpawnSettings.ambient(settings, BAT, 25, 2, 6);
+        DTSpawnSettings.creature(settings, CHICKEN, 4, 1, 1);
+        DTSpawnSettings.creature(settings, COW, 16, 2, 4);
+        DTSpawnSettings.creature(settings, FOX, 14, 2, 4);
+        DTSpawnSettings.creature(settings, PARROT, 8, 2, 6);
+        DTSpawnSettings.creature(settings, PIG, 20, 2, 8);
+        DTSpawnSettings.creature(settings, RABBIT, 20, 3, 6);
+        DTSpawnSettings.creature(settings, SHEEP, 8, 2, 6);
+        DTSpawnSettings.monster(settings, ENDERMAN, 4, 1, 4);
+        DTSpawnSettings.monster(settings, SKELETON, 4, 1, 2);
+        DTSpawnSettings.monster(settings, SPIDER, 15, 4, 8);
+        DTSpawnSettings.monster(settings, WITCH, 6, 1, 4);
+        DTSpawnSettings.monster(settings, ZOMBIE, 6, 1, 4);
+        DTSpawnSettings.monster(settings, ZOMBIE_VILLAGER, 8, 2, 4);
+        DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 15, 4, 6);
+        DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 30, 4, 6);
+
+        return createForest(RAIN, FOREST, 1.1F, 0.6F, PLUM_FOREST, settings.build(), builder);
     }
 
     public static Biome createThundercloudPlumForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
-        var spawnSettings = DTSpawnSettings.builder(0.6F).build();
 
-        return createForest(RAIN, FOREST, 0.76F, 0.47F, THUNDERCLOUD_PLUM_FOREST, spawnSettings, builder);
+        var settings = DTSpawnSettings.builder(0.6F);
+
+        DTSpawnSettings.ambient(settings, BAT, 40, 2, 8);
+        DTSpawnSettings.creature(settings, CHICKEN, 4, 1, 1);
+        DTSpawnSettings.creature(settings, COW, 16, 2, 4);
+        DTSpawnSettings.creature(settings, FOX, 6, 2, 3);
+        DTSpawnSettings.creature(settings, PARROT, 12, 2, 6);
+        DTSpawnSettings.creature(settings, PIG, 15, 2, 6);
+        DTSpawnSettings.creature(settings, RABBIT, 20, 3, 6);
+        DTSpawnSettings.creature(settings, SHEEP, 14, 2, 6);
+        DTSpawnSettings.creature(settings, WOLF, 20, 4, 8);
+        DTSpawnSettings.monster(settings, CREEPER, 2, 1, 1);
+        DTSpawnSettings.monster(settings, ENDERMAN, 4, 1, 4);
+        DTSpawnSettings.monster(settings, SKELETON, 6, 1, 3);
+        DTSpawnSettings.monster(settings, SPIDER, 20, 4, 8);
+        DTSpawnSettings.monster(settings, WITCH, 10, 1, 4);
+        DTSpawnSettings.monster(settings, ZOMBIE, 6, 1, 4);
+        DTSpawnSettings.monster(settings, ZOMBIE_VILLAGER, 8, 2, 4);
+        DTSpawnSettings.undergroundWaterCreature(settings, AXOLOTL, 4, 2, 6);
+        DTSpawnSettings.undergroundWaterCreature(settings, GLOW_SQUID, 15, 4, 4);
+
+        return createForest(RAIN, FOREST, 0.76F, 0.47F, THUNDERCLOUD_PLUM_FOREST, settings.build(), builder);
     }
 
     protected static Biome createAlmondForest(Biome.Category category, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
