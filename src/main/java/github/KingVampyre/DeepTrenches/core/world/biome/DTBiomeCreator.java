@@ -88,6 +88,8 @@ public class DTBiomeCreator {
     public static Biome createBlackBirchForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
 
+        builder.feature(VEGETAL_DECORATION, BLACK_BIRCH_FOREST_TREE);
+
         var settings = DTSpawnSettings.builder(0.8F);
 
         DTSpawnSettings.ambient(settings, AXOLOTL, 4, 1, 4);
@@ -114,6 +116,8 @@ public class DTBiomeCreator {
 
     public static Biome createCherryCliffsForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+
+        builder.feature(VEGETAL_DECORATION, CHERRY_CLIFFS_FOREST_TREE);
 
         var settings = DTSpawnSettings.builder(0.6F);
 
@@ -143,6 +147,8 @@ public class DTBiomeCreator {
     public static Biome createCherryForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
 
+        builder.feature(VEGETAL_DECORATION, CHERRY_FOREST_TREE);
+
         var settings = DTSpawnSettings.builder(0.6F);
 
         DTSpawnSettings.ambient(settings, BAT, 5, 0, 3);
@@ -171,6 +177,8 @@ public class DTBiomeCreator {
     public static Biome createPlumForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
 
+        builder.feature(VEGETAL_DECORATION, PLUM_FOREST_TREE);
+
         var settings = DTSpawnSettings.builder(0.6F);
 
         DTSpawnSettings.ambient(settings, BAT, 25, 2, 6);
@@ -195,6 +203,8 @@ public class DTBiomeCreator {
 
     public static Biome createThundercloudPlumForest() {
         var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+
+        builder.feature(VEGETAL_DECORATION, THUNDERCLOUD_PLUM_FOREST_TREE);
 
         var settings = DTSpawnSettings.builder(0.6F);
 

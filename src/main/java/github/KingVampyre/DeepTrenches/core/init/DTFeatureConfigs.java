@@ -22,6 +22,11 @@ public class DTFeatureConfigs {
 
     public static final RandomFeatureConfig ALMOND_FOREST_TREE_CONFIG;
     public static final RandomFeatureConfig ALMOND_PLUS_FOREST_TREE_CONFIG;
+    public static final RandomFeatureConfig BLACK_BIRCH_FOREST_TREE_CONFIG;
+    public static final RandomFeatureConfig CHERRY_CLIFFS_FOREST_TREE_CONFIG;
+    public static final RandomFeatureConfig CHERRY_FOREST_TREE_CONFIG;
+    public static final RandomFeatureConfig PLUM_FOREST_TREE_CONFIG;
+    public static final RandomFeatureConfig THUNDERCLOUD_PLUM_FOREST_TREE_CONFIG;
 
     protected static RandomPatchFeatureConfig.Builder builder(BlockStateProvider provider, BlockPlacer placer) {
         return new RandomPatchFeatureConfig.Builder(provider, placer);
@@ -82,6 +87,47 @@ public class DTFeatureConfigs {
                 ConfiguredFeatures.OAK_BEES_002.withChance(0.16F),
                 ConfiguredFeatures.OAK_BEES_005.withChance(0.16F)
         ), ALMOND_VERY_RARE_BEEHIVES);
+
+        BLACK_BIRCH_FOREST_TREE_CONFIG = new RandomFeatureConfig(ImmutableList.of(
+
+        ), BLACK_BIRCH);
+
+        CHERRY_CLIFFS_FOREST_TREE_CONFIG = new RandomFeatureConfig(ImmutableList.of(
+                CHERRY_REGULAR_BEEHIVES.withChance(0.25F),
+                CHERRY_MORE_BEEHIVES.withChance(0.20F),
+                CHERRY_HALF_BEEHIVES.withChance(0.15F),
+                FANCY_CHERRY_VERY_RARE_BEEHIVES.withChance(0.25F),
+                FANCY_CHERRY_REGULAR_BEEHIVES.withChance(0.20F),
+                FANCY_CHERRY_MORE_BEEHIVES.withChance(0.15F),
+                FANCY_CHERRY_HALF_BEEHIVES.withChance(0.15F),
+                GREAT_CHERRY_VERY_RARE_BEEHIVES.withChance(0.20F),
+                GREAT_CHERRY_REGULAR_BEEHIVES.withChance(0.15F),
+                GREAT_CHERRY_MORE_BEEHIVES.withChance(0.15F),
+                GREAT_CHERRY_HALF_BEEHIVES.withChance(0.15F)
+        ), CHERRY_VERY_RARE_BEEHIVES);
+
+        CHERRY_FOREST_TREE_CONFIG = new RandomFeatureConfig(ImmutableList.of(
+                CHERRY_REGULAR_BEEHIVES.withChance(0.25F),
+                CHERRY_MORE_BEEHIVES.withChance(0.20F),
+                CHERRY_HALF_BEEHIVES.withChance(0.15F),
+                FANCY_CHERRY_VERY_RARE_BEEHIVES.withChance(0.25F),
+                FANCY_CHERRY_REGULAR_BEEHIVES.withChance(0.20F),
+                FANCY_CHERRY_MORE_BEEHIVES.withChance(0.15F),
+                FANCY_CHERRY_HALF_BEEHIVES.withChance(0.15F),
+                GREAT_CHERRY_VERY_RARE_BEEHIVES.withChance(0.20F),
+                GREAT_CHERRY_REGULAR_BEEHIVES.withChance(0.15F),
+                GREAT_CHERRY_MORE_BEEHIVES.withChance(0.15F),
+                GREAT_CHERRY_HALF_BEEHIVES.withChance(0.15F)
+        ), CHERRY_VERY_RARE_BEEHIVES);
+
+        PLUM_FOREST_TREE_CONFIG = new RandomFeatureConfig(ImmutableList.of(
+
+        ), PLUM);
+
+        THUNDERCLOUD_PLUM_FOREST_TREE_CONFIG = new RandomFeatureConfig(ImmutableList.of(
+
+        ), THUNDERCLOUD_PLUM);
+
     }
 
 }

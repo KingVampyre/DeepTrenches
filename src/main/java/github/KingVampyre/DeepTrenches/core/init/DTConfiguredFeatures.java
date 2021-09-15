@@ -58,6 +58,7 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<TreeFeatureConfig, ?> STROOMEAN;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> SUNRISE_FUNGUS;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> TEAK;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> THUNDERCLOUD_PLUM;
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_ALMOND;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_ANAMEATA;
@@ -68,6 +69,7 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_PIN_CHERRY;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_PLUM;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_TEAK;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FANCY_THUNDERCLOUD_PLUM;
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ALMOND;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_ANAMEATA;
@@ -78,6 +80,7 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PIN_CHERRY;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_PLUM;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_TEAK;
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> GREAT_THUNDERCLOUD_PLUM;
 
     public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND_VERY_RARE_BEEHIVES;
     public static final ConfiguredFeature<TreeFeatureConfig, ?> ALMOND_REGULAR_BEEHIVES;
@@ -132,6 +135,11 @@ public class DTConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> ALMOND_FOREST_TREE;
     public static final ConfiguredFeature<?, ?> ALMOND_PLUS_FOREST_TREE;
+    public static final ConfiguredFeature<?, ?> BLACK_BIRCH_FOREST_TREE;
+    public static final ConfiguredFeature<?, ?> CHERRY_CLIFFS_FOREST_TREE;
+    public static final ConfiguredFeature<?, ?> CHERRY_FOREST_TREE;
+    public static final ConfiguredFeature<?, ?> PLUM_FOREST_TREE;
+    public static final ConfiguredFeature<?, ?> THUNDERCLOUD_PLUM_FOREST_TREE;
 
     public static final ConfiguredFeature<?, ?> LAKE_CLEAR_WATER;
     public static final ConfiguredFeature<?, ?> SPRING_CLEAR_WATER;
@@ -214,6 +222,7 @@ public class DTConfiguredFeatures {
         STROOMEAN = createBlobTree(STROOMEAN_TRUNK_PROVIDER, STROOMEAN_FOLIAGE_PROVIDER, STROOMEAN_SAPLING_PROVIDER);
         SUNRISE_FUNGUS = createBlobTree(SUNRISE_FUNGUS_TRUNK_PROVIDER, SUNRISE_FUNGUS_FOLIAGE_PROVIDER, SUNRISE_FUNGUS_SAPLING_PROVIDER);
         TEAK = createBlobTree(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER, TEAK_SAPLING_PROVIDER);
+        THUNDERCLOUD_PLUM = createBlobTree(THUNDERCLOUD_PLUM_TRUNK_PROVIDER, THUNDERCLOUD_PLUM_FOLIAGE_PROVIDER, THUNDERCLOUD_PLUM_SAPLING_PROVIDER);
 
         FANCY_ALMOND = createFancyTree(ALMOND_TRUNK_PROVIDER, ALMOND_FOLIAGE_PROVIDER, ALMOND_SAPLING_PROVIDER);
         FANCY_ANAMEATA = createFancyTree(ANAMEATA_TRUNK_PROVIDER, ANAMEATA_FOLIAGE_PROVIDER, ANAMEATA_SAPLING_PROVIDER);
@@ -224,6 +233,7 @@ public class DTConfiguredFeatures {
         FANCY_PIN_CHERRY = createFancyTree(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER, PIN_CHERRY_SAPLING_PROVIDER);
         FANCY_PLUM = createFancyTree(PLUM_TRUNK_PROVIDER, PLUM_FOLIAGE_PROVIDER, PLUM_SAPLING_PROVIDER);
         FANCY_TEAK = createFancyTree(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER, TEAK_SAPLING_PROVIDER);
+        FANCY_THUNDERCLOUD_PLUM = createFancyTree(THUNDERCLOUD_PLUM_TRUNK_PROVIDER, THUNDERCLOUD_PLUM_FOLIAGE_PROVIDER, THUNDERCLOUD_PLUM_SAPLING_PROVIDER);
 
         GREAT_ALMOND = createGreatTree(ALMOND_TRUNK_PROVIDER, ALMOND_FOLIAGE_PROVIDER, ALMOND_SAPLING_PROVIDER);
         GREAT_ANAMEATA = createGreatTree(ANAMEATA_TRUNK_PROVIDER, ANAMEATA_FOLIAGE_PROVIDER, ANAMEATA_SAPLING_PROVIDER);
@@ -234,6 +244,7 @@ public class DTConfiguredFeatures {
         GREAT_PIN_CHERRY = createGreatTree(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER, PIN_CHERRY_SAPLING_PROVIDER);
         GREAT_PLUM = createGreatTree(PLUM_TRUNK_PROVIDER, PLUM_FOLIAGE_PROVIDER, PLUM_SAPLING_PROVIDER);
         GREAT_TEAK = createGreatTree(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER, TEAK_SAPLING_PROVIDER);
+        GREAT_THUNDERCLOUD_PLUM = createFancyTree(THUNDERCLOUD_PLUM_TRUNK_PROVIDER, THUNDERCLOUD_PLUM_FOLIAGE_PROVIDER, THUNDERCLOUD_PLUM_SAPLING_PROVIDER);
 
         ALMOND_VERY_RARE_BEEHIVES = createTree(ALMOND, VERY_RARE_BEEHIVES_TREES);
         ALMOND_REGULAR_BEEHIVES = createTree(ALMOND, REGULAR_BEEHIVES_TREES);
@@ -288,6 +299,11 @@ public class DTConfiguredFeatures {
 
         ALMOND_FOREST_TREE = createTree(ALMOND_FOREST_TREE_CONFIG);
         ALMOND_PLUS_FOREST_TREE = createTree(ALMOND_PLUS_FOREST_TREE_CONFIG);
+        BLACK_BIRCH_FOREST_TREE = createTree(BLACK_BIRCH_FOREST_TREE_CONFIG);
+        CHERRY_CLIFFS_FOREST_TREE = createTree(CHERRY_CLIFFS_FOREST_TREE_CONFIG);
+        CHERRY_FOREST_TREE = createTree(CHERRY_FOREST_TREE_CONFIG);
+        PLUM_FOREST_TREE = createTree(PLUM_FOREST_TREE_CONFIG);
+        THUNDERCLOUD_PLUM_FOREST_TREE = createTree(THUNDERCLOUD_PLUM_FOREST_TREE_CONFIG);
 
         LAKE_CLEAR_WATER = createLake(CLEAR_WATER);
 
@@ -319,6 +335,7 @@ public class DTConfiguredFeatures {
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:stroomean", STROOMEAN);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:sunrise_fungus", SUNRISE_FUNGUS);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:teak", TEAK);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:thundercloud_plum", THUNDERCLOUD_PLUM);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_almond", FANCY_ALMOND);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_anameata", FANCY_ANAMEATA);
@@ -329,6 +346,7 @@ public class DTConfiguredFeatures {
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_pin_cherry", FANCY_PIN_CHERRY);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_plum", FANCY_PLUM);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_teak", FANCY_TEAK);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:fancy_thundercloud_plum", FANCY_THUNDERCLOUD_PLUM);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_almond", GREAT_ALMOND);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_anameata", GREAT_ANAMEATA);
@@ -339,7 +357,8 @@ public class DTConfiguredFeatures {
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_pin_cherry", GREAT_PIN_CHERRY);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_plum", GREAT_PLUM);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_teak", GREAT_TEAK);
-        
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:great_thundercloud_plum", GREAT_THUNDERCLOUD_PLUM);
+
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_very_rare_beehives", ALMOND_VERY_RARE_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_regular_beehives", ALMOND_REGULAR_BEEHIVES);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_more_beehives", ALMOND_MORE_BEEHIVES);
@@ -393,6 +412,11 @@ public class DTConfiguredFeatures {
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_tree", ALMOND_FOREST_TREE);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_tree", ALMOND_PLUS_FOREST_TREE);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:black_birch_forest_tree", BLACK_BIRCH_FOREST_TREE);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_cliffs_forest_tree", CHERRY_CLIFFS_FOREST_TREE);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:cherry_forest_tree", CHERRY_FOREST_TREE);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:plum_forest_tree", PLUM_FOREST_TREE);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:thundercloud_plum_forest_tree", THUNDERCLOUD_PLUM_FOREST_TREE);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:lake_clear_water", LAKE_CLEAR_WATER);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:spring_clear_water", SPRING_CLEAR_WATER);
