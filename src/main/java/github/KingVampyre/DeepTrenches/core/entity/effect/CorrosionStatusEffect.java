@@ -1,24 +1,21 @@
 package github.KingVampyre.DeepTrenches.core.entity.effect;
 
 import com.google.common.collect.ImmutableList;
-import github.KingVampyre.DeepTrenches.common.entity.effect.ArmorDamageStatusEffect;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.AttributeContainer;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.item.ItemStack;
 
-import java.util.List;
-import java.util.Random;
 import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.ACID;
 import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.GAS;
 import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.ACID_CORROSION;
+import static net.minecraft.entity.EquipmentSlot.Type.ARMOR;
 import static net.minecraft.entity.attribute.EntityAttributes.GENERIC_MAX_HEALTH;
 
-public class CorrosionStatusEffect extends ArmorDamageStatusEffect {
+public class CorrosionStatusEffect extends StatusEffect {
 
     public CorrosionStatusEffect(StatusEffectCategory category, int color) {
         super(category, color);
@@ -26,19 +23,18 @@ public class CorrosionStatusEffect extends ArmorDamageStatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        super.applyUpdateEffect(entity, amplifier);
+        var armorItems = ImmutableList.copyOf(entity.getArmorItems());
+        var amount = 2 * amplifier + 1;
 
-        entity.damage(this == ACID_CORROSION ? ACID :  GAS, (amplifier + 1) * 2.0F);
-    }
+        for (var i = 0; i < armorItems.size(); i++) {
+            var slot = EquipmentSlot.fromTypeIndex(ARMOR, i);
+            var stack = armorItems.get(i);
 
-    @Override
-    protected List<ItemStack> getArmorItems(LivingEntity entity) {
-        return ImmutableList.copyOf(entity.getArmorItems());
-    }
+            if(!stack.isEmpty())
+                stack.damage(amount, entity, living -> entity.sendEquipmentBreakStatus(slot));
+        }
 
-    @Override
-    protected int getDamageAmount(ItemStack stack, int amplifier, Random random) {
-        return 3 * (amplifier > 0 ? amplifier - 1 : 1) + 1;
+        entity.damage(this == ACID_CORROSION ? ACID :  GAS, amount);
     }
 
     @Override
@@ -50,16 +46,16 @@ public class CorrosionStatusEffect extends ArmorDamageStatusEffect {
     public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
         super.onRemoved(entity, attributes, amplifier);
 
-        EntityAttributeInstance attributeInstance = attributes.getCustomInstance(GENERIC_MAX_HEALTH);
+        var attributeInstance = attributes.getCustomInstance(GENERIC_MAX_HEALTH);
 
         if(attributeInstance != null) {
-            EntityAttributeModifier modifier = attributeInstance.getModifier(UUID.fromString("d5fd30f3-3e18-4d37-8754-2ff20a71dec4"));
+            var modifier = attributeInstance.getModifier(UUID.fromString("d5fd30f3-3e18-4d37-8754-2ff20a71dec4"));
 
             if(modifier != null) {
-                double maxHealth = attributeInstance.getBaseValue();
-                double value = modifier.getValue();
-                float health = entity.getHealth();
-                float newHealth = (float) (maxHealth + value);
+                var maxHealth = attributeInstance.getBaseValue();
+                var value = modifier.getValue();
+                var health = entity.getHealth();
+                var newHealth = (float) (maxHealth + value);
 
                 if(health >= newHealth)
                     entity.setHealth(newHealth);
