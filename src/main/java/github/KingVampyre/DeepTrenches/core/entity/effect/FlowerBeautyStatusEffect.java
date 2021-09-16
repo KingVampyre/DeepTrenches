@@ -19,7 +19,7 @@ public class FlowerBeautyStatusEffect extends StatusEffect {
 
 	@Override
 	public void applyUpdateEffect(LivingEntity entityLiving, int amplifier) {
-		World world = entityLiving.getEntityWorld();
+		var world = entityLiving.getEntityWorld();
 
 		if (entityLiving instanceof PlayerEntity player && !world.isClient())
 			player.getHungerManager().add(amplifier + 1, 1.0F);

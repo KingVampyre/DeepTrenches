@@ -17,12 +17,12 @@ public abstract class ArmorDamageStatusEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        List<ItemStack> armorItems = this.getArmorItems(entity);
+        var armorItems = this.getArmorItems(entity);
 
-        for (int i = 0; i < armorItems.size(); i++) {
-            ItemStack stack = armorItems.get(i);
-            int amount = this.getDamageAmount(stack, amplifier, entity.world.random);
-            int index = i;
+        for (var i = 0; i < armorItems.size(); i++) {
+            var stack = armorItems.get(i);
+            var amount = this.getDamageAmount(stack, amplifier, entity.world.random);
+            var index = i;
 
             if(!stack.isEmpty())
                 stack.damage(amount, entity, living -> entity.sendEquipmentBreakStatus(EquipmentSlot.fromTypeIndex(EquipmentSlot.Type.ARMOR, index)));

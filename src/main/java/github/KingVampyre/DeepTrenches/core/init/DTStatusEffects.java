@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import github.KingVampyre.DeepTrenches.common.entity.effect.CurativeStatusEffect;
+import github.KingVampyre.DeepTrenches.common.entity.effect.BeautyStatusEffect;
 import github.KingVampyre.DeepTrenches.core.entity.effect.*;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.registry.Registry;
@@ -13,8 +13,8 @@ import static net.minecraft.util.registry.Registry.STATUS_EFFECT;
 public class DTStatusEffects {
 
 	public static final StatusEffect ACID_CORROSION = register("deep_trenches:acid_corrosion", new CorrosionStatusEffect(HARMFUL, 11654073));
-	public static final StatusEffect BRAITOR_BEAUTY = register("deep_trenches:braitor_beauty", new CurativeStatusEffect(BENEFICIAL, NAUSEA, 1.0F, 8983661));
-	public static final StatusEffect COSMOS_BEAUTY = register("deep_trenches:cosmos_beauty", new CurativeStatusEffect(BENEFICIAL, POISON, 1.0F, 1969163));
+	public static final StatusEffect BRAITOR_BEAUTY = register("deep_trenches:braitor_beauty", new BeautyStatusEffect(BENEFICIAL, NAUSEA, 1.0F, 8983661));
+	public static final StatusEffect COSMOS_BEAUTY = register("deep_trenches:cosmos_beauty", new BeautyStatusEffect(BENEFICIAL, POISON, 1.0F, 1969163));
 	public static final StatusEffect CYCAWLER_BEAUTY = register("deep_trenches:cycawler_beauty", new CycawlerBeautyStatusEffect(BENEFICIAL, 7689983));
 	public static final StatusEffect FLOWER_BEAUTY = register("deep_trenches:flower_beauty", new FlowerBeautyStatusEffect(NEUTRAL, 12001933));
 	public static final StatusEffect GAS_CORROSION = register("deep_trenches:gas_corrosion", new CorrosionStatusEffect(HARMFUL, 735782));
