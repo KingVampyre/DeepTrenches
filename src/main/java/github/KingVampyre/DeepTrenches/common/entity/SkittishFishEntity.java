@@ -12,6 +12,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
 import static net.minecraft.entity.attribute.EntityAttributes.GENERIC_MOVEMENT_SPEED;
 
+@Deprecated
 public abstract class SkittishFishEntity extends AnimatedFishEntity {
 
     public SkittishFishEntity(EntityType<? extends AnimatedFishEntity> type, World world) {

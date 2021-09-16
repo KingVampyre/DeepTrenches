@@ -24,6 +24,7 @@ import java.util.UUID;
 import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.LOVE_TICKS;
 import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.LOVING_PLAYER;
 
+@Deprecated
 public abstract class LovingFishEntity extends AngerableFishEntity implements Lovable {
 
     public LovingFishEntity(EntityType<? extends LovingFishEntity> type, World world) {

@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.*;
 
+@Deprecated
 public abstract class NourishFishEntity extends LuminousFishEntity implements Nourish {
 
     private static final TrackedData<Boolean> BABY = DataTracker.registerData(NourishFishEntity.class, TrackedDataHandlerRegistry.BOOLEAN);

@@ -14,6 +14,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
 import static net.minecraft.util.math.Vec3d.ZERO;
 
+@Deprecated
 public class FlyingHangBugEntity extends FlyingBugEntity {
 
     private static final TrackedData<Boolean> HANGING = DataTracker.registerData(FlyingHangBugEntity.class, TrackedDataHandlerRegistry.BOOLEAN);

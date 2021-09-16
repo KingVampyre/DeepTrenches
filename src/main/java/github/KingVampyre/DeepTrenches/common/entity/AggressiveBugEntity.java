@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
+@Deprecated
 public abstract class AggressiveBugEntity extends BugEntity implements Angerable, Chargable {
 
     private static final TrackedData<Integer> ANGER = DataTracker.registerData(AggressiveBugEntity.class, TrackedDataHandlerRegistry.INTEGER);

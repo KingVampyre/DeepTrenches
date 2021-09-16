@@ -9,6 +9,7 @@ import software.bernie.geckolib3.core.builder.AnimationBuilder;
 import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
+@Deprecated
 public class CrawlingBugEntity extends BugEntity {
 
     public CrawlingBugEntity(EntityType<? extends PathAwareEntity> entityType, World world) {

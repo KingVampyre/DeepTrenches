@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
+@Deprecated
 public abstract class AngerableFishEntity extends NourishFishEntity implements Angerable {
 
     private static final TrackedData<Integer> ANGER = DataTracker.registerData(AngerableFishEntity.class, TrackedDataHandlerRegistry.INTEGER);

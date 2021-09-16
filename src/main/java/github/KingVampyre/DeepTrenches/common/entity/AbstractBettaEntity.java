@@ -29,6 +29,7 @@ import static net.minecraft.entity.ai.brain.MemoryModuleType.HURT_BY_ENTITY;
 import static net.minecraft.entity.ai.brain.MemoryModuleType.TEMPTATION_COOLDOWN_TICKS;
 import static net.minecraft.item.Items.COD;
 
+@Deprecated
 public abstract class AbstractBettaEntity extends TamableFishEntity {
 
     protected static final UniformIntProvider ANGER_TIME_RANGE = UniformIntProvider.create(10, 15);

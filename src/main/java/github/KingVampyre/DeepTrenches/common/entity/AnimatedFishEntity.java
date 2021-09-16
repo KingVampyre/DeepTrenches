@@ -11,6 +11,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+@Deprecated
 public abstract class AnimatedFishEntity extends FishEntity implements IAnimatable, Skittish {
 
 	protected AnimationFactory animationFactory;

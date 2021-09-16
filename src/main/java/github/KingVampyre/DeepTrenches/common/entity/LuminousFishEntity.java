@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.ALL_UNLIT;
 
+@Deprecated
 public abstract class LuminousFishEntity extends SkittishFishEntity implements Luminous {
 
     private static final TrackedData<String> LIGHT_STATE = DataTracker.registerData(LuminousFishEntity.class, TrackedDataHandlerRegistry.STRING);

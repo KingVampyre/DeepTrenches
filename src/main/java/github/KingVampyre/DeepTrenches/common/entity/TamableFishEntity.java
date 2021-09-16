@@ -21,6 +21,7 @@ import java.util.UUID;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.*;
 
+@Deprecated
 public abstract class TamableFishEntity extends LovingFishEntity implements Tamable {
 
     public TamableFishEntity(EntityType<? extends TamableFishEntity> type, World world) {

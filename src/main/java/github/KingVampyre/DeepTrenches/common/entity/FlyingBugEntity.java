@@ -13,6 +13,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
 import static software.bernie.geckolib3.core.PlayState.CONTINUE;
 
+@Deprecated
 public class FlyingBugEntity extends AggressiveBugEntity {
 
     public FlyingBugEntity(EntityType<? extends AggressiveBugEntity> entityType, World world) {

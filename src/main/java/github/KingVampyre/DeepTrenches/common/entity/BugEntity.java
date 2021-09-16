@@ -15,6 +15,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+@Deprecated
 public abstract class BugEntity extends PathAwareEntity implements IAnimatable, Variant {
 
     private static final TrackedData<Integer> VARIANT = DataTracker.registerData(BugEntity.class, TrackedDataHandlerRegistry.INTEGER);
