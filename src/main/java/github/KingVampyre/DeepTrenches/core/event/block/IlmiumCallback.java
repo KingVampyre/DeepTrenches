@@ -6,6 +6,8 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.ActionResult;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTItems.ILMIUM;
+import static net.minecraft.util.ActionResult.PASS;
+import static net.minecraft.util.ActionResult.SUCCESS;
 
 public class IlmiumCallback implements BlockReplacementCallback {
 
@@ -26,10 +28,10 @@ public class IlmiumCallback implements BlockReplacementCallback {
             var item = stack.getItem();
 
             if(item == ILMIUM)
-                return ActionResult.SUCCESS;
+                return SUCCESS;
         }
 
-        return ActionResult.PASS;
+        return PASS;
     }
 
 }
