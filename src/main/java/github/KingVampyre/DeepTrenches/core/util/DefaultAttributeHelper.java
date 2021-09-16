@@ -37,11 +37,19 @@ public class DefaultAttributeHelper {
                 .add(SUBORBITAL_MIN_LIT, 40);
     }
 
+    public static DefaultAttributeContainer.Builder createBeardedSeadevilAttributes() {
+        return createMobAttributes();
+    }
+
     public static DefaultAttributeContainer.Builder createBettaAttributes() {
         return MobEntity.createMobAttributes()
                 .add(GENERIC_ATTACK_DAMAGE, 3)
                 .add(GENERIC_MAX_HEALTH, 4)
                 .add(GENERIC_MOVEMENT_SPEED, 0.9);
+    }
+
+    public static DefaultAttributeContainer.Builder createBlackDragonfishAttributes() {
+        return createMobAttributes();
     }
 
     public static DefaultAttributeContainer.Builder createBlackLoosejawAttributes() {
@@ -69,6 +77,38 @@ public class DefaultAttributeHelper {
                 .add(SUBORBITAL_MIN_LIT, 100);
     }
 
+    public static DefaultAttributeContainer.Builder createBlackScabbardAttributes() {
+        return createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createBlackSeadevilAttributes() {
+        return createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createBlobfishAttributes() {
+        return createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createBlueWhaleAttributes() {
+        return createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createBottleFlyAttributes() {
+        return createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createBottleFlyMaggotAttributes() {
+        return createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createBrownBearAttributes() {
+        return createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createCetachsalAttributes() {
+        return createMobAttributes();
+    }
+
     public static DefaultAttributeContainer.Builder createDeepLakeBettaAttributes() {
         return MobEntity.createMobAttributes()
                 .add(GENERIC_ATTACK_DAMAGE, 4)
@@ -77,10 +117,38 @@ public class DefaultAttributeHelper {
                 .add(GENERIC_MOVEMENT_SPEED, 1.2);
     }
 
+    public static DefaultAttributeContainer.Builder createFangtoothAttributes() {
+        return createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createFinangiteAttributes() {
+        return createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createFlyAttributes() {
+        return createMobAttributes();
+    }
+
     public static DefaultAttributeContainer.Builder createGiantHatchetfishAttributes() {
         return MobEntity.createMobAttributes()
                 .add(GENERIC_MAX_HEALTH, 16)
                 .add(GENERIC_MOVEMENT_SPEED, 1.8);
+    }
+
+    public static DefaultAttributeContainer.Builder createGiantSeedShrimpAttributes() {
+        return MobEntity.createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createHoneycombDragonfishAttributes() {
+        return MobEntity.createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createLaceratorAttributes() {
+        return MobEntity.createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createLancetfishAttributes() {
+        return MobEntity.createMobAttributes();
     }
 
     public static DefaultAttributeContainer.Builder createLightLoosejawAttributes() {
@@ -103,6 +171,14 @@ public class DefaultAttributeHelper {
                 .add(MAX_LURING, 12) // 4
                 .add(MIN_LURING, 6) // 2
                 .add(PREY_DETECTION, 1.6); // 4
+    }
+
+    public static DefaultAttributeContainer.Builder createMaggotAttributes() {
+        return MobEntity.createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createPrinceAxelsWonderfishAttributes() {
+        return MobEntity.createMobAttributes();
     }
 
     public static DefaultAttributeContainer.Builder createSmalltoothDragonfishAttributes() {
@@ -137,6 +213,26 @@ public class DefaultAttributeHelper {
                 .add(GENERIC_ATTACK_DAMAGE, 3F)
                 .add(GENERIC_FLYING_SPEED, 1.85F)
                 .add(GENERIC_MOVEMENT_SPEED, 0.2F);
+    }
+
+    public static DefaultAttributeContainer.Builder createTelescopefishAttributes() {
+        return MobEntity.createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createThreadfinDragonfishAttributes() {
+        return MobEntity.createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createViperfishAttributes() {
+        return MobEntity.createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createVoidBeastAttributes() {
+        return MobEntity.createMobAttributes();
+    }
+
+    public static DefaultAttributeContainer.Builder createWolftrapSeadevilAttributes() {
+        return MobEntity.createMobAttributes();
     }
 
 }

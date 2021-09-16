@@ -3,7 +3,6 @@ package github.KingVampyre.DeepTrenches.core.init;
 import github.KingVampyre.DeepTrenches.core.entity.*;
 import github.KingVampyre.DeepTrenches.core.util.DefaultAttributeHelper;
 import github.Louwind.entityutils.core.entity.FabricBoatEntity;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
@@ -11,6 +10,8 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.registry.Registry;
 
+import static net.minecraft.entity.SpawnGroup.CREATURE;
+import static net.minecraft.entity.SpawnGroup.WATER_CREATURE;
 import static net.minecraft.util.registry.Registry.ENTITY_TYPE;
 
 public class DTEntityTypes {
@@ -61,18 +62,27 @@ public class DTEntityTypes {
 				.build());
 
 		BARBELED_LOOSEJAW = createEntityType("deep_trenches:barbeled_loosejaw", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BarbeledLoosejawEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBarbeledLoosejawAttributes)
 				.dimensions(EntityDimensions.fixed(1.35F, 0.5F))
+				.entityFactory(BarbeledLoosejawEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		BEARDED_SEADEVIL = createEntityType("deep_trenches:bearded_seadevil", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BeardedSeadevilEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBeardedSeadevilAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(BeardedSeadevilEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		BETTA = createEntityType("deep_trenches:betta", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, BettaEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBettaAttributes)
 				.dimensions(EntityDimensions.fixed(0.55F, 0.5F))
+				.entityFactory(BettaEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		BOAT = createEntityType("deep_trenches:boat", FabricEntityTypeBuilder
@@ -81,182 +91,236 @@ public class DTEntityTypes {
 				.build());
 
 		BLACK_DRAGONFISH = createEntityType("deep_trenches:black_dragonfish", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BlackDragonfishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBlackDragonfishAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(BlackDragonfishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		BLACK_LOOSEJAW = createEntityType("deep_trenches:black_loosejaw", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, BlackLoosejawEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBlackLoosejawAttributes)
 				.dimensions(EntityDimensions.fixed(1.35F, 0.4255F))
+				.entityFactory(BlackLoosejawEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		BLACK_SCABBARD = createEntityType("deep_trenches:black_scabbard", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BlackScabbardEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBlackScabbardAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(BlackScabbardEntity::new)
+				.spawnGroup(CREATURE)
 				.build());
 
 		BLACK_SEADEVIL = createEntityType("deep_trenches:black_seadevil", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BlackSeadevilEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBlackSeadevilAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(BlackSeadevilEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		BLOBFISH = createEntityType("deep_trenches:blobfish", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BlobfishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBlobfishAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(BlobfishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		BLUE_WHALE = createEntityType("deep_trenches:blue_whale", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BlueWhaleEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBlueWhaleAttributes)
 				.dimensions(EntityDimensions.fixed(1F, 1F))
+				.entityFactory(BlueWhaleEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		BOTTLE_FLY = createEntityType("deep_trenches:bottle_fly", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BottleFlyEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBottleFlyAttributes)
 				.dimensions(EntityDimensions.fixed(0.7F, 0.6F))
+				.entityFactory(BottleFlyEntity::new)
+				.spawnGroup(CREATURE)
 				.build());
 
 		BOTTLE_FLY_MAGGOT = createEntityType("deep_trenches:bottle_fly_maggot", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BottleFlyMaggotEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBottleFlyMaggotAttributes)
 				.dimensions(EntityDimensions.fixed(0.7F, 0.6F))
+				.entityFactory(BottleFlyMaggotEntity::new)
+				.spawnGroup(CREATURE)
 				.build());
 
 		BROWN_BEAR = createEntityType("deep_trenches:brown_bear", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, BrownBearEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createBrownBearAttributes)
 				.dimensions(EntityDimensions.fixed(0.7F, 0.6F))
+				.entityFactory(BrownBearEntity::new)
+				.spawnGroup(CREATURE)
 				.build());
 
 		CETACHSAL = createEntityType("deep_trenches:cetachsal", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, CetachsalEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createCetachsalAttributes)
 				.dimensions(EntityDimensions.fixed(0.7F, 0.6F))
+				.entityFactory(CetachsalEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		DEEP_LAKE_BETTA = createEntityType("deep_trenches:deep_lake_betta", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, DeepLakeBettaEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createDeepLakeBettaAttributes)
 				.dimensions(EntityDimensions.fixed(0.6F, 0.4F))
+				.entityFactory(DeepLakeBettaEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		FANGTOOTH = createEntityType("deep_trenches:fangtooth", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, FangtoothEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createFangtoothAttributes)
 				.dimensions(EntityDimensions.fixed(0.6F, 0.4F))
+				.entityFactory(FangtoothEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		FINANGITE = createEntityType("deep_trenches:finangite", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, FinangiteEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createFinangiteAttributes)
 				.dimensions(EntityDimensions.fixed(0.6F, 0.4F))
+				.entityFactory(FinangiteEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		FLY = createEntityType("deep_trenches:fly", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, FlyEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createFlyAttributes)
 				.dimensions(EntityDimensions.fixed(0.6F, 0.4F))
+				.entityFactory(FlyEntity::new)
+				.spawnGroup(CREATURE)
 				.build());
 
 		GIANT_HATCHETFISH = createEntityType("deep_trenches:giant_hatchetfish", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, GiantHatchetfishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createGiantHatchetfishAttributes)
 				.dimensions(EntityDimensions.fixed(0.6F, 0.4F))
+				.entityFactory(GiantHatchetfishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		GIANT_SEED_SHRIMP = createEntityType("deep_trenches:giant_seed_shrimp", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, GiantSeedShrimpEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createGiantSeedShrimpAttributes)
 				.dimensions(EntityDimensions.fixed(0.2F, 0.4F))
+				.entityFactory(GiantSeedShrimpEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		HONEYCOMB_DRAGONFISH = createEntityType("deep_trenches:honeycomb_dragonfish", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, HoneycombDragonfishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createHoneycombDragonfishAttributes)
 				.dimensions(EntityDimensions.fixed(0.2F, 0.4F))
+				.entityFactory(HoneycombDragonfishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		LACERATOR = createEntityType("deep_trenches:lacerator", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, LaceratorEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createLaceratorAttributes)
 				.dimensions(EntityDimensions.fixed(0.2F, 0.4F))
+				.entityFactory(LaceratorEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		LANCETFISH = createEntityType("deep_trenches:lancetfish", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, LancetfishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createLancetfishAttributes)
 				.dimensions(EntityDimensions.fixed(0.2F, 0.4F))
+				.entityFactory(LancetfishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		LIGHT_LOOSEJAW = createEntityType("deep_trenches:light_loosejaw", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, LightLoosejawEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createLightLoosejawAttributes)
 				.dimensions(EntityDimensions.fixed(1.35F, 0.4255F))
+				.entityFactory(LightLoosejawEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		MAGGOT = createEntityType("deep_trenches:maggot", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, MaggotEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createMaggotAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(MaggotEntity::new)
+				.spawnGroup(CREATURE)
 				.build());
 
 		PRINCE_AXELS_WONDERFISH = createEntityType("deep_trenches:prince_axels_wonderfish", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, PrinceAxelsWonderfishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createPrinceAxelsWonderfishAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(PrinceAxelsWonderfishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		SMALLTOOTH_DRAGONFISH = createEntityType("deep_trenches:smalltooth_dragonfish", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, SmalltoothDragonfishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createSmalltoothDragonfishAttributes)
 				.dimensions(EntityDimensions.fixed(1.35F, 0.4255F))
+				.entityFactory(SmalltoothDragonfishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		STASP = createEntityType("deep_trenches:stasp", FabricEntityTypeBuilder
-				.create(SpawnGroup.CREATURE, StaspEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createStaspAttributes)
 				.dimensions(EntityDimensions.fixed(0.7F, 0.6F))
+				.entityFactory(StaspEntity::new)
+				.spawnGroup(CREATURE)
 				.build());
 
 		TELESCOPEFISH = createEntityType("deep_trenches:telescopefish", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, TelescopefishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createTelescopefishAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(TelescopefishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		THREADFIN_DRAGONFISH = createEntityType("deep_trenches:threadfin_dragonfish", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, ThreadfinDragonfishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createThreadfinDragonfishAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(ThreadfinDragonfishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		VIPERFISH = createEntityType("deep_trenches:viperfish", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, ViperfishEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createViperfishAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(ViperfishEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		VOID_BEAST = createEntityType("deep_trenches:void_beast", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, VoidBeastEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createVoidBeastAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(VoidBeastEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
 
 		WOLFTRAP_SEADEVIL = createEntityType("deep_trenches:wolftrap_seadevil", FabricEntityTypeBuilder
-				.create(SpawnGroup.WATER_CREATURE, WolftrapSeadevilEntity::new)
+				.createMob()
+				.defaultAttributes(DefaultAttributeHelper::createWolftrapSeadevilAttributes)
 				.dimensions(EntityDimensions.fixed(0.35F, 0.4255F))
+				.entityFactory(WolftrapSeadevilEntity::new)
+				.spawnGroup(WATER_CREATURE)
 				.build());
-
-		FabricDefaultAttributeRegistry.register(BARBELED_LOOSEJAW, DefaultAttributeHelper.createBarbeledLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(BEARDED_SEADEVIL, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(BETTA, DefaultAttributeHelper.createBettaAttributes());
-		FabricDefaultAttributeRegistry.register(BLACK_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(BLACK_LOOSEJAW, DefaultAttributeHelper.createBlackLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(BLACK_SCABBARD, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(BLACK_SEADEVIL, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(BLOBFISH, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(BLUE_WHALE, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(BOTTLE_FLY, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(BOTTLE_FLY_MAGGOT, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(BROWN_BEAR, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(CETACHSAL, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(DEEP_LAKE_BETTA, DefaultAttributeHelper.createDeepLakeBettaAttributes());
-		FabricDefaultAttributeRegistry.register(FANGTOOTH, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(FINANGITE, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(FLY, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(GIANT_HATCHETFISH, DefaultAttributeHelper.createGiantHatchetfishAttributes());
-		FabricDefaultAttributeRegistry.register(GIANT_SEED_SHRIMP, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(HONEYCOMB_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(LACERATOR, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(LANCETFISH, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(LIGHT_LOOSEJAW, DefaultAttributeHelper.createLightLoosejawAttributes());
-		FabricDefaultAttributeRegistry.register(MAGGOT, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(PRINCE_AXELS_WONDERFISH, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(SMALLTOOTH_DRAGONFISH, DefaultAttributeHelper.createSmalltoothDragonfishAttributes());
-		FabricDefaultAttributeRegistry.register(STASP, DefaultAttributeHelper.createStaspAttributes());
-		FabricDefaultAttributeRegistry.register(TELESCOPEFISH, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(THREADFIN_DRAGONFISH, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(VIPERFISH, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(VOID_BEAST, DefaultAttributeHelper.createMobAttributes());
-		FabricDefaultAttributeRegistry.register(WOLFTRAP_SEADEVIL, DefaultAttributeHelper.createMobAttributes());
 	}
 
 }
