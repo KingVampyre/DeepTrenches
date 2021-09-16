@@ -18,9 +18,7 @@ import static net.minecraft.util.registry.Registry.*;
 
 public class  DeepTrenches implements ModInitializer {
 
-	public static final String MOD_ID = "deep_trenches";
-
-    @Override
+	@Override
     public void onInitialize() {
 		GeckoLib.initialize();
 		/* GAME OBJECTS */
