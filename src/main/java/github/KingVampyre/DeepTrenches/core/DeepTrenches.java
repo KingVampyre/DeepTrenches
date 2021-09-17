@@ -37,11 +37,6 @@ public class  DeepTrenches implements ModInitializer {
 		/* ENCHANTMENT */
 		Registry.register(ENCHANTMENT, "deep_trenches:soul_draining", DTEnchantments.SOUL_DRAINING);
 
-		/* SENSOR TYPE */
-		Registry.register(SENSOR_TYPE, "deep_trenches:cod_tempting", DTSensorTypes.COD_TEMPTING);
-		Registry.register(SENSOR_TYPE, "deep_trenches:skittish_hurt_by", DTSensorTypes.SKITTISH_HURT_BY);
-		Registry.register(SENSOR_TYPE, "deep_trenches:tamable_hurt_by", DTSensorTypes.TAMABLE_HURT_BY);
-
 		/* TRUNK PLACER */
 		Registry.register(TRUNK_PLACER_TYPE, "deep_trenches:great_trunk_placer", DTTrunkPlacerTypes.GREAT_TRUNK_PLACER);
     }

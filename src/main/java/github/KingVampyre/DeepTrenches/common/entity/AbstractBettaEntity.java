@@ -1,19 +1,10 @@
 package github.KingVampyre.DeepTrenches.common.entity;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-import com.mojang.datafixers.util.Pair;
-import com.mojang.serialization.Dynamic;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.Lovable;
-import github.KingVampyre.DeepTrenches.common.entity.ai.task.LoveTask;
-import github.KingVampyre.DeepTrenches.common.entity.ai.task.TamableFishFollowOwnerTask;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.brain.Activity;
-import net.minecraft.entity.ai.brain.Brain;
-import net.minecraft.entity.ai.brain.task.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -23,10 +14,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 
-import static net.minecraft.entity.ai.brain.Activity.CORE;
-import static net.minecraft.entity.ai.brain.Activity.IDLE;
-import static net.minecraft.entity.ai.brain.MemoryModuleType.HURT_BY_ENTITY;
-import static net.minecraft.entity.ai.brain.MemoryModuleType.TEMPTATION_COOLDOWN_TICKS;
 import static net.minecraft.item.Items.COD;
 
 @Deprecated
@@ -103,48 +90,6 @@ public abstract class AbstractBettaEntity extends TamableFishEntity {
     protected SoundEvent getFlopSound() {
         // TODO betta flop sound
         return SoundEvents.ENTITY_SALMON_FLOP;
-    }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    protected Brain<?> deserializeBrain(Dynamic<?> dynamic) {
-        Brain<AbstractBettaEntity> brain = (Brain<AbstractBettaEntity>) super.deserializeBrain(dynamic);
-
-        brain.setTaskList(CORE, 0, ImmutableList.of(
-                new LookAroundTask(45, 90),
-                new WanderAroundTask(200, 350),
-                new TemptationCooldownTask(TEMPTATION_COOLDOWN_TICKS))
-        );
-
-        brain.setTaskList(IDLE, ImmutableList.of(
-                Pair.of(0, GoToRememberedPositionTask.toEntity(HURT_BY_ENTITY, 2.115F, 6, false)),
-                Pair.of(0, new LoveTask<>(3.0F, 0.9F)),
-                Pair.of(1, new TemptTask(entity -> entity.isInsideWaterOrBubbleColumn() ? 0.5F : 0.15F)),
-                Pair.of(2, new GoTowardsLookTarget(0.9F, 1)),
-                Pair.of(3, new TamableFishFollowOwnerTask<>(0.9F, 16.0F, 6.0F)),
-                Pair.of(3, new StrollTask(0.9F, 16, 9))
-        ));
-
-        brain.setCoreActivities(ImmutableSet.of(CORE));
-        brain.setDefaultActivity(IDLE);
-        brain.resetPossibleActivities();
-
-        return brain;
-    }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    protected void mobTick() {
-        super.mobTick();
-
-        Brain<AbstractBettaEntity> brain = (Brain<AbstractBettaEntity>) this.getBrain();
-        ServerWorld server = (ServerWorld) this.world;
-
-        this.world.getProfiler().push("Brain");
-        brain.tick(server, this);
-        this.world.getProfiler().pop();
-
-        brain.resetPossibleActivities(ImmutableList.of(Activity.IDLE));
     }
 
 }
