@@ -67,6 +67,8 @@ accessible method net/minecraft/world/gen/chunk/AquiferSampler$Impl     <init>  
 accessible method net/minecraft/world/gen/chunk/ChunkGeneratorSettings  <init>      (Lnet/minecraft/world/gen/chunk/StructuresConfig;Lnet/minecraft/world/gen/chunk/GenerationShapeConfig;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/BlockState;IIIIZZZZZZ)V
 accessible method net/minecraft/world/gen/StructureWeightSampler        <init>      (Lnet/minecraft/world/gen/StructureAccessor;Lnet/minecraft/world/chunk/Chunk;)V
 
+accessible method net/minecraft/world/gen/stateprovider/SimpleBlockStateProvider        <init>      (Lnet/minecraft/block/BlockState;)V
+
 accessible method net/minecraft/client/gui/hud/InGameHud$HeartType      fromPlayerState             (Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/client/gui/hud/InGameHud$HeartType;
 accessible method net/minecraft/item/EntityBucketItem                   spawnEntity                 (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/math/BlockPos;)V
 accessible method net/minecraft/world/gen/chunk/NoiseChunkGenerator     createBlockSampler          (IILnet/minecraft/util/math/ChunkPos;)Lnet/minecraft/world/gen/chunk/AquiferSampler;

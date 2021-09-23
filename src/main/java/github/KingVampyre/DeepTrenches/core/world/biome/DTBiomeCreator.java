@@ -14,7 +14,6 @@ import static net.minecraft.world.biome.Biome.Category.FOREST;
 import static net.minecraft.world.biome.Biome.Category.JUNGLE;
 import static net.minecraft.world.gen.GenerationStep.Feature.*;
 import static net.minecraft.world.gen.feature.ConfiguredFeatures.*;
-import static net.minecraft.world.gen.feature.ConfiguredStructureFeatures.RUINED_PORTAL;
 
 public class DTBiomeCreator {
 
@@ -255,7 +254,7 @@ public class DTBiomeCreator {
         DefaultBiomeFeatures.addAmethystGeodes(builder);
         DefaultBiomeFeatures.addDefaultOres(builder);
         DefaultBiomeFeatures.addDefaultDisks(builder);
-        DefaultBiomeFeatures.addDefaultUndergroundStructures(builder);
+        DefaultBiomeFeatures.addDungeons(builder);
         DefaultBiomeFeatures.addDefaultVegetation(builder);
         DefaultBiomeFeatures.addDripstone(builder);
         DefaultBiomeFeatures.addDungeons(builder);
@@ -271,7 +270,7 @@ public class DTBiomeCreator {
         if(mineables)
             DefaultBiomeFeatures.addMineables(builder);
 
-        builder.structureFeature(RUINED_PORTAL);
+        // TODO RUINED PORTAL
 
         return new Biome.Builder()
                 .precipitation(Biome.Precipitation.RAIN)
