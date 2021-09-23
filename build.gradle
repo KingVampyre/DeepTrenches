@@ -41,7 +41,6 @@ dependencies {
 
 	modImplementation "github.louwind.entity-utils:EntityUtils:${project.entityutils_version}"
 	modImplementation "github.louwind.reload-api:Reload:${project.reload_version}"
-	modImplementation "github.louwind.worldgen-api:Worldgen-API:${project.worldgen_version}"
 
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
