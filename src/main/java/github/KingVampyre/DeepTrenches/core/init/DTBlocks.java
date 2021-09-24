@@ -12,7 +12,6 @@ import net.minecraft.util.SignType;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.ConfiguredFeatures;
 
 import java.util.function.Function;
 
@@ -26,13 +25,18 @@ public class DTBlocks {
 
 	/* BIOLUMINESCENT BLOCKS */
 	public static final Block BLACK_BIOLUMINESCENT_BLOCK;
+	public static final Block BLUE_BIOLUMINESCENT_BLOCK;
 	public static final Block BROWN_BIOLUMINESCENT_BLOCK;
 	public static final Block CYAN_BIOLUMINESCENT_BLOCK;
+	public static final Block GRAY_BIOLUMINESCENT_BLOCK;
 	public static final Block GREEN_BIOLUMINESCENT_BLOCK;
+	public static final Block GYLDELION_BIOLUMINESCENT_BLOCK;
 	public static final Block LIGHT_BLUE_BIOLUMINESCENT_BLOCK;
+	public static final Block LIGHT_GRAY_BIOLUMINESCENT_BLOCK;
 	public static final Block LIME_BIOLUMINESCENT_BLOCK;
 	public static final Block MAGENTA_BIOLUMINESCENT_BLOCK;
 	public static final Block ORANGE_BIOLUMINESCENT_BLOCK;
+	public static final Block PINK_BIOLUMINESCENT_BLOCK;
 	public static final Block PURPLE_BIOLUMINESCENT_BLOCK;
 	public static final Block RED_BIOLUMINESCENT_BLOCK;
 	public static final Block WHITE_BIOLUMINESCENT_BLOCK;
@@ -389,8 +393,8 @@ public class DTBlocks {
 	public static final Block PINKINE_URANOLUMEN_ORE;
 	public static final Block PINKINE_VOID_CRITTERED_DIOPSIDE_ORE;
 
+	public static final Block RHODONITE_GARNET_ORE;
 	public static final Block RINGWOODITE_SAPPHIRE_ORE;
-
 	public static final Block SKYSTONE_OPAL_ORE;
 
 	public static final Block SMOOTH_BASALT_CHALCEDONY_ORE;
@@ -529,6 +533,7 @@ public class DTBlocks {
 	public static final Block DIOPSIDE_BLOCK;
 	public static final Block ENRON_BLOCK;
 	public static final Block ENSTATITE_BLOCK;
+	public static final Block CUT_GARNET_BLOCK;
 	public static final Block GYLDELION_BLOCK;
 	public static final Block KRALCTIUM_BLOCK;
 	public static final Block KRALIUM_BLOCK;
@@ -558,9 +563,7 @@ public class DTBlocks {
 	public static final Block CHISELED_SILVER_BLOCK;
 	public static final Block CHISELED_SUGILITE_BLOCK;
 
-	/* CRYSTALS */
-	public static final Block LEKRALITE_CRYSTALS;
-
+	/* AMETHYST */
 	public static final Block BLACK_OPALITE_BLOCK;
 	public static final Block BUDDING_BLACK_OPALITE;
 	public static final Block BLACK_OPAL_CLUSTER;
@@ -662,6 +665,7 @@ public class DTBlocks {
 	public static final Block VASLAME;
 	public static final Block WEEPISTIL;
 	public static final Block WEEPY_HOLLOWER;
+	public static final Block WHEEPING_AZURE_BLOOM;
 	public static final Block WHITE_VIOLET;
 	public static final Block WILD_PANSY;
 	public static final Block YELLOW_VIOLET;
@@ -688,7 +692,10 @@ public class DTBlocks {
 	/* PLANTS */
 	public static final Block AIRIAL_BUSH;
 	public static final Block BUCKTHORN;
+	public static final Block BULK_GRASSES;
+	public static final Block CRUSTED_FUNGUS;
 	public static final Block FOUR_LEAFED_CLOVER;
+	public static final Block FRAREL;
 	public static final Block FUR_PLATEAU;
 	public static final Block HARSHLES;
 	public static final Block ILYINE;
@@ -709,6 +716,18 @@ public class DTBlocks {
 	public static final Block PUFFBALL_MUSHROOM;
 	public static final Block SHELF_MUSHROOM;
 	public static final Block WHITE_MUSHROOM;
+
+	public static final Block GRAY_SHAG_MUSHROOM_BLOCK;
+	public static final Block INKY_CAP_MUSHROOM_BLOCK;
+	public static final Block PUFFBALL_MUSHROOM_BLOCK;
+	public static final Block SHELF_MUSHROOM_BLOCK;
+	public static final Block WHITE_MUSHROOM_BLOCK;
+
+	public static final Block GRAY_SHAG_MUSHROOM_STEM;
+	public static final Block INKY_CAP_MUSHROOM_STEM;
+	public static final Block PUFFBALL_MUSHROOM_STEM;
+	public static final Block SHELF_MUSHROOM_STEM;
+	public static final Block WHITE_MUSHROOM_STEM;
 
 	/* GIANT VIOLET */
 	public static final Block GIANT_VIOLET;
@@ -843,6 +862,9 @@ public class DTBlocks {
 	public static final Block DEAD_LEKRAL_CORAL_WALL_FAN;
 
 	public static final Block LEKRAL_CORAL;
+	public static final Block LEKRAL_CLUSTER;
+	public static final Block LEKRAL_ORE;
+	public static final Block BUDDING_LEKRAL;
 	public static final Block LEKRAL_CORAL_BLOCK;
 	public static final Block LEKRAL_CORAL_FAN;
 	public static final Block LEKRAL_CORAL_WALL_FAN;
@@ -2116,6 +2138,9 @@ public class DTBlocks {
 	public static final Block POTTED_VASLAME;
 	public static final Block POTTED_WEEPISTIL;
 	public static final Block POTTED_WEEPY_HOLLOWER;
+	public static final Block POTTED_WHEEPING_AZURE_BLOOM;
+	public static final Block POTTED_WHITE_VIOLET;
+	public static final Block POTTED_WILD_PANSY;
 	public static final Block POTTED_YELLOW_VIOLET;
 
 	public static final Block POTTED_GRAY_SHAG_MUSHROOM;
@@ -2216,6 +2241,14 @@ public class DTBlocks {
 		return new MushroomPlantBlock(Settings.copy(BROWN_MUSHROOM), () -> feature);
 	}
 
+	protected static Block createMushroomBlock() {
+		return new MushroomBlock(Settings.copy(BROWN_MUSHROOM_BLOCK));
+	}
+
+	protected static Block createMushroomStem() {
+		return new MushroomBlock(Settings.copy(MUSHROOM_STEM));
+	}
+
 	protected static Block createOre(Settings settings, int min, int max) {
 		return new OreBlock(settings, UniformIntProvider.create(min, max));
 	}
@@ -2236,20 +2269,20 @@ public class DTBlocks {
 		return createOre(Settings.of(Material.STONE).requiresTool().strength(hardness, resistance), min, max);
 	}
 
-	protected static Block createOre(float strength) {
-		return createOre(strength, strength, 0, 0);
+	protected static Block createOre() {
+		return createOre(3.0F, 3.0F, 0, 0);
 	}
 
-	protected static Block createDeepslateOre(float hardness, float resistance, int min, int max) {
-		return createOre(Settings.copy(DEEPSLATE_IRON_ORE).strength(hardness, resistance), min, max);
+	protected static Block createDeepslateOre() {
+		return createOre(Settings.copy(DEEPSLATE_IRON_ORE).strength(4.5F, 3.0F), 3, 7);
 	}
 
-	protected static Block createBasaltOre(float hardness, float resistance, int min, int max) {
-		return createOre(Settings.copy(BASALT).strength(hardness, resistance), min, max);
+	protected static Block createBasaltOre(int min, int max) {
+		return createOre(Settings.copy(BASALT).strength(3.0F, 3.0F), min, max);
 	}
 
-	protected static Block createRedstoneOre(float hardness, float resistance) {
-		return createBlock(RedstoneOreBlock::new, Settings.copy(REDSTONE_ORE).strength(hardness, resistance));
+	protected static Block createRedstoneOre() {
+		return createBlock(RedstoneOreBlock::new, Settings.copy(REDSTONE_ORE).strength(3.0F, 3.0F));
 	}
 
 	protected static Block createStorceanFlower(StatusEffect effect, int effectDuration) {
@@ -2363,13 +2396,18 @@ public class DTBlocks {
 	static {
 		/* BIOLUMINESCENT BLOCKS */
 		BLACK_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		BLUE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		BROWN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		CYAN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		GRAY_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		GREEN_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		GYLDELION_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		LIGHT_BLUE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		LIGHT_GRAY_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		LIME_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		MAGENTA_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		ORANGE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
+		PINK_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		PURPLE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		RED_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
 		WHITE_BIOLUMINESCENT_BLOCK = createBioluminescentBlock();
@@ -2532,15 +2570,15 @@ public class DTBlocks {
 		ANDESITE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
 		ANDESITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 		ANDESITE_COAL_ORE = createOre(3.0F, 0, 2);
-		ANDESITE_COPPER_ORE = createOre(3.0F);
+		ANDESITE_COPPER_ORE = createOre();
 		ANDESITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		ANDESITE_EMERALD_ORE = createOre(3.0F, 3, 7);
 		ANDESITE_GARNET_ORE = createOre(3.0F, 3, 7);
-		ANDESITE_GOLD_ORE = createOre(3.0F);
-		ANDESITE_IRON_ORE = createOre(3.0F);
+		ANDESITE_GOLD_ORE = createOre();
+		ANDESITE_IRON_ORE = createOre();
 		ANDESITE_LAPIS_ORE = createOre(3.0F, 2, 5);
 		ANDESITE_MORGANITE_ORE = createOre(3.0F, 3, 7);
-		ANDESITE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		ANDESITE_REDSTONE_ORE = createRedstoneOre();
 		ANDESITE_RUBY_ORE = createOre(3.0F, 3, 7);
 		ANDESITE_SILVER_ORE = createOre(3.0F, 3, 7);
 		ANDESITE_SPHENE_ORE = createOre(3.0F, 3, 7);
@@ -2560,60 +2598,60 @@ public class DTBlocks {
 		BLACK_BASALT_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 		BLACK_BASALT_COAL_ORE = createOre(3.0F, 0, 2);
 		BLACK_BASALT_DIAMOND_ORE = createOre(3.0F, 3, 7);
-		BLACK_BASALT_GOLD_ORE = createOre(3.0F);
-		BLACK_BASALT_IRON_ORE = createOre(3.0F);
+		BLACK_BASALT_GOLD_ORE = createOre();
+		BLACK_BASALT_IRON_ORE = createOre();
 
 		BLUE_STORCERACK_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		BLUE_STORCERACK_COAL_ORE = createOre(3.0F, 0, 2);
-		BLUE_STORCERACK_COPPER_ORE = createOre(3.0F);
+		BLUE_STORCERACK_COPPER_ORE = createOre();
 		BLUE_STORCERACK_DIAMOND_ORE = createOre(3.0F, 3, 7);
-		BLUE_STORCERACK_GOLD_ORE = createOre(3.0F);
-		BLUE_STORCERACK_IRON_ORE = createOre(3.0F);
-		BLUE_STORCERACK_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		BLUE_STORCERACK_GOLD_ORE = createOre();
+		BLUE_STORCERACK_IRON_ORE = createOre();
+		BLUE_STORCERACK_REDSTONE_ORE = createRedstoneOre();
 		BLUE_STORCERACK_RUBY_ORE = createOre(3.0F, 3, 7);
 		BLUE_STORCERACK_SPHENE_ORE = createOre(3.0F, 3, 7);
 		BLUE_STORCERACK_SPINEL_ORE = createOre(3.0F, 3, 7);
-		BLUE_STORCERACK_STROXITE_ORE = createOre(3.0F);
-		BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE = createOre(3.0F);
+		BLUE_STORCERACK_STROXITE_ORE = createOre();
+		BLUE_STORCERACK_CHARGED_TUNGSTEN_ORE = createOre();
 
 		CALCITE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
 		CALCITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 		CALCITE_COAL_ORE = createOre(3.0F, 0, 2);
 		CALCITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
-		CALCITE_GOLD_ORE = createOre(3.0F);
+		CALCITE_GOLD_ORE = createOre();
 
-		DEEPSLATE_AQUAMARINE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_BLACK_OPAL_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_CHALCEDONY_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_CLINOHUMITE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_GARNET_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_MORGANITE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_OPAL_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_RUBY_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_SAPPHIRE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_SILVER_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_SPHENE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_SPINEL_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_SUGILITE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_TANZANITE_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
-		DEEPSLATE_TOPAZ_ORE = createDeepslateOre(4.5F, 3.0F, 3, 7);
+		DEEPSLATE_AQUAMARINE_ORE = createDeepslateOre();
+		DEEPSLATE_BLACK_OPAL_ORE = createDeepslateOre();
+		DEEPSLATE_CHALCEDONY_ORE = createDeepslateOre();
+		DEEPSLATE_CLINOHUMITE_ORE = createDeepslateOre();
+		DEEPSLATE_GARNET_ORE = createDeepslateOre();
+		DEEPSLATE_MORGANITE_ORE = createDeepslateOre();
+		DEEPSLATE_OPAL_ORE = createDeepslateOre();
+		DEEPSLATE_RUBY_ORE = createDeepslateOre();
+		DEEPSLATE_SAPPHIRE_ORE = createDeepslateOre();
+		DEEPSLATE_SILVER_ORE = createDeepslateOre();
+		DEEPSLATE_SPHENE_ORE = createDeepslateOre();
+		DEEPSLATE_SPINEL_ORE = createDeepslateOre();
+		DEEPSLATE_SUGILITE_ORE = createDeepslateOre();
+		DEEPSLATE_TANZANITE_ORE = createDeepslateOre();
+		DEEPSLATE_TOPAZ_ORE = createDeepslateOre();
 
 		DIORITE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
 		DIORITE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		DIORITE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
 		DIORITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 		DIORITE_COAL_ORE = createOre(3.0F, 0, 2);
-		DIORITE_COPPER_ORE = createOre(3.0F);
+		DIORITE_COPPER_ORE = createOre();
 		DIORITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		DIORITE_EMERALD_ORE = createOre(3.0F, 3, 7);
 		DIORITE_GARNET_ORE = createOre(3.0F, 3, 7);
-		DIORITE_GOLD_ORE = createOre(3.0F);
-		DIORITE_IRON_ORE = createOre(3.0F);
+		DIORITE_GOLD_ORE = createOre();
+		DIORITE_IRON_ORE = createOre();
 		DIORITE_LAPIS_ORE = createOre(3.0F, 2, 5);
 		DIORITE_MORGANITE_ORE = createOre(3.0F, 3, 7);
-		DIORITE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		DIORITE_REDSTONE_ORE = createRedstoneOre();
 		DIORITE_RUBY_ORE = createOre(3.0F, 3, 7);
-		DIORITE_SILVER_ORE = createOre(3.0F);
+		DIORITE_SILVER_ORE = createOre();
 		DIORITE_SPHENE_ORE = createOre(3.0F, 3, 7);
 		DIORITE_SPINEL_ORE = createOre(3.0F, 3, 7);
 		DIORITE_TANZANITE_ORE = createOre(3.0F, 3, 7);
@@ -2623,8 +2661,8 @@ public class DTBlocks {
 		END_STONE_SPINEL_ORE = createOre(3.0F, 3, 7);
 		END_STONE_VOID_CRITTERED_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
 
-		FLINT_STONE_SILICON_ORE = createOre(3.0F);
-		FLINT_STONE_URANOLUMEN_ORE = createOre(3.0F);
+		FLINT_STONE_SILICON_ORE = createOre();
+		FLINT_STONE_URANOLUMEN_ORE = createOre();
 
 		GRAY_MARBLE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 
@@ -2633,15 +2671,15 @@ public class DTBlocks {
 		GRANITE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
 		GRANITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 		GRANITE_COAL_ORE = createOre(3.0F, 0, 2);
-		GRANITE_COPPER_ORE = createOre(3.0F);
+		GRANITE_COPPER_ORE = createOre();
 		GRANITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		GRANITE_EMERALD_ORE = createOre(3.0F, 3, 7);
 		GRANITE_GARNET_ORE = createOre(3.0F, 3, 7);
-		GRANITE_GOLD_ORE = createOre(3.0F);
-		GRANITE_IRON_ORE = createOre(3.0F);
+		GRANITE_GOLD_ORE = createOre();
+		GRANITE_IRON_ORE = createOre();
 		GRANITE_LAPIS_ORE = createOre(3.0F, 2, 5);
 		GRANITE_MORGANITE_ORE = createOre(3.0F, 3, 7);
-		GRANITE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		GRANITE_REDSTONE_ORE = createRedstoneOre();
 		GRANITE_RUBY_ORE = createOre(3.0F, 3, 7);
 		GRANITE_SILVER_ORE = createOre(3.0F, 3, 7);
 		GRANITE_SPHENE_ORE = createOre(3.0F, 3, 7);
@@ -2653,18 +2691,18 @@ public class DTBlocks {
 		HADAL_STONE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		HADAL_STONE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 		HADAL_STONE_COAL_ORE = createOre(3.0F, 0, 2);
-		HADAL_STONE_COPPER_ORE = createOre(3.0F);
+		HADAL_STONE_COPPER_ORE = createOre();
 		HADAL_STONE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		HADAL_STONE_EMERALD_ORE = createOre(3.0F, 3, 7);
 		HADAL_STONE_GARNET_ORE = createOre(3.0F, 3, 7);
-		HADAL_STONE_GOLD_ORE = createOre(3.0F);
-		HADAL_STONE_IRON_ORE = createOre(3.0F);
+		HADAL_STONE_GOLD_ORE = createOre();
+		HADAL_STONE_IRON_ORE = createOre();
 		HADAL_STONE_LAPIS_ORE = createOre(3.0F, 2, 5);
 		HADAL_STONE_MORGANITE_ORE = createOre(3.0F, 3, 7);
-		HADAL_STONE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		HADAL_STONE_REDSTONE_ORE = createRedstoneOre();
 		HADAL_STONE_RUBY_ORE = createOre(3.0F, 3, 7);
 		HADAL_STONE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
-		HADAL_STONE_SILVER_ORE = createOre(3.0F);
+		HADAL_STONE_SILVER_ORE = createOre();
 		HADAL_STONE_SPHENE_ORE = createOre(3.0F, 3, 7);
 		HADAL_STONE_SPINEL_ORE = createOre(3.0F, 3, 7);
 		HADAL_STONE_SUGILITE_ORE = createOre(3.0F, 3, 7);
@@ -2674,26 +2712,26 @@ public class DTBlocks {
 		INFINITAL_STONE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
 		INFINITAL_STONE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		INFINITAL_STONE_COAL_ORE = createOre(3.0F, 0, 2);
-		INFINITAL_STONE_COPPER_ORE = createOre(3.0F);
+		INFINITAL_STONE_COPPER_ORE = createOre();
 		INFINITAL_STONE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		INFINITAL_STONE_ENSTATITE_ORE = createOre(3.0F, 3, 7);
 		INFINITAL_STONE_OPAL_ORE = createOre(3.0F, 3, 7);
-		INFINITAL_STONE_IRON_ORE = createOre(3.0F);
+		INFINITAL_STONE_IRON_ORE = createOre();
 		INFINITAL_STONE_RUBY_ORE = createOre(3.0F, 3, 7);
 		INFINITAL_STONE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
 		INFINITAL_STONE_SPHENE_ORE = createOre(3.0F, 3, 7);
 		INFINITAL_STONE_SPINEL_ORE = createOre(3.0F, 3, 7);
 		INFINITAL_STONE_SUGILITE_ORE = createOre(3.0F, 3, 7);
-		INFINITAL_STONE_URANOLUMEN_ORE = createOre(3.0F);
-		INFINITAL_STONE_SILICON_ORE = createOre(3.0F);
+		INFINITAL_STONE_URANOLUMEN_ORE = createOre();
+		INFINITAL_STONE_SILICON_ORE = createOre();
 
 		LIMESTONE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
 		LIMESTONE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		LIMESTONE_COAL_ORE = createOre(3.0F, 0, 2);
-		LIMESTONE_COPPER_ORE = createOre(3.0F);
+		LIMESTONE_COPPER_ORE = createOre();
 		LIMESTONE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		LIMESTONE_OPAL_ORE = createOre(3.0F, 3, 7);
-		LIMESTONE_IRON_ORE = createOre(3.0F);
+		LIMESTONE_IRON_ORE = createOre();
 		LIMESTONE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
 		LIMESTONE_SPHENE_ORE = createOre(3.0F, 3, 7);
 		LIMESTONE_SPINEL_ORE = createOre(3.0F, 3, 7);
@@ -2704,76 +2742,75 @@ public class DTBlocks {
 
 		MARBLE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 
-		// TODO RENAME
-		NETHERRACK_BORON_ORE = createOre(3.0F);
+		NETHERRACK_BORON_ORE = createOre();
 		NETHERRACK_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 
 		PINKINE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
 		PINKINE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		PINKINE_COAL_ORE = createOre(3.0F, 0, 2);
-		PINKINE_COPPER_ORE = createOre(3.0F);
+		PINKINE_COPPER_ORE = createOre();
 		PINKINE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		PINKINE_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
 		PINKINE_ENSTATITE_ORE = createOre(3.0F, 3, 7);
 		PINKINE_OPAL_ORE = createOre(3.0F, 3, 7);
-		PINKINE_IRON_ORE = createOre(3.0F);
+		PINKINE_IRON_ORE = createOre();
 		PINKINE_RUBY_ORE = createOre(3.0F, 3, 7);
 		PINKINE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
-		PINKINE_SILICON_ORE = createOre(3.0F);
+		PINKINE_SILICON_ORE = createOre();
 		PINKINE_SPHENE_ORE = createOre(3.0F, 3, 7);
 		PINKINE_SPINEL_ORE = createOre(3.0F, 3, 7);
 		PINKINE_SUGILITE_ORE = createOre(3.0F, 3, 7);
-		PINKINE_URANIUM_ORE = createOre(3.0F);
-		PINKINE_URANOLUMEN_ORE = createOre(3.0F);
+		PINKINE_URANIUM_ORE = createOre();
+		PINKINE_URANOLUMEN_ORE = createOre();
 		PINKINE_VOID_CRITTERED_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
 
+		RHODONITE_GARNET_ORE = createOre(3.0F, 3, 7);
 		RINGWOODITE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
-
 		SKYSTONE_OPAL_ORE = createOre(3.0F, 3, 7);
 
-		SMOOTH_BASALT_CHALCEDONY_ORE = createBasaltOre(3.0F, 3.0F, 3, 7);
-		SMOOTH_BASALT_CLINOHUMITE_ORE = createBasaltOre(3.0F, 3.0F, 3, 7);
-		SMOOTH_BASALT_DIAMOND_ORE = createBasaltOre(3.0F, 3.0F, 3, 7);
-		SMOOTH_BASALT_GOLD_ORE = createBasaltOre(3.0F, 3.0F, 0, 0);
+		SMOOTH_BASALT_CHALCEDONY_ORE = createBasaltOre(3, 7);
+		SMOOTH_BASALT_CLINOHUMITE_ORE = createBasaltOre(3, 7);
+		SMOOTH_BASALT_DIAMOND_ORE = createBasaltOre(3, 7);
+		SMOOTH_BASALT_GOLD_ORE = createBasaltOre(0, 0);
 
 		STORCEAN_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
-		STORCEAN_SILICON_ORE = createOre(3.0F);
-		STORCEAN_TUNGSTEN_ORE = createOre(3.0F);
+		STORCEAN_SILICON_ORE = createOre();
+		STORCEAN_TUNGSTEN_ORE = createOre();
 
 		STORCENDITE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
 		STORCENDITE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		STORCENDITE_COAL_ORE = createOre(3.0F, 0, 2);
-		STORCENDITE_COPPER_ORE = createOre(3.0F);
+		STORCENDITE_COPPER_ORE = createOre();
 		STORCENDITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		STORCENDITE_ENSTATITE_ORE = createOre(3.0F, 3, 7);
-		STORCENDITE_IRON_ORE = createOre(3.0F);
+		STORCENDITE_IRON_ORE = createOre();
 		STORCENDITE_OPAL_ORE = createOre(3.0F, 3, 7);
 		STORCENDITE_RUBY_ORE = createOre(3.0F, 3, 7);
 		STORCENDITE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
-		STORCENDITE_SILICON_ORE = createOre(3.0F);
+		STORCENDITE_SILICON_ORE = createOre();
 		STORCENDITE_SPHENE_ORE = createOre(3.0F, 3, 7);
 		STORCENDITE_SPINEL_ORE = createOre(3.0F, 3, 7);
 		STORCENDITE_SUGILITE_ORE = createOre(3.0F, 3, 7);
-		STORCENDITE_URANIUM_ORE = createOre(3.0F);
-		STORCENDITE_URANOLUMEN_ORE = createOre(3.0F);
+		STORCENDITE_URANIUM_ORE = createOre();
+		STORCENDITE_URANOLUMEN_ORE = createOre();
 
 		STORCERACK_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
 		STORCERACK_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		STORCERACK_COAL_ORE = createOre(3.0F, 0, 2);
-		STORCERACK_COPPER_ORE = createOre(3.0F);
+		STORCERACK_COPPER_ORE = createOre();
 		STORCERACK_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		STORCERACK_GOLD_ORE = createOre(3.0F, 3, 7);
-		STORCERACK_IRON_ORE = createOre(3.0F);
+		STORCERACK_IRON_ORE = createOre();
 		STORCERACK_OPAL_ORE = createOre(3.0F, 3, 7);
-		STORCERACK_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		STORCERACK_REDSTONE_ORE = createRedstoneOre();
 		STORCERACK_RUBY_ORE = createOre(3.0F, 3, 7);
 		STORCERACK_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
-		STORCERACK_SILICON_ORE = createOre(3.0F);
+		STORCERACK_SILICON_ORE = createOre();
 		STORCERACK_SPHENE_ORE = createOre(3.0F, 3, 7);
 		STORCERACK_SPINEL_ORE = createOre(3.0F, 3, 7);
 		STORCERACK_SUGILITE_ORE = createOre(3.0F, 3, 7);
-		STORCERACK_TUNGSTEN_ORE = createOre(3.0F);
-		STORCERACK_URANOLUMEN_ORE = createOre(3.0F);
+		STORCERACK_TUNGSTEN_ORE = createOre();
+		STORCERACK_URANOLUMEN_ORE = createOre();
 
 		SULFUR_STONE_CHALCEDONY_ORE = createOre(3.0F, 3, 7);
 		SULFUR_STONE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
@@ -2783,24 +2820,24 @@ public class DTBlocks {
 		TUFF_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 		TUFF_COAL_ORE = createOre(3.0F, 0, 2);
 		TUFF_DIAMOND_ORE = createOre(3.0F, 3, 7);
-		TUFF_GOLD_ORE = createOre(3.0F);
+		TUFF_GOLD_ORE = createOre();
 
 		VERDINE_COAL_ORE = createOre(3.0F, 0, 2);
 
 		VIRDAL_STONE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
 		VIRDAL_STONE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		VIRDAL_STONE_COAL_ORE = createOre(3.0F, 0, 2);
-		VIRDAL_STONE_COPPER_ORE = createOre(3.0F);
+		VIRDAL_STONE_COPPER_ORE = createOre();
 		VIRDAL_STONE_DIAMOND_ORE = createOre(3.0F, 3, 7);
-		VIRDAL_STONE_IRON_ORE = createOre(3.0F);
+		VIRDAL_STONE_IRON_ORE = createOre();
 		VIRDAL_STONE_OPAL_ORE = createOre(3.0F, 3, 7);
 		VIRDAL_STONE_RUBY_ORE = createOre(3.0F, 3, 7);
 		VIRDAL_STONE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
-		VIRDAL_STONE_SILICON_ORE = createOre(3.0F);
+		VIRDAL_STONE_SILICON_ORE = createOre();
 		VIRDAL_STONE_SPHENE_ORE = createOre(3.0F, 3, 7);
 		VIRDAL_STONE_SPINEL_ORE = createOre(3.0F, 3, 7);
 		VIRDAL_STONE_SUGILITE_ORE = createOre(3.0F, 3, 7);
-		VIRDAL_STONE_URANOLUMEN_ORE = createOre(3.0F);
+		VIRDAL_STONE_URANOLUMEN_ORE = createOre();
 
 		WAVED_BEDROCK_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		WAVED_BEDROCK_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
@@ -2809,26 +2846,26 @@ public class DTBlocks {
 
 		WAVEITE_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 		WAVEITE_COAL_ORE = createOre(3.0F, 0, 2);
-		WAVEITE_COPPER_ORE = createOre(3.0F);
+		WAVEITE_COPPER_ORE = createOre();
 		WAVEITE_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		WAVEITE_EMERALD_ORE = createOre(3.0F, 3, 7);
-		WAVEITE_IRON_ORE = createOre(3.0F);
+		WAVEITE_IRON_ORE = createOre();
 		WAVEITE_GARNET_ORE = createOre(3.0F, 3, 7);
-		WAVEITE_GOLD_ORE = createOre(3.0F);
+		WAVEITE_GOLD_ORE = createOre();
 		WAVEITE_LAPIS_ORE = createOre(3.0F, 2, 5);
 		WAVEITE_MORGANITE_ORE = createOre(3.0F, 3, 7);
-		WAVEITE_REDSTONE_ORE = createRedstoneOre(3.0F, 3.0F);
+		WAVEITE_REDSTONE_ORE = createRedstoneOre();
 		WAVEITE_RUBY_ORE = createOre(3.0F, 3, 7);
 		WAVEITE_SAPPHIRE_ORE = createOre(3.0F, 3, 7);
-		WAVEITE_SILICON_ORE = createOre(3.0F);
-		WAVEITE_SILVER_ORE = createOre(3.0F);
+		WAVEITE_SILICON_ORE = createOre();
+		WAVEITE_SILVER_ORE = createOre();
 		WAVEITE_SPHENE_ORE = createOre(3.0F, 3, 7);
 		WAVEITE_SPINEL_ORE = createOre(3.0F, 3, 7);
 		WAVEITE_SUGILITE_ORE = createOre(3.0F, 3, 7);
 		WAVEITE_TANZANITE_ORE = createOre(3.0F, 3, 7);
 		WAVEITE_TOPAZ_ORE = createOre(3.0F, 3, 7);
 
-		ACTINIUM_ORE = createOre(3.0F);
+		ACTINIUM_ORE = createOre();
 		AQUAMARINE_ORE = createOre(3.0F, 3, 7);
 		BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
@@ -2867,6 +2904,7 @@ public class DTBlocks {
 		DIOPSIDE_BLOCK = createCopy(IRON_BLOCK);
 		ENRON_BLOCK = createCopy(IRON_BLOCK);
 		ENSTATITE_BLOCK = createCopy(IRON_BLOCK);
+		CUT_GARNET_BLOCK = createCopy(IRON_BLOCK);
 		GYLDELION_BLOCK = createCopy(IRON_BLOCK);
 		KRALCTIUM_BLOCK = createCopy(IRON_BLOCK);
 		KRALIUM_BLOCK = createCopy(IRON_BLOCK);
@@ -2895,9 +2933,6 @@ public class DTBlocks {
 		CHISELED_SILICON_BLOCK = createCopy(IRON_BLOCK);
 		CHISELED_SILVER_BLOCK = createCopy(IRON_BLOCK);
 		CHISELED_SUGILITE_BLOCK = createCopy(IRON_BLOCK);
-
-		/* CRYSTALS */
-		LEKRALITE_CRYSTALS = createAmethystBlock();
 
 		BLACK_OPALITE_BLOCK = createAmethystBlock();
 		BUDDING_BLACK_OPALITE = createBuddingAmethyst(BuddingBlackOpalBlock::new);
@@ -3000,6 +3035,7 @@ public class DTBlocks {
 		VASLAME = createStorceanFlower(FIRE_RESISTANCE, 6);
 		WEEPISTIL = createStorceanFlower(NAUSEA, 4);
 		WEEPY_HOLLOWER = createStorceanFlower(GLOWING, 6);
+		WHEEPING_AZURE_BLOOM = createStorceanFlower(GLOWING, 6);
 		WHITE_VIOLET = createFlowerBlock(RESISTANCE, 9);
 		WILD_PANSY = createFlowerBlock(RESISTANCE, 9);
 		YELLOW_VIOLET = createFlowerBlock(RESISTANCE, 9);
@@ -3024,29 +3060,44 @@ public class DTBlocks {
 		MOSS = createCopy(GRASS_BLOCK);
 
 		/* PLANTS */
-		AIRIAL_BUSH = createCopy(IRON_BLOCK);
-		BUCKTHORN = createCopy(IRON_BLOCK);
-		FOUR_LEAFED_CLOVER = createCopy(IRON_BLOCK);
-		FUR_PLATEAU = createCopy(IRON_BLOCK);
-		HARSHLES = createCopy(IRON_BLOCK);
-		ILYINE = createCopy(IRON_BLOCK);
-		JUNGLE_UMBRELLA = createCopy(IRON_BLOCK);
-		LICHEN = createCopy(IRON_BLOCK);
-		MOSSES = createCopy(IRON_BLOCK);
+		AIRIAL_BUSH = createCopy(SWEET_BERRY_BUSH);
+		BUCKTHORN = createCopy(GRASS);
+		BULK_GRASSES = createCopy(GRASS);
+		CRUSTED_FUNGUS = createCopy(GRASS);
+		FOUR_LEAFED_CLOVER = createCopy(GRASS);
+		FRAREL = createCopy(GRASS);
+		FUR_PLATEAU = createCopy(GRASS);
+		HARSHLES = createCopy(GRASS);
+		ILYINE = createCopy(GRASS);
+		JUNGLE_UMBRELLA = createCopy(GRASS);
+		LICHEN = createCopy(GRASS);
+		MOSSES = createCopy(GRASS);
 		MURKSTEM = createBlock(MurkstemBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
-		POMEGRANATE_BUSH = createCopy(IRON_BLOCK);
-		REEBLOON = createCopy(IRON_BLOCK);
-		SEA_BUCKTHORN = createCopy(IRON_BLOCK);
+		POMEGRANATE_BUSH = createCopy(GRASS);
+		REEBLOON = createCopy(GRASS);
+		SEA_BUCKTHORN = createCopy(GRASS);
 		SKALK = createBlock(SkalkBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
-		SQUISH_TIPS = createCopy(IRON_BLOCK);
-		THREE_LEAFED_CLOVER = createCopy(IRON_BLOCK);
+		SQUISH_TIPS = createCopy(GRASS);
+		THREE_LEAFED_CLOVER = createCopy(GRASS);
 
 		/* MUSHROOMS */
-		GRAY_SHAG_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
-		INKY_CAP_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
-		PUFFBALL_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
-		SHELF_MUSHROOM = new ShelfMushroomBlock(Settings.copy(BROWN_MUSHROOM), () -> ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
-		WHITE_MUSHROOM = createMushroomPlant(ConfiguredFeatures.HUGE_BROWN_MUSHROOM);
+		GRAY_SHAG_MUSHROOM = createMushroomPlant(DTConfiguredFeatures.GRAY_SHAG_MUSHROOM);
+		INKY_CAP_MUSHROOM = createMushroomPlant(DTConfiguredFeatures.INKY_CAP_MUSHROOM);
+		PUFFBALL_MUSHROOM = createMushroomPlant(DTConfiguredFeatures.PUFFBALL_MUSHROOM);
+		SHELF_MUSHROOM = new ShelfMushroomBlock(Settings.copy(BROWN_MUSHROOM), () -> DTConfiguredFeatures.SHELF_MUSHROOM);
+		WHITE_MUSHROOM = createMushroomPlant(DTConfiguredFeatures.WHITE_MUSHROOM);
+
+		GRAY_SHAG_MUSHROOM_BLOCK = createMushroomBlock();
+		INKY_CAP_MUSHROOM_BLOCK = createMushroomBlock();
+		PUFFBALL_MUSHROOM_BLOCK = createMushroomBlock();
+		SHELF_MUSHROOM_BLOCK = createMushroomBlock();
+		WHITE_MUSHROOM_BLOCK = createMushroomBlock();
+
+		GRAY_SHAG_MUSHROOM_STEM = createMushroomStem();
+		INKY_CAP_MUSHROOM_STEM = createMushroomStem();
+		PUFFBALL_MUSHROOM_STEM = createMushroomStem();
+		SHELF_MUSHROOM_STEM = createMushroomStem();
+		WHITE_MUSHROOM_STEM = createMushroomStem();
 
 		/* GIANT VIOLET */
 		GIANT_VIOLET = createCopy(IRON_BLOCK);
@@ -3163,7 +3214,10 @@ public class DTBlocks {
 		DEAD_LEKRAL_CORAL_WALL_FAN = createDeadCoralWallFan();
 
 		LEKRAL_CORAL = createCoral(DEAD_LEKRAL_CORAL);
+		LEKRAL_CLUSTER = createClusterAmethyst();
 		LEKRAL_CORAL_BLOCK = createCoralBlock(DEAD_LEKRAL_CORAL_BLOCK);
+		LEKRAL_ORE = createOre(2.5F, 3, 7);
+		BUDDING_LEKRAL = createBuddingAmethyst(BuddingLekralBlock::new);
 		LEKRAL_CORAL_FAN = createCoralFan(DEAD_LEKRAL_CORAL_FAN);
 		LEKRAL_CORAL_WALL_FAN = createCoralWallFan(DEAD_LEKRAL_CORAL_WALL_FAN);
 
@@ -4436,6 +4490,9 @@ public class DTBlocks {
 		POTTED_VASLAME = createFlowerPot(VASLAME);
 		POTTED_WEEPISTIL = createFlowerPot(WEEPISTIL);
 		POTTED_WEEPY_HOLLOWER = createFlowerPot(WEEPY_HOLLOWER);
+		POTTED_WHEEPING_AZURE_BLOOM = createFlowerPot(WHEEPING_AZURE_BLOOM);
+		POTTED_WHITE_VIOLET = createFlowerPot(WHITE_VIOLET);
+		POTTED_WILD_PANSY = createFlowerPot(WILD_PANSY);
 		POTTED_YELLOW_VIOLET = createFlowerPot(YELLOW_VIOLET);
 
 		POTTED_GRAY_SHAG_MUSHROOM = createFlowerPot(GRAY_SHAG_MUSHROOM);
@@ -4465,13 +4522,18 @@ public class DTBlocks {
 	public static void initialize() {
 		/* BIOLUMINESCENT BLOCKS */
 		Registry.register(BLOCK, "deep_trenches:black_bioluminescent_block", BLACK_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:blue_bioluminescent_block", BLUE_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:brown_bioluminescent_block", BROWN_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:cyan_bioluminescent_block", CYAN_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:gray_bioluminescent_block", GRAY_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:green_bioluminescent_block", GREEN_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:gyldelion_bioluminescent_block", GYLDELION_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:light_blue_bioluminescent_block", LIGHT_BLUE_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:light_gray_bioluminescent_block", LIGHT_GRAY_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:lime_bioluminescent_block", LIME_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:magenta_bioluminescent_block", MAGENTA_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:orange_bioluminescent_block", ORANGE_BIOLUMINESCENT_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:pink_bioluminescent_block", PINK_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:purple_bioluminescent_block", PURPLE_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:red_bioluminescent_block", RED_BIOLUMINESCENT_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:white_bioluminescent_block", WHITE_BIOLUMINESCENT_BLOCK);
@@ -4814,8 +4876,8 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:pinkine_uranolumen_ore", PINKINE_URANOLUMEN_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_void_crittered_diopside_ore", PINKINE_VOID_CRITTERED_DIOPSIDE_ORE);
 
+		Registry.register(BLOCK, "deep_trenches:ringwoodite_sapphire_ore", RHODONITE_GARNET_ORE);
 		Registry.register(BLOCK, "deep_trenches:ringwoodite_sapphire_ore", RINGWOODITE_SAPPHIRE_ORE);
-
 		Registry.register(BLOCK, "deep_trenches:skystone_opal_ore", SKYSTONE_OPAL_ORE);
 
 		Registry.register(BLOCK, "deep_trenches:smooth_basalt_chalcedony_ore", SMOOTH_BASALT_CHALCEDONY_ORE);
@@ -4954,6 +5016,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:diopside_block", DIOPSIDE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:enron_block", ENRON_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:enstatite_block", ENSTATITE_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:cut_garnet_block", CUT_GARNET_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:gyldelion_block", GYLDELION_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:kralctium_block", KRALCTIUM_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:kralium_block", KRALIUM_BLOCK);
@@ -4983,9 +5046,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:chiseled_silver_block", CHISELED_SILVER_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:chiseled_sugilite_block", CHISELED_SUGILITE_BLOCK);
 
-		/* CRYSTALS */
-		Registry.register(BLOCK, "deep_trenches:lekralite_crystals", LEKRALITE_CRYSTALS);
-
+		/* AMETHYSTS */
 		Registry.register(BLOCK, "deep_trenches:black_opalite_block", BLACK_OPALITE_BLOCK);
 		Registry.register(BLOCK, "deep_trenches:budding_black_opalite", BUDDING_BLACK_OPALITE);
 		Registry.register(BLOCK, "deep_trenches:black_opal_cluster", BLACK_OPAL_CLUSTER);
@@ -5113,7 +5174,10 @@ public class DTBlocks {
 		/* PLANTS */
 		Registry.register(BLOCK, "deep_trenches:airial_bush", AIRIAL_BUSH);
 		Registry.register(BLOCK, "deep_trenches:buckthorn", BUCKTHORN);
+		Registry.register(BLOCK, "deep_trenches:bulk_grasses", BULK_GRASSES);
+		Registry.register(BLOCK, "deep_trenches:crusted_fungus", CRUSTED_FUNGUS);
 		Registry.register(BLOCK, "deep_trenches:four_leafed_clover", FOUR_LEAFED_CLOVER);
+		Registry.register(BLOCK, "deep_trenches:frarel", FRAREL);
 		Registry.register(BLOCK, "deep_trenches:fur_plateau", FUR_PLATEAU);
 		Registry.register(BLOCK, "deep_trenches:harshles", HARSHLES);
 		Registry.register(BLOCK, "deep_trenches:ilyine", ILYINE);
@@ -5134,6 +5198,18 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:puffball_mushroom", PUFFBALL_MUSHROOM);
 		Registry.register(BLOCK, "deep_trenches:shelf_mushroom", SHELF_MUSHROOM);
 		Registry.register(BLOCK, "deep_trenches:white_mushroom", WHITE_MUSHROOM);
+
+		Registry.register(BLOCK, "deep_trenches:gray_shag_mushroom_block", GRAY_SHAG_MUSHROOM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:inky_cap_mushroom_block", INKY_CAP_MUSHROOM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:puffball_mushroom_block", PUFFBALL_MUSHROOM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:shelf_mushroom_block", SHELF_MUSHROOM_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:white_mushroom_block", WHITE_MUSHROOM_BLOCK);
+
+		Registry.register(BLOCK, "deep_trenches:gray_shag_mushroom_stem", GRAY_SHAG_MUSHROOM_STEM);
+		Registry.register(BLOCK, "deep_trenches:inky_cap_mushroom_stem", INKY_CAP_MUSHROOM_STEM);
+		Registry.register(BLOCK, "deep_trenches:puffball_mushroom_stem", PUFFBALL_MUSHROOM_STEM);
+		Registry.register(BLOCK, "deep_trenches:shelf_mushroom_stem", SHELF_MUSHROOM_STEM);
+		Registry.register(BLOCK, "deep_trenches:white_mushroom_stem", WHITE_MUSHROOM_STEM);
 
 		/* GIANT VIOLET */
 		Registry.register(BLOCK, "deep_trenches:giant_violet", GIANT_VIOLET);
@@ -5268,7 +5344,10 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:dead_lekral_coral_wall_fan", DEAD_LEKRAL_CORAL_WALL_FAN);
 
 		Registry.register(BLOCK, "deep_trenches:lekral_coral", LEKRAL_CORAL);
+		Registry.register(BLOCK, "deep_trenches:lekral_cluster", LEKRAL_CLUSTER);
 		Registry.register(BLOCK, "deep_trenches:lekral_coral_block", LEKRAL_CORAL_BLOCK);
+		Registry.register(BLOCK, "deep_trenches:lekral_ore", LEKRAL_ORE);
+		Registry.register(BLOCK, "deep_trenches:budding_lekral", BUDDING_LEKRAL);
 		Registry.register(BLOCK, "deep_trenches:lekral_coral_fan", LEKRAL_CORAL_FAN);
 		Registry.register(BLOCK, "deep_trenches:lekral_coral_wall_fan", LEKRAL_CORAL_WALL_FAN);
 
@@ -6540,6 +6619,9 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:potted_vaslame", POTTED_VASLAME);
 		Registry.register(BLOCK, "deep_trenches:potted_weepistil", POTTED_WEEPISTIL);
 		Registry.register(BLOCK, "deep_trenches:potted_weepy_hollower", POTTED_WEEPY_HOLLOWER);
+		Registry.register(BLOCK, "deep_trenches:potted_wheeping_azure_bloom", POTTED_WHEEPING_AZURE_BLOOM);
+		Registry.register(BLOCK, "deep_trenches:potted_white_violet", POTTED_WHITE_VIOLET);
+		Registry.register(BLOCK, "deep_trenches:potted_wild_pansy", POTTED_WILD_PANSY);
 		Registry.register(BLOCK, "deep_trenches:potted_yellow_violet", POTTED_YELLOW_VIOLET);
 
 		Registry.register(BLOCK, "deep_trenches:potted_gray_shag_mushroom", POTTED_GRAY_SHAG_MUSHROOM);

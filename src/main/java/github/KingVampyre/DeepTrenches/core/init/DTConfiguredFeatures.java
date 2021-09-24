@@ -3,8 +3,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import github.KingVampyre.DeepTrenches.core.world.gen.trunk.GreatTrunkPlacer;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.util.math.intprovider.ClampedIntProvider;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -132,6 +131,12 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> ORANGE_LILY;
     public static final ConfiguredFeature<?, ?> VELVET_LILY;
 
+    public static final ConfiguredFeature<?, ?> GRAY_SHAG_MUSHROOM;
+    public static final ConfiguredFeature<?, ?> INKY_CAP_MUSHROOM;
+    public static final ConfiguredFeature<?, ?> PUFFBALL_MUSHROOM;
+    public static final ConfiguredFeature<?, ?> SHELF_MUSHROOM;
+    public static final ConfiguredFeature<?, ?> WHITE_MUSHROOM;
+
     public static final ConfiguredFeature<?, ?> PATCH_CLEAR_FOREST_GRASS;
 
     public static final ConfiguredFeature<?, ?> ALMOND_FOREST_FLOWER;
@@ -182,6 +187,10 @@ public class DTConfiguredFeatures {
 
     protected static ConfiguredFeature<TreeFeatureConfig, ?> createGreatTree(BlockStateProvider trunk, BlockStateProvider foliage, BlockStateProvider sapling) {
         return Feature.TREE.configure(new TreeFeatureConfig.Builder(trunk, new GreatTrunkPlacer(12, 7, 0), foliage, sapling, new LargeOakFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(4), 4), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).ignoreVines().build());
+    }
+
+    protected static ConfiguredFeature<?, ?> createHugeMushroom(BlockStateProvider cap, BlockStateProvider stem) {
+        return Feature.HUGE_BROWN_MUSHROOM.configure(new HugeMushroomFeatureConfig(cap, stem, 3));
     }
 
     protected static ConfiguredFeature<?, ?> createRandomPatch(RandomPatchFeatureConfig config) {
@@ -315,6 +324,12 @@ public class DTConfiguredFeatures {
         LILAC = createRandomPatch(LILAC_CONFIG);
         ORANGE_LILY = createRandomPatch(ORANGE_LILY_CONFIG);
         VELVET_LILY = createRandomPatch(VELVET_LILY_CONFIG);
+
+        GRAY_SHAG_MUSHROOM = createHugeMushroom(GRAY_SHAG_MUSHROOM_CAP_PROVIDER, GRAY_SHAG_MUSHROOM_STEM_PROVIDER);
+        INKY_CAP_MUSHROOM = createHugeMushroom(INKY_CAP_MUSHROOM_CAP_PROVIDER, INKY_CAP_MUSHROOM_STEM_PROVIDER);
+        PUFFBALL_MUSHROOM = createHugeMushroom(PUFFBALL_MUSHROOM_CAP_PROVIDER, PUFFBALL_MUSHROOM_STEM_PROVIDER);
+        SHELF_MUSHROOM = createHugeMushroom(SHELF_MUSHROOM_CAP_PROVIDER, SHELF_MUSHROOM_STEM_PROVIDER);
+        WHITE_MUSHROOM = createHugeMushroom(WHITE_MUSHROOM_CAP_PROVIDER, WHITE_MUSHROOM_STEM_PROVIDER);
 
         PATCH_CLEAR_FOREST_GRASS = createRandomPatch(PATCH_CLEAR_FOREST_GRASS_CONFIG);
 

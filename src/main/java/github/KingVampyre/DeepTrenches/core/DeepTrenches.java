@@ -16,6 +16,7 @@ public class  DeepTrenches implements ModInitializer {
 
 	@Override
     public void onInitialize() {
+		/* GECKO LIB */
 		GeckoLib.initialize();
 		/* GAME OBJECTS */
 		DTBlocks.initialize();

@@ -217,13 +217,18 @@ public class DTItems {
 
 	/* GOO's */
 	public static final Item BLACK_BIOLUMINESCENT_GOO;
+	public static final Item BLUE_BIOLUMINESCENT_GOO;
 	public static final Item BROWN_BIOLUMINESCENT_GOO;
 	public static final Item CYAN_BIOLUMINESCENT_GOO;
+	public static final Item GRAY_BIOLUMINESCENT_GOO;
 	public static final Item GREEN_BIOLUMINESCENT_GOO;
+	public static final Item GYLDELION_BIOLUMINESCENT_GOO;
 	public static final Item LIGHT_BLUE_BIOLUMINESCENT_GOO;
+	public static final Item LIGHT_GRAY_BIOLUMINESCENT_GOO;
 	public static final Item LIME_BIOLUMINESCENT_GOO;
 	public static final Item MAGENTA_BIOLUMINESCENT_GOO;
 	public static final Item ORANGE_BIOLUMINESCENT_GOO;
+	public static final Item PINK_BIOLUMINESCENT_GOO;
 	public static final Item PURPLE_BIOLUMINESCENT_GOO;
 	public static final Item RED_BIOLUMINESCENT_GOO;
 	public static final Item WHITE_BIOLUMINESCENT_GOO;
@@ -322,6 +327,7 @@ public class DTItems {
 
 	public static final Item AQUAMARINE_STAFF;
 	public static final Item DIOPSIDE_STAFF;
+	public static final Item RUBY_DISSTAFF;
 	public static final Item SPINEL_STAFF;
 	public static final Item TANZANITE_STAFF;
 	public static final Item TOPAZ_STAFF;
@@ -869,6 +875,7 @@ public class DTItems {
 	public static final Item ENRON_NUGGET;
 	public static final Item GYLDELION_NUGGET;
 	public static final Item KRALCTIUM_NUGGET;
+	public static final Item NETHERITE_NUGGET;
 	public static final Item SILICON_NUGGET;
 	public static final Item SILVER_NUGGET;
 	public static final Item STROXITE_NUGGET;
@@ -1194,13 +1201,18 @@ public class DTItems {
 
 		/* GOO's */
 		BLACK_BIOLUMINESCENT_GOO = createItem(MISC);
+		BLUE_BIOLUMINESCENT_GOO = createItem(MISC);
 		BROWN_BIOLUMINESCENT_GOO = createItem(MISC);
 		CYAN_BIOLUMINESCENT_GOO = createItem(MISC);
+		GRAY_BIOLUMINESCENT_GOO = createItem(MISC);
 		GREEN_BIOLUMINESCENT_GOO = createItem(MISC);
+		GYLDELION_BIOLUMINESCENT_GOO = createItem(MISC);
 		LIGHT_BLUE_BIOLUMINESCENT_GOO = createItem(MISC);
+		LIGHT_GRAY_BIOLUMINESCENT_GOO = createItem(MISC);
 		LIME_BIOLUMINESCENT_GOO = createItem(MISC);
 		MAGENTA_BIOLUMINESCENT_GOO = createItem(MISC);
 		ORANGE_BIOLUMINESCENT_GOO = createItem(MISC);
+		PINK_BIOLUMINESCENT_GOO = createItem(MISC);
 		PURPLE_BIOLUMINESCENT_GOO = createItem(MISC);
 		RED_BIOLUMINESCENT_GOO = createItem(MISC);
 		WHITE_BIOLUMINESCENT_GOO = createItem(MISC);
@@ -1300,6 +1312,7 @@ public class DTItems {
 
 		AQUAMARINE_STAFF = createStaff();
 		DIOPSIDE_STAFF = createStaff();
+		RUBY_DISSTAFF = new DisstaffItem(new Settings().group(COMBAT));
 		SPINEL_STAFF = createStaff();
 		TANZANITE_STAFF = createStaff();
 		TOPAZ_STAFF = createStaff();
@@ -1847,6 +1860,7 @@ public class DTItems {
 		ENRON_NUGGET = createItem(MINERALOGY);
 		GYLDELION_NUGGET = createItem(MINERALOGY);
 		KRALCTIUM_NUGGET = createItem(MINERALOGY);
+		NETHERITE_NUGGET = createItem(MINERALOGY);
 		SILICON_NUGGET = createItem(MINERALOGY);
 		SILVER_NUGGET = createItem(MINERALOGY);
 		STROXITE_NUGGET = createItem(MINERALOGY);
@@ -2405,7 +2419,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:chiseled_sugilite_block", CHISELED_SUGILITE_BLOCK, MINERALOGY);
 
 		/* CRYSTALS */
-		registerBlockItem("deep_trenches:lekralite_crystals", LEKRALITE_CRYSTALS, MINERALOGY);
+		registerBlockItem("deep_trenches:lekralite_crystals", LEKRAL_CLUSTER, MINERALOGY);
 
 		registerBlockItem("deep_trenches:black_opalite_block", BLACK_OPALITE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:budding_black_opalite", BUDDING_BLACK_OPALITE, MINERALOGY);
@@ -3865,13 +3879,18 @@ public class DTItems {
 
 		/* GOO's */
 		registerItem("deep_trenches:black_bioluminescent_goo", BLACK_BIOLUMINESCENT_GOO);
+		registerItem("deep_trenches:blue_bioluminescent_goo", BLUE_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:brown_bioluminescent_goo", BROWN_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:cyan_bioluminescent_goo", CYAN_BIOLUMINESCENT_GOO);
+		registerItem("deep_trenches:gray_bioluminescent_goo", GRAY_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:green_bioluminescent_goo", GREEN_BIOLUMINESCENT_GOO);
+		registerItem("deep_trenches:gyldelion_bioluminescent_goo", GYLDELION_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:light_blue_bioluminescent_goo", LIGHT_BLUE_BIOLUMINESCENT_GOO);
+		registerItem("deep_trenches:light_blue_bioluminescent_goo", LIGHT_GRAY_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:lime_bioluminescent_goo", LIME_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:magenta_bioluminescent_goo", MAGENTA_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:orange_bioluminescent_goo", ORANGE_BIOLUMINESCENT_GOO);
+		registerItem("deep_trenches:pink_bioluminescent_goo", PINK_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:purple_bioluminescent_goo", PURPLE_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:red_bioluminescent_goo", RED_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:white_bioluminescent_goo", WHITE_BIOLUMINESCENT_GOO);
@@ -3969,6 +3988,7 @@ public class DTItems {
 
 		registerItem("deep_trenches:aquamarine_staff", AQUAMARINE_STAFF);
 		registerItem("deep_trenches:diopside_staff", DIOPSIDE_STAFF);
+		registerItem("deep_trenches:ruby_disstaff", RUBY_DISSTAFF);
 		registerItem("deep_trenches:spinel_staff", SPINEL_STAFF);
 		registerItem("deep_trenches:tanzanite_staff", TANZANITE_STAFF);
 		registerItem("deep_trenches:topaz_staff", TOPAZ_STAFF);
@@ -4516,6 +4536,7 @@ public class DTItems {
 		registerItem("deep_trenches:enron_nugget", ENRON_NUGGET);
 		registerItem("deep_trenches:gyldelion_nugget", GYLDELION_NUGGET);
 		registerItem("deep_trenches:kralctium_nugget", KRALCTIUM_NUGGET);
+		registerItem("deep_trenches:netherite_nugget", NETHERITE_NUGGET);
 		registerItem("deep_trenches:silicon_nugget", SILICON_NUGGET);
 		registerItem("deep_trenches:silver_nugget", SILVER_NUGGET);
 		registerItem("deep_trenches:stroxite_nugget", STROXITE_NUGGET);
