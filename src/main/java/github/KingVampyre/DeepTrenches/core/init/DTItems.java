@@ -1880,20 +1880,25 @@ public class DTItems {
 		LOOSEJAW_TOOTH = createItem(MISC);
 
 		/* BLOCK ITEMS */
-		AIRIAL_MOSS = createBlockItem(DTBlocks.AIRIAL_MOSS, ARBOROLOGY);
-		ILMIUM = createBlockItem(DTBlocks.ILMIUM, ARBOROLOGY);
+		AIRIAL_MOSS = createBlockItem(DTBlocks.AIRIAL_MOSS, PHYTOLOGY);
+		ILMIUM = createBlockItem(DTBlocks.ILMIUM, PHYTOLOGY);
 	}
 
 	public static void initialize() {
 		/* BIOLUMINESCENT BLOCKS */
 		registerBlockItem("deep_trenches:black_bioluminescent_block", BLACK_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
+		registerBlockItem("deep_trenches:blue_bioluminescent_block", BLUE_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:brown_bioluminescent_block", BROWN_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:cyan_bioluminescent_block", CYAN_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
+		registerBlockItem("deep_trenches:gray_bioluminescent_block", GRAY_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:green_bioluminescent_block", GREEN_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
+		registerBlockItem("deep_trenches:gyldelion_bioluminescent_block", GYLDELION_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:light_blue_bioluminescent_block", LIGHT_BLUE_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
+		registerBlockItem("deep_trenches:light_gray_bioluminescent_block", LIGHT_GRAY_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:lime_bioluminescent_block", LIME_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:magenta_bioluminescent_block", MAGENTA_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:orange_bioluminescent_block", ORANGE_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
+		registerBlockItem("deep_trenches:pink_bioluminescent_block", PINK_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:purple_bioluminescent_block", PURPLE_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:red_bioluminescent_block", RED_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
 		registerBlockItem("deep_trenches:white_bioluminescent_block", WHITE_BIOLUMINESCENT_BLOCK, SEA_BLOCKS);
@@ -2249,8 +2254,8 @@ public class DTItems {
 		registerBlockItem("deep_trenches:pinkine_uranolumen_ore", PINKINE_URANOLUMEN_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:pinkine_void_crittered_diopside_ore", PINKINE_VOID_CRITTERED_DIOPSIDE_ORE, MINERALOGY);
 
+		registerBlockItem("deep_trenches:rhodonite_garnet_ore", RHODONITE_GARNET_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:ringwoodite_sapphire_ore", RINGWOODITE_SAPPHIRE_ORE, MINERALOGY);
-
 		registerBlockItem("deep_trenches:skystone_opal_ore", SKYSTONE_OPAL_ORE, MINERALOGY);
 
 		registerBlockItem("deep_trenches:smooth_basalt_chalcedony_ore", SMOOTH_BASALT_CHALCEDONY_ORE, MINERALOGY);
@@ -2389,6 +2394,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:diopside_block", DIOPSIDE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:enron_block", ENRON_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:enstatite_block", ENSTATITE_BLOCK, MINERALOGY);
+		registerBlockItem("deep_trenches:cut_garnet_block", CUT_GARNET_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:gyldelion_block", GYLDELION_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:kralctium_block", KRALCTIUM_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:kralium_block", KRALIUM_BLOCK, MINERALOGY);
@@ -2419,8 +2425,6 @@ public class DTItems {
 		registerBlockItem("deep_trenches:chiseled_sugilite_block", CHISELED_SUGILITE_BLOCK, MINERALOGY);
 
 		/* CRYSTALS */
-		registerBlockItem("deep_trenches:lekralite_crystals", LEKRAL_CLUSTER, MINERALOGY);
-
 		registerBlockItem("deep_trenches:black_opalite_block", BLACK_OPALITE_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:budding_black_opalite", BUDDING_BLACK_OPALITE, MINERALOGY);
 		registerBlockItem("deep_trenches:black_opal_cluster", BLACK_OPAL_CLUSTER, MINERALOGY);
@@ -2441,6 +2445,10 @@ public class DTItems {
 		registerBlockItem("deep_trenches:large_diamond_bud", LARGE_DIAMOND_BUD, MINERALOGY);
 		registerBlockItem("deep_trenches:medium_diamond_bud", MEDIUM_DIAMOND_BUD, MINERALOGY);
 		registerBlockItem("deep_trenches:small_diamond_bud", SMALL_DIAMOND_BUD, MINERALOGY);
+
+		registerBlockItem("deep_trenches:lekral_cluster", LEKRAL_CLUSTER, MINERALOGY);
+		registerBlockItem("deep_trenches:lekral_ore", LEKRAL_ORE, MINERALOGY);
+		registerBlockItem("deep_trenches:budding_lekral", BUDDING_LEKRAL, MINERALOGY);
 
 		registerBlockItem("deep_trenches:garnet_block", GARNET_BLOCK, MINERALOGY);
 		registerBlockItem("deep_trenches:budding_garnet", BUDDING_GARNET, MINERALOGY);
@@ -2522,6 +2530,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:vaslame", VASLAME, PHYTOLOGY);
 		registerBlockItem("deep_trenches:weepistil", WEEPISTIL, PHYTOLOGY);
 		registerBlockItem("deep_trenches:weepy_hollower", WEEPY_HOLLOWER, PHYTOLOGY);
+		registerBlockItem("deep_trenches:wheeping_azure_bloom", WHEEPING_AZURE_BLOOM, PHYTOLOGY);
 		registerBlockItem("deep_trenches:white_violet", WHITE_VIOLET, PHYTOLOGY);
 		registerBlockItem("deep_trenches:wild_pansy", WILD_PANSY, PHYTOLOGY);
 		registerBlockItem("deep_trenches:yellow_violet", YELLOW_VIOLET, PHYTOLOGY);
@@ -2553,7 +2562,10 @@ public class DTItems {
 		/* PLANTS */
 		registerBlockItem("deep_trenches:airial_bush", AIRIAL_BUSH, PHYTOLOGY);
 		registerBlockItem("deep_trenches:buckthorn", BUCKTHORN, PHYTOLOGY);
+		registerBlockItem("deep_trenches:bulk_grasses", BULK_GRASSES, PHYTOLOGY);
+		registerBlockItem("deep_trenches:crusted_fungus", CRUSTED_FUNGUS, PHYTOLOGY);
 		registerBlockItem("deep_trenches:four_leafed_clover", FOUR_LEAFED_CLOVER, PHYTOLOGY);
+		registerBlockItem("deep_trenches:frarel", FRAREL, PHYTOLOGY);
 		registerBlockItem("deep_trenches:fur_plateau", FUR_PLATEAU, PHYTOLOGY);
 		registerBlockItem("deep_trenches:harshles", HARSHLES, PHYTOLOGY);
 		registerBlockItem("deep_trenches:ilyine", ILYINE, PHYTOLOGY);
@@ -2574,6 +2586,18 @@ public class DTItems {
 		registerBlockItem("deep_trenches:puffball_mushroom", PUFFBALL_MUSHROOM, PHYTOLOGY);
 		registerBlockItem("deep_trenches:shelf_mushroom", SHELF_MUSHROOM, PHYTOLOGY);
 		registerBlockItem("deep_trenches:white_mushroom", WHITE_MUSHROOM, PHYTOLOGY);
+
+		registerBlockItem("deep_trenches:gray_shag_mushroom_block", GRAY_SHAG_MUSHROOM_BLOCK, PHYTOLOGY);
+		registerBlockItem("deep_trenches:inky_cap_mushroom_block", INKY_CAP_MUSHROOM_BLOCK, PHYTOLOGY);
+		registerBlockItem("deep_trenches:puffball_mushroom_block", PUFFBALL_MUSHROOM_BLOCK, PHYTOLOGY);
+		registerBlockItem("deep_trenches:shelf_mushroom_block", SHELF_MUSHROOM_BLOCK, PHYTOLOGY);
+		registerBlockItem("deep_trenches:white_mushroom_block", WHITE_MUSHROOM_BLOCK, PHYTOLOGY);
+
+		registerBlockItem("deep_trenches:gray_shag_mushroom_stem", GRAY_SHAG_MUSHROOM_STEM, PHYTOLOGY);
+		registerBlockItem("deep_trenches:inky_cap_mushroom_stem", INKY_CAP_MUSHROOM_STEM, PHYTOLOGY);
+		registerBlockItem("deep_trenches:puffball_mushroom_stem", PUFFBALL_MUSHROOM_STEM, PHYTOLOGY);
+		registerBlockItem("deep_trenches:shelf_mushroom_stem", SHELF_MUSHROOM_STEM, PHYTOLOGY);
+		registerBlockItem("deep_trenches:white_mushroom_stem", WHITE_MUSHROOM_STEM, PHYTOLOGY);
 
 		/* GIANT VIOLET */
 		registerBlockItem("deep_trenches:flalm_petal_block", FLALM_PETAL_BLOCK, PHYTOLOGY);

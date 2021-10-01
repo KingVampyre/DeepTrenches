@@ -2258,7 +2258,7 @@ public class DTBlocks {
 	}
 
 	protected static Block createOre(float hardness, float resistance, int min, int max) {
-		return createOre(Settings.of(Material.STONE).requiresTool().strength(hardness, resistance), min, max);
+		return createOre(Settings.copy(IRON_ORE).strength(hardness, resistance), min, max);
 	}
 
 	protected static Block createOre() {
