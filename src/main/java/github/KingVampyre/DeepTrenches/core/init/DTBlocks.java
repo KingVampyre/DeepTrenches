@@ -2257,14 +2257,6 @@ public class DTBlocks {
 		return createOre(strength, strength, min, max);
 	}
 
-	protected static Block createOre(float strength, int min, int max, BlockSoundGroup group) {
-		return createOre(strength, strength, min, max, group);
-	}
-
-	protected static Block createOre(float hardness, float resistance, int min, int max, BlockSoundGroup group) {
-		return createOre(Settings.of(Material.STONE).requiresTool().strength(hardness, resistance).sounds(group), min, max);
-	}
-
 	protected static Block createOre(float hardness, float resistance, int min, int max) {
 		return createOre(Settings.of(Material.STONE).requiresTool().strength(hardness, resistance), min, max);
 	}
@@ -2586,8 +2578,8 @@ public class DTBlocks {
 		ANDESITE_TANZANITE_ORE = createOre(3.0F, 3, 7);
 		ANDESITE_TOPAZ_ORE = createOre(3.0F, 3, 7);
 
-		BASALT_CLINOHUMITE_ORE = createOre(3.0F, 3, 7, BlockSoundGroup.BASALT);
-		BASALT_COAL_ORE = createOre(3.0F, 0, 2, BlockSoundGroup.BASALT);
+		BASALT_CLINOHUMITE_ORE = createBasaltOre(3, 7);
+		BASALT_COAL_ORE = createBasaltOre(0, 2);
 
 		BEDROCK_DIAMOND_ORE = createOre(3.0F, 3, 7);
 		BEDROCK_DIOPSIDE_ORE = createOre(3.0F, 3, 7);
