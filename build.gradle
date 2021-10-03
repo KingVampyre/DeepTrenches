@@ -24,10 +24,6 @@ repositories {
 		url = "https://dl.cloudsmith.io/public/louwinds-mods/reload/maven"
 	}
 	maven {
-		name = "Worldgen-API"
-		url = "https://dl.cloudsmith.io/public/louwinds-mods/worldgen-api/maven"
-	}
-	maven {
 		url 'https://repo.maven.apache.org/maven2'
 		name 'Maven Central'
 	}

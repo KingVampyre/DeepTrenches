@@ -3910,7 +3910,7 @@ public class DTItems {
 		registerItem("deep_trenches:green_bioluminescent_goo", GREEN_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:gyldelion_bioluminescent_goo", GYLDELION_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:light_blue_bioluminescent_goo", LIGHT_BLUE_BIOLUMINESCENT_GOO);
-		registerItem("deep_trenches:light_blue_bioluminescent_goo", LIGHT_GRAY_BIOLUMINESCENT_GOO);
+		registerItem("deep_trenches:light_gray_bioluminescent_goo", LIGHT_GRAY_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:lime_bioluminescent_goo", LIME_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:magenta_bioluminescent_goo", MAGENTA_BIOLUMINESCENT_GOO);
 		registerItem("deep_trenches:orange_bioluminescent_goo", ORANGE_BIOLUMINESCENT_GOO);

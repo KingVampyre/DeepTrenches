@@ -14,6 +14,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.*;
 import static net.minecraft.block.Blocks.*;
@@ -2237,8 +2238,8 @@ public class DTBlocks {
 		return new FlowerBlock(effect, effectDuration, Settings.copy(RED_TULIP));
 	}
 
-	protected static Block createMushroomPlant(ConfiguredFeature<?, ?> feature) {
-		return new MushroomPlantBlock(Settings.copy(BROWN_MUSHROOM), () -> feature);
+	protected static Block createMushroomPlant(Supplier<ConfiguredFeature<?, ?>> supplier) {
+		return new MushroomPlantBlock(Settings.copy(BROWN_MUSHROOM), supplier);
 	}
 
 	protected static Block createMushroomBlock() {
@@ -3073,11 +3074,11 @@ public class DTBlocks {
 		THREE_LEAFED_CLOVER = createCopy(GRASS);
 
 		/* MUSHROOMS */
-		GRAY_SHAG_MUSHROOM = createMushroomPlant(DTConfiguredFeatures.GRAY_SHAG_MUSHROOM);
-		INKY_CAP_MUSHROOM = createMushroomPlant(DTConfiguredFeatures.INKY_CAP_MUSHROOM);
-		PUFFBALL_MUSHROOM = createMushroomPlant(DTConfiguredFeatures.PUFFBALL_MUSHROOM);
+		GRAY_SHAG_MUSHROOM = createMushroomPlant(() -> DTConfiguredFeatures.GRAY_SHAG_MUSHROOM);
+		INKY_CAP_MUSHROOM = createMushroomPlant(() -> DTConfiguredFeatures.INKY_CAP_MUSHROOM);
+		PUFFBALL_MUSHROOM = createMushroomPlant(() -> DTConfiguredFeatures.PUFFBALL_MUSHROOM);
 		SHELF_MUSHROOM = new ShelfMushroomBlock(Settings.copy(BROWN_MUSHROOM), () -> DTConfiguredFeatures.SHELF_MUSHROOM);
-		WHITE_MUSHROOM = createMushroomPlant(DTConfiguredFeatures.WHITE_MUSHROOM);
+		WHITE_MUSHROOM = createMushroomPlant(() -> DTConfiguredFeatures.WHITE_MUSHROOM);
 
 		GRAY_SHAG_MUSHROOM_BLOCK = createMushroomBlock();
 		INKY_CAP_MUSHROOM_BLOCK = createMushroomBlock();
@@ -4868,7 +4869,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:pinkine_uranolumen_ore", PINKINE_URANOLUMEN_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_void_crittered_diopside_ore", PINKINE_VOID_CRITTERED_DIOPSIDE_ORE);
 
-		Registry.register(BLOCK, "deep_trenches:ringwoodite_sapphire_ore", RHODONITE_GARNET_ORE);
+		Registry.register(BLOCK, "deep_trenches:rhodonite_garnet_ore", RHODONITE_GARNET_ORE);
 		Registry.register(BLOCK, "deep_trenches:ringwoodite_sapphire_ore", RINGWOODITE_SAPPHIRE_ORE);
 		Registry.register(BLOCK, "deep_trenches:skystone_opal_ore", SKYSTONE_OPAL_ORE);
 

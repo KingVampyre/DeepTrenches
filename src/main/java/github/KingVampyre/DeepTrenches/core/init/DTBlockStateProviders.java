@@ -38,30 +38,6 @@ public class DTBlockStateProviders {
     public static final BlockStateProvider TEAK_FOLIAGE_PROVIDER;
     public static final BlockStateProvider THUNDERCLOUD_PLUM_FOLIAGE_PROVIDER;
 
-    public static final BlockStateProvider ALMOND_SAPLING_PROVIDER;
-    public static final BlockStateProvider ANAMEATA_SAPLING_PROVIDER;
-    public static final BlockStateProvider AQUEAN_SAPLING_PROVIDER;
-    public static final BlockStateProvider BARSHROOKLE_SAPLING_PROVIDER;
-    public static final BlockStateProvider BLACK_BIRCH_SAPLING_PROVIDER;
-    public static final BlockStateProvider CHERRY_SAPLING_PROVIDER;
-    public static final BlockStateProvider COOK_PINE_SAPLING_PROVIDER;
-    public static final BlockStateProvider CROLOOD_SAPLING_PROVIDER;
-    public static final BlockStateProvider DARK_CROLOOD_SAPLING_PROVIDER;
-    public static final BlockStateProvider EBONY_SAPLING_PROVIDER;
-    public static final BlockStateProvider FUCHSITRA_SAPLING_PROVIDER;
-    public static final BlockStateProvider FUNERANITE_SAPLING_PROVIDER;
-    public static final BlockStateProvider GHOSHROOM_SAPLING_PROVIDER;
-    public static final BlockStateProvider PELTOGYNE_SAPLING_PROVIDER;
-    public static final BlockStateProvider PIN_CHERRY_SAPLING_PROVIDER;
-    public static final BlockStateProvider PLUM_SAPLING_PROVIDER;
-    public static final BlockStateProvider PURFUNGA_SAPLING_PROVIDER;
-    public static final BlockStateProvider SPROOM_SAPLING_PROVIDER;
-    public static final BlockStateProvider STORTREEAN_SAPLING_PROVIDER;
-    public static final BlockStateProvider STROOMEAN_SAPLING_PROVIDER;
-    public static final BlockStateProvider SUNRISE_FUNGUS_SAPLING_PROVIDER;
-    public static final BlockStateProvider TEAK_SAPLING_PROVIDER;
-    public static final BlockStateProvider THUNDERCLOUD_PLUM_SAPLING_PROVIDER;
-
     public static final BlockStateProvider ALMOND_TRUNK_PROVIDER;
     public static final BlockStateProvider ANAMEATA_TRUNK_PROVIDER;
     public static final BlockStateProvider AQUEAN_TRUNK_PROVIDER;
@@ -141,30 +117,6 @@ public class DTBlockStateProviders {
         SUNRISE_FUNGUS_FOLIAGE_PROVIDER = BlockStateProvider.of(SUNRISE_FUNGUS_CAP);
         TEAK_FOLIAGE_PROVIDER = BlockStateProvider.of(TEAK_LEAVES);
         THUNDERCLOUD_PLUM_FOLIAGE_PROVIDER = BlockStateProvider.of(THUNDERCLOUD_PLUM_LEAVES);
-
-        ALMOND_SAPLING_PROVIDER = BlockStateProvider.of(ALMOND_SAPLING);
-        ANAMEATA_SAPLING_PROVIDER = BlockStateProvider.of(ANAMEATA_SAPLING);
-        AQUEAN_SAPLING_PROVIDER = BlockStateProvider.of(AQUEAN_SAPLING);
-        BARSHROOKLE_SAPLING_PROVIDER = BlockStateProvider.of(BARSHROOKLE_SAPLING);
-        BLACK_BIRCH_SAPLING_PROVIDER = BlockStateProvider.of(BLACK_BIRCH_SAPLING);
-        CHERRY_SAPLING_PROVIDER = BlockStateProvider.of(CHERRY_SAPLING);
-        COOK_PINE_SAPLING_PROVIDER = BlockStateProvider.of(COOK_PINE_SAPLING);
-        CROLOOD_SAPLING_PROVIDER = BlockStateProvider.of(CROLOOD_SAPLING);
-        DARK_CROLOOD_SAPLING_PROVIDER = BlockStateProvider.of(DARK_CROLOOD_SAPLING);
-        EBONY_SAPLING_PROVIDER = BlockStateProvider.of(EBONY_SAPLING);
-        FUCHSITRA_SAPLING_PROVIDER = BlockStateProvider.of(FUCHSITRA_SAPLING);
-        FUNERANITE_SAPLING_PROVIDER = BlockStateProvider.of(FUNERANITE_SAPLING);
-        GHOSHROOM_SAPLING_PROVIDER = BlockStateProvider.of(GHOSHROOM_SAPLING);
-        PELTOGYNE_SAPLING_PROVIDER = BlockStateProvider.of(PELTOGYNE_SAPLING);
-        PIN_CHERRY_SAPLING_PROVIDER = BlockStateProvider.of(PIN_CHERRY_SAPLING);
-        PLUM_SAPLING_PROVIDER = BlockStateProvider.of(PLUM_SAPLING);
-        PURFUNGA_SAPLING_PROVIDER = BlockStateProvider.of(PURFUNGA_SAPLING);
-        SPROOM_SAPLING_PROVIDER = BlockStateProvider.of(SPROOM_SAPLING);
-        STORTREEAN_SAPLING_PROVIDER = BlockStateProvider.of(STORTREEAN_SAPLING);
-        STROOMEAN_SAPLING_PROVIDER = BlockStateProvider.of(STROOMEAN_SAPLING);
-        SUNRISE_FUNGUS_SAPLING_PROVIDER = BlockStateProvider.of(SUNRISE_FUNGUS_SAPLING);
-        TEAK_SAPLING_PROVIDER = BlockStateProvider.of(TEAK_SAPLING);
-        THUNDERCLOUD_PLUM_SAPLING_PROVIDER = BlockStateProvider.of(THUNDERCLOUD_PLUM_SAPLING);
 
         ALMOND_TRUNK_PROVIDER = BlockStateProvider.of(ALMOND_LOG);
         ANAMEATA_TRUNK_PROVIDER = BlockStateProvider.of(ANAMEATA_LOG);

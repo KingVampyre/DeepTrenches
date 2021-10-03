@@ -240,12 +240,12 @@ public class DTBiomeCreator {
     }
 
     protected static Biome createAlmondForest(Biome.Category category, SpawnSettings spawnSettings, GenerationSettings.Builder builder) {
-        // TODO ore calcite upper/lower
-        builder.feature(UNDERGROUND_ORES, PROTOTYPE_ORE_DIRT);
-        builder.feature(UNDERGROUND_ORES, PROTOTYPE_ORE_GRAVEL);
-        builder.feature(UNDERGROUND_ORES, ORE_CALCITE);
-        builder.feature(UNDERGROUND_ORES, PROTOTYPE_ORE_TUFF);
-        builder.feature(VEGETAL_DECORATION, PROTOTYPE_GLOW_LICHEN);
+        builder.feature(UNDERGROUND_ORES, ORE_DIRT);
+        builder.feature(UNDERGROUND_ORES, ORE_GRAVEL);
+        builder.feature(UNDERGROUND_ORES, ORE_CALCITE_UPPER);
+        builder.feature(UNDERGROUND_ORES, ORE_CALCITE_LOWER);
+        builder.feature(UNDERGROUND_ORES, ORE_TUFF);
+        builder.feature(VEGETAL_DECORATION, GLOW_LICHEN);
 
         return createClearForest(category, 1.0F, 0.55F, false, ALMOND_FOREST, spawnSettings, builder);
     }
