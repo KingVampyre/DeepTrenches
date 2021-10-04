@@ -1,0 +1,6 @@
+{
+    "parent": "block/template_single_face",
+    "textures": {
+        "texture": "deep_trenches:block/shelf_mushroom_block"
+    }
+}

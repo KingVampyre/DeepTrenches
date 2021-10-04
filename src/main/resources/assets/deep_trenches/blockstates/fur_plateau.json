@@ -1,0 +1,64 @@
+{
+    "variants": {
+        "facing=east,tilt=full": {
+            "y": 90,
+            "model": "deep_trenches:block/fur_plateau_full_tilt"
+        },
+        "facing=east,tilt=none": {
+            "y": 90,
+            "model": "deep_trenches:block/fur_plateau"
+        },
+        "facing=east,tilt=partial": {
+            "y": 90,
+            "model": "deep_trenches:block/fur_plateau_partial_tilt"
+        },
+        "facing=east,tilt=unstable": {
+            "y": 90,
+            "model": "deep_trenches:block/fur_plateau"
+        },
+        "facing=north,tilt=full": {
+            "model": "deep_trenches:block/fur_plateau_full_tilt"
+        },
+        "facing=north,tilt=none": {
+            "model": "deep_trenches:block/fur_plateau"
+        },
+        "facing=north,tilt=partial": {
+            "model": "deep_trenches:block/fur_plateau_partial_tilt"
+        },
+        "facing=north,tilt=unstable": {
+            "model": "deep_trenches:block/fur_plateau"
+        },
+        "facing=south,tilt=full": {
+            "y": 180,
+            "model": "deep_trenches:block/fur_plateau_full_tilt"
+        },
+        "facing=south,tilt=none": {
+            "y": 180,
+            "model": "deep_trenches:block/fur_plateau"
+        },
+        "facing=south,tilt=partial": {
+            "y": 180,
+            "model": "deep_trenches:block/fur_plateau_partial_tilt"
+        },
+        "facing=south,tilt=unstable": {
+            "y": 180,
+            "model": "deep_trenches:block/fur_plateau"
+        },
+        "facing=west,tilt=full": {
+            "y": 270,
+            "model": "deep_trenches:block/fur_plateau_full_tilt"
+        },
+        "facing=west,tilt=none": {
+            "y": 270,
+            "model": "deep_trenches:block/fur_plateau"
+        },
+        "facing=west,tilt=partial": {
+            "y": 270,
+            "model": "deep_trenches:block/fur_plateau_partial_tilt"
+        },
+        "facing=west,tilt=unstable": {
+            "y": 270,
+            "model": "deep_trenches:block/fur_plateau"
+        }
+    }
+}

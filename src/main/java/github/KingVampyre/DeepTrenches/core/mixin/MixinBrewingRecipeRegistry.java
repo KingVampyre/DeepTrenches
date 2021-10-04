@@ -1,11 +1,12 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.LOOSEJAW_TOOTH;
+import static github.KingVampyre.DeepTrenches.core.init.DTItems.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTPotions.*;
 import static net.minecraft.item.Items.GLOWSTONE_DUST;
 import static net.minecraft.item.Items.GUNPOWDER;
 import static net.minecraft.item.Items.REDSTONE;
 import static net.minecraft.potion.Potions.AWKWARD;
+import static net.minecraft.potion.Potions.LUCK;
 
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
@@ -26,6 +27,10 @@ public abstract class MixinBrewingRecipeRegistry {
 
     @Inject(method = "registerDefaults", at = @At("HEAD"))
     private static void register(CallbackInfo ci) {
+        /* LUCK */
+        registerPotionRecipe(AWKWARD, FOUR_LEAFED_CLOVER, LUCK);
+
+        /* SOFTBONES */
         registerPotionRecipe(AWKWARD, LOOSEJAW_TOOTH, SOFTBONES);
         registerPotionRecipe(SOFTBONES, GUNPOWDER, SOFTBONES);
         registerPotionRecipe(LONG_SOFTBONES, GUNPOWDER, LONG_SOFTBONES);
@@ -35,6 +40,9 @@ public abstract class MixinBrewingRecipeRegistry {
         registerPotionRecipe(STRONG_SOFTBONES, REDSTONE, LONG_STRONG_SOFTBONES);
         registerPotionRecipe(LONG_SOFTBONES, GLOWSTONE_DUST, LONG_STRONG_SOFTBONES);
         registerPotionRecipe(SOFTBONES, GLOWSTONE_DUST, STRONG_SOFTBONES);
+
+        /* UNLUCK */
+        registerPotionRecipe(AWKWARD, THREE_LEAFED_CLOVER, UNLUCK);
     }
 
 }

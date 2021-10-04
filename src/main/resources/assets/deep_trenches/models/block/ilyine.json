@@ -1,0 +1,7 @@
+{
+	"parent": "block/vine",
+	"textures": {
+		"particle": "deep_trenches:block/ilyine",
+		"vine": "deep_trenches:block/ilyine"
+	}
+}

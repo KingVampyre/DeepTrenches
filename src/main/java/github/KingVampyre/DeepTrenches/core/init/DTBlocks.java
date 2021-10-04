@@ -2,6 +2,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.common.block.HorizontalBlock;
 import github.KingVampyre.DeepTrenches.core.block.*;
+import github.KingVampyre.DeepTrenches.core.block.MossBlock;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.*;
 import net.minecraft.block.sapling.SaplingGenerator;
@@ -636,6 +637,7 @@ public class DTBlocks {
 	public static final Block CHOCOLATE_COSMOS_FLOWER;
 	public static final Block CYAN_BLUE_VIOLET;
 	public static final Block CYCAWLER;
+	public static final Block FOUR_LEAFED_CLOVER;
 	public static final Block GARDEN_PINKS;
 	public static final Block GREEN_PANSY;
 	public static final Block GYLDELION_FLOWER;
@@ -661,6 +663,7 @@ public class DTBlocks {
 	public static final Block SPROOM_SPIKE;
 	public static final Block SQUISACLE;
 	public static final Block SWEET_VIOLET;
+	public static final Block THREE_LEAFED_CLOVER;
 	public static final Block TOPPED_LAVENDER;
 	public static final Block TWISTTRAP;
 	public static final Block VASLAME;
@@ -676,6 +679,7 @@ public class DTBlocks {
 	public static final Block BULLTHORN;
 	public static final Block CACTLOW;
 	public static final Block CLAWBULB;
+	public static final Block GIANT_VIOLET;
 	public static final Block LIME_SPURGE;
 	public static final Block LUPIN_FLOWER;
 	public static final Block ORANGE_LILY;
@@ -695,9 +699,9 @@ public class DTBlocks {
 	public static final Block BUCKTHORN;
 	public static final Block BULK_GRASSES;
 	public static final Block CRUSTED_FUNGUS;
-	public static final Block FOUR_LEAFED_CLOVER;
 	public static final Block FRAREL;
 	public static final Block FUR_PLATEAU;
+	public static final Block FUR_PLATEAU_STEM;
 	public static final Block HARSHLES;
 	public static final Block ILYINE;
 	public static final Block JUNGLE_UMBRELLA;
@@ -709,7 +713,6 @@ public class DTBlocks {
 	public static final Block SEA_BUCKTHORN;
 	public static final Block SKALK;
 	public static final Block SQUISH_TIPS;
-	public static final Block THREE_LEAFED_CLOVER;
 
 	/* MUSHROOMS */
 	public static final Block GRAY_SHAG_MUSHROOM;
@@ -731,7 +734,6 @@ public class DTBlocks {
 	public static final Block WHITE_MUSHROOM_STEM;
 
 	/* GIANT VIOLET */
-	public static final Block GIANT_VIOLET;
 	public static final Block GIANT_VIOLET_LEAF;
 	public static final Block GIANT_VIOLET_PETAL;
 	public static final Block GIANT_VIOLET_PISTIL;
@@ -2109,6 +2111,7 @@ public class DTBlocks {
 	public static final Block POTTED_CYAN_BLUE_VIOLET;
 	public static final Block POTTED_CYCAWLER;
 	public static final Block POTTED_DRIGYUS;
+	public static final Block POTTED_FOUR_LEAFED_CLOVER;
 	public static final Block POTTED_GARDEN_PINKS;
 	public static final Block POTTED_GREEN_PANSY;
 	public static final Block POTTED_GYLDELION_FLOWER;
@@ -2134,6 +2137,7 @@ public class DTBlocks {
 	public static final Block POTTED_SPROOM_SPIKE;
 	public static final Block POTTED_SQUISACLE;
 	public static final Block POTTED_SWEET_VIOLET;
+	public static final Block POTTED_THREE_LEAFED_CLOVER;
 	public static final Block POTTED_TOPPED_LAVENDER;
 	public static final Block POTTED_TWISTTRAP;
 	public static final Block POTTED_VASLAME;
@@ -2998,6 +3002,7 @@ public class DTBlocks {
 		CHOCOLATE_COSMOS_FLOWER = createFlowerBlock(COSMOS_BEAUTY, 14);
 		CYAN_BLUE_VIOLET = createFlowerBlock(RESISTANCE, 9);
 		CYCAWLER = createStorceanFlower(CYCAWLER_BEAUTY, 24000);
+		FOUR_LEAFED_CLOVER = createFlowerBlock(LUCK, 21);
 		GARDEN_PINKS = createFlowerBlock(FIRE_RESISTANCE, 6);
 		GREEN_PANSY = createFlowerBlock(RESISTANCE, 9);
 		GYLDELION_FLOWER = createFlowerBlock(GLOWING, 12);
@@ -3023,6 +3028,7 @@ public class DTBlocks {
 		SPROOM_SPIKE = createBlock(SproomSpikeBlock::new, SUNFLOWER);
 		SQUISACLE = createStorceanFlower(LEVITATION, 4);
 		SWEET_VIOLET = createFlowerBlock(RESISTANCE, 9);
+		THREE_LEAFED_CLOVER = createFlowerBlock(UNLUCK, 21);
 		TOPPED_LAVENDER = createFlowerBlock(FLOWER_BEAUTY, 6);
 		TWISTTRAP = createFlowerBlock(FLOWER_BEAUTY, 6);
 		VASLAME = createStorceanFlower(FIRE_RESISTANCE, 6);
@@ -3038,6 +3044,7 @@ public class DTBlocks {
 		BULLTHORN = createTallFlower(SUNFLOWER);
 		CACTLOW = createTallFlower(SUNFLOWER);
 		CLAWBULB = createTallFlower(SUNFLOWER);
+		GIANT_VIOLET = createTallFlower(SUNFLOWER);
 		LIME_SPURGE = createTallFlower(SUNFLOWER);
 		LUPIN_FLOWER = createTallFlower(SUNFLOWER);
 		ORANGE_LILY = createTallFlower(SUNFLOWER);
@@ -3050,28 +3057,27 @@ public class DTBlocks {
 		/* MOSSES */
 		AIRIAL_MOSS = createBlock(AirialMossBlock::new, GRASS_BLOCK);
 		ILMIUM = createBlock(IlmiumBlock::new, Settings.copy(GRASS_BLOCK).luminance(state -> 6));
-		MOSS = createCopy(GRASS_BLOCK);
+		MOSS = createBlock(MossBlock::new, VINE);
 
 		/* PLANTS */
-		AIRIAL_BUSH = createCopy(SWEET_BERRY_BUSH);
-		BUCKTHORN = createCopy(GRASS);
-		BULK_GRASSES = createCopy(GRASS);
-		CRUSTED_FUNGUS = createCopy(GRASS);
-		FOUR_LEAFED_CLOVER = createCopy(GRASS);
-		FRAREL = createCopy(GRASS);
-		FUR_PLATEAU = createCopy(GRASS);
-		HARSHLES = createCopy(GRASS);
-		ILYINE = createCopy(GRASS);
-		JUNGLE_UMBRELLA = createCopy(GRASS);
-		LICHEN = createCopy(GRASS);
-		MOSSES = createCopy(GRASS);
+		AIRIAL_BUSH = createBlock(AirialBushBlock::new, SWEET_BERRY_BUSH);
+		BUCKTHORN = createBlock(FernPlantBlock::new, GRASS);
+		BULK_GRASSES = createBlock(FernPlantBlock::new,GRASS);
+		CRUSTED_FUNGUS = createBlock(FernPlantBlock::new, GRASS);
+		FRAREL = createBlock(FernPlantBlock::new,GRASS);
+		FUR_PLATEAU = createBlock(FurPlateauBlock::new, BIG_DRIPLEAF);
+		FUR_PLATEAU_STEM = createBlock(FurPlateauStem::new, BIG_DRIPLEAF_STEM);
+		HARSHLES = createBlock(HarshlesBlock::new, GRASS);
+		ILYINE = createBlock(IlyineBlock::new, GRASS);
+		JUNGLE_UMBRELLA = createBlock(FernPlantBlock::new, GRASS);
+		LICHEN = createBlock(LichenBlock::new, Settings.of(Material.REPLACEABLE_PLANT, MapColor.LICHEN_GREEN).noCollision().strength(0.2F).sounds(BlockSoundGroup.GLOW_LICHEN));
+		MOSSES = createBlock(MossesBlock::new, GRASS);
 		MURKSTEM = createBlock(MurkstemBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
-		POMEGRANATE_BUSH = createCopy(GRASS);
-		REEBLOON = createCopy(GRASS);
-		SEA_BUCKTHORN = createCopy(GRASS);
+		POMEGRANATE_BUSH = createTallFlower(SWEET_BERRY_BUSH);
+		REEBLOON = createBlock(ReebloonBlock::new, GRASS);
+		SEA_BUCKTHORN = createBlock(FernPlantBlock::new, GRASS);
 		SKALK = createBlock(SkalkBlock::new, Settings.copy(SUNFLOWER).ticksRandomly());
-		SQUISH_TIPS = createCopy(GRASS);
-		THREE_LEAFED_CLOVER = createCopy(GRASS);
+		SQUISH_TIPS = createBlock(SquishTipsBlock::new, GRASS);
 
 		/* MUSHROOMS */
 		GRAY_SHAG_MUSHROOM = createMushroomPlant(() -> DTConfiguredFeatures.GRAY_SHAG_MUSHROOM);
@@ -3093,7 +3099,6 @@ public class DTBlocks {
 		WHITE_MUSHROOM_STEM = createMushroomStem();
 
 		/* GIANT VIOLET */
-		GIANT_VIOLET = createCopy(IRON_BLOCK);
 		GIANT_VIOLET_LEAF = createCopy(IRON_BLOCK);
 		GIANT_VIOLET_PETAL = createCopy(IRON_BLOCK);
 		GIANT_VIOLET_PISTIL = createCopy(IRON_BLOCK);
@@ -4453,6 +4458,7 @@ public class DTBlocks {
 		POTTED_CYAN_BLUE_VIOLET = createFlowerPot(CYAN_BLUE_VIOLET);
 		POTTED_CYCAWLER = createFlowerPot(CYCAWLER);
 		POTTED_DRIGYUS = createFlowerPot(DRIGYUS);
+		POTTED_FOUR_LEAFED_CLOVER = createFlowerPot(FOUR_LEAFED_CLOVER);
 		POTTED_GARDEN_PINKS = createFlowerPot(GARDEN_PINKS);
 		POTTED_GREEN_PANSY = createFlowerPot(GREEN_PANSY);
 		POTTED_GYLDELION_FLOWER = createFlowerPot(GYLDELION_FLOWER);
@@ -4478,6 +4484,7 @@ public class DTBlocks {
 		POTTED_SPROOM_SPIKE = createFlowerPot(SPROOM_SPIKE);
 		POTTED_SQUISACLE = createFlowerPot(SQUISACLE);
 		POTTED_SWEET_VIOLET = createFlowerPot(SWEET_VIOLET);
+		POTTED_THREE_LEAFED_CLOVER = createFlowerPot(THREE_LEAFED_CLOVER);
 		POTTED_TOPPED_LAVENDER = createFlowerPot(TOPPED_LAVENDER);
 		POTTED_TWISTTRAP = createFlowerPot(TWISTTRAP);
 		POTTED_VASLAME = createFlowerPot(VASLAME);
@@ -5111,6 +5118,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:chocolate_cosmos_flower", CHOCOLATE_COSMOS_FLOWER);
 		Registry.register(BLOCK, "deep_trenches:cyan_blue_violet", CYAN_BLUE_VIOLET);
 		Registry.register(BLOCK, "deep_trenches:cycawler", CYCAWLER);
+		Registry.register(BLOCK, "deep_trenches:four_leafed_clover", FOUR_LEAFED_CLOVER);
 		Registry.register(BLOCK, "deep_trenches:garden_pinks", GARDEN_PINKS);
 		Registry.register(BLOCK, "deep_trenches:green_pansy", GREEN_PANSY);
 		Registry.register(BLOCK, "deep_trenches:gyldelion_flower", GYLDELION_FLOWER);
@@ -5136,6 +5144,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:sproom_spike", SPROOM_SPIKE);
 		Registry.register(BLOCK, "deep_trenches:squisacle", SQUISACLE);
 		Registry.register(BLOCK, "deep_trenches:sweet_violet", SWEET_VIOLET);
+		Registry.register(BLOCK, "deep_trenches:three_leafed_clover", THREE_LEAFED_CLOVER);
 		Registry.register(BLOCK, "deep_trenches:topped_lavender", TOPPED_LAVENDER);
 		Registry.register(BLOCK, "deep_trenches:twisttrap", TWISTTRAP);
 		Registry.register(BLOCK, "deep_trenches:vaslame", VASLAME);
@@ -5169,9 +5178,9 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:buckthorn", BUCKTHORN);
 		Registry.register(BLOCK, "deep_trenches:bulk_grasses", BULK_GRASSES);
 		Registry.register(BLOCK, "deep_trenches:crusted_fungus", CRUSTED_FUNGUS);
-		Registry.register(BLOCK, "deep_trenches:four_leafed_clover", FOUR_LEAFED_CLOVER);
 		Registry.register(BLOCK, "deep_trenches:frarel", FRAREL);
 		Registry.register(BLOCK, "deep_trenches:fur_plateau", FUR_PLATEAU);
+		Registry.register(BLOCK, "deep_trenches:fur_plateau_stem", FUR_PLATEAU_STEM);
 		Registry.register(BLOCK, "deep_trenches:harshles", HARSHLES);
 		Registry.register(BLOCK, "deep_trenches:ilyine", ILYINE);
 		Registry.register(BLOCK, "deep_trenches:jungle_umbrella", JUNGLE_UMBRELLA);
@@ -5183,7 +5192,6 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:sea_buckthorn", SEA_BUCKTHORN);
 		Registry.register(BLOCK, "deep_trenches:skalk", SKALK);
 		Registry.register(BLOCK, "deep_trenches:squish_tips", SQUISH_TIPS);
-		Registry.register(BLOCK, "deep_trenches:three_leafed_clover", THREE_LEAFED_CLOVER);
 
 		/* MUSHROOMS */
 		Registry.register(BLOCK, "deep_trenches:gray_shag_mushroom", GRAY_SHAG_MUSHROOM);
@@ -6582,6 +6590,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:potted_cyan_blue_violet", POTTED_CYAN_BLUE_VIOLET);
 		Registry.register(BLOCK, "deep_trenches:potted_cycawler", POTTED_CYCAWLER);
 		Registry.register(BLOCK, "deep_trenches:potted_drigyus", POTTED_DRIGYUS);
+		Registry.register(BLOCK, "deep_trenches:potted_four_leafed_clover", POTTED_FOUR_LEAFED_CLOVER);
 		Registry.register(BLOCK, "deep_trenches:potted_garden_pinks", POTTED_GARDEN_PINKS);
 		Registry.register(BLOCK, "deep_trenches:potted_green_pansy", POTTED_GREEN_PANSY);
 		Registry.register(BLOCK, "deep_trenches:potted_gyldelion_flower", POTTED_GYLDELION_FLOWER);
@@ -6607,6 +6616,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:potted_sproom_spike", POTTED_SPROOM_SPIKE);
 		Registry.register(BLOCK, "deep_trenches:potted_squisacle", POTTED_SQUISACLE);
 		Registry.register(BLOCK, "deep_trenches:potted_sweet_violet", POTTED_SWEET_VIOLET);
+		Registry.register(BLOCK, "deep_trenches:potted_three_leafed_clover", POTTED_THREE_LEAFED_CLOVER);
 		Registry.register(BLOCK, "deep_trenches:potted_topped_lavender", POTTED_TOPPED_LAVENDER);
 		Registry.register(BLOCK, "deep_trenches:potted_twisttrap", POTTED_TWISTTRAP);
 		Registry.register(BLOCK, "deep_trenches:potted_vaslame", POTTED_VASLAME);

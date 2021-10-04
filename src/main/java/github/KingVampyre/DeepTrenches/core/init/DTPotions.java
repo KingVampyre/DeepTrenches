@@ -2,6 +2,7 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.registry.Registry;
 
@@ -21,6 +22,8 @@ public class DTPotions {
 	public static final Potion LONG_STRONG_SOFTBONES;
 	public static final Potion SOFTBONES;
 	public static final Potion STRONG_SOFTBONES;
+
+	public static final Potion UNLUCK;
 
 	private static Potion createPotion(String id, StatusEffectInstance effectInstance) {
 		return Registry.register(POTION, id, new Potion(effectInstance));
@@ -47,6 +50,8 @@ public class DTPotions {
 		LONG_STRONG_SOFTBONES = createPotion("deep_trenches:long_strong_softbones", DTStatusEffects.SOFTBONES, 9600, 1);
 		SOFTBONES = createPotion("deep_trenches:softbones", DTStatusEffects.SOFTBONES, 3600);
 		STRONG_SOFTBONES = createPotion("deep_trenches:strong_softbones", DTStatusEffects.SOFTBONES, 2400, 1);
+
+		UNLUCK = createPotion("deep_trenches:unluck", StatusEffects.UNLUCK, 6000);
 	}
 
 }

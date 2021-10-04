@@ -45,6 +45,7 @@ accessible method net/minecraft/block/DeadCoralBlock        <init>      (Lnet/mi
 accessible method net/minecraft/block/DeadCoralFanBlock     <init>      (Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/DeadCoralWallFanBlock <init>      (Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/DoorBlock             <init>      (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible method net/minecraft/block/FernBlock             <init>      (Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/FluidBlock            <init>      (Lnet/minecraft/fluid/FlowableFluid;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/PressurePlateBlock    <init>      (Lnet/minecraft/block/PressurePlateBlock$ActivationRule;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/SaplingBlock          <init>      (Lnet/minecraft/block/sapling/SaplingGenerator;Lnet/minecraft/block/AbstractBlock$Settings;)V

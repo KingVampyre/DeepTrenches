@@ -1,0 +1,7 @@
+{
+    "parent": "block/glow_lichen",
+    "textures": {
+        "particle": "deep_trenches:block/lichen",
+        "glow_lichen": "deep_trenches:block/lichen"
+    }
+}

@@ -1,6 +1,7 @@
 {
-	"parent": "block/cross",
-	"textures": {
-		"cross": "deep_trenches:block/moss"
-	}
+    "parent": "block/glow_lichen",
+    "textures": {
+        "particle": "deep_trenches:block/moss",
+        "glow_lichen": "deep_trenches:block/moss"
+    }
 }

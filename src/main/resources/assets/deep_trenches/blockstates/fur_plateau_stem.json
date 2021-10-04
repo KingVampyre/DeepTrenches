@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=east": {
+			"model": "deep_trenches:block/fur_plateau_stem",
+			"y": 90
+		},
+		"facing=north": {
+			"model": "deep_trenches:block/fur_plateau_stem"
+		},
+		"facing=south": {
+			"model": "deep_trenches:block/fur_plateau_stem",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "deep_trenches:block/fur_plateau_stem",
+			"y": 270
+		}
+	}
+}

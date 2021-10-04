@@ -1,0 +1,6 @@
+{
+    "parent": "block/flower_pot_cross",
+    "textures": {
+        "plant": "deep_trenches:block/potted_wheeping_azure_bloom"
+    }
+}

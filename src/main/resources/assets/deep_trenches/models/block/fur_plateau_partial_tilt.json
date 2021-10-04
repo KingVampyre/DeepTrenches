@@ -1,0 +1,10 @@
+{
+    "parent": "block/big_dripleaf_partial_tilt",
+    "textures": {
+        "top": "deep_trenches:block/fur_plateau_top",
+        "stem": "deep_trenches:block/fur_plateau_stem",
+        "side": "deep_trenches:block/fur_plateau_side",
+        "tip": "deep_trenches:block/fur_plateau_tip",
+        "particle": "deep_trenches:block/fur_plateau_top"
+    }
+}

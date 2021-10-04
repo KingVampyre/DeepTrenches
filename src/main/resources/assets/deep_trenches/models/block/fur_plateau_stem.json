@@ -1,0 +1,7 @@
+{
+    "parent": "block/big_dripleaf_stem",
+    "textures": {
+        "stem": "deep_trenches:block/fur_plateau_stem",
+        "particle": "deep_trenches:block/fur_plateau_stem"
+    }
+}

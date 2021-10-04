@@ -896,7 +896,11 @@ public class DTItems {
 
 	/* BLOCK ITEMS */
 	public static final Item AIRIAL_MOSS;
+	public static final Item FOUR_LEAFED_CLOVER;
 	public static final Item ILMIUM;
+	public static final Item LICHEN;
+	public static final Item MOSS;
+	public static final Item THREE_LEAFED_CLOVER;
 
 	protected static Item createArmorItem(ArmorMaterial material, EquipmentSlot slot) {
 		return new ArmorItem(material, slot, new Settings().group(COMBAT));
@@ -1881,7 +1885,11 @@ public class DTItems {
 
 		/* BLOCK ITEMS */
 		AIRIAL_MOSS = createBlockItem(DTBlocks.AIRIAL_MOSS, PHYTOLOGY);
+		FOUR_LEAFED_CLOVER = createBlockItem(DTBlocks.FOUR_LEAFED_CLOVER, PHYTOLOGY);
 		ILMIUM = createBlockItem(DTBlocks.ILMIUM, PHYTOLOGY);
+		LICHEN = createBlockItem(DTBlocks.LICHEN, PHYTOLOGY);
+		MOSS = createBlockItem(DTBlocks.MOSS, PHYTOLOGY);
+		THREE_LEAFED_CLOVER = createBlockItem(DTBlocks.THREE_LEAFED_CLOVER, PHYTOLOGY);
 	}
 
 	public static void initialize() {
@@ -2557,20 +2565,20 @@ public class DTItems {
 		/* MOSSES */
 		registerItem("deep_trenches:airial_moss", AIRIAL_MOSS);
 		registerItem("deep_trenches:ilmium", ILMIUM);
-		registerBlockItem("deep_trenches:moss", MOSS, PHYTOLOGY);
+		registerItem("deep_trenches:moss", MOSS);
 
 		/* PLANTS */
 		registerBlockItem("deep_trenches:airial_bush", AIRIAL_BUSH, PHYTOLOGY);
 		registerBlockItem("deep_trenches:buckthorn", BUCKTHORN, PHYTOLOGY);
 		registerBlockItem("deep_trenches:bulk_grasses", BULK_GRASSES, PHYTOLOGY);
 		registerBlockItem("deep_trenches:crusted_fungus", CRUSTED_FUNGUS, PHYTOLOGY);
-		registerBlockItem("deep_trenches:four_leafed_clover", FOUR_LEAFED_CLOVER, PHYTOLOGY);
+		registerItem("deep_trenches:four_leafed_clover", FOUR_LEAFED_CLOVER);
 		registerBlockItem("deep_trenches:frarel", FRAREL, PHYTOLOGY);
 		registerBlockItem("deep_trenches:fur_plateau", FUR_PLATEAU, PHYTOLOGY);
 		registerBlockItem("deep_trenches:harshles", HARSHLES, PHYTOLOGY);
 		registerBlockItem("deep_trenches:ilyine", ILYINE, PHYTOLOGY);
 		registerBlockItem("deep_trenches:jungle_umbrella", JUNGLE_UMBRELLA, PHYTOLOGY);
-		registerBlockItem("deep_trenches:lichen", LICHEN, PHYTOLOGY);
+		registerItem("deep_trenches:lichen", LICHEN);
 		registerBlockItem("deep_trenches:mosses", MOSSES, PHYTOLOGY);
 		registerBlockItem("deep_trenches:murkstem", MURKSTEM, PHYTOLOGY);
 		registerBlockItem("deep_trenches:pomegranate_bush", POMEGRANATE_BUSH, PHYTOLOGY);
@@ -2578,7 +2586,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:sea_buckthorn", SEA_BUCKTHORN, PHYTOLOGY);
 		registerBlockItem("deep_trenches:skalk", SKALK, PHYTOLOGY);
 		registerBlockItem("deep_trenches:squish_tips", SQUISH_TIPS, PHYTOLOGY);
-		registerBlockItem("deep_trenches:three_leafed_clover", THREE_LEAFED_CLOVER, PHYTOLOGY);
+		registerItem("deep_trenches:three_leafed_clover", THREE_LEAFED_CLOVER);
 
 		/* MUSHROOMS */
 		registerBlockItem("deep_trenches:gray_shag_mushroom", GRAY_SHAG_MUSHROOM, PHYTOLOGY);
