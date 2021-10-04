@@ -11,7 +11,7 @@ import static net.minecraft.world.gen.feature.ConfiguredFeatures.SPRING_LAVA;
 public class DTBiomeFeatures {
 
     public static void addClearForestGrass(GenerationSettings.Builder builder) {
-        builder.feature(VEGETAL_DECORATION, PATCH_CLEAR_FOREST_GRASS);
+        builder.feature(VEGETAL_DECORATION, PATCH_GRASS_CLEAR_FOREST);
     }
 
     public static void addClearWaterLakes(GenerationSettings.Builder builder) {

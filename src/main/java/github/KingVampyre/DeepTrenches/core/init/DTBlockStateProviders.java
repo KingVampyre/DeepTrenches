@@ -1,10 +1,13 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.util.collection.DataPool;
+import net.minecraft.util.math.noise.DoublePerlinNoiseSampler;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
+import net.minecraft.world.gen.stateprovider.NoiseBlockStateProvider;
+
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.*;
 import static net.minecraft.block.Blocks.FERN;
@@ -89,8 +92,10 @@ public class DTBlockStateProviders {
     public static final BlockStateProvider PLUM_FOREST_FLOWER_PROVIDER;
     public static final BlockStateProvider THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER;
 
-    protected static WeightedBlockStateProvider weighted(DataPool.Builder<BlockState> builder) {
-        return new WeightedBlockStateProvider(builder.build());
+    protected static NoiseBlockStateProvider noise(Block ...blocks) {
+        var list = Stream.of(blocks).map(Block::getDefaultState).collect(Collectors.toList());
+
+        return new NoiseBlockStateProvider(2345L, new DoublePerlinNoiseSampler.NoiseParameters(0, 1.0D), 0.020833334F, list);
     }
 
     static {
@@ -142,47 +147,30 @@ public class DTBlockStateProviders {
         TEAK_TRUNK_PROVIDER = BlockStateProvider.of(TEAK_LOG);
         THUNDERCLOUD_PLUM_TRUNK_PROVIDER = BlockStateProvider.of(THUNDERCLOUD_PLUM_LOG);
 
-        ALMOND_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
-                .add(BLUE_VIOLET.getDefaultState(), 1)
-                .add(CYAN_BLUE_VIOLET.getDefaultState(), 1)
-                .add(WILD_PANSY.getDefaultState(), 1)
+        ALMOND_FOREST_FLOWER_PROVIDER = noise(BLUE_VIOLET, CYAN_BLUE_VIOLET, WILD_PANSY);
+
+        ALMOND_PLUS_FOREST_FLOWER_PROVIDER = noise(
+                BLUE_VIOLET,
+                CYAN_BLUE_VIOLET,
+                WILD_PANSY,
+                WHITE_VIOLET,
+                MARSH_VIOLET,
+                PINK_MARSH_VIOLET,
+                RUBRA_BLUE_VIOLET,
+                NATIVE_VIOLET);
+
+        BLACK_BIRCH_FOREST_FLOWER_PROVIDER = noise(
+                GREEN_PANSY,
+                BLACK_PANSY,
+                BLUE_PANSY,
+                PINK_ROSE,
+                PINK_ROSE_BUSH
         );
 
-        ALMOND_PLUS_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
-                .add(BLUE_VIOLET.getDefaultState(), 1)
-                .add(CYAN_BLUE_VIOLET.getDefaultState(), 1)
-                .add(WILD_PANSY.getDefaultState(), 1)
-                .add(WHITE_VIOLET.getDefaultState(), 1)
-                .add(MARSH_VIOLET.getDefaultState(), 1)
-                .add(PINK_MARSH_VIOLET.getDefaultState(), 1)
-                .add(RUBRA_BLUE_VIOLET.getDefaultState(), 1)
-                .add(NATIVE_VIOLET.getDefaultState(), 1)
-        );
-
-        BLACK_BIRCH_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
-                .add(GREEN_PANSY.getDefaultState(), 1)
-                .add(BLACK_PANSY.getDefaultState(), 1)
-                .add(BLUE_PANSY.getDefaultState(), 1)
-                .add(PINK_ROSE.getDefaultState(), 1)
-                .add(PINK_ROSE_BUSH.getDefaultState(), 1)
-        );
-
-        CHERRY_CLIFFS_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
-                .add(GREEN_PANSY.getDefaultState(), 1)
-        );
-
-        CHERRY_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
-                .add(GREEN_PANSY.getDefaultState(), 1)
-        );
-
-        PLUM_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
-                .add(YELLOW_VIOLET.getDefaultState(), 1)
-                .add(BROWN_PANSY.getDefaultState(), 1)
-        );
-
-        THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER = weighted(DataPool.<BlockState>builder()
-                .add(GREEN_PANSY.getDefaultState(), 1)
-        );
+        CHERRY_CLIFFS_FOREST_FLOWER_PROVIDER = noise(GREEN_PANSY);
+        CHERRY_FOREST_FLOWER_PROVIDER = noise(GREEN_PANSY);
+        PLUM_FOREST_FLOWER_PROVIDER = noise(YELLOW_VIOLET, BROWN_PANSY);
+        THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER = noise(GREEN_PANSY);
 
         BLACK_LILY_PROVIDER = BlockStateProvider.of(BLACK_LILY);
         LILAC_PROVIDER = BlockStateProvider.of(Blocks.LILAC);
@@ -201,11 +189,7 @@ public class DTBlockStateProviders {
         SHELF_MUSHROOM_STEM_PROVIDER = BlockStateProvider.of(SHELF_MUSHROOM_STEM.getDefaultState().with(UP, false).with(DOWN, false));
         WHITE_MUSHROOM_STEM_PROVIDER = BlockStateProvider.of(WHITE_MUSHROOM_STEM.getDefaultState().with(UP, false).with(DOWN, false));
 
-        PATCH_CLEAR_FOREST_GRASS_PROVIDER = weighted(DataPool.<BlockState>builder()
-                .add(GRASS.getDefaultState(), 1)
-                .add(FERN.getDefaultState(), 4)
-        );
-
+        PATCH_CLEAR_FOREST_GRASS_PROVIDER = noise(GRASS, FERN);
     }
 
 }

@@ -129,7 +129,7 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> SHELF_MUSHROOM;
     public static final ConfiguredFeature<?, ?> WHITE_MUSHROOM;
 
-    public static final ConfiguredFeature<?, ?> PATCH_CLEAR_FOREST_GRASS;
+    public static final ConfiguredFeature<?, ?> PATCH_GRASS_CLEAR_FOREST;
 
     public static final ConfiguredFeature<?, ?> ALMOND_FOREST_FLOWER;
     public static final ConfiguredFeature<?, ?> ALMOND_PLUS_FOREST_FLOWER;
@@ -181,16 +181,26 @@ public class DTConfiguredFeatures {
         return Feature.RANDOM_PATCH.configure(config);
     }
 
+    protected static ConfiguredFeature<?, ?> createPatchGrass(RandomPatchFeatureConfig config) {
+        return createRandomPatch(config).decorate(HEIGHTMAP_WORLD_SURFACE).spreadHorizontally().repeat(2);
+    }
+
+    protected static ConfiguredFeature<?, ?> createTallFlower(RandomPatchFeatureConfig config) {
+        return createRandomPatch(config).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP).applyChance(3);
+    }
+
     protected static ConfiguredFeature<?, ?> createFlower(RandomPatchFeatureConfig config) {
-        return Feature.FLOWER.configure(config).decorate(SPREAD_32_ABOVE).decorate(SQUARE_HEIGHTMAP).repeat(2);
+        return Feature.FLOWER.configure(config)
+                .decorate(SQUARE_HEIGHTMAP)
+                .applyChance(2)
+                .repeat(3);
     }
 
     protected static ConfiguredFeature<?, ?> createFlowerVegetation(SimpleRandomFeatureConfig config) {
         return Feature.SIMPLE_RANDOM_SELECTOR.configure(config)
                 .repeat(ClampedIntProvider.create(UniformIntProvider.create(-3, 1), 0, 1))
-                .decorate(SPREAD_32_ABOVE)
                 .decorate(SQUARE_HEIGHTMAP)
-                .repeat(5);
+                .applyChance(7);
     }
 
     protected static ConfiguredFeature<?, ?> createLake(Block waterBlock) {
@@ -305,10 +315,10 @@ public class DTConfiguredFeatures {
         GREAT_PIN_CHERRY_MORE_BEEHIVES = createTree(GREAT_PIN_CHERRY_TREE_CONFIG, MORE_BEEHIVES_TREES);
         GREAT_PIN_CHERRY_HALF_BEEHIVES = createTree(GREAT_PIN_CHERRY_TREE_CONFIG, HALF_BEEHIVES_TREES);
 
-        BLACK_LILY = createRandomPatch(BLACK_LILY_CONFIG);
-        LILAC = createRandomPatch(LILAC_CONFIG);
-        ORANGE_LILY = createRandomPatch(ORANGE_LILY_CONFIG);
-        VELVET_LILY = createRandomPatch(VELVET_LILY_CONFIG);
+        BLACK_LILY = createTallFlower(BLACK_LILY_CONFIG);
+        LILAC = createTallFlower(LILAC_CONFIG);
+        ORANGE_LILY = createTallFlower(ORANGE_LILY_CONFIG);
+        VELVET_LILY = createTallFlower(VELVET_LILY_CONFIG);
 
         GRAY_SHAG_MUSHROOM = createHugeMushroom(GRAY_SHAG_MUSHROOM_CAP_PROVIDER, GRAY_SHAG_MUSHROOM_STEM_PROVIDER);
         INKY_CAP_MUSHROOM = createHugeMushroom(INKY_CAP_MUSHROOM_CAP_PROVIDER, INKY_CAP_MUSHROOM_STEM_PROVIDER);
@@ -316,7 +326,7 @@ public class DTConfiguredFeatures {
         SHELF_MUSHROOM = createHugeMushroom(SHELF_MUSHROOM_CAP_PROVIDER, SHELF_MUSHROOM_STEM_PROVIDER);
         WHITE_MUSHROOM = createHugeMushroom(WHITE_MUSHROOM_CAP_PROVIDER, WHITE_MUSHROOM_STEM_PROVIDER);
 
-        PATCH_CLEAR_FOREST_GRASS = createRandomPatch(PATCH_CLEAR_FOREST_GRASS_CONFIG);
+        PATCH_GRASS_CLEAR_FOREST = createPatchGrass(PATCH_GRASS_CLEAR_FOREST_CONFIG);
 
         ALMOND_FOREST_FLOWER = createFlower(ALMOND_FOREST_FLOWER_CONFIG);
         ALMOND_PLUS_FOREST_FLOWER = createFlower(ALMOND_PLUS_FOREST_FLOWER_CONFIG);
@@ -363,7 +373,7 @@ public class DTConfiguredFeatures {
                 ConfiguredFeatures.BIRCH_BEES_002.withChance(0.20F),
                 ConfiguredFeatures.BIRCH_BEES_005.withChance(0.20F),
                 ConfiguredFeatures.FANCY_OAK_BEES_002.withChance(0.32F),
-                ConfiguredFeatures.FANCY_OAK_BEES_05.withChance(0.32F),
+                ConfiguredFeatures.FANCY_OAK_BEES_005.withChance(0.32F),
                 ConfiguredFeatures.OAK_BEES_002.withChance(0.16F),
                 ConfiguredFeatures.OAK_BEES_005.withChance(0.16F)
         ), ALMOND_VERY_RARE_BEEHIVES));
@@ -513,7 +523,7 @@ public class DTConfiguredFeatures {
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:orange_lily", ORANGE_LILY);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:velvet_lily", VELVET_LILY);
 
-        Registry.register(CONFIGURED_FEATURE, "deep_trenches:patch_clear_forest_grass", PATCH_CLEAR_FOREST_GRASS);
+        Registry.register(CONFIGURED_FEATURE, "deep_trenches:patch_grass_clear_forest", PATCH_GRASS_CLEAR_FOREST);
 
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_forest_flower", ALMOND_FOREST_FLOWER);
         Registry.register(CONFIGURED_FEATURE, "deep_trenches:almond_plus_forest_flower", ALMOND_PLUS_FOREST_FLOWER);

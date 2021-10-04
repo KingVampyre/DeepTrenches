@@ -7,14 +7,12 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
-import net.minecraft.world.gen.placer.BlockPlacer;
-import net.minecraft.world.gen.placer.DoublePlantPlacer;
-import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.OptionalInt;
+import java.util.Set;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTBlockStateProviders.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.*;
@@ -88,22 +86,22 @@ public class DTFeatureConfigs {
     public static final RandomPatchFeatureConfig ORANGE_LILY_CONFIG;
     public static final RandomPatchFeatureConfig VELVET_LILY_CONFIG;
 
-    public static final RandomPatchFeatureConfig PATCH_CLEAR_FOREST_GRASS_CONFIG;
+    public static final RandomPatchFeatureConfig PATCH_GRASS_CLEAR_FOREST_CONFIG;
 
-    protected static RandomPatchFeatureConfig.Builder builder(BlockStateProvider provider, BlockPlacer placer) {
-        return new RandomPatchFeatureConfig.Builder(provider, placer);
+    protected static RandomPatchFeatureConfig createRandomPatchFeatureConfig(int tries, int xzSpread, int ySpread, BlockStateProvider provider) {
+        return new RandomPatchFeatureConfig(tries, xzSpread, ySpread, Set.of(), Set.of(), false, () -> Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(provider)).method_38872());
     }
 
-    protected static RandomPatchFeatureConfig createDoublePlacerConfig(BlockStateProvider provider, int tries) {
-        return builder(provider, DoublePlantPlacer.INSTANCE).tries(tries).cannotProject().build();
+    protected static RandomPatchFeatureConfig createTallFlowerConfig(BlockStateProvider provider) {
+        return createRandomPatchFeatureConfig(96, 7, 3, provider);
     }
 
-    protected static RandomPatchFeatureConfig createSimplePlacerConfig(BlockStateProvider provider, int tries) {
-        return builder(provider, SimpleBlockPlacer.INSTANCE).tries(tries).build();
+    protected static RandomPatchFeatureConfig createPatchGrassConfig(BlockStateProvider provider) {
+        return createRandomPatchFeatureConfig(32, 7, 3, provider);
     }
 
-    protected static RandomPatchFeatureConfig createSimplePlacerConfig(BlockStateProvider provider) {
-        return createSimplePlacerConfig(provider, 64);
+    protected static RandomPatchFeatureConfig createFlowerConfig(BlockStateProvider provider) {
+        return createRandomPatchFeatureConfig(96, 6, 2, provider);
     }
 
     protected static TreeFeatureConfig createBlobTreeConfig(BlockStateProvider trunk, BlockStateProvider foliage) {
@@ -165,20 +163,20 @@ public class DTFeatureConfigs {
         GREAT_TEAK_TREE_CONFIG = createGreatTreeConfig(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER);
         GREAT_THUNDERCLOUD_PLUM_TREE_CONFIG = createGreatTreeConfig(THUNDERCLOUD_PLUM_TRUNK_PROVIDER, THUNDERCLOUD_PLUM_FOLIAGE_PROVIDER);
 
-        BLACK_LILY_CONFIG = createDoublePlacerConfig(BLACK_LILY_PROVIDER, 64);
-        LILAC_CONFIG = createDoublePlacerConfig(LILAC_PROVIDER, 64);
-        ORANGE_LILY_CONFIG = createDoublePlacerConfig(ORANGE_LILY_PROVIDER, 32);
-        VELVET_LILY_CONFIG = createDoublePlacerConfig(VELVET_LILY_PROVIDER, 32);
+        BLACK_LILY_CONFIG = createTallFlowerConfig(BLACK_LILY_PROVIDER);
+        LILAC_CONFIG = createTallFlowerConfig(LILAC_PROVIDER);
+        ORANGE_LILY_CONFIG = createTallFlowerConfig(ORANGE_LILY_PROVIDER);
+        VELVET_LILY_CONFIG = createTallFlowerConfig(VELVET_LILY_PROVIDER);
 
-        PATCH_CLEAR_FOREST_GRASS_CONFIG = createSimplePlacerConfig(PATCH_CLEAR_FOREST_GRASS_PROVIDER, 32);
+        PATCH_GRASS_CLEAR_FOREST_CONFIG = createPatchGrassConfig(PATCH_CLEAR_FOREST_GRASS_PROVIDER);
 
-        ALMOND_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(ALMOND_FOREST_FLOWER_PROVIDER);
-        ALMOND_PLUS_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(ALMOND_PLUS_FOREST_FLOWER_PROVIDER);
-        BLACK_BIRCH_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(BLACK_BIRCH_FOREST_FLOWER_PROVIDER);
-        CHERRY_CLIFFS_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(CHERRY_CLIFFS_FOREST_FLOWER_PROVIDER);
-        CHERRY_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(CHERRY_FOREST_FLOWER_PROVIDER);
-        PLUM_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(PLUM_FOREST_FLOWER_PROVIDER);
-        THUNDERCLOUD_PLUM_FOREST_FLOWER_CONFIG = createSimplePlacerConfig(THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER);
+        ALMOND_FOREST_FLOWER_CONFIG = createFlowerConfig(ALMOND_FOREST_FLOWER_PROVIDER);
+        ALMOND_PLUS_FOREST_FLOWER_CONFIG = createFlowerConfig(ALMOND_PLUS_FOREST_FLOWER_PROVIDER);
+        BLACK_BIRCH_FOREST_FLOWER_CONFIG = createFlowerConfig(BLACK_BIRCH_FOREST_FLOWER_PROVIDER);
+        CHERRY_CLIFFS_FOREST_FLOWER_CONFIG = createFlowerConfig(CHERRY_CLIFFS_FOREST_FLOWER_PROVIDER);
+        CHERRY_FOREST_FLOWER_CONFIG = createFlowerConfig(CHERRY_FOREST_FLOWER_PROVIDER);
+        PLUM_FOREST_FLOWER_CONFIG = createFlowerConfig(PLUM_FOREST_FLOWER_PROVIDER);
+        THUNDERCLOUD_PLUM_FOREST_FLOWER_CONFIG = createFlowerConfig(THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER);
 
         ALMOND_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
                 () -> LILAC
