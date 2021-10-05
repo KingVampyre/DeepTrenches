@@ -38,6 +38,9 @@ public class  DeepTrenches implements ModInitializer {
 		/* ENCHANTMENT */
 		Registry.register(ENCHANTMENT, "deep_trenches:soul_draining", DTEnchantments.SOUL_DRAINING);
 
+		/* FOLIAGE PLACER */
+		Registry.register(FOLIAGE_PLACER_TYPE, "deep_trenches:sphere_foliage_placer", DTFoliagePlacerTypes.SPHERE_FOLIAGE_PLACER);
+
 		/* TRUNK PLACER */
 		Registry.register(TRUNK_PLACER_TYPE, "deep_trenches:great_trunk_placer", DTTrunkPlacerTypes.GREAT_TRUNK_PLACER);
     }

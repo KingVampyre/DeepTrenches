@@ -1,6 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
 import com.google.common.collect.ImmutableList;
+import github.KingVampyre.DeepTrenches.core.util.math.intprovider.NegativeConstantIntProvider;
+import github.KingVampyre.DeepTrenches.core.world.gen.foliage.SphereFoliagePlacer;
 import github.KingVampyre.DeepTrenches.core.world.gen.trunk.GreatTrunkPlacer;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
@@ -108,6 +110,10 @@ public class DTFeatureConfigs {
         return new TreeFeatureConfig.Builder(trunk, new StraightTrunkPlacer(4, 3, 0), foliage, new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3), new TwoLayersFeatureSize(1, 0, 1)).ignoreVines().build();
     }
 
+    protected static TreeFeatureConfig createPlumTreeConfig(int baseHeight, int firstRandomHeight, int radius, int foliageHeight, int offsetY) {
+        return new TreeFeatureConfig.Builder(PLUM_TRUNK_PROVIDER, new StraightTrunkPlacer(baseHeight, firstRandomHeight, 0), PLUM_FOLIAGE_PROVIDER, new SphereFoliagePlacer(ConstantIntProvider.create(radius), NegativeConstantIntProvider.create(offsetY), foliageHeight), new TwoLayersFeatureSize(2, 0, 2)).ignoreVines().build();
+    }
+
     protected static TreeFeatureConfig createFancyTreeConfig(BlockStateProvider trunk, BlockStateProvider foliage) {
         return new TreeFeatureConfig.Builder(trunk, new LargeOakTrunkPlacer(5, 11, 0), foliage, new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).ignoreVines().build();
     }
@@ -132,7 +138,7 @@ public class DTFeatureConfigs {
         GHOSHROOM_TREE_CONFIG = createBlobTreeConfig(GHOSHROOM_TRUNK_PROVIDER, GHOSHROOM_FOLIAGE_PROVIDER);
         PELTOGYNE_TREE_CONFIG = createBlobTreeConfig(PELTOGYNE_TRUNK_PROVIDER, PELTOGYNE_FOLIAGE_PROVIDER);
         PIN_CHERRY_TREE_CONFIG = createBlobTreeConfig(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER);
-        PLUM_TREE_CONFIG = createBlobTreeConfig(PLUM_TRUNK_PROVIDER, PLUM_FOLIAGE_PROVIDER);
+        PLUM_TREE_CONFIG = createPlumTreeConfig(6, 3, 2, 5, -2);
         PURFUNGA_TREE_CONFIG = createBlobTreeConfig(PURFUNGA_TRUNK_PROVIDER, PURFUNGA_FOLIAGE_PROVIDER);
         SPROOM_TREE_CONFIG = createBlobTreeConfig(SPROOM_TRUNK_PROVIDER, SPROOM_FOLIAGE_PROVIDER);
         STORTREEAN_TREE_CONFIG = createBlobTreeConfig(STORTREEAN_TRUNK_PROVIDER, STORTREEAN_FOLIAGE_PROVIDER);
@@ -148,7 +154,7 @@ public class DTFeatureConfigs {
         FANCY_CHERRY_TREE_CONFIG = createFancyTreeConfig(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER);
         FANCY_FUCHSITRA_TREE_CONFIG = createFancyTreeConfig(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER);
         FANCY_PIN_CHERRY_TREE_CONFIG = createFancyTreeConfig(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER);
-        FANCY_PLUM_TREE_CONFIG = createFancyTreeConfig(PLUM_TRUNK_PROVIDER, PLUM_FOLIAGE_PROVIDER);
+        FANCY_PLUM_TREE_CONFIG = createPlumTreeConfig(8, 5, 3, 7, -3);
         FANCY_TEAK_TREE_CONFIG = createFancyTreeConfig(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER);
         FANCY_THUNDERCLOUD_PLUM_TREE_CONFIG = createFancyTreeConfig(THUNDERCLOUD_PLUM_TRUNK_PROVIDER, THUNDERCLOUD_PLUM_FOLIAGE_PROVIDER);
 
@@ -159,7 +165,7 @@ public class DTFeatureConfigs {
         GREAT_CHERRY_TREE_CONFIG = createGreatTreeConfig(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER);
         GREAT_FUCHSITRA_TREE_CONFIG = createGreatTreeConfig(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER);
         GREAT_PIN_CHERRY_TREE_CONFIG = createGreatTreeConfig(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER);
-        GREAT_PLUM_TREE_CONFIG = createGreatTreeConfig(PLUM_TRUNK_PROVIDER, PLUM_FOLIAGE_PROVIDER);
+        GREAT_PLUM_TREE_CONFIG = createPlumTreeConfig(10, 5, 4, 9, -4);
         GREAT_TEAK_TREE_CONFIG = createGreatTreeConfig(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER);
         GREAT_THUNDERCLOUD_PLUM_TREE_CONFIG = createGreatTreeConfig(THUNDERCLOUD_PLUM_TRUNK_PROVIDER, THUNDERCLOUD_PLUM_FOLIAGE_PROVIDER);
 
