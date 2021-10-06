@@ -1,15 +1,15 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.core.mixin.InvokerFoliagePlacerType;
-import github.KingVampyre.DeepTrenches.core.world.gen.foliage.SphereFoliagePlacer;
+import github.KingVampyre.DeepTrenches.core.world.gen.foliage.PlumFoliagePlacer;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
 
 public class DTFoliagePlacerTypes {
 
-    public static final FoliagePlacerType<SphereFoliagePlacer> SPHERE_FOLIAGE_PLACER;
+    public static final FoliagePlacerType<PlumFoliagePlacer> PLUM_FOLIAGE_PLACER;
 
     static {
-        SPHERE_FOLIAGE_PLACER = InvokerFoliagePlacerType.create(SphereFoliagePlacer.CODEC);
+        PLUM_FOLIAGE_PLACER = InvokerFoliagePlacerType.create(PlumFoliagePlacer.CODEC);
     }
 
 }
