@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.core.entity.*;
-import github.KingVampyre.DeepTrenches.core.util.DefaultAttributeHelper;
+import github.KingVampyre.DeepTrenches.core.util.entity.attribute.DefaultAttributeHelper;
 import github.Louwind.entityutils.core.entity.FabricBoatEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.Entity;

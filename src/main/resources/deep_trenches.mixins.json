@@ -6,6 +6,7 @@
   "mixins": [
     "AccessorTridentEntity",
     "InvokerAbstractLichenBlock",
+    "InvokerFoliagePlacer",
     "InvokerFoliagePlacerType",
     "InvokerSpreadableBlock",
     "InvokerTrunkPlacerType",

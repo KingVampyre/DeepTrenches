@@ -5,6 +5,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import github.KingVampyre.DeepTrenches.core.util.world.gen.feature.TreeFeatureHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.world.TestableWorld;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
@@ -14,25 +15,25 @@ import net.minecraft.world.gen.foliage.FoliagePlacerType;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.PLUM_FOLIAGE_PLACER;
-import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.FoliagePositionPredicate.ALWAYS_TRUE;
+import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.GREAT_AQUEAN_FOLIAGE_PLACER;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.FoliagePositionPredicate.NOT_CORNER;
 
-public class PlumFoliagePlacer extends BlobFoliagePlacer {
+public class GreatAqueanFoliagePlacer extends BlobFoliagePlacer {
 
-    public static final Codec<PlumFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<GreatAqueanFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     IntProvider.createValidatingCodec(-16, 16).fieldOf("radius").forGetter(placer -> placer.radius),
                     IntProvider.createValidatingCodec(-16, 16).fieldOf("offset").forGetter(placer -> placer.offset),
                     Codec.intRange(0, 16).fieldOf("height").forGetter(placer -> placer.height))
-                    .apply(instance, PlumFoliagePlacer::new));
+                    .apply(instance, GreatAqueanFoliagePlacer::new));
 
-    public PlumFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
+    public GreatAqueanFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
         super(radius, offset, height);
     }
 
     @Override
     protected FoliagePlacerType<?> getType() {
-        return PLUM_FOLIAGE_PLACER;
+        return GREAT_AQUEAN_FOLIAGE_PLACER;
     }
 
     @Override
@@ -40,13 +41,21 @@ public class PlumFoliagePlacer extends BlobFoliagePlacer {
         var centerPos = treeNode.getCenter();
         var giantTrunk = treeNode.isGiantTrunk();
 
-        for(var i = 1; i <= radius; ++i)
-            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ALWAYS_TRUE, radius - i + 1, i + offset, giantTrunk);
+        var quarter = MathHelper.ceilDiv(radius, 2);
 
-        TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ALWAYS_TRUE, radius, offset, giantTrunk, true);
+        for(var i = 1; i <= radius; ++i) {
+            var ceil = i > quarter ? MathHelper.ceilDiv(radius, i - 1) : radius;
 
-        for(var i = -1; i >= -radius; --i)
-            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ALWAYS_TRUE, radius + i + 1, i + offset, giantTrunk);
+            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ceil, i + offset, giantTrunk, i < quarter);
+        }
+
+        TreeFeatureHelper.generateSquare(world, replacer, random, config, centerPos, NOT_CORNER, radius, offset, giantTrunk);
+
+        for(var i = -1; i >= -radius; --i) {
+            var ceil = i < -quarter ? MathHelper.ceilDiv(radius, -i - 1) : radius;
+
+            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ceil, i + offset, giantTrunk, i > -quarter);
+        }
 
     }
 

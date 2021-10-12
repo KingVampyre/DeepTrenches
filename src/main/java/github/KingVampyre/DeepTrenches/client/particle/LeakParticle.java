@@ -2,7 +2,7 @@ package github.KingVampyre.DeepTrenches.client.particle;
 
 import github.KingVampyre.DeepTrenches.core.init.DTParticleTypes;
 import github.KingVampyre.DeepTrenches.core.particle.ColoredWaterFluidParticleEffect;
-import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
+import github.KingVampyre.DeepTrenches.core.util.particle.ParticleEffectHelper;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;

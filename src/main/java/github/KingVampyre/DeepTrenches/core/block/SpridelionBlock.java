@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import github.KingVampyre.DeepTrenches.core.util.StatusEffectHelper;
+import github.KingVampyre.DeepTrenches.core.util.entity.effect.StatusEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.ShapeContext;

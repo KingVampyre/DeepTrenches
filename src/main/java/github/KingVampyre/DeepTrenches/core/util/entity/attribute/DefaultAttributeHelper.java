@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.util;
+package github.KingVampyre.DeepTrenches.core.util.entity.attribute;
 
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.mob.MobEntity;

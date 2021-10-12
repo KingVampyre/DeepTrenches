@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.util;
+package github.KingVampyre.DeepTrenches.core.util.entity.effect;
 
 import github.KingVampyre.DeepTrenches.core.entity.effect.instance.CorrosionStatusEffectInstance;
 import github.KingVampyre.DeepTrenches.core.entity.effect.instance.SoulDrainingStatusEffectInstance;

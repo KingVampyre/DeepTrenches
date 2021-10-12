@@ -11,11 +11,7 @@ import static github.KingVampyre.DeepTrenches.core.init.DTIntProviderType.NEGATI
 
 public class NegativeConstantIntProvider extends IntProvider {
 
-    public static final Codec<NegativeConstantIntProvider> CODEC = RecordCodecBuilder.create((instance) -> {
-        return instance.group(Codec.INT.fieldOf("value").forGetter((provider) -> {
-            return provider.value;
-        })).apply(instance, NegativeConstantIntProvider::new);
-    });
+    public static final Codec<NegativeConstantIntProvider> CODEC = RecordCodecBuilder.create(instance -> instance.group(Codec.INT.fieldOf("value").forGetter(provider -> provider.value)).apply(instance, NegativeConstantIntProvider::new));
 
     protected final int value;
 

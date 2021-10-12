@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.util;
+package github.KingVampyre.DeepTrenches.core.util.particle;
 
 import github.KingVampyre.DeepTrenches.core.particle.ColoredWaterFluidParticleEffect;
 import net.minecraft.fluid.Fluid;

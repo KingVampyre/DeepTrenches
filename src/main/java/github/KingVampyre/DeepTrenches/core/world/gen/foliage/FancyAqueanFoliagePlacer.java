@@ -14,25 +14,25 @@ import net.minecraft.world.gen.foliage.FoliagePlacerType;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.PLUM_FOLIAGE_PLACER;
+import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.FANCY_AQUEAN_FOLIAGE_PLACER;
 import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.FoliagePositionPredicate.ALWAYS_TRUE;
 
-public class PlumFoliagePlacer extends BlobFoliagePlacer {
+public class FancyAqueanFoliagePlacer extends BlobFoliagePlacer {
 
-    public static final Codec<PlumFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<FancyAqueanFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     IntProvider.createValidatingCodec(-16, 16).fieldOf("radius").forGetter(placer -> placer.radius),
                     IntProvider.createValidatingCodec(-16, 16).fieldOf("offset").forGetter(placer -> placer.offset),
                     Codec.intRange(0, 16).fieldOf("height").forGetter(placer -> placer.height))
-                    .apply(instance, PlumFoliagePlacer::new));
+                    .apply(instance, FancyAqueanFoliagePlacer::new));
 
-    public PlumFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
+    public FancyAqueanFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
         super(radius, offset, height);
     }
 
     @Override
     protected FoliagePlacerType<?> getType() {
-        return PLUM_FOLIAGE_PLACER;
+        return FANCY_AQUEAN_FOLIAGE_PLACER;
     }
 
     @Override
@@ -40,14 +40,10 @@ public class PlumFoliagePlacer extends BlobFoliagePlacer {
         var centerPos = treeNode.getCenter();
         var giantTrunk = treeNode.isGiantTrunk();
 
-        for(var i = 1; i <= radius; ++i)
-            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ALWAYS_TRUE, radius - i + 1, i + offset, giantTrunk);
+        for(var i = 0; i < foliageHeight; ++i)
+            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, radius - i, i + offset + 1, giantTrunk, false);
 
         TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ALWAYS_TRUE, radius, offset, giantTrunk, true);
-
-        for(var i = -1; i >= -radius; --i)
-            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ALWAYS_TRUE, radius + i + 1, i + offset, giantTrunk);
-
     }
 
 }

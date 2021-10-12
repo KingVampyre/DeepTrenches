@@ -4,7 +4,7 @@ import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.core.init.DTDamageSources;
 import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
-import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
+import github.KingVampyre.DeepTrenches.core.util.particle.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
