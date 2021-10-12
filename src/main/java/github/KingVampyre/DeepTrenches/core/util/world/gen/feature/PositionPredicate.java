@@ -3,11 +3,11 @@ package github.KingVampyre.DeepTrenches.core.util.world.gen.feature;
 import java.util.Random;
 
 @FunctionalInterface
-public interface FoliagePositionPredicate {
+public interface PositionPredicate {
 
-    FoliagePositionPredicate ALWAYS_TRUE = (random, dx, y, dz, radius, giantTrunk) -> true;
+    PositionPredicate ALWAYS_TRUE = (random, dx, y, dz, radius, giantTrunk) -> true;
 
-    FoliagePositionPredicate NOT_CORNER = (random, dx, y, dz, radius, giantTrunk) -> {
+    PositionPredicate NOT_CORNER = (random, dx, y, dz, radius, giantTrunk) -> {
         var absDx = Math.abs(dx);
         var absDz = Math.abs(dz);
 
@@ -21,6 +21,6 @@ public interface FoliagePositionPredicate {
         return !(absDx == radius && absDz == radius);
     };
 
-    boolean isValidForLeaves(Random random, int dx, int y, int dz, int radius, boolean giantTrunk);
+    boolean isValidPosition(Random random, int dx, int y, int dz, int radius, boolean giantTrunk);
 
 }

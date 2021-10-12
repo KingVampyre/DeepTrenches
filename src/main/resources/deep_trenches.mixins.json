@@ -9,6 +9,7 @@
     "InvokerFoliagePlacer",
     "InvokerFoliagePlacerType",
     "InvokerSpreadableBlock",
+    "InvokerTrunkPlacer",
     "InvokerTrunkPlacerType",
     "MixinAbstractBlockState",
     "MixinAbstractCauldronBlock",

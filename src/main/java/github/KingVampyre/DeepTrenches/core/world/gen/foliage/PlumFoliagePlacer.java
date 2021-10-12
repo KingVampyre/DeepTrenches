@@ -15,7 +15,8 @@ import java.util.Random;
 import java.util.function.BiConsumer;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.PLUM_FOLIAGE_PLACER;
-import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.FoliagePositionPredicate.ALWAYS_TRUE;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.BlockStatePlacer.FOLIAGE;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.ALWAYS_TRUE;
 
 public class PlumFoliagePlacer extends BlobFoliagePlacer {
 
@@ -41,12 +42,12 @@ public class PlumFoliagePlacer extends BlobFoliagePlacer {
         var giantTrunk = treeNode.isGiantTrunk();
 
         for(var i = 1; i <= radius; ++i)
-            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ALWAYS_TRUE, radius - i + 1, i + offset, giantTrunk);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, centerPos, random, radius - i + 1, i + offset, giantTrunk);
 
-        TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ALWAYS_TRUE, radius, offset, giantTrunk, true);
+        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, centerPos, random, radius, offset, giantTrunk, true);
 
         for(var i = -1; i >= -radius; --i)
-            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ALWAYS_TRUE, radius + i + 1, i + offset, giantTrunk);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, centerPos, random, radius + i + 1, i + offset, giantTrunk);
 
     }
 

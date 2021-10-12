@@ -16,7 +16,8 @@ import java.util.Random;
 import java.util.function.BiConsumer;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.GREAT_AQUEAN_FOLIAGE_PLACER;
-import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.FoliagePositionPredicate.NOT_CORNER;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.BlockStatePlacer.FOLIAGE;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.NOT_CORNER;
 
 public class GreatAqueanFoliagePlacer extends BlobFoliagePlacer {
 
@@ -46,15 +47,15 @@ public class GreatAqueanFoliagePlacer extends BlobFoliagePlacer {
         for(var i = 1; i <= radius; ++i) {
             var ceil = i > quarter ? MathHelper.ceilDiv(radius, i - 1) : radius;
 
-            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ceil, i + offset, giantTrunk, i < quarter);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, centerPos, random, ceil, i + offset, giantTrunk, i < quarter);
         }
 
-        TreeFeatureHelper.generateSquare(world, replacer, random, config, centerPos, NOT_CORNER, radius, offset, giantTrunk);
+        TreeFeatureHelper.generateCenterSquare(world, replacer, config, FOLIAGE, NOT_CORNER, centerPos, random, radius, offset, giantTrunk);
 
         for(var i = -1; i >= -radius; --i) {
             var ceil = i < -quarter ? MathHelper.ceilDiv(radius, -i - 1) : radius;
 
-            TreeFeatureHelper.generateRhombus(world, replacer, random, config, centerPos, ceil, i + offset, giantTrunk, i > -quarter);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, centerPos, random, ceil, i + offset, giantTrunk, i > -quarter);
         }
 
     }
