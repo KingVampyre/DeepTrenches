@@ -12,20 +12,20 @@ import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.Positi
 
 public class TreeFeatureHelper {
 
-    public static void generateRhombus(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, PositionPredicate predicate, BlockPos pos, Random random, int radius, int y, boolean giantTrunk) {
-        generateRhombus(world, replacer, config, placer, predicate, pos, random, radius, y, giantTrunk, false);
+    public static void generateRhombus(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, PositionPredicate predicate, BlockPos pos, Random random, int radius, boolean giantTrunk) {
+        generateRhombus(world, replacer, config, placer, predicate, pos, random, radius, giantTrunk, false);
     }
 
-    public static void generateRhombus(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, BlockPos pos, Random random, int radius, int y, boolean giantTrunk, boolean round) {
-        generateRhombus(world, replacer, config, placer, ALWAYS_TRUE, pos, random, radius, y, giantTrunk, round);
+    public static void generateRhombus(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, BlockPos pos, Random random, int radius, boolean giantTrunk, boolean round) {
+        generateRhombus(world, replacer, config, placer, ALWAYS_TRUE, pos, random, radius, giantTrunk, round);
     }
 
-    public static void generateRhombus(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, BlockPos pos, Random random, int radius, int y, boolean giantTrunk) {
-        generateRhombus(world, replacer, config, placer, ALWAYS_TRUE, pos, random, radius, y, giantTrunk, false);
+    public static void generateRhombus(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, BlockPos pos, Random random, int radius, boolean giantTrunk) {
+        generateRhombus(world, replacer, config, placer, ALWAYS_TRUE, pos, random, radius, giantTrunk, false);
     }
 
-    public static void generateCenterSquare(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, PositionPredicate predicate, BlockPos pos, Random random, int radius, int y, boolean giantTrunk) {
-        generateSquare(world, replacer, config, placer, predicate, pos.add(-radius, y, -radius), random, 2 * radius + 1, giantTrunk);
+    public static void generateCenterSquare(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, PositionPredicate predicate, BlockPos pos, Random random, int radius, boolean giantTrunk) {
+        generateSquare(world, replacer, config, placer, predicate, pos.add(-radius, 0, -radius), random, 2 * radius + 1, giantTrunk);
     }
 
     public static void generateSquare(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, BlockPos pos, Random random, int length, boolean giantTrunk) {
@@ -33,7 +33,7 @@ public class TreeFeatureHelper {
     }
 
     public static void generateSquare(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, PositionPredicate predicate, BlockPos pos, Random random, int length, boolean giantTrunk) {
-        var mutable = new BlockPos.Mutable();
+        var mutable = pos.mutableCopy();
         var i = giantTrunk ? 1 : 0;
         var y = pos.getY();
 
@@ -41,7 +41,7 @@ public class TreeFeatureHelper {
             for(var z = 0; z < length + i; ++z) {
 
                 if (predicate.isValidPosition(random, x, y, z, length, giantTrunk)) {
-                    mutable.set(pos, x, y, z);
+                    mutable.set(pos, x, 0, z);
 
                     placer.placeBlock(world, replacer, random, config, mutable);
                 }
@@ -52,19 +52,20 @@ public class TreeFeatureHelper {
 
     }
 
-    public static void generateRhombus(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, PositionPredicate predicate, BlockPos pos, Random random, int radius, int y, boolean giantTrunk, boolean round) {
-        var mutable = new BlockPos.Mutable();
-        var roundOffset = round ? 1 : 0;
+    public static void generateRhombus(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, TreeFeatureConfig config, BlockStatePlacer placer, PositionPredicate predicate, BlockPos pos, Random random, int radius, boolean giantTrunk, boolean round) {
+        var mutable = pos.mutableCopy();
+        var offset = round ? 1 : 0;
         var i = giantTrunk ? 1 : 0;
+        var y = pos.getY();
 
         for(var x = -radius; x <= radius + i; ++x) {
-            var length = Math.abs(Math.abs(x) - radius - roundOffset);
+            var length = Math.abs(Math.abs(x) - radius - offset);
 
             for(var z = -radius; z <= radius + i; ++z) {
 
                 if(x == 0 || z <= length && z >= -length)
                     if (predicate.isValidPosition(random, x, y, z, radius, giantTrunk)) {
-                        mutable.set(pos, x, y, z);
+                        mutable.set(pos, x, 0, z);
 
                         placer.placeBlock(world, replacer, random, config, mutable);
                     }

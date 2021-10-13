@@ -7,7 +7,7 @@ public interface PositionPredicate {
 
     PositionPredicate ALWAYS_TRUE = (random, dx, y, dz, radius, giantTrunk) -> true;
 
-    PositionPredicate NOT_CORNER = (random, dx, y, dz, radius, giantTrunk) -> {
+    PositionPredicate NOT_CORNERS = (random, dx, y, dz, radius, giantTrunk) -> {
         var absDx = Math.abs(dx);
         var absDz = Math.abs(dz);
 

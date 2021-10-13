@@ -40,11 +40,12 @@ public class FancyAqueanFoliagePlacer extends BlobFoliagePlacer {
     protected void generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, TreeFeatureConfig config, int trunkHeight, TreeNode treeNode, int foliageHeight, int radius, int offset) {
         var centerPos = treeNode.getCenter();
         var giantTrunk = treeNode.isGiantTrunk();
+        var pos = centerPos.up(offset);
 
         for(var i = 0; i < foliageHeight; ++i)
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, centerPos, random, radius - i, i + offset + 1, giantTrunk, false);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i + 1), random, radius - i, giantTrunk, false);
 
-        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, centerPos, random, radius, offset, giantTrunk, true);
+        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, pos, random, radius, giantTrunk, true);
     }
 
 }

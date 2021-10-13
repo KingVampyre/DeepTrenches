@@ -17,7 +17,7 @@ import java.util.function.BiConsumer;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.GREAT_AQUEAN_FOLIAGE_PLACER;
 import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.BlockStatePlacer.FOLIAGE;
-import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.NOT_CORNER;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.NOT_CORNERS;
 
 public class GreatAqueanFoliagePlacer extends BlobFoliagePlacer {
 
@@ -41,21 +41,21 @@ public class GreatAqueanFoliagePlacer extends BlobFoliagePlacer {
     protected void generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, TreeFeatureConfig config, int trunkHeight, TreeNode treeNode, int foliageHeight, int radius, int offset) {
         var centerPos = treeNode.getCenter();
         var giantTrunk = treeNode.isGiantTrunk();
-
         var quarter = MathHelper.ceilDiv(radius, 2);
+        var pos = centerPos.up(offset);
 
         for(var i = 1; i <= radius; ++i) {
             var ceil = i > quarter ? MathHelper.ceilDiv(radius, i - 1) : radius;
 
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, centerPos, random, ceil, i + offset, giantTrunk, i < quarter);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i), random, ceil, giantTrunk, i < quarter);
         }
 
-        TreeFeatureHelper.generateCenterSquare(world, replacer, config, FOLIAGE, NOT_CORNER, centerPos, random, radius, offset, giantTrunk);
+        TreeFeatureHelper.generateCenterSquare(world, replacer, config, FOLIAGE, NOT_CORNERS, pos, random, radius, giantTrunk);
 
         for(var i = -1; i >= -radius; --i) {
             var ceil = i < -quarter ? MathHelper.ceilDiv(radius, -i - 1) : radius;
 
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, centerPos, random, ceil, i + offset, giantTrunk, i > -quarter);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i), random, ceil, giantTrunk, i > -quarter);
         }
 
     }

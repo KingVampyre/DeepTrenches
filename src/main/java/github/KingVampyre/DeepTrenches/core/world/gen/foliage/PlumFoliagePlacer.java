@@ -40,14 +40,15 @@ public class PlumFoliagePlacer extends BlobFoliagePlacer {
     protected void generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, TreeFeatureConfig config, int trunkHeight, TreeNode treeNode, int foliageHeight, int radius, int offset) {
         var centerPos = treeNode.getCenter();
         var giantTrunk = treeNode.isGiantTrunk();
+        var pos = centerPos.up(offset);
 
         for(var i = 1; i <= radius; ++i)
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, centerPos, random, radius - i + 1, i + offset, giantTrunk);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, pos.up(i), random, radius - i + 1, giantTrunk);
 
-        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, centerPos, random, radius, offset, giantTrunk, true);
+        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos, random, radius, giantTrunk, true);
 
         for(var i = -1; i >= -radius; --i)
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, centerPos, random, radius + i + 1, i + offset, giantTrunk);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, pos.up(i), random, radius + i + 1, giantTrunk);
 
     }
 
