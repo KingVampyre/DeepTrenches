@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.world.gen.foliage;
+package github.KingVampyre.DeepTrenches.core.world.gen.feature.foliage;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -14,26 +14,26 @@ import net.minecraft.world.gen.foliage.FoliagePlacerType;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.FANCY_AQUEAN_FOLIAGE_PLACER;
+import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.PLUM_FOLIAGE_PLACER;
 import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.BlockStatePlacer.FOLIAGE;
 import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.ALWAYS_TRUE;
 
-public class FancyAqueanFoliagePlacer extends BlobFoliagePlacer {
+public class PlumFoliagePlacer extends BlobFoliagePlacer {
 
-    public static final Codec<FancyAqueanFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<PlumFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     IntProvider.createValidatingCodec(-16, 16).fieldOf("radius").forGetter(placer -> placer.radius),
                     IntProvider.createValidatingCodec(-16, 16).fieldOf("offset").forGetter(placer -> placer.offset),
                     Codec.intRange(0, 16).fieldOf("height").forGetter(placer -> placer.height))
-                    .apply(instance, FancyAqueanFoliagePlacer::new));
+                    .apply(instance, PlumFoliagePlacer::new));
 
-    public FancyAqueanFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
+    public PlumFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
         super(radius, offset, height);
     }
 
     @Override
     protected FoliagePlacerType<?> getType() {
-        return FANCY_AQUEAN_FOLIAGE_PLACER;
+        return PLUM_FOLIAGE_PLACER;
     }
 
     @Override
@@ -42,10 +42,14 @@ public class FancyAqueanFoliagePlacer extends BlobFoliagePlacer {
         var giantTrunk = treeNode.isGiantTrunk();
         var pos = centerPos.up(offset);
 
-        for(var i = 0; i < foliageHeight; ++i)
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i + 1), random, radius - i, giantTrunk, false);
+        for(var i = 1; i <= radius; ++i)
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, pos.up(i), random, radius - i + 1, giantTrunk);
 
-        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, pos, random, radius, giantTrunk, true);
+        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos, random, radius, giantTrunk, true);
+
+        for(var i = -1; i >= -radius; --i)
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, pos.up(i), random, radius + i + 1, giantTrunk);
+
     }
 
 }

@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.world.gen.trunk;
+package github.KingVampyre.DeepTrenches.core.world.gen.feature.trunk;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -31,8 +31,8 @@ public class GreatTrunkPlacer extends LargeOakTrunkPlacer {
     public List<FoliagePlacer.TreeNode> generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos startPos, TreeFeatureConfig config) {
         TreeFeatureHelper.generateSquare(world, replacer, config, DIRT, startPos.down(), random, 2, false);
 
-        for(int i = 0; i < height; ++i)
-            TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, startPos.up(i), random, 2, false);
+        for(var y = 0; y < height; ++y)
+            TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, startPos.up(y), random, 2, false);
 
         return super.generate(world, replacer, random, height, startPos, config);
     }

@@ -2,11 +2,9 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import com.google.common.collect.ImmutableList;
 import github.KingVampyre.DeepTrenches.core.util.math.intprovider.NegativeConstantIntProvider;
-import github.KingVampyre.DeepTrenches.core.world.gen.foliage.AqueanFoliagePlacer;
-import github.KingVampyre.DeepTrenches.core.world.gen.foliage.FancyAqueanFoliagePlacer;
-import github.KingVampyre.DeepTrenches.core.world.gen.foliage.GreatAqueanFoliagePlacer;
-import github.KingVampyre.DeepTrenches.core.world.gen.foliage.PlumFoliagePlacer;
-import github.KingVampyre.DeepTrenches.core.world.gen.trunk.GreatTrunkPlacer;
+import github.KingVampyre.DeepTrenches.core.world.gen.feature.foliage.*;
+import github.KingVampyre.DeepTrenches.core.world.gen.feature.trunk.FuchsitraTrunkPlacer;
+import github.KingVampyre.DeepTrenches.core.world.gen.feature.trunk.GreatTrunkPlacer;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
@@ -130,6 +128,14 @@ public class DTFeatureConfigs {
         return createAqueanTreeConfig(new GreatAqueanFoliagePlacer(ConstantIntProvider.create(3), NegativeConstantIntProvider.create(-3), 7), 8, 3);
     }
 
+    protected static TreeFeatureConfig createFuchsitraTreeConfig(FoliagePlacer foliagePlacer, int baseHeight, int firstRandomHeight) {
+        return new TreeFeatureConfig.Builder(FUCHSITRA_TRUNK_PROVIDER, new FuchsitraTrunkPlacer(baseHeight, firstRandomHeight, 0), FUCHSITRA_FOLIAGE_PROVIDER, foliagePlacer, new TwoLayersFeatureSize(2, 0, 2)).ignoreVines().build();
+    }
+
+    protected static TreeFeatureConfig createFuchsitraTreeConfig() {
+        return createFuchsitraTreeConfig(new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), 7), 8, 6);
+    }
+
     protected static TreeFeatureConfig createPlumTreeConfig(int baseHeight, int firstRandomHeight, int radius, int foliageHeight) {
         return createStraightTreeConfig(PLUM_TRUNK_PROVIDER, PLUM_FOLIAGE_PROVIDER, new PlumFoliagePlacer(ConstantIntProvider.create(radius), NegativeConstantIntProvider.create(-radius), foliageHeight), baseHeight, firstRandomHeight);
     }
@@ -157,7 +163,7 @@ public class DTFeatureConfigs {
         CROLOOD_TREE_CONFIG = createBlobTreeConfig(CROLOOD_TRUNK_PROVIDER, CROLOOD_FOLIAGE_PROVIDER);
         DARK_CROLOOD_TREE_CONFIG = createBlobTreeConfig(DARK_CROLOOD_TRUNK_PROVIDER, DARK_CROLOOD_FOLIAGE_PROVIDER);
         EBONY_TREE_CONFIG = createBlobTreeConfig(EBONY_TRUNK_PROVIDER, EBONY_FOLIAGE_PROVIDER);
-        FUCHSITRA_TREE_CONFIG = createBlobTreeConfig(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER);
+        FUCHSITRA_TREE_CONFIG = createFuchsitraTreeConfig();
         FUNERANITE_TREE_CONFIG = createBlobTreeConfig(FUNERANITE_TRUNK_PROVIDER, FUNERANITE_FOLIAGE_PROVIDER);
         GHOSHROOM_TREE_CONFIG = createBlobTreeConfig(GHOSHROOM_TRUNK_PROVIDER, GHOSHROOM_FOLIAGE_PROVIDER);
         PELTOGYNE_TREE_CONFIG = createBlobTreeConfig(PELTOGYNE_TRUNK_PROVIDER, PELTOGYNE_FOLIAGE_PROVIDER);
@@ -176,7 +182,7 @@ public class DTFeatureConfigs {
         FANCY_AQUEAN_TREE_CONFIG = createFancyAqueanTreeConfig();
         FANCY_BLACK_BIRCH_TREE_CONFIG = createFancyTreeConfig(BLACK_BIRCH_TRUNK_PROVIDER, BLACK_BIRCH_FOLIAGE_PROVIDER);
         FANCY_CHERRY_TREE_CONFIG = createFancyTreeConfig(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER);
-        FANCY_FUCHSITRA_TREE_CONFIG = createFancyTreeConfig(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER);
+        FANCY_FUCHSITRA_TREE_CONFIG = createFuchsitraTreeConfig();
         FANCY_PIN_CHERRY_TREE_CONFIG = createFancyTreeConfig(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER);
         FANCY_PLUM_TREE_CONFIG = createPlumTreeConfig(8, 4, 3, 7);
         FANCY_TEAK_TREE_CONFIG = createFancyTreeConfig(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER);
@@ -187,7 +193,7 @@ public class DTFeatureConfigs {
         GREAT_AQUEAN_TREE_CONFIG = createGreatAqueanTreeConfig();
         GREAT_BLACK_BIRCH_TREE_CONFIG = createGreatTreeConfig(BLACK_BIRCH_TRUNK_PROVIDER, BLACK_BIRCH_FOLIAGE_PROVIDER);
         GREAT_CHERRY_TREE_CONFIG = createGreatTreeConfig(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER);
-        GREAT_FUCHSITRA_TREE_CONFIG = createGreatTreeConfig(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER);
+        GREAT_FUCHSITRA_TREE_CONFIG = createFuchsitraTreeConfig();
         GREAT_PIN_CHERRY_TREE_CONFIG = createGreatTreeConfig(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER);
         GREAT_PLUM_TREE_CONFIG = createPlumTreeConfig(10, 5, 4, 9);
         GREAT_TEAK_TREE_CONFIG = createGreatTreeConfig(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER);

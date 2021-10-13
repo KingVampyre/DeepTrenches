@@ -42,9 +42,12 @@ public class  DeepTrenches implements ModInitializer {
 		Registry.register(FOLIAGE_PLACER_TYPE, "deep_trenches:aquean_foliage_placer", DTFoliagePlacerTypes.AQUEAN_FOLIAGE_PLACER);
 		Registry.register(FOLIAGE_PLACER_TYPE, "deep_trenches:fancy_aquean_foliage_placer", DTFoliagePlacerTypes.FANCY_AQUEAN_FOLIAGE_PLACER);
 		Registry.register(FOLIAGE_PLACER_TYPE, "deep_trenches:great_aquean_foliage_placer", DTFoliagePlacerTypes.GREAT_AQUEAN_FOLIAGE_PLACER);
+
+		Registry.register(FOLIAGE_PLACER_TYPE, "deep_trenches:fuchsitra_foliage_placer", DTFoliagePlacerTypes.FUCHSITRA_FOLIAGE_PLACER);
 		Registry.register(FOLIAGE_PLACER_TYPE, "deep_trenches:plum_foliage_placer", DTFoliagePlacerTypes.PLUM_FOLIAGE_PLACER);
 
 		/* TRUNK PLACER */
+		Registry.register(TRUNK_PLACER_TYPE, "deep_trenches:fuchsitra_trunk_placer", DTTrunkPlacerTypes.FUCHSITRA_TRUNK_PLACER);
 		Registry.register(TRUNK_PLACER_TYPE, "deep_trenches:great_trunk_placer", DTTrunkPlacerTypes.GREAT_TRUNK_PLACER);
     }
 

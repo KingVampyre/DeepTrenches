@@ -1,10 +1,11 @@
-package github.KingVampyre.DeepTrenches.core.world.gen.foliage;
+package github.KingVampyre.DeepTrenches.core.world.gen.feature.foliage;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import github.KingVampyre.DeepTrenches.core.util.world.gen.feature.TreeFeatureHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.world.TestableWorld;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
@@ -14,41 +15,48 @@ import net.minecraft.world.gen.foliage.FoliagePlacerType;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.PLUM_FOLIAGE_PLACER;
+import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.GREAT_AQUEAN_FOLIAGE_PLACER;
 import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.BlockStatePlacer.FOLIAGE;
-import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.ALWAYS_TRUE;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.NOT_CORNERS;
 
-public class PlumFoliagePlacer extends BlobFoliagePlacer {
+public class GreatAqueanFoliagePlacer extends BlobFoliagePlacer {
 
-    public static final Codec<PlumFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<GreatAqueanFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     IntProvider.createValidatingCodec(-16, 16).fieldOf("radius").forGetter(placer -> placer.radius),
                     IntProvider.createValidatingCodec(-16, 16).fieldOf("offset").forGetter(placer -> placer.offset),
                     Codec.intRange(0, 16).fieldOf("height").forGetter(placer -> placer.height))
-                    .apply(instance, PlumFoliagePlacer::new));
+                    .apply(instance, GreatAqueanFoliagePlacer::new));
 
-    public PlumFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
+    public GreatAqueanFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
         super(radius, offset, height);
     }
 
     @Override
     protected FoliagePlacerType<?> getType() {
-        return PLUM_FOLIAGE_PLACER;
+        return GREAT_AQUEAN_FOLIAGE_PLACER;
     }
 
     @Override
     protected void generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, TreeFeatureConfig config, int trunkHeight, TreeNode treeNode, int foliageHeight, int radius, int offset) {
         var centerPos = treeNode.getCenter();
         var giantTrunk = treeNode.isGiantTrunk();
+        var quarter = MathHelper.ceilDiv(radius, 2);
         var pos = centerPos.up(offset);
 
-        for(var i = 1; i <= radius; ++i)
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, pos.up(i), random, radius - i + 1, giantTrunk);
+        for(var i = 1; i <= radius; ++i) {
+            var ceil = i > quarter ? MathHelper.ceilDiv(radius, i - 1) : radius;
 
-        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos, random, radius, giantTrunk, true);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i), random, ceil, giantTrunk, i < quarter);
+        }
 
-        for(var i = -1; i >= -radius; --i)
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, pos.up(i), random, radius + i + 1, giantTrunk);
+        TreeFeatureHelper.generateCenterSquare(world, replacer, config, FOLIAGE, NOT_CORNERS, pos, random, radius, giantTrunk);
+
+        for(var i = -1; i >= -radius; --i) {
+            var ceil = i < -quarter ? MathHelper.ceilDiv(radius, -i - 1) : radius;
+
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i), random, ceil, giantTrunk, i > -quarter);
+        }
 
     }
 
