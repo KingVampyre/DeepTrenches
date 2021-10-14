@@ -5,20 +5,20 @@ import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
-import net.minecraft.world.gen.surfacebuilder.ConfiguredSurfaceBuilders;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.*;
 import static github.KingVampyre.DeepTrenches.core.world.biome.DTBiomeEffects.*;
 import static net.minecraft.entity.EntityType.*;
 import static net.minecraft.world.biome.Biome.Category.FOREST;
 import static net.minecraft.world.biome.Biome.Category.JUNGLE;
-import static net.minecraft.world.gen.GenerationStep.Feature.*;
+import static net.minecraft.world.gen.GenerationStep.Feature.UNDERGROUND_ORES;
+import static net.minecraft.world.gen.GenerationStep.Feature.VEGETAL_DECORATION;
 import static net.minecraft.world.gen.feature.ConfiguredFeatures.*;
 
 public class DTBiomeCreator {
 
     public static Biome createAlmondForest() {
-        var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+        var builder = new GenerationSettings.Builder();
 
         builder.feature(VEGETAL_DECORATION, ALMOND_FOREST_FLOWER);
         builder.feature(VEGETAL_DECORATION, ALMOND_FOREST_FLOWER_VEGETATION);
@@ -50,7 +50,7 @@ public class DTBiomeCreator {
     }
 
     public static Biome createAlmondPlusForest() {
-        var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+        var builder = new GenerationSettings.Builder();
 
         builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_FOREST_FLOWER);
         builder.feature(VEGETAL_DECORATION, ALMOND_PLUS_FOREST_FLOWER_VEGETATION);
@@ -84,7 +84,7 @@ public class DTBiomeCreator {
     }
 
     public static Biome createBlackBirchForest() {
-        var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+        var builder = new GenerationSettings.Builder();
 
         DefaultBiomeFeatures.addDefaultMushrooms(builder);
         builder.feature(VEGETAL_DECORATION, BLACK_BIRCH_FOREST_TREE);
@@ -116,7 +116,7 @@ public class DTBiomeCreator {
     }
 
     public static Biome createCherryCliffsForest() {
-        var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+        var builder = new GenerationSettings.Builder();
 
         builder.feature(VEGETAL_DECORATION, CHERRY_CLIFFS_FOREST_TREE);
         builder.feature(VEGETAL_DECORATION, CHERRY_CLIFFS_FOREST_FLOWER);
@@ -148,7 +148,7 @@ public class DTBiomeCreator {
     }
 
     public static Biome createCherryForest() {
-        var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+        var builder = new GenerationSettings.Builder();
 
         builder.feature(VEGETAL_DECORATION, CHERRY_FOREST_TREE);
         builder.feature(VEGETAL_DECORATION, CHERRY_FOREST_FLOWER);
@@ -180,7 +180,7 @@ public class DTBiomeCreator {
     }
 
     public static Biome createPlumForest() {
-        var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+        var builder = new GenerationSettings.Builder();
 
         builder.feature(VEGETAL_DECORATION, PLUM_FOREST_TREE);
         builder.feature(VEGETAL_DECORATION, PLUM_FOREST_FLOWER);
@@ -209,7 +209,7 @@ public class DTBiomeCreator {
     }
 
     public static Biome createThundercloudPlumForest() {
-        var builder = new GenerationSettings.Builder().surfaceBuilder(ConfiguredSurfaceBuilders.GRASS);
+        var builder = new GenerationSettings.Builder();
 
         builder.feature(VEGETAL_DECORATION, THUNDERCLOUD_PLUM_FOREST_TREE);
         builder.feature(VEGETAL_DECORATION, THUNDERCLOUD_PLUM_FOREST_FLOWER);

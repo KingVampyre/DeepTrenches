@@ -24,8 +24,8 @@ repositories {
 		url = "https://dl.cloudsmith.io/public/louwinds-mods/reload/maven"
 	}
 	maven {
-		url 'https://repo.maven.apache.org/maven2'
 		name 'Maven Central'
+		url 'https://repo.maven.apache.org/maven2'
 	}
 }
 

@@ -12,7 +12,6 @@ import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.OptionalInt;
-import java.util.Set;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTBlockStateProviders.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.*;
@@ -89,7 +88,7 @@ public class DTFeatureConfigs {
     public static final RandomPatchFeatureConfig PATCH_GRASS_CLEAR_FOREST_CONFIG;
 
     protected static RandomPatchFeatureConfig createRandomPatchFeatureConfig(int tries, int xzSpread, int ySpread, BlockStateProvider provider) {
-        return new RandomPatchFeatureConfig(tries, xzSpread, ySpread, Set.of(), Set.of(), false, () -> Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(provider)).method_38872());
+        return new RandomPatchFeatureConfig(tries, xzSpread, ySpread, () -> Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(provider)).method_38872());
     }
 
     protected static RandomPatchFeatureConfig createTallFlowerConfig(BlockStateProvider provider) {
