@@ -42,9 +42,9 @@ public class AqueanFoliagePlacer extends BlobFoliagePlacer {
         var pos = centerPos.up(offset);
 
         for(var i = 1; i <= foliageHeight; ++i)
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i), random, radius - i + 1, giantTrunk);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i), random, radius - i + 1);
 
-        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos, random, radius, giantTrunk, true);
+        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos, random, radius, true);
     }
 
 }

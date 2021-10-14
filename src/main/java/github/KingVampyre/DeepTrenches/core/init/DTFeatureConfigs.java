@@ -128,12 +128,20 @@ public class DTFeatureConfigs {
         return createAqueanTreeConfig(new GreatAqueanFoliagePlacer(ConstantIntProvider.create(3), NegativeConstantIntProvider.create(-3), 7), 8, 3);
     }
 
-    protected static TreeFeatureConfig createFuchsitraTreeConfig(FoliagePlacer foliagePlacer, int baseHeight, int firstRandomHeight) {
-        return new TreeFeatureConfig.Builder(FUCHSITRA_TRUNK_PROVIDER, new FuchsitraTrunkPlacer(baseHeight, firstRandomHeight, 0), FUCHSITRA_FOLIAGE_PROVIDER, foliagePlacer, new TwoLayersFeatureSize(2, 0, 2)).ignoreVines().build();
+    protected static TreeFeatureConfig createFuchsitraTreeConfig(FoliagePlacer foliagePlacer, int baseHeight, int firstRandomHeight, int basementHeight, int basementThickness) {
+        return new TreeFeatureConfig.Builder(FUCHSITRA_TRUNK_PROVIDER, new FuchsitraTrunkPlacer(baseHeight, firstRandomHeight, 0, basementHeight, 1, basementThickness, 2), FUCHSITRA_FOLIAGE_PROVIDER, foliagePlacer, new TwoLayersFeatureSize(2, 0, 2)).ignoreVines().build();
     }
 
     protected static TreeFeatureConfig createFuchsitraTreeConfig() {
-        return createFuchsitraTreeConfig(new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), 7), 8, 6);
+        return createStraightTreeConfig(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER, new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), 7), 8, 6);
+    }
+
+    protected static TreeFeatureConfig createFancyFuchsitraTreeConfig() {
+        return createFuchsitraTreeConfig(new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), 7), 10, 7, 0, 0);
+    }
+
+    protected static TreeFeatureConfig createGreatFuchsitraTreeConfig() {
+        return createFuchsitraTreeConfig(new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), 7), 12, 2, 5, 4);
     }
 
     protected static TreeFeatureConfig createPlumTreeConfig(int baseHeight, int firstRandomHeight, int radius, int foliageHeight) {
@@ -182,7 +190,7 @@ public class DTFeatureConfigs {
         FANCY_AQUEAN_TREE_CONFIG = createFancyAqueanTreeConfig();
         FANCY_BLACK_BIRCH_TREE_CONFIG = createFancyTreeConfig(BLACK_BIRCH_TRUNK_PROVIDER, BLACK_BIRCH_FOLIAGE_PROVIDER);
         FANCY_CHERRY_TREE_CONFIG = createFancyTreeConfig(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER);
-        FANCY_FUCHSITRA_TREE_CONFIG = createFuchsitraTreeConfig();
+        FANCY_FUCHSITRA_TREE_CONFIG = createFancyFuchsitraTreeConfig();
         FANCY_PIN_CHERRY_TREE_CONFIG = createFancyTreeConfig(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER);
         FANCY_PLUM_TREE_CONFIG = createPlumTreeConfig(8, 4, 3, 7);
         FANCY_TEAK_TREE_CONFIG = createFancyTreeConfig(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER);
@@ -193,7 +201,7 @@ public class DTFeatureConfigs {
         GREAT_AQUEAN_TREE_CONFIG = createGreatAqueanTreeConfig();
         GREAT_BLACK_BIRCH_TREE_CONFIG = createGreatTreeConfig(BLACK_BIRCH_TRUNK_PROVIDER, BLACK_BIRCH_FOLIAGE_PROVIDER);
         GREAT_CHERRY_TREE_CONFIG = createGreatTreeConfig(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER);
-        GREAT_FUCHSITRA_TREE_CONFIG = createFuchsitraTreeConfig();
+        GREAT_FUCHSITRA_TREE_CONFIG = createGreatFuchsitraTreeConfig();
         GREAT_PIN_CHERRY_TREE_CONFIG = createGreatTreeConfig(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER);
         GREAT_PLUM_TREE_CONFIG = createPlumTreeConfig(10, 5, 4, 9);
         GREAT_TEAK_TREE_CONFIG = createGreatTreeConfig(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER);

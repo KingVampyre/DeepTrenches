@@ -29,10 +29,10 @@ public class GreatTrunkPlacer extends LargeOakTrunkPlacer {
 
     @Override
     public List<FoliagePlacer.TreeNode> generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos startPos, TreeFeatureConfig config) {
-        TreeFeatureHelper.generateSquare(world, replacer, config, DIRT, startPos.down(), random, 2, false);
+        TreeFeatureHelper.generateSquare(world, replacer, config, DIRT, startPos.down(), random, 2);
 
         for(var y = 0; y < height; ++y)
-            TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, startPos.up(y), random, 2, false);
+            TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, startPos.up(y), random, 2);
 
         return super.generate(world, replacer, random, height, startPos, config);
     }

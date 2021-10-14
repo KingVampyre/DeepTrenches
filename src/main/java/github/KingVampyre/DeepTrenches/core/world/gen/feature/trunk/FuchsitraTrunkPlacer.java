@@ -3,6 +3,7 @@ package github.KingVampyre.DeepTrenches.core.world.gen.feature.trunk;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate;
 import github.KingVampyre.DeepTrenches.core.util.world.gen.feature.TreeFeatureHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
@@ -18,52 +19,77 @@ import java.util.function.BiConsumer;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTTrunkPlacerTypes.FUCHSITRA_TRUNK_PLACER;
 import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.BlockStatePlacer.DIRT;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.BlockStatePlacer.TRUNK;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.*;
 
 public class FuchsitraTrunkPlacer extends TrunkPlacer {
 
-    public static final Codec<FuchsitraTrunkPlacer> CODEC = RecordCodecBuilder.create(instance -> fillTrunkPlacerFields(instance).apply(instance, FuchsitraTrunkPlacer::new));
+    public static final Codec<FuchsitraTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->
+            instance.group(
+                    Codec.intRange(0, 32).fieldOf("base_height").forGetter(placer -> placer.baseHeight),
+                    Codec.intRange(0, 24).fieldOf("height_rand_a").forGetter(placer -> placer.firstRandomHeight),
+                    Codec.intRange(0, 24).fieldOf("height_rand_b").forGetter(placer -> placer.secondRandomHeight),
+                    Codec.intRange(0, 16).fieldOf("basement_height").forGetter(placer -> placer.basementHeight),
+                    Codec.intRange(0, 16).fieldOf("basement_offset_xz").forGetter(placer -> placer.basementOffsetXZ),
+                    Codec.intRange(0, 16).fieldOf("basement_thickness").forGetter(placer -> placer.basementThickness),
+                    Codec.intRange(0, 16).fieldOf("trunk_thickness").forGetter(placer -> placer.trunkThickness)
+                    ).apply(instance, FuchsitraTrunkPlacer::new));
 
-    public FuchsitraTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {
+    private final int basementHeight;
+    private final int basementOffsetXZ;
+    private final int basementThickness;
+    private final int trunkThickness;
+
+    public FuchsitraTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight, int basementHeight, int basementOffsetXZ, int basementThickness, int trunkThickness) {
         super(baseHeight, firstRandomHeight, secondRandomHeight);
+
+        this.basementHeight = basementHeight;
+        this.basementOffsetXZ = basementOffsetXZ;
+        this.basementThickness = basementThickness;
+        this.trunkThickness = trunkThickness;
     }
 
     @Override
     public List<FoliagePlacer.TreeNode> generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, int height, BlockPos startPos, TreeFeatureConfig config) {
-        TreeFeatureHelper.generateSquare(world, replacer, config, DIRT, startPos.down(), random, 2, false);
+        var basementPos = startPos.north(this.basementOffsetXZ).west(basementOffsetXZ);
+        var basementPredicate = random.nextBoolean() ? CLOCKWISE_SUN : COUNTERCLOCKWISE_SUN;
 
-        var mutable = startPos.mutableCopy();
+        for (var y = 0; y < this.basementHeight; y++)
+             TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, this.basementHeight / 2 > y ? NOT_CORNER : basementPredicate, basementPos.up(y), random, this.basementThickness);
 
-        var randomX = random.nextInt(2);
-        var randomY = 2;
-        var randomZ = random.nextInt(2);
+        TreeFeatureHelper.generateSquare(world, replacer, config, DIRT, NOT_CORNER, basementPos.down(), random, this.basementThickness);
+
+        var randomDx = random.nextInt(this.trunkThickness);
+        var randomDy = random.nextInt(this.trunkThickness) + 1;
+        var randomDz = random.nextInt(this.trunkThickness);
+        var prevDx = -1;
+        var prevDz = -1;
 
         for(var y = 0; y < height; ++y) {
+            var pos = startPos.up(y + this.basementHeight);
 
-            if(randomY < 0) {
-                randomX = random.nextInt(2);
-                randomY = random.nextInt(2) + 1;
-                randomZ = random.nextInt(2);
-            }
+            if(y > 0) {
+                if(randomDy < 0) {
+                    prevDx = randomDx;
+                    prevDz = randomDz;
 
-            for (var x = 0; x < 2; x++) {
-
-                for (var z = 0; z < 2; z++) {
-
-                    if(y > 0 && randomX == x && randomZ == z) {
-                        randomY--;
-                        continue;
-                    }
-
-                    mutable.set(startPos, x, y, z);
-
-                    trySetState(world, replacer, random, mutable, config);
+                    do {
+                        randomDx = random.nextInt(this.trunkThickness);
+                        randomDy = random.nextInt(this.trunkThickness) + 2 * this.trunkThickness;
+                        randomDz = random.nextInt(this.trunkThickness);
+                    } while (randomDx == prevDx && randomDz == prevDz);
                 }
 
-            }
+                var predicate = randomDy != 0 ? PositionPredicate.ignore(randomDx, randomDz) : ALWAYS_TRUE;
+
+                TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, predicate, pos, random, this.trunkThickness);
+                randomDy--;
+            } else
+                TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, pos, random, this.trunkThickness);
 
         }
 
-        return ImmutableList.of(new FoliagePlacer.TreeNode(startPos.up(height), 0, false));
+        return ImmutableList.of(new FoliagePlacer.TreeNode(startPos.up(height + this.basementHeight), 0, false));
     }
 
     @Override

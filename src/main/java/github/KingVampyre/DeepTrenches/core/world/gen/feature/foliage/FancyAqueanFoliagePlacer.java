@@ -16,7 +16,6 @@ import java.util.function.BiConsumer;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.FANCY_AQUEAN_FOLIAGE_PLACER;
 import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.BlockStatePlacer.FOLIAGE;
-import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.ALWAYS_TRUE;
 
 public class FancyAqueanFoliagePlacer extends BlobFoliagePlacer {
 
@@ -39,13 +38,12 @@ public class FancyAqueanFoliagePlacer extends BlobFoliagePlacer {
     @Override
     protected void generate(TestableWorld world, BiConsumer<BlockPos, BlockState> replacer, Random random, TreeFeatureConfig config, int trunkHeight, TreeNode treeNode, int foliageHeight, int radius, int offset) {
         var centerPos = treeNode.getCenter();
-        var giantTrunk = treeNode.isGiantTrunk();
         var pos = centerPos.up(offset);
 
         for(var i = 0; i < foliageHeight; ++i)
-            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i + 1), random, radius - i, giantTrunk, false);
+            TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos.up(i + 1), random, radius - i, false);
 
-        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, ALWAYS_TRUE, pos, random, radius, giantTrunk, true);
+        TreeFeatureHelper.generateRhombus(world, replacer, config, FOLIAGE, pos, random, radius, true);
     }
 
 }
