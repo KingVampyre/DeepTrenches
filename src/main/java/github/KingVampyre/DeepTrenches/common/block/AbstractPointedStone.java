@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.common.block;
 
-import github.KingVampyre.DeepTrenches.core.util.DTUtils;
+import github.KingVampyre.DeepTrenches.core.util.math.BlockPosHelper;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.Entity;
@@ -107,7 +107,7 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
 
         var direction = state.get(VERTICAL_DIRECTION);
 
-        return DTUtils.search(world, pos, direction,
+        return BlockPosHelper.search(world, pos, direction,
                 blockState -> this.isPointing(blockState, direction),
                 blockState -> this.isTip(blockState, allowMerged), range)
                 .orElse(null);
@@ -173,7 +173,7 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
             var entity = new FallingBlockEntity(world, vec3d.x, vec3d.y, vec3d.z, state);
 
             if (this.isTip(state, true)) {
-                var amount = DTUtils.count(world, pos.up(),  UP, this::isPointingDown, 6);
+                var amount = BlockPosHelper.count(world, pos.up(),  UP, this::isPointingDown, 6);
 
                 entity.setHurtEntities(amount, 40);
             }
@@ -241,13 +241,13 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
 
     @Nullable
     protected BlockPos getCauldronPos(World world, BlockPos pos, Fluid fluid) {
-        return DTUtils.search(world, pos, DOWN, AbstractBlockState::isAir, state -> state.getBlock() instanceof AbstractCauldronBlock cauldron && cauldron.canBeFilledByDripstone(fluid), 11).orElse(null);
+        return BlockPosHelper.search(world, pos, DOWN, AbstractBlockState::isAir, state -> state.getBlock() instanceof AbstractCauldronBlock cauldron && cauldron.canBeFilledByDripstone(fluid), 11).orElse(null);
     }
 
     public Fluid getFlowableFluid(World world, BlockPos pos, BlockState state) {
         var direction = state.get(VERTICAL_DIRECTION);
 
-        return DTUtils.search(world, pos, direction.getOpposite(),
+        return BlockPosHelper.search(world, pos, direction.getOpposite(),
                         upState -> this.isPointing(upState, direction),
                         upState -> !upState.isOf(this), 11)
                 .map(BlockPos::up)
@@ -287,13 +287,13 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
         var scheduler = world.getBlockTickScheduler();
 
         if (tipPos != null)
-            DTUtils.findAll(world, tipPos.down(), UP, this::isPointingDown, MAX_VALUE).forEach(p -> scheduler.schedule(p, this, 2));
+            BlockPosHelper.findAll(world, tipPos.down(), UP, this::isPointingDown, MAX_VALUE).forEach(p -> scheduler.schedule(p, this, 2));
 
     }
 
     @Nullable
     public static BlockPos getDripPos(World world, BlockPos pos) {
-        return DTUtils.search(world, pos, UP, BlockState::isAir, state -> state.getBlock() instanceof AbstractPointedStone block && block.canDrip(state), 11).orElse(null);
+        return BlockPosHelper.search(world, pos, UP, BlockState::isAir, state -> state.getBlock() instanceof AbstractPointedStone block && block.canDrip(state), 11).orElse(null);
     }
 
 }

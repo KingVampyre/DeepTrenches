@@ -3,6 +3,7 @@ package github.KingVampyre.DeepTrenches.core.world.gen.feature.trunk;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import github.KingVampyre.DeepTrenches.core.util.math.BlockPosHelper;
 import github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate;
 import github.KingVampyre.DeepTrenches.core.util.world.gen.feature.TreeFeatureHelper;
 import net.minecraft.block.BlockState;
@@ -59,33 +60,19 @@ public class FuchsitraTrunkPlacer extends TrunkPlacer {
 
         TreeFeatureHelper.generateSquare(world, replacer, config, DIRT, NOT_CORNER, basementPos.down(), random, this.basementThickness);
 
-        var randomDx = random.nextInt(this.trunkThickness);
-        var randomDy = random.nextInt(this.trunkThickness) + 1;
-        var randomDz = random.nextInt(this.trunkThickness);
-        var prevDx = -1;
-        var prevDz = -1;
+        var randomPos = BlockPosHelper.nextPos(random, this.trunkThickness).up(this.trunkThickness);
 
         for(var y = 0; y < height; ++y) {
-            var pos = startPos.up(y + this.basementHeight);
+            var trunkPos = startPos.up(y + this.basementHeight);
 
             if(y > 0) {
-                if(randomDy < 0) {
-                    prevDx = randomDx;
-                    prevDz = randomDz;
+                if(randomPos.getY() < 0)
+                    randomPos = BlockPosHelper.nextPos(random, randomPos, this.trunkThickness).up(this.trunkThickness);
 
-                    do {
-                        randomDx = random.nextInt(this.trunkThickness);
-                        randomDy = random.nextInt(this.trunkThickness) + 2 * this.trunkThickness;
-                        randomDz = random.nextInt(this.trunkThickness);
-                    } while (randomDx == prevDx && randomDz == prevDz);
-                }
-
-                var predicate = randomDy != 0 ? PositionPredicate.ignore(randomDx, randomDz) : ALWAYS_TRUE;
-
-                TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, predicate, pos, random, this.trunkThickness);
-                randomDy--;
+                TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, randomPos.getY() != 0 ? PositionPredicate.ignore(randomPos) : ALWAYS_TRUE, trunkPos, random, this.trunkThickness);
+                randomPos = randomPos.down();
             } else
-                TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, pos, random, this.trunkThickness);
+                TreeFeatureHelper.generateSquare(world, replacer, config, TRUNK, trunkPos, random, this.trunkThickness);
 
         }
 

@@ -58,7 +58,10 @@ public interface PositionPredicate {
         return NOT_CORNER.isValidPosition(world, random, startPos, endPos, pos, dx, dz);
     };
 
-    static PositionPredicate ignore(int ignoreDx, int ignoreDz) {
+    static PositionPredicate ignore(BlockPos ignorePos) {
+        var ignoreDx = ignorePos.getX();
+        var ignoreDz = ignorePos.getZ();
+
         return (world, random, startPos, endPos, pos, dx, dz) -> !(dx == ignoreDx && dz == ignoreDz);
     }
 
