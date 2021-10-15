@@ -9,6 +9,7 @@
     "InvokerFoliagePlacer",
     "InvokerFoliagePlacerType",
     "InvokerSpreadableBlock",
+    "InvokerTreeDecoratorType",
     "InvokerTrunkPlacer",
     "InvokerTrunkPlacerType",
     "MixinAbstractBlockState",

@@ -1,10 +1,94 @@
 {
 	"variants": {
-		"sap=true": {
+		"facing=east,aquean_sap_level=0": {
+			"y": 90,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=east,aquean_sap_level=1": {
+			"y": 90,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=east,aquean_sap_level=2": {
+			"y": 90,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=east,aquean_sap_level=3": {
+			"y": 90,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=east,aquean_sap_level=4": {
+			"y": 90,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=east,aquean_sap_level=5": {
+			"y": 90,
 			"model": "deep_trenches:block/stasp_nest_with_aquean_sap"
 		},
-		"sap=false": {
+		"facing=north,aquean_sap_level=0": {
 			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=north,aquean_sap_level=1": {
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=north,aquean_sap_level=2": {
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=north,aquean_sap_level=3": {
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=north,aquean_sap_level=4": {
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=north,aquean_sap_level=5": {
+			"model": "deep_trenches:block/stasp_nest_with_aquean_sap"
+		},
+		"facing=south,aquean_sap_level=0": {
+			"y": 180,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=south,aquean_sap_level=1": {
+			"y": 180,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=south,aquean_sap_level=2": {
+			"y": 180,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=south,aquean_sap_level=3": {
+			"y": 180,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=south,aquean_sap_level=4": {
+			"y": 180,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=south,aquean_sap_level=5": {
+			"y": 180,
+			"model": "deep_trenches:block/stasp_nest_with_aquean_sap"
+		},
+		"facing=west,aquean_sap_level=0": {
+			"y": 270,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=west,aquean_sap_level=1": {
+			"y": 270,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=west,aquean_sap_level=2": {
+			"y": 270,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=west,aquean_sap_level=3": {
+			"y": 270,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=west,aquean_sap_level=4": {
+			"y": 270,
+			"model": "deep_trenches:block/stasp_nest"
+		},
+		"facing=west,aquean_sap_level=5": {
+			"y": 270,
+			"model": "deep_trenches:block/stasp_nest_with_aquean_sap"
 		}
 	}
 }

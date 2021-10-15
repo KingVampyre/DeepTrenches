@@ -1,8 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.core.mixin.InvokerTrunkPlacerType;
-import github.KingVampyre.DeepTrenches.core.world.gen.feature.trunk.FuchsitraTrunkPlacer;
-import github.KingVampyre.DeepTrenches.core.world.gen.feature.trunk.GreatTrunkPlacer;
+import github.KingVampyre.DeepTrenches.core.world.gen.trunk.FuchsitraTrunkPlacer;
+import github.KingVampyre.DeepTrenches.core.world.gen.trunk.GreatTrunkPlacer;
 import net.minecraft.world.gen.trunk.TrunkPlacerType;
 
 public class DTTrunkPlacerTypes {

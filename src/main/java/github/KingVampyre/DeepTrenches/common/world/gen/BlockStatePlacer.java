@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.util.world.gen.feature;
+package github.KingVampyre.DeepTrenches.common.world.gen;
 
 import github.KingVampyre.DeepTrenches.core.mixin.InvokerFoliagePlacer;
 import github.KingVampyre.DeepTrenches.core.mixin.InvokerTrunkPlacer;

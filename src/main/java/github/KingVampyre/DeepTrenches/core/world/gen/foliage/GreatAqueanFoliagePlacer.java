@@ -1,8 +1,8 @@
-package github.KingVampyre.DeepTrenches.core.world.gen.feature.foliage;
+package github.KingVampyre.DeepTrenches.core.world.gen.foliage;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import github.KingVampyre.DeepTrenches.core.util.world.gen.feature.TreeFeatureHelper;
+import github.KingVampyre.DeepTrenches.core.util.world.gen.TreeFeatureHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -16,8 +16,8 @@ import java.util.Random;
 import java.util.function.BiConsumer;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.GREAT_AQUEAN_FOLIAGE_PLACER;
-import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.BlockStatePlacer.FOLIAGE;
-import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.NOT_CORNER;
+import static github.KingVampyre.DeepTrenches.common.world.gen.BlockStatePlacer.FOLIAGE;
+import static github.KingVampyre.DeepTrenches.common.world.gen.PositionPredicate.NOT_CORNER;
 
 public class GreatAqueanFoliagePlacer extends BlobFoliagePlacer {
 

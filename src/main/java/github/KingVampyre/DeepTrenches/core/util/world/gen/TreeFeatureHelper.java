@@ -1,5 +1,7 @@
-package github.KingVampyre.DeepTrenches.core.util.world.gen.feature;
+package github.KingVampyre.DeepTrenches.core.util.world.gen;
 
+import github.KingVampyre.DeepTrenches.common.world.gen.BlockStatePlacer;
+import github.KingVampyre.DeepTrenches.common.world.gen.PositionPredicate;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.TestableWorld;
@@ -8,7 +10,7 @@ import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.util.world.gen.feature.PositionPredicate.ALWAYS_TRUE;
+import static github.KingVampyre.DeepTrenches.common.world.gen.PositionPredicate.ALWAYS_TRUE;
 
 public class TreeFeatureHelper {
 

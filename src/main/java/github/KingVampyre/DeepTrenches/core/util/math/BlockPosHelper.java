@@ -38,23 +38,31 @@ public class BlockPosHelper {
         return list;
     }
 
-    public static BlockPos nextPos(Random random, int bound) {
-        return BlockPosHelper.nextPos(random, bound, bound, bound, -1, -1);
+    public static BlockPos.Mutable nextMutable(Random random, int boundXZ, int boundY, int offsetXZ, int offsetY) {
+        return BlockPosHelper.nextPos(random, boundXZ, boundY, offsetXZ, offsetY).mutableCopy();
     }
 
-    public static BlockPos nextPos(Random random, BlockPos prevPos, int bound) {
-        return BlockPosHelper.nextPos(random, bound, bound, bound, prevPos.getX(), prevPos.getZ());
+    public static BlockPos.Mutable nextMutable(Random random, BlockPos prevPos, int boundXZ, int boundY, int offsetXZ, int offsetY) {
+        return BlockPosHelper.nextPos(random, prevPos, boundXZ, boundY, offsetXZ, offsetY).mutableCopy();
     }
 
-    public static BlockPos nextPos(Random random, int boundDx, int boundDy, int boundDz, int prevDx, int prevDz) {
-        var randomDx = random.nextInt(boundDx);
-        var randomDy = random.nextInt(boundDy);
-        var randomDz = random.nextInt(boundDz);
+    public static BlockPos nextPos(Random random, int boundXZ, int boundY, int offsetXZ, int offsetY) {
+        return BlockPosHelper.nextPos(random, boundXZ, boundY, boundXZ, offsetXZ, offsetY, offsetXZ, -1, -1);
+    }
+
+    public static BlockPos nextPos(Random random, BlockPos prevPos, int boundXZ, int boundY, int offsetXZ, int offsetY) {
+        return BlockPosHelper.nextPos(random, boundXZ, boundY, boundXZ, offsetXZ, offsetY, offsetXZ, prevPos.getX(), prevPos.getZ());
+    }
+
+    public static BlockPos nextPos(Random random, int boundDx, int boundDy, int boundDz, int offsetDx, int offsetDy, int offsetDz, int prevDx, int prevDz) {
+        int randomDx;
+        int randomDy;
+        int randomDz;
 
         do {
-            randomDx = random.nextInt(boundDx);
-            randomDy = random.nextInt(boundDy);
-            randomDz = random.nextInt(boundDz);
+            randomDx = random.nextInt(boundDx) + offsetDx;
+            randomDy = random.nextInt(boundDy) + offsetDy;
+            randomDz = random.nextInt(boundDz) + offsetDz;
         } while (randomDx == prevDx && randomDz == prevDz);
 
         return new BlockPos(randomDx, randomDy, randomDz);

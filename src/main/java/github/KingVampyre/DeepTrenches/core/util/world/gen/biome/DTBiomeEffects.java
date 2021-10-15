@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.world.biome;
+package github.KingVampyre.DeepTrenches.core.util.world.gen.biome;
 
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.world.biome.BiomeEffects;

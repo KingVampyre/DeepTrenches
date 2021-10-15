@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.world.biome;
+package github.KingVampyre.DeepTrenches.core.util.world.gen.biome;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
@@ -7,7 +7,7 @@ import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.*;
-import static github.KingVampyre.DeepTrenches.core.world.biome.DTBiomeEffects.*;
+import static github.KingVampyre.DeepTrenches.core.util.world.gen.biome.DTBiomeEffects.*;
 import static net.minecraft.entity.EntityType.*;
 import static net.minecraft.world.biome.Biome.Category.FOREST;
 import static net.minecraft.world.biome.Biome.Category.JUNGLE;

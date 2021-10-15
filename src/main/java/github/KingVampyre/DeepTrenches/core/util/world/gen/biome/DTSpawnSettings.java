@@ -1,4 +1,4 @@
-package github.KingVampyre.DeepTrenches.core.world.biome;
+package github.KingVampyre.DeepTrenches.core.util.world.gen.biome;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.SpawnSettings;

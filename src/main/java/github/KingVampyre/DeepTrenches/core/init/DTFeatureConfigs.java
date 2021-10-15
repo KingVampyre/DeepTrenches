@@ -2,9 +2,10 @@ package github.KingVampyre.DeepTrenches.core.init;
 
 import com.google.common.collect.ImmutableList;
 import github.KingVampyre.DeepTrenches.core.util.math.intprovider.NegativeConstantIntProvider;
-import github.KingVampyre.DeepTrenches.core.world.gen.feature.foliage.*;
-import github.KingVampyre.DeepTrenches.core.world.gen.feature.trunk.FuchsitraTrunkPlacer;
-import github.KingVampyre.DeepTrenches.core.world.gen.feature.trunk.GreatTrunkPlacer;
+import github.KingVampyre.DeepTrenches.core.world.gen.foliage.*;
+import github.KingVampyre.DeepTrenches.core.world.gen.trunk.FuchsitraTrunkPlacer;
+import github.KingVampyre.DeepTrenches.core.world.gen.trunk.GreatTrunkPlacer;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
@@ -16,6 +17,7 @@ import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.OptionalInt;
+import java.util.function.Supplier;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTBlockStateProviders.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.*;
@@ -32,7 +34,6 @@ public class DTFeatureConfigs {
     public static final TreeFeatureConfig CROLOOD_TREE_CONFIG;
     public static final TreeFeatureConfig DARK_CROLOOD_TREE_CONFIG;
     public static final TreeFeatureConfig EBONY_TREE_CONFIG;
-    public static final TreeFeatureConfig FUCHSITRA_TREE_CONFIG;
     public static final TreeFeatureConfig FUNERANITE_TREE_CONFIG;
     public static final TreeFeatureConfig GHOSHROOM_TREE_CONFIG;
     public static final TreeFeatureConfig PELTOGYNE_TREE_CONFIG;
@@ -51,7 +52,6 @@ public class DTFeatureConfigs {
     public static final TreeFeatureConfig FANCY_AQUEAN_TREE_CONFIG;
     public static final TreeFeatureConfig FANCY_BLACK_BIRCH_TREE_CONFIG;
     public static final TreeFeatureConfig FANCY_CHERRY_TREE_CONFIG;
-    public static final TreeFeatureConfig FANCY_FUCHSITRA_TREE_CONFIG;
     public static final TreeFeatureConfig FANCY_PIN_CHERRY_TREE_CONFIG;
     public static final TreeFeatureConfig FANCY_PLUM_TREE_CONFIG;
     public static final TreeFeatureConfig FANCY_TEAK_TREE_CONFIG;
@@ -62,11 +62,26 @@ public class DTFeatureConfigs {
     public static final TreeFeatureConfig GREAT_AQUEAN_TREE_CONFIG;
     public static final TreeFeatureConfig GREAT_BLACK_BIRCH_TREE_CONFIG;
     public static final TreeFeatureConfig GREAT_CHERRY_TREE_CONFIG;
-    public static final TreeFeatureConfig GREAT_FUCHSITRA_TREE_CONFIG;
     public static final TreeFeatureConfig GREAT_PIN_CHERRY_TREE_CONFIG;
     public static final TreeFeatureConfig GREAT_PLUM_TREE_CONFIG;
     public static final TreeFeatureConfig GREAT_TEAK_TREE_CONFIG;
     public static final TreeFeatureConfig GREAT_THUNDERCLOUD_PLUM_TREE_CONFIG;
+
+    public static final TreeFeatureConfig FUCHSITRA_TREE_TOWARDS_X_CONFIG;
+    public static final TreeFeatureConfig FUCHSITRA_TREE_TOWARDS_Z_CONFIG;
+    public static final TreeFeatureConfig FANCY_FUCHSITRA_TREE_TOWARDS_X_CONFIG;
+    public static final TreeFeatureConfig FANCY_FUCHSITRA_TREE_TOWARDS_Z_CONFIG;
+    public static final TreeFeatureConfig GREAT_FUCHSITRA_TREE_TOWARDS_X_CONFIG;
+    public static final TreeFeatureConfig GREAT_FUCHSITRA_TREE_TOWARDS_Z_CONFIG;
+
+    public static final SimpleRandomFeatureConfig FUCHSITRA_TREE_CONFIG;
+    public static final SimpleRandomFeatureConfig FANCY_FUCHSITRA_TREE_CONFIG;
+    public static final SimpleRandomFeatureConfig GREAT_FUCHSITRA_TREE_CONFIG;
+
+    public static final RandomPatchFeatureConfig BLACK_LILY_CONFIG;
+    public static final RandomPatchFeatureConfig LILAC_CONFIG;
+    public static final RandomPatchFeatureConfig ORANGE_LILY_CONFIG;
+    public static final RandomPatchFeatureConfig VELVET_LILY_CONFIG;
 
     public static final RandomPatchFeatureConfig ALMOND_FOREST_FLOWER_CONFIG;
     public static final RandomPatchFeatureConfig ALMOND_PLUS_FOREST_FLOWER_CONFIG;
@@ -84,15 +99,15 @@ public class DTFeatureConfigs {
     public static final SimpleRandomFeatureConfig PLUM_FOREST_FLOWER_VEGETATION_CONFIG;
     public static final SimpleRandomFeatureConfig THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION_CONFIG;
 
-    public static final RandomPatchFeatureConfig BLACK_LILY_CONFIG;
-    public static final RandomPatchFeatureConfig LILAC_CONFIG;
-    public static final RandomPatchFeatureConfig ORANGE_LILY_CONFIG;
-    public static final RandomPatchFeatureConfig VELVET_LILY_CONFIG;
-
     public static final RandomPatchFeatureConfig PATCH_GRASS_CLEAR_FOREST_CONFIG;
 
     protected static RandomPatchFeatureConfig createRandomPatchFeatureConfig(int tries, int xzSpread, int ySpread, BlockStateProvider provider) {
         return new RandomPatchFeatureConfig(tries, xzSpread, ySpread, () -> Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(provider)).method_38872());
+    }
+
+    @SafeVarargs
+    protected static SimpleRandomFeatureConfig createSimpleRandomFeatureConfig(Supplier<ConfiguredFeature<?, ?>> ...suppliers) {
+        return new SimpleRandomFeatureConfig(ImmutableList.copyOf(suppliers));
     }
 
     protected static RandomPatchFeatureConfig createTallFlowerConfig(BlockStateProvider provider) {
@@ -127,20 +142,20 @@ public class DTFeatureConfigs {
         return createAqueanTreeConfig(new GreatAqueanFoliagePlacer(ConstantIntProvider.create(3), NegativeConstantIntProvider.create(-3), 7), 8, 3);
     }
 
-    protected static TreeFeatureConfig createFuchsitraTreeConfig(FoliagePlacer foliagePlacer, int baseHeight, int firstRandomHeight, int basementHeight, int basementThickness) {
-        return new TreeFeatureConfig.Builder(FUCHSITRA_TRUNK_PROVIDER, new FuchsitraTrunkPlacer(baseHeight, firstRandomHeight, 0, basementHeight, 1, basementThickness, 2), FUCHSITRA_FOLIAGE_PROVIDER, foliagePlacer, new TwoLayersFeatureSize(2, 0, 2)).ignoreVines().build();
+    protected static TreeFeatureConfig createFuchsitraTreeConfig(FoliagePlacer foliagePlacer, Direction.Axis axis, int baseHeight, int firstRandomHeight, int basementHeight, int basementThickness) {
+        return new TreeFeatureConfig.Builder(FUCHSITRA_TRUNK_PROVIDER, new FuchsitraTrunkPlacer(baseHeight, firstRandomHeight, 0, basementHeight, 1, basementThickness, 2, axis), FUCHSITRA_FOLIAGE_PROVIDER, foliagePlacer, new TwoLayersFeatureSize(2, 0, 2)).ignoreVines().build();
     }
 
-    protected static TreeFeatureConfig createFuchsitraTreeConfig() {
-        return createStraightTreeConfig(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER, new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), 7), 8, 6);
+    protected static TreeFeatureConfig createFuchsitraTreeConfig(Direction.Axis axis) {
+        return createStraightTreeConfig(FUCHSITRA_TRUNK_PROVIDER, FUCHSITRA_FOLIAGE_PROVIDER, new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), axis, 7), 8, 6);
     }
 
-    protected static TreeFeatureConfig createFancyFuchsitraTreeConfig() {
-        return createFuchsitraTreeConfig(new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), 7), 10, 7, 0, 0);
+    protected static TreeFeatureConfig createFancyFuchsitraTreeConfig(Direction.Axis axis) {
+        return createFuchsitraTreeConfig(new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), axis, 7), axis, 10, 7, 0, 0);
     }
 
-    protected static TreeFeatureConfig createGreatFuchsitraTreeConfig() {
-        return createFuchsitraTreeConfig(new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), 7), 12, 2, 5, 4);
+    protected static TreeFeatureConfig createGreatFuchsitraTreeConfig(Direction.Axis axis) {
+        return createFuchsitraTreeConfig(new FuchsitraFoliagePlacer(ConstantIntProvider.create(2), NegativeConstantIntProvider.create(-1), axis, 7), axis, 12, 2, 5, 4);
     }
 
     protected static TreeFeatureConfig createPlumTreeConfig(int baseHeight, int firstRandomHeight, int radius, int foliageHeight) {
@@ -170,7 +185,6 @@ public class DTFeatureConfigs {
         CROLOOD_TREE_CONFIG = createBlobTreeConfig(CROLOOD_TRUNK_PROVIDER, CROLOOD_FOLIAGE_PROVIDER);
         DARK_CROLOOD_TREE_CONFIG = createBlobTreeConfig(DARK_CROLOOD_TRUNK_PROVIDER, DARK_CROLOOD_FOLIAGE_PROVIDER);
         EBONY_TREE_CONFIG = createBlobTreeConfig(EBONY_TRUNK_PROVIDER, EBONY_FOLIAGE_PROVIDER);
-        FUCHSITRA_TREE_CONFIG = createFuchsitraTreeConfig();
         FUNERANITE_TREE_CONFIG = createBlobTreeConfig(FUNERANITE_TRUNK_PROVIDER, FUNERANITE_FOLIAGE_PROVIDER);
         GHOSHROOM_TREE_CONFIG = createBlobTreeConfig(GHOSHROOM_TRUNK_PROVIDER, GHOSHROOM_FOLIAGE_PROVIDER);
         PELTOGYNE_TREE_CONFIG = createBlobTreeConfig(PELTOGYNE_TRUNK_PROVIDER, PELTOGYNE_FOLIAGE_PROVIDER);
@@ -189,7 +203,6 @@ public class DTFeatureConfigs {
         FANCY_AQUEAN_TREE_CONFIG = createFancyAqueanTreeConfig();
         FANCY_BLACK_BIRCH_TREE_CONFIG = createFancyTreeConfig(BLACK_BIRCH_TRUNK_PROVIDER, BLACK_BIRCH_FOLIAGE_PROVIDER);
         FANCY_CHERRY_TREE_CONFIG = createFancyTreeConfig(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER);
-        FANCY_FUCHSITRA_TREE_CONFIG = createFancyFuchsitraTreeConfig();
         FANCY_PIN_CHERRY_TREE_CONFIG = createFancyTreeConfig(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER);
         FANCY_PLUM_TREE_CONFIG = createPlumTreeConfig(8, 4, 3, 7);
         FANCY_TEAK_TREE_CONFIG = createFancyTreeConfig(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER);
@@ -200,18 +213,32 @@ public class DTFeatureConfigs {
         GREAT_AQUEAN_TREE_CONFIG = createGreatAqueanTreeConfig();
         GREAT_BLACK_BIRCH_TREE_CONFIG = createGreatTreeConfig(BLACK_BIRCH_TRUNK_PROVIDER, BLACK_BIRCH_FOLIAGE_PROVIDER);
         GREAT_CHERRY_TREE_CONFIG = createGreatTreeConfig(CHERRY_TRUNK_PROVIDER, CHERRY_FOLIAGE_PROVIDER);
-        GREAT_FUCHSITRA_TREE_CONFIG = createGreatFuchsitraTreeConfig();
         GREAT_PIN_CHERRY_TREE_CONFIG = createGreatTreeConfig(PIN_CHERRY_TRUNK_PROVIDER, PIN_CHERRY_FOLIAGE_PROVIDER);
         GREAT_PLUM_TREE_CONFIG = createPlumTreeConfig(10, 5, 4, 9);
         GREAT_TEAK_TREE_CONFIG = createGreatTreeConfig(TEAK_TRUNK_PROVIDER, TEAK_FOLIAGE_PROVIDER);
         GREAT_THUNDERCLOUD_PLUM_TREE_CONFIG = createGreatTreeConfig(THUNDERCLOUD_PLUM_TRUNK_PROVIDER, THUNDERCLOUD_PLUM_FOLIAGE_PROVIDER);
 
+        FUCHSITRA_TREE_TOWARDS_X_CONFIG = createFuchsitraTreeConfig(Direction.Axis.X);
+        FUCHSITRA_TREE_TOWARDS_Z_CONFIG = createFuchsitraTreeConfig(Direction.Axis.Z);
+        FANCY_FUCHSITRA_TREE_TOWARDS_X_CONFIG = createFancyFuchsitraTreeConfig(Direction.Axis.X);
+        FANCY_FUCHSITRA_TREE_TOWARDS_Z_CONFIG = createFancyFuchsitraTreeConfig(Direction.Axis.Z);
+        GREAT_FUCHSITRA_TREE_TOWARDS_X_CONFIG = createGreatFuchsitraTreeConfig(Direction.Axis.X);
+        GREAT_FUCHSITRA_TREE_TOWARDS_Z_CONFIG = createGreatFuchsitraTreeConfig(Direction.Axis.Z);
+
+        FUCHSITRA_TREE_CONFIG = createSimpleRandomFeatureConfig(
+                () -> FUCHSITRA_TREE_TOWARDS_X, () -> FUCHSITRA_TREE_TOWARDS_Z
+        );
+        FANCY_FUCHSITRA_TREE_CONFIG = createSimpleRandomFeatureConfig(
+                () -> FANCY_FUCHSITRA_TOWARDS_X, () -> FANCY_FUCHSITRA_TOWARDS_Z
+        );
+        GREAT_FUCHSITRA_TREE_CONFIG = createSimpleRandomFeatureConfig(
+                () -> GREAT_FUCHSITRA_TOWARDS_X, () -> GREAT_FUCHSITRA_TOWARDS_Z
+        );
+
         BLACK_LILY_CONFIG = createTallFlowerConfig(BLACK_LILY_PROVIDER);
         LILAC_CONFIG = createTallFlowerConfig(LILAC_PROVIDER);
         ORANGE_LILY_CONFIG = createTallFlowerConfig(ORANGE_LILY_PROVIDER);
         VELVET_LILY_CONFIG = createTallFlowerConfig(VELVET_LILY_PROVIDER);
-
-        PATCH_GRASS_CLEAR_FOREST_CONFIG = createPatchGrassConfig(PATCH_CLEAR_FOREST_GRASS_PROVIDER);
 
         ALMOND_FOREST_FLOWER_CONFIG = createFlowerConfig(ALMOND_FOREST_FLOWER_PROVIDER);
         ALMOND_PLUS_FOREST_FLOWER_CONFIG = createFlowerConfig(ALMOND_PLUS_FOREST_FLOWER_PROVIDER);
@@ -221,37 +248,29 @@ public class DTFeatureConfigs {
         PLUM_FOREST_FLOWER_CONFIG = createFlowerConfig(PLUM_FOREST_FLOWER_PROVIDER);
         THUNDERCLOUD_PLUM_FOREST_FLOWER_CONFIG = createFlowerConfig(THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER);
 
-        ALMOND_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
+        ALMOND_FOREST_FLOWER_VEGETATION_CONFIG = createSimpleRandomFeatureConfig(
                 () -> LILAC
-        ));
-
-        ALMOND_PLUS_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
+        );
+        ALMOND_PLUS_FOREST_FLOWER_VEGETATION_CONFIG = createSimpleRandomFeatureConfig(
                 () -> LILAC
-        ));
-
-        BLACK_BIRCH_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
-                () -> BLACK_LILY,
-                () -> ORANGE_LILY,
-                () -> VELVET_LILY
-        ));
-
-        CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
+        );
+        BLACK_BIRCH_FOREST_FLOWER_VEGETATION_CONFIG = createSimpleRandomFeatureConfig(
+                () -> BLACK_LILY, () -> ORANGE_LILY, () -> VELVET_LILY
+        );
+        CHERRY_CLIFFS_FOREST_FLOWER_VEGETATION_CONFIG = createSimpleRandomFeatureConfig(
                 () -> LILAC
-        ));
-
-        CHERRY_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
+        );
+        CHERRY_FOREST_FLOWER_VEGETATION_CONFIG = createSimpleRandomFeatureConfig(
                 () -> LILAC
-        ));
-
-        PLUM_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
-                () -> ORANGE_LILY,
-                () -> VELVET_LILY
-        ));
-
-        THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION_CONFIG = new SimpleRandomFeatureConfig(ImmutableList.of(
+        );
+        PLUM_FOREST_FLOWER_VEGETATION_CONFIG = createSimpleRandomFeatureConfig(
+                () -> ORANGE_LILY, () -> VELVET_LILY
+        );
+        THUNDERCLOUD_PLUM_FOREST_FLOWER_VEGETATION_CONFIG = createSimpleRandomFeatureConfig(
                 () -> LILAC
-        ));
+        );
 
+        PATCH_GRASS_CLEAR_FOREST_CONFIG = createPatchGrassConfig(PATCH_CLEAR_FOREST_GRASS_PROVIDER);
     }
 
 }

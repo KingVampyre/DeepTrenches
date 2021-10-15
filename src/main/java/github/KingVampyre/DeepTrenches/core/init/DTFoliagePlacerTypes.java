@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
 import github.KingVampyre.DeepTrenches.core.mixin.InvokerFoliagePlacerType;
-import github.KingVampyre.DeepTrenches.core.world.gen.feature.foliage.*;
+import github.KingVampyre.DeepTrenches.core.world.gen.foliage.*;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
 
 public class DTFoliagePlacerTypes {
