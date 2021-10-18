@@ -3,7 +3,6 @@ package github.KingVampyre.DeepTrenches.core.fluid;
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
 import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
 import github.KingVampyre.DeepTrenches.core.init.DTItems;
-import github.KingVampyre.DeepTrenches.core.util.particle.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -20,6 +19,7 @@ import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.CLEAR_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_CLEAR_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.DRIPPING_CLEAR_WATER;
 import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class ClearWaterFluid extends AbstractOxygenatedWaterFluid {
@@ -47,7 +47,7 @@ public abstract class ClearWaterFluid extends AbstractOxygenatedWaterFluid {
 
     @Override
     protected ParticleEffect getParticle() {
-        return ParticleEffectHelper.getDrippingEffect(this, 0.525F, 0.729F, 0.725F);
+        return DRIPPING_CLEAR_WATER;
     }
 
     @Override

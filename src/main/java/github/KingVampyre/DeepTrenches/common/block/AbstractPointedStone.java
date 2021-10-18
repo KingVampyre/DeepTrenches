@@ -244,6 +244,7 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
         return BlockPosHelper.search(world, pos, DOWN, AbstractBlockState::isAir, state -> state.getBlock() instanceof AbstractCauldronBlock cauldron && cauldron.canBeFilledByDripstone(fluid), 11).orElse(null);
     }
 
+    // TODO RETURN FLUID STATE
     public Fluid getFlowableFluid(World world, BlockPos pos, BlockState state) {
         var direction = state.get(VERTICAL_DIRECTION);
 

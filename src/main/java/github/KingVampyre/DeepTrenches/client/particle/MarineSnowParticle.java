@@ -27,34 +27,29 @@ public class MarineSnowParticle extends WaterSuspendParticle {
     public void tick() {
         super.tick();
 
-        BlockPos pos = new BlockPos(this.x, this.y, this.z);
+        var pos = new BlockPos(this.x, this.y, this.z);
 
         if (!this.world.getFluidState(pos).isIn(WATER))
             this.markDead();
     }
 
     @Environment(EnvType.CLIENT)
-    public static class Factory implements ParticleFactory<DefaultParticleType> {
-        private final SpriteProvider spriteProvider;
-
-        public Factory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
+    public static record Factory(
+            SpriteProvider spriteProvider) implements ParticleFactory<DefaultParticleType> {
 
         @Override
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            float velocity = (float) (clientWorld.random.nextGaussian() * 9.999999747378752E-5D + (Math.random() - 1.0D) * 0.4000000059604645D);
+            var velocity = (float) (clientWorld.random.nextGaussian() * 9.999999747378752E-5D + (Math.random() - 1.0D) * 0.4000000059604645D);
 
-            float factor = (float) (Math.random() + Math.random() + 1.0D) * 0.15F;
-            float sqrt = MathHelper.sqrt(velocity * velocity);
-            double velocityY = velocity / (double) sqrt * (double) factor * 0.4000000059604645D;
+            var factor = (float) (Math.random() + Math.random() + 1.0D) * 0.15F;
+            var sqrt = MathHelper.sqrt(velocity * velocity);
+            var velocityY = velocity / (double) sqrt * (double) factor * 0.4000000059604645D;
 
-            MarineSnowParticle particle = new MarineSnowParticle(clientWorld, this.spriteProvider, d, e, f, 0, velocityY, 0);
+            var particle = new MarineSnowParticle(clientWorld, this.spriteProvider, d, e, f, 0, velocityY, 0);
             particle.setSprite(this.spriteProvider);
 
             return particle;
         }
 
     }
-
 }

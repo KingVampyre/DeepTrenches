@@ -8,9 +8,9 @@ import net.minecraft.client.texture.SpriteAtlasTexture;
 import static github.KingVampyre.DeepTrenches.client.init.DTTextures.*;
 
 @Environment(EnvType.CLIENT)
-public class DTSpriteRegistry implements ClientSpriteRegistryCallback {
+public class DTClientSpriteRegistry implements ClientSpriteRegistryCallback {
 
-    public static final ClientSpriteRegistryCallback INSTANCE = new DTSpriteRegistry();
+    public static final ClientSpriteRegistryCallback INSTANCE = new DTClientSpriteRegistry();
 
     @Override
     public void registerSprites(SpriteAtlasTexture atlasTexture, Registry registry) {

@@ -3,7 +3,6 @@ package github.KingVampyre.DeepTrenches.core.fluid;
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
 import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
 import github.KingVampyre.DeepTrenches.core.init.DTItems;
-import github.KingVampyre.DeepTrenches.core.util.particle.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -43,7 +42,7 @@ public abstract class MesopelagicWaterFluid extends AbstractOxygenatedWaterFluid
 
     @Override
     protected ParticleEffect getParticle() {
-        return ParticleEffectHelper.getDrippingEffect(this, 0.176F, 0.474F, 0.509F);
+        return DRIPPING_MESOPELAGIC_WATER;
     }
 
     @Override

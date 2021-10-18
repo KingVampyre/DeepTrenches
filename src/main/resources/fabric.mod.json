@@ -20,7 +20,7 @@
 			"github.KingVampyre.DeepTrenches.core.DeepTrenches"
 		],
 		"client": [
-			"github.KingVampyre.DeepTrenches.client.DeepTrenchesClient"
+			"github.KingVampyre.DeepTrenches.core.DeepTrenches"
 		]
 	},
 	"accessWidener" : "deep_trenches.accesswidener",
@@ -28,7 +28,7 @@
 		"deep_trenches.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.12.1",
+		"fabricloader": ">=0.12.2",
 		"fabric": "*",
 		"minecraft": "1.18.x",
 		"java": ">=16"

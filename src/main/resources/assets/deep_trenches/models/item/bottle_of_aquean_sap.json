@@ -1,6 +1,0 @@
-{
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "deep_trenches:item/bottle_of_aquean_sap"
-	}
-}

@@ -66,7 +66,7 @@ public abstract class AcidFluid extends AbstractWaterFluid implements StatusEffe
 
     @Override
     protected ParticleEffect getParticle() {
-        return RandomUtils.nextDouble() < 0.65 ? ACID_DRIPPING : ACID_DRIPLET;
+        return RandomUtils.nextDouble() < 0.65 ? DRIPPING_ACID : DRIPLET_ACID;
     }
 
     @Override
