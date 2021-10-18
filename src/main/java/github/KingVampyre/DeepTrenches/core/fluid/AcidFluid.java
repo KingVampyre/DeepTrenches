@@ -4,7 +4,7 @@ import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
-import github.KingVampyre.DeepTrenches.core.util.StatusEffectHelper;
+import github.KingVampyre.DeepTrenches.core.util.entity.effect.StatusEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -66,7 +66,7 @@ public abstract class AcidFluid extends AbstractWaterFluid implements StatusEffe
 
     @Override
     protected ParticleEffect getParticle() {
-        return RandomUtils.nextDouble() < 0.65 ? ACID_DRIPPING : ACID_DRIPLET;
+        return RandomUtils.nextDouble() < 0.65 ? DRIPPING_ACID : DRIPLET_ACID;
     }
 
     @Override

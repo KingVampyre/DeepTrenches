@@ -1,7 +1,5 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import github.KingVampyre.DeepTrenches.common.item.TagFishBucketItem;
-import github.KingVampyre.DeepTrenches.common.item.TagSpawnEggItem;
 import github.KingVampyre.DeepTrenches.core.item.*;
 import github.Louwind.entityutils.core.item.FabricBoatItem;
 import github.Louwind.entityutils.core.util.FabricBoatType;
@@ -13,7 +11,6 @@ import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.*;
 import net.minecraft.item.Item.Settings;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.tag.Tag;
 import net.minecraft.util.registry.Registry;
 
 import java.util.function.Function;
@@ -71,7 +68,7 @@ public class DTItems {
 	public static final Item ALMOND;
 	public static final Item ALMOND_DRUPE;
 	public static final Item AQUEAN_SAP;
-	public static final Item BOTTLE_OF_AQUEAN_SAP;
+	public static final Item AQUEAN_SAP_BOTTLE;
 	public static final Item CHERRY;
 	public static final Item CROLOOD_FRUIT;
 	public static final Item DARK_CROLOOD_FRUIT;
@@ -962,10 +959,6 @@ public class DTItems {
 		return new EntityBucketItem(type, WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1).group(MISC));
 	}
 
-	protected static Item createFishBucket(EntityType<?> type, Tag<EntityType<?>> tag) {
-		return new TagFishBucketItem(type, tag, WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1).group(MISC));
-	}
-
 	protected static Item createFood(FoodComponent food) {
 		return createItem(new Settings().group(MISC).food(food));
 	}
@@ -988,10 +981,6 @@ public class DTItems {
 
 	protected static Item createSpawnEgg(EntityType<? extends MobEntity> type, int primaryColor, int secondaryColor) {
 		return new SpawnEggItem(type, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(MISC));
-	}
-
-	protected static Item createSpawnEgg(EntityType<? extends MobEntity> type, Tag<EntityType<?>> tag, int primaryColor, int secondaryColor) {
-		return new TagSpawnEggItem(type, tag, primaryColor, secondaryColor, new Item.Settings().maxCount(1).group(MISC));
 	}
 
 	protected static void registerCoralFan(String id, Block standingBlock, Block block) {
@@ -1040,9 +1029,9 @@ public class DTItems {
 		BETTA_BUCKET = createFishBucket(DTEntityTypes.BETTA);
 		BLACK_LOOSEJAW_BUCKET = createFishBucket(DTEntityTypes.BLACK_LOOSEJAW);
 		LIGHT_LOOSEJAW_BUCKET = createFishBucket(DTEntityTypes.LIGHT_LOOSEJAW);
-		DEEP_LAKE_BETTA_BUCKET = createFishBucket(DTEntityTypes.DEEP_LAKE_BETTA, DTEntityTypeTags.TRELOSIAGNUS_BETTA);
-		GIANT_HATCHETFISH_BUCKET = createFishBucket(DTEntityTypes.GIANT_HATCHETFISH,  DTEntityTypeTags.ARGYROPELECUS_GIGAS);
-		SMALLTOOTH_DRAGONFISH_BUCKET = createFishBucket(DTEntityTypes.SMALLTOOTH_DRAGONFISH, DTEntityTypeTags.PACHYSTOMIAS_MICRODON);
+		DEEP_LAKE_BETTA_BUCKET = createFishBucket(DTEntityTypes.DEEP_LAKE_BETTA);
+		GIANT_HATCHETFISH_BUCKET = createFishBucket(DTEntityTypes.GIANT_HATCHETFISH);
+		SMALLTOOTH_DRAGONFISH_BUCKET = createFishBucket(DTEntityTypes.SMALLTOOTH_DRAGONFISH);
 
 		/* SPAWN EGGS */
 		BARBELED_LOOSEJAW_SPAWN_EGG = createSpawnEgg(DTEntityTypes.BARBELED_LOOSEJAW, 921113, 15859744);
@@ -1051,15 +1040,15 @@ public class DTItems {
 		LIGHT_LOOSEJAW_SPAWN_EGG = createSpawnEgg(DTEntityTypes.LIGHT_LOOSEJAW,1643048, 4836351);
 		STASP_SPAWN_EGG = createSpawnEgg(DTEntityTypes.STASP, 2695792, 5124510);
 
-		DEEP_LAKE_BETTA_SPAWN_EGG = createSpawnEgg(DTEntityTypes.DEEP_LAKE_BETTA, DTEntityTypeTags.TRELOSIAGNUS_BETTA, 1189390, 5013319);
-		GIANT_HATCHETFISH_SPAWN_EGG = createSpawnEgg(DTEntityTypes.GIANT_HATCHETFISH, DTEntityTypeTags.ARGYROPELECUS_GIGAS, 9870757, 12311039);
-		SMALLTOOTH_DRAGONFISH_SPAWN_EGG = createSpawnEgg(DTEntityTypes.SMALLTOOTH_DRAGONFISH, DTEntityTypeTags.PACHYSTOMIAS_MICRODON, 1250598, 16728832);
+		DEEP_LAKE_BETTA_SPAWN_EGG = createSpawnEgg(DTEntityTypes.DEEP_LAKE_BETTA, 1189390, 5013319);
+		GIANT_HATCHETFISH_SPAWN_EGG = createSpawnEgg(DTEntityTypes.GIANT_HATCHETFISH, 9870757, 12311039);
+		SMALLTOOTH_DRAGONFISH_SPAWN_EGG = createSpawnEgg(DTEntityTypes.SMALLTOOTH_DRAGONFISH, 1250598, 16728832);
 
 		/* FRUITS */
 		ALMOND = createFood(SWEET_BERRIES);
 		ALMOND_DRUPE = createFood(SWEET_BERRIES);
 		AQUEAN_SAP = createItem(MISC);
-		BOTTLE_OF_AQUEAN_SAP = createItem(MISC);
+		AQUEAN_SAP_BOTTLE = createItem(MISC);
 		CHERRY = createFood(SWEET_BERRIES);
 		CROLOOD_FRUIT = createFood(APPLE);
 		DARK_CROLOOD_FRUIT = createFood(APPLE);
@@ -3765,7 +3754,7 @@ public class DTItems {
 		registerItem("deep_trenches:almond", ALMOND);
 		registerItem("deep_trenches:almond_drupe", ALMOND_DRUPE);
 		registerItem("deep_trenches:aquean_sap", AQUEAN_SAP);
-		registerItem("deep_trenches:bottle_of_aquean_sap", BOTTLE_OF_AQUEAN_SAP);
+		registerItem("deep_trenches:aquean_sap_bottle", AQUEAN_SAP_BOTTLE);
 		registerItem("deep_trenches:cherry", CHERRY);
 		registerItem("deep_trenches:crolood_fruit", CROLOOD_FRUIT);
 		registerItem("deep_trenches:dark_crolood_fruit", DARK_CROLOOD_FRUIT);

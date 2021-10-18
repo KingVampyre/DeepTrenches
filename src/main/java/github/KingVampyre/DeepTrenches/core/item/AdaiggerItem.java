@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.item;
 
 import github.KingVampyre.DeepTrenches.core.entity.AdaiggerEntity;
-import github.KingVampyre.DeepTrenches.core.util.DTEnchantmentHelper;
+import github.KingVampyre.DeepTrenches.core.util.enchantment.DTEnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;

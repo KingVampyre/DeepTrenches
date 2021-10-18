@@ -4,7 +4,6 @@ import github.KingVampyre.DeepTrenches.common.fluid.AbstractWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
 import github.KingVampyre.DeepTrenches.core.init.DTItems;
-import github.KingVampyre.DeepTrenches.core.util.ParticleEffectHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.entity.LivingEntity;
@@ -19,6 +18,7 @@ import net.minecraft.state.StateManager;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.BRINE;
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_BRINE;
+import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.DRIPPING_BRINE;
 import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.SINKING;
 import static net.minecraft.entity.effect.StatusEffects.POISON;
 
@@ -47,7 +47,7 @@ public abstract class BrineFluid extends AbstractWaterFluid implements StatusEff
 
     @Override
     protected ParticleEffect getParticle() {
-        return ParticleEffectHelper.getDrippingEffect(this, 0.309F, 0.525F, 0.576F);
+        return DRIPPING_BRINE;
     }
 
     @Override
