@@ -381,10 +381,10 @@ public class DTItems {
 	public static final Item MORGANITE_PICKAXE;
 	public static final Item MORGANITE_SHOVEL;
 
-	public static final Item RUBY_DISCARVER;
-	public static final Item RUBY_DISDIGGER;
 	public static final Item RUBY_DISLOGGER;
 	public static final Item RUBY_DISTARVEST;
+	public static final Item RUBY_DISCARVER;
+	public static final Item RUBY_DISDIGGER;
 
 	public static final Item SAPPHIRE_AXE;
 	public static final Item SAPPHIRE_HOE;
@@ -1362,10 +1362,10 @@ public class DTItems {
 		MORGANITE_PICKAXE = createPickaxe(DTToolMaterials.MORGANITE, 1, -2.8F);
 		MORGANITE_SHOVEL = createShovel(DTToolMaterials.MORGANITE, 1.5F, -3F);
 
-		RUBY_DISCARVER = new DiscarverItem(DTToolMaterials.RUBY, 1, -2.8F, new Settings().group(TOOLS));
-		RUBY_DISDIGGER = new DisdiggerItem(DTToolMaterials.RUBY, 1.5F, -3F, new Settings().group(TOOLS));
 		RUBY_DISLOGGER = new DisloggerItem(DTToolMaterials.RUBY, 6F, -3.1F, new Settings().group(TOOLS));
 		RUBY_DISTARVEST = new DistarvestItem(DTToolMaterials.RUBY, -2, -1F, new Settings().group(TOOLS));
+		RUBY_DISCARVER = new DiscarverItem(DTToolMaterials.RUBY, 1, -2.8F, new Settings().group(TOOLS));
+		RUBY_DISDIGGER = new DisdiggerItem(DTToolMaterials.RUBY, 1.5F, -3F, new Settings().group(TOOLS));
 
 		SAPPHIRE_AXE = createAxe(DTToolMaterials.SAPPHIRE, 6F, -3.1F);
 		SAPPHIRE_HOE = createHoe(DTToolMaterials.SAPPHIRE, -2, -1F);
@@ -3935,6 +3935,7 @@ public class DTItems {
 		registerItem("deep_trenches:stroxite_sword", STROXITE_SWORD);
 		registerItem("deep_trenches:tanzanite_sword", TANZANITE_SWORD);
 		registerItem("deep_trenches:topaz_sword", TOPAZ_SWORD);
+
 		registerItem("deep_trenches:almond_sword", ALMOND_SWORD);
 		registerItem("deep_trenches:anameata_sword", ANAMEATA_SWORD);
 		registerItem("deep_trenches:angels_trumpet_sword", ANGELS_TRUMPET_SWORD);
@@ -4066,10 +4067,10 @@ public class DTItems {
 		registerItem("deep_trenches:morganite_pickaxe", MORGANITE_PICKAXE);
 		registerItem("deep_trenches:morganite_shovel", MORGANITE_SHOVEL);
 
-		registerItem("deep_trenches:ruby_discarver", RUBY_DISCARVER);
-		registerItem("deep_trenches:ruby_disdigger", RUBY_DISDIGGER);
 		registerItem("deep_trenches:ruby_dislogger", RUBY_DISLOGGER);
 		registerItem("deep_trenches:ruby_distarvest", RUBY_DISTARVEST);
+		registerItem("deep_trenches:ruby_discarver", RUBY_DISCARVER);
+		registerItem("deep_trenches:ruby_disdigger", RUBY_DISDIGGER);
 
 		registerItem("deep_trenches:sapphire_axe", SAPPHIRE_AXE);
 		registerItem("deep_trenches:sapphire_hoe", SAPPHIRE_HOE);
