@@ -2,7 +2,28 @@
     "type": "minecraft:smelting",
     "ingredient": [
         {
-            "item": "deep_trenches:stroxite_sword"
+            "item": "deep_trenches:stroxite_helmet"
+        },
+        {
+            "item": "deep_trenches:stroxite_chestplate"
+        },
+        {
+            "item": "deep_trenches:stroxite_leggings"
+        },
+        {
+            "item": "deep_trenches:stroxite_boots"
+        },
+        {
+            "item": "deep_trenches:stroxite_axe"
+        },
+        {
+            "item": "deep_trenches:stroxite_hoe"
+        },
+        {
+            "item": "deep_trenches:stroxite_pickaxe"
+        },
+        {
+            "item": "deep_trenches:stroxite_shovel"
         }
     ],
     "result": "deep_trenches:stroxite_nugget",

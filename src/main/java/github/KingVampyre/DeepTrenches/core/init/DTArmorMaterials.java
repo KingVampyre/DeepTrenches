@@ -24,6 +24,7 @@ public enum DTArmorMaterials implements ArmorMaterial {
     SILVER(17, new int[] {2, 7, 5, 2}, 20, ITEM_ARMOR_EQUIP_IRON, 1, 0, () -> Ingredient.ofItems(DTItems.SILVER_INGOT)),
     SPHENE(42, new int[] {2, 6, 7, 2}, 20, ITEM_ARMOR_EQUIP_IRON, 0, 3, () -> Ingredient.ofItems(DTItems.SPHENE)),
     SPINEL(23, new int[] {2, 7, 6, 2}, 18, ITEM_ARMOR_EQUIP_IRON, 2, 1, () -> Ingredient.ofItems(DTItems.SPINEL)),
+    STROXITE(23, new int[] {2, 7, 6, 2}, 18, ITEM_ARMOR_EQUIP_IRON, 2, 1, () -> Ingredient.ofItems(DTItems.STROXITE_INGOT)),
     TANZANITE(31, new int[] {3, 8, 6, 3}, 22, ITEM_ARMOR_EQUIP_IRON, 2, 2, () -> Ingredient.ofItems(DTItems.TANZANITE)),
     TOPAZ(22, new int[] {2, 7, 6, 2}, 18, ITEM_ARMOR_EQUIP_IRON, 0, 0, () -> Ingredient.ofItems(DTItems.TOPAZ)),
     VOID_CRITTERED_DIOPSIDE(40, new int[] {3, 8, 6, 3}, 17, ITEM_ARMOR_EQUIP_IRON, 4, 10, () -> Ingredient.ofItems(DTItems.VOID_CRITTERED_DIOPSIDE))

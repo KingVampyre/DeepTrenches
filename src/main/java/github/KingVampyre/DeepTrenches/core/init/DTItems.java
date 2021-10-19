@@ -793,6 +793,11 @@ public class DTItems {
 	public static final Item SPINEL_LEGGINGS;
 	public static final Item SPINEL_BOOTS;
 
+	public static final Item STROXITE_HELMET;
+	public static final Item STROXITE_CHESTPLATE;
+	public static final Item STROXITE_LEGGINGS;
+	public static final Item STROXITE_BOOTS;
+
 	public static final Item TANZANITE_HELMET;
 	public static final Item TANZANITE_CHESTPLATE;
 	public static final Item TANZANITE_LEGGINGS;
@@ -1773,6 +1778,11 @@ public class DTItems {
 		SPINEL_CHESTPLATE = createChestplate(DTArmorMaterials.SPINEL);
 		SPINEL_LEGGINGS = createLeggings(DTArmorMaterials.SPINEL);
 		SPINEL_BOOTS = createBoots(DTArmorMaterials.SPINEL);
+
+		STROXITE_HELMET = createHelmet(DTArmorMaterials.STROXITE);
+		STROXITE_CHESTPLATE = createChestplate(DTArmorMaterials.STROXITE);
+		STROXITE_LEGGINGS = createLeggings(DTArmorMaterials.STROXITE);
+		STROXITE_BOOTS = createBoots(DTArmorMaterials.STROXITE);
 
 		TANZANITE_HELMET = createHelmet(DTArmorMaterials.TANZANITE);
 		TANZANITE_CHESTPLATE = createChestplate(DTArmorMaterials.TANZANITE);
@@ -4478,6 +4488,11 @@ public class DTItems {
 		registerItem("deep_trenches:spinel_chestplate", SPINEL_CHESTPLATE);
 		registerItem("deep_trenches:spinel_leggings", SPINEL_LEGGINGS);
 		registerItem("deep_trenches:spinel_boots", SPINEL_BOOTS);
+
+		registerItem("deep_trenches:stroxite_helmet", STROXITE_HELMET);
+		registerItem("deep_trenches:stroxite_chestplate", STROXITE_CHESTPLATE);
+		registerItem("deep_trenches:stroxite_leggings", STROXITE_LEGGINGS);
+		registerItem("deep_trenches:stroxite_boots", STROXITE_BOOTS);
 
 		registerItem("deep_trenches:tanzanite_helmet", TANZANITE_HELMET);
 		registerItem("deep_trenches:tanzanite_chestplate", TANZANITE_CHESTPLATE);
