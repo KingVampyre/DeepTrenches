@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
+		"minecraft:bedrock",
 		"deep_trenches:black_marble",
 		"deep_trenches:gray_marble",
 		"deep_trenches:marble",
@@ -87,6 +88,7 @@
 		"deep_trenches:storcerack_bricks",
 		"deep_trenches:storcerack_pillar",
 		"deep_trenches:storcerack_tiles",
+		"deep_trenches:chiseled_bedrock",
 		"deep_trenches:chiseled_storcerack",
 		"deep_trenches:cracked_storcerack_bricks",
 		"deep_trenches:cracked_storcerack_tiles",
