@@ -158,14 +158,6 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> PLUM_FOREST_FLOWERS;
     public static final ConfiguredFeature<?, ?> THUNDERCLOUD_PLUM_FOREST_FLOWERS;
 
-    public static final ConfiguredFeature<?, ?> ALMOND_FOREST_TREES;
-    public static final ConfiguredFeature<?, ?> ALMOND_PLUS_FOREST_TREES;
-    public static final ConfiguredFeature<?, ?> BLACK_BIRCH_FOREST_TREES;
-    public static final ConfiguredFeature<?, ?> CHERRY_CLIFFS_FOREST_TREES;
-    public static final ConfiguredFeature<?, ?> CHERRY_FOREST_TREES;
-    public static final ConfiguredFeature<?, ?> PLUM_FOREST_TREES;
-    public static final ConfiguredFeature<?, ?> THUNDERCLOUD_PLUM_FOREST_TREES;
-
     public static final ConfiguredFeature<?, ?> LAKE_CLEAR_WATER;
     public static final ConfiguredFeature<?, ?> SPRING_CLEAR_WATER;
 
@@ -210,20 +202,16 @@ public class DTConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> ORE_URANOLUMEN;
     public static final ConfiguredFeature<?, ?> ORE_VOID_CRITTERED_DIOPSIDE;
 
-    protected static ConfiguredFeature<?, ?> createBeehiveTree(TreeFeatureConfig config, TreeDecorator ...decorators) {
-        return Feature.TREE.configure(new TreeFeatureConfig.Builder(config.trunkProvider, config.trunkPlacer, config.foliageProvider, config.foliagePlacer, config.minimumSize).decorators(ImmutableList.copyOf(decorators)).build());
+    protected static ConfiguredFeature<?, ?> createTree(TreeFeatureConfig config, TreeDecorator ...decorators) {
+        return createTree(new TreeFeatureConfig.Builder(config.trunkProvider, config.trunkPlacer, config.foliageProvider, config.foliagePlacer, config.minimumSize).decorators(ImmutableList.copyOf(decorators)).build());
     }
 
     protected static ConfiguredFeature<?, ?> createTree(TreeFeatureConfig config) {
         return Feature.TREE.configure(config);
     }
 
-    protected static ConfiguredFeature<?, ?> createTree(SimpleRandomFeatureConfig config) {
+    protected static ConfiguredFeature<?, ?> createSimpleRandomSelector(SimpleRandomFeatureConfig config) {
         return Feature.SIMPLE_RANDOM_SELECTOR.configure(config);
-    }
-
-    protected static ConfiguredFeature<?, ?> createTreeSelector(RandomFeatureConfig config) {
-        return Feature.RANDOM_SELECTOR.configure(config);
     }
 
     protected static ConfiguredFeature<?, ?> createHugeMushroom(BlockStateProvider cap, BlockStateProvider stem) {
@@ -244,10 +232,6 @@ public class DTConfiguredFeatures {
 
     protected static ConfiguredFeature<?, ?> createLake(Block fluid, Block barrier) {
         return Feature.LAKE.configure(new LakeFeature.Config(BlockStateProvider.of(fluid), BlockStateProvider.of(barrier)));
-    }
-
-    protected static ConfiguredFeature<?, ?> createOre(List<OreFeatureConfig.Target> targets, int size) {
-        return createOre(targets, 0.0F, size);
     }
 
     protected static ConfiguredFeature<?, ?> createOre(RuleTest test, Block block, int size) {
@@ -278,7 +262,7 @@ public class DTConfiguredFeatures {
         CROLOOD = createTree(CROLOOD_TREE_CONFIG);
         DARK_CROLOOD = createTree(DARK_CROLOOD_TREE_CONFIG);
         EBONY = createTree(EBONY_TREE_CONFIG);
-        FUCHSITRA = createTree(FUCHSITRA_TREE_CONFIG);
+        FUCHSITRA = createSimpleRandomSelector(FUCHSITRA_TREE_CONFIG);
         FUNERANITE = createTree(FUNERANITE_TREE_CONFIG);
         GHOSHROOM = createTree(GHOSHROOM_TREE_CONFIG);
         PELTOGYNE = createTree(PELTOGYNE_TREE_CONFIG);
@@ -304,7 +288,7 @@ public class DTConfiguredFeatures {
         FANCY_AQUEAN = createTree(FANCY_AQUEAN_TREE_CONFIG);
         FANCY_BLACK_BIRCH = createTree(FANCY_BLACK_BIRCH_TREE_CONFIG);
         FANCY_CHERRY = createTree(FANCY_CHERRY_TREE_CONFIG);
-        FANCY_FUCHSITRA = createTree(FANCY_FUCHSITRA_TREE_CONFIG);
+        FANCY_FUCHSITRA = createSimpleRandomSelector(FANCY_FUCHSITRA_TREE_CONFIG);
         FANCY_PIN_CHERRY = createTree(FANCY_PIN_CHERRY_TREE_CONFIG);
         FANCY_PLUM = createTree(FANCY_PLUM_TREE_CONFIG);
         FANCY_TEAK = createTree(FANCY_TEAK_TREE_CONFIG);
@@ -315,71 +299,71 @@ public class DTConfiguredFeatures {
         GREAT_AQUEAN = createTree(GREAT_AQUEAN_TREE_CONFIG);
         GREAT_BLACK_BIRCH = createTree(GREAT_BLACK_BIRCH_TREE_CONFIG);
         GREAT_CHERRY = createTree(GREAT_CHERRY_TREE_CONFIG);
-        GREAT_FUCHSITRA = createTree(GREAT_FUCHSITRA_TREE_CONFIG);
+        GREAT_FUCHSITRA = createSimpleRandomSelector(GREAT_FUCHSITRA_TREE_CONFIG);
         GREAT_PIN_CHERRY = createTree(GREAT_PIN_CHERRY_TREE_CONFIG);
         GREAT_PLUM = createTree(GREAT_PLUM_TREE_CONFIG);
         GREAT_TEAK = createTree(GREAT_TEAK_TREE_CONFIG);
         GREAT_THUNDERCLOUD_PLUM = createTree(GREAT_THUNDERCLOUD_PLUM_TREE_CONFIG);
 
-        ALMOND_VERY_RARE_BEES = createBeehiveTree(ALMOND_TREE_CONFIG, BEES_0002);
-        ALMOND_REGULAR_BEES = createBeehiveTree(ALMOND_TREE_CONFIG, BEES_002);
-        ALMOND_MORE_BEES = createBeehiveTree(ALMOND_TREE_CONFIG, BEES_005);
-        ALMOND_BEES = createBeehiveTree(ALMOND_TREE_CONFIG, BEES);
+        ALMOND_VERY_RARE_BEES = createTree(ALMOND_TREE_CONFIG, BEES_0002);
+        ALMOND_REGULAR_BEES = createTree(ALMOND_TREE_CONFIG, BEES_002);
+        ALMOND_MORE_BEES = createTree(ALMOND_TREE_CONFIG, BEES_005);
+        ALMOND_BEES = createTree(ALMOND_TREE_CONFIG, BEES);
 
-        FANCY_ALMOND_VERY_RARE_BEES = createBeehiveTree(FANCY_ALMOND_TREE_CONFIG, BEES_0002);
-        FANCY_ALMOND_REGULAR_BEES = createBeehiveTree(FANCY_ALMOND_TREE_CONFIG, BEES_002);
-        FANCY_ALMOND_MORE_BEES = createBeehiveTree(FANCY_ALMOND_TREE_CONFIG, BEES_005);
-        FANCY_ALMOND_BEES = createBeehiveTree(FANCY_ALMOND_TREE_CONFIG, BEES);
+        FANCY_ALMOND_VERY_RARE_BEES = createTree(FANCY_ALMOND_TREE_CONFIG, BEES_0002);
+        FANCY_ALMOND_REGULAR_BEES = createTree(FANCY_ALMOND_TREE_CONFIG, BEES_002);
+        FANCY_ALMOND_MORE_BEES = createTree(FANCY_ALMOND_TREE_CONFIG, BEES_005);
+        FANCY_ALMOND_BEES = createTree(FANCY_ALMOND_TREE_CONFIG, BEES);
 
-        GREAT_ALMOND_VERY_RARE_BEES = createBeehiveTree(GREAT_ALMOND_TREE_CONFIG, BEES_0002);
-        GREAT_ALMOND_REGULAR_BEES = createBeehiveTree(GREAT_ALMOND_TREE_CONFIG, BEES_002);
-        GREAT_ALMOND_MORE_BEES = createBeehiveTree(GREAT_ALMOND_TREE_CONFIG, BEES_005);
-        GREAT_ALMOND_BEES = createBeehiveTree(GREAT_ALMOND_TREE_CONFIG, BEES);
+        GREAT_ALMOND_VERY_RARE_BEES = createTree(GREAT_ALMOND_TREE_CONFIG, BEES_0002);
+        GREAT_ALMOND_REGULAR_BEES = createTree(GREAT_ALMOND_TREE_CONFIG, BEES_002);
+        GREAT_ALMOND_MORE_BEES = createTree(GREAT_ALMOND_TREE_CONFIG, BEES_005);
+        GREAT_ALMOND_BEES = createTree(GREAT_ALMOND_TREE_CONFIG, BEES);
 
-        AQUEAN_VERY_RARE_BEES = createBeehiveTree(AQUEAN_TREE_CONFIG, VERY_RARE_STASP_NEST_TREES);
-        AQUEAN_REGULAR_BEES = createBeehiveTree(AQUEAN_TREE_CONFIG, REGULAR_STASP_NEST_TREES);
-        AQUEAN_MORE_BEES = createBeehiveTree(AQUEAN_TREE_CONFIG, MORE_STASP_NEST_TREES);
-        AQUEAN_BEES = createBeehiveTree(AQUEAN_TREE_CONFIG, HALF_STASP_NEST_TREES);
+        AQUEAN_VERY_RARE_BEES = createTree(AQUEAN_TREE_CONFIG, VERY_RARE_STASP_NEST_TREES);
+        AQUEAN_REGULAR_BEES = createTree(AQUEAN_TREE_CONFIG, REGULAR_STASP_NEST_TREES);
+        AQUEAN_MORE_BEES = createTree(AQUEAN_TREE_CONFIG, MORE_STASP_NEST_TREES);
+        AQUEAN_BEES = createTree(AQUEAN_TREE_CONFIG, HALF_STASP_NEST_TREES);
 
-        FANCY_AQUEAN_VERY_RARE_STASP_NEST = createBeehiveTree(AQUEAN_TREE_CONFIG, VERY_RARE_STASP_NEST_TREES);
-        FANCY_AQUEAN_REGULAR_STASP_NEST = createBeehiveTree(AQUEAN_TREE_CONFIG, REGULAR_STASP_NEST_TREES);
-        FANCY_AQUEAN_MORE_STASP_NEST = createBeehiveTree(AQUEAN_TREE_CONFIG, MORE_STASP_NEST_TREES);
-        FANCY_AQUEAN_STASP_NEST = createBeehiveTree(AQUEAN_TREE_CONFIG, HALF_STASP_NEST_TREES);
+        FANCY_AQUEAN_VERY_RARE_STASP_NEST = createTree(AQUEAN_TREE_CONFIG, VERY_RARE_STASP_NEST_TREES);
+        FANCY_AQUEAN_REGULAR_STASP_NEST = createTree(AQUEAN_TREE_CONFIG, REGULAR_STASP_NEST_TREES);
+        FANCY_AQUEAN_MORE_STASP_NEST = createTree(AQUEAN_TREE_CONFIG, MORE_STASP_NEST_TREES);
+        FANCY_AQUEAN_STASP_NEST = createTree(AQUEAN_TREE_CONFIG, HALF_STASP_NEST_TREES);
 
-        GREAT_AQUEAN_VERY_RARE_STASP_NEST = createBeehiveTree(AQUEAN_TREE_CONFIG, VERY_RARE_STASP_NEST_TREES);
-        GREAT_AQUEAN_REGULAR_STASP_NEST = createBeehiveTree(AQUEAN_TREE_CONFIG, REGULAR_STASP_NEST_TREES);
-        GREAT_AQUEAN_MORE_STASP_NEST = createBeehiveTree(AQUEAN_TREE_CONFIG, MORE_STASP_NEST_TREES);
-        GREAT_AQUEAN_STASP_NEST = createBeehiveTree(AQUEAN_TREE_CONFIG, HALF_STASP_NEST_TREES);
+        GREAT_AQUEAN_VERY_RARE_STASP_NEST = createTree(AQUEAN_TREE_CONFIG, VERY_RARE_STASP_NEST_TREES);
+        GREAT_AQUEAN_REGULAR_STASP_NEST = createTree(AQUEAN_TREE_CONFIG, REGULAR_STASP_NEST_TREES);
+        GREAT_AQUEAN_MORE_STASP_NEST = createTree(AQUEAN_TREE_CONFIG, MORE_STASP_NEST_TREES);
+        GREAT_AQUEAN_STASP_NEST = createTree(AQUEAN_TREE_CONFIG, HALF_STASP_NEST_TREES);
 
-        CHERRY_VERY_RARE_BEES = createBeehiveTree(CHERRY_TREE_CONFIG, BEES_0002);
-        CHERRY_REGULAR_BEES = createBeehiveTree(CHERRY_TREE_CONFIG, BEES_002);
-        CHERRY_MORE_BEES = createBeehiveTree(CHERRY_TREE_CONFIG, BEES_005);
-        CHERRY_BEES = createBeehiveTree(CHERRY_TREE_CONFIG, BEES);
+        CHERRY_VERY_RARE_BEES = createTree(CHERRY_TREE_CONFIG, BEES_0002);
+        CHERRY_REGULAR_BEES = createTree(CHERRY_TREE_CONFIG, BEES_002);
+        CHERRY_MORE_BEES = createTree(CHERRY_TREE_CONFIG, BEES_005);
+        CHERRY_BEES = createTree(CHERRY_TREE_CONFIG, BEES);
 
-        FANCY_CHERRY_VERY_RARE_BEES = createBeehiveTree(FANCY_CHERRY_TREE_CONFIG, BEES_0002);
-        FANCY_CHERRY_REGULAR_BEES = createBeehiveTree(FANCY_CHERRY_TREE_CONFIG, BEES_002);
-        FANCY_CHERRY_MORE_BEES = createBeehiveTree(FANCY_CHERRY_TREE_CONFIG, BEES_005);
-        FANCY_CHERRY_BEES = createBeehiveTree(FANCY_CHERRY_TREE_CONFIG, BEES);
+        FANCY_CHERRY_VERY_RARE_BEES = createTree(FANCY_CHERRY_TREE_CONFIG, BEES_0002);
+        FANCY_CHERRY_REGULAR_BEES = createTree(FANCY_CHERRY_TREE_CONFIG, BEES_002);
+        FANCY_CHERRY_MORE_BEES = createTree(FANCY_CHERRY_TREE_CONFIG, BEES_005);
+        FANCY_CHERRY_BEES = createTree(FANCY_CHERRY_TREE_CONFIG, BEES);
 
-        GREAT_CHERRY_VERY_RARE_BEES = createBeehiveTree(GREAT_CHERRY_TREE_CONFIG, BEES_0002);
-        GREAT_CHERRY_REGULAR_BEES = createBeehiveTree(GREAT_CHERRY_TREE_CONFIG, BEES_002);
-        GREAT_CHERRY_MORE_BEES = createBeehiveTree(GREAT_CHERRY_TREE_CONFIG, BEES_005);
-        GREAT_CHERRY_BEES = createBeehiveTree(GREAT_CHERRY_TREE_CONFIG, BEES);
+        GREAT_CHERRY_VERY_RARE_BEES = createTree(GREAT_CHERRY_TREE_CONFIG, BEES_0002);
+        GREAT_CHERRY_REGULAR_BEES = createTree(GREAT_CHERRY_TREE_CONFIG, BEES_002);
+        GREAT_CHERRY_MORE_BEES = createTree(GREAT_CHERRY_TREE_CONFIG, BEES_005);
+        GREAT_CHERRY_BEES = createTree(GREAT_CHERRY_TREE_CONFIG, BEES);
 
-        PIN_CHERRY_VERY_RARE_BEES = createBeehiveTree(PIN_CHERRY_TREE_CONFIG, BEES_0002);
-        PIN_CHERRY_REGULAR_BEES = createBeehiveTree(PIN_CHERRY_TREE_CONFIG, BEES_002);
-        PIN_CHERRY_MORE_BEES = createBeehiveTree(PIN_CHERRY_TREE_CONFIG, BEES_005);
-        PIN_CHERRY_BEES = createBeehiveTree(PIN_CHERRY_TREE_CONFIG, BEES);
+        PIN_CHERRY_VERY_RARE_BEES = createTree(PIN_CHERRY_TREE_CONFIG, BEES_0002);
+        PIN_CHERRY_REGULAR_BEES = createTree(PIN_CHERRY_TREE_CONFIG, BEES_002);
+        PIN_CHERRY_MORE_BEES = createTree(PIN_CHERRY_TREE_CONFIG, BEES_005);
+        PIN_CHERRY_BEES = createTree(PIN_CHERRY_TREE_CONFIG, BEES);
 
-        FANCY_PIN_CHERRY_VERY_RARE_BEES = createBeehiveTree(FANCY_PIN_CHERRY_TREE_CONFIG, BEES_0002);
-        FANCY_PIN_CHERRY_REGULAR_BEES = createBeehiveTree(FANCY_PIN_CHERRY_TREE_CONFIG, BEES_002);
-        FANCY_PIN_CHERRY_MORE_BEES = createBeehiveTree(FANCY_PIN_CHERRY_TREE_CONFIG, BEES_005);
-        FANCY_PIN_CHERRY_BEES = createBeehiveTree(FANCY_PIN_CHERRY_TREE_CONFIG, BEES);
+        FANCY_PIN_CHERRY_VERY_RARE_BEES = createTree(FANCY_PIN_CHERRY_TREE_CONFIG, BEES_0002);
+        FANCY_PIN_CHERRY_REGULAR_BEES = createTree(FANCY_PIN_CHERRY_TREE_CONFIG, BEES_002);
+        FANCY_PIN_CHERRY_MORE_BEES = createTree(FANCY_PIN_CHERRY_TREE_CONFIG, BEES_005);
+        FANCY_PIN_CHERRY_BEES = createTree(FANCY_PIN_CHERRY_TREE_CONFIG, BEES);
 
-        GREAT_PIN_CHERRY_VERY_RARE_BEES = createBeehiveTree(GREAT_PIN_CHERRY_TREE_CONFIG, BEES_0002);
-        GREAT_PIN_CHERRY_REGULAR_BEES = createBeehiveTree(GREAT_PIN_CHERRY_TREE_CONFIG, BEES_002);
-        GREAT_PIN_CHERRY_MORE_BEES = createBeehiveTree(GREAT_PIN_CHERRY_TREE_CONFIG, BEES_005);
-        GREAT_PIN_CHERRY_BEES = createBeehiveTree(GREAT_PIN_CHERRY_TREE_CONFIG, BEES);
+        GREAT_PIN_CHERRY_VERY_RARE_BEES = createTree(GREAT_PIN_CHERRY_TREE_CONFIG, BEES_0002);
+        GREAT_PIN_CHERRY_REGULAR_BEES = createTree(GREAT_PIN_CHERRY_TREE_CONFIG, BEES_002);
+        GREAT_PIN_CHERRY_MORE_BEES = createTree(GREAT_PIN_CHERRY_TREE_CONFIG, BEES_005);
+        GREAT_PIN_CHERRY_BEES = createTree(GREAT_PIN_CHERRY_TREE_CONFIG, BEES);
 
         BLACK_LILY = createRandomPatch(BLACK_LILY_CONFIG);
         LILAC = createRandomPatch(LILAC_CONFIG);
@@ -401,14 +385,6 @@ public class DTConfiguredFeatures {
         CHERRY_FOREST_FLOWERS = createFlower(CHERRY_FOREST_FLOWER_CONFIG);
         PLUM_FOREST_FLOWERS = createFlower(PLUM_FOREST_FLOWER_CONFIG);
         THUNDERCLOUD_PLUM_FOREST_FLOWERS = createFlower(THUNDERCLOUD_PLUM_FOREST_FLOWER_CONFIG);
-
-        ALMOND_FOREST_TREES = createTreeSelector(ALMOND_FOREST_TREES_CONFIG);
-        ALMOND_PLUS_FOREST_TREES = createTreeSelector(ALMOND_PLUS_FOREST_TREES_CONFIG);
-        BLACK_BIRCH_FOREST_TREES = createTreeSelector(BLACK_BIRCH_FOREST_TREES_CONFIG);
-        CHERRY_CLIFFS_FOREST_TREES = createTreeSelector(CHERRY_CLIFFS_FOREST_TREES_CONFIG);
-        CHERRY_FOREST_TREES = createTreeSelector(CHERRY_FOREST_TREES_CONFIG);
-        PLUM_FOREST_TREES = createTreeSelector(PLUM_FOREST_TREES_CONFIG);
-        THUNDERCLOUD_PLUM_FOREST_TREES = createTreeSelector(THUNDERCLOUD_PLUM_FOREST_TREES_CONFIG);
 
         LAKE_CLEAR_WATER = createLake(CLEAR_WATER, DIORITE);
 
@@ -578,14 +554,6 @@ public class DTConfiguredFeatures {
         ConfiguredFeatures.register("deep_trenches:cherry_forest_flowers", CHERRY_FOREST_FLOWERS);
         ConfiguredFeatures.register("deep_trenches:plum_forest_flowers", PLUM_FOREST_FLOWERS);
         ConfiguredFeatures.register("deep_trenches:thundercloud_plum_forest_flowers", THUNDERCLOUD_PLUM_FOREST_FLOWERS);
-
-        ConfiguredFeatures.register("deep_trenches:almond_forest_trees", ALMOND_FOREST_TREES);
-        ConfiguredFeatures.register("deep_trenches:almond_plus_forest_trees", ALMOND_PLUS_FOREST_TREES);
-        ConfiguredFeatures.register("deep_trenches:black_birch_forest_trees", BLACK_BIRCH_FOREST_TREES);
-        ConfiguredFeatures.register("deep_trenches:cherry_cliffs_forest_trees", CHERRY_CLIFFS_FOREST_TREES);
-        ConfiguredFeatures.register("deep_trenches:cherry_forest_trees", CHERRY_FOREST_TREES);
-        ConfiguredFeatures.register("deep_trenches:plum_forest_trees", PLUM_FOREST_TREES);
-        ConfiguredFeatures.register("deep_trenches:thundercloud_plum_forest_trees", THUNDERCLOUD_PLUM_FOREST_TREES);
 
         ConfiguredFeatures.register("deep_trenches:lake_clear_water", LAKE_CLEAR_WATER);
         ConfiguredFeatures.register("deep_trenches:spring_clear_water", SPRING_CLEAR_WATER);

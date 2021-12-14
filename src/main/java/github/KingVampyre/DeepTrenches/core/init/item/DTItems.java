@@ -2304,7 +2304,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:storcerack_coal_ore", STORCERACK_COAL_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:storcerack_copper_ore", STORCERACK_COPPER_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:storcerack_diamond_ore", STORCERACK_DIAMOND_ORE, MINERALOGY);
-		registerBlockItem("deep_trenches:enstatite_ore", STORCERACK_ENSTATITE_ORE, MINERALOGY);
+		registerBlockItem("deep_trenches:storcerack_enstatite_ore", STORCERACK_ENSTATITE_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:storcerack_gold_ore", STORCERACK_GOLD_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:storcerack_iron_ore", STORCERACK_IRON_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:storcerack_opal_ore", STORCERACK_OPAL_ORE, MINERALOGY);

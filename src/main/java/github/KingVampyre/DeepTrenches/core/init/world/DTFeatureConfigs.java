@@ -92,16 +92,6 @@ public class DTFeatureConfigs {
     public static final RandomPatchFeatureConfig PLUM_FOREST_FLOWER_CONFIG;
     public static final RandomPatchFeatureConfig THUNDERCLOUD_PLUM_FOREST_FLOWER_CONFIG;
 
-    public static final RandomFeatureConfig ALMOND_FOREST_TREES_CONFIG;
-    public static final RandomFeatureConfig ALMOND_PLUS_FOREST_TREES_CONFIG;
-    public static final RandomFeatureConfig BLACK_BIRCH_FOREST_TREES_CONFIG;
-    public static final RandomFeatureConfig CHERRY_CLIFFS_FOREST_TREES_CONFIG;
-    public static final RandomFeatureConfig CHERRY_FOREST_TREES_CONFIG;
-    public static final RandomFeatureConfig PLUM_FOREST_TREES_CONFIG;
-    public static final RandomFeatureConfig THUNDERCLOUD_PLUM_FOREST_TREES_CONFIG;
-
-    public static final RandomPatchFeatureConfig PATCH_GRASS_CLEAR_FOREST_CONFIG;
-
     protected static TreeFeatureConfig createStraightTreeConfig(BlockStateProvider trunkProvider, BlockStateProvider foliageProvider, FoliagePlacer foliagePlacer, int baseHeight, int firstRandomHeight) {
         return new TreeFeatureConfig.Builder(trunkProvider, new StraightTrunkPlacer(baseHeight, firstRandomHeight, 0), foliageProvider, foliagePlacer, new TwoLayersFeatureSize(2, 0, 2)).ignoreVines().build();
     }
@@ -165,10 +155,6 @@ public class DTFeatureConfigs {
 
     protected static RandomPatchFeatureConfig createTallFlowerConfig(BlockStateProvider provider) {
         return createRandomPatchFeatureConfig(96, 7, 3, provider);
-    }
-
-    protected static RandomPatchFeatureConfig createPatchGrassConfig(BlockStateProvider provider) {
-        return createRandomPatchFeatureConfig(32, 7, 3, provider);
     }
 
     protected static RandomPatchFeatureConfig createFlowerConfig(BlockStateProvider provider) {
@@ -248,79 +234,6 @@ public class DTFeatureConfigs {
         CHERRY_FOREST_FLOWER_CONFIG = createFlowerConfig(CHERRY_FOREST_FLOWER_PROVIDER);
         PLUM_FOREST_FLOWER_CONFIG = createFlowerConfig(PLUM_FOREST_FLOWER_PROVIDER);
         THUNDERCLOUD_PLUM_FOREST_FLOWER_CONFIG = createFlowerConfig(THUNDERCLOUD_PLUM_FOREST_FLOWER_PROVIDER);
-
-        ALMOND_FOREST_TREES_CONFIG = new RandomFeatureConfig(ImmutableList.of(
-                new RandomFeatureEntry(ALMOND_REGULAR_BEES, 0.25F),
-                new RandomFeatureEntry(ALMOND_MORE_BEES, 0.20F),
-                new RandomFeatureEntry(ALMOND_BEES, 0.15F),
-                new RandomFeatureEntry(FANCY_ALMOND_VERY_RARE_BEES, 0.25F),
-                new RandomFeatureEntry(FANCY_ALMOND_REGULAR_BEES, 0.20F),
-                new RandomFeatureEntry(FANCY_ALMOND_MORE_BEES, 0.15F),
-                new RandomFeatureEntry(FANCY_ALMOND_BEES, 0.15F),
-                new RandomFeatureEntry(GREAT_ALMOND_VERY_RARE_BEES, 0.20F),
-                new RandomFeatureEntry(GREAT_ALMOND_REGULAR_BEES, 0.15F),
-                new RandomFeatureEntry(GREAT_ALMOND_MORE_BEES, 0.15F),
-                new RandomFeatureEntry(GREAT_ALMOND_BEES, 0.15F)
-        ), ALMOND);
-
-        ALMOND_PLUS_FOREST_TREES_CONFIG = new RandomFeatureConfig(ImmutableList.of(
-                new RandomFeatureEntry(ALMOND_REGULAR_BEES, 0.175F),
-                new RandomFeatureEntry(ALMOND_MORE_BEES, 0.12F),
-                new RandomFeatureEntry(ALMOND_BEES, 0.05F),
-                new RandomFeatureEntry(FANCY_ALMOND_VERY_RARE_BEES, 0.25F),
-                new RandomFeatureEntry(FANCY_ALMOND_REGULAR_BEES, 0.175F),
-                new RandomFeatureEntry(FANCY_ALMOND_MORE_BEES, 0.12F),
-                new RandomFeatureEntry(FANCY_ALMOND_BEES, 0.05F),
-                new RandomFeatureEntry(GREAT_ALMOND_VERY_RARE_BEES, 0.25F),
-                new RandomFeatureEntry(GREAT_ALMOND_REGULAR_BEES, 0.175F),
-                new RandomFeatureEntry(GREAT_ALMOND_MORE_BEES, 0.12F),
-                new RandomFeatureEntry(GREAT_ALMOND_BEES, 0.05F),
-                new RandomFeatureEntry(BIRCH_BEES_002, 0.20F),
-                new RandomFeatureEntry(FANCY_OAK_BEES_002, 0.32F),
-                new RandomFeatureEntry(OAK_BEES_002, 0.16F)
-        ), ALMOND);
-
-        BLACK_BIRCH_FOREST_TREES_CONFIG = new RandomFeatureConfig(ImmutableList.of(
-
-        ), BLACK_BIRCH);
-
-        CHERRY_CLIFFS_FOREST_TREES_CONFIG = new RandomFeatureConfig(ImmutableList.of(
-                new RandomFeatureEntry(CHERRY_REGULAR_BEES, 0.55F),
-                new RandomFeatureEntry(CHERRY_MORE_BEES, 0.07F),
-                new RandomFeatureEntry(CHERRY_BEES, 0.05F),
-                new RandomFeatureEntry(FANCY_CHERRY_VERY_RARE_BEES, 0.25F),
-                new RandomFeatureEntry(FANCY_CHERRY_REGULAR_BEES, 0.20F),
-                new RandomFeatureEntry(FANCY_CHERRY_MORE_BEES, 0.10F),
-                new RandomFeatureEntry(FANCY_CHERRY_BEES, 0.10F),
-                new RandomFeatureEntry(GREAT_CHERRY_VERY_RARE_BEES, 0.25F),
-                new RandomFeatureEntry(GREAT_CHERRY_REGULAR_BEES, 0.15F),
-                new RandomFeatureEntry(GREAT_CHERRY_MORE_BEES, 0.10F),
-                new RandomFeatureEntry(GREAT_CHERRY_BEES, 0.10F)
-        ), CHERRY);
-
-        CHERRY_FOREST_TREES_CONFIG = new RandomFeatureConfig(ImmutableList.of(
-                new RandomFeatureEntry(CHERRY_REGULAR_BEES, 0.55F),
-                new RandomFeatureEntry(CHERRY_MORE_BEES, 0.07F),
-                new RandomFeatureEntry(CHERRY_BEES, 0.05F),
-                new RandomFeatureEntry(FANCY_CHERRY_VERY_RARE_BEES, 0.35F),
-                new RandomFeatureEntry(FANCY_CHERRY_REGULAR_BEES, 0.30F),
-                new RandomFeatureEntry(FANCY_CHERRY_MORE_BEES, 0.10F),
-                new RandomFeatureEntry(FANCY_CHERRY_BEES, 0.10F),
-                new RandomFeatureEntry(GREAT_CHERRY_VERY_RARE_BEES, 0.25F),
-                new RandomFeatureEntry(GREAT_CHERRY_REGULAR_BEES, 0.15F),
-                new RandomFeatureEntry(GREAT_CHERRY_MORE_BEES, 0.10F),
-                new RandomFeatureEntry(GREAT_CHERRY_BEES, 0.10F)
-        ), CHERRY);
-
-        PLUM_FOREST_TREES_CONFIG = new RandomFeatureConfig(ImmutableList.of(
-
-        ), PLUM);
-
-        THUNDERCLOUD_PLUM_FOREST_TREES_CONFIG = new RandomFeatureConfig(ImmutableList.of(
-
-        ), THUNDERCLOUD_PLUM);
-
-        PATCH_GRASS_CLEAR_FOREST_CONFIG = createPatchGrassConfig(PATCH_CLEAR_FOREST_GRASS_PROVIDER);
     }
 
 }

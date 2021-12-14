@@ -4916,6 +4916,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:storcerack_coal_ore", STORCERACK_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:storcerack_copper_ore", STORCERACK_COPPER_ORE);
 		Registry.register(BLOCK, "deep_trenches:storcerack_diamond_ore", STORCERACK_DIAMOND_ORE);
+		Registry.register(BLOCK, "deep_trenches:storcerack_enstatite_ore", STORCERACK_ENSTATITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:storcerack_gold_ore", STORCERACK_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:storcerack_iron_ore", STORCERACK_IRON_ORE);
 		Registry.register(BLOCK, "deep_trenches:storcerack_opal_ore", STORCERACK_OPAL_ORE);
@@ -4985,7 +4986,6 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:aquamarine_ore", AQUAMARINE_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_opal_ore", BLACK_OPAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:clinohumite_ore", CLINOHUMITE_ORE);
-		Registry.register(BLOCK, "deep_trenches:enstatite_ore", STORCERACK_ENSTATITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:morganite_ore", MORGANITE_ORE);
 		Registry.register(BLOCK, "deep_trenches:opal_ore", OPAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:ruby_ore", RUBY_ORE);

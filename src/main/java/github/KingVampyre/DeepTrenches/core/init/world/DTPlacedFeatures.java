@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.init.world;
 
+import com.google.common.collect.ImmutableList;
 import net.minecraft.block.Block;
 import net.minecraft.util.math.intprovider.ClampedIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -7,10 +8,7 @@ import net.minecraft.world.gen.decorator.BiomePlacementModifier;
 import net.minecraft.world.gen.decorator.CountPlacementModifier;
 import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.PlacedFeatures;
-import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
+import net.minecraft.world.gen.feature.*;
 
 import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.*;
 import static net.minecraft.world.gen.feature.PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP;
@@ -136,6 +134,10 @@ public class DTPlacedFeatures {
         return configuredFeature.withPlacement(VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(count, extraChance, extraCount)));
     }
 
+    protected static ConfiguredFeature<?, ?> createRandomSelector(RandomFeatureConfig config) {
+        return Feature.RANDOM_SELECTOR.configure(config);
+    }
+
     static {
         FUCHSITRA_TOWARDS_X = withFilter(DTConfiguredFeatures.FUCHSITRA_TOWARDS_X, FUCHSITRA_SAPLING);
         FUCHSITRA_TOWARDS_Z = withFilter(DTConfiguredFeatures.FUCHSITRA_TOWARDS_Z, FUCHSITRA_SAPLING);
@@ -236,13 +238,76 @@ public class DTPlacedFeatures {
         PLUM_FOREST_FLOWERS = withFlowerModifiers(DTConfiguredFeatures.PLUM_FOREST_FLOWERS);
         THUNDERCLOUD_PLUM_FOREST_FLOWERS = withFlowerModifiers(DTConfiguredFeatures.THUNDERCLOUD_PLUM_FOREST_FLOWERS);
 
-        ALMOND_FOREST_TREES = withCountExtra(DTConfiguredFeatures.ALMOND_FOREST_TREES,11, 0.15F, 2);
-        ALMOND_PLUS_FOREST_TREES = withCountExtra(DTConfiguredFeatures.ALMOND_PLUS_FOREST_TREES, 12, 0.15F, 1);
-        BLACK_BIRCH_FOREST_TREES = withCountExtra(DTConfiguredFeatures.BLACK_BIRCH_FOREST_TREES, 10, 0.1F, 1);
-        CHERRY_CLIFFS_FOREST_TREES = withCountExtra(DTConfiguredFeatures.CHERRY_CLIFFS_FOREST_TREES, 10, 0.1F, 1);
-        CHERRY_FOREST_TREES = withCountExtra(DTConfiguredFeatures.CHERRY_FOREST_TREES, 10, 0.1F, 1);
-        PLUM_FOREST_TREES = withCountExtra(DTConfiguredFeatures.PLUM_FOREST_TREES, 10, 0.1F, 1);
-        THUNDERCLOUD_PLUM_FOREST_TREES = withCountExtra(DTConfiguredFeatures.THUNDERCLOUD_PLUM_FOREST_TREES, 10, 0.1F, 1);
+        ALMOND_FOREST_TREES = withCountExtra(createRandomSelector(new RandomFeatureConfig(ImmutableList.of(
+                new RandomFeatureEntry(DTPlacedFeatures.ALMOND_REGULAR_BEES, 0.25F),
+                new RandomFeatureEntry(DTPlacedFeatures.ALMOND_MORE_BEES, 0.20F),
+                new RandomFeatureEntry(DTPlacedFeatures.ALMOND_BEES, 0.15F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_ALMOND_VERY_RARE_BEES, 0.25F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_ALMOND_REGULAR_BEES, 0.20F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_ALMOND_MORE_BEES, 0.15F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_ALMOND_BEES, 0.15F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_ALMOND_VERY_RARE_BEES, 0.20F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_ALMOND_REGULAR_BEES, 0.15F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_ALMOND_MORE_BEES, 0.15F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_ALMOND_BEES, 0.15F)
+        ), DTPlacedFeatures.ALMOND)), 10, 0.1F, 2);
+
+        ALMOND_PLUS_FOREST_TREES = withCountExtra(createRandomSelector(new RandomFeatureConfig(ImmutableList.of(
+                new RandomFeatureEntry(DTPlacedFeatures.ALMOND_REGULAR_BEES, 0.175F),
+                new RandomFeatureEntry(DTPlacedFeatures.ALMOND_MORE_BEES, 0.12F),
+                new RandomFeatureEntry(DTPlacedFeatures.ALMOND_BEES, 0.05F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_ALMOND_VERY_RARE_BEES, 0.25F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_ALMOND_REGULAR_BEES, 0.175F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_ALMOND_MORE_BEES, 0.12F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_ALMOND_BEES, 0.05F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_ALMOND_VERY_RARE_BEES, 0.25F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_ALMOND_REGULAR_BEES, 0.175F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_ALMOND_MORE_BEES, 0.12F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_ALMOND_BEES, 0.05F),
+                new RandomFeatureEntry(TreePlacedFeatures.BIRCH_BEES_002, 0.20F),
+                new RandomFeatureEntry(TreePlacedFeatures.FANCY_OAK_BEES_002, 0.32F),
+                new RandomFeatureEntry(TreePlacedFeatures.OAK_BEES_002, 0.16F)
+        ), DTPlacedFeatures.ALMOND)), 10, 0.1F, 1);
+
+        BLACK_BIRCH_FOREST_TREES = withCountExtra(createRandomSelector(new RandomFeatureConfig(ImmutableList.of(
+
+        ), DTPlacedFeatures.BLACK_BIRCH)), 10, 0.1F, 1);
+
+        CHERRY_CLIFFS_FOREST_TREES = withCountExtra(createRandomSelector(new RandomFeatureConfig(ImmutableList.of(
+                new RandomFeatureEntry(DTPlacedFeatures.CHERRY_REGULAR_BEES, 0.55F),
+                new RandomFeatureEntry(DTPlacedFeatures.CHERRY_MORE_BEES, 0.07F),
+                new RandomFeatureEntry(DTPlacedFeatures.CHERRY_BEES, 0.05F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_CHERRY_VERY_RARE_BEES, 0.25F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_CHERRY_REGULAR_BEES, 0.20F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_CHERRY_MORE_BEES, 0.10F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_CHERRY_BEES, 0.10F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_CHERRY_VERY_RARE_BEES, 0.25F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_CHERRY_REGULAR_BEES, 0.15F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_CHERRY_MORE_BEES, 0.10F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_CHERRY_BEES, 0.10F)
+        ), DTPlacedFeatures.CHERRY)), 10, 0.1F, 1);
+
+        CHERRY_FOREST_TREES = withCountExtra(createRandomSelector(new RandomFeatureConfig(ImmutableList.of(
+                new RandomFeatureEntry(DTPlacedFeatures.CHERRY_REGULAR_BEES, 0.55F),
+                new RandomFeatureEntry(DTPlacedFeatures.CHERRY_MORE_BEES, 0.07F),
+                new RandomFeatureEntry(DTPlacedFeatures.CHERRY_BEES, 0.05F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_CHERRY_VERY_RARE_BEES, 0.35F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_CHERRY_REGULAR_BEES, 0.30F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_CHERRY_MORE_BEES, 0.10F),
+                new RandomFeatureEntry(DTPlacedFeatures.FANCY_CHERRY_BEES, 0.10F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_CHERRY_VERY_RARE_BEES, 0.25F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_CHERRY_REGULAR_BEES, 0.15F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_CHERRY_MORE_BEES, 0.10F),
+                new RandomFeatureEntry(DTPlacedFeatures.GREAT_CHERRY_BEES, 0.10F)
+        ), DTPlacedFeatures.CHERRY)), 10, 0.1F, 1);
+
+        PLUM_FOREST_TREES = withCountExtra(createRandomSelector(new RandomFeatureConfig(ImmutableList.of(
+
+        ), DTPlacedFeatures.PLUM)), 10, 0.1F, 1);
+
+        THUNDERCLOUD_PLUM_FOREST_TREES = withCountExtra(createRandomSelector(new RandomFeatureConfig(ImmutableList.of(
+
+        ), DTPlacedFeatures.THUNDERCLOUD_PLUM)), 10, 0.1F, 1);
     }
 
     public static void initialize() {
