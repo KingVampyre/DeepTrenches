@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
+import github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;

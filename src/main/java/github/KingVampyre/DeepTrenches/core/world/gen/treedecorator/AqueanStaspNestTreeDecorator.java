@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTTreeDecorators.AQUEAN_TREE_STASP_NEST;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTTreeDecorators.AQUEAN_TREE_STASP_NEST;
 import static net.minecraft.util.math.Direction.SOUTH;
 
 public class AqueanStaspNestTreeDecorator extends StaspNestTreeDecorator {

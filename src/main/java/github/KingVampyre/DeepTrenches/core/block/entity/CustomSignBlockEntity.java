@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.block.entity;
 
-import github.KingVampyre.DeepTrenches.core.init.DTBlockEntityTypes;
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlockEntityTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.SignBlockEntity;

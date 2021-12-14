@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.PELTOGYNE;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTConfiguredFeatures.PELTOGYNE;
 
 public class PeltogyneSaplingGenerator extends LargeTreeSaplingGenerator {
 

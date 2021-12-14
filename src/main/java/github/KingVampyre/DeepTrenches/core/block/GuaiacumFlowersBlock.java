@@ -5,7 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.GUAIACUM_FLOWERS_SPREADABLE;
+import static github.KingVampyre.DeepTrenches.core.init.tag.DTBlockTags.GUAIACUM_FLOWERS_SPREADABLE;
 
 public class GuaiacumFlowersBlock extends SpreadingVineBlock {
 

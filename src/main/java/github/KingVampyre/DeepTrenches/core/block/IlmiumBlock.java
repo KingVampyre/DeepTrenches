@@ -17,9 +17,9 @@ import net.minecraft.world.WorldView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.ILMIUM_SPREADABLE;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.ACID;
-import static github.KingVampyre.DeepTrenches.core.init.DTProperties.ILMIUM_TYPE;
+import static github.KingVampyre.DeepTrenches.core.init.tag.DTBlockTags.ILMIUM_SPREADABLE;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.ACID;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlockProperties.ILMIUM_TYPE;
 import static net.minecraft.state.property.Properties.VERTICAL_DIRECTION;
 import static net.minecraft.util.math.Direction.DOWN;
 import static net.minecraft.util.math.Direction.UP;
@@ -69,7 +69,7 @@ public class IlmiumBlock extends GrassBlock {
             var placementState = super.getPlacementState(ctx);
 
             if(placementState != null) {
-                world.getBlockTickScheduler().schedule(pos, this, 20 + world.random.nextInt(40));
+                world.createAndScheduleBlockTick(pos, this, 20 + world.random.nextInt(40));
 
                 return placementState.with(ILMIUM_TYPE, type).with(VERTICAL_DIRECTION, direction);
             }
@@ -84,7 +84,7 @@ public class IlmiumBlock extends GrassBlock {
         var vertical = state.get(VERTICAL_DIRECTION);
 
         if (!this.canSurvive(world, pos, vertical))
-            world.getBlockTickScheduler().schedule(pos, this, 1);
+            world.createAndScheduleBlockTick(pos, this, 1);
         else {
             for(int i = 0; i < 16; ++i) {
                 var x = random.nextInt(10) - 5;
@@ -98,12 +98,12 @@ public class IlmiumBlock extends GrassBlock {
                     var spreadDirection = random.nextBoolean() ? UP : DOWN;
 
                     var block = spreadState.getBlock();
-                    var ilmium = this.getDefaultState()
+                    var blockState = this.getDefaultState()
                             .with(ILMIUM_TYPE, IlmiumType.from(block))
                             .with(VERTICAL_DIRECTION, spreadDirection);
 
                     if(this.canSpread(world, spreadPos, spreadDirection))
-                        world.setBlockState(spreadPos, ilmium);
+                        world.setBlockState(spreadPos, blockState);
 
                 }
 
@@ -114,7 +114,7 @@ public class IlmiumBlock extends GrassBlock {
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        world.getBlockTickScheduler().schedule(pos, this, 1);
+        world.createAndScheduleBlockTick(pos, this, 1);
 
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }

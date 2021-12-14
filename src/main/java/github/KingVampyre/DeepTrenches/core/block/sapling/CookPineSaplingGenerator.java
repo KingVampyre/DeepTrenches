@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.COOK_PINE;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTConfiguredFeatures.COOK_PINE;
 
 public class CookPineSaplingGenerator extends LargeTreeSaplingGenerator {
 

@@ -5,7 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.GlowLichenBlock;
 import net.minecraft.item.ItemPlacementContext;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.LICHEN;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.LICHEN;
 
 public class LichenBlock extends GlowLichenBlock {
 

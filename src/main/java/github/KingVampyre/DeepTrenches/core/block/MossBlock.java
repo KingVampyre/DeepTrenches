@@ -5,7 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.GlowLichenBlock;
 import net.minecraft.item.ItemPlacementContext;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.MOSS;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.MOSS;
 
 public class MossBlock extends GlowLichenBlock {
 

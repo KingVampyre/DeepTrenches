@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.DARK_CROLOOD;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTConfiguredFeatures.DARK_CROLOOD;
 
 public class DarkCroloodSaplingGenerator extends LargeTreeSaplingGenerator {
 

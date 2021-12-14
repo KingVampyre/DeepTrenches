@@ -224,7 +224,7 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
                                 var cauldronState = world.getBlockState(cauldronPos);
                                 var delay = 50 + tipPos.getY() - cauldronPos.getY();
 
-                                world.getBlockTickScheduler().schedule(cauldronPos, cauldronState.getBlock(), delay);
+                                world.createAndScheduleBlockTick(cauldronPos, cauldronState.getBlock(), delay);
                             }
 
                         }
@@ -285,11 +285,9 @@ public abstract class AbstractPointedStone extends Block implements LandingBlock
 
     protected void scheduleFall(BlockState state, WorldAccess world, BlockPos pos) {
         var tipPos = this.getTipPos(state, world, pos, Integer.MAX_VALUE, true);
-        var scheduler = world.getBlockTickScheduler();
 
         if (tipPos != null)
-            BlockPosHelper.findAll(world, tipPos.down(), UP, this::isPointingDown, MAX_VALUE).forEach(p -> scheduler.schedule(p, this, 2));
-
+            BlockPosHelper.findAll(world, tipPos.down(), UP, this::isPointingDown, MAX_VALUE).forEach(p -> world.createAndScheduleBlockTick(p, this, 2));
     }
 
     @Nullable

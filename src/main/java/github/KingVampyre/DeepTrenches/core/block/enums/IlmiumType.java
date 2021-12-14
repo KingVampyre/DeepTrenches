@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.block.enums;
 
-import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.Util;

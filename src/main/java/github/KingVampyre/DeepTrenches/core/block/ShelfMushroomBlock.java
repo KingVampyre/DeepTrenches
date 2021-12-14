@@ -8,7 +8,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 
 import java.util.function.Supplier;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.SHELF_MUSHROOM_GROW_BLOCK;
+import static github.KingVampyre.DeepTrenches.core.init.tag.DTBlockTags.SHELF_MUSHROOM_GROW_BLOCK;
 
 public class ShelfMushroomBlock extends LogMushroomBlock {
 

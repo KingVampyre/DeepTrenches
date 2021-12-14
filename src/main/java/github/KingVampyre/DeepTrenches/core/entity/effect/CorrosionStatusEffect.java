@@ -9,9 +9,9 @@ import net.minecraft.entity.effect.StatusEffectCategory;
 
 import java.util.UUID;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.ACID;
-import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.GAS;
-import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.ACID_CORROSION;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources.ACID;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources.GAS;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects.ACID_CORROSION;
 import static net.minecraft.entity.EquipmentSlot.Type.ARMOR;
 import static net.minecraft.entity.attribute.EntityAttributes.GENERIC_MAX_HEALTH;
 

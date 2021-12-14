@@ -12,8 +12,8 @@ import net.minecraft.world.WorldView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.FUR_PLATEAU;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.FUR_PLATEAU_STEM;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.FUR_PLATEAU;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.FUR_PLATEAU_STEM;
 import static net.minecraft.block.Blocks.WATER;
 import static net.minecraft.state.property.Properties.WATERLOGGED;
 import static net.minecraft.util.math.Direction.UP;

@@ -21,8 +21,8 @@ import net.minecraft.world.WorldView;
 import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.block.enums.BlockThird.*;
-import static github.KingVampyre.DeepTrenches.core.init.DTProperties.BLOCK_THIRD;
-import static github.KingVampyre.DeepTrenches.core.init.DTProperties.FRUIT;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlockProperties.BLOCK_THIRD;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlockProperties.FRUIT;
 import static net.minecraft.block.Blocks.AIR;
 import static net.minecraft.state.property.Properties.AGE_25;
 import static net.minecraft.util.math.Direction.DOWN;

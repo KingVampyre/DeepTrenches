@@ -5,8 +5,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.STORCEAN_THORNS;
-import static github.KingVampyre.DeepTrenches.core.init.DTProperties.FACING_EXCEPT_DOWN;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources.STORCEAN_THORNS;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlockProperties.FACING_EXCEPT_DOWN;
 import static net.minecraft.util.math.Direction.NORTH;
 
 public abstract class StorceanThornsBlock extends FanPlantBlock {

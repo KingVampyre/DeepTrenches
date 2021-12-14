@@ -5,7 +5,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.ADAIGGER;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.ADAIGGER;
 import static net.minecraft.enchantment.EnchantmentTarget.*;
 import static net.minecraft.enchantment.Enchantments.MULTISHOT;
 import static net.minecraft.enchantment.Enchantments.PIERCING;

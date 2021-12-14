@@ -5,7 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.SLEEPY;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects.SLEEPY;
 import static net.minecraft.entity.player.PlayerEntity.SleepFailureReason.NOT_POSSIBLE_NOW;
 
 public class AllowSleepyStatusEffect implements EntitySleepEvents.AllowSleeping {

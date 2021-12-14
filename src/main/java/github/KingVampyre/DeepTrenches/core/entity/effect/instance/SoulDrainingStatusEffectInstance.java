@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.entity.effect.instance;
 
-import github.KingVampyre.DeepTrenches.core.init.DTDamageSources;
+import github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;

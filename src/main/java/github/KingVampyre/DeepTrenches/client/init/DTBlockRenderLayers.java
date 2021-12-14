@@ -3,7 +3,7 @@ package github.KingVampyre.DeepTrenches.client.init;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.*;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.*;
 
 public class DTBlockRenderLayers {
     

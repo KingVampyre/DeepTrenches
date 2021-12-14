@@ -2,8 +2,8 @@ package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
-import github.KingVampyre.DeepTrenches.core.init.DTDamageSources;
-import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources;
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -21,10 +21,10 @@ import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_STORCEAN_ABYSSOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.STORCEAN_ABYSSOPELAGIC_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.STORCEAN_ABYSSOPELAGIC_WATER_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.STORCEAN_ABYSSOPELAGIC_WATER_BUCKET;
 import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
-import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.PRESSURE;
-import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.SINKING;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects.PRESSURE;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects.SINKING;
 import static net.minecraft.particle.ParticleTypes.BUBBLE;
 
 public abstract class StorceanAbyssopelagicWaterFluid extends AbstractOxygenatedWaterFluid implements StatusEffectFluid {

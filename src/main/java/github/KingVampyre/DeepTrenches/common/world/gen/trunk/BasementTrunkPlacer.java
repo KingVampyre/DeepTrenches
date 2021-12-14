@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.common.world.gen.trunk;
 
 import com.google.common.collect.ImmutableList;
-import github.KingVampyre.DeepTrenches.core.util.world.gen.TreeFeatureHelper;
+import github.KingVampyre.DeepTrenches.core.util.world.gen.biome.TreeFeatureHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.TestableWorld;

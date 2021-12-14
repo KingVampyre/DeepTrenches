@@ -21,8 +21,8 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.LOVE_TICKS;
-import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.LOVING_PLAYER;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTMemoryModuleTypes.LOVE_TICKS;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTMemoryModuleTypes.LOVING_PLAYER;
 
 @Deprecated
 public abstract class LovingFishEntity extends AngerableFishEntity implements Lovable {

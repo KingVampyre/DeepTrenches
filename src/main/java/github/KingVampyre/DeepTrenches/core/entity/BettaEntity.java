@@ -19,8 +19,8 @@ import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_235;
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.BETTA_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_235;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.BETTA_BUCKET;
 
 public class BettaEntity extends AbstractBettaEntity implements Variant {
 

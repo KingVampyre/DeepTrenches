@@ -1,5 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
+import github.KingVampyre.DeepTrenches.core.init.item.DTItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;

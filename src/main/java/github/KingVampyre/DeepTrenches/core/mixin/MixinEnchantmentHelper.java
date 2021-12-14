@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.ADAIGGER;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.ADAIGGER;
 import static net.minecraft.enchantment.EnchantmentTarget.WEAPON;
 import static net.minecraft.enchantment.Enchantments.LOYALTY;
 

@@ -15,7 +15,7 @@ import net.minecraft.world.gen.foliage.FoliagePlacerType;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.FUCHSITRA_FOLIAGE_PLACER;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTFoliagePlacerTypes.FUCHSITRA_FOLIAGE_PLACER;
 
 public class FuchsitraFoliagePlacer extends BlobFoliagePlacer {
 

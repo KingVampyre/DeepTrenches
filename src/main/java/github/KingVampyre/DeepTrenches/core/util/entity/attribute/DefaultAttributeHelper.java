@@ -3,7 +3,7 @@ package github.KingVampyre.DeepTrenches.core.util.entity.attribute;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.mob.MobEntity;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTEntityAttributes.*;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTEntityAttributes.*;
 import static net.minecraft.entity.attribute.EntityAttributes.*;
 
 public class DefaultAttributeHelper {

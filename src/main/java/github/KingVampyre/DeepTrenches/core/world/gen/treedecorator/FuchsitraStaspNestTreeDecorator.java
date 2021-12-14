@@ -11,9 +11,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.FUCHSITRA_LOG;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.STASP_NEST;
-import static github.KingVampyre.DeepTrenches.core.init.DTTreeDecorators.FUCHSITRA_TREE_STASP_NEST;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.FUCHSITRA_LOG;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.STASP_NEST;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTTreeDecorators.FUCHSITRA_TREE_STASP_NEST;
 
 public class FuchsitraStaspNestTreeDecorator extends StaspNestTreeDecorator {
 

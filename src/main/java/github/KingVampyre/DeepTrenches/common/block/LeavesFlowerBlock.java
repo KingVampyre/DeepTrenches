@@ -8,8 +8,8 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTProperties.FACING_EXCEPT_DOWN;
-import static github.KingVampyre.DeepTrenches.core.init.DTProperties.STAGE_2;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlockProperties.FACING_EXCEPT_DOWN;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlockProperties.STAGE_2;
 import static net.minecraft.state.property.Properties.AGE_25;
 import static net.minecraft.util.math.Direction.NORTH;
 

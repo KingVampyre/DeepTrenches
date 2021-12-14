@@ -1,8 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.SPROOM_LOG;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.SPROOM_WOOD;
-import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.SPROOM_SPIKE;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.SPROOM_LOG;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.SPROOM_WOOD;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources.SPROOM_SPIKE;
 import static net.minecraft.block.Blocks.JIGSAW;
 import static net.minecraft.block.enums.BlockHalf.BOTTOM;
 import static net.minecraft.block.enums.BlockHalf.TOP;
@@ -66,15 +66,11 @@ public class SproomSpikeBlock extends PlantBlock {
 	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
 
-		switch (state.get(FACING).getAxis()) {
-		case X:
-		default:
-			return Block.createCuboidShape(0, 6, 6, 16, 10, 10);
-		case Z:
-			return Block.createCuboidShape(6, 6, 0, 10, 10, 16);
-		case Y:
-			return Block.createCuboidShape(6, 0, 6, 10, 16, 10);
-		}
+		return switch (state.get(FACING).getAxis()) {
+			case X -> Block.createCuboidShape(0, 6, 6, 16, 10, 10);
+			case Z -> Block.createCuboidShape(6, 6, 0, 10, 10, 16);
+			case Y -> Block.createCuboidShape(6, 0, 6, 10, 16, 10);
+		};
 
 	}
 
@@ -130,7 +126,7 @@ public class SproomSpikeBlock extends PlantBlock {
 			return state.with(FACING, dir.getOpposite());
 
 		if (!state.canPlaceAt(world, pos))
-			world.getBlockTickScheduler().schedule(pos, this, 1);
+			world.createAndScheduleBlockTick(pos, this, 1);
 
 		if (offsetState.getBlock() == this && state.get(BLOCK_HALF) == TOP)
 			return state.with(BLOCK_HALF, BOTTOM);

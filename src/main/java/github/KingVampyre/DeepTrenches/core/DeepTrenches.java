@@ -8,6 +8,11 @@ import github.KingVampyre.DeepTrenches.core.event.block.AirialMossCallback;
 import github.KingVampyre.DeepTrenches.core.event.block.IlmiumCallback;
 import github.KingVampyre.DeepTrenches.core.event.entity.AllowSleepyStatusEffect;
 import github.KingVampyre.DeepTrenches.core.init.*;
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlockEntityTypes;
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.entity.DTEntityTypes;
+import github.KingVampyre.DeepTrenches.core.init.item.DTItems;
+import github.KingVampyre.DeepTrenches.core.init.world.*;
 import github.Louwind.Reload.client.event.client.callback.ColorCacheLoad;
 import github.Louwind.entityutils.core.block.entity.render.FabricSignBlockEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
@@ -39,6 +44,7 @@ public class  DeepTrenches implements ModInitializer, ClientModInitializer {
 		DTTrunkPlacerTypes.initialize();
 		DTTreeDecorators.initialize();
 		DTConfiguredFeatures.initialize();
+		DTPlacedFeatures.initialize();
 		DTBiomes.initialize();
 		/* EVENTS */
 		BlockReplacementCallback.EVENT.register(AirialMossCallback.INSTANCE);

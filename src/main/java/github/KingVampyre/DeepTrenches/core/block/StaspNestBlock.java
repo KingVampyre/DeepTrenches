@@ -1,65 +1,21 @@
 package github.KingVampyre.DeepTrenches.core.block;
 
 import github.KingVampyre.DeepTrenches.core.block.entity.StaspNestBlockEntity;
-import github.KingVampyre.DeepTrenches.core.entity.StaspEntity;
-import github.KingVampyre.DeepTrenches.core.init.DTItems;
-import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BeehiveBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.ItemEntity;
-import net.minecraft.entity.TntEntity;
-import net.minecraft.entity.boss.WitherEntity;
-import net.minecraft.entity.mob.CreeperEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.WitherSkullEntity;
-import net.minecraft.entity.vehicle.TntMinecartEntity;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.loot.context.LootContext;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-import java.util.Random;
-
-import static github.KingVampyre.DeepTrenches.core.init.DTBlockEntityTypes.STASP_NEST;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlockEntityTypes.STASP_NEST;
 import static net.minecraft.block.BlockRenderType.MODEL;
-import static net.minecraft.item.Items.GLASS_BOTTLE;
-import static net.minecraft.loot.context.LootContextParameters.BLOCK_ENTITY;
-import static net.minecraft.loot.context.LootContextParameters.THIS_ENTITY;
-import static net.minecraft.sound.SoundCategory.NEUTRAL;
-import static net.minecraft.sound.SoundEvents.ITEM_BOTTLE_FILL;
-import static net.minecraft.stat.Stats.USED;
 import static net.minecraft.state.property.Properties.HORIZONTAL_FACING;
-import static net.minecraft.tag.BlockTags.IMPERMEABLE;
 import static net.minecraft.util.math.Direction.*;
-import static net.minecraft.util.math.Direction.Axis.*;
-import static net.minecraft.world.GameRules.DO_TILE_DROPS;
-import static net.minecraft.world.event.GameEvent.FLUID_PICKUP;
-import static net.minecraft.world.event.GameEvent.SHEAR;
 
 public class StaspNestBlock extends BlockWithEntity {
 

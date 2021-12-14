@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItemTags.*;
+import static github.KingVampyre.DeepTrenches.core.init.tag.DTItemTags.*;
 import static net.fabricmc.fabric.api.registry.FuelRegistry.INSTANCE;
 
 public class DTFuelRegistry {

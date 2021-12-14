@@ -9,7 +9,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTMemoryModuleTypes.*;
 
 @Deprecated
 public abstract class NourishFishEntity extends LuminousFishEntity implements Nourish {

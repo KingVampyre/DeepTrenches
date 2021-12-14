@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import static github.KingVampyre.DeepTrenches.client.init.DTTextures.GUI_ACID_CORRODED_ICONS;
 import static github.KingVampyre.DeepTrenches.client.init.DTTextures.GUI_GAS_CORRODED_ICONS;
-import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.*;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects.*;
 import static net.minecraft.entity.effect.StatusEffects.REGENERATION;
 
 @Mixin(InGameHud.class)

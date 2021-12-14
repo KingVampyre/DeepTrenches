@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.common.world.gen.treedecorator;
 
-import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlocks;
 import net.minecraft.block.BeehiveBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;

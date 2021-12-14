@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.*;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTConfiguredFeatures.*;
 
 public class PinCherrySaplingGenerator extends LargeTreeSaplingGenerator {
 
@@ -22,7 +22,7 @@ public class PinCherrySaplingGenerator extends LargeTreeSaplingGenerator {
         var fancy = random.nextInt(5) == 0;
 
         if(bees)
-            return fancy ? FANCY_PIN_CHERRY_MORE_BEEHIVES : PIN_CHERRY_MORE_BEEHIVES;
+            return fancy ? FANCY_PIN_CHERRY_MORE_BEES : PIN_CHERRY_MORE_BEES;
         else
             return fancy ? FANCY_PIN_CHERRY : PIN_CHERRY;
     }

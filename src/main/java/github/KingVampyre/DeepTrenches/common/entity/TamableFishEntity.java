@@ -19,7 +19,7 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTMemoryModuleTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTMemoryModuleTypes.*;
 
 @Deprecated
 public abstract class TamableFishEntity extends LovingFishEntity implements Tamable {

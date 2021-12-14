@@ -2,8 +2,8 @@ package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
-import github.KingVampyre.DeepTrenches.core.init.DTDamageSources;
-import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources;
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -21,9 +21,9 @@ import java.util.Random;
 
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.FLOWING_HADOPELAGIC_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.DTFluids.HADOPELAGIC_WATER;
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.HADOPELAGIC_WATER_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.HADOPELAGIC_WATER_BUCKET;
 import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
-import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.PRESSURE;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects.PRESSURE;
 
 public abstract class HadopelagicWaterFluid extends AbstractOxygenatedWaterFluid implements StatusEffectFluid {
 

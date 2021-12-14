@@ -9,8 +9,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.FUR_PLATEAU;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.FUR_PLATEAU_STEM;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.FUR_PLATEAU;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.FUR_PLATEAU_STEM;
 import static net.minecraft.state.property.Properties.WATERLOGGED;
 import static net.minecraft.util.math.Direction.UP;
 

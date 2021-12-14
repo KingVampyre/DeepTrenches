@@ -2,7 +2,7 @@ package github.KingVampyre.DeepTrenches.core.world.gen.foliage;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import github.KingVampyre.DeepTrenches.core.util.world.gen.TreeFeatureHelper;
+import github.KingVampyre.DeepTrenches.core.util.world.gen.biome.TreeFeatureHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.IntProvider;
@@ -14,7 +14,7 @@ import net.minecraft.world.gen.foliage.FoliagePlacerType;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTFoliagePlacerTypes.FANCY_AQUEAN_FOLIAGE_PLACER;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTFoliagePlacerTypes.FANCY_AQUEAN_FOLIAGE_PLACER;
 import static github.KingVampyre.DeepTrenches.common.world.gen.BlockStatePlacer.FOLIAGE;
 
 public class FancyAqueanFoliagePlacer extends BlobFoliagePlacer {

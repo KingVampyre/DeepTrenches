@@ -1,8 +1,8 @@
 package github.KingVampyre.DeepTrenches.core.fluid;
 
 import github.KingVampyre.DeepTrenches.common.fluid.AbstractOxygenatedWaterFluid;
-import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
-import github.KingVampyre.DeepTrenches.core.init.DTItems;
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.item.DTItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.enchantment.EnchantmentHelper;

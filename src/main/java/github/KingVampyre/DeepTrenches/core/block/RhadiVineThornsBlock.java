@@ -5,7 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.RHADI_LOGS;
+import static github.KingVampyre.DeepTrenches.core.init.tag.DTBlockTags.RHADI_LOGS;
 
 public class RhadiVineThornsBlock extends StorceanVineThornsBlock {
 

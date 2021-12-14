@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 
 import static github.KingVampyre.DeepTrenches.client.init.DTColorMaps.STORCEAN_FOLIAGE;
 import static github.KingVampyre.DeepTrenches.client.init.DTColorMaps.STORCEAN_MOSOIL;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.*;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.*;
 
 public class DTItemColors {
 

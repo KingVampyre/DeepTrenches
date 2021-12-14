@@ -5,7 +5,7 @@ import github.KingVampyre.DeepTrenches.client.color.block.MosoilColorProvider;
 import github.KingVampyre.DeepTrenches.client.color.block.StorceanFoliageColorProvider;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.*;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.*;
 
 public class DTBlockColors {
 

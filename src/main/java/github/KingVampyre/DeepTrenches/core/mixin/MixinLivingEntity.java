@@ -2,7 +2,7 @@ package github.KingVampyre.DeepTrenches.core.mixin;
 
 import github.KingVampyre.DeepTrenches.common.fluid.StatusEffectFluid;
 import github.KingVampyre.DeepTrenches.common.fluid.OxygenatedFluid;
-import github.KingVampyre.DeepTrenches.core.init.DTStatusEffects;
+import github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects;
 import github.KingVampyre.DeepTrenches.core.util.enchantment.DTEnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -31,9 +31,9 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTFluidTags.SINKING_WATER;
+import static github.KingVampyre.DeepTrenches.core.init.tag.DTFluidTags.SINKING_WATER;
 import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.*;
-import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.*;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects.*;
 import static net.minecraft.entity.EquipmentSlot.MAINHAND;
 import static net.minecraft.entity.damage.DamageSource.*;
 

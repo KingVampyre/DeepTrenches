@@ -28,7 +28,7 @@ import java.util.Random;
 import java.util.function.BiFunction;
 
 import static github.KingVampyre.DeepTrenches.core.block.enums.Twisted.*;
-import static github.KingVampyre.DeepTrenches.core.init.DTProperties.TWISTED;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlockProperties.TWISTED;
 import static net.minecraft.enchantment.Enchantments.SILK_TOUCH;
 import static net.minecraft.fluid.Fluids.EMPTY;
 import static net.minecraft.fluid.Fluids.WATER;
@@ -120,20 +120,20 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
 
         if (state.get(WATERLOGGED))
-            world.getFluidTickScheduler().schedule(pos, WATER, WATER.getTickRate(world));
+            world.createAndScheduleFluidTick(pos, WATER, WATER.getTickRate(world));
 
         if (direction.getAxis() != Y)
             return state;
 
         var scheduler = world.getBlockTickScheduler();
 
-        if (scheduler.isScheduled(pos, this) && this.isPointing(state, DOWN))
+        if (scheduler.isTicking(pos, this) && this.isPointing(state, DOWN))
             return state;
 
         var canPlaceAt = this.canPlaceAt(state, world, pos);
 
         if(!canPlaceAt && this.isPointing(state, UP)) {
-            scheduler.schedule(pos, this, 1);
+            world.createAndScheduleBlockTick(pos, this, 1);
             return state;
         }
 
@@ -147,13 +147,8 @@ public class TwistedBlueStorcerack extends AbstractPointedStone {
         var aheadState = world.getBlockState(aheadPos);
         var opposite = verticalDirection.getOpposite();
 
-        if(!aheadState.isOf(this)) {
-
-            if (aheadState.isSideSolidFullSquare(world, aheadPos, opposite))
-                return state.with(TWISTED, TIP_MERGE);
-            else
-                return state.with(TWISTED, TIP);
-        }
+        if(!aheadState.isOf(this))
+            return state.with(TWISTED, aheadState.isSideSolidFullSquare(world, aheadPos, opposite) ? TIP_MERGE : TIP);
 
         var twisted = state.get(TWISTED);
         var aheadTwisted = aheadState.get(TWISTED);

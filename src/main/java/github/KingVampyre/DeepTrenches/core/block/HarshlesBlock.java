@@ -10,8 +10,8 @@ import net.minecraft.world.WorldView;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.ENROTIUM;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.HARSHLES;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.ENROTIUM;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.HARSHLES;
 
 public class HarshlesBlock extends AbstractPlantStemBlock {
 

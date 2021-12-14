@@ -3,7 +3,7 @@ package github.KingVampyre.DeepTrenches.core.entity;
 import com.google.common.collect.ImmutableList;
 import github.KingVampyre.DeepTrenches.common.entity.HatchetfishEntity;
 import github.KingVampyre.DeepTrenches.common.entity.ai.mob.LightState;
-import github.KingVampyre.DeepTrenches.core.init.DTItems;
+import github.KingVampyre.DeepTrenches.core.init.item.DTItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
@@ -11,8 +11,8 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_150;
-import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.*;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_150;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTLightStates.*;
 
 public class GiantHatchetfishEntity extends HatchetfishEntity {
 

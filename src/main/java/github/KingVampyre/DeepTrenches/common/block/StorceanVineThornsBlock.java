@@ -5,7 +5,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.STORCEAN_THORNS;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources.STORCEAN_THORNS;
 
 public abstract class StorceanVineThornsBlock extends SpreadingVineBlock {
 

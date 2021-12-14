@@ -7,7 +7,7 @@ import github.KingVampyre.DeepTrenches.common.world.gen.trunk.BasementTrunkPlace
 import github.KingVampyre.DeepTrenches.core.util.math.BlockPosHelper;
 import github.KingVampyre.DeepTrenches.core.util.serialization.CodecHelper;
 import github.KingVampyre.DeepTrenches.common.world.gen.PositionPredicate;
-import github.KingVampyre.DeepTrenches.core.util.world.gen.TreeFeatureHelper;
+import github.KingVampyre.DeepTrenches.core.util.world.gen.biome.TreeFeatureHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTTrunkPlacerTypes.FUCHSITRA_TRUNK_PLACER;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTTrunkPlacerTypes.FUCHSITRA_TRUNK_PLACER;
 import static github.KingVampyre.DeepTrenches.common.world.gen.BlockStatePlacer.DIRT;
 import static github.KingVampyre.DeepTrenches.common.world.gen.BlockStatePlacer.TRUNK;
 import static github.KingVampyre.DeepTrenches.common.world.gen.PositionPredicate.*;

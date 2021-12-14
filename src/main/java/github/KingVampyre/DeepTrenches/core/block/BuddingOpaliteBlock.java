@@ -2,7 +2,7 @@ package github.KingVampyre.DeepTrenches.core.block;
 
 import github.KingVampyre.DeepTrenches.common.block.BuddingClusterBlock;
 import github.KingVampyre.DeepTrenches.core.block.enums.OpalBud;
-import github.KingVampyre.DeepTrenches.core.init.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlocks;
 import net.minecraft.block.Block;
 
 public class BuddingOpaliteBlock extends BuddingClusterBlock {

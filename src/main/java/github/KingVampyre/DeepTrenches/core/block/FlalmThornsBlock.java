@@ -5,7 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlockTags.FLALM_LOGS;
+import static github.KingVampyre.DeepTrenches.core.init.tag.DTBlockTags.FLALM_LOGS;
 
 public class FlalmThornsBlock extends StorceanThornsBlock {
 

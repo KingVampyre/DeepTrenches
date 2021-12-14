@@ -58,7 +58,7 @@ public class CapBlock extends LeavesBlock {
 		FluidState fluidState = world.getFluidState(pos);
 
 		if (fluidState.getFluid() == WATER)
-			world.getBlockTickScheduler().schedule(pos, this, 1);
+			world.createAndScheduleBlockTick(pos, this, 1);
 
 	}
 

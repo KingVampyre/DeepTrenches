@@ -3,7 +3,7 @@ package github.KingVampyre.DeepTrenches.core.block;
 import github.KingVampyre.DeepTrenches.common.block.BuddingClusterBlock;
 import net.minecraft.block.Block;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.LEKRAL_CLUSTER;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.LEKRAL_CLUSTER;
 
 public class BuddingLekralBlock extends BuddingClusterBlock {
 

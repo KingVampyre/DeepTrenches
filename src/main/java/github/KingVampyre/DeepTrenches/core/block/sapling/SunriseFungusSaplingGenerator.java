@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.SUNRISE_FUNGUS;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTConfiguredFeatures.SUNRISE_FUNGUS;
 
 public class SunriseFungusSaplingGenerator extends LargeTreeSaplingGenerator {
 

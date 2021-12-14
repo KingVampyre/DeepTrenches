@@ -13,11 +13,11 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_260;
-import static github.KingVampyre.DeepTrenches.core.init.DTEntityTypes.SMALLTOOTH_DRAGONFISH;
-import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.*;
-import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.SUBORBITAL_AND_LURE;
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.SMALLTOOTH_DRAGONFISH_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_260;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTEntityTypes.SMALLTOOTH_DRAGONFISH;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTLightStates.*;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTLightStates.SUBORBITAL_AND_LURE;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.SMALLTOOTH_DRAGONFISH_BUCKET;
 
 public class SmalltoothDragonfishEntity extends AbstractLoosejawEntity {
 

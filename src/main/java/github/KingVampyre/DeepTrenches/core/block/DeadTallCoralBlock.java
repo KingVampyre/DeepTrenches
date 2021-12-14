@@ -65,7 +65,7 @@ public class DeadTallCoralBlock extends DeadCoralBlock {
 		    world.removeBlock(pos, true);
 		
 		if (state.get(WATERLOGGED))
-		    world.getFluidTickScheduler().schedule(pos, WATER, WATER.getTickRate(world));
+		    world.createAndScheduleFluidTick(pos, WATER, WATER.getTickRate(world));
 	
 	}
 	

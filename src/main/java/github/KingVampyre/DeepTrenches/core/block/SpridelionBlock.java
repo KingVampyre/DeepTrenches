@@ -14,10 +14,10 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTDamageSources.ACID;
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.SPRILIUM;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources.ACID;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.SPRILIUM;
 import static github.KingVampyre.DeepTrenches.core.init.DTParticleTypes.ENTITY_CORRODED_SKULL;
-import static github.KingVampyre.DeepTrenches.core.init.DTStatusEffects.GAS_CORROSION;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTStatusEffects.GAS_CORROSION;
 import static net.minecraft.world.Difficulty.PEACEFUL;
 
 public class SpridelionBlock extends FlowerBlock {

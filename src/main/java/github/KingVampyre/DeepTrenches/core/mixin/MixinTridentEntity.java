@@ -1,7 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
 import github.KingVampyre.DeepTrenches.core.entity.AdaiggerEntity;
-import github.KingVampyre.DeepTrenches.core.init.DTDamageSources;
+import github.KingVampyre.DeepTrenches.core.init.entity.DTDamageSources;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.projectile.TridentEntity;

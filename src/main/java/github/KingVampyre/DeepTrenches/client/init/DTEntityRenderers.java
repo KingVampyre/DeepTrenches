@@ -4,7 +4,7 @@ import github.KingVampyre.DeepTrenches.client.render.entity.renderer.*;
 import github.Louwind.entityutils.core.entity.render.FabricBoatEntityRenderer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTEntityTypes.*;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTEntityTypes.*;
 
 public class DTEntityRenderers {
 

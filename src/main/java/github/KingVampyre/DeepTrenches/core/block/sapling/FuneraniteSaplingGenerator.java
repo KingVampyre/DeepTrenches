@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTConfiguredFeatures.FUNERANITE;
+import static github.KingVampyre.DeepTrenches.core.init.world.DTConfiguredFeatures.FUNERANITE;
 
 public class FuneraniteSaplingGenerator extends LargeTreeSaplingGenerator {
 

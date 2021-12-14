@@ -4,7 +4,7 @@ import github.KingVampyre.DeepTrenches.common.block.CarvingBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.Direction;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTBlocks.CARVED_RHADI_FRUIT;
+import static github.KingVampyre.DeepTrenches.core.init.block.DTBlocks.CARVED_RHADI_FRUIT;
 import static net.minecraft.state.property.Properties.HORIZONTAL_FACING;
 
 public class RhadiFruit extends CarvingBlock {

@@ -1,6 +1,6 @@
 package github.KingVampyre.DeepTrenches.core.mixin;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.*;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.*;
 import static github.KingVampyre.DeepTrenches.core.init.DTPotions.*;
 import static net.minecraft.item.Items.GLOWSTONE_DUST;
 import static net.minecraft.item.Items.GUNPOWDER;

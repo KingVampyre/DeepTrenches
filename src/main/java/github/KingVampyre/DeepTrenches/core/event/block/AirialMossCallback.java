@@ -5,7 +5,7 @@ import github.KingVampyre.DeepTrenches.core.block.enums.AirialMossType;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.ActionResult;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.AIRIAL_MOSS;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.AIRIAL_MOSS;
 import static net.minecraft.util.ActionResult.PASS;
 import static net.minecraft.util.ActionResult.SUCCESS;
 

@@ -8,9 +8,9 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import static github.KingVampyre.DeepTrenches.core.init.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_250;
-import static github.KingVampyre.DeepTrenches.core.init.DTItems.DEEP_LAKE_BETTA_BUCKET;
-import static github.KingVampyre.DeepTrenches.core.init.DTLightStates.*;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTAttributeModifiers.MOVEMENT_SPEED_BOOST_250;
+import static github.KingVampyre.DeepTrenches.core.init.item.DTItems.DEEP_LAKE_BETTA_BUCKET;
+import static github.KingVampyre.DeepTrenches.core.init.entity.DTLightStates.*;
 
 public class DeepLakeBettaEntity extends AbstractBettaEntity {
 

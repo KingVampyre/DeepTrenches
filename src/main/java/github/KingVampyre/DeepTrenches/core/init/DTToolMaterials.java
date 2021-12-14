@@ -1,5 +1,7 @@
 package github.KingVampyre.DeepTrenches.core.init;
 
+import github.KingVampyre.DeepTrenches.core.init.block.DTBlocks;
+import github.KingVampyre.DeepTrenches.core.init.item.DTItems;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
