@@ -236,6 +236,7 @@ public class DTBlocks {
 	public static final Block BLACK_BASALT_GOLD_ORE;
 	public static final Block BLACK_BASALT_IRON_ORE;
 
+	public static final Block BLUE_STORCERACK_ACTINIUM_ORE;
 	public static final Block BLUE_STORCERACK_BLACK_OPAL_ORE;
 	public static final Block BLUE_STORCERACK_COAL_ORE;
 	public static final Block BLUE_STORCERACK_COPPER_ORE;
@@ -380,6 +381,7 @@ public class DTBlocks {
 	public static final Block NETHERRACK_BORON_ORE;
 	public static final Block NETHERRACK_CLINOHUMITE_ORE;
 
+	public static final Block PINKINE_ACTINIUM_ORE;
 	public static final Block PINKINE_AQUAMARINE_ORE;
 	public static final Block PINKINE_BLACK_OPAL_ORE;
 	public static final Block PINKINE_COAL_ORE;
@@ -2602,6 +2604,7 @@ public class DTBlocks {
 		BLACK_BASALT_GOLD_ORE = createOre();
 		BLACK_BASALT_IRON_ORE = createOre();
 
+		BLUE_STORCERACK_ACTINIUM_ORE = createOre(3.0F, 3, 7);
 		BLUE_STORCERACK_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		BLUE_STORCERACK_COAL_ORE = createOre(3.0F, 0, 2);
 		BLUE_STORCERACK_COPPER_ORE = createOre();
@@ -2746,6 +2749,7 @@ public class DTBlocks {
 		NETHERRACK_BORON_ORE = createOre();
 		NETHERRACK_CLINOHUMITE_ORE = createOre(3.0F, 3, 7);
 
+		PINKINE_ACTINIUM_ORE = createOre(3.0F, 3, 7);
 		PINKINE_AQUAMARINE_ORE = createOre(3.0F, 3, 7);
 		PINKINE_BLACK_OPAL_ORE = createOre(3.0F, 3, 7);
 		PINKINE_COAL_ORE = createOre(3.0F, 0, 2);
@@ -4717,6 +4721,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE);
 		Registry.register(BLOCK, "deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE);
 
+		Registry.register(BLOCK, "deep_trenches:blue_storcerack_actinium_ore", BLUE_STORCERACK_ACTINIUM_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:blue_storcerack_copper_ore", BLUE_STORCERACK_COPPER_ORE);
@@ -4861,6 +4866,7 @@ public class DTBlocks {
 		Registry.register(BLOCK, "deep_trenches:netherrack_boron_ore", NETHERRACK_BORON_ORE);
 		Registry.register(BLOCK, "deep_trenches:netherrack_clinohumite_ore", NETHERRACK_CLINOHUMITE_ORE);
 
+		Registry.register(BLOCK, "deep_trenches:pinkine_actinium_ore", PINKINE_ACTINIUM_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_aquamarine_ore", PINKINE_AQUAMARINE_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_black_opal_ore", PINKINE_BLACK_OPAL_ORE);
 		Registry.register(BLOCK, "deep_trenches:pinkine_coal_ore", PINKINE_COAL_ORE);

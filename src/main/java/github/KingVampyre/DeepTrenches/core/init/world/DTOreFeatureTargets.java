@@ -56,6 +56,8 @@ public class DTOreFeatureTargets {
 
     static {
         ACTINIUM_ORES = ImmutableList.of(
+                createTarget(BLUE_STORCERACK_TEST, BLUE_STORCERACK_ACTINIUM_ORE),
+                createTarget(PINKINE_TEST, PINKINE_ACTINIUM_ORE),
                 createTarget(STORCENDITE_TEST, STORCENDITE_ACTINIUM_ORE)
         );
         

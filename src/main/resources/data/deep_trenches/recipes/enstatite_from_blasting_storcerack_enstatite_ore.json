@@ -2,7 +2,7 @@
     "type": "minecraft:blasting",
     "group": "deep_trenches:enstatite",
     "ingredient": {
-        "item": "deep_trenches:enstatite_ore"
+        "item": "deep_trenches:storcerack_enstatite_ore"
     },
     "result": "deep_trenches:enstatite",
     "experience": 0.7,

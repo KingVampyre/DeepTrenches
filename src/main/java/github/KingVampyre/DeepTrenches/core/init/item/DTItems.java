@@ -2103,6 +2103,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:black_basalt_gold_ore", BLACK_BASALT_GOLD_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:black_basalt_iron_ore", BLACK_BASALT_IRON_ORE, MINERALOGY);
 
+		registerBlockItem("deep_trenches:blue_storcerack_actinium_ore", BLUE_STORCERACK_ACTINIUM_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:blue_storcerack_black_opal_ore", BLUE_STORCERACK_BLACK_OPAL_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:blue_storcerack_coal_ore", BLUE_STORCERACK_COAL_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:blue_storcerack_copper_ore", BLUE_STORCERACK_COPPER_ORE, MINERALOGY);
@@ -2248,6 +2249,7 @@ public class DTItems {
 		registerBlockItem("deep_trenches:netherrack_boron_ore", NETHERRACK_BORON_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:netherrack_clinohumite_ore", NETHERRACK_CLINOHUMITE_ORE, MINERALOGY);
 
+		registerBlockItem("deep_trenches:pinkine_actinium_ore", PINKINE_ACTINIUM_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:pinkine_aquamarine_ore", PINKINE_AQUAMARINE_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:pinkine_black_opal_ore", PINKINE_BLACK_OPAL_ORE, MINERALOGY);
 		registerBlockItem("deep_trenches:pinkine_coal_ore", PINKINE_COAL_ORE, MINERALOGY);
