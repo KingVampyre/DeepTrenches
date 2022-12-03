@@ -21,19 +21,20 @@
 				"Body": {
 					"rotation": {
 						"0.0": {
-							"vector": [-1, 0, 0]
-						},
-						"0.75": {
 							"vector": [1, 0, 0]
 						},
-						"1.5": {
+						"0.75": {
 							"vector": [-1, 0, 0]
+						},
+						"1.5": {
+							"vector": [1, 0, 0]
 						}
 					}
 				}
 			}
 		},
 		"mouth_opening": {
+			"loop": "hold_on_last_frame",
 			"animation_length": 0.5,
 			"bones": {
 				"Upper_jaw": {
@@ -45,7 +46,7 @@
 							"vector": [0, 0, 0]
 						},
 						"0.5": {
-							"vector": [-5, 0, 0]
+							"vector": [-15, 0, 0]
 						}
 					},
 					"position": {
@@ -56,7 +57,7 @@
 							"vector": [0, 0, 0]
 						},
 						"0.5": {
-							"vector": [0, 0.6, 0]
+							"vector": [0, 0.2, 0]
 						}
 					}
 				},
@@ -69,7 +70,7 @@
 							"vector": [10, 0, 0]
 						},
 						"0.5": {
-							"vector": [20, 0, 0]
+							"vector": [35, 0, 0]
 						}
 					},
 					"position": {
@@ -80,7 +81,103 @@
 							"vector": [0, 0, 0]
 						},
 						"0.5": {
-							"vector": [0, 1.98, 0]
+							"vector": [0, 2.55, 0]
+						}
+					}
+				}
+			}
+		},
+		"mouth_opened": {
+			"loop": true,
+			"animation_length": 0.04167,
+			"bones": {
+				"Upper_jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [-15, 0, 0]
+						},
+						"0.0417": {
+							"vector": [-15, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0.2, 0]
+						},
+						"0.0417": {
+							"vector": [0, 0.2, 0]
+						}
+					}
+				},
+				"Lower_jaw_rear": {
+					"rotation": {
+						"0.0": {
+							"vector": [35, 0, 0]
+						},
+						"0.0417": {
+							"vector": [35, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 2.55, 0]
+						},
+						"0.0417": {
+							"vector": [0, 2.55, 0]
+						}
+					}
+				}
+			}
+		},
+		"mouth_closing": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"Upper_jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [-15, 0, 0]
+						},
+						"0.2083": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0.2, 0]
+						},
+						"0.2083": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Lower_jaw_rear": {
+					"rotation": {
+						"0.0": {
+							"vector": [35, 0, 0]
+						},
+						"0.2083": {
+							"vector": [10, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 2.55, 0]
+						},
+						"0.2083": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
 						}
 					}
 				}

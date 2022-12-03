@@ -34,6 +34,7 @@
 			}
 		},
 		"mouth_opening": {
+			"loop": "hold_on_last_frame",
 			"animation_length": 0.58333,
 			"bones": {
 				"Lower_jaw": {
@@ -42,7 +43,7 @@
 							"vector": [0, 0, 0]
 						},
 						"0.5833": {
-							"vector": [-15, 0, 0]
+							"vector": [0, 0, 0]
 						}
 					},
 					"position": {
@@ -61,6 +62,14 @@
 						},
 						"0.5833": {
 							"vector": [25, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5833": {
+							"vector": [0, -1, -4.7]
 						}
 					}
 				},
@@ -86,26 +95,112 @@
 		},
 		"mouth_opened": {
 			"loop": true,
+			"animation_length": 0.04167,
 			"bones": {
 				"Lower_jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.0417": {
+							"vector": [0, 0, 0]
+						}
+					},
 					"position": {
-						"vector": [0, -0.2, 0]
+						"0.0": {
+							"vector": [0, -0.2, 0]
+						},
+						"0.0417": {
+							"vector": [0, -0.2, 0]
+						}
 					}
 				},
 				"Lower_jaw_front": {
 					"rotation": {
-						"vector": [40, 0, 0]
+						"0.0": {
+							"vector": [40, 0, 0]
+						},
+						"0.0417": {
+							"vector": [40, 0, 0]
+						}
 					},
 					"position": {
-						"vector": [0, 0, -3]
+						"0.0": {
+							"vector": [0, -2, -4.7]
+						},
+						"0.0417": {
+							"vector": [0, -2, -4.7]
+						}
 					}
 				},
 				"Head": {
 					"rotation": {
-						"vector": [-30, 0, 0]
+						"0.0": {
+							"vector": [-30, 0, 0]
+						},
+						"0.0417": {
+							"vector": [-30, 0, 0]
+						}
 					},
 					"position": {
-						"vector": [0, -4, 0]
+						"0.0": {
+							"vector": [0, -4, 0]
+						},
+						"0.0417": {
+							"vector": [0, -4, 0]
+						}
+					}
+				}
+			}
+		},
+		"mouth_closing": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"Lower_jaw": {
+					"position": {
+						"0.0": {
+							"vector": [0, -0.2, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Lower_jaw_front": {
+					"rotation": {
+						"0.0": {
+							"vector": [40, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, -2, -4.7]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Head": {
+					"rotation": {
+						"0.0": {
+							"vector": [-30, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, -4, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
 					}
 				}
 			}
