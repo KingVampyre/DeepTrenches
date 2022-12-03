@@ -1,0 +1,82 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"swimming": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"Caudal": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -13, 0]
+						},
+						"0.5": {
+							"vector": [0, 13, 0]
+						},
+						"1.0": {
+							"vector": [0, -13, 0]
+						}
+					}
+				}
+			}
+		},
+		"bite": {
+			"animation_length": 0.125,
+			"bones": {
+				"Snout": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.125": {
+							"vector": [-35, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.125": {
+							"vector": [0, 0.5, 0.7]
+						}
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 1]
+						},
+						"0.125": {
+							"vector": [1.01, 1, 1]
+						}
+					}
+				},
+				"Lower_jaw_rear": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.125": {
+							"vector": [30, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.125": {
+							"vector": [0, -0.5, 0.5]
+						}
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 1]
+						},
+						"0.125": {
+							"vector": [1.01, 1, 1]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

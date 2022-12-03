@@ -1,0 +1,151 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"walking": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Butt": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_1_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_hair_1_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_2_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_hair_2_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_3_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_hair_3_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_4_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_hair_4_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_1_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_hair_1_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_2_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_hair_2_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_3_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_hair_3_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_4_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Leg_hair_4_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Pedipalp_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Pedipalp_hair_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Pedipalp_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Pedipalp_hair_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Fang_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Fang_hair_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Fang_tip_1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Fang_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Fang_hair_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"Fang_tip_2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
