@@ -1,0 +1,179 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 350,
+				"texture_height": 250,
+				"visible_bounds_width": 13,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "Body",
+					"parent": "root",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-10, 14, 0], "size": [20, 20, 32], "uv": [0, 48]}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "Body",
+					"pivot": [0, 27.5, 0],
+					"cubes": [
+						{"origin": [-8, 19.5, -14.5], "size": [16, 16, 16], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Snout",
+					"parent": "Head",
+					"pivot": [0, 23.5, -14.5],
+					"cubes": [
+						{"origin": [-4, 21.5, -17.8], "size": [8, 6, 4], "uv": [75, 46]}
+					]
+				},
+				{
+					"name": "Snout_Leaf",
+					"parent": "Snout",
+					"pivot": [0, 27.5, -17.7],
+					"rotation": [10.43, 0, 0],
+					"cubes": [
+						{"origin": [-4, 27, -17.7], "size": [8, 8, 0], "uv": [80, 56]}
+					]
+				},
+				{
+					"name": "Upper_Teeth",
+					"parent": "Head",
+					"pivot": [0, 20.2, -13.5],
+					"cubes": [
+						{"origin": [-8, 15.2, -13.5], "size": [16, 5, 0], "uv": [0, 48]}
+					]
+				},
+				{
+					"name": "Upper_Teeth_side_1",
+					"parent": "Head",
+					"pivot": [7.4, 19.9, -10.4],
+					"cubes": [
+						{"origin": [7.4, 17.9, -14.4], "size": [0, 2, 8], "uv": [0, 58], "mirror": true}
+					]
+				},
+				{
+					"name": "Upper_Teeth_side_2",
+					"parent": "Head",
+					"pivot": [-7.4, 19.9, -10.4],
+					"cubes": [
+						{"origin": [-7.4, 17.9, -14.4], "size": [0, 2, 8], "uv": [0, 48]}
+					]
+				},
+				{
+					"name": "Ear_1",
+					"parent": "Head",
+					"pivot": [8.5, 33, -7],
+					"rotation": [4.1, 0, 15.65],
+					"cubes": [
+						{"origin": [6, 31, -7.5], "size": [5, 9, 1], "uv": [65, 29]}
+					]
+				},
+				{
+					"name": "Ear_2",
+					"parent": "Head",
+					"pivot": [-8.5, 33, -7],
+					"rotation": [4.1, 0, -15.65],
+					"cubes": [
+						{"origin": [-11, 31, -7.5], "size": [5, 9, 1], "uv": [65, 29]}
+					]
+				},
+				{
+					"name": "Lower_jaw",
+					"parent": "Body",
+					"pivot": [0, 17, 1.6],
+					"cubes": [
+						{"origin": [-8, 15, -14.3], "size": [16, 4, 16], "uv": [59, 102]}
+					]
+				},
+				{
+					"name": "Lower_teeth",
+					"parent": "Lower_jaw",
+					"pivot": [-1.5, 19, -14.2],
+					"rotation": [23.3, 0, 0],
+					"cubes": [
+						{"origin": [-6.5, 19, -14.3], "size": [13, 3, 0], "uv": [0, 60]}
+					]
+				},
+				{
+					"name": "Wing_rear_side_2",
+					"parent": "Body",
+					"pivot": [2, 33.3, 8.5],
+					"cubes": [
+						{"origin": [2, 32.8, 2.5], "size": [31, 1, 44], "uv": [116, 102], "mirror": true}
+					]
+				},
+				{
+					"name": "Wing_front_side_2",
+					"parent": "Wing_rear_side_2",
+					"pivot": [33, 33.3, 6],
+					"cubes": [
+						{"origin": [33, 32.8, 2.5], "size": [26, 1, 26], "uv": [147, 25], "mirror": true}
+					]
+				},
+				{
+					"name": "Wing_rear_side_1",
+					"parent": "Body",
+					"pivot": [-2, 33.3, 8.5],
+					"cubes": [
+						{"origin": [-33, 32.8, 2.5], "size": [31, 1, 44], "uv": [116, 102]}
+					]
+				},
+				{
+					"name": "Wing_front_side_1",
+					"parent": "Wing_rear_side_1",
+					"pivot": [-33, 33.3, 6],
+					"cubes": [
+						{"origin": [-59, 32.8, 2.5], "size": [26, 1, 26], "uv": [147, 25]}
+					]
+				},
+				{
+					"name": "Tail",
+					"parent": "Body",
+					"pivot": [0, 31, 32],
+					"cubes": [
+						{"origin": [-3, 28, 32], "size": [6, 6, 44], "uv": [1, 101]}
+					]
+				},
+				{
+					"name": "Mace_tail_tip",
+					"parent": "Tail",
+					"pivot": [0, 31, 76],
+					"cubes": [
+						{"origin": [-6.5, 28, 76], "size": [13, 6, 13], "uv": [0, 151]}
+					]
+				},
+				{
+					"name": "Hind_leg_Side_1",
+					"parent": "Body",
+					"pivot": [8.7, 30, 32],
+					"rotation": [2, 0, 0],
+					"cubes": [
+						{"origin": [4.7, 26, 32], "size": [8, 8, 40], "uv": [88, 178]}
+					]
+				},
+				{
+					"name": "Hind_leg_side_2",
+					"parent": "Body",
+					"pivot": [-8.7, 30, 32],
+					"rotation": [2, 0, 1.01498],
+					"cubes": [
+						{"origin": [-12.7, 26, 32], "size": [8, 8, 40], "uv": [88, 178]}
+					]
+				}
+			]
+		}
+	]
+}
