@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "blue_angels_trumpet_flower",
-		"3": "blue_angels_trumpet_flower",
-		"4": "blue_angels_trumpet_top",
-		"5": "blue_angels_trumpet_bottom",
-		"particle": "blue_angels_trumpet_flower"
+		"0": "green_angels_trumpet_flower",
+		"3": "green_angels_trumpet_flower",
+		"4": "green_angels_trumpet_top",
+		"5": "green_angels_trumpet_bottom",
+		"particle": "green_angels_trumpet_flower"
 	},
 	"elements": [
 		{
